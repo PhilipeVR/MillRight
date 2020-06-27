@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.PackageManager;
 using UnityEngine;
 
 public class CollisionVisibility : MonoBehaviour
@@ -11,7 +12,6 @@ public class CollisionVisibility : MonoBehaviour
     [SerializeField]
     string collisionTag;
 
-    [SerializeField]
     GameObject sparks;
 
     private float timerCountDown = 5.0f;
@@ -19,7 +19,15 @@ public class CollisionVisibility : MonoBehaviour
 
     void Start()
     {
-        sparks.SetActive(false);
+
+        sparks = GameObject.Find("Cube Complete (Mesh)").transform.GetChild(0).gameObject;
+        if (sparks != null)
+        {
+            sparks.SetActive(false);
+        } else
+        {
+            Debug.LogError("NullPointerException");
+        }
 
     }
 
@@ -63,6 +71,8 @@ public class CollisionVisibility : MonoBehaviour
             if (timerCountDown <= 0)
             {
                 gameObject.GetComponent<Renderer>().enabled = false;
+                Destroy(gameObject);
+                Destroy(this);
                 sparks.SetActive(false);
             }
 
