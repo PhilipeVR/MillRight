@@ -93,8 +93,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c074be62b6d73014d8b84ffe854b38a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  collisionTag: 
-  sparks: {fileID: 0}
+  collisionTag: Drill
+  gameObjectParentName: Stock Material 2
 --- !u!65 &8964826621624689370
 BoxCollider:
   m_ObjectHideFlags: 0

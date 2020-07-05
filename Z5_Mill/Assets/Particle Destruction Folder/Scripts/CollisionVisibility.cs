@@ -12,6 +12,9 @@ public class CollisionVisibility : MonoBehaviour
     [SerializeField]
     string collisionTag;
 
+    [SerializeField]
+    string gameObjectParentName;
+
     GameObject sparks;
 
     private float timerCountDown = 5.0f;
@@ -20,7 +23,7 @@ public class CollisionVisibility : MonoBehaviour
     void Start()
     {
 
-        sparks = GameObject.Find("Stock Material 2").transform.GetChild(0).gameObject;
+        sparks = GameObject.Find(gameObjectParentName).transform.GetChild(0).gameObject;
         if (sparks != null)
         {
             sparks.SetActive(false);
