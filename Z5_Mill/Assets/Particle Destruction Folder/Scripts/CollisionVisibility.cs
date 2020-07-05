@@ -20,7 +20,7 @@ public class CollisionVisibility : MonoBehaviour
     void Start()
     {
 
-        sparks = GameObject.Find("Cube Complete (Mesh)").transform.GetChild(0).gameObject;
+        sparks = GameObject.Find("Stock Material 2").transform.GetChild(0).gameObject;
         if (sparks != null)
         {
             sparks.SetActive(false);

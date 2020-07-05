@@ -77,6 +77,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 23.579
       objectReference: {fileID: 0}
+    - target: {fileID: 5735316777441732239, guid: ec9686d8b027c8543a695955da942345,
+        type: 3}
+      propertyPath: collisionTag
+      value: Drill
+      objectReference: {fileID: 0}
     - target: {fileID: 6107749889253420460, guid: ec9686d8b027c8543a695955da942345,
         type: 3}
       propertyPath: m_Name
