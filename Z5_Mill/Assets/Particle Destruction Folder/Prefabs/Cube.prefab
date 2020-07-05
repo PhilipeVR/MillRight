@@ -94,7 +94,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   collisionTag: Drill
-  gameObjectParentName: Stock Material 2
+  gameObjectParentName: 
 --- !u!65 &8964826621624689370
 BoxCollider:
   m_ObjectHideFlags: 0
