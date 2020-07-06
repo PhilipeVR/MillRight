@@ -95,7 +95,6 @@ public class LockAnimationScript : MonoBehaviour
 
     private void pause()
     {
-        Debug.LogWarning("Animator Pause");
         object_anim.speed = 0;
         animated = false;
     }
@@ -108,5 +107,6 @@ public class LockAnimationScript : MonoBehaviour
             animated = true;
         }
     }
+
 
 }
