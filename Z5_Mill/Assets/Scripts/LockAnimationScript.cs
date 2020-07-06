@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditor;
 using UnityEditor.PackageManager;
 using UnityEngine;
 
@@ -17,7 +16,7 @@ public class LockAnimationScript : MonoBehaviour
     Boolean enable = true;
 
     Boolean animated = true;
-    Boolean handle_enable, wheel_spin;
+    Boolean handle_enable;
     float prev_speed;
     Animator object_anim;
     
@@ -39,58 +38,44 @@ public class LockAnimationScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (enable)
+        if (Input.GetMouseButtonDown(0) && enable)
         {
-            if (Input.GetMouseButtonDown(0))
+
+            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+            RaycastHit hit;
+            if (Physics.Raycast(ray, out hit))
             {
-
-                Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-                RaycastHit hit;
-                if (Physics.Raycast(ray, out hit))
+                if (hit.collider.gameObject.Equals(wheel))
                 {
-                    if (hit.collider.gameObject.Equals(wheel))
+                    if (handle_enable)
                     {
-                        if (handle_enable)
-                        {
-                            wheel_spin = true;
-                        }
-                        Debug.LogWarning("Wheel is Clicked");
+                        toggleAnimation();
                     }
-                    else if (hit.collider.gameObject.Equals(handle))
+                    Debug.LogWarning("Wheel is Clicked");
+                }
+                else if (hit.collider.gameObject.Equals(handle))
+                {
+                    Debug.LogWarning("Handle is Clicked");
+                    if (!animated)
                     {
-                        Debug.LogWarning("Handle is Clicked");
-                        if (!animated)
-                        {
-                            handle_enable = !handle_enable;
-                            Debug.LogWarning("Handle is " + handle_enable.ToString());
-                            wheel_spin = false;
-                        }
-                    } else
-                    {
-                        wheel_spin = false;
+                        handle_enable = !handle_enable;
+                        Debug.LogWarning("Handle is " + handle_enable.ToString());
                     }
-
                 }
             }
-
-            if (Input.mouseScrollDelta.y > 0f && wheel_spin)
-            {
-                object_anim.SetFloat("Reverse", 1);
-                setSpeed(0.1f);
-            }
-            else if (Input.mouseScrollDelta.y < 0f && wheel_spin)
-            {
-                object_anim.SetFloat("Reverse", -1);
-                setSpeed(0.1f);
-
-            } else
-            {
-                pause();
-            }
-
-
         }
+    }
 
+    private void toggleAnimation()
+    {
+        if (animated)
+        {
+            pause();
+        }
+        else
+        {
+            play();
+        }
     }
 
     private void pause()
@@ -99,13 +84,16 @@ public class LockAnimationScript : MonoBehaviour
         animated = false;
     }
 
+    private void play()
+    {
+        Debug.LogWarning("Animator Play");
+        object_anim.speed = prev_speed;
+        animated = true;
+    }
+
     private void setSpeed(float mph)
     {
         object_anim.speed = mph;
-        if (mph > 0)
-        {
-            animated = true;
-        }
     }
 
 
