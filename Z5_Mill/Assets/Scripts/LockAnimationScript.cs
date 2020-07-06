@@ -18,6 +18,7 @@ public class LockAnimationScript : MonoBehaviour
 
     Boolean animated = true;
     Boolean handle_enable, wheel_spin;
+    float prev_speed;
     Animator object_anim;
     
     // Start is called before the first frame update
@@ -27,7 +28,9 @@ public class LockAnimationScript : MonoBehaviour
         {
             object_anim = animObject.GetComponent<Animator>();
             setSpeed(0.1f);
+            prev_speed = object_anim.speed;
             pause();
+
             handle_enable = true;
         }
 
@@ -40,6 +43,7 @@ public class LockAnimationScript : MonoBehaviour
         {
             if (Input.GetMouseButtonDown(0))
             {
+
                 Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
                 RaycastHit hit;
                 if (Physics.Raycast(ray, out hit))
@@ -65,26 +69,28 @@ public class LockAnimationScript : MonoBehaviour
                     {
                         wheel_spin = false;
                     }
+
                 }
             }
+
             if (Input.mouseScrollDelta.y > 0f && wheel_spin)
             {
-                Debug.LogWarning("Mouse Rolling Up");
-
                 object_anim.SetFloat("Reverse", 1);
                 setSpeed(0.1f);
             }
             else if (Input.mouseScrollDelta.y < 0f && wheel_spin)
             {
-                Debug.LogWarning("Mouse Rolling Down");
-
                 object_anim.SetFloat("Reverse", -1);
                 setSpeed(0.1f);
+
             } else
             {
                 pause();
             }
+
+
         }
+
     }
 
     private void pause()
@@ -101,4 +107,6 @@ public class LockAnimationScript : MonoBehaviour
             animated = true;
         }
     }
+
+
 }
