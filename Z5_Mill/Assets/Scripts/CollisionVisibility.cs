@@ -17,7 +17,7 @@ public class CollisionVisibility : MonoBehaviour
 
     GameObject sparks;
 
-    private float timerCountDown = 5.0f;
+    private float timerCountDown = 10.0f;
     private bool isColliding = false;
 
     void Start()
@@ -51,11 +51,14 @@ public class CollisionVisibility : MonoBehaviour
 
     private void OnCollisionEnter(Collision collison)
     {
+        //Debug.LogWarning("Collision Present");
+        //Debug.LogWarning(collison.collider.tag);
+
         if (collison.collider.tag == collisionTag)
         {
             isColliding = true;
             
-            sparks.transform.position = collison.transform.position;
+            sparks.transform.localPosition = collison.transform.position;
             if (!gameObject.GetComponent<Renderer>().enabled)
             {
                 sparks.SetActive(false);

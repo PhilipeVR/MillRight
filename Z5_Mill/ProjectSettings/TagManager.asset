@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Sparks
   - Drill
+  - CubeStock
+  - StopDrilling
   layers:
   - Default
   - TransparentFX

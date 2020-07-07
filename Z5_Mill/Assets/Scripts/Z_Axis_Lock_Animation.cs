@@ -1,79 +1,151 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.ConstrainedExecution;
 using UnityEngine;
 
 public class Z_Axis_Lock_Animation : MonoBehaviour
 {
+    float MAX_HEIGHT;
+    float MIN_HEIGHT;
+
     [SerializeField]
-    GameObject animObject;
+    GameObject animObject, lockAnimObject;
 
     [SerializeField]
     List<GameObject> wheel_parts;
 
     [SerializeField]
-    GameObject wheel_knob, handle;
+    GameObject handle;
 
     [SerializeField]
     Boolean enable = true;
 
+    [SerializeField]
+    GameObject Spindle;
+
     Boolean animated = true;
-    Boolean handle_enable;
-    float prev_speed;
-    Animator object_anim;
+
+    Boolean handle_enable, wheel_spin; 
+    public Boolean collided;
+    Animator object_anim, lock_anim;
 
     // Start is called before the first frame update
-    void Start()
+
+    private void Awake()
+    {
+
+        if (enable)
+        {
+
+            collided = false;
+
+            object_anim = animObject.GetComponent<Animator>();
+            lock_anim = lockAnimObject.GetComponent<Animator>();
+
+
+            MIN_HEIGHT = Spindle.transform.localPosition.y - 0.3f;
+            MAX_HEIGHT = Spindle.transform.localPosition.y;
+
+            setSpeed(0.1f);
+            setLockSpeed(0.5f);
+            pause();
+            pauseLock();
+            //Debug.LogWarning(lock_anim.runtimeAnimatorController.animationClips[0].name);
+
+            handle_enable = true;
+
+        }
+
+    }
+    // Update is called once per frame
+    void FixedUpdate()
     {
         if (enable)
         {
-            object_anim = animObject.GetComponent<Animator>();
-            setSpeed(0.1f);
-            prev_speed = object_anim.speed;
-            pause();
 
-            handle_enable = true;
-        }
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        if (Input.GetMouseButtonDown(0) && enable)
-        {
-            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            RaycastHit hit;
-            if (Physics.Raycast(ray, out hit))
+            if (Input.GetMouseButtonDown(0))
             {
-                if (hit.collider.gameObject.Equals(wheel_knob))
+                Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+                RaycastHit hit;
+                if (Physics.Raycast(ray, out hit))
                 {
-                    Debug.LogWarning("Wheel Knob is Clicked");
-                    if (handle_enable)
-                    {
-                        toggleAnimation();
-                    }
-                }
-                else if (hit.collider.gameObject.Equals(handle))
-                {
-                    Debug.LogWarning("Handle is Clicked");
-                    if (!animated)
-                    {
-                        handle_enable = !handle_enable;
-                        Debug.LogWarning("Handle is " + handle_enable.ToString());
-                    }
-                }
 
-                else if (checkWheelList(hit.collider.gameObject))
-                {
-                    Debug.LogWarning("Wheel is Clicked");
-                    if (!animated)
+                    if (hit.collider.gameObject.Equals(handle))
                     {
-                        if (handle_enable)
+                        //Debug.LogWarning("Handle is Clicked");
+                        if (!animated)
                         {
-                            toggleAnimation();
+                            handle_enable = !handle_enable;
+                            //Debug.LogWarning("Handle is " + handle_enable.ToString());
+                            if (!handle_enable)
+                            {
+                                lock_anim.SetFloat("Reverse", 1);
+                                setLockSpeed(1f);
+                                lock_anim.Play(lock_anim.runtimeAnimatorController.animationClips[0].name);
+                            }
+                            else
+                            {
+                                lock_anim.SetFloat("Reverse", -1);
+                                setLockSpeed(1f);
+                                lock_anim.Play(lock_anim.runtimeAnimatorController.animationClips[0].name);
+                            }
+                            wheel_spin = false;
                         }
                     }
+                    else if (checkWheelList(hit.collider.gameObject))
+                    {
+                        //Debug.LogWarning("Wheel is Clicked");
+                        if (!animated)
+                        {
+                            if (handle_enable)
+                            {
+                                wheel_spin = true;
+                            }
+                        }
+                    }
+                    else
+                    {
+                        wheel_spin = false;
+                    }
                 }
+
+            }
+            
+
+            if (Input.mouseScrollDelta.y > 0f && wheel_spin && !collided)
+            {
+                Vector3 tmp_pos = Spindle.transform.localPosition;
+                float y_pos = tmp_pos.y - 0.0005f;
+
+                if (y_pos < MAX_HEIGHT && y_pos > MIN_HEIGHT)
+                {
+                    Vector3 new_pos = new Vector3(tmp_pos.x, y_pos, tmp_pos.z);
+                    Spindle.transform.localPosition = new_pos;
+                    object_anim.SetFloat("Reverse", 1);
+                    setSpeed(2f);
+                }
+            }
+            else if (Input.mouseScrollDelta.y < 0f && wheel_spin)
+            {
+                Vector3 tmp_pos = Spindle.transform.localPosition;
+                float y_pos = tmp_pos.y + 0.0005f;
+
+                if(y_pos < MAX_HEIGHT && y_pos > MIN_HEIGHT)
+                {
+                    Vector3 new_pos = new Vector3(tmp_pos.x, y_pos, tmp_pos.z);
+
+                    Spindle.transform.localPosition = new_pos;
+                    object_anim.SetFloat("Reverse", -1);
+                    setSpeed(2f);
+                }
+
+
+
+            }
+            else
+            {
+                pause();
             }
         }
     }
@@ -90,34 +162,30 @@ public class Z_Axis_Lock_Animation : MonoBehaviour
         return false;
     }
 
-    private void toggleAnimation()
-    {
-        if (animated)
-        {
-            pause();
-        }
-        else
-        {
-            play();
-        }
-    }
+    
 
     private void pause()
     {
-        Debug.LogWarning("Animator Pause");
         object_anim.speed = 0;
         animated = false;
     }
 
-    private void play()
+    private void pauseLock()
     {
-        Debug.LogWarning("Animator Play");
-        object_anim.speed = prev_speed;
-        animated = true;
+        lock_anim.speed = 0;
     }
 
     private void setSpeed(float mph)
     {
         object_anim.speed = mph;
+        if (mph > 0)
+        {
+            animated = true;
+        }
+    }
+
+    private void setLockSpeed(float mph)
+    {
+        lock_anim.speed = mph;
     }
 }
