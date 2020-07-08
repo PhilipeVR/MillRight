@@ -19,7 +19,7 @@ public class GameButtonManager : MonoBehaviour
     void Start()
     {
         state = false;
-        animObject.tag = stopTag;
+        animObject.transform.GetChild(0).gameObject.tag = stopTag;
         anim_object = animObject.GetComponent<Animator>();
         on_anim = onButton.GetComponent<Animator>();
         off_anim = offButton.GetComponent<Animator>();
@@ -60,7 +60,7 @@ public class GameButtonManager : MonoBehaviour
         anim_object.speed = 2f;
         on_anim.speed = 2f;
         on_anim.Play(on_anim.runtimeAnimatorController.animationClips[0].name);
-        animObject.tag = drillTag;
+        animObject.transform.GetChild(0).gameObject.tag = drillTag;
         state = true;
         Debug.LogWarning("On Button");
 
@@ -68,7 +68,7 @@ public class GameButtonManager : MonoBehaviour
 
     void turnOff()
     {
-        animObject.tag = stopTag;
+        animObject.transform.GetChild(0).gameObject.tag = stopTag;
         off_anim.speed = 2f;
         off_anim.Play(off_anim.runtimeAnimatorController.animationClips[0].name);
         anim_object.speed = 0;
