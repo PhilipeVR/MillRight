@@ -9,6 +9,8 @@ public class DRO_ButtonHandler : MonoBehaviour
     [Space,Header("DRO Buttons")]
     [SerializeField] private DRO_ButtonState inchButton;
     [SerializeField] private DRO_ButtonState mmButton;
+
+    public string currentUnits;
     
     private void Start()
     {
@@ -19,14 +21,13 @@ public class DRO_ButtonHandler : MonoBehaviour
  
     public void ToggleOtherButton(DRO_ButtonState buttonState)
     {
-        Debug.Log("inch: "+(buttonState.buttonName == "inchButton"));
-        Debug.Log("mm: "+(buttonState.buttonName == "mmButton"));
-        Debug.Log("\n");
+        // Debug.Log("inch: "+(buttonState.buttonName == "inchButton"));
+        // Debug.Log("mm: "+(buttonState.buttonName == "mmButton"));
+        // Debug.Log("\n");
 
         if(buttonState.buttonName == "inchButton")
-        {
+        {          
             mmButton.ToggleThisButton();
-
         }
         else if(buttonState.buttonName == "mmButton")
         {
@@ -35,6 +36,7 @@ public class DRO_ButtonHandler : MonoBehaviour
         else {} // Do nothing
 
     }
+
 
 
 }
