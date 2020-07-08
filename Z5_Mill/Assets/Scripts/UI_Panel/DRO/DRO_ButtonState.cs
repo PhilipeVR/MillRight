@@ -35,13 +35,11 @@ public class DRO_ButtonState : MonoBehaviour, IPointerClickHandler
             // Toggle to its opposite setting
             if(button.enabled == true)
             {
-                button.enabled = false;
-                image.color = disabledColor;
+                DisableThisButton();
             }
             else
             {
-                button.enabled = true;
-                image.color = enabledColor;
+                EnableThisButton();
             }
 
             ToggleOtherBotton();
@@ -58,13 +56,31 @@ public class DRO_ButtonState : MonoBehaviour, IPointerClickHandler
     {
         if(button.enabled == true)
         {
+            DisableThisButton();
+        }
+        else
+        {
+            EnableThisButton();
+        }
+    }
+
+    public void DisableThisButton()
+    {
+        if(button.enabled == true) 
+        {
             button.enabled = false;
             image.color = disabledColor;
         }
-        else
+        else {}
+    }
+
+    public void EnableThisButton()
+    {
+        if(button.enabled == false) 
         {
             button.enabled = true;
             image.color = enabledColor;
         }
+        else {}
     }
 }

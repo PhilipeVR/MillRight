@@ -9,6 +9,9 @@ public class DRO_ButtonHandler : MonoBehaviour
     [Space,Header("DRO Buttons")]
     [SerializeField] private DRO_ButtonState inchButton;
     [SerializeField] private DRO_ButtonState mmButton;
+    [SerializeField] private DRO_ButtonState xButton;
+    [SerializeField] private DRO_ButtonState yButton;
+    [SerializeField] private DRO_ButtonState zButton;
 
     public string currentUnits;
     
@@ -32,6 +35,23 @@ public class DRO_ButtonHandler : MonoBehaviour
         else if(buttonState.buttonName == "mmButton")
         {
             inchButton.ToggleThisButton();
+        }
+        
+        // XYZ Buttons
+        else if(buttonState.buttonName == "xButton")
+        {
+            yButton.DisableThisButton();
+            zButton.DisableThisButton();
+        }
+        else if(buttonState.buttonName == "yButton")
+        {
+            xButton.DisableThisButton();
+            zButton.DisableThisButton();
+        }
+        else if(buttonState.buttonName == "zButton")
+        {
+            xButton.DisableThisButton();
+            yButton.DisableThisButton();
         }
         else {} // Do nothing
 

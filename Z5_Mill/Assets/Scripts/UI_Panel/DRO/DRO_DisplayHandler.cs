@@ -18,9 +18,9 @@ public class DRO_DisplayHandler : MonoBehaviour
         // Need to convert distance from "metres" to "inch" or "mm"
         // Also make this update only when there is a change in these coords
 
-        Debug.Log(vise.position.x);
-        Debug.Log(vise.position.y);
-        Debug.Log(spindle.position.z);
+        // Debug.Log(vise.position.x);
+        // Debug.Log(vise.position.y);
+        // Debug.Log(spindle.position.z);
 
         xText.text = vise.position.x.ToString();
         yText.text = vise.position.y.ToString();
