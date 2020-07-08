@@ -931,7 +931,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 336104565}
-  - component: {fileID: 336104564}
   - component: {fileID: 336104566}
   m_Layer: 0
   m_Name: UserControlManager
@@ -940,23 +939,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &336104564
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 336104563}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0676e9269db1f314cb7a678964ef64ab, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  inchButton: {fileID: 0}
-  mmButton: {fileID: 0}
-  xButton: {fileID: 0}
-  yButton: {fileID: 0}
-  zButton: {fileID: 0}
 --- !u!4 &336104565
 Transform:
   m_ObjectHideFlags: 0
@@ -987,7 +969,7 @@ MonoBehaviour:
   lockAnimObject: {fileID: 1868491376}
   xLockButton: {fileID: 1079926640}
   wheel: {fileID: 967371781}
-  handle: {fileID: 1970170730}
+  lockHandle: {fileID: 0}
   enabled: 1
 --- !u!1 &348425342
 GameObject:
@@ -1194,10 +1176,35 @@ PrefabInstance:
       propertyPath: m_Name
       value: Mill Model (With Animation & Cams)
       objectReference: {fileID: 0}
+    - target: {fileID: 870283013427206604, guid: b300480415584494996cc2faded79dd9,
+        type: 3}
+      propertyPath: m_Name
+      value: X-HandWheel
+      objectReference: {fileID: 0}
+    - target: {fileID: 870283013539992788, guid: b300480415584494996cc2faded79dd9,
+        type: 3}
+      propertyPath: m_Name
+      value: Y-Lock W/ Animator
+      objectReference: {fileID: 0}
+    - target: {fileID: 870283013812148595, guid: b300480415584494996cc2faded79dd9,
+        type: 3}
+      propertyPath: m_Name
+      value: Y-HandWheel
+      objectReference: {fileID: 0}
+    - target: {fileID: 870283014042755409, guid: b300480415584494996cc2faded79dd9,
+        type: 3}
+      propertyPath: m_Name
+      value: Y-Lock
+      objectReference: {fileID: 0}
+    - target: {fileID: 5175314770390061537, guid: b300480415584494996cc2faded79dd9,
+        type: 3}
+      propertyPath: m_Name
+      value: Y-HandWheel-Handle
+      objectReference: {fileID: 0}
     - target: {fileID: 7585937311007506749, guid: b300480415584494996cc2faded79dd9,
         type: 3}
       propertyPath: m_Name
-      value: Handle_Y
+      value: X-HandWheel-Handle
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b300480415584494996cc2faded79dd9, type: 3}
@@ -5293,12 +5300,6 @@ MonoBehaviour:
   disabledColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
   buttonName: inchButton
   checkIfEnabled: 0
---- !u!1 &1970170730 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8619910113314127269, guid: b300480415584494996cc2faded79dd9,
-    type: 3}
-  m_PrefabInstance: {fileID: 389859008}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2024659033
 PrefabInstance:
   m_ObjectHideFlags: 0

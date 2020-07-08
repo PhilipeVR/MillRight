@@ -13,7 +13,7 @@ public class XWheelControl : MonoBehaviour
     [SerializeField] private DRO_ButtonState xLockButton;
 
     [SerializeField]
-    GameObject wheel, handle;
+    GameObject wheel, lockHandle;
 
     [SerializeField]
     Boolean enabled = true;
@@ -49,14 +49,14 @@ public class XWheelControl : MonoBehaviour
             if (Input.mouseScrollDelta.y > 0f)
             {
                 object_anim.SetFloat("Reverse", 1);
-                setSpeed(1f);
-                Debug.Log("SCROLLING UP");
+                setSpeed(0.1f);
+                //Debug.Log("SCROLLING UP");
             }
             else if (Input.mouseScrollDelta.y < 0f)
             {
                 object_anim.SetFloat("Reverse", -1);
-                setSpeed(1f);
-                Debug.Log("SCROLLING DOWN");
+                setSpeed(0.1f);
+                //Debug.Log("SCROLLING DOWN");
 
             } else
             {
