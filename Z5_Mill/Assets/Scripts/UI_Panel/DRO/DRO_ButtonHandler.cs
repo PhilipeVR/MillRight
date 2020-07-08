@@ -12,6 +12,9 @@ public class DRO_ButtonHandler : MonoBehaviour
     [SerializeField] private DRO_ButtonState xButton;
     [SerializeField] private DRO_ButtonState yButton;
     [SerializeField] private DRO_ButtonState zButton;
+    [SerializeField] private DRO_ButtonState xLockButton;
+    [SerializeField] private DRO_ButtonState yLockButton;
+    [SerializeField] private DRO_ButtonState zLockButton;
 
     public string currentUnits;
     
@@ -42,16 +45,53 @@ public class DRO_ButtonHandler : MonoBehaviour
         {
             yButton.DisableThisButton();
             zButton.DisableThisButton();
+
+            if(buttonState.checkIfEnabled == true)
+            {
+                xLockButton.EnableThisButton(); //Enable LockButton means unlocking that button
+            } 
+            else
+            {
+                xLockButton.DisableThisButton(); //Enable LockButton means unlocking that button
+            }
+            
+            yLockButton.DisableThisButton();
+            zLockButton.DisableThisButton();
         }
+
         else if(buttonState.buttonName == "yButton")
         {
             xButton.DisableThisButton();
             zButton.DisableThisButton();
+
+            if(buttonState.checkIfEnabled == true)
+            {
+                yLockButton.EnableThisButton(); //Enable LockButton means unlocking that button
+            } 
+            else
+            {
+                yLockButton.DisableThisButton(); //Enable LockButton means unlocking that button
+            }
+            
+            xLockButton.DisableThisButton();
+            zLockButton.DisableThisButton();
         }
         else if(buttonState.buttonName == "zButton")
         {
             xButton.DisableThisButton();
             yButton.DisableThisButton();
+
+            if(buttonState.checkIfEnabled == true)
+            {
+                zLockButton.EnableThisButton(); //Enable LockButton means unlocking that button
+            } 
+            else
+            {
+                zLockButton.DisableThisButton(); //Enable LockButton means unlocking that button
+            }
+            
+            xLockButton.DisableThisButton();
+            yLockButton.DisableThisButton();
         }
         else {} // Do nothing
 

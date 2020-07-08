@@ -12,6 +12,8 @@ public class DRO_ButtonState : MonoBehaviour, IPointerClickHandler
 
     private Button button;
     private Image image;
+
+    public bool checkIfEnabled;
     
     private void Start()
     {
@@ -70,6 +72,7 @@ public class DRO_ButtonState : MonoBehaviour, IPointerClickHandler
         {
             button.enabled = false;
             image.color = disabledColor;
+            checkIfEnabled = false;
         }
         else {}
     }
@@ -80,6 +83,7 @@ public class DRO_ButtonState : MonoBehaviour, IPointerClickHandler
         {
             button.enabled = true;
             image.color = enabledColor;
+            checkIfEnabled = true;
         }
         else {}
     }
