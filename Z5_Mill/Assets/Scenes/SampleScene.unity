@@ -947,8 +947,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   xWheelControl: {fileID: 1065909904}
   yWheelControl: {fileID: 1616185320}
+  zWheelControl: {fileID: 1077523318}
   XLockButton: {fileID: 1079926640}
   YLockButton: {fileID: 1334058743}
+  ZLockButton: {fileID: 453831210}
 --- !u!4 &336104565
 Transform:
   m_ObjectHideFlags: 0
@@ -962,9 +964,16 @@ Transform:
   m_Children:
   - {fileID: 1065909905}
   - {fileID: 1616185321}
+  - {fileID: 1077523317}
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &346131233 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3312799078185544017, guid: 83d399ffe9bbef046b7d9ca75d2c5d0b,
+    type: 3}
+  m_PrefabInstance: {fileID: 2443960360639499163}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &348425342
 GameObject:
   m_ObjectHideFlags: 0
@@ -1789,6 +1798,12 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 477066471}
   m_CullTransparentMesh: 0
+--- !u!1 &553108621 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2108261189588554263, guid: 83d399ffe9bbef046b7d9ca75d2c5d0b,
+    type: 3}
+  m_PrefabInstance: {fileID: 2443960360639499163}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &554158780
 GameObject:
   m_ObjectHideFlags: 0
@@ -2323,6 +2338,12 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 777929092}
   m_CullTransparentMesh: 0
+--- !u!1 &787070215 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3312799077755689803, guid: 83d399ffe9bbef046b7d9ca75d2c5d0b,
+    type: 3}
+  m_PrefabInstance: {fileID: 2443960360639499163}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &800471071
 GameObject:
   m_ObjectHideFlags: 0
@@ -2943,6 +2964,12 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+--- !u!1 &989592093 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 238648635344227715, guid: 83d399ffe9bbef046b7d9ca75d2c5d0b,
+    type: 3}
+  m_PrefabInstance: {fileID: 2443960360639499163}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1021082145
 GameObject:
   m_ObjectHideFlags: 0
@@ -3070,6 +3097,55 @@ Transform:
   m_Father: {fileID: 336104565}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1077523316
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1077523317}
+  - component: {fileID: 1077523318}
+  m_Layer: 0
+  m_Name: ZWheelControl
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1077523317
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1077523316}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 336104565}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1077523318
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1077523316}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63103cffb38016a41bf78c1a2c5206e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animObject: {fileID: 989592093}
+  lockAnimObject: {fileID: 787070215}
+  ZLockButton: {fileID: 453831210}
+  wheel: {fileID: 346131233}
+  lockHandle: {fileID: 553108621}
+  enable: 1
 --- !u!1 &1079926638
 GameObject:
   m_ObjectHideFlags: 0
