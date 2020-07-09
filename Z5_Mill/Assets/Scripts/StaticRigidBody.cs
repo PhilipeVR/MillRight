@@ -12,7 +12,7 @@ public class StaticRigidBody : MonoBehaviour
     GameObject Spindle;
 
     [SerializeField]
-    GameObject quillFeedController;
+    GameObject quillFeedController, fineAdjustmentController;
     // Start is called before the first frame update
     void Start()
     {
@@ -32,6 +32,11 @@ public class StaticRigidBody : MonoBehaviour
         {
             init_pos = init_pos + new Vector3(0, Spindle.transform.position.y - spindle_pos.y,0);
             spindle_pos = Spindle.transform.position;
+        } 
+        
+        if (!init_pos.Equals(transform.position))
+        {
+            init_pos = transform.position;
         }
 
         GetComponent<Rigidbody>().velocity = new Vector3(0, 0, 0);
@@ -44,6 +49,7 @@ public class StaticRigidBody : MonoBehaviour
         if (collision.collider.tag.Equals("CubeStock"))
         {
             quillFeedController.GetComponent<QuillFeedControl>().collided = true;
+            fineAdjustmentController.GetComponent<FineAdjustmentControl>().collided = true;
         }
     }
 
@@ -52,6 +58,7 @@ public class StaticRigidBody : MonoBehaviour
         if (collision.collider.tag.Equals("CubeStock"))
         {
             quillFeedController.GetComponent<QuillFeedControl>().collided = false;
+            fineAdjustmentController.GetComponent<FineAdjustmentControl>().collided = false;
         }
     }
 }

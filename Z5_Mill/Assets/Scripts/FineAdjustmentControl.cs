@@ -1,35 +1,29 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditor;
-using UnityEditor.PackageManager;
 using UnityEngine;
 
-public class QuillFeedControl : MonoBehaviour
+public class FineAdjustmentControl : MonoBehaviour
 {
 
     float MAX_HEIGHT;
     float MIN_HEIGHT;
 
     [SerializeField]
-    GameObject animObject, lockAnimObject;
+    GameObject animObject;
 
-    [SerializeField] DRO_ButtonState QuillLockButton; // TEMPORARY --> THIS SHOULD BE FOR QUILL FEED ONLY
+    [SerializeField] DRO_ButtonState FineAdjustmentButton; // TEMPORARY --> THIS SHOULD BE FOR QUILL FEED ONLY
 
     [SerializeField]
-    GameObject wheel, lockHandle;
+    GameObject fineAdjustment;
 
     [SerializeField]
     Boolean enable = true;
 
     public Boolean collided;
+    Boolean animated, handle_enabled, wheel_spin;
 
-    public float movementInterval = 0.005f;
-
-    
-
-    Boolean animated = true;
-    Boolean handle_enabled, wheel_spin;
+    public float movementInterval = 0.001f;
     Animator object_anim, lock_anim;
 
     // Start is called before the first frame update
@@ -39,16 +33,13 @@ public class QuillFeedControl : MonoBehaviour
         {
             collided = false;
             object_anim = animObject.GetComponent<Animator>();
-            lock_anim = lockAnimObject.GetComponent<Animator>();
 
-            MIN_HEIGHT = wheel.transform.localPosition.y - 10f;
-            MAX_HEIGHT = wheel.transform.localPosition.y;
+            MIN_HEIGHT = fineAdjustment.transform.localPosition.y - 0.01f;
+            MAX_HEIGHT = fineAdjustment.transform.localPosition.y;
 
 
             setSpeed(0.2f);
-            setLockSpeed(0.5f);
             pause();
-            pauseLock();
             //Debug.LogWarning(lock_anim.runtimeAnimatorController.animationClips[0].name);
 
             handle_enabled = true;
@@ -61,21 +52,21 @@ public class QuillFeedControl : MonoBehaviour
     {
         if (enable)
         {
-            if (QuillLockButton.checkIfEnabled == true)
+            if (FineAdjustmentButton.checkIfEnabled == true)
             {
 
                 if (Input.mouseScrollDelta.y > 0f && !collided)
                 {
                     Debug.LogWarning("Scroll Up");
 
-                    Vector3 tmp_pos = wheel.transform.localPosition;
+                    Vector3 tmp_pos = fineAdjustment.transform.localPosition;
                     float y_pos = tmp_pos.y - movementInterval;
 
                     if (y_pos < MAX_HEIGHT && y_pos > MIN_HEIGHT)
                     {
 
                         Vector3 new_pos = new Vector3(tmp_pos.x, y_pos, tmp_pos.z);
-                        wheel.transform.localPosition = new_pos;
+                        fineAdjustment.transform.localPosition = new_pos;
                         object_anim.SetFloat("Reverse", 1);
                         setSpeed(2f);
                     }
@@ -86,14 +77,14 @@ public class QuillFeedControl : MonoBehaviour
                     Debug.LogWarning("Scroll Down");
 
 
-                    Vector3 tmp_pos = wheel.transform.localPosition;
+                    Vector3 tmp_pos = fineAdjustment.transform.localPosition;
                     float y_pos = tmp_pos.y + movementInterval;
 
                     if (y_pos < MAX_HEIGHT && y_pos > MIN_HEIGHT)
                     {
                         Vector3 new_pos = new Vector3(tmp_pos.x, y_pos, tmp_pos.z);
 
-                        wheel.transform.localPosition = new_pos;
+                        fineAdjustment.transform.localPosition = new_pos;
                         object_anim.SetFloat("Reverse", -1);
                         setSpeed(2f);
                     }
@@ -113,10 +104,6 @@ public class QuillFeedControl : MonoBehaviour
         animated = false;
     }
 
-    private void pauseLock()
-    {
-        lock_anim.speed = 0;
-    }
 
     private void setSpeed(float mph)
     {
@@ -128,8 +115,5 @@ public class QuillFeedControl : MonoBehaviour
         }
     }
 
-    private void setLockSpeed(float mph)
-    {
-        lock_anim.speed = mph;
-    }
+
 }
