@@ -10,16 +10,18 @@ public class GameButtonManager : MonoBehaviour
     string drillTag, stopTag;
 
     [SerializeField]
-    GameObject onButton, offButton, animObject;
+    GameObject onButton, offButton;
+    public GameObject animObject;
+    public GameObject currentBit;
 
-    Boolean state;
+    public Boolean state;
     Animator anim_object, on_anim, off_anim;
 
     // Start is called before the first frame update
     void Start()
     {
         state = false;
-        animObject.transform.GetChild(0).gameObject.tag = stopTag;
+        currentBit.tag = stopTag;
         anim_object = animObject.GetComponent<Animator>();
         on_anim = onButton.GetComponent<Animator>();
         off_anim = offButton.GetComponent<Animator>();
@@ -60,7 +62,7 @@ public class GameButtonManager : MonoBehaviour
         anim_object.speed = 2f;
         on_anim.speed = 2f;
         on_anim.Play(on_anim.runtimeAnimatorController.animationClips[0].name);
-        animObject.transform.GetChild(0).gameObject.tag = drillTag;
+        currentBit.tag = drillTag;
         state = true;
         Debug.LogWarning("On Button");
 
@@ -68,7 +70,7 @@ public class GameButtonManager : MonoBehaviour
 
     void turnOff()
     {
-        animObject.transform.GetChild(0).gameObject.tag = stopTag;
+        currentBit.tag = stopTag;
         off_anim.speed = 2f;
         off_anim.Play(off_anim.runtimeAnimatorController.animationClips[0].name);
         anim_object.speed = 0;
