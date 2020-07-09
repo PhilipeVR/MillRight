@@ -3318,9 +3318,11 @@ MonoBehaviour:
   animObject: {fileID: 886245741}
   lockAnimObject: {fileID: 1362754916}
   QuillLockButton: {fileID: 949662694}
-  wheel: {fileID: 1609845788}
+  wheel: {fileID: 1934931959}
   lockHandle: {fileID: 1364267378}
   enable: 1
+  collided: 0
+  movementInterval: 0.005
 --- !u!1 &1021082145
 GameObject:
   m_ObjectHideFlags: 0
@@ -4799,12 +4801,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1568306204}
   m_CullTransparentMesh: 0
---- !u!1 &1609845788 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3312799079301690279, guid: 83d399ffe9bbef046b7d9ca75d2c5d0b,
-    type: 3}
-  m_PrefabInstance: {fileID: 2443960360639499163}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1616185319
 GameObject:
   m_ObjectHideFlags: 0
@@ -5535,6 +5531,12 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1928613844}
   m_CullTransparentMesh: 0
+--- !u!1 &1934931959 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3312799078437118122, guid: 83d399ffe9bbef046b7d9ca75d2c5d0b,
+    type: 3}
+  m_PrefabInstance: {fileID: 2443960360639499163}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1937951551
 GameObject:
   m_ObjectHideFlags: 0
@@ -6186,6 +6188,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: Quill Feed
       objectReference: {fileID: 0}
+    - target: {fileID: 6525622273045641873, guid: 83d399ffe9bbef046b7d9ca75d2c5d0b,
+        type: 3}
+      propertyPath: axisController
+      value: 
+      objectReference: {fileID: 1020964410}
+    - target: {fileID: 6525622273045641873, guid: 83d399ffe9bbef046b7d9ca75d2c5d0b,
+        type: 3}
+      propertyPath: quillFeedController
+      value: 
+      objectReference: {fileID: 1020964410}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 83d399ffe9bbef046b7d9ca75d2c5d0b, type: 3}
 --- !u!1001 &2646170436457088332

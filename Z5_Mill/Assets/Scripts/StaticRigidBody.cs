@@ -12,7 +12,7 @@ public class StaticRigidBody : MonoBehaviour
     GameObject Spindle;
 
     [SerializeField]
-    GameObject axisController;
+    GameObject quillFeedController;
     // Start is called before the first frame update
     void Start()
     {
@@ -43,7 +43,7 @@ public class StaticRigidBody : MonoBehaviour
     {
         if (collision.collider.tag.Equals("CubeStock"))
         {
-            axisController.GetComponent<Z_Axis_Lock_Animation>().collided = true;
+            quillFeedController.GetComponent<QuillFeedControl>().collided = true;
         }
     }
 
@@ -51,7 +51,7 @@ public class StaticRigidBody : MonoBehaviour
     {
         if (collision.collider.tag.Equals("CubeStock"))
         {
-            axisController.GetComponent<Z_Axis_Lock_Animation>().collided = false;
+            quillFeedController.GetComponent<QuillFeedControl>().collided = false;
         }
     }
 }
