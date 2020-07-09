@@ -925,8 +925,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 336104565}
-  - component: {fileID: 336104568}
-  - component: {fileID: 336104567}
+  - component: {fileID: 336104564}
   m_Layer: 0
   m_Name: UserControlManager
   m_TagString: Untagged
@@ -934,6 +933,22 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &336104564
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 336104563}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c81c5d57edde8c4ea60392bd72b9225, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  xWheelControl: {fileID: 1065909904}
+  yWheelControl: {fileID: 1616185320}
+  XLockButton: {fileID: 1079926640}
+  YLockButton: {fileID: 1334058743}
 --- !u!4 &336104565
 Transform:
   m_ObjectHideFlags: 0
@@ -944,46 +959,12 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 340.36743, y: 258.70966, z: -10.858239}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 1065909905}
+  - {fileID: 1616185321}
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &336104567
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 336104563}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a248101e87ae00a429360ecc41221e71, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  animObject: {fileID: 870283013555409097}
-  lockAnimObject: {fileID: 870283013826537361}
-  YLockButton: {fileID: 1334058743}
-  wheel: {fileID: 5175314770203662113}
-  lockHandle: {fileID: 8619910113599060837}
-  enable: 1
---- !u!114 &336104568
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 336104563}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c0a77ae419de5644d87c17aa361be5e4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  animObject: {fileID: 402590982}
-  lockAnimObject: {fileID: 635628748}
-  XLockButton: {fileID: 1079926640}
-  wheel: {fileID: 1155322361}
-  lockHandle: {fileID: 1677665264}
-  enable: 1
 --- !u!1 &348425342
 GameObject:
   m_ObjectHideFlags: 0
@@ -3040,6 +3021,55 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1021082145}
   m_CullTransparentMesh: 0
+--- !u!1 &1065909903
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1065909905}
+  - component: {fileID: 1065909904}
+  m_Layer: 0
+  m_Name: XWheelControl
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1065909904
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1065909903}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0a77ae419de5644d87c17aa361be5e4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animObject: {fileID: 402590982}
+  lockAnimObject: {fileID: 635628748}
+  XLockButton: {fileID: 1079926640}
+  wheel: {fileID: 1155322361}
+  lockHandle: {fileID: 1677665264}
+  enable: 1
+--- !u!4 &1065909905
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1065909903}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 336104565}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1079926638
 GameObject:
   m_ObjectHideFlags: 0
@@ -4330,6 +4360,55 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1568306204}
   m_CullTransparentMesh: 0
+--- !u!1 &1616185319
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1616185321}
+  - component: {fileID: 1616185320}
+  m_Layer: 0
+  m_Name: YWheelControl
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1616185320
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1616185319}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a248101e87ae00a429360ecc41221e71, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animObject: {fileID: 870283013555409097}
+  lockAnimObject: {fileID: 870283013826537361}
+  YLockButton: {fileID: 1334058743}
+  wheel: {fileID: 5175314770203662113}
+  lockHandle: {fileID: 8619910113599060837}
+  enable: 1
+--- !u!4 &1616185321
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1616185319}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 336104565}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1649589617
 GameObject:
   m_ObjectHideFlags: 0

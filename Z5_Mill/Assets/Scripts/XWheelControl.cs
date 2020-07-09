@@ -44,7 +44,7 @@ public class XWheelControl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(XLockButton.enabled == true)
+        if(XLockButton.checkIfEnabled == true)
         {
             Debug.Log("X");
             if (Input.mouseScrollDelta.y > 0f)

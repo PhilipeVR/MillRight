@@ -44,7 +44,7 @@ public class YWheelControl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(YLockButton.enabled == true)
+        if(YLockButton.checkIfEnabled == true)
         {
             Debug.Log("Y");
             if (Input.mouseScrollDelta.y > 0f)
