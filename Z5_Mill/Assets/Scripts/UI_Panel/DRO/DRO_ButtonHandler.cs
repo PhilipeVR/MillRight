@@ -16,7 +16,7 @@ public class DRO_ButtonHandler : MonoBehaviour
     [SerializeField] private DRO_ButtonState yLockButton;
     [SerializeField] private DRO_ButtonState zLockButton;
 
-    public string currentUnits;
+    //public string currentUnits;
     
     private void Start()
     {

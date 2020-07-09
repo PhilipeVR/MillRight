@@ -5,12 +5,12 @@ using UnityEditor;
 using UnityEditor.PackageManager;
 using UnityEngine;
 
-public class XWheelControl : MonoBehaviour
+public class XYWheelControl : MonoBehaviour
 {
     [SerializeField]
     GameObject animObject, lockAnimObject;
 
-    [SerializeField] DRO_ButtonState XLockButton;
+    [SerializeField] DRO_ButtonState DRO_LockButton;
 
     [SerializeField]
     GameObject wheel, lockHandle;
@@ -44,9 +44,8 @@ public class XWheelControl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(XLockButton.enabled == true)
+        if(DRO_LockButton.enabled == true)
         {
-            Debug.Log("X");
             if (Input.mouseScrollDelta.y > 0f)
             {
                 object_anim.SetFloat("Reverse", 1);

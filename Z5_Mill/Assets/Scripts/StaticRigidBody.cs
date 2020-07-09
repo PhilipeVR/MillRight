@@ -20,7 +20,7 @@ public class StaticRigidBody : MonoBehaviour
         init_pos = GetComponent<Rigidbody>().position;
         init_rot = GetComponent<Rigidbody>().rotation;
         GetComponent<Rigidbody>().velocity = new Vector3(0, 0, 0);
-        Debug.LogWarning("X: " + init_pos.x + ", Y: " + init_pos.y + ", Z: " + init_pos.z);
+        //Debug.LogWarning("X: " + init_pos.x + ", Y: " + init_pos.y + ", Z: " + init_pos.z);
     }
 
     // Update is called once per frame
