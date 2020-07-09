@@ -24252,7 +24252,7 @@ GameObject:
   - component: {fileID: 3312799077726579723}
   - component: {fileID: 3312799077726579720}
   m_Layer: 0
-  m_Name: Y-Lock W/ Animator
+  m_Name: Y-Lock W_Animator
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -24303,7 +24303,7 @@ GameObject:
   - component: {fileID: 3312799077755689800}
   - component: {fileID: 3312799077755689801}
   m_Layer: 0
-  m_Name: Head-Lock W/ Animator
+  m_Name: Head-Lock W_Animator
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -25348,7 +25348,7 @@ GameObject:
   - component: {fileID: 3312799079067245395}
   - component: {fileID: 3312799079067245392}
   m_Layer: 0
-  m_Name: Mill Model (With Animation & Cams) 1
+  m_Name: Mill_Organized
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -25556,7 +25556,7 @@ GameObject:
   - component: {fileID: 3312799079438408076}
   - component: {fileID: 3312799079438408077}
   m_Layer: 0
-  m_Name: X-Lock W/ Animator
+  m_Name: X-Lock W_Animator
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
