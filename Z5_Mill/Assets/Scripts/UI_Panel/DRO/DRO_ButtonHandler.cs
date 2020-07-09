@@ -16,6 +16,10 @@ public class DRO_ButtonHandler : MonoBehaviour
     [SerializeField] private DRO_ButtonState yLockButton;
     [SerializeField] private DRO_ButtonState zLockButton;
 
+    //TEMPORARY BUTTONS
+    [SerializeField] private DRO_ButtonState QuillLockButton; // TEMPORARY
+
+
     //public string currentUnits;
     
     private void Start()
@@ -57,6 +61,7 @@ public class DRO_ButtonHandler : MonoBehaviour
             
             yLockButton.DisableThisButton();
             zLockButton.DisableThisButton();
+            QuillLockButton.DisableThisButton(); // TEMPORARY
         }
 
         else if(buttonState.buttonName == "yButton")
@@ -75,6 +80,7 @@ public class DRO_ButtonHandler : MonoBehaviour
             
             xLockButton.DisableThisButton();
             zLockButton.DisableThisButton();
+            QuillLockButton.DisableThisButton(); // TEMPORARY
         }
         else if(buttonState.buttonName == "zButton")
         {
@@ -87,11 +93,27 @@ public class DRO_ButtonHandler : MonoBehaviour
             } 
             else
             {
-                zLockButton.DisableThisButton(); //Enable LockButton means unlocking that button
+                zLockButton.DisableThisButton();
             }
             
             xLockButton.DisableThisButton();
             yLockButton.DisableThisButton();
+            QuillLockButton.DisableThisButton(); // TEMPORARY
+        }
+        //TEMPORARY
+        //QUILL
+        //LOCK
+        //BUTTON
+        else if(buttonState.buttonName == "QuillLockButton")
+        {
+            xButton.DisableThisButton();
+            yButton.DisableThisButton();
+            zButton.DisableThisButton();
+
+            
+            xLockButton.DisableThisButton();
+            yLockButton.DisableThisButton();
+            zLockButton.DisableThisButton();
         }
         else {} // Do nothing
 

@@ -5,12 +5,12 @@ using UnityEditor;
 using UnityEditor.PackageManager;
 using UnityEngine;
 
-public class ZWheelControl : MonoBehaviour
+public class QuillFeedControl : MonoBehaviour
 {
     [SerializeField]
     GameObject animObject, lockAnimObject;
 
-    [SerializeField] DRO_ButtonState ZLockButton; // TEMPORARY --> THIS SHOULD BE FOR QUILL FEED ONLY
+    [SerializeField] DRO_ButtonState QuillLockButton; // TEMPORARY --> THIS SHOULD BE FOR QUILL FEED ONLY
 
     [SerializeField]
     GameObject wheel, lockHandle;
@@ -44,7 +44,7 @@ public class ZWheelControl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(ZLockButton.checkIfEnabled == true)
+        if(QuillLockButton.checkIfEnabled == true)
         {
             if (Input.mouseScrollDelta.y > 0f)
             {
