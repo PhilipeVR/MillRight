@@ -6,7 +6,6 @@ using UnityEngine;
 public class GameButtonManager : MonoBehaviour
 {
 
-    [SerializeField]
     string drillTag, stopTag;
 
     [SerializeField]
@@ -21,7 +20,7 @@ public class GameButtonManager : MonoBehaviour
     void Start()
     {
         state = false;
-        currentBit.tag = stopTag;
+        stopTag = currentBit.tag;
         anim_object = animObject.GetComponent<Animator>();
         on_anim = onButton.GetComponent<Animator>();
         off_anim = offButton.GetComponent<Animator>();
@@ -34,6 +33,11 @@ public class GameButtonManager : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
+        if (!state)
+        {
+            stopTag = currentBit.tag;
+        }
+
         if (Input.GetMouseButtonDown(0))
         {
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);

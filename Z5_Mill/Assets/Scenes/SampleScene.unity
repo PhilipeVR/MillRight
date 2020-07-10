@@ -269,7 +269,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Tool
+  m_Text: 'Drill Bit
+
+'
 --- !u!222 &55566005
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -856,7 +858,7 @@ GameObject:
   - component: {fileID: 108105661}
   - component: {fileID: 108105660}
   m_Layer: 5
-  m_Name: Tool (2)
+  m_Name: 4 Flute End Mill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -940,7 +942,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 108105662}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1420552145}
+        m_MethodName: Switch
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 4FluteEndMill
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &108105662
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1826,6 +1839,7 @@ Transform:
   - {fileID: 1077523317}
   - {fileID: 1020964411}
   - {fileID: 443703467}
+  - {fileID: 1420552144}
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1843,7 +1857,7 @@ GameObject:
   - component: {fileID: 340834065}
   - component: {fileID: 340834064}
   m_Layer: 5
-  m_Name: Tool
+  m_Name: End Mill Holder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1927,7 +1941,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 340834066}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1420552145}
+        m_MethodName: changeChuck
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &340834066
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2345,6 +2370,12 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 424435378}
   m_CullTransparentMesh: 0
+--- !u!1 &430379713 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2615026358738575914, guid: 83d399ffe9bbef046b7d9ca75d2c5d0b,
+    type: 3}
+  m_PrefabInstance: {fileID: 2443960360639499163}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &442142053
 GameObject:
   m_ObjectHideFlags: 0
@@ -3259,7 +3290,7 @@ GameObject:
   - component: {fileID: 583520391}
   - component: {fileID: 583520390}
   m_Layer: 5
-  m_Name: Tool (1)
+  m_Name: Drill Bit
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3343,7 +3374,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 583520392}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1420552145}
+        m_MethodName: Switch
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 3FluteDrillBit
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &583520392
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3796,6 +3838,12 @@ Transform:
   m_Father: {fileID: 800471072}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: -235, y: 0, z: 0}
+--- !u!1 &716149747 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1286587826326416233, guid: 83d399ffe9bbef046b7d9ca75d2c5d0b,
+    type: 3}
+  m_PrefabInstance: {fileID: 2443960360639499163}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &752467031
 GameObject:
   m_ObjectHideFlags: 0
@@ -3865,7 +3913,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Tool
+  m_Text: 'End Mill Holder
+
+'
 --- !u!222 &752467034
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4512,7 +4562,7 @@ GameObject:
   - component: {fileID: 923683914}
   - component: {fileID: 923683913}
   m_Layer: 5
-  m_Name: Tool Holder
+  m_Name: Drill Chuck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4596,7 +4646,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 923683915}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1420552145}
+        m_MethodName: changeChuck
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!114 &923683915
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5981,6 +6042,12 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1251787436}
   m_CullTransparentMesh: 0
+--- !u!1 &1259356224 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1851589162034739395, guid: 83d399ffe9bbef046b7d9ca75d2c5d0b,
+    type: 3}
+  m_PrefabInstance: {fileID: 2443960360639499163}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1285218427
 GameObject:
   m_ObjectHideFlags: 0
@@ -6050,7 +6117,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Empty
+  m_Text: '4 Flute End Mill
+
+'
 --- !u!222 &1285218430
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -6128,7 +6197,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Empty
+  m_Text: 6 Flute End Mill
 --- !u!222 &1298125659
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -6348,6 +6417,12 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1310674733}
   m_CullTransparentMesh: 0
+--- !u!1 &1327228408 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3312799078959786686, guid: 83d399ffe9bbef046b7d9ca75d2c5d0b,
+    type: 3}
+  m_PrefabInstance: {fileID: 2443960360639499163}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1334058741
 GameObject:
   m_ObjectHideFlags: 0
@@ -6834,6 +6909,12 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 2443960360639499163}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1398494847 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5857705328942281041, guid: 83d399ffe9bbef046b7d9ca75d2c5d0b,
+    type: 3}
+  m_PrefabInstance: {fileID: 2443960360639499163}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1416480562
 GameObject:
   m_ObjectHideFlags: 0
@@ -6970,6 +7051,65 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1416480562}
   m_CullTransparentMesh: 0
+--- !u!1 &1420552143
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1420552144}
+  - component: {fileID: 1420552145}
+  m_Layer: 0
+  m_Name: SwitchInventoryController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1420552144
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1420552143}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 336104565}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1420552145
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1420552143}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c43f01bbf9324547bd688e8b0270321, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DrillBits:
+  - {fileID: 933370981}
+  EndMills:
+  - {fileID: 1398494847}
+  - {fileID: 430379713}
+  chuckType: 1
+  gameObjectManager: {fileID: 2443960360639499167}
+  drillChuck: {fileID: 1430466745}
+  endMillHolder: {fileID: 716149747}
+  enable: 1
+--- !u!1 &1430466745 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 857209184208252849, guid: 83d399ffe9bbef046b7d9ca75d2c5d0b,
+    type: 3}
+  m_PrefabInstance: {fileID: 2443960360639499163}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1432421446
 GameObject:
   m_ObjectHideFlags: 0
@@ -7117,7 +7257,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Tool Holder
+  m_Text: Drill Chuck
 --- !u!222 &1445172389
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -8483,7 +8623,7 @@ GameObject:
   - component: {fileID: 1855157154}
   - component: {fileID: 1855157153}
   m_Layer: 5
-  m_Name: Tool (3)
+  m_Name: 6 Flute End Mill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8567,7 +8707,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1855157155}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1420552145}
+        m_MethodName: Switch
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 6FluteEndMill
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1855157155
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9472,6 +9623,111 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1221230043478335003, guid: 83d399ffe9bbef046b7d9ca75d2c5d0b,
+        type: 3}
+      propertyPath: quillFeedController
+      value: 
+      objectReference: {fileID: 1020964410}
+    - target: {fileID: 1221230043478335003, guid: 83d399ffe9bbef046b7d9ca75d2c5d0b,
+        type: 3}
+      propertyPath: fineAdjustmentController
+      value: 
+      objectReference: {fileID: 443703466}
+    - target: {fileID: 1286587826326416233, guid: 83d399ffe9bbef046b7d9ca75d2c5d0b,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1330602155782730496, guid: 83d399ffe9bbef046b7d9ca75d2c5d0b,
+        type: 3}
+      propertyPath: m_TagString
+      value: 3FluteDrillBit
+      objectReference: {fileID: 0}
+    - target: {fileID: 1526001305112533540, guid: 83d399ffe9bbef046b7d9ca75d2c5d0b,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.5099
+      objectReference: {fileID: 0}
+    - target: {fileID: 1526001305112533540, guid: 83d399ffe9bbef046b7d9ca75d2c5d0b,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.7053
+      objectReference: {fileID: 0}
+    - target: {fileID: 1526001305112533540, guid: 83d399ffe9bbef046b7d9ca75d2c5d0b,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.0535
+      objectReference: {fileID: 0}
+    - target: {fileID: 1530836235407544692, guid: 83d399ffe9bbef046b7d9ca75d2c5d0b,
+        type: 3}
+      propertyPath: quillFeedController
+      value: 
+      objectReference: {fileID: 1020964410}
+    - target: {fileID: 1530836235407544692, guid: 83d399ffe9bbef046b7d9ca75d2c5d0b,
+        type: 3}
+      propertyPath: fineAdjustmentController
+      value: 
+      objectReference: {fileID: 443703466}
+    - target: {fileID: 1616339052154038993, guid: 83d399ffe9bbef046b7d9ca75d2c5d0b,
+        type: 3}
+      propertyPath: m_Name
+      value: Y-LockHandle
+      objectReference: {fileID: 0}
+    - target: {fileID: 1851589162034739395, guid: 83d399ffe9bbef046b7d9ca75d2c5d0b,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1851589162034739395, guid: 83d399ffe9bbef046b7d9ca75d2c5d0b,
+        type: 3}
+      propertyPath: m_TagString
+      value: StopDrilling
+      objectReference: {fileID: 0}
+    - target: {fileID: 2615026358738575914, guid: 83d399ffe9bbef046b7d9ca75d2c5d0b,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2615026358738575914, guid: 83d399ffe9bbef046b7d9ca75d2c5d0b,
+        type: 3}
+      propertyPath: m_TagString
+      value: 6FluteEndMill
+      objectReference: {fileID: 0}
+    - target: {fileID: 2697595709191430681, guid: 83d399ffe9bbef046b7d9ca75d2c5d0b,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.456
+      objectReference: {fileID: 0}
+    - target: {fileID: 2697595709191430681, guid: 83d399ffe9bbef046b7d9ca75d2c5d0b,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.003
+      objectReference: {fileID: 0}
+    - target: {fileID: 2697595709191430681, guid: 83d399ffe9bbef046b7d9ca75d2c5d0b,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.549
+      objectReference: {fileID: 0}
+    - target: {fileID: 3312799077726579722, guid: 83d399ffe9bbef046b7d9ca75d2c5d0b,
+        type: 3}
+      propertyPath: m_Name
+      value: X-Lock W_Animator
+      objectReference: {fileID: 0}
+    - target: {fileID: 3312799077983428361, guid: 83d399ffe9bbef046b7d9ca75d2c5d0b,
+        type: 3}
+      propertyPath: currentBit
+      value: 
+      objectReference: {fileID: 1259356224}
+    - target: {fileID: 3312799077983428361, guid: 83d399ffe9bbef046b7d9ca75d2c5d0b,
+        type: 3}
+      propertyPath: animObject
+      value: 
+      objectReference: {fileID: 1327228408}
+    - target: {fileID: 3312799078959786686, guid: 83d399ffe9bbef046b7d9ca75d2c5d0b,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3312799079067245394, guid: 83d399ffe9bbef046b7d9ca75d2c5d0b,
         type: 3}
       propertyPath: m_Name
@@ -9537,6 +9793,86 @@ PrefabInstance:
       propertyPath: m_Name
       value: Quill Feed
       objectReference: {fileID: 0}
+    - target: {fileID: 3312799079438408079, guid: 83d399ffe9bbef046b7d9ca75d2c5d0b,
+        type: 3}
+      propertyPath: m_Name
+      value: Y-Lock W_Animator
+      objectReference: {fileID: 0}
+    - target: {fileID: 3708699637867846666, guid: 83d399ffe9bbef046b7d9ca75d2c5d0b,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.4529
+      objectReference: {fileID: 0}
+    - target: {fileID: 3708699637867846666, guid: 83d399ffe9bbef046b7d9ca75d2c5d0b,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.7438
+      objectReference: {fileID: 0}
+    - target: {fileID: 3708699637867846666, guid: 83d399ffe9bbef046b7d9ca75d2c5d0b,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.0535
+      objectReference: {fileID: 0}
+    - target: {fileID: 3860315213269266468, guid: 83d399ffe9bbef046b7d9ca75d2c5d0b,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.7559
+      objectReference: {fileID: 0}
+    - target: {fileID: 3860315213269266468, guid: 83d399ffe9bbef046b7d9ca75d2c5d0b,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.4023
+      objectReference: {fileID: 0}
+    - target: {fileID: 3860315213269266468, guid: 83d399ffe9bbef046b7d9ca75d2c5d0b,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.1716
+      objectReference: {fileID: 0}
+    - target: {fileID: 5043734380279515645, guid: 83d399ffe9bbef046b7d9ca75d2c5d0b,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5043734380279515645, guid: 83d399ffe9bbef046b7d9ca75d2c5d0b,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.18
+      objectReference: {fileID: 0}
+    - target: {fileID: 5043734380279515645, guid: 83d399ffe9bbef046b7d9ca75d2c5d0b,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5797324719157736986, guid: 83d399ffe9bbef046b7d9ca75d2c5d0b,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.1715
+      objectReference: {fileID: 0}
+    - target: {fileID: 5797324719157736986, guid: 83d399ffe9bbef046b7d9ca75d2c5d0b,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.4045
+      objectReference: {fileID: 0}
+    - target: {fileID: 5797324719157736986, guid: 83d399ffe9bbef046b7d9ca75d2c5d0b,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.7546
+      objectReference: {fileID: 0}
+    - target: {fileID: 5857705328942281041, guid: 83d399ffe9bbef046b7d9ca75d2c5d0b,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5857705328942281041, guid: 83d399ffe9bbef046b7d9ca75d2c5d0b,
+        type: 3}
+      propertyPath: m_TagString
+      value: 4FluteEndMill
+      objectReference: {fileID: 0}
+    - target: {fileID: 6217960820980314366, guid: 83d399ffe9bbef046b7d9ca75d2c5d0b,
+        type: 3}
+      propertyPath: m_Name
+      value: X-LockHandle
+      objectReference: {fileID: 0}
     - target: {fileID: 6525622273045641873, guid: 83d399ffe9bbef046b7d9ca75d2c5d0b,
         type: 3}
       propertyPath: axisController
@@ -9552,8 +9888,54 @@ PrefabInstance:
       propertyPath: fineAdjustmentController
       value: 
       objectReference: {fileID: 443703466}
+    - target: {fileID: 6525622273045641874, guid: 83d399ffe9bbef046b7d9ca75d2c5d0b,
+        type: 3}
+      propertyPath: m_TagString
+      value: StopDrilling
+      objectReference: {fileID: 0}
+    - target: {fileID: 6525622273045641874, guid: 83d399ffe9bbef046b7d9ca75d2c5d0b,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7341638130763499322, guid: 83d399ffe9bbef046b7d9ca75d2c5d0b,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.0004
+      objectReference: {fileID: 0}
+    - target: {fileID: 7341638130763499322, guid: 83d399ffe9bbef046b7d9ca75d2c5d0b,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.8516
+      objectReference: {fileID: 0}
+    - target: {fileID: 7341638130763499322, guid: 83d399ffe9bbef046b7d9ca75d2c5d0b,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.188
+      objectReference: {fileID: 0}
+    - target: {fileID: 7832575453082299320, guid: 83d399ffe9bbef046b7d9ca75d2c5d0b,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7832575453082299320, guid: 83d399ffe9bbef046b7d9ca75d2c5d0b,
+        type: 3}
+      propertyPath: m_TagString
+      value: StopDrilling
+      objectReference: {fileID: 0}
+    - target: {fileID: 8458132777105331226, guid: 83d399ffe9bbef046b7d9ca75d2c5d0b,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1697.2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 83d399ffe9bbef046b7d9ca75d2c5d0b, type: 3}
+--- !u!1 &2443960360639499167 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3312799077983428362, guid: 83d399ffe9bbef046b7d9ca75d2c5d0b,
+    type: 3}
+  m_PrefabInstance: {fileID: 2443960360639499163}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2646170436457088332
 PrefabInstance:
   m_ObjectHideFlags: 0

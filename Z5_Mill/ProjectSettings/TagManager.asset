@@ -8,6 +8,9 @@ TagManager:
   - Drill
   - CubeStock
   - StopDrilling
+  - 6FluteEndMill
+  - 4FluteEndMill
+  - 3FluteDrillBit
   layers:
   - Default
   - TransparentFX

@@ -15,7 +15,7 @@ public class FineAdjustmentControl : MonoBehaviour
     [SerializeField] DRO_ButtonState FineAdjustmentButton; // TEMPORARY --> THIS SHOULD BE FOR QUILL FEED ONLY
 
     [SerializeField]
-    GameObject fineAdjustment;
+    public GameObject fineAdjustment, prevAdjustment;
 
     [SerializeField]
     Boolean enable = true;
@@ -37,6 +37,8 @@ public class FineAdjustmentControl : MonoBehaviour
             MIN_HEIGHT = fineAdjustment.transform.localPosition.y - 0.01f;
             MAX_HEIGHT = fineAdjustment.transform.localPosition.y;
 
+            prevAdjustment = fineAdjustment;
+
 
             setSpeed(0.2f);
             pause();
@@ -52,6 +54,14 @@ public class FineAdjustmentControl : MonoBehaviour
     {
         if (enable)
         {
+            if (!prevAdjustment.Equals(fineAdjustment))
+            {
+                MIN_HEIGHT = fineAdjustment.transform.localPosition.y - 0.01f;
+                MAX_HEIGHT = fineAdjustment.transform.localPosition.y;
+            }
+
+            prevAdjustment = fineAdjustment;
+
             if (FineAdjustmentButton.checkIfEnabled == true)
             {
 
@@ -114,6 +124,5 @@ public class FineAdjustmentControl : MonoBehaviour
             animated = true;
         }
     }
-
 
 }

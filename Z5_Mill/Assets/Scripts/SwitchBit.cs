@@ -1,105 +1,139 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Net;
 using UnityEngine;
 
 public class SwitchBit : MonoBehaviour
 {
-    public List<GameObject> DrillBitsEndMills;
-    public GameObject gameObjectManager;
+    public GameObject fineAdjustment;
+    public List<GameObject> DrillBits;
+    public List<GameObject> EndMills;
+    public Boolean chuckType = true;
+
+    public GameObject gameObjectManager, drillChuck, endMillHolder;
     GameButtonManager manager;
+    FineAdjustmentControl fine_adjust;
     GameObject currentBit;
+
     int currentIndex;
-    int numOfBits;
+    int numOfDrillBits;
+    int numOfEndMills;
+
     public Boolean enable;
-    public Vector3 spawnPosition;
+    Vector3 spawnBitPosition;
 
     void Start()
     {
         if (enable)
         {
             manager = gameObjectManager.GetComponent<GameButtonManager>();
+            fine_adjust = fineAdjustment.GetComponent<FineAdjustmentControl>();
+
             currentIndex = 0;
-            numOfBits = DrillBitsEndMills.Count;
-            currentBit = DrillBitsEndMills[currentIndex];
+
+            numOfDrillBits = DrillBits.Count;
+            numOfEndMills = EndMills.Count;
+
+            for (int i = 0; i < numOfDrillBits; i++)
+            {
+                DrillBits[i].SetActive(false);
+            }
+
+            for (int i = 0; i < numOfEndMills; i++)
+            {
+                EndMills[i].SetActive(false);
+            }
+
+            currentBit = DrillBits[currentIndex];
             currentBit.SetActive(true);
-            currentBit.transform.localPosition = spawnPosition;
+
+            drillChuck.SetActive(true);
+            endMillHolder.SetActive(false);
+
+            spawnBitPosition = currentBit.transform.localPosition;
+
+            fine_adjust.fineAdjustment = currentBit.transform.parent.gameObject;
             manager.currentBit = currentBit;
 
-            for(int i = 0; i<numOfBits; i++)
-            {
-                if(i != currentIndex)
-                {
-                    DrillBitsEndMills[i].SetActive(false);
-                }
-            }
-
         }
     }
 
-    public void Switch()
+    public void Switch(string bitTag)
     {
         if (enable)
         {
+
             if (!manager.state)
             {
-                spawnPosition = currentBit.transform.localPosition;
-                currentBit.SetActive(false);
-
-                if(currentIndex+1 < numOfBits)
+                if (!bitTag.Equals(currentBit.tag))
                 {
-                    currentBit = DrillBitsEndMills[currentIndex + 1];
-                    currentBit.SetActive(true);
-                    Vector3 tmpPos = currentBit.transform.localPosition;
-                    currentBit.transform.localPosition = spawnPosition;
-                    DrillBitsEndMills[currentIndex].transform.localPosition = tmpPos;
-                    manager.currentBit = currentBit;
-                    currentIndex++;
-                }
-                else
-                {
-                    currentBit = DrillBitsEndMills[0];
-                    currentBit.SetActive(true);
-                    Vector3 tmpPos = currentBit.transform.localPosition;
-                    currentBit.transform.localPosition = spawnPosition;
-                    DrillBitsEndMills[currentIndex].transform.localPosition = tmpPos;
-                    manager.currentBit = currentBit;
-                    currentIndex=0;
+                    Boolean bitTagSearch = findTag(bitTag);
                 }
             }
         }
     }
 
-    void Switch(string bitTag)
+    private Boolean findTag(string tag)
     {
-        if (enable)
+
+        List<GameObject> listBits;
+        int listLength;
+        if (chuckType)
         {
-            if (!manager.state)
+            listLength = numOfDrillBits;
+            listBits = DrillBits;
+        } else
+        {
+            listLength = numOfEndMills;
+            listBits = EndMills;
+        }
+
+        for (int i = 0; i<listLength; i++)
+        {
+            if (tag.Equals(listBits[i].tag))
             {
-                spawnPosition = currentBit.transform.position;
+                Vector3 tmpPos = listBits[i].transform.localPosition;
+                currentBit.transform.localPosition = tmpPos;
                 currentBit.SetActive(false);
-                for (int i = 0; i < numOfBits; i++)
-                {
-                    if (bitTag.Equals(DrillBitsEndMills[i].tag))
-                    {
-                        currentBit = DrillBitsEndMills[i];
-                        currentBit.SetActive(true);
-                        Vector3 tmpPos = currentBit.transform.position;
-                        currentBit.transform.position = spawnPosition;
-                        DrillBitsEndMills[currentIndex].transform.position = tmpPos;
-                        currentIndex = i;
-                        manager.animObject = currentBit;
-                    }
-                }
+                currentBit = listBits[i];
+                currentBit.SetActive(true);
+                currentBit.transform.localPosition = spawnBitPosition;
+                currentIndex = i;
+                fine_adjust.fineAdjustment = currentBit.transform.parent.gameObject;
+                manager.currentBit = currentBit;
+                return true;
             }
         }
+        return false;
+    }
+
+    public void changeChuck(Boolean type)
+    {
+        if (chuckType != type)
+        {
+            if (type)
+            {
+                drillChuck.SetActive(true);
+                endMillHolder.SetActive(false);
+
+            }
+            else
+            {
+                endMillHolder.SetActive(true);
+                drillChuck.SetActive(false);
+            }
+            currentBit.SetActive(false);
+
+        }
+        chuckType = type;
     }
 
     private void FixedUpdate()
     {
         if (enable)
         {
-            spawnPosition = currentBit.transform.localPosition;
+            spawnBitPosition = currentBit.transform.localPosition;
         }
     }
 
