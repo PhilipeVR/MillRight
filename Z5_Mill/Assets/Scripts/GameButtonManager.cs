@@ -38,30 +38,9 @@ public class GameButtonManager : MonoBehaviour
             stopTag = currentBit.tag;
         }
 
-        if (Input.GetMouseButtonDown(0))
-        {
-            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            RaycastHit hit;
-            if (Physics.Raycast(ray, out hit))
-            {
-                if (hit.collider.gameObject.Equals(onButton))
-                {
-                    if (!state)
-                    {
-                        turnOn();
-                    }
-                } else if (hit.collider.gameObject.Equals(offButton))
-                {
-                    if (state)
-                    {
-                        turnOff();
-                    }
-                }
-            }
-        }
     }
 
-    void turnOn()
+    public void turnOn()
     {
         anim_object.speed = 2f;
         on_anim.speed = 2f;
@@ -72,7 +51,7 @@ public class GameButtonManager : MonoBehaviour
 
     }
 
-    void turnOff()
+    public void turnOff()
     {
         currentBit.tag = stopTag;
         off_anim.speed = 2f;
