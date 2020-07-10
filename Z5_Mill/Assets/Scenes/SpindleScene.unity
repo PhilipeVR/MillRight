@@ -372,6 +372,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Mill Model (Installation Animation)
       objectReference: {fileID: 0}
+    - target: {fileID: 2417110157494614327, guid: b300480415584494996cc2faded79dd9,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2579704647619269607, guid: b300480415584494996cc2faded79dd9,
         type: 3}
       propertyPath: m_LocalPosition.x
