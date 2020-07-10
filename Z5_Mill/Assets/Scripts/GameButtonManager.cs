@@ -6,7 +6,8 @@ using UnityEngine;
 public class GameButtonManager : MonoBehaviour
 {
 
-    string drillTag, stopTag;
+    string stopTag;
+    public string drillTag;
 
     [SerializeField]
     GameObject onButton, offButton;

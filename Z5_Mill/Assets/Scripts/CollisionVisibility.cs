@@ -80,6 +80,7 @@ public class CollisionVisibility : MonoBehaviour
                 Destroy(gameObject);
                 Destroy(this);
                 sparks.SetActive(false);
+                collison.transform.gameObject.GetComponent<StaticRigidBody>().endCollision();
             }
 
             if(!gameObject.GetComponent<Renderer>().enabled)
@@ -94,8 +95,9 @@ public class CollisionVisibility : MonoBehaviour
     {
         if (collision.collider.tag == collisionTag)
         {
+            
             isColliding = false;
-            timerCountDown = 5.0f;
+            timerCountDown = 10.0f;
             sparks.SetActive(false);
         }
     }

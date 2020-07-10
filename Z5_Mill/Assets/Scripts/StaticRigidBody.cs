@@ -16,8 +16,7 @@ public class StaticRigidBody : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        spindle_pos = Spindle.transform.position;
-        init_pos = GetComponent<Rigidbody>().position;
+        init_pos = transform.localPosition;
         init_rot = GetComponent<Rigidbody>().rotation;
         GetComponent<Rigidbody>().velocity = new Vector3(0, 0, 0);
         //Debug.LogWarning("X: " + init_pos.x + ", Y: " + init_pos.y + ", Z: " + init_pos.z);
@@ -26,22 +25,8 @@ public class StaticRigidBody : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        
-
-        if (!spindle_pos.Equals(Spindle.transform.position))
-        {
-            init_pos = init_pos + new Vector3(0, Spindle.transform.position.y - spindle_pos.y,0);
-            spindle_pos = Spindle.transform.position;
-        } 
-        
-        if (!init_pos.Equals(transform.position))
-        {
-            init_pos = transform.position;
-        }
-
-        GetComponent<Rigidbody>().velocity = new Vector3(0, 0, 0);
-        GetComponent<Rigidbody>().MovePosition(init_pos);
-        GetComponent<Rigidbody>().MoveRotation(init_rot);
+        updateStaticRigidBody();
+       
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -50,6 +35,16 @@ public class StaticRigidBody : MonoBehaviour
         {
             quillFeedController.GetComponent<QuillFeedControl>().collided = true;
             fineAdjustmentController.GetComponent<FineAdjustmentControl>().collided = true;
+            Debug.LogWarning("HIT");
+            updateStaticRigidBody();
+        }
+    }
+
+    private void OnCollisionStay(Collision collision)
+    {
+        if (collision.collider.tag.Equals("CubeStock"))
+        {
+            updateStaticRigidBody();
         }
     }
 
@@ -57,8 +52,24 @@ public class StaticRigidBody : MonoBehaviour
     {
         if (collision.collider.tag.Equals("CubeStock"))
         {
-            quillFeedController.GetComponent<QuillFeedControl>().collided = false;
-            fineAdjustmentController.GetComponent<FineAdjustmentControl>().collided = false;
+            endCollision();
+            Debug.LogWarning("No HIT");
+
         }
+    }
+
+    public void endCollision()
+    {
+        quillFeedController.GetComponent<QuillFeedControl>().collided = false;
+        fineAdjustmentController.GetComponent<FineAdjustmentControl>().collided = false;
+    }
+
+
+    public void updateStaticRigidBody()
+    {
+
+        transform.localPosition = init_pos;
+        GetComponent<Rigidbody>().rotation = init_rot;
+
     }
 }

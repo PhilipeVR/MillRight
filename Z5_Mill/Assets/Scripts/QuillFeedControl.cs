@@ -22,9 +22,9 @@ public class QuillFeedControl : MonoBehaviour
     [SerializeField]
     Boolean enable = true;
 
-    public Boolean collided;
+    public Boolean collided, moving, prev_state;
 
-    public float movementInterval = 0.005f;
+    public float movementInterval = 0.001f;
 
     
 
@@ -37,6 +37,7 @@ public class QuillFeedControl : MonoBehaviour
     {
         if (enable)
         {
+            moving = false;
             collided = false;
             object_anim = animObject.GetComponent<Animator>();
             lock_anim = lockAnimObject.GetComponent<Animator>();
@@ -66,13 +67,12 @@ public class QuillFeedControl : MonoBehaviour
 
                 if (Input.mouseScrollDelta.y > 0f && !collided)
                 {
-                    Debug.LogWarning("Scroll Up");
-
                     Vector3 tmp_pos = wheel.transform.localPosition;
                     float y_pos = tmp_pos.y - movementInterval;
 
                     if (y_pos < MAX_HEIGHT && y_pos > MIN_HEIGHT)
                     {
+                        moving = true;
 
                         Vector3 new_pos = new Vector3(tmp_pos.x, y_pos, tmp_pos.z);
                         wheel.transform.localPosition = new_pos;
@@ -83,14 +83,13 @@ public class QuillFeedControl : MonoBehaviour
                 else if (Input.mouseScrollDelta.y < 0f)
                 {
 
-                    Debug.LogWarning("Scroll Down");
-
-
                     Vector3 tmp_pos = wheel.transform.localPosition;
                     float y_pos = tmp_pos.y + movementInterval;
 
                     if (y_pos < MAX_HEIGHT && y_pos > MIN_HEIGHT)
                     {
+                        moving = true;
+
                         Vector3 new_pos = new Vector3(tmp_pos.x, y_pos, tmp_pos.z);
 
                         wheel.transform.localPosition = new_pos;
@@ -100,7 +99,7 @@ public class QuillFeedControl : MonoBehaviour
                 }
                 else
                 {
-                    Debug.LogWarning("Nothing");
+                    moving = false;
                     pause();
                 }
             }

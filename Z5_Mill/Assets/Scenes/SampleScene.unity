@@ -2777,9 +2777,9 @@ MonoBehaviour:
   animObject: {fileID: 485619489}
   FineAdjustmentButton: {fileID: 2098731954}
   fineAdjustment: {fileID: 933370981}
-  prevAdjustment: {fileID: 0}
   enable: 1
   collided: 0
+  moving: 0
   movementInterval: 0.001
 --- !u!1 &453831208
 GameObject:
@@ -5361,6 +5361,8 @@ MonoBehaviour:
   lockHandle: {fileID: 1364267378}
   enable: 1
   collided: 0
+  moving: 0
+  prev_state: 0
   movementInterval: 0.005
 --- !u!1 &1021082145
 GameObject:
@@ -8645,7 +8647,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-289122
+  m_Name: pb_Mesh-119018
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -10351,20 +10353,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1221230043478335003, guid: 83d399ffe9bbef046b7d9ca75d2c5d0b,
-        type: 3}
-      propertyPath: quillFeedController
-      value: 
-      objectReference: {fileID: 1020964410}
-    - target: {fileID: 1221230043478335003, guid: 83d399ffe9bbef046b7d9ca75d2c5d0b,
-        type: 3}
-      propertyPath: fineAdjustmentController
-      value: 
-      objectReference: {fileID: 443703466}
     - target: {fileID: 1286587826326416233, guid: 83d399ffe9bbef046b7d9ca75d2c5d0b,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1330602155782730496, guid: 83d399ffe9bbef046b7d9ca75d2c5d0b,
         type: 3}
@@ -10386,40 +10378,40 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 0.0535
       objectReference: {fileID: 0}
-    - target: {fileID: 1530836235407544692, guid: 83d399ffe9bbef046b7d9ca75d2c5d0b,
+    - target: {fileID: 1616339052154038993, guid: 83d399ffe9bbef046b7d9ca75d2c5d0b,
         type: 3}
-      propertyPath: quillFeedController
-      value: 
-      objectReference: {fileID: 1020964410}
-    - target: {fileID: 1530836235407544692, guid: 83d399ffe9bbef046b7d9ca75d2c5d0b,
+      propertyPath: m_Name
+      value: X-LockHandle
+      objectReference: {fileID: 0}
+    - target: {fileID: 1851589162034739395, guid: 83d399ffe9bbef046b7d9ca75d2c5d0b,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1851589162034739395, guid: 83d399ffe9bbef046b7d9ca75d2c5d0b,
+        type: 3}
+      propertyPath: m_TagString
+      value: Drill
+      objectReference: {fileID: 0}
+    - target: {fileID: 2059558131018466876, guid: 83d399ffe9bbef046b7d9ca75d2c5d0b,
         type: 3}
       propertyPath: fineAdjustmentController
       value: 
       objectReference: {fileID: 443703466}
-    - target: {fileID: 1616339052154038993, guid: 83d399ffe9bbef046b7d9ca75d2c5d0b,
+    - target: {fileID: 2059558131018466876, guid: 83d399ffe9bbef046b7d9ca75d2c5d0b,
         type: 3}
-      propertyPath: m_Name
-      value: Y-LockHandle
-      objectReference: {fileID: 0}
-    - target: {fileID: 1851589162034739395, guid: 83d399ffe9bbef046b7d9ca75d2c5d0b,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1851589162034739395, guid: 83d399ffe9bbef046b7d9ca75d2c5d0b,
-        type: 3}
-      propertyPath: m_TagString
-      value: StopDrilling
-      objectReference: {fileID: 0}
+      propertyPath: quillFeedController
+      value: 
+      objectReference: {fileID: 1020964410}
     - target: {fileID: 2615026358738575914, guid: 83d399ffe9bbef046b7d9ca75d2c5d0b,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2615026358738575914, guid: 83d399ffe9bbef046b7d9ca75d2c5d0b,
         type: 3}
       propertyPath: m_TagString
-      value: 6FluteEndMill
+      value: Drill
       objectReference: {fileID: 0}
     - target: {fileID: 2697595709191430681, guid: 83d399ffe9bbef046b7d9ca75d2c5d0b,
         type: 3}
@@ -10436,10 +10428,30 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: -0.549
       objectReference: {fileID: 0}
+    - target: {fileID: 2810623449465095400, guid: 83d399ffe9bbef046b7d9ca75d2c5d0b,
+        type: 3}
+      propertyPath: fineAdjustmentController
+      value: 
+      objectReference: {fileID: 443703466}
+    - target: {fileID: 2810623449465095400, guid: 83d399ffe9bbef046b7d9ca75d2c5d0b,
+        type: 3}
+      propertyPath: quillFeedController
+      value: 
+      objectReference: {fileID: 1020964410}
+    - target: {fileID: 2848002335766558555, guid: 83d399ffe9bbef046b7d9ca75d2c5d0b,
+        type: 3}
+      propertyPath: fineAdjustmentController
+      value: 
+      objectReference: {fileID: 443703466}
+    - target: {fileID: 2848002335766558555, guid: 83d399ffe9bbef046b7d9ca75d2c5d0b,
+        type: 3}
+      propertyPath: quillFeedController
+      value: 
+      objectReference: {fileID: 1020964410}
     - target: {fileID: 3312799077726579722, guid: 83d399ffe9bbef046b7d9ca75d2c5d0b,
         type: 3}
       propertyPath: m_Name
-      value: X-Lock W_Animator
+      value: Y-Lock W_Animator
       objectReference: {fileID: 0}
     - target: {fileID: 3312799077983428361, guid: 83d399ffe9bbef046b7d9ca75d2c5d0b,
         type: 3}
@@ -10451,6 +10463,11 @@ PrefabInstance:
       propertyPath: animObject
       value: 
       objectReference: {fileID: 1327228408}
+    - target: {fileID: 3312799077983428361, guid: 83d399ffe9bbef046b7d9ca75d2c5d0b,
+        type: 3}
+      propertyPath: drillTag
+      value: Drill
+      objectReference: {fileID: 0}
     - target: {fileID: 3312799078959786686, guid: 83d399ffe9bbef046b7d9ca75d2c5d0b,
         type: 3}
       propertyPath: m_IsActive
@@ -10571,6 +10588,21 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 0.1716
       objectReference: {fileID: 0}
+    - target: {fileID: 3917237330078570059, guid: 83d399ffe9bbef046b7d9ca75d2c5d0b,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.503
+      objectReference: {fileID: 0}
+    - target: {fileID: 3917237330078570059, guid: 83d399ffe9bbef046b7d9ca75d2c5d0b,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.4181
+      objectReference: {fileID: 0}
+    - target: {fileID: 3917237330078570059, guid: 83d399ffe9bbef046b7d9ca75d2c5d0b,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -4.0789
+      objectReference: {fileID: 0}
     - target: {fileID: 5043734380279515645, guid: 83d399ffe9bbef046b7d9ca75d2c5d0b,
         type: 3}
       propertyPath: m_LocalPosition.z
@@ -10604,7 +10636,7 @@ PrefabInstance:
     - target: {fileID: 5857705328942281041, guid: 83d399ffe9bbef046b7d9ca75d2c5d0b,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5857705328942281041, guid: 83d399ffe9bbef046b7d9ca75d2c5d0b,
         type: 3}
@@ -10616,27 +10648,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: X-LockHandle
       objectReference: {fileID: 0}
-    - target: {fileID: 6525622273045641873, guid: 83d399ffe9bbef046b7d9ca75d2c5d0b,
-        type: 3}
-      propertyPath: axisController
-      value: 
-      objectReference: {fileID: 1020964410}
-    - target: {fileID: 6525622273045641873, guid: 83d399ffe9bbef046b7d9ca75d2c5d0b,
-        type: 3}
-      propertyPath: quillFeedController
-      value: 
-      objectReference: {fileID: 1020964410}
-    - target: {fileID: 6525622273045641873, guid: 83d399ffe9bbef046b7d9ca75d2c5d0b,
-        type: 3}
-      propertyPath: fineAdjustmentController
-      value: 
-      objectReference: {fileID: 443703466}
     - target: {fileID: 6525622273045641874, guid: 83d399ffe9bbef046b7d9ca75d2c5d0b,
         type: 3}
       propertyPath: m_TagString
-      value: StopDrilling
+      value: Drill
       objectReference: {fileID: 0}
     - target: {fileID: 6525622273045641874, guid: 83d399ffe9bbef046b7d9ca75d2c5d0b,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6955267375423642681, guid: 83d399ffe9bbef046b7d9ca75d2c5d0b,
         type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -10644,17 +10666,17 @@ PrefabInstance:
     - target: {fileID: 7341638130763499322, guid: 83d399ffe9bbef046b7d9ca75d2c5d0b,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.0004
+      value: -0.052161492
       objectReference: {fileID: 0}
     - target: {fileID: 7341638130763499322, guid: 83d399ffe9bbef046b7d9ca75d2c5d0b,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.8516
+      value: 0.0011869628
       objectReference: {fileID: 0}
     - target: {fileID: 7341638130763499322, guid: 83d399ffe9bbef046b7d9ca75d2c5d0b,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.188
+      value: -0.033863056
       objectReference: {fileID: 0}
     - target: {fileID: 7832575453082299320, guid: 83d399ffe9bbef046b7d9ca75d2c5d0b,
         type: 3}

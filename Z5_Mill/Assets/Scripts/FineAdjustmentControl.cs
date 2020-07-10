@@ -15,12 +15,13 @@ public class FineAdjustmentControl : MonoBehaviour
     [SerializeField] DRO_ButtonState FineAdjustmentButton; // TEMPORARY --> THIS SHOULD BE FOR QUILL FEED ONLY
 
     [SerializeField]
-    public GameObject fineAdjustment, prevAdjustment;
+    public GameObject fineAdjustment;
+    GameObject prevAdjustment;
 
     [SerializeField]
     Boolean enable = true;
 
-    public Boolean collided;
+    public Boolean collided, moving;
     Boolean animated, handle_enabled, wheel_spin;
 
     public float movementInterval = 0.001f;
@@ -31,6 +32,7 @@ public class FineAdjustmentControl : MonoBehaviour
     {
         if (enable)
         {
+            moving = false;
             collided = false;
             object_anim = animObject.GetComponent<Animator>();
 
@@ -67,14 +69,13 @@ public class FineAdjustmentControl : MonoBehaviour
 
                 if (Input.mouseScrollDelta.y > 0f && !collided)
                 {
-                    Debug.LogWarning("Scroll Up");
 
                     Vector3 tmp_pos = fineAdjustment.transform.localPosition;
                     float y_pos = tmp_pos.y - movementInterval;
 
                     if (y_pos < MAX_HEIGHT && y_pos > MIN_HEIGHT)
                     {
-
+                        moving = true;
                         Vector3 new_pos = new Vector3(tmp_pos.x, y_pos, tmp_pos.z);
                         fineAdjustment.transform.localPosition = new_pos;
                         object_anim.SetFloat("Reverse", 1);
@@ -84,8 +85,8 @@ public class FineAdjustmentControl : MonoBehaviour
                 else if (Input.mouseScrollDelta.y < 0f)
                 {
 
-                    Debug.LogWarning("Scroll Down");
 
+                    moving = true;
 
                     Vector3 tmp_pos = fineAdjustment.transform.localPosition;
                     float y_pos = tmp_pos.y + movementInterval;
@@ -101,8 +102,9 @@ public class FineAdjustmentControl : MonoBehaviour
                 }
                 else
                 {
-                    Debug.LogWarning("Nothing");
                     pause();
+                    moving = true;
+
                 }
             }
         }

@@ -54,7 +54,7 @@ public class SwitchBit : MonoBehaviour
             spawnBitPosition = currentBit.transform.localPosition;
 
             fine_adjust.fineAdjustment = currentBit.transform.parent.gameObject;
-            manager.currentBit = currentBit;
+            manager.currentBit = currentBit.transform.GetChild(1).gameObject;
 
         }
     }
@@ -102,7 +102,7 @@ public class SwitchBit : MonoBehaviour
                 currentBit.transform.localPosition = spawnBitPosition;
                 currentIndex = i;
                 fine_adjust.fineAdjustment = currentBit.transform.parent.gameObject;
-                manager.currentBit = currentBit;
+                manager.currentBit = currentBit.transform.GetChild(1).gameObject;
                 return true;
             }
         }
