@@ -76,6 +76,7 @@ public class SwitchBit : MonoBehaviour
 
     private Boolean findTag(string tag)
     {
+        spawnBitPosition = currentBit.transform.localPosition;
 
         List<GameObject> listBits;
         int listLength;
@@ -110,6 +111,8 @@ public class SwitchBit : MonoBehaviour
 
     public void changeChuck(Boolean type)
     {
+        spawnBitPosition = currentBit.transform.localPosition;
+
         if (chuckType != type)
         {
             if (type)

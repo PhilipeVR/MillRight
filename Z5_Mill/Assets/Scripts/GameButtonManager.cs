@@ -16,7 +16,7 @@ public class GameButtonManager : MonoBehaviour
     public Boolean state;
     Animator anim_object, on_anim, off_anim;
 
-    Start is called before the first frame update
+    //Start is called before the first frame update
     void Start()
     {
         state = false;

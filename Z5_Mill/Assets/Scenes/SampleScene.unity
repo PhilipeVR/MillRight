@@ -2862,6 +2862,7 @@ MonoBehaviour:
   animObject: {fileID: 485619489}
   FineAdjustmentButton: {fileID: 2098731954}
   fineAdjustment: {fileID: 933370981}
+  prevAdjustment: {fileID: 0}
   enable: 1
   collided: 0
   movementInterval: 0.001
@@ -7624,6 +7625,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c43f01bbf9324547bd688e8b0270321, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fineAdjustment: {fileID: 443703466}
   DrillBits:
   - {fileID: 933370981}
   EndMills:
@@ -10601,7 +10603,7 @@ PrefabInstance:
     - target: {fileID: 6525622273045641874, guid: 83d399ffe9bbef046b7d9ca75d2c5d0b,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7341638130763499322, guid: 83d399ffe9bbef046b7d9ca75d2c5d0b,
         type: 3}
@@ -10631,7 +10633,17 @@ PrefabInstance:
     - target: {fileID: 8458132777105331226, guid: 83d399ffe9bbef046b7d9ca75d2c5d0b,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1697.2
+      value: -4.080402
+      objectReference: {fileID: 0}
+    - target: {fileID: 8458132777105331226, guid: 83d399ffe9bbef046b7d9ca75d2c5d0b,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.5020005
+      objectReference: {fileID: 0}
+    - target: {fileID: 8458132777105331226, guid: 83d399ffe9bbef046b7d9ca75d2c5d0b,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.417001
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 83d399ffe9bbef046b7d9ca75d2c5d0b, type: 3}
