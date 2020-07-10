@@ -3071,9 +3071,9 @@ MonoBehaviour:
   animObject: {fileID: 485619489}
   FineAdjustmentButton: {fileID: 2098731954}
   fineAdjustment: {fileID: 933370981}
-  prevAdjustment: {fileID: 0}
   enable: 1
   collided: 0
+  moving: 0
   movementInterval: 0.001
 --- !u!1 &453831208
 GameObject:
@@ -5818,6 +5818,8 @@ MonoBehaviour:
   lockHandle: {fileID: 1364267378}
   enable: 1
   collided: 0
+  moving: 0
+  prev_state: 0
   movementInterval: 0.005
 --- !u!1 &1021082145
 GameObject:
@@ -10533,6 +10535,16 @@ PrefabInstance:
       propertyPath: m_TagString
       value: StopDrilling
       objectReference: {fileID: 0}
+    - target: {fileID: 2059558131018466876, guid: 83d399ffe9bbef046b7d9ca75d2c5d0b,
+        type: 3}
+      propertyPath: quillFeedController
+      value: 
+      objectReference: {fileID: 1020964410}
+    - target: {fileID: 2059558131018466876, guid: 83d399ffe9bbef046b7d9ca75d2c5d0b,
+        type: 3}
+      propertyPath: fineAdjustmentController
+      value: 
+      objectReference: {fileID: 443703466}
     - target: {fileID: 2615026358738575914, guid: 83d399ffe9bbef046b7d9ca75d2c5d0b,
         type: 3}
       propertyPath: m_IsActive
@@ -10558,6 +10570,26 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: -0.549
       objectReference: {fileID: 0}
+    - target: {fileID: 2810623449465095400, guid: 83d399ffe9bbef046b7d9ca75d2c5d0b,
+        type: 3}
+      propertyPath: quillFeedController
+      value: 
+      objectReference: {fileID: 1020964410}
+    - target: {fileID: 2810623449465095400, guid: 83d399ffe9bbef046b7d9ca75d2c5d0b,
+        type: 3}
+      propertyPath: fineAdjustmentController
+      value: 
+      objectReference: {fileID: 443703466}
+    - target: {fileID: 2848002335766558555, guid: 83d399ffe9bbef046b7d9ca75d2c5d0b,
+        type: 3}
+      propertyPath: fineAdjustmentController
+      value: 
+      objectReference: {fileID: 443703466}
+    - target: {fileID: 2848002335766558555, guid: 83d399ffe9bbef046b7d9ca75d2c5d0b,
+        type: 3}
+      propertyPath: quillFeedController
+      value: 
+      objectReference: {fileID: 1020964410}
     - target: {fileID: 3312799077726579722, guid: 83d399ffe9bbef046b7d9ca75d2c5d0b,
         type: 3}
       propertyPath: m_Name
@@ -10573,6 +10605,11 @@ PrefabInstance:
       propertyPath: animObject
       value: 
       objectReference: {fileID: 1327228408}
+    - target: {fileID: 3312799077983428361, guid: 83d399ffe9bbef046b7d9ca75d2c5d0b,
+        type: 3}
+      propertyPath: drillTag
+      value: Drill
+      objectReference: {fileID: 0}
     - target: {fileID: 3312799078959786686, guid: 83d399ffe9bbef046b7d9ca75d2c5d0b,
         type: 3}
       propertyPath: m_IsActive
