@@ -9,7 +9,7 @@ public class SwitchBit : MonoBehaviour
     public GameObject fineAdjustment;
     public List<GameObject> DrillBits;
     public List<GameObject> EndMills;
-    public Boolean chuckType = true;
+    public Boolean chuckType = false;
 
     public GameObject gameObjectManager, drillChuck, endMillHolder;
     GameButtonManager manager;
@@ -45,11 +45,11 @@ public class SwitchBit : MonoBehaviour
                 EndMills[i].SetActive(false);
             }
 
-            currentBit = DrillBits[currentIndex];
+            currentBit = EndMills[currentIndex];
             currentBit.SetActive(true);
 
-            drillChuck.SetActive(true);
-            endMillHolder.SetActive(false);
+            endMillHolder.SetActive(true);
+            drillChuck.SetActive(false);
 
             spawnBitPosition = currentBit.transform.localPosition;
 
@@ -69,7 +69,8 @@ public class SwitchBit : MonoBehaviour
                 if (!bitTag.Equals(currentBit.tag))
                 {
                     Boolean bitTagSearch = findTag(bitTag);
-                }
+                } 
+
             }
         }
     }
@@ -95,6 +96,9 @@ public class SwitchBit : MonoBehaviour
             if (tag.Equals(listBits[i].tag))
             {
                 Vector3 tmpPos = listBits[i].transform.localPosition;
+                Debug.LogWarning("Old Pos X: " + tmpPos.x + ", Y: " + tmpPos.y + ", Z: " + tmpPos.z);
+                Debug.LogWarning("New Pos X: " + spawnBitPosition.x + ", Y: " + spawnBitPosition.y + ", Z: " + spawnBitPosition.z);
+
                 currentBit.transform.localPosition = tmpPos;
                 currentBit.SetActive(false);
                 currentBit = listBits[i];

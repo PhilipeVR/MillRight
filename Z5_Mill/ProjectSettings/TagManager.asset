@@ -10,7 +10,10 @@ TagManager:
   - StopDrilling
   - 6FluteEndMill
   - 4FluteEndMill
-  - 3FluteDrillBit
+  - DrillBit1
+  - DrillBit2
+  - DrillBit3
+  - 3FluteEndMill
   layers:
   - Default
   - TransparentFX
