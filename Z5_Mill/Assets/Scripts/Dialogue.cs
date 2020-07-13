@@ -7,9 +7,13 @@ using UnityEngine.UI;
 public class Dialogue {
     
     public string name;
+    public string frenchName;
 
     [TextArea(3, 10)]
-    public string[] sentences;
+    public string[] sentences;    
+    
+    [TextArea(3, 10)]
+    public string[] sentencesFR;
 
     public Sprite[] images;
 }
