@@ -22,9 +22,9 @@ public class DRO_DisplayHandler : MonoBehaviour
         // Debug.Log(vise.position.y);
         // Debug.Log(spindle.position.z);
 
-        xText.text = vise.position.x.ToString();
-        yText.text = vise.position.y.ToString();
-        zText.text = spindle.position.z.ToString();
+        xText.text = vise.position.x.ToString("0.000");
+        yText.text = vise.position.y.ToString("0.000");
+        zText.text = spindle.position.z.ToString("0.000");
     }
 
 }
