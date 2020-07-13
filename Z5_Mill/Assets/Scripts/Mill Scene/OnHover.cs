@@ -9,7 +9,7 @@ public class OnHover : MonoBehaviour
     private Color basicColor;
     private Renderer renderer;
     [SerializeField] private int detailIndex;
-    [SerializeField] GameObject ObjectManager;
+    [SerializeField] public GameObject ObjectManager;
     private ComponentManager manager;
 
 
@@ -19,6 +19,11 @@ public class OnHover : MonoBehaviour
         renderer = GetComponent<Renderer>();
         basicColor = renderer.material.color;
         manager = ObjectManager.GetComponent<ComponentManager>();
+    }
+
+    public void setDetailIndex(int index)
+    {
+        detailIndex = index;
     }
 
     private void FixedUpdate()
