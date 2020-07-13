@@ -1,0 +1,120 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 288b3ad9a3683cc4ebce607e447e3cca, type: 3}
+  m_Name: ComponentDetails
+  m_EditorClassIdentifier: 
+  components:
+  - partName: Base
+    partNameFR: 
+    sentence: 'Not all people who wander are lost. '
+    sentenceFR: 
+    image: {fileID: 21300000, guid: 61928627a7f98b84e913cce4c3fc7039, type: 3}
+  - partName: Mill Body
+    partNameFR: 
+    sentence: 'Not all people who wander are lost. '
+    sentenceFR: 
+    image: {fileID: 21300000, guid: e717594996404e645b7c982e471a460d, type: 3}
+  - partName: Chip Guard
+    partNameFR: 
+    sentence: 'Not all people who wander are lost. '
+    sentenceFR: 
+    image: {fileID: 21300000, guid: 2a1ff6d3fe2d1e849821c3c5d7337008, type: 3}
+  - partName: Connecting Strut
+    partNameFR: 
+    sentence: 'Not all people who wander are lost. '
+    sentenceFR: 
+    image: {fileID: 21300000, guid: 2e201d1e8482bea42a198b123287449e, type: 3}
+  - partName: Control Box
+    partNameFR: 
+    sentence: 'Not all people who wander are lost. '
+    sentenceFR: 
+    image: {fileID: 21300000, guid: dee507d6d9673614c8efd308cf596c43, type: 3}
+  - partName: Dial Seat
+    partNameFR: 
+    sentence: 'Not all people who wander are lost. '
+    sentenceFR: 
+    image: {fileID: 21300000, guid: 93f7e2a1cc0f5ae4d9264dccf36bba37, type: 3}
+  - partName: Dust Guard
+    partNameFR: 
+    sentence: 'Not all people who wander are lost. '
+    sentenceFR: 
+    image: {fileID: 21300000, guid: c2821ab26eae38641aa55517458d4fa3, type: 3}
+  - partName: Hand Wheel X
+    partNameFR: 
+    sentence: 'Not all people who wander are lost. '
+    sentenceFR: 
+    image: {fileID: 21300000, guid: d3d2fe1c02144b24c8fd3ee5d13eda2e, type: 3}
+  - partName: Hand Wheel Y
+    partNameFR: 
+    sentence: 'Not all people who wander are lost. '
+    sentenceFR: 
+    image: {fileID: 21300000, guid: d3d2fe1c02144b24c8fd3ee5d13eda2e, type: 3}
+  - partName: Hand Wheel Z
+    partNameFR: 
+    sentence: 'Not all people who wander are lost. '
+    sentenceFR: 
+    image: {fileID: 21300000, guid: d3d2fe1c02144b24c8fd3ee5d13eda2e, type: 3}
+  - partName: Head
+    partNameFR: 
+    sentence: 'Not all people who wander are lost. '
+    sentenceFR: 
+    image: {fileID: 21300000, guid: 883b8d6dfa649ed44931435ec6442cf2, type: 3}
+  - partName: Limit Block
+    partNameFR: 
+    sentence: 'Not all people who wander are lost. '
+    sentenceFR: 
+    image: {fileID: 21300000, guid: f8f47d8752d14b344a33fac53da71721, type: 3}
+  - partName: Quill Feed Lock
+    partNameFR: 
+    sentence: 'Not all people who wander are lost. '
+    sentenceFR: 
+    image: {fileID: 21300000, guid: b23e0df90700fc14aaf0f4987a2d3595, type: 3}
+  - partName: X-Axis Lock
+    partNameFR: 
+    sentence: 'Not all people who wander are lost. '
+    sentenceFR: 
+    image: {fileID: 21300000, guid: b23e0df90700fc14aaf0f4987a2d3595, type: 3}
+  - partName: Y-Axis Lock
+    partNameFR: 
+    sentence: 'Not all people who wander are lost. '
+    sentenceFR: 
+    image: {fileID: 21300000, guid: b23e0df90700fc14aaf0f4987a2d3595, type: 3}
+  - partName: Z-Axis Lock
+    partNameFR: 
+    sentence: 'Not all people who wander are lost. '
+    sentenceFR: 
+    image: {fileID: 21300000, guid: b23e0df90700fc14aaf0f4987a2d3595, type: 3}
+  - partName: Vise
+    partNameFR: 
+    sentence: 'Not all people who wander are lost. '
+    sentenceFR: 
+    image: {fileID: 21300000, guid: 3b2a848e22955634c9cefaa03f240de6, type: 3}
+  - partName: Motor
+    partNameFR: 
+    sentence: 'Not all people who wander are lost. '
+    sentenceFR: 
+    image: {fileID: 21300000, guid: d12e7249d581d5d48a393e8c28ba6a3d, type: 3}
+  - partName: Quill Feed Wheel
+    partNameFR: 
+    sentence: 'Not all people who wander are lost. '
+    sentenceFR: 
+    image: {fileID: 21300000, guid: 0f76096fb96a04c49a80091f9571eca8, type: 3}
+  - partName: Spindle Box
+    partNameFR: 
+    sentence: 'Not all people who wander are lost. '
+    sentenceFR: 
+    image: {fileID: 21300000, guid: e569b15e5d6685d49abbdb3af2bb6e40, type: 3}
+  - partName: Table
+    partNameFR: 
+    sentence: 'Not all people who wander are lost. '
+    sentenceFR: 
+    image: {fileID: 21300000, guid: 18bcb7355b370ed4c91c6174b63dac18, type: 3}
