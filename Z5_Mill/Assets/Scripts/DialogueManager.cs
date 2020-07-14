@@ -22,11 +22,11 @@ public class DialogueManager : MonoBehaviour
     private string lastSentence;
     private string titleLang;
 
-    // void Awake () {
-    //     sentences = new Queue<string>();
-    //     sentencesFR = new Queue<string>();
-    //     index = 1;
-    // }
+    void Awake () {
+        sentences = new Queue<string>();
+        sentencesFR = new Queue<string>();
+        index = 1;
+    }
 
     public void StartDialogue (Dialogue dialogue)
     {
