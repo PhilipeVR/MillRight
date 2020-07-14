@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -8,6 +9,7 @@ public class SetupOnHover : MonoBehaviour
     [SerializeField] private Color onHoverColor;
     [SerializeField] private int detailIndex;
     [SerializeField] GameObject ObjectManager;
+    private Boolean clicked = false;
 
     void Start()
     {
@@ -56,5 +58,14 @@ public class SetupOnHover : MonoBehaviour
         hover.setDetailIndex(detailIndex);
         hover.ObjectManager = ObjectManager;
 
+    }
+
+    public void hasBeenClicked()
+    {
+        if (!clicked)
+        {
+            ObjectManager.GetComponent<ComponentManager>().incrementPartCounter();
+            clicked = true;
+        }
     }
 }

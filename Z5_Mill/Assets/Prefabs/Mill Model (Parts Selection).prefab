@@ -3245,7 +3245,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   onHoverColor: {r: 1, g: 0.6814632, b: 0, a: 0}
-  detailIndex: 14
+  detailIndex: 10
   ObjectManager: {fileID: 0}
 --- !u!1 &422406827628960148
 GameObject:
@@ -3489,7 +3489,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   onHoverColor: {r: 0.7921569, g: 0, b: 0.41960785, a: 0}
-  detailIndex: 7
+  detailIndex: 4
   ObjectManager: {fileID: 0}
 --- !u!1 &422406827860180813
 GameObject:
@@ -3542,7 +3542,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   onHoverColor: {r: 0.4716981, g: 0, b: 0.38835463, a: 0}
-  detailIndex: 18
+  detailIndex: 14
   ObjectManager: {fileID: 0}
 --- !u!1 &422406827984382993
 GameObject:
@@ -3597,7 +3597,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   onHoverColor: {r: 0.7921569, g: 0, b: 0.41960785, a: 0}
-  detailIndex: 9
+  detailIndex: 6
   ObjectManager: {fileID: 0}
 --- !u!1 &422406828077930236
 GameObject:
@@ -3910,7 +3910,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   onHoverColor: {r: 0.18109159, g: 0.41509432, b: 0.02741188, a: 0}
-  detailIndex: 20
+  detailIndex: 16
   ObjectManager: {fileID: 0}
 --- !u!1 &422406828596849728
 GameObject:
@@ -4113,7 +4113,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   onHoverColor: {r: 0.990566, g: 0.2823568, b: 0, a: 0}
-  detailIndex: 10
+  detailIndex: 7
   ObjectManager: {fileID: 0}
 --- !u!1 &422406828842331152
 GameObject:
@@ -4417,7 +4417,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   onHoverColor: {r: 1, g: 0.6814632, b: 0, a: 0}
-  detailIndex: 15
+  detailIndex: 11
   ObjectManager: {fileID: 0}
 --- !u!1 &422406829036331232
 GameObject:
@@ -4469,7 +4469,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   onHoverColor: {r: 1, g: 0.6814632, b: 0, a: 0}
-  detailIndex: 13
+  detailIndex: 9
   ObjectManager: {fileID: 0}
 --- !u!1 &422406829245066372
 GameObject:
@@ -4614,7 +4614,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   onHoverColor: {r: 0.7924528, g: 0, b: 0.41974813, a: 0}
-  detailIndex: 8
+  detailIndex: 5
   ObjectManager: {fileID: 0}
 --- !u!1 &422406829384594131
 GameObject:
@@ -4666,7 +4666,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   onHoverColor: {r: 1, g: 0.6814632, b: 0, a: 0}
-  detailIndex: 12
+  detailIndex: 8
   ObjectManager: {fileID: 0}
 --- !u!1 &444030122803932553
 GameObject:
@@ -22334,7 +22334,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   onHoverColor: {r: 0, g: 0.9622642, b: 0.57975703, a: 0}
-  detailIndex: 17
+  detailIndex: 13
   ObjectManager: {fileID: 0}
 --- !u!1 &3551434237634623807
 GameObject:
@@ -33413,7 +33413,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   onHoverColor: {r: 0, g: 0.7287936, b: 0.8018868, a: 0}
-  detailIndex: 4
+  detailIndex: 3
   ObjectManager: {fileID: 0}
 --- !u!1 &5341990338838438298
 GameObject:
@@ -35869,7 +35869,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1277528437716776323}
-  - component: {fileID: 8822021314161751952}
   m_Layer: 0
   m_Name: 'Limit Block '
   m_TagString: Untagged
@@ -35893,21 +35892,6 @@ Transform:
   m_Father: {fileID: 4658415311526098697}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &8822021314161751952
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5660665211859150992}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 981af44f30af2cd4185ac0cdd2abd996, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  onHoverColor: {r: 1, g: 0.4056604, b: 0.4056604, a: 0}
-  detailIndex: 11
-  ObjectManager: {fileID: 0}
 --- !u!1 &5662994283927140029
 GameObject:
   m_ObjectHideFlags: 0
@@ -47059,7 +47043,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   onHoverColor: {r: 0.6132076, g: 0.24875402, b: 0.24875402, a: 0}
-  detailIndex: 19
+  detailIndex: 15
   ObjectManager: {fileID: 0}
 --- !u!1 &7561868736847064903
 GameObject:
@@ -53737,7 +53721,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   onHoverColor: {r: 0, g: 0.7239326, b: 0.8962264, a: 0}
-  detailIndex: 16
+  detailIndex: 12
   ObjectManager: {fileID: 0}
 --- !u!1 &8583880334322202715
 GameObject:

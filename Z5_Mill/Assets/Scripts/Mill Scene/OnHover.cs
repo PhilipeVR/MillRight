@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -11,6 +12,8 @@ public class OnHover : MonoBehaviour
     [SerializeField] private int detailIndex;
     [SerializeField] public GameObject ObjectManager;
     private ComponentManager manager;
+
+    private Boolean hasBeenClicked = false;
 
 
 
@@ -36,7 +39,13 @@ public class OnHover : MonoBehaviour
             {
                 if (transform.gameObject.Equals(hit.collider.gameObject))
                 {
+
                     manager.SetDetails(detailIndex);
+                    if (!hasBeenClicked)
+                    {
+                        hasBeenClicked = true;
+                        GetComponentInParent<SetupOnHover>().hasBeenClicked();
+                    }
                 }
             }
         }

@@ -46,11 +46,6 @@ MonoBehaviour:
       de s\xE9curit\xE9 est une mesure de s\xE9curit\xE9 imp\xE9ratif pour \xE9viter
       des blessures."
     image: {fileID: 21300000, guid: 2a1ff6d3fe2d1e849821c3c5d7337008, type: 3}
-  - partName: Connecting Strut
-    partNameFR: 
-    sentence: 'Not all people who wander are lost. '
-    sentenceFR: 
-    image: {fileID: 21300000, guid: 2e201d1e8482bea42a198b123287449e, type: 3}
   - partName: Control Box
     partNameFR: Panneau de commande
     sentence: 'The control panel is what controls the rotary system of the mill.
@@ -62,16 +57,6 @@ MonoBehaviour:
       Finalement, il dispose \xE9galement d\u2019un bouton de r\xE9glage pour la
       vitesse de coupe."
     image: {fileID: 21300000, guid: dee507d6d9673614c8efd308cf596c43, type: 3}
-  - partName: Dial Seat
-    partNameFR: 
-    sentence: 'Not all people who wander are lost. '
-    sentenceFR: 
-    image: {fileID: 21300000, guid: 93f7e2a1cc0f5ae4d9264dccf36bba37, type: 3}
-  - partName: Dust Guard
-    partNameFR: 
-    sentence: 'Not all people who wander are lost. '
-    sentenceFR: 
-    image: {fileID: 21300000, guid: c2821ab26eae38641aa55517458d4fa3, type: 3}
   - partName: Handwheel X
     partNameFR: "Roue de contr\xF4le de l\u2019axe X"
     sentence: 'Allows the movement of the table in the X-axis (left/right) by rotating
@@ -100,11 +85,6 @@ MonoBehaviour:
     sentenceFR: "La t\xEAte de la fraiseuse est ce qui tient la boite de commande,
       la boite de la broche et le moteur de la fraiseuse. "
     image: {fileID: 21300000, guid: 883b8d6dfa649ed44931435ec6442cf2, type: 3}
-  - partName: Limit Block
-    partNameFR: 
-    sentence: 'Not all people who wander are lost. '
-    sentenceFR: 
-    image: {fileID: 21300000, guid: f8f47d8752d14b344a33fac53da71721, type: 3}
   - partName: Quill Feed Lock
     partNameFR: 'Serrure de la broche '
     sentence: Handle to lock quill feed movement in the Z-axis (up/down).
