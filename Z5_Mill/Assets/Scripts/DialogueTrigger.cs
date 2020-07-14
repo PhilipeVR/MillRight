@@ -8,7 +8,7 @@ public class DialogueTrigger : MonoBehaviour
 
     void Start(){
         if(dialogue.name == "InitialDialogue")
-        Debug.Log(dialogue.name == "InitialDialogue");
+        //Debug.Log(dialogue.name == "InitialDialogue");
         {
             TriggerDialogue();
         }
