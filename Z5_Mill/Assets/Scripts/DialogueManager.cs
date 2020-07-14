@@ -16,17 +16,17 @@ public class DialogueManager : MonoBehaviour
     private Sprite[] images;
     private int count;
     private int index;
-    private Queue<string> sentences;
+    private Queue<string> sentences; // Keeps track of all sentences in current dialogue
     private Queue<string> sentencesFR;
     private Queue<string> currentLangSentence;
     private string lastSentence;
     private string titleLang;
 
-    void Awake () {
-        sentences = new Queue<string>();
-        sentencesFR = new Queue<string>();
-        index = 1;
-    }
+    // void Awake () {
+    //     sentences = new Queue<string>();
+    //     sentencesFR = new Queue<string>();
+    //     index = 1;
+    // }
 
     public void StartDialogue (Dialogue dialogue)
     {
@@ -91,7 +91,7 @@ public class DialogueManager : MonoBehaviour
         DeactivateAtEndDialogue.SetActive(false);
     }
 
-     public void switchLang() {
+    public void switchLang() {
         if (language)
         {
             currentLangSentence = sentencesFR;

@@ -26,6 +26,5 @@ public class PanelManager : MonoBehaviour
             DROPanel.SetActive(false);
             toolsPanel.SetActive(false);
         }
-
     }
 }

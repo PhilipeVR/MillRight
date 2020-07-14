@@ -2,5 +2,8 @@
 
 public class GameManager : MonoBehaviour
 {
-
+   void EndGame ()
+   {
+       
+   }
 }
