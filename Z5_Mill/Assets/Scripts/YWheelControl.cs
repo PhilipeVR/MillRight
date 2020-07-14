@@ -10,7 +10,7 @@ public class YWheelControl : MonoBehaviour
     [SerializeField]
     GameObject animObject, lockAnimObject;
 
-    [SerializeField] DRO_ButtonState YLockButton;
+    [SerializeField] public DRO_ButtonState YLockButton;
 
     [SerializeField]
     GameObject wheel, lockHandle;
@@ -22,7 +22,8 @@ public class YWheelControl : MonoBehaviour
 
     Boolean animated = true;
     Boolean handle_enabled, wheel_spin;
-    Animator object_anim, lock_anim;
+    public Boolean forwardCollision, backwardCollision;
+    public Animator object_anim, lock_anim;
 
     // Start is called before the first frame update
     void Start()
@@ -30,6 +31,8 @@ public class YWheelControl : MonoBehaviour
         object_anim = animObject.GetComponent<Animator>();
         lock_anim = lockAnimObject.GetComponent<Animator>();
 
+        forwardCollision = false;
+        backwardCollision = false;
 
         setSpeed(0.2f);
         setLockSpeed(0.5f);
@@ -47,14 +50,14 @@ public class YWheelControl : MonoBehaviour
         if(YLockButton.checkIfEnabled == true)
         {
             Debug.Log("Y");
-            if (Input.mouseScrollDelta.y > 0f)
+            if (Input.mouseScrollDelta.y > 0f && !forwardCollision)
             {
                 object_anim.SetFloat("Reverse", 1);
                 setSpeed(0.2f);
                 Debug.Log(Input.mouseScrollDelta.y);
                 Debug.Log(Input.GetAxis("Mouse ScrollWheel"));
             }
-            else if (Input.mouseScrollDelta.y < 0f)
+            else if (Input.mouseScrollDelta.y < 0f && !backwardCollision)
             {
                 object_anim.SetFloat("Reverse", -1);
                 setSpeed(0.2f);

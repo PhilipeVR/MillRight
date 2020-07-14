@@ -14,7 +14,7 @@ public class QuillFeedControl : MonoBehaviour
     [SerializeField]
     GameObject animObject, lockAnimObject;
 
-    [SerializeField] DRO_ButtonState QuillLockButton; // TEMPORARY --> THIS SHOULD BE FOR QUILL FEED ONLY
+    [SerializeField] public DRO_ButtonState QuillLockButton; // TEMPORARY --> THIS SHOULD BE FOR QUILL FEED ONLY
 
     [SerializeField]
     GameObject wheel, lockHandle;

@@ -10,7 +10,7 @@ public class XWheelControl : MonoBehaviour
     [SerializeField]
     GameObject animObject, lockAnimObject;
 
-    [SerializeField] DRO_ButtonState XLockButton;
+    [SerializeField] public DRO_ButtonState XLockButton;
 
     [SerializeField]
     GameObject wheel, lockHandle;
@@ -22,15 +22,16 @@ public class XWheelControl : MonoBehaviour
 
     Boolean animated = true;
     Boolean handle_enabled, wheel_spin;
-    Animator object_anim, lock_anim;
+    public Boolean leftCollision, rightCollision;
+    public Animator object_anim, lock_anim;
 
     // Start is called before the first frame update
     void Start()
     {
         object_anim = animObject.GetComponent<Animator>();
         lock_anim = lockAnimObject.GetComponent<Animator>();
-
-
+        leftCollision = false;
+        rightCollision = false;
         setSpeed(0.2f);
         setLockSpeed(0.5f);
         pause();
@@ -47,14 +48,14 @@ public class XWheelControl : MonoBehaviour
         if(XLockButton.checkIfEnabled == true)
         {
             Debug.Log("X");
-            if (Input.mouseScrollDelta.y > 0f)
+            if (Input.mouseScrollDelta.y > 0f && !leftCollision)
             {
                 object_anim.SetFloat("Reverse", 1);
                 setSpeed(0.2f);
                 Debug.Log(Input.mouseScrollDelta.y);
                 Debug.Log(Input.GetAxis("Mouse ScrollWheel"));
             }
-            else if (Input.mouseScrollDelta.y < 0f)
+            else if (Input.mouseScrollDelta.y < 0f && !rightCollision)
             {
                 object_anim.SetFloat("Reverse", -1);
                 setSpeed(0.2f);

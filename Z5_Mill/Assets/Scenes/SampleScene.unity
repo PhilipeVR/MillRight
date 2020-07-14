@@ -5729,6 +5729,10 @@ MonoBehaviour:
   wheel: {fileID: 1155322361}
   lockHandle: {fileID: 1677665264}
   enable: 1
+  leftCollision: 0
+  rightCollision: 0
+  object_anim: {fileID: 0}
+  lock_anim: {fileID: 0}
 --- !u!4 &1065909905
 Transform:
   m_ObjectHideFlags: 0
@@ -8809,6 +8813,10 @@ MonoBehaviour:
   wheel: {fileID: 5175314770203662113}
   lockHandle: {fileID: 8619910113599060837}
   enable: 1
+  forwardCollision: 0
+  backwardCollision: 0
+  object_anim: {fileID: 0}
+  lock_anim: {fileID: 0}
 --- !u!4 &1616185321
 Transform:
   m_ObjectHideFlags: 0
@@ -10372,6 +10380,16 @@ PrefabInstance:
       propertyPath: fineAdjustmentController
       value: 
       objectReference: {fileID: 443703466}
+    - target: {fileID: 2031014281735781112, guid: 83d399ffe9bbef046b7d9ca75d2c5d0b,
+        type: 3}
+      propertyPath: XWheelController
+      value: 
+      objectReference: {fileID: 1065909903}
+    - target: {fileID: 2031014281735781112, guid: 83d399ffe9bbef046b7d9ca75d2c5d0b,
+        type: 3}
+      propertyPath: YWheelController
+      value: 
+      objectReference: {fileID: 1616185319}
     - target: {fileID: 2059558131018466876, guid: 83d399ffe9bbef046b7d9ca75d2c5d0b,
         type: 3}
       propertyPath: quillFeedController
@@ -10382,6 +10400,16 @@ PrefabInstance:
       propertyPath: fineAdjustmentController
       value: 
       objectReference: {fileID: 443703466}
+    - target: {fileID: 2059558131018466876, guid: 83d399ffe9bbef046b7d9ca75d2c5d0b,
+        type: 3}
+      propertyPath: XWheelController
+      value: 
+      objectReference: {fileID: 1065909903}
+    - target: {fileID: 2059558131018466876, guid: 83d399ffe9bbef046b7d9ca75d2c5d0b,
+        type: 3}
+      propertyPath: YWheelController
+      value: 
+      objectReference: {fileID: 1616185319}
     - target: {fileID: 2586756296420300285, guid: 83d399ffe9bbef046b7d9ca75d2c5d0b,
         type: 3}
       propertyPath: m_TagString
@@ -10422,6 +10450,16 @@ PrefabInstance:
       propertyPath: fineAdjustmentController
       value: 
       objectReference: {fileID: 443703466}
+    - target: {fileID: 2810623449465095400, guid: 83d399ffe9bbef046b7d9ca75d2c5d0b,
+        type: 3}
+      propertyPath: XWheelController
+      value: 
+      objectReference: {fileID: 1065909903}
+    - target: {fileID: 2810623449465095400, guid: 83d399ffe9bbef046b7d9ca75d2c5d0b,
+        type: 3}
+      propertyPath: YWheelController
+      value: 
+      objectReference: {fileID: 1616185319}
     - target: {fileID: 2848002335766558555, guid: 83d399ffe9bbef046b7d9ca75d2c5d0b,
         type: 3}
       propertyPath: fineAdjustmentController
@@ -10432,6 +10470,16 @@ PrefabInstance:
       propertyPath: quillFeedController
       value: 
       objectReference: {fileID: 1020964410}
+    - target: {fileID: 2848002335766558555, guid: 83d399ffe9bbef046b7d9ca75d2c5d0b,
+        type: 3}
+      propertyPath: XWheelController
+      value: 
+      objectReference: {fileID: 1065909903}
+    - target: {fileID: 2848002335766558555, guid: 83d399ffe9bbef046b7d9ca75d2c5d0b,
+        type: 3}
+      propertyPath: YWheelController
+      value: 
+      objectReference: {fileID: 1616185319}
     - target: {fileID: 2892962359536720189, guid: 83d399ffe9bbef046b7d9ca75d2c5d0b,
         type: 3}
       propertyPath: m_LocalRotation.x
@@ -10632,6 +10680,16 @@ PrefabInstance:
       propertyPath: fineAdjustmentController
       value: 
       objectReference: {fileID: 443703466}
+    - target: {fileID: 4828406635977531240, guid: 83d399ffe9bbef046b7d9ca75d2c5d0b,
+        type: 3}
+      propertyPath: XWheelController
+      value: 
+      objectReference: {fileID: 1065909903}
+    - target: {fileID: 4828406635977531240, guid: 83d399ffe9bbef046b7d9ca75d2c5d0b,
+        type: 3}
+      propertyPath: YWheelController
+      value: 
+      objectReference: {fileID: 1616185319}
     - target: {fileID: 5043734380279515645, guid: 83d399ffe9bbef046b7d9ca75d2c5d0b,
         type: 3}
       propertyPath: m_LocalPosition.z
@@ -10727,6 +10785,16 @@ PrefabInstance:
       propertyPath: fineAdjustmentController
       value: 
       objectReference: {fileID: 443703466}
+    - target: {fileID: 7344240480626973239, guid: 83d399ffe9bbef046b7d9ca75d2c5d0b,
+        type: 3}
+      propertyPath: XWheelController
+      value: 
+      objectReference: {fileID: 1065909903}
+    - target: {fileID: 7344240480626973239, guid: 83d399ffe9bbef046b7d9ca75d2c5d0b,
+        type: 3}
+      propertyPath: YWheelController
+      value: 
+      objectReference: {fileID: 1616185319}
     - target: {fileID: 7832575453082299320, guid: 83d399ffe9bbef046b7d9ca75d2c5d0b,
         type: 3}
       propertyPath: m_IsActive

@@ -12,7 +12,7 @@ public class FineAdjustmentControl : MonoBehaviour
     [SerializeField]
     GameObject animObject;
 
-    [SerializeField] DRO_ButtonState FineAdjustmentButton; // TEMPORARY --> THIS SHOULD BE FOR QUILL FEED ONLY
+    [SerializeField] public DRO_ButtonState FineAdjustmentButton; // TEMPORARY --> THIS SHOULD BE FOR QUILL FEED ONLY
 
     [SerializeField]
     public GameObject fineAdjustment;

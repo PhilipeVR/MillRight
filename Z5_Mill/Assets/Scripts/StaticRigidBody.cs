@@ -12,7 +12,7 @@ public class StaticRigidBody : MonoBehaviour
     GameObject Spindle;
 
     [SerializeField]
-    GameObject quillFeedController, fineAdjustmentController;
+    GameObject quillFeedController, fineAdjustmentController, XWheelController, YWheelController;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,6 +20,7 @@ public class StaticRigidBody : MonoBehaviour
         init_rot = GetComponent<Rigidbody>().rotation;
         GetComponent<Rigidbody>().velocity = new Vector3(0, 0, 0);
         //Debug.LogWarning("X: " + init_pos.x + ", Y: " + init_pos.y + ", Z: " + init_pos.z);
+        
     }
 
     // Update is called once per frame
@@ -33,8 +34,28 @@ public class StaticRigidBody : MonoBehaviour
     {
         if (collision.collider.tag.Equals("CubeStock"))
         {
-            quillFeedController.GetComponent<QuillFeedControl>().collided = true;
-            fineAdjustmentController.GetComponent<FineAdjustmentControl>().collided = true;
+            if (quillFeedController.GetComponent<QuillFeedControl>().QuillLockButton.checkIfEnabled || fineAdjustmentController.GetComponent<FineAdjustmentControl>().FineAdjustmentButton.checkIfEnabled)
+            {
+                quillFeedController.GetComponent<QuillFeedControl>().collided = true;
+                fineAdjustmentController.GetComponent<FineAdjustmentControl>().collided = true;
+            }
+            else if(XWheelController.GetComponent<XWheelControl>().XLockButton.checkIfEnabled && XWheelController.GetComponent<XWheelControl>().object_anim.GetFloat("Reverse") > 0)
+            {
+                XWheelController.GetComponent<XWheelControl>().leftCollision = true;
+            }
+            else if (XWheelController.GetComponent<XWheelControl>().XLockButton.checkIfEnabled && XWheelController.GetComponent<XWheelControl>().object_anim.GetFloat("Reverse") < 0)
+            {
+                XWheelController.GetComponent<XWheelControl>().rightCollision = true;
+            }
+            else if (YWheelController.GetComponent<YWheelControl>().YLockButton.checkIfEnabled && YWheelController.GetComponent<YWheelControl>().object_anim.GetFloat("Reverse") > 0)
+            {
+                YWheelController.GetComponent<YWheelControl>().forwardCollision = true;
+            }
+            else if (YWheelController.GetComponent<YWheelControl>().YLockButton.checkIfEnabled && YWheelController.GetComponent<YWheelControl>().object_anim.GetFloat("Reverse") < 0)
+            {
+                YWheelController.GetComponent<YWheelControl>().backwardCollision = true;
+
+            }
             Debug.LogWarning("HIT");
             updateStaticRigidBody();
         }
@@ -62,6 +83,10 @@ public class StaticRigidBody : MonoBehaviour
     {
         quillFeedController.GetComponent<QuillFeedControl>().collided = false;
         fineAdjustmentController.GetComponent<FineAdjustmentControl>().collided = false;
+        XWheelController.GetComponent<XWheelControl>().rightCollision = false;
+        XWheelController.GetComponent<XWheelControl>().leftCollision = false;
+        YWheelController.GetComponent<YWheelControl>().backwardCollision = false;
+        YWheelController.GetComponent<YWheelControl>().forwardCollision = false;
     }
 
 
