@@ -17,8 +17,7 @@ public class ZWheelControl : MonoBehaviour
 
     [SerializeField]
     Boolean enable = true;
-
-    
+   
 
     Boolean animated = true;
     Boolean handle_enabled, wheel_spin;
@@ -48,12 +47,12 @@ public class ZWheelControl : MonoBehaviour
             if (Input.mouseScrollDelta.y > 0f)
             {
                 object_anim.SetFloat("Reverse", 1);
-                setSpeed(0.2f);
+                setSpeed(0.05f);
             }
             else if (Input.mouseScrollDelta.y < 0f)
             {
                 object_anim.SetFloat("Reverse", -1);
-                setSpeed(0.2f);
+                setSpeed(0.05f);
             } else
             {
                 pause();

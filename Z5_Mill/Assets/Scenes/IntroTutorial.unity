@@ -4469,7 +4469,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh507208
+  m_Name: pb_Mesh72136
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -5312,6 +5312,12 @@ CanvasRenderer:
 --- !u!1 &485619489 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3312799078015067642, guid: 83d399ffe9bbef046b7d9ca75d2c5d0b,
+    type: 3}
+  m_PrefabInstance: {fileID: 2443960360639499163}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &485619490 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3312799078015067643, guid: 83d399ffe9bbef046b7d9ca75d2c5d0b,
     type: 3}
   m_PrefabInstance: {fileID: 2443960360639499163}
   m_PrefabAsset: {fileID: 0}
@@ -7316,6 +7322,12 @@ Transform:
 --- !u!1 &716149747 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1286587826326416233, guid: 83d399ffe9bbef046b7d9ca75d2c5d0b,
+    type: 3}
+  m_PrefabInstance: {fileID: 2443960360639499163}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &740277767 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3312799078462103665, guid: 83d399ffe9bbef046b7d9ca75d2c5d0b,
     type: 3}
   m_PrefabInstance: {fileID: 2443960360639499163}
   m_PrefabAsset: {fileID: 0}
@@ -17139,7 +17151,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: -120, y: -119.99997}
+  m_AnchoredPosition: {x: -120, y: -119.650665}
   m_SizeDelta: {x: 240, y: 240}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1810847905
@@ -17163,6 +17175,7 @@ MonoBehaviour:
   yLockButton: {fileID: 1334058743}
   zLockButton: {fileID: 453831210}
   QuillLockButton: {fileID: 949662694}
+  FineAdjButton: {fileID: 2098731954}
 --- !u!114 &1810847906
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17213,7 +17226,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   worktable: {fileID: 2014684081}
-  spindle: {fileID: 870283014535506736}
+  table: {fileID: 740277767}
+  head: {fileID: 485619490}
   xText: {fileID: 554158782}
   yText: {fileID: 928572596}
   zText: {fileID: 68134932}
@@ -20022,12 +20036,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 2443960360639499163}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &870283014535506736 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 3312799078437118123, guid: 83d399ffe9bbef046b7d9ca75d2c5d0b,
-    type: 3}
-  m_PrefabInstance: {fileID: 2443960360639499163}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1610958249401463760
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20323,6 +20331,11 @@ PrefabInstance:
         type: 3}
       propertyPath: drillTag
       value: Drill
+      objectReference: {fileID: 0}
+    - target: {fileID: 3312799078015067643, guid: 83d399ffe9bbef046b7d9ca75d2c5d0b,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.511
       objectReference: {fileID: 0}
     - target: {fileID: 3312799078959786686, guid: 83d399ffe9bbef046b7d9ca75d2c5d0b,
         type: 3}

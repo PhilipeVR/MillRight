@@ -18,7 +18,6 @@ public class YWheelControl : MonoBehaviour
     [SerializeField]
     Boolean enable = true;
 
-    
 
     Boolean animated = true;
     Boolean handle_enabled, wheel_spin;
@@ -53,14 +52,14 @@ public class YWheelControl : MonoBehaviour
             if (Input.mouseScrollDelta.y > 0f && !forwardCollision)
             {
                 object_anim.SetFloat("Reverse", 1);
-                setSpeed(0.2f);
+                setSpeed(0.3f);
                 //Debug.Log(Input.mouseScrollDelta.y);
                 //Debug.Log(Input.GetAxis("Mouse ScrollWheel"));
             }
             else if (Input.mouseScrollDelta.y < 0f && !backwardCollision)
             {
                 object_anim.SetFloat("Reverse", -1);
-                setSpeed(0.2f);
+                setSpeed(0.3f);
             } else
             {
                 pause();

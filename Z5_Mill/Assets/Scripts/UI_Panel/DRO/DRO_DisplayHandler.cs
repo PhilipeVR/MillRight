@@ -7,7 +7,8 @@ using UnityEngine.UI;
 public class DRO_DisplayHandler : MonoBehaviour
 {
     [SerializeField] private Transform worktable; // point of reference for X-DRO and Y-DRO
-    [SerializeField] private Transform spindle; // point of reference for Z-DRO
+    [SerializeField] private Transform table; // point of reference for X-DRO and Y-DRO
+    [SerializeField] private Transform head; // point of reference for Z-DRO
     
     [SerializeField] private Text xText;
     [SerializeField] private Text yText;
@@ -16,18 +17,20 @@ public class DRO_DisplayHandler : MonoBehaviour
     [SerializeField] private DRO_ButtonState inchButton;
     [SerializeField] private DRO_ButtonState mmButton;
 
-    private float x;
-    private float y;
-    private float z;
+    private float x0, x;
+    private float y0, y;
+    private float z0, z;
 
     private float inch = 39.37f; // 39.37 inch per m
     private float mm = 1000.0f; // 1000 mm per m
     private float unitConversion;
-    private float scaleFactor = 0.1f; // 1 unit in Unity is equivalient to 0.1 m
 
     void Start()
     {
         unitConversion = inch; //default setting
+        x0 =  worktable.localPosition.x * unitConversion;
+        y0 =  table.localPosition.y * unitConversion;
+        z0 =  head.localPosition.z * unitConversion;
     }
     
     void Update()
@@ -46,10 +49,12 @@ public class DRO_DisplayHandler : MonoBehaviour
         }
 
 
-        x =  worktable.localPosition.x / scaleFactor / unitConversion;
-        y =  worktable.localPosition.y / scaleFactor / unitConversion;
-        z =  spindle.localPosition.z / scaleFactor / unitConversion;
-        
+        x =  worktable.localPosition.x * unitConversion - x0;
+        y =  table.localPosition.y * unitConversion - y0;
+        z =  head.localPosition.z * unitConversion -z0;
+
+        Debug.Log(head.localPosition.z);
+
         xText.text = x.ToString("0.00000");
         yText.text = y.ToString("0.00000");
         zText.text = z.ToString("0.00000");
