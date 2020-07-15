@@ -26,6 +26,7 @@ public class DRO_Panel_Interactable_Manager : MonoBehaviour
 
         if (dialogueName.Equals(drilling))
         {
+
             Vise1.SetActive(true);
             Vise2.SetActive(false);
             Vise3.SetActive(false);
@@ -41,8 +42,6 @@ public class DRO_Panel_Interactable_Manager : MonoBehaviour
             Vise3.SetActive(false);
             tmp3.resetAnim(1);
             tmp4.resetAnim(0);
-            Vector3 tmpY = new Vector3(0,- 0.0168f,0);
-            Vise1.transform.localPosition += tmpY;
             YButton.interactable = true;
             QuillFeedButton.interactable = true;
             FineAdjustmentButton.interactable = true;
@@ -59,6 +58,8 @@ public class DRO_Panel_Interactable_Manager : MonoBehaviour
             QuillFeedButton.interactable = true;
             FineAdjustmentButton.interactable = true;
         }
+
+
     }
 
     void NoInteraction()

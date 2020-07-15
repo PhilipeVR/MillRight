@@ -30,14 +30,15 @@ public class InteractableManager : MonoBehaviour
         {
             ON.interactable = true;
             DRO_BTN.interactable = true;
+            DRO_Panel.GetComponent<DRO_ButtonHandler>().resetDRO();
             //setupSideMilling;
         }
         else if (dialogueName.Equals(facemilling))
         {
             ON.interactable = true;
             DRO_BTN.interactable = true;
-            //setupFaceMilling;
         }
+
         DRO_manager.SetupDRO(dialogueName);
     }
 

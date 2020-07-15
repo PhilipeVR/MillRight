@@ -499,7 +499,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Drill Bit 1
+  m_Text: "Drill \nBit 1"
 --- !u!222 &74997880
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -675,7 +675,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &82885064
 RectTransform:
   m_ObjectHideFlags: 0
@@ -712,6 +712,7 @@ MonoBehaviour:
   disabledColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
   buttonName: zButton
   checkIfEnabled: 0
+  interactable: 1
 --- !u!114 &82885066
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -928,6 +929,7 @@ MonoBehaviour:
   disabledColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
   buttonName: mmButton
   checkIfEnabled: 0
+  interactable: 1
 --- !u!1 &104469575
 GameObject:
   m_ObjectHideFlags: 0
@@ -984,6 +986,7 @@ MonoBehaviour:
   disabledColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
   buttonName: zButton
   checkIfEnabled: 0
+  interactable: 1
 --- !u!114 &104469578
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1131,6 +1134,7 @@ MonoBehaviour:
   disabledColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
   buttonName: zButton
   checkIfEnabled: 0
+  interactable: 1
 --- !u!114 &108105661
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1970,7 +1974,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &293729746
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2007,6 +2011,7 @@ MonoBehaviour:
   disabledColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
   buttonName: zButton
   checkIfEnabled: 0
+  interactable: 1
 --- !u!114 &293729748
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2353,6 +2358,7 @@ MonoBehaviour:
   disabledColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
   buttonName: zButton
   checkIfEnabled: 0
+  interactable: 1
 --- !u!114 &340834065
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2582,7 +2588,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &365286696
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2619,6 +2625,7 @@ MonoBehaviour:
   disabledColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
   buttonName: zButton
   checkIfEnabled: 0
+  interactable: 1
 --- !u!114 &365286698
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2803,7 +2810,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh15274
+  m_Name: pb_Mesh615038
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -3311,6 +3318,7 @@ MonoBehaviour:
   disabledColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
   buttonName: zLockButton
   checkIfEnabled: 0
+  interactable: 1
 --- !u!114 &453831211
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3638,7 +3646,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Drill Bit 2
+  m_Text: "Drill \nBit 2"
 --- !u!222 &547942404
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3787,6 +3795,7 @@ MonoBehaviour:
   disabledColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
   buttonName: zButton
   checkIfEnabled: 0
+  interactable: 1
 --- !u!114 &583520391
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4097,7 +4106,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Drill Bit 3
+  m_Text: "Drill \nBit 3"
 --- !u!222 &644216238
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4227,6 +4236,13 @@ MonoBehaviour:
   cam_sm1: {fileID: 706903581219625986}
   cam_fm1: {fileID: 706903580138097826}
   cam_main: {fileID: 706903581635023525}
+  myText: {fileID: 0}
+--- !u!4 &697501552 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3312799077774378513, guid: 83d399ffe9bbef046b7d9ca75d2c5d0b,
+    type: 3}
+  m_PrefabInstance: {fileID: 2443960360639499163}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -4388,15 +4404,13 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 0
     m_MaxSize: 40
-    m_Alignment: 4
+    m_Alignment: 7
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'End Mill Holder
-
-'
+  m_Text: "End Mill \nHolder\n"
 --- !u!222 &752467034
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4958,6 +4972,7 @@ MonoBehaviour:
   disabledColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
   buttonName: zButton
   checkIfEnabled: 0
+  interactable: 1
 --- !u!1 &911918062
 GameObject:
   m_ObjectHideFlags: 0
@@ -5092,6 +5107,7 @@ MonoBehaviour:
   disabledColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
   buttonName: zButton
   checkIfEnabled: 0
+  interactable: 1
 --- !u!114 &923683914
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5403,6 +5419,7 @@ MonoBehaviour:
   disabledColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
   buttonName: QuillLockButton
   checkIfEnabled: 0
+  interactable: 1
 --- !u!114 &949662695
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5851,6 +5868,7 @@ MonoBehaviour:
   disabledColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
   buttonName: xLockButton
   checkIfEnabled: 0
+  interactable: 1
 --- !u!114 &1079926641
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6223,6 +6241,7 @@ MonoBehaviour:
   disabledColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
   buttonName: xButton
   checkIfEnabled: 0
+  interactable: 1
 --- !u!1 &1114417558
 GameObject:
   m_ObjectHideFlags: 0
@@ -6872,7 +6891,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1310674734
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6909,6 +6928,7 @@ MonoBehaviour:
   disabledColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
   buttonName: zButton
   checkIfEnabled: 0
+  interactable: 1
 --- !u!114 &1310674736
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7050,6 +7070,7 @@ MonoBehaviour:
   disabledColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
   buttonName: yLockButton
   checkIfEnabled: 0
+  interactable: 1
 --- !u!114 &1334058744
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7395,7 +7416,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1358211787
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7432,6 +7453,7 @@ MonoBehaviour:
   disabledColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
   buttonName: zButton
   checkIfEnabled: 0
+  interactable: 1
 --- !u!114 &1358211789
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7539,7 +7561,7 @@ PrefabInstance:
     - target: {fileID: 1610958250235493139, guid: 72152316da2318d439db313eb60cce6b,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1610958250235493148, guid: 72152316da2318d439db313eb60cce6b,
         type: 3}
@@ -7725,6 +7747,7 @@ MonoBehaviour:
   disabledColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
   buttonName: zButton
   checkIfEnabled: 0
+  interactable: 1
 --- !u!114 &1416480565
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8171,6 +8194,7 @@ MonoBehaviour:
   disabledColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
   buttonName: yButton
   checkIfEnabled: 0
+  interactable: 1
 --- !u!1 &1519603755
 GameObject:
   m_ObjectHideFlags: 0
@@ -8227,6 +8251,7 @@ MonoBehaviour:
   disabledColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
   buttonName: zButton
   checkIfEnabled: 0
+  interactable: 1
 --- !u!114 &1519603758
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8415,7 +8440,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1546650012
 RectTransform:
   m_ObjectHideFlags: 0
@@ -8452,6 +8477,7 @@ MonoBehaviour:
   disabledColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
   buttonName: zButton
   checkIfEnabled: 0
+  interactable: 1
 --- !u!114 &1546650014
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9186,6 +9212,7 @@ MonoBehaviour:
   yLockButton: {fileID: 1334058743}
   zLockButton: {fileID: 453831210}
   QuillLockButton: {fileID: 949662694}
+  FineAdjButton: {fileID: 0}
 --- !u!114 &1810847906
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9235,11 +9262,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b88138f0b0408974e83a3bb4e1a30215, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  vise: {fileID: 5289874705677973591}
+  worktable: {fileID: 697501552}
   spindle: {fileID: 870283014535506736}
   xText: {fileID: 554158782}
   yText: {fileID: 928572596}
   zText: {fileID: 68134932}
+  inchButton: {fileID: 1937951556}
+  mmButton: {fileID: 103676647}
 --- !u!1 &1813088917
 GameObject:
   m_ObjectHideFlags: 0
@@ -9374,6 +9403,7 @@ MonoBehaviour:
   disabledColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
   buttonName: zButton
   checkIfEnabled: 0
+  interactable: 1
 --- !u!114 &1855157154
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9957,6 +9987,7 @@ MonoBehaviour:
   disabledColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
   buttonName: inchButton
   checkIfEnabled: 0
+  interactable: 1
 --- !u!1001 &2024659033
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10175,6 +10206,7 @@ MonoBehaviour:
   disabledColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
   buttonName: FineLockButton
   checkIfEnabled: 0
+  interactable: 1
 --- !u!114 &2098731955
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10310,6 +10342,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 129731846749707485, guid: 83d399ffe9bbef046b7d9ca75d2c5d0b,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.067
+      objectReference: {fileID: 0}
+    - target: {fileID: 129731846749707485, guid: 83d399ffe9bbef046b7d9ca75d2c5d0b,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.0004
+      objectReference: {fileID: 0}
+    - target: {fileID: 608957590466175558, guid: 83d399ffe9bbef046b7d9ca75d2c5d0b,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.0102
+      objectReference: {fileID: 0}
     - target: {fileID: 1221230043478335003, guid: 83d399ffe9bbef046b7d9ca75d2c5d0b,
         type: 3}
       propertyPath: quillFeedController
@@ -10359,6 +10406,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Y-LockHandle
+      objectReference: {fileID: 0}
+    - target: {fileID: 1735789697860915695, guid: 83d399ffe9bbef046b7d9ca75d2c5d0b,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.067
+      objectReference: {fileID: 0}
+    - target: {fileID: 1735789697860915695, guid: 83d399ffe9bbef046b7d9ca75d2c5d0b,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.0011
       objectReference: {fileID: 0}
     - target: {fileID: 1851589162034739395, guid: 83d399ffe9bbef046b7d9ca75d2c5d0b,
         type: 3}
@@ -10520,10 +10577,30 @@ PrefabInstance:
       propertyPath: field of view
       value: 60
       objectReference: {fileID: 0}
+    - target: {fileID: 3122423307197359456, guid: 83d399ffe9bbef046b7d9ca75d2c5d0b,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.011
+      objectReference: {fileID: 0}
     - target: {fileID: 3312799077726579722, guid: 83d399ffe9bbef046b7d9ca75d2c5d0b,
         type: 3}
       propertyPath: m_Name
       value: X-Lock W_Animator
+      objectReference: {fileID: 0}
+    - target: {fileID: 3312799077774378513, guid: 83d399ffe9bbef046b7d9ca75d2c5d0b,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3312799077774378513, guid: 83d399ffe9bbef046b7d9ca75d2c5d0b,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3312799077774378513, guid: 83d399ffe9bbef046b7d9ca75d2c5d0b,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3312799077983428361, guid: 83d399ffe9bbef046b7d9ca75d2c5d0b,
         type: 3}
@@ -10630,6 +10707,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: Y-Lock W_Animator
       objectReference: {fileID: 0}
+    - target: {fileID: 3440999681425248253, guid: 83d399ffe9bbef046b7d9ca75d2c5d0b,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.054500114
+      objectReference: {fileID: 0}
+    - target: {fileID: 3440999681425248253, guid: 83d399ffe9bbef046b7d9ca75d2c5d0b,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.000000011175871
+      objectReference: {fileID: 0}
+    - target: {fileID: 3440999681425248253, guid: 83d399ffe9bbef046b7d9ca75d2c5d0b,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -6.962413e-10
+      objectReference: {fileID: 0}
     - target: {fileID: 3708699637867846666, guid: 83d399ffe9bbef046b7d9ca75d2c5d0b,
         type: 3}
       propertyPath: m_LocalPosition.z
@@ -10644,6 +10736,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.y
       value: 0.0535
+      objectReference: {fileID: 0}
+    - target: {fileID: 3753345872252704015, guid: 83d399ffe9bbef046b7d9ca75d2c5d0b,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.0545
+      objectReference: {fileID: 0}
+    - target: {fileID: 3753345872252704015, guid: 83d399ffe9bbef046b7d9ca75d2c5d0b,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3753345872252704015, guid: 83d399ffe9bbef046b7d9ca75d2c5d0b,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 3846092799378241491, guid: 83d399ffe9bbef046b7d9ca75d2c5d0b,
         type: 3}
@@ -10735,6 +10842,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: X-LockHandle
       objectReference: {fileID: 0}
+    - target: {fileID: 6296969600006768364, guid: 83d399ffe9bbef046b7d9ca75d2c5d0b,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.067
+      objectReference: {fileID: 0}
+    - target: {fileID: 6296969600006768364, guid: 83d399ffe9bbef046b7d9ca75d2c5d0b,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.0011
+      objectReference: {fileID: 0}
     - target: {fileID: 6525622273045641873, guid: 83d399ffe9bbef046b7d9ca75d2c5d0b,
         type: 3}
       propertyPath: axisController
@@ -10795,6 +10912,16 @@ PrefabInstance:
       propertyPath: YWheelController
       value: 
       objectReference: {fileID: 1616185319}
+    - target: {fileID: 7531102675150042060, guid: 83d399ffe9bbef046b7d9ca75d2c5d0b,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.0422
+      objectReference: {fileID: 0}
+    - target: {fileID: 7531102675150042060, guid: 83d399ffe9bbef046b7d9ca75d2c5d0b,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.0361
+      objectReference: {fileID: 0}
     - target: {fileID: 7832575453082299320, guid: 83d399ffe9bbef046b7d9ca75d2c5d0b,
         type: 3}
       propertyPath: m_IsActive
@@ -10815,6 +10942,76 @@ PrefabInstance:
       propertyPath: m_Name
       value: Dummy Drill Bit 3
       objectReference: {fileID: 0}
+    - target: {fileID: 8036959377209664966, guid: 83d399ffe9bbef046b7d9ca75d2c5d0b,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8146388890029518872, guid: 83d399ffe9bbef046b7d9ca75d2c5d0b,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.000212353
+      objectReference: {fileID: 0}
+    - target: {fileID: 8146388890029518872, guid: 83d399ffe9bbef046b7d9ca75d2c5d0b,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.1793
+      objectReference: {fileID: 0}
+    - target: {fileID: 8146388890029518872, guid: 83d399ffe9bbef046b7d9ca75d2c5d0b,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.0976
+      objectReference: {fileID: 0}
+    - target: {fileID: 8146388890029518872, guid: 83d399ffe9bbef046b7d9ca75d2c5d0b,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8146388890029518872, guid: 83d399ffe9bbef046b7d9ca75d2c5d0b,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8146388890029518872, guid: 83d399ffe9bbef046b7d9ca75d2c5d0b,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 8146388890029518872, guid: 83d399ffe9bbef046b7d9ca75d2c5d0b,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 8146388890029518872, guid: 83d399ffe9bbef046b7d9ca75d2c5d0b,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8146388890029518872, guid: 83d399ffe9bbef046b7d9ca75d2c5d0b,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8146388890029518872, guid: 83d399ffe9bbef046b7d9ca75d2c5d0b,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 8146388890029518872, guid: 83d399ffe9bbef046b7d9ca75d2c5d0b,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.114
+      objectReference: {fileID: 0}
+    - target: {fileID: 8192458499159220845, guid: 83d399ffe9bbef046b7d9ca75d2c5d0b,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.06699286
+      objectReference: {fileID: 0}
+    - target: {fileID: 8192458499159220845, guid: 83d399ffe9bbef046b7d9ca75d2c5d0b,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.0010621324
+      objectReference: {fileID: 0}
     - target: {fileID: 8458132777105331226, guid: 83d399ffe9bbef046b7d9ca75d2c5d0b,
         type: 3}
       propertyPath: m_LocalPosition.z
@@ -10829,6 +11026,36 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.y
       value: 1.417001
+      objectReference: {fileID: 0}
+    - target: {fileID: 8520320648488467122, guid: 83d399ffe9bbef046b7d9ca75d2c5d0b,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.054500114
+      objectReference: {fileID: 0}
+    - target: {fileID: 8520320648488467122, guid: 83d399ffe9bbef046b7d9ca75d2c5d0b,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.000000011175871
+      objectReference: {fileID: 0}
+    - target: {fileID: 8520320648488467122, guid: 83d399ffe9bbef046b7d9ca75d2c5d0b,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -6.962413e-10
+      objectReference: {fileID: 0}
+    - target: {fileID: 9129074591784273301, guid: 83d399ffe9bbef046b7d9ca75d2c5d0b,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.054500114
+      objectReference: {fileID: 0}
+    - target: {fileID: 9129074591784273301, guid: 83d399ffe9bbef046b7d9ca75d2c5d0b,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.0000000037252903
+      objectReference: {fileID: 0}
+    - target: {fileID: 9129074591784273301, guid: 83d399ffe9bbef046b7d9ca75d2c5d0b,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -6.962413e-10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 83d399ffe9bbef046b7d9ca75d2c5d0b, type: 3}
@@ -10928,12 +11155,6 @@ PrefabInstance:
 --- !u!1 &5175314770203662113 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7365876484061256890, guid: 83d399ffe9bbef046b7d9ca75d2c5d0b,
-    type: 3}
-  m_PrefabInstance: {fileID: 2443960360639499163}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &5289874705677973591 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 7531102675150042060, guid: 83d399ffe9bbef046b7d9ca75d2c5d0b,
     type: 3}
   m_PrefabInstance: {fileID: 2443960360639499163}
   m_PrefabAsset: {fileID: 0}

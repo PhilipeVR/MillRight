@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Net.Http.Headers;
 using UnityEditor;
 using UnityEditor.PackageManager;
 using UnityEngine;
@@ -50,14 +51,14 @@ public class XWheelControl : MonoBehaviour
             if (Input.mouseScrollDelta.y > 0f && !leftCollision)
             {
                 object_anim.SetFloat("Reverse", 1);
-                setSpeed(0.2f);
+                setSpeed(0.05f);
                 //Debug.Log(Input.mouseScrollDelta.y);
                 //Debug.Log(Input.GetAxis("Mouse ScrollWheel"));
             }
             else if (Input.mouseScrollDelta.y < 0f && !rightCollision)
             {
                 object_anim.SetFloat("Reverse", -1);
-                setSpeed(0.2f);
+                setSpeed(0.05f);
             } else
             {
                 pause();
@@ -96,5 +97,7 @@ public class XWheelControl : MonoBehaviour
     {
         object_anim.Play(object_anim.runtimeAnimatorController.animationClips[0].name, 0, time);
         object_anim.speed = 0;
+        leftCollision = false;
+        rightCollision = false;
     }
 }

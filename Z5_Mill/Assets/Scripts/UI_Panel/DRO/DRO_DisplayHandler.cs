@@ -38,7 +38,7 @@ public class DRO_DisplayHandler : MonoBehaviour
         if(inchButton.checkIfEnabled)
         {
             unitConversion = inch;
-            Debug.Log("Inch");
+            //Debug.Log("Inch");
         }
         if(mmButton.checkIfEnabled)
         {

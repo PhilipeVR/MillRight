@@ -30,7 +30,6 @@ public class ZWheelControl : MonoBehaviour
         object_anim = animObject.GetComponent<Animator>();
         lock_anim = lockAnimObject.GetComponent<Animator>();
 
-
         setSpeed(0.2f);
         setLockSpeed(0.5f);
         pause();

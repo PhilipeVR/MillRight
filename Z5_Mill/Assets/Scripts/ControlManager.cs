@@ -20,10 +20,6 @@ public class ControlManager : MonoBehaviour
     [SerializeField] DRO_ButtonState QuillLockButton; // TEMPORARY
     [SerializeField] DRO_ButtonState FineLockButton; // TEMPORARY
 
-    void Start()
-    {
-        
-    }
 
     // Update is called once per frame
     void Update()

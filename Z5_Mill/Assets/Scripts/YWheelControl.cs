@@ -99,5 +99,7 @@ public class YWheelControl : MonoBehaviour
     {
         object_anim.Play(object_anim.runtimeAnimatorController.animationClips[0].name, 0, time);
         object_anim.speed = 0;
+        forwardCollision = false;
+        backwardCollision = false;
     }
 }

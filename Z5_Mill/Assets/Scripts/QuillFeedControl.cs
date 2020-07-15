@@ -77,6 +77,7 @@ public class QuillFeedControl : MonoBehaviour
                         Vector3 new_pos = new Vector3(tmp_pos.x, y_pos, tmp_pos.z);
                         wheel.transform.localPosition = new_pos;
                         object_anim.SetFloat("Reverse", 1);
+                        Debug.LogWarning("Quill Feed Moving");
                         setSpeed(2f);
                     }
                 }
@@ -95,6 +96,8 @@ public class QuillFeedControl : MonoBehaviour
                         wheel.transform.localPosition = new_pos;
                         object_anim.SetFloat("Reverse", -1);
                         setSpeed(2f);
+                        Debug.LogWarning("Quill Feed Moving");
+
                     }
                 }
                 else
@@ -134,7 +137,9 @@ public class QuillFeedControl : MonoBehaviour
 
     public void resetAnim(float time)
     {
-        object_anim.Play(object_anim.runtimeAnimatorController.animationClips[0].name, 0, time);
-        object_anim.speed = 0;
+
+        wheel.transform.localPosition = new Vector3(wheel.transform.localPosition.x, MAX_HEIGHT, wheel.transform.localPosition.z);
+        collided = false;
+
     }
 }

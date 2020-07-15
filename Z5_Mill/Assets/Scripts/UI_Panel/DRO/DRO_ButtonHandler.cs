@@ -18,6 +18,7 @@ public class DRO_ButtonHandler : MonoBehaviour
 
     //TEMPORARY BUTTONS
     [SerializeField] private DRO_ButtonState QuillLockButton; // TEMPORARY
+    [SerializeField] private DRO_ButtonState FineAdjButton; // TEMPORARY
 
 
     //public string currentUnits;
@@ -26,14 +27,18 @@ public class DRO_ButtonHandler : MonoBehaviour
     {
         inchButton.checkIfEnabled = true;
         mmButton.checkIfEnabled = false;
-        xButton.checkIfEnabled = true;
-        xLockButton.checkIfEnabled = true;
-        yButton.checkIfEnabled = false;
-        yLockButton.checkIfEnabled = false;
-        zButton.checkIfEnabled = false;
-        zLockButton.checkIfEnabled = false;
+
     }
- 
+
+    public void resetDRO()
+    {
+        if (zButton.checkIfEnabled)
+        {
+            zButton.DisableThisButton();
+            ToggleOtherButton(zButton);
+        }
+    }
+
     public void ToggleOtherButton(DRO_ButtonState buttonState)
     {
         // Debug.Log("inch: "+(buttonState.buttonName == "inchButton"));
@@ -60,7 +65,9 @@ public class DRO_ButtonHandler : MonoBehaviour
             if(buttonState.checkIfEnabled == true)
             {
                 xLockButton.EnableThisButton(); //Enable LockButton means unlocking that button
-            } 
+                Debug.LogWarning("ButtonStateName: " + buttonState.buttonName);
+
+            }
             else
             {
                 xLockButton.DisableThisButton(); //Enable LockButton means unlocking that button
@@ -68,6 +75,7 @@ public class DRO_ButtonHandler : MonoBehaviour
             
             yLockButton.DisableThisButton();
             zLockButton.DisableThisButton();
+            FineAdjButton.DisableThisButton();
             QuillLockButton.DisableThisButton(); // TEMPORARY
         }
 
@@ -87,6 +95,7 @@ public class DRO_ButtonHandler : MonoBehaviour
             
             xLockButton.DisableThisButton();
             zLockButton.DisableThisButton();
+            FineAdjButton.DisableThisButton();
             QuillLockButton.DisableThisButton(); // TEMPORARY
         }
         else if(buttonState.buttonName == "zButton")
@@ -105,6 +114,7 @@ public class DRO_ButtonHandler : MonoBehaviour
             
             xLockButton.DisableThisButton();
             yLockButton.DisableThisButton();
+            FineAdjButton.DisableThisButton();
             QuillLockButton.DisableThisButton(); // TEMPORARY
         }
         //TEMPORARY
@@ -113,14 +123,28 @@ public class DRO_ButtonHandler : MonoBehaviour
         //BUTTON
         else if(buttonState.buttonName == "QuillLockButton")
         {
+            Debug.LogWarning("QuillLockButton DisableThisButton");
+            xButton.DisableThisButton();
+            yButton.DisableThisButton();
+            zButton.DisableThisButton();
+            xLockButton.DisableThisButton();
+            yLockButton.DisableThisButton();
+            zLockButton.DisableThisButton();
+            FineAdjButton.DisableThisButton();
+        }
+
+        else if (buttonState.buttonName == "FineAdjustmentButton")
+        {
             xButton.DisableThisButton();
             yButton.DisableThisButton();
             zButton.DisableThisButton();
 
-            
+
             xLockButton.DisableThisButton();
             yLockButton.DisableThisButton();
             zLockButton.DisableThisButton();
+            QuillLockButton.DisableThisButton();
+
         }
         else {} // Do nothing
 

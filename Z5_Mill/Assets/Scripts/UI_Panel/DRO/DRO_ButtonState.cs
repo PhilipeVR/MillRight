@@ -16,7 +16,7 @@ public class DRO_ButtonState : MonoBehaviour, IPointerClickHandler
     public bool checkIfEnabled;
     public bool interactable = true;
     
-    private void Start()
+    void Start()
     {
         button = GetComponent<Button>();
         image = GetComponent<Image>();
@@ -31,12 +31,11 @@ public class DRO_ButtonState : MonoBehaviour, IPointerClickHandler
         }
     }
 
-    
+
 
     public void OnPointerClick(PointerEventData eventData)
     {
-        if (interactable)
-        {
+        if (interactable) { 
             if (eventData.button == PointerEventData.InputButton.Left)
             {
                 // Toggle to its opposite setting
@@ -52,10 +51,12 @@ public class DRO_ButtonState : MonoBehaviour, IPointerClickHandler
                 ToggleOtherBotton();
             }
         }
+        
     }
 
     private void ToggleOtherBotton()
     {
+        Debug.LogWarning("ButtonStateName: " + this.buttonName);
         FindObjectOfType<DRO_ButtonHandler>().ToggleOtherButton(this);
     }
 

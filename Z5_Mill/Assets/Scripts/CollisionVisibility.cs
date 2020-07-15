@@ -106,7 +106,7 @@ public class CollisionVisibility : MonoBehaviour
         {
             
             isColliding = false;
-            timerCountDown = 10.0f;
+            timerCountDown = 1f;
             sparks.SetActive(false);
         }
     }

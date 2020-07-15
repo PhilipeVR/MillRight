@@ -1094,6 +1094,7 @@ MonoBehaviour:
   disabledColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
   buttonName: zButton
   checkIfEnabled: 0
+  interactable: 1
 --- !u!114 &82885066
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1310,6 +1311,7 @@ MonoBehaviour:
   disabledColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
   buttonName: mmButton
   checkIfEnabled: 0
+  interactable: 1
 --- !u!1 &104469575
 GameObject:
   m_ObjectHideFlags: 0
@@ -1366,6 +1368,7 @@ MonoBehaviour:
   disabledColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
   buttonName: zButton
   checkIfEnabled: 0
+  interactable: 1
 --- !u!114 &104469578
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1513,6 +1516,7 @@ MonoBehaviour:
   disabledColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
   buttonName: zButton
   checkIfEnabled: 0
+  interactable: 1
 --- !u!114 &108105661
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2525,72 +2529,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96fddd3587c20f24788f56c87da79e9f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogue:
-    name: Getting Started - Examining the Mill
-    frenchName: 
-    sentences:
-    - Side milling is the process of removing material from either the side of a
-      workpiece or the face of a workpiece
-    - For drilling we used a drillbit, however we must use a tool called an endmill
-      for sidemilling operations.
-    - End mills are similar to drill bits in that they have flutes that will allow
-      them to drill into a workpiece...
-    - but they also can be used to machine the side or face of a workpiece since
-      they are more able to handle radial loads.
-    - The workpiece is fixed in place with the target face extending beyond the vise
-      so that it will not be damaged by the mill
-    - Again, we will lower the head into position and lock it place.
-    - Next lower the spindle so that bottom of the tool is well below the workpiece
-    - 
-    - With everything in place, let's start the machine.
-    - Begin by moving the table slowly until the end mill touches the surface of
-      the material
-    - One you have touched the surface, set the reference point along the x-axis
-      by hitting the zero button on the DRO
-    - Back off the end mill from the workpiece slightly, then move the table in the
-      y-direction until the end mill clears the workpiece
-    - 'Next move in the x direction to a controlled depth at which we will make our
-      first cut. This time we will use a depth of 0.01 inch (0.254 mm) '
-    - To make the cut, move the table in the y-direction such that the tool is walking
-      along the face of the workpiece
-    - Note that because we only moved the y direction, we have created a uniform
-      face that is perpendicular to the jaws of the vise
-    - This process may be repeated until the desired amount of material is removed
-      from the workpiece.
-    sentencesFR:
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    images:
-    - {fileID: 21300000, guid: 71fd86be3a05da640be99c12380ff01c, type: 3}
-    - {fileID: 21300000, guid: 71fd86be3a05da640be99c12380ff01c, type: 3}
-    - {fileID: 21300000, guid: 71fd86be3a05da640be99c12380ff01c, type: 3}
-    - {fileID: 21300000, guid: 71fd86be3a05da640be99c12380ff01c, type: 3}
-    - {fileID: 21300000, guid: 71fd86be3a05da640be99c12380ff01c, type: 3}
-    - {fileID: 21300000, guid: 71fd86be3a05da640be99c12380ff01c, type: 3}
-    - {fileID: 21300000, guid: 71fd86be3a05da640be99c12380ff01c, type: 3}
-    - {fileID: 21300000, guid: 71fd86be3a05da640be99c12380ff01c, type: 3}
-    - {fileID: 21300000, guid: 71fd86be3a05da640be99c12380ff01c, type: 3}
-    - {fileID: 21300000, guid: 71fd86be3a05da640be99c12380ff01c, type: 3}
-    - {fileID: 21300000, guid: 71fd86be3a05da640be99c12380ff01c, type: 3}
-    - {fileID: 21300000, guid: 71fd86be3a05da640be99c12380ff01c, type: 3}
-    - {fileID: 21300000, guid: 71fd86be3a05da640be99c12380ff01c, type: 3}
-    - {fileID: 21300000, guid: 71fd86be3a05da640be99c12380ff01c, type: 3}
-    - {fileID: 21300000, guid: 71fd86be3a05da640be99c12380ff01c, type: 3}
-    - {fileID: 21300000, guid: 71fd86be3a05da640be99c12380ff01c, type: 3}
+  dialogues: {fileID: 0}
+  manager: {fileID: 0}
 --- !u!114 &218534645
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3500,6 +3440,7 @@ MonoBehaviour:
   disabledColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
   buttonName: zButton
   checkIfEnabled: 0
+  interactable: 1
 --- !u!114 &293729748
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3920,6 +3861,7 @@ MonoBehaviour:
   disabledColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
   buttonName: zButton
   checkIfEnabled: 0
+  interactable: 1
 --- !u!114 &340834065
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4342,6 +4284,7 @@ MonoBehaviour:
   disabledColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
   buttonName: zButton
   checkIfEnabled: 0
+  interactable: 1
 --- !u!114 &365286698
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5132,6 +5075,7 @@ MonoBehaviour:
   disabledColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
   buttonName: zLockButton
   checkIfEnabled: 0
+  interactable: 1
 --- !u!114 &453831211
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6387,6 +6331,7 @@ MonoBehaviour:
   disabledColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
   buttonName: zButton
   checkIfEnabled: 0
+  interactable: 1
 --- !u!114 &583520391
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6983,6 +6928,7 @@ MonoBehaviour:
   cam_sm1: {fileID: 706903581219625986}
   cam_fm1: {fileID: 706903580138097826}
   cam_main: {fileID: 706903581635023525}
+  myText: {fileID: 266449060}
 --- !u!1 &689577418
 GameObject:
   m_ObjectHideFlags: 0
@@ -8032,16 +7978,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96fddd3587c20f24788f56c87da79e9f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogue:
-    name: Getting Started - Examining the Mill
-    frenchName: 
-    sentences:
-    - 'In this tutorial we will learn 3 fundamental operations that can be performed
-      on the mill: Drilling, Facing, and Side Milling'
-    sentencesFR:
-    - 
-    images:
-    - {fileID: 21300000, guid: 71fd86be3a05da640be99c12380ff01c, type: 3}
+  dialogues: {fileID: 0}
+  manager: {fileID: 0}
 --- !u!114 &824384486
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9082,6 +9020,7 @@ MonoBehaviour:
   disabledColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
   buttonName: zButton
   checkIfEnabled: 0
+  interactable: 1
 --- !u!1 &911918062
 GameObject:
   m_ObjectHideFlags: 0
@@ -9216,6 +9155,7 @@ MonoBehaviour:
   disabledColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
   buttonName: zButton
   checkIfEnabled: 0
+  interactable: 1
 --- !u!114 &923683914
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9521,77 +9461,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96fddd3587c20f24788f56c87da79e9f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogue:
-    name: Getting Started - Examining the Mill
-    frenchName: 
-    sentences:
-    - Let's first examine the setup. The workpiece is firmly clamped into the vise
-      - it is important that the vice is not clamped too tightly, as this could deform
-      the workpiece.
-    - The drill bit is also fixtured inside the drill chuck, and the drill chuck
-      is secured to the head of the mill.
-    - There are also a few things to keep in mind when positioning the mill for drilling
-      operations.
-    - First locate the spot on the workpiece that you need to drill. Often times
-      a centre-punch is used to mark this location.
-    - Next lower the head of the mill such that it is only a couple inches above
-      the workpiece
-    - Now we can adjust the x and y position of the table to align the spot to drill
-      directly under the drill-bit
-    - With the workpiece and tool in position, we are almost ready to begin drilling.
-      But first we must determine and set the rigth cutting speed
-    - A simple formula can be used to estimate the rotation speed of the cutter knowing
-      the material of the workpiece and the diameter of the cutting tool
-    - 'RPM = 4x Cutting Speed / Diameter
-
-'
-    - 'For example, milling with a 1/2'' endmill in steel:
-
-      Cutting Speed (steel)
-      = 80 SFPM
-
-      Cutter Diameter = 0.5 inch
-
-      RPM = 4 x 80 / 0.5
-
-      RPM
-      = 640 RPM'
-    - With the correct speed set we can now turn on the machine.
-    - Proceed to lower the spindle with the quill feed until you touch the surface.
-      Remove material from the workpiece in increments by raising and lowering the
-      drill in a pecking motion
-    - Continue until the drill bit has piereced through the matieral.
-    - Well done! Next we will learn facing.
-    sentencesFR:
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    images:
-    - {fileID: 21300000, guid: 71fd86be3a05da640be99c12380ff01c, type: 3}
-    - {fileID: 21300000, guid: 71fd86be3a05da640be99c12380ff01c, type: 3}
-    - {fileID: 21300000, guid: 71fd86be3a05da640be99c12380ff01c, type: 3}
-    - {fileID: 21300000, guid: 71fd86be3a05da640be99c12380ff01c, type: 3}
-    - {fileID: 21300000, guid: 71fd86be3a05da640be99c12380ff01c, type: 3}
-    - {fileID: 21300000, guid: 71fd86be3a05da640be99c12380ff01c, type: 3}
-    - {fileID: 21300000, guid: 71fd86be3a05da640be99c12380ff01c, type: 3}
-    - {fileID: 21300000, guid: 71fd86be3a05da640be99c12380ff01c, type: 3}
-    - {fileID: 21300000, guid: 71fd86be3a05da640be99c12380ff01c, type: 3}
-    - {fileID: 21300000, guid: 71fd86be3a05da640be99c12380ff01c, type: 3}
-    - {fileID: 21300000, guid: 71fd86be3a05da640be99c12380ff01c, type: 3}
-    - {fileID: 21300000, guid: 71fd86be3a05da640be99c12380ff01c, type: 3}
-    - {fileID: 21300000, guid: 71fd86be3a05da640be99c12380ff01c, type: 3}
-    - {fileID: 21300000, guid: 71fd86be3a05da640be99c12380ff01c, type: 3}
+  dialogues: {fileID: 0}
+  manager: {fileID: 0}
 --- !u!114 &939507261
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9839,6 +9710,7 @@ MonoBehaviour:
   disabledColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
   buttonName: QuillLockButton
   checkIfEnabled: 0
+  interactable: 1
 --- !u!114 &949662695
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9964,7 +9836,7 @@ Camera:
   field of view: 60
   orthographic: 1
   orthographic size: 5
-  m_Depth: 1
+  m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -10713,6 +10585,7 @@ MonoBehaviour:
   disabledColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
   buttonName: xLockButton
   checkIfEnabled: 0
+  interactable: 1
 --- !u!114 &1079926641
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11273,6 +11146,7 @@ MonoBehaviour:
   disabledColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
   buttonName: xButton
   checkIfEnabled: 0
+  interactable: 1
 --- !u!1 &1114417558
 GameObject:
   m_ObjectHideFlags: 0
@@ -12568,36 +12442,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96fddd3587c20f24788f56c87da79e9f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogue:
-    name: Getting Started - Examining the Mill
-    frenchName: 
-    sentences:
-    - We can control three levels of movement in the Z direction
-    - On this particular machine the [HEAD] can be moved up and down to adjust the
-      height of the [TOOL] above the [WORKPIECE]. assembly..
-    - Never move the head lower than 2 fingers away from the vise.
-    - Always lock the [HEAD] in place once the desired height above the [WORKPIECE]
-      is achieved.
-    - The second level adjustment in the Z direction is controlled by the [QUILL
-      FEED]. The [QUILL FEED] is used to move the [SPINDLE] up and down.
-    - The [QUILL FEED] can be locked in place in order to control the third level
-      of adjustment with the [FINE ADJUSTMENT DIAL] located on the front of the machine.
-    sentencesFR:
-    - 
-    - '
-
-'
-    - 
-    - 
-    - 
-    - 
-    images:
-    - {fileID: 21300000, guid: 71fd86be3a05da640be99c12380ff01c, type: 3}
-    - {fileID: 21300000, guid: c7d39ecdeeec25e48ae6eeb44eb26183, type: 3}
-    - {fileID: 21300000, guid: 44dd9f1e3343032468d16a05b736df04, type: 3}
-    - {fileID: 21300000, guid: 44dd9f1e3343032468d16a05b736df04, type: 3}
-    - {fileID: 21300000, guid: 44dd9f1e3343032468d16a05b736df04, type: 3}
-    - {fileID: 21300000, guid: 44dd9f1e3343032468d16a05b736df04, type: 3}
+  dialogues: {fileID: 0}
+  manager: {fileID: 0}
 --- !u!114 &1286085288
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12941,6 +12787,7 @@ MonoBehaviour:
   disabledColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
   buttonName: zButton
   checkIfEnabled: 0
+  interactable: 1
 --- !u!114 &1310674736
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13082,6 +12929,7 @@ MonoBehaviour:
   disabledColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
   buttonName: yLockButton
   checkIfEnabled: 0
+  interactable: 1
 --- !u!114 &1334058744
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13542,6 +13390,7 @@ MonoBehaviour:
   disabledColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
   buttonName: zButton
   checkIfEnabled: 0
+  interactable: 1
 --- !u!114 &1358211789
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14198,6 +14047,7 @@ MonoBehaviour:
   disabledColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
   buttonName: zButton
   checkIfEnabled: 0
+  interactable: 1
 --- !u!114 &1416480565
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14560,57 +14410,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96fddd3587c20f24788f56c87da79e9f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogue:
-    name: Getting Started - Examining the Mill
-    frenchName: 
-    sentences:
-    - Here we have the mill setup for a face milling operation. Facemilling is the
-      process of removing material from the face of an object
-    - Here we will use the same end mill that was used previously for the side milling
-      operation
-    - The process here is very similar to the side milling operation
-    - We will first lower the tool until it touches the surface, set the reference
-      point, move off of the surface, lower the deptch of cut, then walk across the
-      surface removing material
-    - Proceed by lowering the head of the machine until the endmill touches the surface
-    - Position the workpiece so it is below the tool
-    - Lower the quill feed so that the tool is now only slightly above the workpiece
-      and the lock the quill into position
-    - 'Now you may turn on the machine. '
-    - Proceed by using the fine adjustment knob to lower the tool until it contacts
-      the surface of the workpiece
-    - Now you will set the reference point in the z direction, and then move the
-      tool off the workpiece by moving the table in the x direciton
-    - As before, set the deptch of cut to 0.01 inch (0.254 mm) and walk across the
-      surface of the material
-    - Similarly as with side milling, this process can be repeated many times until
-      the desired dimensions are achieved
-    sentencesFR:
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    images:
-    - {fileID: 21300000, guid: 71fd86be3a05da640be99c12380ff01c, type: 3}
-    - {fileID: 21300000, guid: 71fd86be3a05da640be99c12380ff01c, type: 3}
-    - {fileID: 21300000, guid: 71fd86be3a05da640be99c12380ff01c, type: 3}
-    - {fileID: 21300000, guid: 71fd86be3a05da640be99c12380ff01c, type: 3}
-    - {fileID: 21300000, guid: 71fd86be3a05da640be99c12380ff01c, type: 3}
-    - {fileID: 21300000, guid: 71fd86be3a05da640be99c12380ff01c, type: 3}
-    - {fileID: 21300000, guid: 71fd86be3a05da640be99c12380ff01c, type: 3}
-    - {fileID: 21300000, guid: 71fd86be3a05da640be99c12380ff01c, type: 3}
-    - {fileID: 21300000, guid: 71fd86be3a05da640be99c12380ff01c, type: 3}
-    - {fileID: 21300000, guid: 71fd86be3a05da640be99c12380ff01c, type: 3}
-    - {fileID: 21300000, guid: 71fd86be3a05da640be99c12380ff01c, type: 3}
-    - {fileID: 21300000, guid: 71fd86be3a05da640be99c12380ff01c, type: 3}
+  dialogues: {fileID: 0}
+  manager: {fileID: 0}
 --- !u!114 &1436112505
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15038,6 +14839,7 @@ MonoBehaviour:
   disabledColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
   buttonName: yButton
   checkIfEnabled: 0
+  interactable: 1
 --- !u!1 &1519603755
 GameObject:
   m_ObjectHideFlags: 0
@@ -15094,6 +14896,7 @@ MonoBehaviour:
   disabledColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
   buttonName: zButton
   checkIfEnabled: 0
+  interactable: 1
 --- !u!114 &1519603758
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15533,6 +15336,7 @@ MonoBehaviour:
   disabledColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
   buttonName: zButton
   checkIfEnabled: 0
+  interactable: 1
 --- !u!114 &1546650014
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16566,25 +16370,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96fddd3587c20f24788f56c87da79e9f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogue:
-    name: InitialDialogue
-    frenchName: "Bienvenue \xE0 la simulation de fraisage de Mill Right"
-    sentences:
-    - Welcome to the Basic Mill Training Workshop.
-    - The milling Machine is an advanced machinery used in subtractive Manufacturing
-    - Milling is the process of machining removing material by advancing rotary cutters
-      into a workpiece.
-    - Let's start by examining the main components of a typical mill.
-    sentencesFR:
-    - 
-    - 
-    - 
-    - 
-    images:
-    - {fileID: 21300000, guid: 71fd86be3a05da640be99c12380ff01c, type: 3}
-    - {fileID: 21300000, guid: c7d39ecdeeec25e48ae6eeb44eb26183, type: 3}
-    - {fileID: 21300000, guid: 44dd9f1e3343032468d16a05b736df04, type: 3}
-    - {fileID: 21300000, guid: 44dd9f1e3343032468d16a05b736df04, type: 3}
+  dialogues: {fileID: 0}
+  manager: {fileID: 0}
 --- !u!114 &1641964673
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16877,39 +16664,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96fddd3587c20f24788f56c87da79e9f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogue:
-    name: Getting Started - Examining the Mill
-    frenchName: 
-    sentences:
-    - This part of the mill is called the [TABLE]. It is used to hold the workpiece.
-    - The [TABLE] can be moved in the X and Y directions using the corresponding
-      [HANDWHEELS].
-    - ' The [HANDWHEEL] on the side of the [TABLE] controls movement in the [X AXIS].'
-    - The [HANDWHEEL] on the front of the [TABLE] controls movement in the [Y AXIS]
-    - If we do not want the [TABLE] to move in either direction we can lock it to
-      position
-    - Engaging the [LOCK] on the front of the table will prevent it from moving in
-      the X direction.
-    - Similarly, the [LOCK] underneath the table on its side will prevent movement
-      in the Y direction.
-    sentencesFR:
-    - 
-    - '
-
-'
-    - 
-    - 
-    - 
-    - 
-    - 
-    images:
-    - {fileID: 21300000, guid: 71fd86be3a05da640be99c12380ff01c, type: 3}
-    - {fileID: 21300000, guid: c7d39ecdeeec25e48ae6eeb44eb26183, type: 3}
-    - {fileID: 21300000, guid: 44dd9f1e3343032468d16a05b736df04, type: 3}
-    - {fileID: 21300000, guid: 44dd9f1e3343032468d16a05b736df04, type: 3}
-    - {fileID: 21300000, guid: 44dd9f1e3343032468d16a05b736df04, type: 3}
-    - {fileID: 21300000, guid: 44dd9f1e3343032468d16a05b736df04, type: 3}
-    - {fileID: 21300000, guid: 44dd9f1e3343032468d16a05b736df04, type: 3}
+  dialogues: {fileID: 0}
+  manager: {fileID: 0}
 --- !u!114 &1680768341
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17791,6 +17547,7 @@ MonoBehaviour:
   disabledColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
   buttonName: zButton
   checkIfEnabled: 0
+  interactable: 1
 --- !u!114 &1855157154
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18200,32 +17957,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96fddd3587c20f24788f56c87da79e9f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogue:
-    name: Getting Started - Examining the Mill
-    frenchName: 
-    sentences:
-    - This is the [SPINDLE], it is a hollow cylinder that goes all the way through
-      the head of the machine and is spun by a motor.
-    - This is the [DRAWBAR]. It is a long bolt that goes through the spindle and
-      bolts into the back of the [TOOL HOLDER]
-    - The [TOOL HOLDER] is inserted through the bottom of the [SPINDLE].
-    - ' Upon insertion of the [TOOL HOLDER], the [DRAWBAR] will raise up so that
-      it can then be fastened in place by threading the bolt'
-    - The [TOOL HOLDER] can then be used to clamp on to a tool.
-    sentencesFR:
-    - 
-    - '
-
-'
-    - 
-    - 
-    - 
-    images:
-    - {fileID: 21300000, guid: 71fd86be3a05da640be99c12380ff01c, type: 3}
-    - {fileID: 21300000, guid: c7d39ecdeeec25e48ae6eeb44eb26183, type: 3}
-    - {fileID: 21300000, guid: 44dd9f1e3343032468d16a05b736df04, type: 3}
-    - {fileID: 21300000, guid: 44dd9f1e3343032468d16a05b736df04, type: 3}
-    - {fileID: 21300000, guid: 44dd9f1e3343032468d16a05b736df04, type: 3}
+  dialogues: {fileID: 0}
+  manager: {fileID: 0}
 --- !u!114 &1894870646
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18965,6 +18698,7 @@ MonoBehaviour:
   disabledColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
   buttonName: inchButton
   checkIfEnabled: 0
+  interactable: 1
 --- !u!1 &1952273809
 GameObject:
   m_ObjectHideFlags: 0
@@ -19980,6 +19714,7 @@ MonoBehaviour:
   disabledColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
   buttonName: FineLockButton
   checkIfEnabled: 0
+  interactable: 1
 --- !u!114 &2098731955
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20306,6 +20041,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DeactivateAtEndDialogue: {fileID: 1610958249450634449}
+  trigger: {fileID: 0}
   nameText: {fileID: 926026206}
   dialogueText: {fileID: 1370238143}
   dialogIndex: {fileID: 56917547}
@@ -20357,7 +20093,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1610958249450634462
 RectTransform:
   m_ObjectHideFlags: 0
@@ -20562,6 +20298,11 @@ PrefabInstance:
         type: 3}
       propertyPath: field of view
       value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 2892962360305437374, guid: 83d399ffe9bbef046b7d9ca75d2c5d0b,
+        type: 3}
+      propertyPath: m_Depth
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3312799077726579722, guid: 83d399ffe9bbef046b7d9ca75d2c5d0b,
         type: 3}
@@ -20837,6 +20578,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Dummy Drill Bit 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8036959377209664966, guid: 83d399ffe9bbef046b7d9ca75d2c5d0b,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8458132777105331226, guid: 83d399ffe9bbef046b7d9ca75d2c5d0b,
         type: 3}
