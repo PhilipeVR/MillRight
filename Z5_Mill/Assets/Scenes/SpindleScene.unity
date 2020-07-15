@@ -211,6 +211,7 @@ GameObject:
   - component: {fileID: 25363005}
   - component: {fileID: 25363004}
   - component: {fileID: 25363007}
+  - component: {fileID: 25363008}
   m_Layer: 5
   m_Name: Menu_Button
   m_TagString: Untagged
@@ -280,7 +281,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 25363005}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 25363008}
+        m_MethodName: loadlevel
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: IntroTutorial
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &25363005
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -332,6 +344,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   toggleOptionText: MENU PRINCIPAL
   currentText: {fileID: 1243188569}
+--- !u!114 &25363008
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 25363002}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf89ce06d3bf240418090b53619ef3f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &26454764
 GameObject:
   m_ObjectHideFlags: 0
@@ -510,6 +534,7 @@ MonoBehaviour:
   cam_sm1: {fileID: 0}
   cam_fm1: {fileID: 0}
   cam_main: {fileID: 0}
+  myText: {fileID: 0}
 --- !u!114 &99455363
 MonoBehaviour:
   m_ObjectHideFlags: 0

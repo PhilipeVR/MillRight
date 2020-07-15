@@ -50,7 +50,6 @@ public class MouseOver : MonoBehaviour
     public void onClickEndColor()
     {
         GetComponent<Image>().color = normalButtonColor;
-        SceneManager.LoadScene(sceneToLoad);
 
     }
 }

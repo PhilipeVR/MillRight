@@ -52,18 +52,18 @@ public class InteractableManager : MonoBehaviour
 
         else if (dialogueName.Equals(drilling))
         {
-            FaceMill.interactable = true;
+            SideMill.interactable = true;
         }
         else if (dialogueName.Equals(sidemilling))
+        {
+            FaceMill.interactable = true;
+        }
+        else if (dialogueName.Equals(facemilling))
         {
             Drill.interactable = true;
             FaceMill.interactable = true;
             SideMill.interactable = true;
             MainMenu.interactable = true;
-        }
-        else if (dialogueName.Equals(facemilling))
-        {
-            SideMill.interactable = true;
 
         }
 
