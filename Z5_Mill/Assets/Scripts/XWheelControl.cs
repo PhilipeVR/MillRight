@@ -46,13 +46,13 @@ public class XWheelControl : MonoBehaviour
     {
         if(XLockButton.checkIfEnabled == true)
         {
-            Debug.Log("X");
+            //Debug.Log("X");
             if (Input.mouseScrollDelta.y > 0f && !leftCollision)
             {
                 object_anim.SetFloat("Reverse", 1);
                 setSpeed(0.2f);
-                Debug.Log(Input.mouseScrollDelta.y);
-                Debug.Log(Input.GetAxis("Mouse ScrollWheel"));
+                //Debug.Log(Input.mouseScrollDelta.y);
+                //Debug.Log(Input.GetAxis("Mouse ScrollWheel"));
             }
             else if (Input.mouseScrollDelta.y < 0f && !rightCollision)
             {
@@ -79,7 +79,7 @@ public class XWheelControl : MonoBehaviour
 
     private void setSpeed(float mph)
     {
-        Debug.Log(mph);
+        //Debug.Log(mph);
         object_anim.speed = mph;
         if (mph > 0)
         {

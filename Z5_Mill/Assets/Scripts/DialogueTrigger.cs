@@ -12,6 +12,7 @@ public class DialogueTrigger : MonoBehaviour
     void Start(){
         gameDialogues = dialogues.dialogues;
         TriggerDialogue(0);
+
     }
 
     public void TriggerDialogue (int i)

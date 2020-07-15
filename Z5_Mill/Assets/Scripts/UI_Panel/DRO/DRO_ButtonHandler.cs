@@ -24,9 +24,14 @@ public class DRO_ButtonHandler : MonoBehaviour
     
     private void Start()
     {
-        // Must follow same order in hierarchy tree, depth-first search
-        //inchButton = GetComponentInChildren<DRO_ButtonState>();
-        //mmButton = GetComponentInChildren<DRO_ButtonState>();
+        inchButton.checkIfEnabled = true;
+        mmButton.checkIfEnabled = false;
+        xButton.checkIfEnabled = true;
+        xLockButton.checkIfEnabled = true;
+        yButton.checkIfEnabled = false;
+        yLockButton.checkIfEnabled = false;
+        zButton.checkIfEnabled = false;
+        zLockButton.checkIfEnabled = false;
     }
  
     public void ToggleOtherButton(DRO_ButtonState buttonState)
@@ -37,11 +42,13 @@ public class DRO_ButtonHandler : MonoBehaviour
 
         if(buttonState.buttonName == "inchButton")
         {          
-            mmButton.ToggleThisButton();
+            inchButton.EnableThisButton();
+            mmButton.DisableThisButton();
         }
         else if(buttonState.buttonName == "mmButton")
         {
-            inchButton.ToggleThisButton();
+            mmButton.EnableThisButton();
+            inchButton.DisableThisButton();
         }
         
         // XYZ Buttons

@@ -76,7 +76,7 @@ public class ZWheelControl : MonoBehaviour
 
     private void setSpeed(float mph)
     {
-        Debug.Log(mph);
+        //Debug.Log(mph);
         object_anim.speed = mph;
         if (mph > 0)
         {
