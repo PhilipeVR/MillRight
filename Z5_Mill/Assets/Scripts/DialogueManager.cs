@@ -7,6 +7,7 @@ using UnityEngine.UI;
 public class DialogueManager : MonoBehaviour
 {
     public GameObject DeactivateAtEndDialogue;
+    public DialogueTrigger trigger;
     public Text nameText;
     public Text dialogueText;
     public Text dialogIndex;
@@ -33,6 +34,9 @@ public class DialogueManager : MonoBehaviour
         nameText.text = dialogue.name;
         titleLang = dialogue.frenchName;
         sentences.Clear();
+        index = 1;
+        DeactivateAtEndDialogue.SetActive(true);
+
 
         foreach (string sentence in dialogue.sentences)
         {
@@ -89,6 +93,7 @@ public class DialogueManager : MonoBehaviour
 
         Debug.Log("End of conversation.");
         DeactivateAtEndDialogue.SetActive(false);
+        trigger.TransitionDialogue();
     }
 
     public void switchLang() {

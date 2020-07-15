@@ -2,9 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
+[CreateAssetMenu(fileName = "DialogsIntro", menuName = "DialogsIntro")]
+
 public class DialogBox : ScriptableObject
 {
-    public string language;
-    public Dialogue dialogue;
-    
+    public List<Dialogue> dialogues;
 }

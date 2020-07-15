@@ -4,19 +4,25 @@ using UnityEngine;
 
 public class DialogueTrigger : MonoBehaviour
 {
-    public Dialogue dialogue;
+    public DialogBox dialogues;
+    public InteractableManager manager;
+    private List<Dialogue> gameDialogues;
+    private int currentIndex;
 
     void Start(){
-        if(dialogue.name == "InitialDialogue")
-        Debug.Log(dialogue.name == "InitialDialogue");
-        {
-            TriggerDialogue();
-        }
+        gameDialogues = dialogues.dialogues;
+        TriggerDialogue(0);
     }
 
-    public void TriggerDialogue ()
+    public void TriggerDialogue (int i)
     {
-        FindObjectOfType<DialogueManager>().StartDialogue(dialogue);
+        manager.SetInteractionLevel(gameDialogues[i].name);
+        FindObjectOfType<DialogueManager>().StartDialogue(gameDialogues[i]);
+        currentIndex = i;
+    }
+
+    public void TransitionDialogue() {
+        manager.Transition(gameDialogues[currentIndex].name);
     }
 
     

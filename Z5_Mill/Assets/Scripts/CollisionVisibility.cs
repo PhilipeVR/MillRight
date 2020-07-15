@@ -15,6 +15,8 @@ public class CollisionVisibility : MonoBehaviour
     [SerializeField]
     string gameObjectParentName;
 
+    public Boolean TrainingWheels = false;
+
     GameObject sparks;
 
     private float timerCountDown = 10.0f;
@@ -76,14 +78,21 @@ public class CollisionVisibility : MonoBehaviour
             sparks.transform.position = collison.transform.position;
             if (timerCountDown <= 0)
             {
-                gameObject.GetComponent<Renderer>().enabled = false;
-                Destroy(gameObject);
-                Destroy(this);
+                if (TrainingWheels)
+                {
+                    gameObject.SetActive(false);
+                }
+                else
+                {
+                    gameObject.GetComponent<Renderer>().enabled = false;
+                    Destroy(gameObject);
+                    Destroy(this);
+                    collison.transform.gameObject.GetComponent<StaticRigidBody>().endCollision();
+                }
                 sparks.SetActive(false);
-                collison.transform.gameObject.GetComponent<StaticRigidBody>().endCollision();
             }
 
-            if(!gameObject.GetComponent<Renderer>().enabled)
+            if (!gameObject.GetComponent<Renderer>().enabled)
             {
                 sparks.SetActive(false);
             }

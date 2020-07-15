@@ -88,4 +88,10 @@ public class ZWheelControl : MonoBehaviour
     {
         lock_anim.speed = mph;
     }
+
+    public void resetAnim(float time)
+    {
+        object_anim.Play(object_anim.runtimeAnimatorController.animationClips[0].name, 0, time);
+        object_anim.speed = 0;
+    }
 }

@@ -32,7 +32,6 @@ public class XWheelControl : MonoBehaviour
         lock_anim = lockAnimObject.GetComponent<Animator>();
         leftCollision = false;
         rightCollision = false;
-        setSpeed(0.2f);
         setLockSpeed(0.5f);
         pause();
         pauseLock();
@@ -91,5 +90,11 @@ public class XWheelControl : MonoBehaviour
     private void setLockSpeed(float mph)
     {
         lock_anim.speed = mph;
+    }
+
+    public void resetAnim(float time)
+    {
+        object_anim.Play(object_anim.runtimeAnimatorController.animationClips[0].name, 0, time);
+        object_anim.speed = 0;
     }
 }
