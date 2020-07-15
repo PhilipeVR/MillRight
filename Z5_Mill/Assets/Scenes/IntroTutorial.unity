@@ -4469,7 +4469,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh507208
+  m_Name: pb_Mesh72136
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -5312,6 +5312,12 @@ CanvasRenderer:
 --- !u!1 &485619489 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3312799078015067642, guid: 83d399ffe9bbef046b7d9ca75d2c5d0b,
+    type: 3}
+  m_PrefabInstance: {fileID: 2443960360639499163}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &485619490 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3312799078015067643, guid: 83d399ffe9bbef046b7d9ca75d2c5d0b,
     type: 3}
   m_PrefabInstance: {fileID: 2443960360639499163}
   m_PrefabAsset: {fileID: 0}
@@ -7316,6 +7322,12 @@ Transform:
 --- !u!1 &716149747 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1286587826326416233, guid: 83d399ffe9bbef046b7d9ca75d2c5d0b,
+    type: 3}
+  m_PrefabInstance: {fileID: 2443960360639499163}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &740277767 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3312799078462103665, guid: 83d399ffe9bbef046b7d9ca75d2c5d0b,
     type: 3}
   m_PrefabInstance: {fileID: 2443960360639499163}
   m_PrefabAsset: {fileID: 0}
@@ -17139,7 +17151,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: -120, y: -119.99997}
+  m_AnchoredPosition: {x: -120, y: -119.650665}
   m_SizeDelta: {x: 240, y: 240}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1810847905
@@ -17163,7 +17175,7 @@ MonoBehaviour:
   yLockButton: {fileID: 1334058743}
   zLockButton: {fileID: 453831210}
   QuillLockButton: {fileID: 949662694}
-  FineAdjButton: {fileID: 0}
+  FineAdjButton: {fileID: 2098731954}
 --- !u!114 &1810847906
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17214,7 +17226,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   worktable: {fileID: 2014684081}
-  spindle: {fileID: 870283014535506736}
+  table: {fileID: 740277767}
+  head: {fileID: 485619490}
   xText: {fileID: 554158782}
   yText: {fileID: 928572596}
   zText: {fileID: 68134932}
@@ -18009,7 +18022,6 @@ GameObject:
   - component: {fileID: 1921014941}
   - component: {fileID: 1921014940}
   - component: {fileID: 1921014939}
-  - component: {fileID: 1921014942}
   m_Layer: 5
   m_Name: Menu_Button
   m_TagString: Untagged
@@ -18079,18 +18091,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1921014940}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1921014942}
-        m_MethodName: loadlevel
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: SampleScene
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &1921014940
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18128,18 +18129,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1921014937}
   m_CullTransparentMesh: 0
---- !u!114 &1921014942
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1921014937}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf89ce06d3bf240418090b53619ef3f1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1928613844
 GameObject:
   m_ObjectHideFlags: 0
@@ -20047,12 +20036,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 2443960360639499163}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &870283014535506736 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 3312799078437118123, guid: 83d399ffe9bbef046b7d9ca75d2c5d0b,
-    type: 3}
-  m_PrefabInstance: {fileID: 2443960360639499163}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1610958249401463760
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20348,6 +20331,11 @@ PrefabInstance:
         type: 3}
       propertyPath: drillTag
       value: Drill
+      objectReference: {fileID: 0}
+    - target: {fileID: 3312799078015067643, guid: 83d399ffe9bbef046b7d9ca75d2c5d0b,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.511
       objectReference: {fileID: 0}
     - target: {fileID: 3312799078959786686, guid: 83d399ffe9bbef046b7d9ca75d2c5d0b,
         type: 3}

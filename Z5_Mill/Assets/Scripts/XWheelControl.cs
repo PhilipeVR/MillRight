@@ -18,7 +18,6 @@ public class XWheelControl : MonoBehaviour
 
     [SerializeField]
     Boolean enable = true;
-
     
 
     Boolean animated = true;
