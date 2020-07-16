@@ -56,7 +56,6 @@ public class DRO_ButtonState : MonoBehaviour, IPointerClickHandler
 
     private void ToggleOtherBotton()
     {
-        Debug.LogWarning("ButtonStateName: " + this.buttonName);
         FindObjectOfType<DRO_ButtonHandler>().ToggleOtherButton(this);
     }
 
