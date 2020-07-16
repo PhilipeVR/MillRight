@@ -15,6 +15,7 @@ public class DRO_ButtonHandler : MonoBehaviour
     [SerializeField] private DRO_ButtonState xLockButton;
     [SerializeField] private DRO_ButtonState yLockButton;
     [SerializeField] private DRO_ButtonState zLockButton;
+    
 
     //TEMPORARY BUTTONS
     [SerializeField] private DRO_ButtonState QuillLockButton; // TEMPORARY
@@ -32,6 +33,16 @@ public class DRO_ButtonHandler : MonoBehaviour
 
     public void resetDRO()
     {
+        if (xButton.checkIfEnabled)
+        {
+            xButton.DisableThisButton();
+            ToggleOtherButton(xButton);
+        }
+        if (yButton.checkIfEnabled)
+        {
+            yButton.DisableThisButton();
+            ToggleOtherButton(yButton);
+        }
         if (zButton.checkIfEnabled)
         {
             zButton.DisableThisButton();

@@ -48,7 +48,6 @@ public class YWheelControl : MonoBehaviour
     {
         if(YLockButton.checkIfEnabled == true)
         {
-            Debug.Log("Y");
             if (Input.mouseScrollDelta.y > 0f && !forwardCollision)
             {
                 object_anim.SetFloat("Reverse", 1);
