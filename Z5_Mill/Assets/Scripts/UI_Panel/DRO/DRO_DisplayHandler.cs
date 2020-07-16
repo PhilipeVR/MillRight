@@ -16,6 +16,7 @@ public class DRO_DisplayHandler : MonoBehaviour
 
     [SerializeField] private DRO_ButtonState inchButton;
     [SerializeField] private DRO_ButtonState mmButton;
+    [SerializeField] private DRO_ButtonState zeroButton;
 
     private float x0, x;
     private float y0, y;
@@ -32,6 +33,8 @@ public class DRO_DisplayHandler : MonoBehaviour
         y0 =  table.localPosition.y * unitConversion;
         z0 =  spindle.localPosition.z * unitConversion;
     }
+
+
     
     void Update()
     {
@@ -61,5 +64,14 @@ public class DRO_DisplayHandler : MonoBehaviour
         zText.text = z.ToString("0.00000");
 
     }
+
+    public void zero()
+    {
+        x0 = x;
+        y0 = y;
+        z0 = z;
+
+    }
+
 
 }

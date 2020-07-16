@@ -1959,6 +1959,12 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 266449058}
   m_CullTransparentMesh: 0
+--- !u!20 &278492886 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 2892962359536720190, guid: 83d399ffe9bbef046b7d9ca75d2c5d0b,
+    type: 3}
+  m_PrefabInstance: {fileID: 2443960360639499163}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &281788475
 GameObject:
   m_ObjectHideFlags: 0
@@ -4728,8 +4734,8 @@ MonoBehaviour:
   cam_drill2: {fileID: 706903580468523015}
   cam_sm1: {fileID: 706903581219625986}
   cam_fm1: {fileID: 706903580138097826}
-  cam_5: {fileID: 0}
-  myText: {fileID: 0}
+  cam_5: {fileID: 278492886}
+  myText: {fileID: 266449060}
 --- !u!4 &697501552 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3312799077774378513, guid: 83d399ffe9bbef046b7d9ca75d2c5d0b,
@@ -9533,6 +9539,7 @@ GameObject:
   - component: {fileID: 1649589618}
   - component: {fileID: 1649589621}
   - component: {fileID: 1649589620}
+  - component: {fileID: 1649589622}
   - component: {fileID: 1649589619}
   m_Layer: 5
   m_Name: zeroButton
@@ -9603,7 +9610,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1649589620}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1810847908}
+        m_MethodName: zero
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1649589620
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9641,6 +9659,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1649589617}
   m_CullTransparentMesh: 0
+--- !u!114 &1649589622
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1649589617}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 684667532f3a4d943b3719ab79ec9ce1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enabledColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+  disabledColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+  buttonName: 
+  checkIfEnabled: 0
+  interactable: 1
 --- !u!1 &1677665264 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1616339052154038993, guid: 83d399ffe9bbef046b7d9ca75d2c5d0b,
@@ -9857,6 +9892,7 @@ MonoBehaviour:
   zText: {fileID: 68134932}
   inchButton: {fileID: 1937951556}
   mmButton: {fileID: 103676647}
+  zeroButton: {fileID: 1649589622}
 --- !u!1 &1813088917
 GameObject:
   m_ObjectHideFlags: 0
@@ -11262,6 +11298,11 @@ PrefabInstance:
       propertyPath: YWheelController
       value: 
       objectReference: {fileID: 1616185319}
+    - target: {fileID: 2892962359536720188, guid: 83d399ffe9bbef046b7d9ca75d2c5d0b,
+        type: 3}
+      propertyPath: m_Name
+      value: Cam5
+      objectReference: {fileID: 0}
     - target: {fileID: 2892962359536720189, guid: 83d399ffe9bbef046b7d9ca75d2c5d0b,
         type: 3}
       propertyPath: m_LocalRotation.x
