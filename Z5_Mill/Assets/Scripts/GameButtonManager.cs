@@ -48,8 +48,6 @@ public class GameButtonManager : MonoBehaviour
         on_anim.Play(on_anim.runtimeAnimatorController.animationClips[0].name);
         currentBit.tag = drillTag;
         state = true;
-        Debug.LogWarning("On Button");
-
     }
 
     public void turnOff()
@@ -59,7 +57,6 @@ public class GameButtonManager : MonoBehaviour
         off_anim.Play(off_anim.runtimeAnimatorController.animationClips[0].name);
         anim_object.speed = 0;
         state = false;
-        Debug.LogWarning("Off Button");
     }
 
  

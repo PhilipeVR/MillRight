@@ -90,8 +90,6 @@ public class DialogueManager : MonoBehaviour
 
     void EndDialogue()
     {
-
-        Debug.Log("End of conversation.");
         DeactivateAtEndDialogue.SetActive(false);
         trigger.TransitionDialogue();
     }

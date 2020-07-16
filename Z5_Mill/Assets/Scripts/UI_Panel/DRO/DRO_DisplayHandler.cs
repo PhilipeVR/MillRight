@@ -8,7 +8,7 @@ public class DRO_DisplayHandler : MonoBehaviour
 {
     [SerializeField] private Transform worktable; // point of reference for X-DRO and Y-DRO
     [SerializeField] private Transform table; // point of reference for X-DRO and Y-DRO
-    [SerializeField] private Transform head; // point of reference for Z-DRO
+    [SerializeField] private Transform spindle; // point of reference for Z-DRO
     
     [SerializeField] private Text xText;
     [SerializeField] private Text yText;
@@ -30,7 +30,7 @@ public class DRO_DisplayHandler : MonoBehaviour
         unitConversion = inch; //default setting
         x0 =  worktable.localPosition.x * unitConversion;
         y0 =  table.localPosition.y * unitConversion;
-        z0 =  head.localPosition.z * unitConversion;
+        z0 =  spindle.position.z * unitConversion;
     }
     
     void Update()
@@ -51,9 +51,7 @@ public class DRO_DisplayHandler : MonoBehaviour
 
         x =  worktable.localPosition.x * unitConversion - x0;
         y =  table.localPosition.y * unitConversion - y0;
-        z =  head.localPosition.z * unitConversion -z0;
-
-        Debug.Log(head.localPosition.z);
+        z =  spindle.position.z * unitConversion -z0;
 
         xText.text = x.ToString("0.00000");
         yText.text = y.ToString("0.00000");

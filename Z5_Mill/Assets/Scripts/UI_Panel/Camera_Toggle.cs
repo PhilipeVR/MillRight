@@ -9,11 +9,16 @@ public class Camera_Toggle : MonoBehaviour
     public Camera cam_drill2;
     public Camera cam_sm1; // sm == side milling perspective
     public Camera cam_fm1; // fm == face milling perspective 
-    public Camera cam_main;
+    public Camera cam_5;
     public Text myText;
 
     private int clickCounter;
     private int numberOfCams = 5; // the number of cams that can be switched between
+
+    public void start()
+    {
+        cam_drill1.enabled = true;
+    }
 
     public void switchcam() {
 
@@ -42,7 +47,7 @@ public class Camera_Toggle : MonoBehaviour
         }
         else if (clickCounter==5)
         {
-            cam_main.enabled = true;
+            cam_5.enabled = true;
             myText.text = "5";
         }
     }
@@ -52,7 +57,7 @@ public class Camera_Toggle : MonoBehaviour
         cam_drill2.enabled = false;
         cam_sm1.enabled = false;
         cam_fm1.enabled = false;
-        cam_main.enabled = false;
+        cam_5.enabled = false;
     }
 
     private void countClicks()

@@ -50,8 +50,6 @@ public class XYWheelControl : MonoBehaviour
             {
                 object_anim.SetFloat("Reverse", 1);
                 setSpeed(0.2f);
-                Debug.Log(Input.mouseScrollDelta.y);
-                Debug.Log(Input.GetAxis("Mouse ScrollWheel"));
             }
             else if (Input.mouseScrollDelta.y < 0f)
             {
@@ -78,7 +76,6 @@ public class XYWheelControl : MonoBehaviour
 
     private void setSpeed(float mph)
     {
-        Debug.Log(mph);
         object_anim.speed = mph;
         if (mph > 0)
         {

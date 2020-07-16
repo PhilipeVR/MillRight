@@ -29,11 +29,7 @@ public class CollisionVisibility : MonoBehaviour
         if (sparks != null)
         {
             sparks.SetActive(false);
-        } else
-        {
-            Debug.LogError("NullPointerException");
-        }
-
+        } 
     }
 
     // Update is called once per frame

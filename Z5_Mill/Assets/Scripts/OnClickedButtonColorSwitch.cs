@@ -13,7 +13,6 @@ public class OnClickedButtonColorSwitch : MonoBehaviour
     void Start()
     {
         normalButtonColor = GetComponent<Image>().color;
-
     }
 
     public void onClickColor()

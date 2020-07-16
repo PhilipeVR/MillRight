@@ -12,14 +12,12 @@ public class ToggleText : MonoBehaviour
     void Start()
     {
         initialText = currentText.text ;
-        Debug.LogWarning("initial");
 
     }
 
     // Update is called once per frame
     public void toggle()
     {
-        Debug.LogWarning("Toggle");
 
         if (currentText.text.Equals(initialText))
         {
@@ -29,7 +27,5 @@ public class ToggleText : MonoBehaviour
             currentText.text = initialText;
 
         }
-        Debug.LogWarning(currentText.text);
-
     }
 }
