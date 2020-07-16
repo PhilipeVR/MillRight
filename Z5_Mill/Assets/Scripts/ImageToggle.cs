@@ -9,7 +9,7 @@ public class ImageToggle : MonoBehaviour
     private Sprite initialSprite;
     public Sprite toggleOptionSprite;
     public Image currentIMG;
-    void Start()
+    void Awake()
     {
         initialSprite = currentIMG.sprite;
 

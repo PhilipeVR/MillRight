@@ -37,7 +37,16 @@ public class DialogueManager : MonoBehaviour
         index = 1;
         DeactivateAtEndDialogue.SetActive(true);
 
-
+        if (language)
+        {
+            nameText.text = dialogue.name;
+            titleLang = dialogue.frenchName;
+        }
+        else
+        {
+            nameText.text = dialogue.frenchName;
+            titleLang = dialogue.name;
+        }
         foreach (string sentence in dialogue.sentences)
         {
             sentences.Enqueue(sentence);

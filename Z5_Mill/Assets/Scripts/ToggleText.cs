@@ -9,7 +9,7 @@ public class ToggleText : MonoBehaviour
     private string initialText;
     public string toggleOptionText;
     public Text currentText;
-    void Start()
+    void Awake()
     {
         initialText = currentText.text ;
 

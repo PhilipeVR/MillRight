@@ -803,6 +803,8 @@ GameObject:
   m_Component:
   - component: {fileID: 96849208}
   - component: {fileID: 96849207}
+  - component: {fileID: 96849209}
+  - component: {fileID: 96849210}
   m_Layer: 0
   m_Name: SceneDisplayController
   m_TagString: Untagged
@@ -836,6 +838,51 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &96849209
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 96849206}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d08893aa5060b684b8c1e5c8515d4082, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &96849210
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 96849206}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3b8188085ef1834cb6e1f7b30930014, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  toggleList:
+  - {fileID: 777929098}
+  - {fileID: 638929470}
+  - {fileID: 1921014943}
+  - {fileID: 1908900001}
+  - {fileID: 120135171}
+  - {fileID: 923683917}
+  - {fileID: 1607515333}
+  - {fileID: 340834068}
+  - {fileID: 583520394}
+  - {fileID: 108105664}
+  - {fileID: 1855157157}
+  - {fileID: 1416480568}
+  - {fileID: 104469581}
+  - {fileID: 1519603761}
+  - {fileID: 949662698}
+  - {fileID: 2098731958}
+  languageScene: {fileID: 96849209}
+  toggleLangManager: {fileID: 0}
+  toggleComponentLangManager: {fileID: 0}
+  imageToggle: {fileID: 0}
 --- !u!1 &103676642
 GameObject:
   m_ObjectHideFlags: 0
@@ -873,7 +920,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 155, y: -77.9}
+  m_AnchoredPosition: {x: 161.00003, y: -77.9}
   m_SizeDelta: {x: 30, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &103676644
@@ -986,6 +1033,7 @@ GameObject:
   - component: {fileID: 104469579}
   - component: {fileID: 104469578}
   - component: {fileID: 104469577}
+  - component: {fileID: 104469581}
   m_Layer: 5
   m_Name: Drill Bit 2
   m_TagString: Untagged
@@ -1121,6 +1169,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 104469575}
   m_CullTransparentMesh: 0
+--- !u!114 &104469581
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 104469575}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6334ee3e139481b49813dc7c33170d08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  toggleOptionText: Foret 2
+  currentText: {fileID: 547942403}
 --- !u!1 &108105658
 GameObject:
   m_ObjectHideFlags: 0
@@ -1134,6 +1196,7 @@ GameObject:
   - component: {fileID: 108105662}
   - component: {fileID: 108105661}
   - component: {fileID: 108105660}
+  - component: {fileID: 108105664}
   m_Layer: 5
   m_Name: 4 Flute End Mill
   m_TagString: Untagged
@@ -1269,6 +1332,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 108105658}
   m_CullTransparentMesh: 0
+--- !u!114 &108105664
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 108105658}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6334ee3e139481b49813dc7c33170d08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  toggleOptionText: "Fraise en bout \xE0 4 fl\xFBtes"
+  currentText: {fileID: 1285218429}
 --- !u!1 &120135167
 GameObject:
   m_ObjectHideFlags: 0
@@ -1280,6 +1357,7 @@ GameObject:
   - component: {fileID: 120135168}
   - component: {fileID: 120135170}
   - component: {fileID: 120135169}
+  - component: {fileID: 120135171}
   m_Layer: 5
   m_Name: Text (1)
   m_TagString: Untagged
@@ -1347,6 +1425,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 120135167}
   m_CullTransparentMesh: 0
+--- !u!114 &120135171
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 120135167}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6334ee3e139481b49813dc7c33170d08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  toggleOptionText: 'Inventaire: '
+  currentText: {fileID: 120135169}
 --- !u!1 &138159864
 GameObject:
   m_ObjectHideFlags: 0
@@ -2436,6 +2528,7 @@ GameObject:
   - component: {fileID: 340834066}
   - component: {fileID: 340834065}
   - component: {fileID: 340834064}
+  - component: {fileID: 340834068}
   m_Layer: 5
   m_Name: End Mill Holder
   m_TagString: Untagged
@@ -2571,6 +2664,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 340834062}
   m_CullTransparentMesh: 0
+--- !u!114 &340834068
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 340834062}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6334ee3e139481b49813dc7c33170d08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  toggleOptionText: Support de fraise en bout
+  currentText: {fileID: 752467033}
 --- !u!1 &346131233 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3312799078185544017, guid: 83d399ffe9bbef046b7d9ca75d2c5d0b,
@@ -2931,7 +3038,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh615038
+  m_Name: pb_Mesh779634
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -3169,7 +3276,183 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 424435381}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1908900001}
+        m_MethodName: toggle
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 949662698}
+        m_MethodName: toggle
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2098731958}
+        m_MethodName: toggle
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1607515333}
+        m_MethodName: toggle
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 120135171}
+        m_MethodName: toggle
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 923683917}
+        m_MethodName: toggle
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 340834068}
+        m_MethodName: toggle
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1855157157}
+        m_MethodName: toggle
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1416480568}
+        m_MethodName: toggle
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 104469581}
+        m_MethodName: toggle
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1519603761}
+        m_MethodName: toggle
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 583520394}
+        m_MethodName: toggle
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 108105664}
+        m_MethodName: toggle
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 638929470}
+        m_MethodName: toggle
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 96849210}
+        m_MethodName: updateLanguageState
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 777929098}
+        m_MethodName: toggle
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &424435381
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3679,12 +3962,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 2443960360639499163}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &485619490 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 3312799078015067643, guid: 83d399ffe9bbef046b7d9ca75d2c5d0b,
-    type: 3}
-  m_PrefabInstance: {fileID: 2443960360639499163}
-  m_PrefabAsset: {fileID: 0}
 --- !u!95 &485619491
 Animator:
   serializedVersion: 3
@@ -3879,6 +4156,7 @@ GameObject:
   - component: {fileID: 583520392}
   - component: {fileID: 583520391}
   - component: {fileID: 583520390}
+  - component: {fileID: 583520394}
   m_Layer: 5
   m_Name: 3 Flute End Mill
   m_TagString: Untagged
@@ -4014,6 +4292,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 583520388}
   m_CullTransparentMesh: 0
+--- !u!114 &583520394
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 583520388}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6334ee3e139481b49813dc7c33170d08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  toggleOptionText: "Fraise en bout \xE0 3 fl\xFBtes"
+  currentText: {fileID: 55566004}
 --- !u!1 &635628748 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3312799079438408079, guid: 83d399ffe9bbef046b7d9ca75d2c5d0b,
@@ -4033,6 +4325,7 @@ GameObject:
   - component: {fileID: 638929467}
   - component: {fileID: 638929466}
   - component: {fileID: 638929469}
+  - component: {fileID: 638929470}
   m_Layer: 5
   m_Name: Schematic_Button
   m_TagString: Untagged
@@ -4164,6 +4457,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Panel: {fileID: 297813474}
+--- !u!114 &638929470
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 638929464}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6334ee3e139481b49813dc7c33170d08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  toggleOptionText: Diagramme
+  currentText: {fileID: 1701010661}
 --- !u!1 &644216235
 GameObject:
   m_ObjectHideFlags: 0
@@ -4362,7 +4669,7 @@ MonoBehaviour:
   cam_drill2: {fileID: 706903580468523015}
   cam_sm1: {fileID: 706903581219625986}
   cam_fm1: {fileID: 706903580138097826}
-  cam_main: {fileID: 706903581635023525}
+  cam_5: {fileID: 0}
   myText: {fileID: 0}
 --- !u!4 &697501552 stripped
 Transform:
@@ -4559,6 +4866,7 @@ GameObject:
   - component: {fileID: 777929095}
   - component: {fileID: 777929094}
   - component: {fileID: 777929097}
+  - component: {fileID: 777929098}
   m_Layer: 5
   m_Name: Tools_Button
   m_TagString: Untagged
@@ -4690,6 +4998,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Panel: {fileID: 1611691476}
+--- !u!114 &777929098
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 777929092}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6334ee3e139481b49813dc7c33170d08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  toggleOptionText: Outils
+  currentText: {fileID: 2044259920}
 --- !u!1 &787070215 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3312799077755689803, guid: 83d399ffe9bbef046b7d9ca75d2c5d0b,
@@ -5191,6 +5513,7 @@ GameObject:
   - component: {fileID: 923683915}
   - component: {fileID: 923683914}
   - component: {fileID: 923683913}
+  - component: {fileID: 923683917}
   m_Layer: 5
   m_Name: Drill Chuck
   m_TagString: Untagged
@@ -5326,6 +5649,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 923683911}
   m_CullTransparentMesh: 0
+--- !u!114 &923683917
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 923683911}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6334ee3e139481b49813dc7c33170d08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  toggleOptionText: Mandrin
+  currentText: {fileID: 1445172388}
 --- !u!1 &928572594
 GameObject:
   m_ObjectHideFlags: 0
@@ -5503,6 +5840,7 @@ GameObject:
   - component: {fileID: 949662696}
   - component: {fileID: 949662695}
   - component: {fileID: 949662694}
+  - component: {fileID: 949662698}
   m_Layer: 5
   m_Name: ZQuillLock
   m_TagString: Untagged
@@ -5627,6 +5965,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 949662692}
   m_CullTransparentMesh: 0
+--- !u!114 &949662698
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 949662692}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6334ee3e139481b49813dc7c33170d08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  toggleOptionText: Plume
+  currentText: {fileID: 911918064}
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0
@@ -6519,7 +6871,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Schematic:'
+  m_Text: 'Plan:'
 --- !u!222 &1179890557
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -7848,6 +8200,7 @@ GameObject:
   - component: {fileID: 1416480566}
   - component: {fileID: 1416480565}
   - component: {fileID: 1416480564}
+  - component: {fileID: 1416480568}
   m_Layer: 5
   m_Name: Drill Bit 1
   m_TagString: Untagged
@@ -7983,6 +8336,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1416480562}
   m_CullTransparentMesh: 0
+--- !u!114 &1416480568
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1416480562}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6334ee3e139481b49813dc7c33170d08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  toggleOptionText: Foret 1
+  currentText: {fileID: 74997879}
 --- !u!1 &1420552143
 GameObject:
   m_ObjectHideFlags: 0
@@ -8352,6 +8719,7 @@ GameObject:
   - component: {fileID: 1519603759}
   - component: {fileID: 1519603758}
   - component: {fileID: 1519603757}
+  - component: {fileID: 1519603761}
   m_Layer: 5
   m_Name: Drill Bit 3
   m_TagString: Untagged
@@ -8487,6 +8855,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1519603755}
   m_CullTransparentMesh: 0
+--- !u!114 &1519603761
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1519603755}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6334ee3e139481b49813dc7c33170d08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  toggleOptionText: Foret 3
+  currentText: {fileID: 644216237}
 --- !u!1 &1526249912
 GameObject:
   m_ObjectHideFlags: 0
@@ -8791,6 +9173,7 @@ GameObject:
   - component: {fileID: 1607515330}
   - component: {fileID: 1607515332}
   - component: {fileID: 1607515331}
+  - component: {fileID: 1607515333}
   m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
@@ -8814,8 +9197,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -12.9, y: 150}
-  m_SizeDelta: {x: 188.35484, y: 42.52146}
+  m_AnchoredPosition: {x: -41.7, y: 150}
+  m_SizeDelta: {x: 130.80629, y: 42.52146}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1607515331
 MonoBehaviour:
@@ -8858,6 +9241,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1607515329}
   m_CullTransparentMesh: 0
+--- !u!114 &1607515333
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1607515329}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6334ee3e139481b49813dc7c33170d08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  toggleOptionText: 'Accessoires de broche:'
+  currentText: {fileID: 1607515331}
 --- !u!1 &1611691476
 GameObject:
   m_ObjectHideFlags: 0
@@ -9037,7 +9434,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 200, y: -77.9}
+  m_AnchoredPosition: {x: 206.00003, y: -77.9}
   m_SizeDelta: {x: 30, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1649589619
@@ -9184,7 +9581,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 0
+    m_FontSize: 12
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
@@ -9408,7 +9805,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   worktable: {fileID: 697501552}
   table: {fileID: 1929230406}
-  head: {fileID: 485619490}
+  spindle: {fileID: 1934931960}
   xText: {fileID: 554158782}
   yText: {fileID: 928572596}
   zText: {fileID: 68134932}
@@ -9505,6 +9902,7 @@ GameObject:
   - component: {fileID: 1855157155}
   - component: {fileID: 1855157154}
   - component: {fileID: 1855157153}
+  - component: {fileID: 1855157157}
   m_Layer: 5
   m_Name: 6 Flute End Mill
   m_TagString: Untagged
@@ -9640,6 +10038,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1855157151}
   m_CullTransparentMesh: 0
+--- !u!114 &1855157157
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1855157151}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6334ee3e139481b49813dc7c33170d08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  toggleOptionText: "Fraise en bout \xE0 6 fl\xFBtes"
+  currentText: {fileID: 1298125658}
 --- !u!1 &1885100492
 GameObject:
   m_ObjectHideFlags: 0
@@ -9731,6 +10143,7 @@ GameObject:
   - component: {fileID: 1908899999}
   - component: {fileID: 1908899998}
   - component: {fileID: 1908899997}
+  - component: {fileID: 1908900001}
   m_Layer: 5
   m_Name: Back_Button
   m_TagString: Untagged
@@ -9861,6 +10274,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1908899995}
   m_CullTransparentMesh: 0
+--- !u!114 &1908900001
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1908899995}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6334ee3e139481b49813dc7c33170d08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  toggleOptionText: Retour
+  currentText: {fileID: 138159866}
 --- !u!1 &1921014937
 GameObject:
   m_ObjectHideFlags: 0
@@ -9874,6 +10301,7 @@ GameObject:
   - component: {fileID: 1921014940}
   - component: {fileID: 1921014939}
   - component: {fileID: 1921014942}
+  - component: {fileID: 1921014943}
   m_Layer: 5
   m_Name: Menu_Button
   m_TagString: Untagged
@@ -10004,6 +10432,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf89ce06d3bf240418090b53619ef3f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1921014943
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1921014937}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6334ee3e139481b49813dc7c33170d08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  toggleOptionText: Menu Principal
+  currentText: {fileID: 945991285}
 --- !u!1 &1928613844
 GameObject:
   m_ObjectHideFlags: 0
@@ -10168,6 +10610,12 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 2443960360639499163}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &1934931960 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3312799078437118123, guid: 83d399ffe9bbef046b7d9ca75d2c5d0b,
+    type: 3}
+  m_PrefabInstance: {fileID: 2443960360639499163}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1937951551
 GameObject:
   m_ObjectHideFlags: 0
@@ -10206,7 +10654,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 110, y: -77.9}
+  m_AnchoredPosition: {x: 116, y: -77.9}
   m_SizeDelta: {x: 30, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1937951553
@@ -10481,6 +10929,7 @@ GameObject:
   - component: {fileID: 2098731956}
   - component: {fileID: 2098731955}
   - component: {fileID: 2098731954}
+  - component: {fileID: 2098731958}
   m_Layer: 5
   m_Name: ZFineLock
   m_TagString: Untagged
@@ -10605,6 +11054,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2098731952}
   m_CullTransparentMesh: 0
+--- !u!114 &2098731958
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2098731952}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6334ee3e139481b49813dc7c33170d08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  toggleOptionText: "R\xE9glage Fin"
+  currentText: {fileID: 460297351}
 --- !u!20 &706903580138097826 stripped
 Camera:
   m_CorrespondingSourceObject: {fileID: 2892962359684941625, guid: 83d399ffe9bbef046b7d9ca75d2c5d0b,
@@ -10626,12 +11089,6 @@ Camera:
 --- !u!20 &706903581219625986 stripped
 Camera:
   m_CorrespondingSourceObject: {fileID: 2892962358584514457, guid: 83d399ffe9bbef046b7d9ca75d2c5d0b,
-    type: 3}
-  m_PrefabInstance: {fileID: 2443960360639499163}
-  m_PrefabAsset: {fileID: 0}
---- !u!20 &706903581635023525 stripped
-Camera:
-  m_CorrespondingSourceObject: {fileID: 2892962359536720190, guid: 83d399ffe9bbef046b7d9ca75d2c5d0b,
     type: 3}
   m_PrefabInstance: {fileID: 2443960360639499163}
   m_PrefabAsset: {fileID: 0}
