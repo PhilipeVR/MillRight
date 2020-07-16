@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class InteractableManager : MonoBehaviour
 {
-    [SerializeField] public Button ON, MainMenu, Settings, FaceMill, SideMill, Drill, DRO_BTN;
+    [SerializeField] public Button ON, MainMenu,Next, Settings, FaceMill, SideMill, Drill, DRO_BTN;
     [SerializeField] public GameObject DRO_Panel;
     [SerializeField] public string intro, drilling, sidemilling, facemilling;
     [SerializeField] public DRO_Panel_Interactable_Manager DRO_manager;

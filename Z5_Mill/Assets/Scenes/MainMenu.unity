@@ -250,7 +250,6 @@ MonoBehaviour:
   pressedColor: {r: 0.764151, g: 0.764151, b: 0.764151, a: 0.5411765}
   color: {r: 0.017265918, g: 0.8604431, b: 0.9150943, a: 1}
   font: {fileID: 12800000, guid: d8dd5411560df88489fa6d9b37e9fec2, type: 3}
-  sceneToLoad: SpindleScene
 --- !u!114 &109702506
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -426,15 +425,15 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_MethodName: 
-        m_Mode: 1
+      - m_Target: {fileID: 2105349673}
+        m_MethodName: loadlevel
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: AdditionalContentScene
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &137485065
@@ -489,7 +488,6 @@ MonoBehaviour:
   pressedColor: {r: 0.764151, g: 0.764151, b: 0.764151, a: 0.5411765}
   color: {r: 0.017265918, g: 0.8604431, b: 0.9150943, a: 1}
   font: {fileID: 12800000, guid: d8dd5411560df88489fa6d9b37e9fec2, type: 3}
-  sceneToLoad: SpindleScene
 --- !u!114 &137485068
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -784,7 +782,6 @@ MonoBehaviour:
   pressedColor: {r: 0.764151, g: 0.764151, b: 0.764151, a: 0.5411765}
   color: {r: 0, g: 0.91533947, b: 1, a: 1}
   font: {fileID: 12800000, guid: d8dd5411560df88489fa6d9b37e9fec2, type: 3}
-  sceneToLoad: 
 --- !u!114 &315427143
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -940,6 +937,49 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &885196801
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 885196803}
+  - component: {fileID: 885196802}
+  m_Layer: 0
+  m_Name: SceneDisplayController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &885196802
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 885196801}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d15e7a11f2e95ed40b397b22b7aaeb44, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &885196803
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 885196801}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 817.18286, y: -375.2882, z: 678.18567}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &948612267
 GameObject:
@@ -1232,7 +1272,6 @@ MonoBehaviour:
   pressedColor: {r: 0.764151, g: 0.764151, b: 0.764151, a: 0.5411765}
   color: {r: 0.017265918, g: 0.8604431, b: 0.9150943, a: 1}
   font: {fileID: 12800000, guid: d8dd5411560df88489fa6d9b37e9fec2, type: 3}
-  sceneToLoad: 
 --- !u!114 &1093401265
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1375,7 +1414,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Tutorial Selection
+  m_Text: Tutorial Library
 --- !u!222 &1257985746
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1904,7 +1943,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1917431162}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
   m_Name: 
@@ -1940,6 +1979,17 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 885196802}
+        m_MethodName: setTutorial
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
       - m_Target: {fileID: 2105349673}
         m_MethodName: loadlevel
         m_Mode: 5
@@ -1949,7 +1999,7 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: MillScene
-          m_BoolArgument: 0
+          m_BoolArgument: 1
         m_CallState: 2
 --- !u!114 &1917431165
 MonoBehaviour:
@@ -2003,7 +2053,6 @@ MonoBehaviour:
   pressedColor: {r: 0.764151, g: 0.764151, b: 0.764151, a: 0.5411765}
   color: {r: 0.017265918, g: 0.8604431, b: 0.9150943, a: 1}
   font: {fileID: 12800000, guid: d8dd5411560df88489fa6d9b37e9fec2, type: 3}
-  sceneToLoad: MillScene
 --- !u!114 &1917431168
 MonoBehaviour:
   m_ObjectHideFlags: 0

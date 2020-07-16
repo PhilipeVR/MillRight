@@ -15,7 +15,6 @@ public class MouseOver : MonoBehaviour
     public Color pressedColor;
     public Color color;
     public Font font;
-    public string sceneToLoad;
 
     void Start()
     {
