@@ -5,6 +5,11 @@ using UnityEngine.UI;
 
 public class DRO_Panel_Interactable_Manager : MonoBehaviour
 {
+    [SerializeField] public XWheelControl controlX;
+    [SerializeField] public YWheelControl controlY;
+    [SerializeField] public ZWheelControl controlZ;
+    [SerializeField] public QuillFeedControl controlQuill;
+    [SerializeField] public FineAdjustmentControl controlFineAdj;
     [SerializeField] public string intro, drilling, sidemilling, facemilling, drillTag, endMillTag;
     [SerializeField] public GameObject Vise1, Vise2, Vise3;
     [SerializeField] public SwitchBit bitSwitching;
@@ -45,7 +50,18 @@ public class DRO_Panel_Interactable_Manager : MonoBehaviour
 
         }
 
+        restartAnim();
 
+
+    }
+
+    private void restartAnim()
+    {
+        controlX.resetAnim(0);
+        controlY.resetAnim(0);
+        controlZ.resetAnim(0);
+        controlQuill.resetAnim(0);
+        controlFineAdj.resetAnim(0);
     }
 
 }

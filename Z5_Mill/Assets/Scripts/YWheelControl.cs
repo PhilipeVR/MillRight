@@ -25,7 +25,7 @@ public class YWheelControl : MonoBehaviour
     public Animator object_anim, lock_anim;
 
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         object_anim = animObject.GetComponent<Animator>();
         lock_anim = lockAnimObject.GetComponent<Animator>();

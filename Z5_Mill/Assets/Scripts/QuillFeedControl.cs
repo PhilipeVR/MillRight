@@ -33,7 +33,7 @@ public class QuillFeedControl : MonoBehaviour
     Animator object_anim, lock_anim;
 
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         if (enable)
         {
@@ -134,7 +134,7 @@ public class QuillFeedControl : MonoBehaviour
 
     public void resetAnim(float time)
     {
-
+        object_anim.Play(object_anim.runtimeAnimatorController.animationClips[0].name, 0, time);
         wheel.transform.localPosition = new Vector3(wheel.transform.localPosition.x, MAX_HEIGHT, wheel.transform.localPosition.z);
         collided = false;
 
