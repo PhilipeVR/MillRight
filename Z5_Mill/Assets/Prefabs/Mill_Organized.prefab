@@ -5251,6 +5251,37 @@ Transform:
   m_Father: {fileID: 6060698544139550389}
   m_RootOrder: 26
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &716740770049422376
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6669657930892127064}
+  m_Layer: 0
+  m_Name: Mill Spindle
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6669657930892127064
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 716740770049422376}
+  m_LocalRotation: {x: 0.16883348, y: -0.00000015295075, z: -0.00000015295075, w: 0.98564464}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.5215654, y: 0.52156544, z: 0.52156544}
+  m_Children:
+  - {fileID: 3312799078437118123}
+  m_Father: {fileID: 3312799077823029784}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &727311792252570911
 GameObject:
   m_ObjectHideFlags: 0
@@ -24258,7 +24289,7 @@ Transform:
   m_Children:
   - {fileID: 6002197784240649179}
   m_Father: {fileID: 3312799078015067643}
-  m_RootOrder: 16
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &3312799077646761535
 Animator:
@@ -24590,8 +24621,9 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 3312799078015067643}
+  - {fileID: 6669657930892127064}
   - {fileID: 3312799079301690276}
+  - {fileID: 3312799078015067643}
   m_Father: {fileID: 6977537324750414842}
   m_RootOrder: 37
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -24847,8 +24879,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3312799078015067642}
   m_LocalRotation: {x: 0.5, y: 0.5, z: 0.5, w: 0.5}
-  m_LocalPosition: {x: -0.04995732, y: 0.09659663, z: 0.5109983}
-  m_LocalScale: {x: 0.4738733, y: 0.47387326, z: 0.4738734}
+  m_LocalPosition: {x: -0.049957525, y: 0.096597075, z: 0.5109988}
+  m_LocalScale: {x: 0.4738733, y: 0.47387326, z: 0.47387353}
   m_Children:
   - {fileID: 1115388726795187553}
   - {fileID: 1661626681346636722}
@@ -24865,10 +24897,9 @@ Transform:
   - {fileID: 6644269163442119318}
   - {fileID: 579626500739895406}
   - {fileID: 4666664202428131937}
-  - {fileID: 3312799078437118123}
   - {fileID: 3312799077646761534}
   m_Father: {fileID: 3312799077823029784}
-  m_RootOrder: 0
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &3312799078069444858
 GameObject:
@@ -25066,9 +25097,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3312799078437118122}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.018, y: -0.392, z: 0.103}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: 0.40840557, y: 0.5772392, z: 0.40840557, w: 0.577239}
+  m_LocalPosition: {x: -0.002202285, y: 0.3667683, z: 0.53183746}
+  m_LocalScale: {x: 0.90855956, y: 0.9085594, z: 0.90856}
   m_Children:
   - {fileID: 4116153899916835240}
   - {fileID: 2796104054343274442}
@@ -25076,8 +25107,8 @@ Transform:
   - {fileID: 6000416726059612909}
   - {fileID: 1073621785304683435}
   - {fileID: 3312799078959786687}
-  m_Father: {fileID: 3312799078015067643}
-  m_RootOrder: 15
+  m_Father: {fileID: 6669657930892127064}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &3312799078462103664
 GameObject:
@@ -31499,6 +31530,8 @@ MonoBehaviour:
   Spindle: {fileID: 3312799078437118122}
   quillFeedController: {fileID: 0}
   fineAdjustmentController: {fileID: 0}
+  XWheelController: {fileID: 0}
+  YWheelController: {fileID: 0}
 --- !u!1 &4122582259434492175
 GameObject:
   m_ObjectHideFlags: 0
@@ -39413,6 +39446,8 @@ MonoBehaviour:
   Spindle: {fileID: 3312799078437118122}
   quillFeedController: {fileID: 0}
   fineAdjustmentController: {fileID: 0}
+  XWheelController: {fileID: 0}
+  YWheelController: {fileID: 0}
 --- !u!64 &7378520555986912843
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -44617,6 +44652,8 @@ MonoBehaviour:
   Spindle: {fileID: 3312799078437118122}
   quillFeedController: {fileID: 0}
   fineAdjustmentController: {fileID: 0}
+  XWheelController: {fileID: 0}
+  YWheelController: {fileID: 0}
 --- !u!54 &3726189025765308320
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -51468,6 +51505,8 @@ MonoBehaviour:
   Spindle: {fileID: 3312799078437118122}
   quillFeedController: {fileID: 0}
   fineAdjustmentController: {fileID: 0}
+  XWheelController: {fileID: 0}
+  YWheelController: {fileID: 0}
 --- !u!1 &6980691380282092888
 GameObject:
   m_ObjectHideFlags: 0
@@ -57271,6 +57310,8 @@ MonoBehaviour:
   Spindle: {fileID: 3312799078437118122}
   quillFeedController: {fileID: 0}
   fineAdjustmentController: {fileID: 0}
+  XWheelController: {fileID: 0}
+  YWheelController: {fileID: 0}
 --- !u!1 &7612577470750154279
 GameObject:
   m_ObjectHideFlags: 0
@@ -60310,6 +60351,8 @@ MonoBehaviour:
   Spindle: {fileID: 3312799078437118122}
   quillFeedController: {fileID: 0}
   fineAdjustmentController: {fileID: 0}
+  XWheelController: {fileID: 0}
+  YWheelController: {fileID: 0}
 --- !u!64 &7319679879900831376
 MeshCollider:
   m_ObjectHideFlags: 0

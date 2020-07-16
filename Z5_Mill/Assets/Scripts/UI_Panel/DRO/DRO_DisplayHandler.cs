@@ -30,7 +30,7 @@ public class DRO_DisplayHandler : MonoBehaviour
         unitConversion = inch; //default setting
         x0 =  worktable.localPosition.x * unitConversion;
         y0 =  table.localPosition.y * unitConversion;
-        z0 =  spindle.position.z * unitConversion;
+        z0 =  spindle.localPosition.z * unitConversion;
     }
     
     void Update()
@@ -49,9 +49,12 @@ public class DRO_DisplayHandler : MonoBehaviour
         }
 
 
+        Debug.Log("Z0: " + z0.ToString());
+        Debug.Log("Mill Spindle Local Position: " + spindle.localPosition.y.ToString());
+
         x =  worktable.localPosition.x * unitConversion - x0;
         y =  table.localPosition.y * unitConversion - y0;
-        z =  spindle.position.z * unitConversion -z0;
+        z =  spindle.localPosition.z * unitConversion -z0;
 
         xText.text = x.ToString("0.00000");
         yText.text = y.ToString("0.00000");

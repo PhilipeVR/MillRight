@@ -3112,7 +3112,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh779634
+  m_Name: pb_Mesh15740
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -6149,7 +6149,7 @@ MonoBehaviour:
   animObject: {fileID: 886245741}
   lockAnimObject: {fileID: 1362754916}
   QuillLockButton: {fileID: 949662694}
-  wheel: {fileID: 1934931959}
+  wheel: {fileID: 1620623265}
   lockHandle: {fileID: 1364267378}
   enable: 1
   collided: 0
@@ -9516,6 +9516,12 @@ Transform:
   m_Father: {fileID: 336104565}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1620623265 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 716740770049422376, guid: 83d399ffe9bbef046b7d9ca75d2c5d0b,
+    type: 3}
+  m_PrefabInstance: {fileID: 2443960360639499163}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1649589617
 GameObject:
   m_ObjectHideFlags: 0
@@ -9845,7 +9851,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   worktable: {fileID: 697501552}
   table: {fileID: 1929230406}
-  spindle: {fileID: 1934931960}
+  spindle: {fileID: 2443960360639499168}
   xText: {fileID: 554158782}
   yText: {fileID: 928572596}
   zText: {fileID: 68134932}
@@ -10644,18 +10650,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1931601493}
   m_CullTransparentMesh: 0
---- !u!1 &1934931959 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3312799078437118122, guid: 83d399ffe9bbef046b7d9ca75d2c5d0b,
-    type: 3}
-  m_PrefabInstance: {fileID: 2443960360639499163}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &1934931960 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 3312799078437118123, guid: 83d399ffe9bbef046b7d9ca75d2c5d0b,
-    type: 3}
-  m_PrefabInstance: {fileID: 2443960360639499163}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1937951551
 GameObject:
   m_ObjectHideFlags: 0
@@ -11431,7 +11425,7 @@ PrefabInstance:
     - target: {fileID: 3312799079301690279, guid: 83d399ffe9bbef046b7d9ca75d2c5d0b,
         type: 3}
       propertyPath: m_Name
-      value: Quill Feed
+      value: Z wheel
       objectReference: {fileID: 0}
     - target: {fileID: 3312799079438408079, guid: 83d399ffe9bbef046b7d9ca75d2c5d0b,
         type: 3}
@@ -11811,6 +11805,12 @@ GameObject:
 --- !u!1 &2443960360639499167 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3312799077983428362, guid: 83d399ffe9bbef046b7d9ca75d2c5d0b,
+    type: 3}
+  m_PrefabInstance: {fileID: 2443960360639499163}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &2443960360639499168 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6669657930892127064, guid: 83d399ffe9bbef046b7d9ca75d2c5d0b,
     type: 3}
   m_PrefabInstance: {fileID: 2443960360639499163}
   m_PrefabAsset: {fileID: 0}
