@@ -15,11 +15,15 @@ public class DRO_ButtonHandler : MonoBehaviour
     [SerializeField] private DRO_ButtonState xLockButton;
     [SerializeField] private DRO_ButtonState yLockButton;
     [SerializeField] private DRO_ButtonState zLockButton;
+    [SerializeField] private DRO_ButtonState zeroButton;
+    [SerializeField] private DRO_DisplayHandler displayHandler;
     
 
     //TEMPORARY BUTTONS
     [SerializeField] private DRO_ButtonState QuillLockButton; // TEMPORARY
     [SerializeField] private DRO_ButtonState FineAdjButton; // TEMPORARY
+
+    private string currentAxis;
 
 
     //public string currentUnits;
@@ -76,6 +80,7 @@ public class DRO_ButtonHandler : MonoBehaviour
             if(buttonState.checkIfEnabled == true)
             {
                 xLockButton.EnableThisButton(); //Enable LockButton means unlocking that button
+                currentAxis = "x";
             }
             else
             {
@@ -96,6 +101,7 @@ public class DRO_ButtonHandler : MonoBehaviour
             if(buttonState.checkIfEnabled == true)
             {
                 yLockButton.EnableThisButton(); //Enable LockButton means unlocking that button
+                currentAxis = "y";
             } 
             else
             {
@@ -115,6 +121,7 @@ public class DRO_ButtonHandler : MonoBehaviour
             if(buttonState.checkIfEnabled == true)
             {
                 zLockButton.EnableThisButton(); //Enable LockButton means unlocking that button
+                currentAxis = "z";
             } 
             else
             {
@@ -139,6 +146,8 @@ public class DRO_ButtonHandler : MonoBehaviour
             yLockButton.DisableThisButton();
             zLockButton.DisableThisButton();
             FineAdjButton.DisableThisButton();
+
+            currentAxis = "z";
         }
 
         else if (buttonState.buttonName == "FineAdjustmentButton")
@@ -153,6 +162,13 @@ public class DRO_ButtonHandler : MonoBehaviour
             zLockButton.DisableThisButton();
             QuillLockButton.DisableThisButton();
 
+            currentAxis = "z";
+
+        }
+        else if (buttonState.buttonName == "zeroButton")
+        {
+            //zeroButton.DisableThisButton();
+            displayHandler.zero(currentAxis);
         }
         else {} // Do nothing
 
