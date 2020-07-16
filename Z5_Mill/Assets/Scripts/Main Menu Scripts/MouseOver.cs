@@ -30,15 +30,12 @@ public class MouseOver : MonoBehaviour
     {
         buttonText.color = onHoverColor;
         buttonText.font = font;
-        Debug.LogWarning("GREEN");
     }
 
     public void NoHover()
     {
         buttonText.color = normalColor;
         buttonText.font = normalFont;
-        Debug.LogWarning("NORMAL");
-
     }
 
     public void onClickColor()

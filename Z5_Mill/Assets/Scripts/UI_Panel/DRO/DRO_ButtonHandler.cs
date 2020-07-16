@@ -65,8 +65,6 @@ public class DRO_ButtonHandler : MonoBehaviour
             if(buttonState.checkIfEnabled == true)
             {
                 xLockButton.EnableThisButton(); //Enable LockButton means unlocking that button
-                Debug.LogWarning("ButtonStateName: " + buttonState.buttonName);
-
             }
             else
             {
@@ -123,7 +121,6 @@ public class DRO_ButtonHandler : MonoBehaviour
         //BUTTON
         else if(buttonState.buttonName == "QuillLockButton")
         {
-            Debug.LogWarning("QuillLockButton DisableThisButton");
             xButton.DisableThisButton();
             yButton.DisableThisButton();
             zButton.DisableThisButton();
