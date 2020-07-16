@@ -9610,18 +9610,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1649589620}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1810847908}
-        m_MethodName: zero
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &1649589620
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9673,7 +9662,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enabledColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
   disabledColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-  buttonName: 
+  buttonName: zeroButton
   checkIfEnabled: 0
   interactable: 1
 --- !u!1 &1677665264 stripped
@@ -9833,6 +9822,8 @@ MonoBehaviour:
   xLockButton: {fileID: 1079926640}
   yLockButton: {fileID: 1334058743}
   zLockButton: {fileID: 453831210}
+  zeroButton: {fileID: 1649589622}
+  displayHandler: {fileID: 1810847908}
   QuillLockButton: {fileID: 949662694}
   FineAdjButton: {fileID: 2098731954}
 --- !u!114 &1810847906

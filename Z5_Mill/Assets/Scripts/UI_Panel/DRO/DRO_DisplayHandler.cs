@@ -52,8 +52,8 @@ public class DRO_DisplayHandler : MonoBehaviour
         }
 
 
-        Debug.Log("Z0: " + z0.ToString());
-        Debug.Log("Mill Spindle Local Position: " + spindle.localPosition.y.ToString());
+        //Debug.Log("Z0: " + z0.ToString());
+        //Debug.Log("Mill Spindle Local Position: " + spindle.localPosition.y.ToString());
 
         x =  worktable.localPosition.x * unitConversion - x0;
         y =  table.localPosition.y * unitConversion - y0;
@@ -65,11 +65,21 @@ public class DRO_DisplayHandler : MonoBehaviour
 
     }
 
-    public void zero()
+    public void zero(string axis)
     {
-        x0 = x;
-        y0 = y;
-        z0 = z;
+        if(axis == "x")
+        {
+            x0 = x;
+        }
+        if(axis == "y")
+        {
+            y0 = y;
+        }
+        if(axis == "z")
+        {
+            x0 = z;
+        }
+        
 
     }
 
