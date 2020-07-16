@@ -8,7 +8,7 @@ public class ComponentManager : MonoBehaviour
 {
     private List<ComponentDetail> details;
     [SerializeField] private PartDataScriptable partData;
-    [SerializeField] private GameObject continueBTN;
+    [SerializeField] private GameObject continueBTN, menuBTN;
     [SerializeField] private Text namePart, info, partsExamined, totalNumOfParts;
     [SerializeField] private Image infoImage;
 
@@ -18,6 +18,7 @@ public class ComponentManager : MonoBehaviour
     private int numOfParts;
     private string partsExam = "Number of parts examined: ";
     private string totalParts = "Total number of parts: ";
+    public SceneDisplayToggle toggle;
 
     // Start is called before the first frame update
     void Awake()
@@ -26,8 +27,10 @@ public class ComponentManager : MonoBehaviour
         counter = 0;
         numOfParts = details.Count;
         totalNumOfParts.text = totalParts + numOfParts.ToString();
-        continueBTN.SetActive(false);
         updateCounter();
+        continueBTN.SetActive(false);
+        menuBTN.SetActive(false);
+
     }
 
 
@@ -69,12 +72,27 @@ public class ComponentManager : MonoBehaviour
         updateCounter();
         if(counter == numOfParts)
         {
-            continueBTN.SetActive(true);
+            if (toggle.getTutorial())
+            {
+                continueBTN.SetActive(true);
+            } 
+            else
+            {
+                menuBTN.SetActive(true);
+            }
         }
     }
 
     public void updateCounter()
     {
         partsExamined.text = partsExam + counter.ToString();
+    }
+
+    public void FixedUpdate()
+    {
+        if ((menuBTN.activeSelf || continueBTN.activeSelf) && (counter < numOfParts)){
+            continueBTN.SetActive(false);
+            menuBTN.SetActive(false);
+        }
     }
 }
