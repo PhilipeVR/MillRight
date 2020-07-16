@@ -11,18 +11,25 @@ public class ComponentManager : MonoBehaviour
     [SerializeField] private GameObject continueBTN, menuBTN;
     [SerializeField] private Text namePart, info, partsExamined, totalNumOfParts;
     [SerializeField] private Image infoImage;
+    [SerializeField] private string initialTextFR, namePartFR;
+    private string initialText, initialName;
 
     public Boolean language = true;
     private int currentIndex = -1;
     private int counter;
     private int numOfParts;
+
     private string partsExam = "Number of parts examined: ";
+    private string partsExamFR = "Nombre de pièces examinées: ";
     private string totalParts = "Total number of parts: ";
+    private string totalPartsFR = "Nombre totale de pièces: ";
     public SceneDisplayToggle toggle;
 
     // Start is called before the first frame update
     void Awake()
     {
+        initialText = info.text;
+        initialName = namePart.text;
         details = partData.components;
         counter = 0;
         numOfParts = details.Count;
@@ -53,17 +60,53 @@ public class ComponentManager : MonoBehaviour
 
     public void ChangeLanguage()
     {
-        if (language)
+
+        if (counter == 0)
         {
+            toggleInitialText();
+        }
+
+        else if (language)
+        {
+
             namePart.text = details[currentIndex].partNameFR;
             info.text = details[currentIndex].sentenceFR;
-        } else
+            totalNumOfParts.text = totalPartsFR + numOfParts.ToString();
+            partsExamined.text = partsExamFR + counter.ToString();
+
+        }
+        else
         {
             namePart.text = details[currentIndex].partName;
             info.text = details[currentIndex].sentence;
+            totalNumOfParts.text = totalParts + numOfParts.ToString();
+            partsExamined.text = partsExam + counter.ToString();
+
         }
 
         language = !language;
+    }
+
+    private void toggleInitialText()
+    {
+        if (counter == 0)
+        {
+            if (language)
+            {
+                info.text = initialTextFR;
+                namePart.text = namePartFR;
+                totalNumOfParts.text = totalPartsFR + numOfParts.ToString();
+                partsExamined.text = partsExamFR + counter.ToString();
+            }
+            else
+            {
+                info.text = initialText;
+                namePart.text = initialName;
+                totalNumOfParts.text = totalParts + numOfParts.ToString();
+                partsExamined.text = partsExam + counter.ToString();
+            }
+        }
+
     }
 
     public void incrementPartCounter()
@@ -85,7 +128,15 @@ public class ComponentManager : MonoBehaviour
 
     public void updateCounter()
     {
-        partsExamined.text = partsExam + counter.ToString();
+        if (language)
+        {
+            partsExamined.text = partsExam + counter.ToString();
+        }
+        else
+        {
+            partsExamined.text = partsExamFR + counter.ToString();
+
+        }
     }
 
     public void FixedUpdate()
