@@ -30,14 +30,13 @@ public class SetupOnHover : MonoBehaviour
 
     private void setupMesh(Transform child)
     {
-        MeshCollider collider = child.GetComponent<MeshCollider>();
+        BoxCollider collider = child.GetComponent<BoxCollider>();
 
         if (collider==null)
         {
-            collider = child.gameObject.AddComponent<MeshCollider>();
+            collider = child.gameObject.AddComponent<BoxCollider>();
         }
 
-        collider.convex = true;
         collider.isTrigger = true;
 
         Renderer renderer = child.GetComponent<Renderer>();

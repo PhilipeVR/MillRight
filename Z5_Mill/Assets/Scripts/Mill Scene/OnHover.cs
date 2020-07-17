@@ -52,7 +52,7 @@ public class OnHover : MonoBehaviour
     }
 
     // Update is called once per frame
-    void OnMouseEnter()
+    void OnMouseOver()
     {
         renderer.material.color = hoverColor;
     }

@@ -2,8 +2,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Net.Http.Headers;
-using UnityEditor;
-using UnityEditor.PackageManager;
 using UnityEngine;
 
 public class XWheelControl : MonoBehaviour
