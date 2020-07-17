@@ -42,15 +42,18 @@ public class AdditionalInfoManager : MonoBehaviour
 
     public void ChangeLanguage()
     {
-        if (language)
+        if (currentIndex != -1)
         {
-            namePart.text = details[currentIndex].partNameFR;
-            info.text = details[currentIndex].sentenceFR;
-        }
-        else
-        {
-            namePart.text = details[currentIndex].partName;
-            info.text = details[currentIndex].sentence;
+            if (language)
+            {
+                namePart.text = details[currentIndex].partNameFR;
+                info.text = details[currentIndex].sentenceFR;
+            }
+            else
+            {
+                namePart.text = details[currentIndex].partName;
+                info.text = details[currentIndex].sentence;
+            }
         }
 
         language = !language;

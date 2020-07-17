@@ -4308,6 +4308,7 @@ MonoBehaviour:
   toggleLangManager: {fileID: 0}
   toggleComponentLangManager: {fileID: 0}
   imageToggle: {fileID: 0}
+  toolHolderManager: {fileID: 26454766}
 --- !u!43 &1717232192
 Mesh:
   m_ObjectHideFlags: 0
@@ -18895,6 +18896,17 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 1684581713}
         m_MethodName: updateLanguageState
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 26454766}
+        m_MethodName: ChangeLanguage
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

@@ -44,7 +44,14 @@ public class InteractableManager : MonoBehaviour
 
     public void Transition(string dialogueName)
     {
+
+        if (ON.GetComponent<Toggle_On_Off>().getMillState())
+        {
+            ON.GetComponent<Toggle_On_Off>().OnOffToggle();
+        }
+
         NoInteraction();
+
         if (dialogueName.Equals(intro))
         {
             Drill.interactable = true;

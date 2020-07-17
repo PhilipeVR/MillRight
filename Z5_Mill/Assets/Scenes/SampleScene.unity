@@ -881,6 +881,7 @@ MonoBehaviour:
   toggleLangManager: {fileID: 0}
   toggleComponentLangManager: {fileID: 0}
   imageToggle: {fileID: 0}
+  toolHolderManager: {fileID: 0}
 --- !u!1 &103676642
 GameObject:
   m_ObjectHideFlags: 0
@@ -3116,7 +3117,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh15740
+  m_Name: pb_Mesh75412
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -6131,7 +6132,7 @@ MonoBehaviour:
   animObject: {fileID: 886245741}
   lockAnimObject: {fileID: 1362754916}
   QuillLockButton: {fileID: 949662694}
-  wheel: {fileID: 1620623265}
+  wheel: {fileID: 1773445643}
   lockHandle: {fileID: 1364267378}
   enable: 1
   collided: 0
@@ -9498,12 +9499,6 @@ Transform:
   m_Father: {fileID: 336104565}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1620623265 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 716740770049422376, guid: 83d399ffe9bbef046b7d9ca75d2c5d0b,
-    type: 3}
-  m_PrefabInstance: {fileID: 2443960360639499163}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1649589617
 GameObject:
   m_ObjectHideFlags: 0
@@ -9725,6 +9720,12 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1701068652}
   m_CullTransparentMesh: 0
+--- !u!1 &1773445643 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3312799078437118122, guid: 83d399ffe9bbef046b7d9ca75d2c5d0b,
+    type: 3}
+  m_PrefabInstance: {fileID: 2443960360639499163}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1810847903
 GameObject:
   m_ObjectHideFlags: 0

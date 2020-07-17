@@ -37,4 +37,9 @@ public class Toggle_On_Off : MonoBehaviour
         }
         millOn = !millOn;
     }
+
+    public Boolean getMillState()
+    {
+        return millOn;
+    }
 }

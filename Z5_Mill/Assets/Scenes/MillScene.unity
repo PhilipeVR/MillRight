@@ -1138,7 +1138,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh141646
+  m_Name: pb_Mesh574798
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -1924,8 +1924,11 @@ MonoBehaviour:
   partsExamined: {fileID: 1541295188}
   totalNumOfParts: {fileID: 1612524696}
   infoImage: {fileID: 2079924583}
-  initialTextFR: Testing
-  namePartFR: Testing
+  initialTextFR: "Cliquez sur une partie de la fraiseuse pour commencer. Trouvez
+    toutes les diff\xE9rentes parties cl\xE9s de la fraiseuse et lisez leur description
+    pour passer au didacticiel suivant. Utilisez les perspectives diff\xE9rentes
+    des cam\xE9ras pour vous aider \xE0 trouver les composantes. Bonne chance."
+  namePartFR: "Bienvenue \xE0 l'atelier de fraisage de Mill Right"
   language: 1
   toggle: {fileID: 1615564893}
 --- !u!1 &867014055 stripped
@@ -8696,6 +8699,80 @@ Transform:
   m_Father: {fileID: 198144155}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 150, y: 30, z: 0}
+--- !u!1 &1427389079
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1427389080}
+  - component: {fileID: 1427389082}
+  - component: {fileID: 1427389081}
+  m_Layer: 5
+  m_Name: Image
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1427389080
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1427389079}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1620793615}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 50, y: 50}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1427389081
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1427389079}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 3f5c31c5e43e69648a0d0b2e34ac489c, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1427389082
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1427389079}
+  m_CullTransparentMesh: 0
 --- !u!1 &1497100434 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8811258864149646477, guid: 9203eff60ac2ef14993dedd9dcbb20f6,
@@ -8939,84 +9016,6 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: 
---- !u!1 &1568996844
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1568996845}
-  - component: {fileID: 1568996847}
-  - component: {fileID: 1568996846}
-  m_Layer: 5
-  m_Name: Text
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1568996845
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1568996844}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1620793615}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1568996846
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1568996844}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
-  m_RaycastTarget: 1
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
-    m_FontStyle: 0
-    m_BestFit: 0
-    m_MinSize: 10
-    m_MaxSize: 40
-    m_Alignment: 4
-    m_AlignByGeometry: 0
-    m_RichText: 1
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
-    m_LineSpacing: 1
-  m_Text: HIDE
---- !u!222 &1568996847
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1568996844}
-  m_CullTransparentMesh: 0
 --- !u!1 &1612524693
 GameObject:
   m_ObjectHideFlags: 0
@@ -9171,6 +9170,7 @@ MonoBehaviour:
   toggleLangManager: {fileID: 0}
   toggleComponentLangManager: {fileID: 865799118}
   imageToggle: {fileID: 0}
+  toolHolderManager: {fileID: 0}
 --- !u!1 &1620793614
 GameObject:
   m_ObjectHideFlags: 0
@@ -9184,6 +9184,7 @@ GameObject:
   - component: {fileID: 1620793618}
   - component: {fileID: 1620793617}
   - component: {fileID: 1620793616}
+  - component: {fileID: 1620793620}
   m_Layer: 5
   m_Name: Show_Explanation_Button
   m_TagString: Untagged
@@ -9202,7 +9203,7 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 1568996845}
+  - {fileID: 1427389080}
   m_Father: {fileID: 1524794990}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -9220,11 +9221,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1620793614}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6334ee3e139481b49813dc7c33170d08, type: 3}
+  m_Script: {fileID: 11500000, guid: c1e8af743e724b44fabbb54149deb1b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  toggleOptionText: SHOW
-  currentText: {fileID: 1568996846}
+  toggleOptionSprite: {fileID: 21300000, guid: 86257a8b469f45a4484d73992f35d58b, type: 3}
+  currentIMG: {fileID: 1427389081}
 --- !u!114 &1620793617
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9279,6 +9280,17 @@ MonoBehaviour:
           m_StringArgument: ON
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1620793620}
+        m_MethodName: toggle
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1620793618
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9316,6 +9328,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1620793614}
   m_CullTransparentMesh: 0
+--- !u!114 &1620793620
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1620793614}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 969202267cc3ed94198a40cd057ffd96, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  toggleObject: {fileID: 1225123066}
 --- !u!1 &1627191466
 GameObject:
   m_ObjectHideFlags: 0
@@ -9384,8 +9409,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1, y: 273.5}
-  m_SizeDelta: {x: 240, y: 25.497185}
+  m_AnchoredPosition: {x: -1, y: 261.1}
+  m_SizeDelta: {x: 240, y: 50.27381}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1629818479
 MonoBehaviour:
@@ -9419,9 +9444,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Part
-
-'
+  m_Text: "Welcome to the Mill Right\u2019s Mill Workshop\n"
 --- !u!222 &1629818480
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -9985,8 +10008,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1, y: 122}
-  m_SizeDelta: {x: 240, y: 250}
+  m_AnchoredPosition: {x: -1, y: 116.49}
+  m_SizeDelta: {x: 240, y: 238.93951}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1930243274
 MonoBehaviour:
@@ -10020,7 +10043,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Part Description
+  m_Text: Click on a part of the mill to get started. Find all the different key
+    parts of the mill and read their description to move on to the next tutorial.
+    Use the different camera perspective to help you find the components. Good Luck.
 --- !u!222 &1930243275
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -10276,7 +10301,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 923fabfa5f7d2e24fa277d4a1d2883e9, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 9d095f6f1fac2cb4db4a92c5f611f84c, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

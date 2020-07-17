@@ -32,51 +32,41 @@ public class StaticRigidBody : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.collider.tag.Equals("CubeStock"))
+        if (quillFeedController.GetComponent<QuillFeedControl>().QuillLockButton.checkIfEnabled || fineAdjustmentController.GetComponent<FineAdjustmentControl>().FineAdjustmentButton.checkIfEnabled)
         {
-            if (quillFeedController.GetComponent<QuillFeedControl>().QuillLockButton.checkIfEnabled || fineAdjustmentController.GetComponent<FineAdjustmentControl>().FineAdjustmentButton.checkIfEnabled)
-            {
-                quillFeedController.GetComponent<QuillFeedControl>().collided = true;
-                fineAdjustmentController.GetComponent<FineAdjustmentControl>().collided = true;
-            }
-            else if(XWheelController.GetComponent<XWheelControl>().XLockButton.checkIfEnabled && XWheelController.GetComponent<XWheelControl>().object_anim.GetFloat("Reverse") > 0)
-            {
-                XWheelController.GetComponent<XWheelControl>().leftCollision = true;
-            }
-            else if (XWheelController.GetComponent<XWheelControl>().XLockButton.checkIfEnabled && XWheelController.GetComponent<XWheelControl>().object_anim.GetFloat("Reverse") < 0)
-            {
-                XWheelController.GetComponent<XWheelControl>().rightCollision = true;
-            }
-            else if (YWheelController.GetComponent<YWheelControl>().YLockButton.checkIfEnabled && YWheelController.GetComponent<YWheelControl>().object_anim.GetFloat("Reverse") > 0)
-            {
-                YWheelController.GetComponent<YWheelControl>().forwardCollision = true;
-            }
-            else if (YWheelController.GetComponent<YWheelControl>().YLockButton.checkIfEnabled && YWheelController.GetComponent<YWheelControl>().object_anim.GetFloat("Reverse") < 0)
-            {
-                YWheelController.GetComponent<YWheelControl>().backwardCollision = true;
-
-            }
-            Debug.LogWarning("HIT");
-            updateStaticRigidBody();
+            quillFeedController.GetComponent<QuillFeedControl>().collided = true;
+            fineAdjustmentController.GetComponent<FineAdjustmentControl>().collided = true;
         }
+        else if (XWheelController.GetComponent<XWheelControl>().XLockButton.checkIfEnabled && XWheelController.GetComponent<XWheelControl>().object_anim.GetFloat("Reverse") > 0)
+        {
+            XWheelController.GetComponent<XWheelControl>().leftCollision = true;
+        }
+        else if (XWheelController.GetComponent<XWheelControl>().XLockButton.checkIfEnabled && XWheelController.GetComponent<XWheelControl>().object_anim.GetFloat("Reverse") < 0)
+        {
+            XWheelController.GetComponent<XWheelControl>().rightCollision = true;
+        }
+        else if (YWheelController.GetComponent<YWheelControl>().YLockButton.checkIfEnabled && YWheelController.GetComponent<YWheelControl>().object_anim.GetFloat("Reverse") > 0)
+        {
+            YWheelController.GetComponent<YWheelControl>().forwardCollision = true;
+        }
+        else if (YWheelController.GetComponent<YWheelControl>().YLockButton.checkIfEnabled && YWheelController.GetComponent<YWheelControl>().object_anim.GetFloat("Reverse") < 0)
+        {
+            YWheelController.GetComponent<YWheelControl>().backwardCollision = true;
+        }
+        updateStaticRigidBody();
+        
     }
 
     private void OnCollisionStay(Collision collision)
     {
-        if (collision.collider.tag.Equals("CubeStock"))
-        {
-            updateStaticRigidBody();
-        }
+        updateStaticRigidBody();
+        
     }
 
     private void OnCollisionExit(Collision collision)
     {
-        if (collision.collider.tag.Equals("CubeStock"))
-        {
-            endCollision();
-            Debug.LogWarning("No HIT");
-
-        }
+        
+        endCollision();
     }
 
     public void endCollision()
