@@ -78,6 +78,7 @@ public class UIManager : MonoBehaviour {
     private             int                    resStateParaHash             = 0;
 
     private             IEnumerator            IE_DisplayTimedResolution    = null;
+    private int QuestionCounter = 0;
 
     #endregion
 
@@ -120,6 +121,7 @@ public class UIManager : MonoBehaviour {
     {
         uIElements.QuestionInfoTextObject.text = question.Info;
         CreateAnswers(question);
+        QuestionCounter++;
     }
     /// <summary>
     /// Function that is used to display resolution screen.
@@ -164,7 +166,7 @@ public class UIManager : MonoBehaviour {
             case ResolutionScreenType.Incorrect:
                 uIElements.ResolutionBG.color = parameters.IncorrectBGColor;
                 uIElements.ResolutionStateInfoText.text = "WRONG!";
-                uIElements.ResolutionScoreText.text = "-" + score;
+                uIElements.ResolutionScoreText.text = "X";
                 break;
             case ResolutionScreenType.Finish:
                 uIElements.ResolutionBG.color = parameters.FinalBGColor;
@@ -187,10 +189,11 @@ public class UIManager : MonoBehaviour {
         while (scoreValue < events.CurrentFinalScore)
         {
             scoreValue++;
-            uIElements.ResolutionScoreText.text = scoreValue.ToString();
+            uIElements.ResolutionScoreText.text = scoreValue.ToString() + "/" + QuestionCounter.ToString();
 
             yield return null;
         }
+        QuestionCounter = 0;
     }
 
     /// <summary>
@@ -231,6 +234,6 @@ public class UIManager : MonoBehaviour {
     /// </summary>
     void UpdateScoreUI()
     {
-        uIElements.ScoreText.text = "Score: " + events.CurrentFinalScore;
+        uIElements.ScoreText.text = "Score: " + events.CurrentFinalScore + "/" + QuestionCounter.ToString();
     }
 }
