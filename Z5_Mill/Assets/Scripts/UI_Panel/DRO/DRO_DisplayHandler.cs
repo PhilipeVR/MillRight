@@ -57,11 +57,11 @@ public class DRO_DisplayHandler : MonoBehaviour
 
         x =  worktable.localPosition.x * unitConversion - x0;
         y =  table.localPosition.y * unitConversion - y0;
-        z =  spindle.localPosition.z * unitConversion -z0;
+        z =  spindle.localPosition.z * unitConversion*(-1) -z0;
 
-        xText.text = x.ToString("0.00000");
-        yText.text = y.ToString("0.00000");
-        zText.text = z.ToString("0.00000");
+        xText.text = x.ToString("0.0000");
+        yText.text = y.ToString("0.0000");
+        zText.text = z.ToString("0.0000");
 
     }
 
@@ -77,7 +77,7 @@ public class DRO_DisplayHandler : MonoBehaviour
         }
         if(axis == "z")
         {
-            x0 = z;
+            z0 = z;
         }
         
 

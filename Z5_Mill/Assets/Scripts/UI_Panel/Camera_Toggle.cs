@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class Camera_Toggle : MonoBehaviour
 {
+    public Camera cam_main_scene;
     public Camera cam_drill1;
     public Camera cam_drill2;
     public Camera cam_sm1; // sm == side milling perspective
@@ -13,11 +14,12 @@ public class Camera_Toggle : MonoBehaviour
     public Text myText;
 
     private int clickCounter;
-    private int numberOfCams = 5; // the number of cams that can be switched between
+    private int numberOfCams = 6; // the number of cams that can be switched between
 
-    public void start()
+    public void Awake()
     {
-        cam_drill1.enabled = true;
+        clickCounter = 1;
+        cam_main_scene.enabled = true;
     }
 
     public void switchcam() {
@@ -25,34 +27,41 @@ public class Camera_Toggle : MonoBehaviour
         deactivateall ();
         countClicks ();
 
-        if (clickCounter == 1)
+        if(clickCounter == 1)
+        {
+            cam_main_scene.enabled = true;
+            myText.text = "1";
+
+        }
+        else if (clickCounter == 2)
         {
             cam_drill1.enabled = true;
-            myText.text = "1";
-        }
-        else if (clickCounter==2)
-        {
-            cam_drill2.enabled = true;
             myText.text = "2";
         }
-        else if (clickCounter==3) 
+        else if (clickCounter==3)
         {
-            cam_sm1.enabled = true;
+            cam_drill2.enabled = true;
             myText.text = "3";
         }
-        else if (clickCounter==4)
+        else if (clickCounter==4) 
         {
-            cam_fm1.enabled = true;
+            cam_sm1.enabled = true;
             myText.text = "4";
         }
         else if (clickCounter==5)
         {
-            cam_5.enabled = true;
+            cam_fm1.enabled = true;
             myText.text = "5";
+        }
+        else if (clickCounter==6)
+        {
+            cam_5.enabled = true;
+            myText.text = "6";
         }
     }
 
     public void deactivateall() {
+        cam_main_scene.enabled = false;
         cam_drill1.enabled = false;
         cam_drill2.enabled = false;
         cam_sm1.enabled = false;

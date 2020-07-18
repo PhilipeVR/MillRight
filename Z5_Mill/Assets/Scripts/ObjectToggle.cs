@@ -6,7 +6,7 @@ using UnityEngine;
 public class ObjectToggle : MonoBehaviour
 {
     public GameObject toggleObject;
-    private Boolean isActive = true;
+    public Boolean isActive = true;
     public void toggle()
     {
         if (isActive)

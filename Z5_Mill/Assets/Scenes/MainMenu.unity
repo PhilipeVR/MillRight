@@ -995,7 +995,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -1347, y: -665.63}
-  m_SizeDelta: {x: 310.8524, y: 104.68634}
+  m_SizeDelta: {x: 315.8524, y: 104.68634}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &315427139
 MonoBehaviour:
@@ -1351,6 +1351,7 @@ MonoBehaviour:
   toggleLangManager: {fileID: 0}
   toggleComponentLangManager: {fileID: 0}
   imageToggle: {fileID: 151977064}
+  toolHolderManager: {fileID: 0}
 --- !u!1 &948612267
 GameObject:
   m_ObjectHideFlags: 0
@@ -2275,7 +2276,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 270.5417, y: 105.79535}
+  m_SizeDelta: {x: 300.5417, y: 105.79535}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1853418711
 MonoBehaviour:

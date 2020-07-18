@@ -3,18 +3,20 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Runtime.ConstrainedExecution;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class CameraToggle : MonoBehaviour
 {
     Camera[] cameras;
     [SerializeField] string genericCameraTag;
+    [SerializeField] Text camCurrentNum;
     private static string MAIN_CAM_TAG = "MainCamera"; 
     private int index;
     void Awake()
     {
         index = 0;
         cameras = GetComponentsInChildren<Camera>();
-        UnityEngine.Debug.LogWarning("Cameras: " + cameras.Length.ToString());
+        camCurrentNum.text = "1";
         deactivateAll();
         SwtichView();
         
@@ -23,7 +25,6 @@ public class CameraToggle : MonoBehaviour
     // Update is called once per frame
     public void SwtichView()
     {
-        UnityEngine.Debug.LogWarning("Camera: " + index.ToString());
 
         if (index == cameras.Length)
         {
@@ -35,6 +36,7 @@ public class CameraToggle : MonoBehaviour
             cameras[index - 1].tag = genericCameraTag;
             cameras[index - 1].enabled = false;
         }
+        camCurrentNum.text = (index + 1).ToString();
         cameras[index].enabled = true;
         cameras[index].tag = MAIN_CAM_TAG;
         index++;

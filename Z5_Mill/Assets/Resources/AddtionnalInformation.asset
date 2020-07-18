@@ -21,7 +21,7 @@ MonoBehaviour:
     sentenceFR: "Un porte-outil est un composant d'usinage qui maintient les diff\xE9rentes
       fraises en bout ou les forets en place. Son but est de maintenir l'outil avec
       pr\xE9cision et aussi fermement que possible."
-    image: {fileID: 21300000, guid: 93619e439d17a5d43b01d17346f1d36f, type: 3}
+    image: {fileID: 21300000, guid: f36e8f9f4e1ded849ae9e2e234201b57, type: 3}
   - partName: Spindle
     partNameFR: 'Broche '
     sentence: 'A spindle is a rotating axis (allows for rotating movements) of the

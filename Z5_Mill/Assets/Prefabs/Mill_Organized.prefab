@@ -20335,7 +20335,7 @@ Transform:
   - {fileID: 2892962359684941624}
   - {fileID: 2892962359536720189}
   m_Father: {fileID: 3312799079067245395}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2892962359536720188
 GameObject:
@@ -24725,136 +24725,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!1 &3312799077983428362
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 3312799077983428360}
-  - component: {fileID: 3312799077983428363}
-  - component: {fileID: 3312799077983428366}
-  - component: {fileID: 3312799077983428367}
-  - component: {fileID: 3312799077983428364}
-  - component: {fileID: 3312799077983428361}
-  m_Layer: 0
-  m_Name: Axis Manager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &3312799077983428360
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3312799077983428362}
-  m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -0.18808752, y: 2.3282495, z: -1.7814738}
-  m_LocalScale: {x: 0.5272315, y: 0.5272313, z: 0.5272313}
-  m_Children: []
-  m_Father: {fileID: 3312799079067245395}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &3312799077983428363
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3312799077983428362}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a33bfeb274c1c2c47b990f82e35d194f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  animObject: {fileID: 6834353326626998768}
-  lockAnimObject: {fileID: 3312799079438408079}
-  wheel: {fileID: 5236588182498004070}
-  handle: {fileID: 1616339052154038993}
-  enable: 1
---- !u!114 &3312799077983428366
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3312799077983428362}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a33bfeb274c1c2c47b990f82e35d194f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  animObject: {fileID: 3312799079067245394}
-  lockAnimObject: {fileID: 3312799077726579722}
-  wheel: {fileID: 7365876484061256890}
-  handle: {fileID: 6217960820980314366}
-  enable: 1
---- !u!114 &3312799077983428367
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3312799077983428362}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a33bfeb274c1c2c47b990f82e35d194f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  animObject: {fileID: 238648635344227715}
-  lockAnimObject: {fileID: 3312799077755689803}
-  wheel: {fileID: 3312799078185544017}
-  handle: {fileID: 2108261189588554263}
-  enable: 1
---- !u!114 &3312799077983428364
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3312799077983428362}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 36272917ae858ef4594d119bc0c1aef6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  animObject: {fileID: 3312799077823029787}
-  lockAnimObject: {fileID: 3312799077646761529}
-  wheel_parts:
-  - {fileID: 8715936708418850005}
-  - {fileID: 1514899508785466211}
-  - {fileID: 2158719696968126256}
-  - {fileID: 7448758966893351248}
-  - {fileID: 8898760881730467706}
-  - {fileID: 8440301932684915894}
-  - {fileID: 3090742804570890614}
-  handle: {fileID: 8697165308503607853}
-  enable: 1
-  Spindle: {fileID: 3312799078437118122}
-  collided: 0
---- !u!114 &3312799077983428361
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3312799077983428362}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8d65452eb2174604bab6bcaf10bb7265, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  drillTag: 
-  onButton: {fileID: 1245164837313061584}
-  offButton: {fileID: 8955574171329217883}
-  animObject: {fileID: 0}
-  currentBit: {fileID: 0}
-  state: 0
 --- !u!1 &3312799078015067642
 GameObject:
   m_ObjectHideFlags: 0
@@ -25456,7 +25326,6 @@ Transform:
   m_LocalPosition: {x: 5.94, y: 1.035, z: -10.18}
   m_LocalScale: {x: 0.89, y: 0.85, z: 1.12}
   m_Children:
-  - {fileID: 3312799077983428360}
   - {fileID: 7531102674231131107}
   - {fileID: 2892962359368094185}
   m_Father: {fileID: 0}
@@ -50314,6 +50183,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7531102674231131107}
   - component: {fileID: 3312799077509140534}
+  - component: {fileID: 5510949528422082268}
   m_Layer: 0
   m_Name: Mill_Model
   m_TagString: Untagged
@@ -50334,7 +50204,7 @@ Transform:
   m_Children:
   - {fileID: 6977537324750414842}
   m_Father: {fileID: 3312799079067245395}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &3312799077509140534
 Animator:
@@ -50355,6 +50225,22 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &5510949528422082268
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6834353326626998768}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d65452eb2174604bab6bcaf10bb7265, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  drillTag: Drill
+  animObject: {fileID: 3312799078959786686}
+  currentBit: {fileID: 6525622273045641874}
+  state: 0
 --- !u!1 &6847103517869929649
 GameObject:
   m_ObjectHideFlags: 0
