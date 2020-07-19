@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2441569884864149378}
   - component: {fileID: 124439859358291531}
   - component: {fileID: 5735316777441732239}
-  - component: {fileID: 3107714719168579424}
+  - component: {fileID: 331641313204264109}
   m_Layer: 0
   m_Name: Cube
   m_TagString: CubeStock
@@ -95,8 +95,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   collisionTag: Drill
   gameObjectParentName: 
---- !u!64 &3107714719168579424
-MeshCollider:
+  TrainingWheels: 0
+--- !u!65 &331641313204264109
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -105,7 +106,6 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
