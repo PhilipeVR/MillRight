@@ -1,5 +1,5 @@
 # GNG2101 - Z5 Group - Mill Right
-![alt text](https://github.com/[username]/[reponame]/blob/[branch]/logo.jpg?raw=true)
+![Logo](logo.jpg?raw=true)
 
 A mill simulator created in Unity to emulate 'Beginner Mill Training' workshops offered by the MTC.
 
