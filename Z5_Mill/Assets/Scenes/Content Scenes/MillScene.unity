@@ -1002,7 +1002,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh720922
+  m_Name: pb_Mesh68268
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -1683,8 +1683,8 @@ MonoBehaviour:
   infoImage: {fileID: 2079924583}
   initialTextFR: "Cliquez sur une partie de la fraiseuse pour commencer. Trouvez
     toutes les diff\xE9rentes parties cl\xE9s de la fraiseuse et lisez leur description
-    pour passer au didacticiel suivant. Utilisez les perspectives diff\xE9rentes
-    des cam\xE9ras pour vous aider \xE0 trouver les composantes. Bonne chance."
+    pour passer au didacticiel suivant. Utilisez les diff\xE9rentes cam\xE9ras pour
+    vous aider \xE0 trouver les composantes. Bonne chance."
   namePartFR: "Bienvenue \xE0 l'atelier de fraisage de Mill Right"
   language: 1
   toggle: {fileID: 1615564893}
@@ -9654,8 +9654,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1, y: 116.49}
-  m_SizeDelta: {x: 240, y: 238.93951}
+  m_AnchoredPosition: {x: -1, y: 89}
+  m_SizeDelta: {x: 240, y: 280}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1930243274
 MonoBehaviour:
@@ -9691,7 +9691,7 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: Click on a part of the mill to get started. Find all the different key
     parts of the mill and read their description to move on to the next tutorial.
-    Use the different camera perspective to help you find the components. Good Luck.
+    Use the different cameras to help you find the components. Good Luck.
 --- !u!222 &1930243275
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -9804,8 +9804,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -153}
-  m_SizeDelta: {x: 240, y: 250}
+  m_AnchoredPosition: {x: 0, y: -176}
+  m_SizeDelta: {x: 240, y: 230}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2079924583
 MonoBehaviour:

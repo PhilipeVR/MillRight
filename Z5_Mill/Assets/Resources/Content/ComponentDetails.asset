@@ -32,9 +32,9 @@ MonoBehaviour:
     image: {fileID: 21300000, guid: e717594996404e645b7c982e471a460d, type: 3}
   - partName: Safety Guard
     partNameFR: "Panneau de s\xE9curit\xE9"
-    sentence: "The safety guard is a physical shield to avoid injuries when using
-      a milling machine. Most mills include a feature in which it does not allow
-      any milling operations until the safety guard is in place. The most common
+    sentence: "The safety guard is a physical shield used to avoid injuries when
+      using a milling machine. Most mills include a feature in which it does not
+      allow any milling operations until the safety guard is in place. The most common
       type of injury is flying debris. Flying debris has the potential to cause serious
       injury to the users\u2019 eyes, face or body. The safety guard is an imperative
       safety measure to avoid injuries. "
