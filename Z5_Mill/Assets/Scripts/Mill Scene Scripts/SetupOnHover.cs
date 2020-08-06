@@ -67,4 +67,22 @@ public class SetupOnHover : MonoBehaviour
             clicked = true;
         }
     }
+
+    public void Hovering(Boolean res)
+    {
+        foreach (Transform children in transform)
+        {
+            OnHover tmpHover = children.GetComponent<OnHover>();
+            if (tmpHover != null) {
+                if (res)
+                {
+                    tmpHover.SiblingHover();
+                }
+                else
+                {
+                    tmpHover.SiblingHoverExit();
+                }
+            }
+        }
+    }
 }
