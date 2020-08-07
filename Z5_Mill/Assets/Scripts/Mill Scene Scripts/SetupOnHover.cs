@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class SetupOnHover : MonoBehaviour
 {
@@ -9,6 +10,8 @@ public class SetupOnHover : MonoBehaviour
     [SerializeField] private Color onHoverColor;
     [SerializeField] private int detailIndex;
     [SerializeField] GameObject ObjectManager;
+    [SerializeField] private Toggle checkListElem;
+    [SerializeField] private PanelHandler handler;
     private Boolean clicked = false;
 
     void Start()
@@ -64,6 +67,8 @@ public class SetupOnHover : MonoBehaviour
         if (!clicked)
         {
             ObjectManager.GetComponent<ComponentManager>().incrementPartCounter();
+            handler.OnComponentClicked();
+            checkListElem.isOn = true;
             clicked = true;
         }
     }
