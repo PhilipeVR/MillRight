@@ -1,18 +1,20 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class OnHover : MonoBehaviour
 {
     // Start is called before the first frame update
     public Color hoverColor;
+    public Color onClickedColor;
     private Color basicColor;
     private Boolean hovering = false;
     [SerializeField] private int detailIndex;
     [SerializeField] public GameObject ObjectManager;
 
-    private Boolean hasBeenClicked = false;
+    public Boolean hasBeenClicked = false;
 
     void Awake()
     {
@@ -48,28 +50,50 @@ public class OnHover : MonoBehaviour
         SiblingHoverExit();
         hovering = false;
         GetComponentInParent<SetupOnHover>().Hovering(hovering);
-
     }
 
     public void SiblingHover()
     {
-        if (!hovering)
+        if (!hasBeenClicked)
         {
-            GetComponent<Renderer>().material.color = hoverColor;
+            if (!hovering)
+            {
+                GetComponent<Renderer>().material.color = hoverColor;
+            }
         }
     }
 
     public void SiblingHoverExit()
     {
-        if(basicColor == null)
+        if (!hasBeenClicked) 
         {
-            setBasicColor();
+            if (basicColor == null)
+            {
+                setBasicColor();
+            }
+            GetComponent<Renderer>().material.color = basicColor;
         }
-        GetComponent<Renderer>().material.color = basicColor;
     }
 
     private void setBasicColor()
     {
         basicColor = GetComponent<Renderer>().material.color;
+    }
+
+    public void SetClickedColor()
+    {
+        GetComponent<Renderer>().material.color = onClickedColor;
+        //GetComponent<Renderer>().material.color = hoverColor;
+        hasBeenClicked = true;
+    }
+
+    public IEnumerator FlashMesh(float interval)
+    {
+        if (!hasBeenClicked)
+        {
+            GetComponent<Renderer>().material.color = hoverColor;
+            yield return new WaitForSecondsRealtime(interval);
+            GetComponent<Renderer>().material.color = basicColor;
+        }
     }
 }

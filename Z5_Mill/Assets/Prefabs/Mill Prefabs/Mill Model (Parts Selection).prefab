@@ -3232,6 +3232,13 @@ MonoBehaviour:
   onHoverColor: {r: 1, g: 0.6814632, b: 0, a: 0}
   detailIndex: 10
   ObjectManager: {fileID: 0}
+  checkListElem: {fileID: 0}
+  handler: {fileID: 0}
+  onClickedColor: {r: 0, g: 0, b: 0, a: 0}
+  NumOfFlash: 4
+  delayInterval: 0.25
+  clicked: 0
+  flashing: 0
 --- !u!1 &422406827628960148
 GameObject:
   m_ObjectHideFlags: 0
@@ -3476,6 +3483,13 @@ MonoBehaviour:
   onHoverColor: {r: 0.7921569, g: 0, b: 0.41960785, a: 0}
   detailIndex: 4
   ObjectManager: {fileID: 0}
+  checkListElem: {fileID: 0}
+  handler: {fileID: 0}
+  onClickedColor: {r: 0, g: 0, b: 0, a: 0}
+  NumOfFlash: 4
+  delayInterval: 0.25
+  clicked: 0
+  flashing: 0
 --- !u!1 &422406827860180813
 GameObject:
   m_ObjectHideFlags: 0
@@ -3529,6 +3543,13 @@ MonoBehaviour:
   onHoverColor: {r: 0.4716981, g: 0, b: 0.38835463, a: 0}
   detailIndex: 14
   ObjectManager: {fileID: 0}
+  checkListElem: {fileID: 0}
+  handler: {fileID: 0}
+  onClickedColor: {r: 0, g: 0, b: 0, a: 0}
+  NumOfFlash: 4
+  delayInterval: 0.25
+  clicked: 0
+  flashing: 0
 --- !u!1 &422406827984382993
 GameObject:
   m_ObjectHideFlags: 0
@@ -3584,6 +3605,13 @@ MonoBehaviour:
   onHoverColor: {r: 0.7921569, g: 0, b: 0.41960785, a: 0}
   detailIndex: 6
   ObjectManager: {fileID: 0}
+  checkListElem: {fileID: 0}
+  handler: {fileID: 0}
+  onClickedColor: {r: 0, g: 0, b: 0, a: 0}
+  NumOfFlash: 4
+  delayInterval: 0.25
+  clicked: 0
+  flashing: 0
 --- !u!1 &422406828077930236
 GameObject:
   m_ObjectHideFlags: 0
@@ -3804,6 +3832,13 @@ MonoBehaviour:
   onHoverColor: {r: 0.18109159, g: 0.41509432, b: 0.02741188, a: 0}
   detailIndex: 16
   ObjectManager: {fileID: 0}
+  checkListElem: {fileID: 0}
+  handler: {fileID: 0}
+  onClickedColor: {r: 0, g: 0, b: 0, a: 0}
+  NumOfFlash: 4
+  delayInterval: 0.25
+  clicked: 0
+  flashing: 0
 --- !u!1 &422406828596849728
 GameObject:
   m_ObjectHideFlags: 0
@@ -4007,6 +4042,13 @@ MonoBehaviour:
   onHoverColor: {r: 0.990566, g: 0.2823568, b: 0, a: 0}
   detailIndex: 7
   ObjectManager: {fileID: 0}
+  checkListElem: {fileID: 0}
+  handler: {fileID: 0}
+  onClickedColor: {r: 0, g: 0, b: 0, a: 0}
+  NumOfFlash: 4
+  delayInterval: 0.25
+  clicked: 0
+  flashing: 0
 --- !u!1 &422406828842331152
 GameObject:
   m_ObjectHideFlags: 0
@@ -4296,6 +4338,13 @@ MonoBehaviour:
   onHoverColor: {r: 1, g: 0.6814632, b: 0, a: 0}
   detailIndex: 11
   ObjectManager: {fileID: 0}
+  checkListElem: {fileID: 0}
+  handler: {fileID: 0}
+  onClickedColor: {r: 0, g: 0, b: 0, a: 0}
+  NumOfFlash: 4
+  delayInterval: 0.25
+  clicked: 0
+  flashing: 0
 --- !u!1 &422406829036331232
 GameObject:
   m_ObjectHideFlags: 0
@@ -4348,6 +4397,13 @@ MonoBehaviour:
   onHoverColor: {r: 1, g: 0.6814632, b: 0, a: 0}
   detailIndex: 9
   ObjectManager: {fileID: 0}
+  checkListElem: {fileID: 0}
+  handler: {fileID: 0}
+  onClickedColor: {r: 0, g: 0, b: 0, a: 0}
+  NumOfFlash: 4
+  delayInterval: 0.25
+  clicked: 0
+  flashing: 0
 --- !u!1 &422406829245066372
 GameObject:
   m_ObjectHideFlags: 0
@@ -4493,6 +4549,13 @@ MonoBehaviour:
   onHoverColor: {r: 0.7924528, g: 0, b: 0.41974813, a: 0}
   detailIndex: 5
   ObjectManager: {fileID: 0}
+  checkListElem: {fileID: 0}
+  handler: {fileID: 0}
+  onClickedColor: {r: 0, g: 0, b: 0, a: 0}
+  NumOfFlash: 4
+  delayInterval: 0.25
+  clicked: 0
+  flashing: 0
 --- !u!1 &422406829384594131
 GameObject:
   m_ObjectHideFlags: 0
@@ -4545,6 +4608,13 @@ MonoBehaviour:
   onHoverColor: {r: 1, g: 0.6814632, b: 0, a: 0}
   detailIndex: 8
   ObjectManager: {fileID: 0}
+  checkListElem: {fileID: 0}
+  handler: {fileID: 0}
+  onClickedColor: {r: 0, g: 0, b: 0, a: 0}
+  NumOfFlash: 4
+  delayInterval: 0.25
+  clicked: 0
+  flashing: 0
 --- !u!1 &444030122803932553
 GameObject:
   m_ObjectHideFlags: 0
@@ -6000,6 +6070,13 @@ MonoBehaviour:
   onHoverColor: {r: 0.14374736, g: 0.764151, b: 0.03604485, a: 0}
   detailIndex: 0
   ObjectManager: {fileID: 0}
+  checkListElem: {fileID: 0}
+  handler: {fileID: 0}
+  onClickedColor: {r: 0, g: 0, b: 0, a: 0}
+  NumOfFlash: 4
+  delayInterval: 0.25
+  clicked: 0
+  flashing: 0
 --- !u!1 &757488182277974825
 GameObject:
   m_ObjectHideFlags: 0
@@ -10024,6 +10101,13 @@ MonoBehaviour:
   onHoverColor: {r: 0.5377358, g: 0, b: 0, a: 0}
   detailIndex: 2
   ObjectManager: {fileID: 0}
+  checkListElem: {fileID: 0}
+  handler: {fileID: 0}
+  onClickedColor: {r: 0, g: 0, b: 0, a: 0}
+  NumOfFlash: 4
+  delayInterval: 0.25
+  clicked: 0
+  flashing: 0
 --- !u!1 &1391154678536311084
 GameObject:
   m_ObjectHideFlags: 0
@@ -22213,6 +22297,13 @@ MonoBehaviour:
   onHoverColor: {r: 0, g: 0.9622642, b: 0.57975703, a: 0}
   detailIndex: 13
   ObjectManager: {fileID: 0}
+  checkListElem: {fileID: 0}
+  handler: {fileID: 0}
+  onClickedColor: {r: 0, g: 0, b: 0, a: 0}
+  NumOfFlash: 4
+  delayInterval: 0.25
+  clicked: 0
+  flashing: 0
 --- !u!1 &3551434237634623807
 GameObject:
   m_ObjectHideFlags: 0
@@ -32626,6 +32717,13 @@ MonoBehaviour:
   onHoverColor: {r: 0.56792325, g: 0.41509432, b: 1, a: 0}
   detailIndex: 1
   ObjectManager: {fileID: 0}
+  checkListElem: {fileID: 0}
+  handler: {fileID: 0}
+  onClickedColor: {r: 0, g: 0, b: 0, a: 0}
+  NumOfFlash: 4
+  delayInterval: 0.25
+  clicked: 0
+  flashing: 0
 --- !u!1 &5289461516552556349
 GameObject:
   m_ObjectHideFlags: 0
@@ -33310,6 +33408,13 @@ MonoBehaviour:
   onHoverColor: {r: 0, g: 0.7287936, b: 0.8018868, a: 0}
   detailIndex: 3
   ObjectManager: {fileID: 0}
+  checkListElem: {fileID: 0}
+  handler: {fileID: 0}
+  onClickedColor: {r: 0, g: 0, b: 0, a: 0}
+  NumOfFlash: 4
+  delayInterval: 0.25
+  clicked: 0
+  flashing: 0
 --- !u!1 &5341990338838438298
 GameObject:
   m_ObjectHideFlags: 0
@@ -38893,7 +38998,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -3761504335901194382, guid: cf2eb7bda6c7bc84fad20858daff09e3, type: 3}
+  - {fileID: 2100000, guid: 777dcd56e8ed0d845a934f560e02286b, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -46805,6 +46910,13 @@ MonoBehaviour:
   onHoverColor: {r: 0.6132076, g: 0.24875402, b: 0.24875402, a: 0}
   detailIndex: 15
   ObjectManager: {fileID: 0}
+  checkListElem: {fileID: 0}
+  handler: {fileID: 0}
+  onClickedColor: {r: 0, g: 0, b: 0, a: 0}
+  NumOfFlash: 4
+  delayInterval: 0.25
+  clicked: 0
+  flashing: 0
 --- !u!1 &7561868736847064903
 GameObject:
   m_ObjectHideFlags: 0
@@ -53361,6 +53473,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4658415311526098697}
+  - component: {fileID: 1017425295757641600}
   m_Layer: 0
   m_Name: Mill_Model
   m_TagString: Untagged
@@ -53405,6 +53518,18 @@ Transform:
   m_Father: {fileID: 422406827691595705}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1017425295757641600
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8574112428757222682}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4fbb007dea57b047b8ec78cddee9b8e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8574112430086655285
 GameObject:
   m_ObjectHideFlags: 0
@@ -53483,6 +53608,13 @@ MonoBehaviour:
   onHoverColor: {r: 0, g: 0.7239326, b: 0.8962264, a: 0}
   detailIndex: 12
   ObjectManager: {fileID: 0}
+  checkListElem: {fileID: 0}
+  handler: {fileID: 0}
+  onClickedColor: {r: 0, g: 0, b: 0, a: 0}
+  NumOfFlash: 4
+  delayInterval: 0.25
+  clicked: 0
+  flashing: 0
 --- !u!1 &8583880334322202715
 GameObject:
   m_ObjectHideFlags: 0
