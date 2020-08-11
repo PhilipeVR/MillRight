@@ -371,6 +371,7 @@ GameObject:
   - component: {fileID: 103676646}
   - component: {fileID: 103676645}
   - component: {fileID: 103676644}
+  - component: {fileID: 103676649}
   - component: {fileID: 103676647}
   - component: {fileID: 103676648}
   m_Layer: 5
@@ -407,7 +408,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 103676642}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
   m_Name: 
@@ -487,7 +488,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 103676642}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 684667532f3a4d943b3719ab79ec9ce1, type: 3}
   m_Name: 
@@ -525,6 +526,21 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+--- !u!114 &103676649
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 103676642}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9edfe0da26ee89543a5a9f1b7e3ac6c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enabledColor: {r: 0.9811321, g: 0.56461376, b: 0.56461376, a: 1}
+  disabledColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+  buttonName: 
 --- !u!1 &104469575
 GameObject:
   m_ObjectHideFlags: 0
@@ -2550,6 +2566,7 @@ GameObject:
   - component: {fileID: 453831213}
   - component: {fileID: 453831212}
   - component: {fileID: 453831211}
+  - component: {fileID: 453831214}
   - component: {fileID: 453831210}
   m_Layer: 5
   m_Name: ZLockButton
@@ -2584,7 +2601,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 453831208}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 684667532f3a4d943b3719ab79ec9ce1, type: 3}
   m_Name: 
@@ -2601,7 +2618,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 453831208}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
   m_Name: 
@@ -2674,6 +2691,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 453831208}
   m_CullTransparentMesh: 0
+--- !u!114 &453831214
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 453831208}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9edfe0da26ee89543a5a9f1b7e3ac6c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enabledColor: {r: 0.6052662, g: 0.98039216, b: 0.5647059, a: 1}
+  disabledColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+  buttonName: zLock
 --- !u!1 &460297349
 GameObject:
   m_ObjectHideFlags: 0
@@ -3934,6 +3966,7 @@ GameObject:
   - component: {fileID: 910620604}
   - component: {fileID: 910620603}
   - component: {fileID: 910620602}
+  - component: {fileID: 910620606}
   - component: {fileID: 910620605}
   m_Layer: 5
   m_Name: Z_Button
@@ -3969,7 +4002,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 910620600}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
   m_Name: 
@@ -4004,7 +4037,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 910620603}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1810847909}
+        m_MethodName: Click_Z
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &910620603
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4049,7 +4093,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 910620600}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 684667532f3a4d943b3719ab79ec9ce1, type: 3}
   m_Name: 
@@ -4059,6 +4103,21 @@ MonoBehaviour:
   buttonName: zButton
   checkIfEnabled: 0
   interactable: 1
+--- !u!114 &910620606
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 910620600}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9edfe0da26ee89543a5a9f1b7e3ac6c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enabledColor: {r: 0.9811321, g: 0.56461376, b: 0.56461376, a: 1}
+  disabledColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+  buttonName: z
 --- !u!1 &911918062
 GameObject:
   m_ObjectHideFlags: 0
@@ -4433,6 +4492,7 @@ GameObject:
   - component: {fileID: 949662697}
   - component: {fileID: 949662696}
   - component: {fileID: 949662695}
+  - component: {fileID: 949662699}
   - component: {fileID: 949662694}
   - component: {fileID: 949662698}
   m_Layer: 5
@@ -4469,7 +4529,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 949662692}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 684667532f3a4d943b3719ab79ec9ce1, type: 3}
   m_Name: 
@@ -4486,7 +4546,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 949662692}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
   m_Name: 
@@ -4573,6 +4633,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   toggleOptionText: Plume
   currentText: {fileID: 911918064}
+--- !u!114 &949662699
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 949662692}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9edfe0da26ee89543a5a9f1b7e3ac6c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enabledColor: {r: 0.9811321, g: 0.5429522, b: 0.13883942, a: 1}
+  disabledColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+  buttonName: quillFeed
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0
@@ -4898,6 +4973,7 @@ GameObject:
   - component: {fileID: 1079926643}
   - component: {fileID: 1079926642}
   - component: {fileID: 1079926641}
+  - component: {fileID: 1079926644}
   - component: {fileID: 1079926640}
   m_Layer: 5
   m_Name: XLockButton
@@ -4932,7 +5008,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1079926638}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 684667532f3a4d943b3719ab79ec9ce1, type: 3}
   m_Name: 
@@ -4949,7 +5025,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1079926638}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
   m_Name: 
@@ -5022,6 +5098,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1079926638}
   m_CullTransparentMesh: 0
+--- !u!114 &1079926644
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1079926638}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9edfe0da26ee89543a5a9f1b7e3ac6c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enabledColor: {r: 0.6052662, g: 0.98039216, b: 0.5647059, a: 1}
+  disabledColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+  buttonName: xLock
 --- !u!1 &1100453240
 GameObject:
   m_ObjectHideFlags: 0
@@ -5190,6 +5281,7 @@ GameObject:
   - component: {fileID: 1110454976}
   - component: {fileID: 1110454975}
   - component: {fileID: 1110454974}
+  - component: {fileID: 1110454978}
   - component: {fileID: 1110454977}
   m_Layer: 5
   m_Name: X_Button
@@ -5225,7 +5317,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1110454972}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
   m_Name: 
@@ -5260,7 +5352,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1110454975}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1810847909}
+        m_MethodName: Click_X
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1110454975
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5305,7 +5408,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1110454972}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 684667532f3a4d943b3719ab79ec9ce1, type: 3}
   m_Name: 
@@ -5315,6 +5418,21 @@ MonoBehaviour:
   buttonName: xButton
   checkIfEnabled: 0
   interactable: 1
+--- !u!114 &1110454978
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1110454972}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9edfe0da26ee89543a5a9f1b7e3ac6c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enabledColor: {r: 0.9811321, g: 0.56461376, b: 0.56461376, a: 1}
+  disabledColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+  buttonName: x
 --- !u!1 &1114417558
 GameObject:
   m_ObjectHideFlags: 0
@@ -5725,6 +5843,7 @@ GameObject:
   - component: {fileID: 1334058746}
   - component: {fileID: 1334058745}
   - component: {fileID: 1334058744}
+  - component: {fileID: 1334058747}
   - component: {fileID: 1334058743}
   m_Layer: 5
   m_Name: YLockButton
@@ -5759,7 +5878,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1334058741}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 684667532f3a4d943b3719ab79ec9ce1, type: 3}
   m_Name: 
@@ -5776,7 +5895,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1334058741}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
   m_Name: 
@@ -5849,6 +5968,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1334058741}
   m_CullTransparentMesh: 0
+--- !u!114 &1334058747
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1334058741}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9edfe0da26ee89543a5a9f1b7e3ac6c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enabledColor: {r: 0.6052662, g: 0.98039216, b: 0.5647059, a: 1}
+  disabledColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+  buttonName: yLock
 --- !u!1 &1335203309
 GameObject:
   m_ObjectHideFlags: 0
@@ -6094,7 +6228,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   DROPanel: {fileID: 1810847903}
   toolsPanel: {fileID: 1611691476}
-  diagramPanel: {fileID: 0}
 --- !u!114 &1350864540
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6555,6 +6688,7 @@ GameObject:
   - component: {fileID: 1499001490}
   - component: {fileID: 1499001489}
   - component: {fileID: 1499001488}
+  - component: {fileID: 1499001492}
   - component: {fileID: 1499001491}
   m_Layer: 5
   m_Name: Y_Button
@@ -6590,7 +6724,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1499001486}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
   m_Name: 
@@ -6625,7 +6759,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1499001489}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1810847909}
+        m_MethodName: Click_Y
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1499001489
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6670,7 +6815,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1499001486}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 684667532f3a4d943b3719ab79ec9ce1, type: 3}
   m_Name: 
@@ -6680,6 +6825,21 @@ MonoBehaviour:
   buttonName: yButton
   checkIfEnabled: 0
   interactable: 1
+--- !u!114 &1499001492
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1499001486}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9edfe0da26ee89543a5a9f1b7e3ac6c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enabledColor: {r: 0.9811321, g: 0.56461376, b: 0.56461376, a: 1}
+  disabledColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+  buttonName: y
 --- !u!1 &1505495733
 GameObject:
   m_ObjectHideFlags: 0
@@ -7276,6 +7436,7 @@ GameObject:
   - component: {fileID: 1649589620}
   - component: {fileID: 1649589622}
   - component: {fileID: 1649589619}
+  - component: {fileID: 1649589623}
   m_Layer: 5
   m_Name: zeroButton
   m_TagString: Untagged
@@ -7390,7 +7551,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1649589617}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 684667532f3a4d943b3719ab79ec9ce1, type: 3}
   m_Name: 
@@ -7400,6 +7561,21 @@ MonoBehaviour:
   buttonName: zeroButton
   checkIfEnabled: 0
   interactable: 1
+--- !u!114 &1649589623
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1649589617}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9edfe0da26ee89543a5a9f1b7e3ac6c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enabledColor: {r: 0.9811321, g: 0.56461376, b: 0.56461376, a: 1}
+  disabledColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+  buttonName: 
 --- !u!1 &1654764270
 GameObject:
   m_ObjectHideFlags: 0
@@ -7573,6 +7749,7 @@ GameObject:
   - component: {fileID: 1810847906}
   - component: {fileID: 1810847905}
   - component: {fileID: 1810847908}
+  - component: {fileID: 1810847909}
   m_Layer: 5
   m_Name: DRO_Panel
   m_TagString: Untagged
@@ -7620,7 +7797,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1810847903}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7e12ea44c4330384b97cac27b9f21160, type: 3}
   m_Name: 
@@ -7681,7 +7858,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1810847903}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b88138f0b0408974e83a3bb4e1a30215, type: 3}
   m_Name: 
@@ -7695,6 +7872,29 @@ MonoBehaviour:
   inchButton: {fileID: 1937951556}
   mmButton: {fileID: 103676647}
   zeroButton: {fileID: 1649589622}
+--- !u!114 &1810847909
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1810847903}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 817f1e2dec2867f4ba1b26cbc27d76f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inch: {fileID: 1937951558}
+  mm: {fileID: 103676649}
+  x: {fileID: 1110454978}
+  y: {fileID: 1499001492}
+  z: {fileID: 910620606}
+  xLock: {fileID: 1079926644}
+  yLock: {fileID: 1334058747}
+  zLock: {fileID: 453831214}
+  zero: {fileID: 1649589623}
+  quillFeed: {fileID: 949662699}
+  fineAdjust: {fileID: 2098731959}
 --- !u!1 &1849258730
 GameObject:
   m_ObjectHideFlags: 0
@@ -8670,6 +8870,7 @@ GameObject:
   - component: {fileID: 1937951555}
   - component: {fileID: 1937951554}
   - component: {fileID: 1937951553}
+  - component: {fileID: 1937951558}
   - component: {fileID: 1937951556}
   - component: {fileID: 1937951557}
   m_Layer: 5
@@ -8787,7 +8988,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1937951551}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 684667532f3a4d943b3719ab79ec9ce1, type: 3}
   m_Name: 
@@ -8825,6 +9026,21 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+--- !u!114 &1937951558
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1937951551}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9edfe0da26ee89543a5a9f1b7e3ac6c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enabledColor: {r: 0.9811321, g: 0.56461376, b: 0.56461376, a: 1}
+  disabledColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+  buttonName: 
 --- !u!1001 &2024659033
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8931,6 +9147,7 @@ GameObject:
   - component: {fileID: 2098731957}
   - component: {fileID: 2098731956}
   - component: {fileID: 2098731955}
+  - component: {fileID: 2098731959}
   - component: {fileID: 2098731954}
   - component: {fileID: 2098731958}
   m_Layer: 5
@@ -8967,7 +9184,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2098731952}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 684667532f3a4d943b3719ab79ec9ce1, type: 3}
   m_Name: 
@@ -8984,7 +9201,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2098731952}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
   m_Name: 
@@ -9071,6 +9288,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   toggleOptionText: "R\xE9glage Fin"
   currentText: {fileID: 460297351}
+--- !u!114 &2098731959
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2098731952}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9edfe0da26ee89543a5a9f1b7e3ac6c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enabledColor: {r: 0.9811321, g: 0.5429522, b: 0.13883942, a: 1}
+  disabledColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+  buttonName: fineAdjust
 --- !u!20 &706903580138097826 stripped
 Camera:
   m_CorrespondingSourceObject: {fileID: 2892962359684941625, guid: 83d399ffe9bbef046b7d9ca75d2c5d0b,

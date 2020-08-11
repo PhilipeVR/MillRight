@@ -8,7 +8,7 @@ public class DRO_ButtonState : MonoBehaviour, IPointerClickHandler
 {
     [SerializeField] private Color enabledColor;
     [SerializeField] private Color disabledColor;
-    [SerializeField] public string buttonName; //change this to not hardcode
+    [SerializeField] public string buttonName; 
 
     private Button button;
     private Image image;

@@ -17,11 +17,9 @@ public class DRO_ButtonHandler : MonoBehaviour
     [SerializeField] private DRO_ButtonState zLockButton;
     [SerializeField] private DRO_ButtonState zeroButton;
     [SerializeField] private DRO_DisplayHandler displayHandler;
-    
-
-    //TEMPORARY BUTTONS
-    [SerializeField] private DRO_ButtonState QuillLockButton; // TEMPORARY
-    [SerializeField] private DRO_ButtonState FineAdjButton; // TEMPORARY
+   
+    [SerializeField] private DRO_ButtonState QuillLockButton; 
+    [SerializeField] private DRO_ButtonState FineAdjButton; 
 
     private string currentAxis;
 
