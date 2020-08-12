@@ -443,7 +443,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 103676645}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1810847909}
+        m_MethodName: Click_Mm
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &103676645
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4581,7 +4592,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 949662696}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1810847909}
+        m_MethodName: Click_QuillFeed
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &949662696
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7506,7 +7528,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1649589620}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1810847909}
+        m_MethodName: Click_Zero
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1649589620
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7869,9 +7902,9 @@ MonoBehaviour:
   xText: {fileID: 554158782}
   yText: {fileID: 928572596}
   zText: {fileID: 68134932}
-  inchButton: {fileID: 1937951556}
-  mmButton: {fileID: 103676647}
-  zeroButton: {fileID: 1649589622}
+  inchButton: {fileID: 1937951558}
+  mmButton: {fileID: 103676649}
+  zeroButton: {fileID: 1649589623}
 --- !u!114 &1810847909
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7893,6 +7926,7 @@ MonoBehaviour:
   yLock: {fileID: 1334058747}
   zLock: {fileID: 453831214}
   zero: {fileID: 1649589623}
+  displayHandler: {fileID: 1810847908}
   quillFeed: {fileID: 949662699}
   fineAdjust: {fileID: 2098731959}
 --- !u!1 &1849258730
@@ -8943,7 +8977,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1937951554}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1810847909}
+        m_MethodName: Click_Inch
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1937951554
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9236,7 +9281,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2098731956}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1810847909}
+        m_MethodName: Click_FineAdjust
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2098731956
 MonoBehaviour:
   m_ObjectHideFlags: 0

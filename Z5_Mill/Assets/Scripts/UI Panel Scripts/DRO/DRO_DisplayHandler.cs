@@ -14,9 +14,9 @@ public class DRO_DisplayHandler : MonoBehaviour
     [SerializeField] private Text yText;
     [SerializeField] private Text zText;
 
-    [SerializeField] private DRO_ButtonState inchButton;
-    [SerializeField] private DRO_ButtonState mmButton;
-    [SerializeField] private DRO_ButtonState zeroButton;
+    [SerializeField] private DRO_Button inchButton;
+    [SerializeField] private DRO_Button mmButton;
+    [SerializeField] private DRO_Button zeroButton;
 
     private float x0, x;
     private float y0, y;
@@ -41,12 +41,12 @@ public class DRO_DisplayHandler : MonoBehaviour
         // Need to convert distance from "metres" to "inch" or "mm"
         // Also make this update only when there is a change in these coords
 
-        if(inchButton.checkIfEnabled)
+        if(inchButton.Activated)
         {
             unitConversion = inch;
             //Debug.Log("Inch");
         }
-        if(mmButton.checkIfEnabled)
+        if(mmButton.Activated)
         {
             unitConversion = mm;
         }

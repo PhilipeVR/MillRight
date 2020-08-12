@@ -14,21 +14,19 @@ public class DRO_Manager : MonoBehaviour
     [SerializeField] private DRO_Button yLock;
     [SerializeField] private DRO_Button zLock;
     [SerializeField] private DRO_Button zero;
-    //[SerializeField] private DRO_DisplayHandler displayHandler;
+    [SerializeField] private DRO_DisplayHandler displayHandler;
     [SerializeField] private DRO_Button quillFeed; 
     [SerializeField] private DRO_Button fineAdjust; 
 
     bool toggle; // Activate or deactivate buttons
+    private string currentAxis;
 
     void start()
     {
-
+        // Units inch default
+        inch.Btn_SetEnabled(true);
+        mm.Btn_SetEnabled(false); 
     }
-
-
-    // These functions could alsmost certainly be replaced by using dictionaries
-    // Also, get rid of serialized references by using find object of type or something similar
-    // Clean-up later, time permitting
 
     public void Click_X(){
 
@@ -122,6 +120,44 @@ public class DRO_Manager : MonoBehaviour
             z.Btn_SetEnabled(toggle);
 
             quillFeed.Btn_SetEnabled(toggle);
+        }
+    }
+
+    public void Click_Inch(){
+
+        toggle = inch.Activated;
+        inch.Btn_SetEnabled(!toggle);
+
+        if (toggle == false) // Ensures all other buttons are deactivated
+        {
+            mm.Btn_SetEnabled(toggle);
+        }
+    }
+
+    public void Click_Mm(){
+
+        toggle = mm.Activated;
+        mm.Btn_SetEnabled(!toggle);
+
+        if (toggle == false) // Ensures all other buttons are deactivated
+        {
+            inch.Btn_SetEnabled(toggle);
+        }
+    }
+
+    public void Click_Zero()
+    {
+        if(x.Activated)
+        {
+            displayHandler.zero("x");
+        }
+        if(y.Activated)
+        {
+            displayHandler.zero("y");
+        }
+        if(fineAdjust.Activated || quillFeed.Activated || z.Activated)
+        {
+            displayHandler.zero("z");
         }
     }
 
