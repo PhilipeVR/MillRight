@@ -82,7 +82,8 @@ public class OnHover : MonoBehaviour
 
     public void SetClickedColor()
     {
-        GetComponent<Renderer>().material.color = onClickedColor;
+        GetComponent<Renderer>().material.color = Color.Lerp(basicColor, Color.black, 0.7f);
+        //GetComponent<Renderer>().material.color = onClickedColor;
         //GetComponent<Renderer>().material.color = hoverColor;
         hasBeenClicked = true;
     }
