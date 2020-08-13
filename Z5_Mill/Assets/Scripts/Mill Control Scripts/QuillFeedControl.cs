@@ -12,7 +12,7 @@ public class QuillFeedControl : MonoBehaviour
     [SerializeField]
     GameObject animObject, lockAnimObject;
 
-    [SerializeField] public DRO_ButtonState QuillLockButton; // TEMPORARY --> THIS SHOULD BE FOR QUILL FEED ONLY
+    [SerializeField] public DRO_Button QuillLockButton; // TEMPORARY --> THIS SHOULD BE FOR QUILL FEED ONLY
 
     [SerializeField]
     GameObject wheel, lockHandle;
@@ -60,7 +60,7 @@ public class QuillFeedControl : MonoBehaviour
     {
         if (enable)
         {
-            if (QuillLockButton.checkIfEnabled == true)
+            if (QuillLockButton.Activated == true)
             {
 
                 if (Input.mouseScrollDelta.y > 0f && !collided)

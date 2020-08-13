@@ -32,24 +32,24 @@ public class StaticRigidBody : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (quillFeedController.GetComponent<QuillFeedControl>().QuillLockButton.checkIfEnabled || fineAdjustmentController.GetComponent<FineAdjustmentControl>().FineAdjustmentButton.checkIfEnabled)
+        if (quillFeedController.GetComponent<QuillFeedControl>().QuillLockButton.Activated || fineAdjustmentController.GetComponent<FineAdjustmentControl>().FineAdjustmentButton.Activated)
         {
             quillFeedController.GetComponent<QuillFeedControl>().collided = true;
             fineAdjustmentController.GetComponent<FineAdjustmentControl>().collided = true;
         }
-        else if (XWheelController.GetComponent<XWheelControl>().XLockButton.checkIfEnabled && XWheelController.GetComponent<XWheelControl>().object_anim.GetFloat("Reverse") > 0)
+        else if (XWheelController.GetComponent<XWheelControl>().XLockButton.Activated && XWheelController.GetComponent<XWheelControl>().object_anim.GetFloat("Reverse") > 0)
         {
             XWheelController.GetComponent<XWheelControl>().leftCollision = true;
         }
-        else if (XWheelController.GetComponent<XWheelControl>().XLockButton.checkIfEnabled && XWheelController.GetComponent<XWheelControl>().object_anim.GetFloat("Reverse") < 0)
+        else if (XWheelController.GetComponent<XWheelControl>().XLockButton.Activated && XWheelController.GetComponent<XWheelControl>().object_anim.GetFloat("Reverse") < 0)
         {
             XWheelController.GetComponent<XWheelControl>().rightCollision = true;
         }
-        else if (YWheelController.GetComponent<YWheelControl>().YLockButton.checkIfEnabled && YWheelController.GetComponent<YWheelControl>().object_anim.GetFloat("Reverse") > 0)
+        else if (YWheelController.GetComponent<YWheelControl>().YLockButton.Activated && YWheelController.GetComponent<YWheelControl>().object_anim.GetFloat("Reverse") > 0)
         {
             YWheelController.GetComponent<YWheelControl>().forwardCollision = true;
         }
-        else if (YWheelController.GetComponent<YWheelControl>().YLockButton.checkIfEnabled && YWheelController.GetComponent<YWheelControl>().object_anim.GetFloat("Reverse") < 0)
+        else if (YWheelController.GetComponent<YWheelControl>().YLockButton.Activated && YWheelController.GetComponent<YWheelControl>().object_anim.GetFloat("Reverse") < 0)
         {
             YWheelController.GetComponent<YWheelControl>().backwardCollision = true;
         }

@@ -8,7 +8,7 @@ public class ZWheelControl : MonoBehaviour
     [SerializeField]
     GameObject animObject, lockAnimObject;
 
-    [SerializeField] DRO_ButtonState ZLockButton; // TEMPORARY --> THIS SHOULD BE FOR QUILL FEED ONLY
+    [SerializeField] DRO_Button ZLockButton; // TEMPORARY --> THIS SHOULD BE FOR QUILL FEED ONLY
 
     [SerializeField]
     GameObject wheel, lockHandle;
@@ -40,17 +40,17 @@ public class ZWheelControl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(ZLockButton.checkIfEnabled == true)
+        if(ZLockButton.Activated == true)
         {
             if (Input.mouseScrollDelta.y > 0f)
             {
                 object_anim.SetFloat("Reverse", 1);
-                setSpeed(0.05f);
+                setSpeed(0.25f);
             }
             else if (Input.mouseScrollDelta.y < 0f)
             {
                 object_anim.SetFloat("Reverse", -1);
-                setSpeed(0.05f);
+                setSpeed(0.25f);
             } else
             {
                 pause();

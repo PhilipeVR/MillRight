@@ -8,7 +8,7 @@ public class YWheelControl : MonoBehaviour
     [SerializeField]
     GameObject animObject, lockAnimObject;
 
-    [SerializeField] public DRO_ButtonState YLockButton;
+    [SerializeField] public DRO_Button YLockButton;
 
     [SerializeField]
     GameObject wheel, lockHandle;
@@ -44,7 +44,7 @@ public class YWheelControl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(YLockButton.checkIfEnabled == true)
+        if(YLockButton.Activated == true)
         {
             if (Input.mouseScrollDelta.y > 0f && !forwardCollision)
             {
