@@ -47,6 +47,11 @@ public class AnimatorController : MonoBehaviour
         animator.Play(initialClip.name, -1, 0);
         isActive = true;
         ActivateAnimator(true);
+        TriggerAnimationController triggerAnimation = GetComponent<TriggerAnimationController>();
+        if (triggerAnimation != null)
+        {
+            triggerAnimation.setAnimState(false);
+        }
     }
     public void ActivateAnimator(Boolean state)
     {
@@ -54,6 +59,11 @@ public class AnimatorController : MonoBehaviour
         animator.enabled = state;
         holder.SetActive(state);
         vise.SetActive(state);
+        TriggerAnimationController triggerAnimation = GetComponent<TriggerAnimationController>();
+        if (triggerAnimation != null)
+        {
+            triggerAnimation.activate(state);
+        }
     }
 
     public void TurnOn()
@@ -66,7 +76,11 @@ public class AnimatorController : MonoBehaviour
     {
         dummyBit.tag = stopTag;
         animator.SetFloat("TurnOFF", 0);
-
+        TriggerAnimationController triggerAnimation = GetComponent<TriggerAnimationController>();
+        if(triggerAnimation != null)
+        {
+            triggerAnimation.setAnimState(true);
+        }
         isActive = false;
     }
 
