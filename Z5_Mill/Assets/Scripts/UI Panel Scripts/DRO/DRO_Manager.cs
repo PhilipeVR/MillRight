@@ -28,6 +28,20 @@ public class DRO_Manager : MonoBehaviour
         mm.Btn_SetEnabled(false); 
     }
 
+    public void resetDRO(){
+
+        xLock.Btn_SetEnabled(false);
+        yLock.Btn_SetEnabled(false);
+        zLock.Btn_SetEnabled(false);
+
+        x.Btn_SetEnabled(false);
+        y.Btn_SetEnabled(false);
+        z.Btn_SetEnabled(false);
+
+        quillFeed.Btn_SetEnabled(false);
+        fineAdjust.Btn_SetEnabled(false);
+    }
+
     public void Click_X(){
 
         toggle = x.Activated;

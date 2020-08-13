@@ -9,20 +9,20 @@ public class ControlManager : MonoBehaviour
     [SerializeField] YWheelControl yWheelControl;
     [SerializeField] ZWheelControl zWheelControl;
 
-    [SerializeField] DRO_ButtonState XLockButton;
-    [SerializeField] DRO_ButtonState YLockButton;
-    [SerializeField] DRO_ButtonState ZLockButton;
+    [SerializeField] DRO_Button XLockButton;
+    [SerializeField] DRO_Button YLockButton;
+    [SerializeField] DRO_Button ZLockButton;
 
     //TEMPORARY
     [SerializeField] QuillFeedControl QuillFeedControl; // TEMPORARY
-    [SerializeField] DRO_ButtonState QuillLockButton; // TEMPORARY
-    [SerializeField] DRO_ButtonState FineLockButton; // TEMPORARY
+    [SerializeField] DRO_Button QuillLockButton; // TEMPORARY
+    [SerializeField] DRO_Button FineLockButton; // TEMPORARY
 
 
     // Update is called once per frame
     void Update()
     {
-        if(XLockButton.checkIfEnabled == true)
+        if(XLockButton.Activated == true)
         {
             xWheelControl.enabled = true;
             yWheelControl.enabled = false;
@@ -30,7 +30,7 @@ public class ControlManager : MonoBehaviour
             QuillFeedControl.enabled = false; // Temporary
 
         }
-        if(YLockButton.checkIfEnabled == true)
+        if(YLockButton.Activated == true)
         {
             yWheelControl.enabled = true;
             xWheelControl.enabled = false;
@@ -38,7 +38,7 @@ public class ControlManager : MonoBehaviour
             QuillFeedControl.enabled = false; // Temporary
 
         }
-        if(ZLockButton.checkIfEnabled == true)
+        if(ZLockButton.Activated == true)
         {
             zWheelControl.enabled = true;
             xWheelControl.enabled = false;
@@ -46,7 +46,7 @@ public class ControlManager : MonoBehaviour
             QuillFeedControl.enabled = false; // Temporary
 
         }
-        if(QuillLockButton.checkIfEnabled == true)
+        if(QuillLockButton.Activated == true)
         {
             QuillFeedControl.enabled = true; // Temporary
             zWheelControl.enabled = false;
