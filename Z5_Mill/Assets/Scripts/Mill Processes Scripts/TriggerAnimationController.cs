@@ -9,6 +9,7 @@ public class TriggerAnimationController : MonoBehaviour
     int index = 0;
     private Animator animator;
     [SerializeField] private string[] clipName;
+    [SerializeField] private string resetParam, restartParam;
     private List<AnimatorControllerParameter> parameters;
     private Boolean transitionDone, animDone, activated;
 
@@ -24,6 +25,7 @@ public class TriggerAnimationController : MonoBehaviour
             }
         }
         /*string s = "| ";
+        AnimationClip[] clips = animator.runtimeAnimatorController.animationClips;
         foreach (AnimationClip clip in clips)
         {
             s += clip.name + " | ";
@@ -34,8 +36,8 @@ public class TriggerAnimationController : MonoBehaviour
             d += cf.name + " | ";
         }
         Debug.Log(s);
-        Debug.Log(d);
-        */
+        Debug.Log(d);*/
+        
     }
 
     public void activate(Boolean state)
@@ -50,30 +52,29 @@ public class TriggerAnimationController : MonoBehaviour
     }
 
 
-    public void PlayAnimation(string transition, string animationName)
+    public Boolean PlayAnimation(string transition, string animationName)
     {
-
-
         if (index == 0 && activated && transition == parameters[index].name)
         {
             StartAnimation();
             index++;
-            return;
+            return true;
         }
 
-        if (index < parameters.Count - 1 && activated) {
+        if (index < parameters.Count && activated) {
             Debug.Log(animator.GetCurrentAnimatorStateInfo(0).normalizedTime);
             Boolean inRightTransition = animator.GetCurrentAnimatorStateInfo(0).normalizedTime > 1.0f;
             Debug.Log(inRightTransition);
             if (transition == parameters[index].name && inRightTransition && animationName == clipName[index])
             {
                 animator.SetBool(transition, true);
+            
                 index++;
                 checkTransitionEnd();
+                return true;
             }
         }
-        return;
-
+        return false;
     }
 
     public void checkTransitionEnd()
@@ -88,5 +89,48 @@ public class TriggerAnimationController : MonoBehaviour
     {
         animDone = state;
         transitionDone = state;
+    }
+
+    public void ResetParams()
+    {
+        for (int i = 0; i < parameters.Count; i++)
+        {
+            animator.SetBool(parameters[i].name, false);
+        }
+
+        animator.SetFloat(resetParam, 0f);
+        animator.SetFloat(restartParam, 0f);
+    }
+
+    public void ResetAnim()
+    {
+        animator.SetFloat(resetParam, 1f);
+
+    }
+
+    public void RestartAnim()
+    {
+        animator.SetFloat(restartParam, 1f);
+
+    }
+
+    public int Index
+    {
+        get => index;
+    }
+
+    public Boolean Done
+    {
+        get => animDone;
+    }
+
+    public string ResetParam
+    {
+        get => resetParam;
+    }
+
+    public string RestartParam
+    {
+        get => restartParam;
     }
 }

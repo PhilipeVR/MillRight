@@ -28,7 +28,7 @@ public class InteractableManager : MonoBehaviour
         {
             ON.interactable = true;
             DRO_BTN.interactable = true;
-            DRO_Panel.GetComponent<DRO_Manager>().resetDRO();
+            //DRO_Panel.GetComponent<DRO_Manager>().resetDRO();
             //setupSideMilling;
         }
         else if (dialogueName.Equals(facemilling))
@@ -40,11 +40,6 @@ public class InteractableManager : MonoBehaviour
 
     public void Transition(string dialogueName)
     {
-
-        if (ON.GetComponent<Toggle_On_Off>().getMillState())
-        {
-            ON.GetComponent<Toggle_On_Off>().OnOffToggle();
-        }
 
         NoInteraction();
 

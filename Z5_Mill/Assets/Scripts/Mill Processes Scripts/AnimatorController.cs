@@ -10,8 +10,9 @@ public class AnimatorController : MonoBehaviour
     [SerializeField] private GameObject bit, holder, dummyBit, vise;
     [SerializeField] private string drillTag;
     [SerializeField] private string stopTag;
+    [SerializeField] private string initialClip;
 
-    private AnimationClip initialClip;
+    private int counter = 0;
     private Boolean isActive = true;
     private AnimationEvent eventSys1, eventSys2;
     private Animator animator;
@@ -36,29 +37,42 @@ public class AnimatorController : MonoBehaviour
             }
         }
 
-        initialClip = animator.runtimeAnimatorController.animationClips[0];
-
     }
 
-
-
-    public void ResetAnim()
+    public void ResetAnim(Boolean prevState, AnimatorController prevAnim)
     {
-        animator.Play(initialClip.name, -1, 0);
-        isActive = true;
-        ActivateAnimator(true);
         TriggerAnimationController triggerAnimation = GetComponent<TriggerAnimationController>();
         if (triggerAnimation != null)
         {
             triggerAnimation.setAnimState(false);
+            triggerAnimation.ResetParams();
+            
         }
+        if (prevState)
+        {
+            prevAnim.setReset();
+        }
+        if (counter > 0)
+        {
+            setRestart();
+        }
+        
+        isActive = true;
+        ActivateAnimator(true);
+        counter++;
+
     }
     public void ActivateAnimator(Boolean state)
     {
         bit.SetActive(state);
+        if(animator == null)
+        {
+            animator = GetComponent<Animator>();
+        }
         animator.enabled = state;
         holder.SetActive(state);
         vise.SetActive(state);
+        //Debug.Log(bit.name + ": " + bit.activeSelf.ToString());
         TriggerAnimationController triggerAnimation = GetComponent<TriggerAnimationController>();
         if (triggerAnimation != null)
         {
@@ -86,11 +100,44 @@ public class AnimatorController : MonoBehaviour
 
     public void setAnimSpeed(float speed)
     {
+        Debug.Log(speed);
         animator.SetFloat("Speed", speed);
     }
 
-    public Boolean inAction()
+    public Boolean Active
     {
-        return isActive;
+        get => isActive;
+    }
+
+    public Boolean AnimationDone()
+    {
+        TriggerAnimationController triggerAnimation = GetComponent<TriggerAnimationController>();
+
+        if (triggerAnimation != null)
+        {
+            return triggerAnimation.Done;
+        }
+
+        return false;
+    }
+
+    public void setRestart()
+    {
+        TriggerAnimationController triggerAnimation = GetComponent<TriggerAnimationController>();
+
+        if (triggerAnimation != null)
+        {
+            triggerAnimation.RestartAnim();
+        }
+    }
+
+    public void setReset()
+    {
+        TriggerAnimationController triggerAnimation = GetComponent<TriggerAnimationController>();
+
+        if (triggerAnimation != null)
+        {
+            triggerAnimation.ResetAnim();
+        }
     }
 }
