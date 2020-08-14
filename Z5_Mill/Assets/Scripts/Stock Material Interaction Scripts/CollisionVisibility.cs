@@ -18,12 +18,14 @@ public class CollisionVisibility : MonoBehaviour
 
     GameObject sparks;
 
-    private float timerCountDown = 10.0f;
+    [SerializeField] private float timerCountDown = 10f;
+    [SerializeField] private Boolean reset = true;
     private bool isColliding = false;
+    private float initialCountdown;
 
     void Start()
     {
-
+        initialCountdown = timerCountDown;
         sparks = GameObject.Find(gameObjectParentName).transform.GetChild(0).gameObject;
         if (sparks != null)
         {
@@ -82,7 +84,16 @@ public class CollisionVisibility : MonoBehaviour
                     gameObject.GetComponent<Renderer>().enabled = false;
                     Destroy(gameObject);
                     Destroy(this);
-                    collison.transform.gameObject.GetComponent<StaticRigidBody>().endCollision();
+                    StaticRigidBody staticRigidBody = collison.transform.gameObject.GetComponent<StaticRigidBody>();
+                    if(staticRigidBody != null)
+                    {
+                        staticRigidBody.endCollision();
+                    }
+                    BitCollisionController bitCollisionController = collison.transform.gameObject.GetComponent<BitCollisionController>();
+                    if (bitCollisionController != null)
+                    {
+                        bitCollisionController.EndCollsion();
+                    }
                 }
                 sparks.SetActive(false);
             }
@@ -99,9 +110,11 @@ public class CollisionVisibility : MonoBehaviour
     {
         if (collision.collider.tag == collisionTag)
         {
-            
+            if (reset)
+            {
+                timerCountDown = initialCountdown;
+            }
             isColliding = false;
-            timerCountDown = 1f;
             sparks.SetActive(false);
         }
     }

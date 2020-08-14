@@ -12,6 +12,7 @@ public class ComponentManager : MonoBehaviour
     [SerializeField] private Text namePart, info, partsExamined, totalNumOfParts;
     [SerializeField] private Image infoImage;
     [SerializeField] private string initialTextFR, namePartFR;
+    [SerializeField] private Checklist checklist;
     private string initialText, initialName;
 
     public Boolean language = true;
@@ -34,6 +35,7 @@ public class ComponentManager : MonoBehaviour
         counter = 0;
         numOfParts = details.Count;
         totalNumOfParts.text = totalParts + numOfParts.ToString();
+        checklist.SetupToggleList(details);
         updateCounter();
         continueBTN.SetActive(false);
         menuBTN.SetActive(false);
@@ -84,6 +86,7 @@ public class ComponentManager : MonoBehaviour
 
         }
 
+        checklist.LanguageSwitch();
         language = !language;
     }
 

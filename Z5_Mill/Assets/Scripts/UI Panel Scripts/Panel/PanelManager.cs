@@ -8,23 +8,21 @@ public class PanelManager : MonoBehaviour
 {
     [SerializeField] private GameObject DROPanel;
     [SerializeField] private GameObject toolsPanel;
-    [SerializeField] private GameObject diagramPanel;
-    
+   
 
     // Start is called before the first frame update
     void Start()
     {
         DROPanel.SetActive(true);
         toolsPanel.SetActive(false);
-        diagramPanel.SetActive(false);
     }
 
     public void UpdateUIPanel (){
 
-        if(diagramPanel.activeSelf) // Close other panels
-        {
-            DROPanel.SetActive(false);
-            toolsPanel.SetActive(false);
-        }
+        // if(diagramPanel.activeSelf) // Close other panels
+        // {
+        //     DROPanel.SetActive(false);
+        //     toolsPanel.SetActive(false);
+        // }
     }
 }

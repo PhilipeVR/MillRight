@@ -12,7 +12,7 @@ public class FineAdjustmentControl : MonoBehaviour
     [SerializeField]
     GameObject animObject;
 
-    [SerializeField] public DRO_ButtonState FineAdjustmentButton; // TEMPORARY --> THIS SHOULD BE FOR QUILL FEED ONLY
+    [SerializeField] public DRO_Button FineAdjustmentButton; // TEMPORARY --> THIS SHOULD BE FOR QUILL FEED ONLY
 
     [SerializeField]
     public GameObject fineAdjustment;
@@ -64,7 +64,7 @@ public class FineAdjustmentControl : MonoBehaviour
 
             prevAdjustment = fineAdjustment;
 
-            if (FineAdjustmentButton.checkIfEnabled == true)
+            if (FineAdjustmentButton.Activated == true)
             {
 
                 if (Input.mouseScrollDelta.y > 0f && !collided)

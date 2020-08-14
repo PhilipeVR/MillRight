@@ -8,6 +8,7 @@ public class LanguageSceneSwitcher : MonoBehaviour
 {
     // Start is called before the first frame update
     public List<ToggleText> toggleList;
+    public ToolTip toggleHint;
     public LanguageSceneToggle languageScene;
     public DialogueManager toggleLangManager;
     public ComponentManager toggleComponentLangManager;
@@ -44,6 +45,10 @@ public class LanguageSceneSwitcher : MonoBehaviour
         if(toolHolderManager != null)
         {
             toolHolderManager.ChangeLanguage();
+        }
+        if(toggleHint != null)
+        {
+            toggleHint.toggleLang();
         }
     }
 
