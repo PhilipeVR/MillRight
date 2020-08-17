@@ -8,6 +8,7 @@ public class BitCollisionController : MonoBehaviour
     private Vector3 init_pos;
     private Quaternion init_rot;
     [SerializeField] private ProcessAnimationController controller;
+    [SerializeField] private string StockTag;
 
     private void Start()
     {
@@ -32,22 +33,27 @@ public class BitCollisionController : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        Debug.Log("Im In A Collsion");
-        controller.StartCollsion();
+        if(collision.transform.tag == StockTag)
+        {
+            //Debug.Log("Im In A Collsion");
+            controller.StartCollsion();
+        }
+
     }
 
     private void OnCollisionStay(Collision collision)
     {
-        Debug.Log("Im Still In A Collsion");
-
-        controller.StartCollsion();
+        if (collision.transform.tag == StockTag)
+        {
+            //Debug.Log("Im Still In A Collsion");
+            controller.StartCollsion();
+        }
     }
 
 
     public void EndCollsion()
     {
-        Debug.Log("Im Left the Collsion");
-
+        //Debug.Log("Im Left the Collsion");
         controller.EndCollision();
     }
 }

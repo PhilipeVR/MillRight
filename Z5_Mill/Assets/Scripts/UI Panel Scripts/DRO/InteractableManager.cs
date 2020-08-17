@@ -8,9 +8,7 @@ public class InteractableManager : MonoBehaviour
     [SerializeField] public Button ON, MainMenu,Next, FaceMill, SideMill, Drill, DRO_BTN;
     [SerializeField] public GameObject DRO_Panel;
     [SerializeField] public string intro, drilling, sidemilling, facemilling;
-    [SerializeField] public DRO_Panel_Interactable_Manager DRO_manager;
 
-    // Start is called before the first frame update
     void Awake()
     {
         NoInteraction();
@@ -30,7 +28,7 @@ public class InteractableManager : MonoBehaviour
         {
             ON.interactable = true;
             DRO_BTN.interactable = true;
-            DRO_Panel.GetComponent<DRO_Manager>().resetDRO();
+            //DRO_Panel.GetComponent<DRO_Manager>().resetDRO();
             //setupSideMilling;
         }
         else if (dialogueName.Equals(facemilling))
@@ -38,17 +36,10 @@ public class InteractableManager : MonoBehaviour
             ON.interactable = true;
             DRO_BTN.interactable = true;
         }
-
-        DRO_manager.SetupDRO(dialogueName);
     }
 
     public void Transition(string dialogueName)
     {
-
-        if (ON.GetComponent<Toggle_On_Off>().getMillState())
-        {
-            ON.GetComponent<Toggle_On_Off>().OnOffToggle();
-        }
 
         NoInteraction();
 

@@ -20,18 +20,26 @@ public class Toggle_On_Off : MonoBehaviour
 
     public void OnOffToggle()
     {
-        if (!millOn)
+        GameButtonManager buttonManager = manager.GetComponent<GameButtonManager>();
+
+        if (millOn)
         {
             transform.GetChild(0).gameObject.GetComponent<Text>().text = OnText;
             GetComponent<Image>().color = Color.green;
-            manager.GetComponent<GameButtonManager>().turnOn();
+            if (buttonManager != null)
+            {
+                buttonManager.turnOn();
+            }
 
         }
         else
         {
             transform.GetChild(0).gameObject.GetComponent<Text>().text = OffText;
             GetComponent<Image>().color = Color.red;
-            manager.GetComponent<GameButtonManager>().turnOff();
+            if(buttonManager != null)
+            {
+                buttonManager.turnOff();
+            }
 
 
         }
