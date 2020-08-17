@@ -372,7 +372,6 @@ GameObject:
   - component: {fileID: 103676645}
   - component: {fileID: 103676644}
   - component: {fileID: 103676649}
-  - component: {fileID: 103676647}
   - component: {fileID: 103676648}
   m_Layer: 5
   m_Name: mmButton
@@ -492,23 +491,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 103676642}
   m_CullTransparentMesh: 0
---- !u!114 &103676647
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 103676642}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 684667532f3a4d943b3719ab79ec9ce1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enabledColor: {r: 0.9811321, g: 0.56461376, b: 0.56461376, a: 1}
-  disabledColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-  buttonName: mmButton
-  checkIfEnabled: 0
-  interactable: 1
 --- !u!114 &103676648
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1781,12 +1763,12 @@ MonoBehaviour:
   xWheelControl: {fileID: 1065909904}
   yWheelControl: {fileID: 1616185320}
   zWheelControl: {fileID: 1077523318}
-  XLockButton: {fileID: 1079926640}
-  YLockButton: {fileID: 1334058743}
-  ZLockButton: {fileID: 453831210}
+  XLockButton: {fileID: 1079926644}
+  YLockButton: {fileID: 1334058747}
+  ZLockButton: {fileID: 453831214}
   QuillFeedControl: {fileID: 1020964412}
-  QuillLockButton: {fileID: 949662694}
-  FineLockButton: {fileID: 2098731954}
+  QuillLockButton: {fileID: 949662699}
+  FineLockButton: {fileID: 2098731959}
 --- !u!4 &336104565
 Transform:
   m_ObjectHideFlags: 0
@@ -2298,6 +2280,12 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 2443960360639499163}
   m_PrefabAsset: {fileID: 0}
+--- !u!95 &402590985 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 3312799077509140534, guid: 83d399ffe9bbef046b7d9ca75d2c5d0b,
+    type: 3}
+  m_PrefabInstance: {fileID: 2443960360639499163}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &424435378
 GameObject:
   m_ObjectHideFlags: 0
@@ -2559,7 +2547,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animObject: {fileID: 485619489}
-  FineAdjustmentButton: {fileID: 2098731954}
+  FineAdjustmentButton: {fileID: 2098731959}
   fineAdjustment: {fileID: 933370981}
   enable: 1
   collided: 0
@@ -2578,7 +2566,6 @@ GameObject:
   - component: {fileID: 453831212}
   - component: {fileID: 453831211}
   - component: {fileID: 453831214}
-  - component: {fileID: 453831210}
   m_Layer: 5
   m_Name: ZLockButton
   m_TagString: Untagged
@@ -2605,23 +2592,6 @@ RectTransform:
   m_AnchoredPosition: {x: 20, y: -30}
   m_SizeDelta: {x: 15, y: 15}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &453831210
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 453831208}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 684667532f3a4d943b3719ab79ec9ce1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enabledColor: {r: 0.6052662, g: 0.98039216, b: 0.5647059, a: 1}
-  disabledColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-  buttonName: zLockButton
-  checkIfEnabled: 0
-  interactable: 1
 --- !u!114 &453831211
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3978,7 +3948,6 @@ GameObject:
   - component: {fileID: 910620603}
   - component: {fileID: 910620602}
   - component: {fileID: 910620606}
-  - component: {fileID: 910620605}
   m_Layer: 5
   m_Name: Z_Button
   m_TagString: Untagged
@@ -4097,23 +4066,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 910620600}
   m_CullTransparentMesh: 0
---- !u!114 &910620605
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 910620600}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 684667532f3a4d943b3719ab79ec9ce1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enabledColor: {r: 0.9811321, g: 0.56461376, b: 0.56461376, a: 1}
-  disabledColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-  buttonName: zButton
-  checkIfEnabled: 0
-  interactable: 1
 --- !u!114 &910620606
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4504,7 +4456,6 @@ GameObject:
   - component: {fileID: 949662696}
   - component: {fileID: 949662695}
   - component: {fileID: 949662699}
-  - component: {fileID: 949662694}
   - component: {fileID: 949662698}
   m_Layer: 5
   m_Name: ZQuillLock
@@ -4533,23 +4484,6 @@ RectTransform:
   m_AnchoredPosition: {x: 20, y: -70}
   m_SizeDelta: {x: 15, y: 15}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &949662694
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 949662692}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 684667532f3a4d943b3719ab79ec9ce1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enabledColor: {r: 0.9811321, g: 0.5429522, b: 0.13883942, a: 1}
-  disabledColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-  buttonName: QuillLockButton
-  checkIfEnabled: 0
-  interactable: 1
 --- !u!114 &949662695
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4795,7 +4729,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animObject: {fileID: 886245741}
   lockAnimObject: {fileID: 1362754916}
-  QuillLockButton: {fileID: 949662694}
+  QuillLockButton: {fileID: 949662699}
   wheel: {fileID: 1773445643}
   lockHandle: {fileID: 1364267378}
   enable: 1
@@ -4912,14 +4846,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animObject: {fileID: 402590982}
   lockAnimObject: {fileID: 635628748}
-  XLockButton: {fileID: 1079926640}
+  XLockButton: {fileID: 1079926644}
   wheel: {fileID: 1155322361}
   lockHandle: {fileID: 1677665264}
   enable: 1
   leftCollision: 0
   rightCollision: 0
-  object_anim: {fileID: 0}
-  lock_anim: {fileID: 0}
+  object_anim: {fileID: 402590985}
+  lock_anim: {fileID: 402590985}
 --- !u!4 &1065909905
 Transform:
   m_ObjectHideFlags: 0
@@ -4979,7 +4913,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animObject: {fileID: 989592093}
   lockAnimObject: {fileID: 787070215}
-  ZLockButton: {fileID: 453831210}
+  ZLockButton: {fileID: 453831214}
   wheel: {fileID: 346131233}
   lockHandle: {fileID: 553108621}
   enable: 1
@@ -4996,7 +4930,6 @@ GameObject:
   - component: {fileID: 1079926642}
   - component: {fileID: 1079926641}
   - component: {fileID: 1079926644}
-  - component: {fileID: 1079926640}
   m_Layer: 5
   m_Name: XLockButton
   m_TagString: Untagged
@@ -5023,23 +4956,6 @@ RectTransform:
   m_AnchoredPosition: {x: 20, y: 90}
   m_SizeDelta: {x: 15, y: 15}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1079926640
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1079926638}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 684667532f3a4d943b3719ab79ec9ce1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enabledColor: {r: 0.6052662, g: 0.98039216, b: 0.5647059, a: 1}
-  disabledColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-  buttonName: xLockButton
-  checkIfEnabled: 0
-  interactable: 1
 --- !u!114 &1079926641
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5304,7 +5220,6 @@ GameObject:
   - component: {fileID: 1110454975}
   - component: {fileID: 1110454974}
   - component: {fileID: 1110454978}
-  - component: {fileID: 1110454977}
   m_Layer: 5
   m_Name: X_Button
   m_TagString: Untagged
@@ -5423,23 +5338,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1110454972}
   m_CullTransparentMesh: 0
---- !u!114 &1110454977
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1110454972}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 684667532f3a4d943b3719ab79ec9ce1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enabledColor: {r: 0.9811321, g: 0.56461376, b: 0.56461376, a: 1}
-  disabledColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-  buttonName: xButton
-  checkIfEnabled: 0
-  interactable: 1
 --- !u!114 &1110454978
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5866,7 +5764,6 @@ GameObject:
   - component: {fileID: 1334058745}
   - component: {fileID: 1334058744}
   - component: {fileID: 1334058747}
-  - component: {fileID: 1334058743}
   m_Layer: 5
   m_Name: YLockButton
   m_TagString: Untagged
@@ -5893,23 +5790,6 @@ RectTransform:
   m_AnchoredPosition: {x: 20, y: 30}
   m_SizeDelta: {x: 15, y: 15}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1334058743
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1334058741}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 684667532f3a4d943b3719ab79ec9ce1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enabledColor: {r: 0.6052662, g: 0.98039216, b: 0.5647059, a: 1}
-  disabledColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-  buttonName: yLockButton
-  checkIfEnabled: 0
-  interactable: 1
 --- !u!114 &1334058744
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6711,7 +6591,6 @@ GameObject:
   - component: {fileID: 1499001489}
   - component: {fileID: 1499001488}
   - component: {fileID: 1499001492}
-  - component: {fileID: 1499001491}
   m_Layer: 5
   m_Name: Y_Button
   m_TagString: Untagged
@@ -6830,23 +6709,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1499001486}
   m_CullTransparentMesh: 0
---- !u!114 &1499001491
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1499001486}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 684667532f3a4d943b3719ab79ec9ce1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enabledColor: {r: 0.9811321, g: 0.56461376, b: 0.56461376, a: 1}
-  disabledColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-  buttonName: yButton
-  checkIfEnabled: 0
-  interactable: 1
 --- !u!114 &1499001492
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6936,6 +6798,57 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1505495733}
   m_CullTransparentMesh: 0
+--- !u!1 &1506251212
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1506251213}
+  - component: {fileID: 1506251214}
+  m_Layer: 0
+  m_Name: MobileCamController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1506251213
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1506251212}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 870283013555409098}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1506251214
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1506251212}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88c5342e5ceb42a4597d9a1f594a7267, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cam: {fileID: 963194227}
+  target: {fileID: 697501552}
+  distanceToTarget: 5
+  lookSpeedH: 2
+  lookSpeedV: 2
+  zoomSpeed: 2
+  dragSpeed: 6
+  panlLimit: {x: 2, y: 2}
 --- !u!1 &1519603755
 GameObject:
   m_ObjectHideFlags: 0
@@ -7423,14 +7336,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animObject: {fileID: 870283013555409097}
   lockAnimObject: {fileID: 870283013826537361}
-  YLockButton: {fileID: 1334058743}
+  YLockButton: {fileID: 1334058747}
   wheel: {fileID: 5175314770203662113}
   lockHandle: {fileID: 8619910113599060837}
   enable: 1
   forwardCollision: 0
   backwardCollision: 0
-  object_anim: {fileID: 0}
-  lock_anim: {fileID: 0}
+  object_anim: {fileID: 402590985}
+  lock_anim: {fileID: 402590985}
 --- !u!4 &1616185321
 Transform:
   m_ObjectHideFlags: 0
@@ -7456,7 +7369,6 @@ GameObject:
   - component: {fileID: 1649589618}
   - component: {fileID: 1649589621}
   - component: {fileID: 1649589620}
-  - component: {fileID: 1649589622}
   - component: {fileID: 1649589619}
   - component: {fileID: 1649589623}
   m_Layer: 5
@@ -7577,23 +7489,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1649589617}
   m_CullTransparentMesh: 0
---- !u!114 &1649589622
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1649589617}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 684667532f3a4d943b3719ab79ec9ce1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enabledColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-  disabledColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-  buttonName: zeroButton
-  checkIfEnabled: 0
-  interactable: 1
 --- !u!114 &1649589623
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7780,7 +7675,6 @@ GameObject:
   - component: {fileID: 1810847904}
   - component: {fileID: 1810847907}
   - component: {fileID: 1810847906}
-  - component: {fileID: 1810847905}
   - component: {fileID: 1810847908}
   - component: {fileID: 1810847909}
   m_Layer: 5
@@ -7823,30 +7717,6 @@ RectTransform:
   m_AnchoredPosition: {x: -120, y: -119.99997}
   m_SizeDelta: {x: 240, y: 240}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1810847905
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1810847903}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7e12ea44c4330384b97cac27b9f21160, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  inchButton: {fileID: 1937951556}
-  mmButton: {fileID: 103676647}
-  xButton: {fileID: 1110454977}
-  yButton: {fileID: 1499001491}
-  zButton: {fileID: 910620605}
-  xLockButton: {fileID: 1079926640}
-  yLockButton: {fileID: 1334058743}
-  zLockButton: {fileID: 453831210}
-  zeroButton: {fileID: 1649589622}
-  displayHandler: {fileID: 1810847908}
-  QuillLockButton: {fileID: 949662694}
-  FineAdjButton: {fileID: 2098731954}
 --- !u!114 &1810847906
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7891,7 +7761,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1810847903}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b88138f0b0408974e83a3bb4e1a30215, type: 3}
   m_Name: 
@@ -8905,7 +8775,6 @@ GameObject:
   - component: {fileID: 1937951554}
   - component: {fileID: 1937951553}
   - component: {fileID: 1937951558}
-  - component: {fileID: 1937951556}
   - component: {fileID: 1937951557}
   m_Layer: 5
   m_Name: inchButton
@@ -9026,23 +8895,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1937951551}
   m_CullTransparentMesh: 0
---- !u!114 &1937951556
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1937951551}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 684667532f3a4d943b3719ab79ec9ce1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enabledColor: {r: 0.9811321, g: 0.56461376, b: 0.56461376, a: 1}
-  disabledColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-  buttonName: inchButton
-  checkIfEnabled: 0
-  interactable: 1
 --- !u!114 &1937951557
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9193,7 +9045,6 @@ GameObject:
   - component: {fileID: 2098731956}
   - component: {fileID: 2098731955}
   - component: {fileID: 2098731959}
-  - component: {fileID: 2098731954}
   - component: {fileID: 2098731958}
   m_Layer: 5
   m_Name: ZFineLock
@@ -9222,23 +9073,6 @@ RectTransform:
   m_AnchoredPosition: {x: 20, y: -90}
   m_SizeDelta: {x: 15, y: 15}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &2098731954
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2098731952}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 684667532f3a4d943b3719ab79ec9ce1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enabledColor: {r: 0.9811321, g: 0.5429522, b: 0.13883942, a: 1}
-  disabledColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-  buttonName: FineLockButton
-  checkIfEnabled: 0
-  interactable: 1
 --- !u!114 &2098731955
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9386,6 +9220,12 @@ Camera:
 --- !u!1 &870283013555409097 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3312799079067245394, guid: 83d399ffe9bbef046b7d9ca75d2c5d0b,
+    type: 3}
+  m_PrefabInstance: {fileID: 2443960360639499163}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &870283013555409098 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3312799079067245395, guid: 83d399ffe9bbef046b7d9ca75d2c5d0b,
     type: 3}
   m_PrefabInstance: {fileID: 2443960360639499163}
   m_PrefabAsset: {fileID: 0}
