@@ -3,8 +3,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class ClipTrigger
 {
+
     private int anim;
     private string[] transitionParameter;
     private string[] animationName;
@@ -22,7 +24,7 @@ public class ClipTrigger
         this.anim = anim;
         this.index = index;
         
-        /*string e = "| ";
+        string e = "| ";
         foreach (string f in animationName)
         {
             e += f + " | ";
@@ -40,7 +42,7 @@ public class ClipTrigger
         }
         Debug.Log("ClipTrigger Transition Params " + anim.ToString() + ": "  + c);
         Debug.Log("ClipTrigger Indexes " + anim.ToString() + ": " + d);
-        Debug.Log("ClipTrigger Animation Names " + anim.ToString() + ": " + e);*/
+        Debug.Log("ClipTrigger Animation Names " + anim.ToString() + ": " + e);
 
     }
 

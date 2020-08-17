@@ -100,7 +100,7 @@ public class AnimatorController : MonoBehaviour
 
     public void setAnimSpeed(float speed)
     {
-        Debug.Log(speed);
+        //Debug.Log(speed);
         animator.SetFloat("Speed", speed);
     }
 

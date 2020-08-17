@@ -54,6 +54,7 @@ public class TriggerAnimationController : MonoBehaviour
 
     public Boolean PlayAnimation(string transition, string animationName)
     {
+
         if (index == 0 && activated && transition == parameters[index].name)
         {
             StartAnimation();
@@ -61,9 +62,10 @@ public class TriggerAnimationController : MonoBehaviour
             return true;
         }
 
+
         if (index < parameters.Count && activated) {
-            Debug.Log(animator.GetCurrentAnimatorStateInfo(0).normalizedTime);
-            Boolean inRightTransition = animator.GetCurrentAnimatorStateInfo(0).normalizedTime > 1.0f;
+            Debug.Log("Animation Time: " + animator.GetCurrentAnimatorStateInfo(0).normalizedTime);
+            Boolean inRightTransition = animator.GetCurrentAnimatorStateInfo(0).normalizedTime > 1f;
             Debug.Log(inRightTransition);
             if (transition == parameters[index].name && inRightTransition && animationName == clipName[index])
             {

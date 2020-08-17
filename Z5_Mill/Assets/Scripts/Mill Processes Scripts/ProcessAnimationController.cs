@@ -50,6 +50,7 @@ public class ProcessAnimationController : MonoBehaviour
             {
                 controller = operations[index];
                 controller.ResetAnim(prevState, prevController);
+                m_index = index;
             }
         }
     }
