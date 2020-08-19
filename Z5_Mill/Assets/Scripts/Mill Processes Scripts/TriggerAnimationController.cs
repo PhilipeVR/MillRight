@@ -57,6 +57,7 @@ public class TriggerAnimationController : MonoBehaviour
 
         if (index == 0 && activated && transition == parameters[index].name)
         {
+            ResetLoopParams();
             StartAnimation();
             index++;
             return true;
@@ -95,25 +96,38 @@ public class TriggerAnimationController : MonoBehaviour
 
     public void ResetParams()
     {
+        Debug.Log("ResetParams: " + index);
         for (int i = 0; i < parameters.Count; i++)
         {
             animator.SetBool(parameters[i].name, false);
         }
+        index = 0;
 
+    }
+
+    private void ResetLoopParams()
+    {
         animator.SetFloat(resetParam, 0f);
         animator.SetFloat(restartParam, 0f);
     }
 
     public void ResetAnim()
     {
+        Debug.Log("TriggerAnimationController - " + name + ": " + resetParam);
         animator.SetFloat(resetParam, 1f);
 
     }
 
     public void RestartAnim()
     {
+        Debug.Log("TriggerAnimationController - " + name + ": " + restartParam);
         animator.SetFloat(restartParam, 1f);
 
+    }
+
+    public Boolean Active
+    {
+        get => activated;
     }
 
     public int Index

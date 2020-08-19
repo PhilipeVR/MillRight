@@ -46,7 +46,7 @@ public class AnimClipTrigger : MonoBehaviour
         if (colorChange && CheckManager())
         {
             GetComponent<Renderer>().material.color = clickedColor;
-                        if(activateOnClick != null)
+            if(activateOnClick != null)
             {
                 activateOnClick.SetActive(true);
                 gameObject.SetActive(false);
@@ -75,6 +75,20 @@ public class AnimClipTrigger : MonoBehaviour
     private Boolean CheckManager()
     {
         return manager.Index == anim;
+    }
+
+    public void Reset()
+    {
+
+        if (colorChange)
+        {
+            GetComponent<Renderer>().material.color = basicColor;
+            if (activateOnClick != null)
+            {
+                gameObject.SetActive(true);
+                activateOnClick.SetActive(false);
+            }
+        }
     }
 
 

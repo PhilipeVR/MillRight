@@ -26,5 +26,9 @@ public class DialogueTrigger : MonoBehaviour
         manager.Transition(gameDialogues[currentIndex].name);
     }
 
-    
+    public void InteractButton()
+    {
+        manager.InteractButton(gameDialogues[currentIndex].name);
+    }
+
 }

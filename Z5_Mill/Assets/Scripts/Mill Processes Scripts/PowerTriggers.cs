@@ -44,4 +44,15 @@ public class PowerTriggers : MonoBehaviour
             buttonToggle.OnOffToggle();
         }
     }
+
+    public void ResetTriggers(int i)
+    {
+        foreach (PowerButtonToggle toggle in powers)
+        {
+            if (toggle.Anim == i)
+            {
+                toggle.Index = 0;
+            }
+        }
+    }
 }

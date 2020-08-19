@@ -6,6 +6,8 @@ using UnityEngine.UI;
 
 public class DialogueManager : MonoBehaviour
 {
+    [SerializeField] private ProcessAnimationController animationController;
+    private int counter;
     public GameObject DeactivateAtEndDialogue;
     public DialogueTrigger trigger;
     public Text nameText;
@@ -24,6 +26,7 @@ public class DialogueManager : MonoBehaviour
     private string titleLang;
 
     void Awake () {
+        counter = 0;
         sentences = new Queue<string>();
         sentencesFR = new Queue<string>();
         index = 1;
@@ -100,7 +103,34 @@ public class DialogueManager : MonoBehaviour
     void EndDialogue()
     {
         DeactivateAtEndDialogue.SetActive(false);
-        trigger.TransitionDialogue();
+        if(!animationController.Operation.TriggerAnimation.Done && animationController.Operation.TriggerAnimation.Active)
+        {
+            trigger.InteractButton();
+        }
+        else if (animationController.Operation.TriggerAnimation.Done || (counter == 0 && !animationController.Operation.TriggerAnimation.Active))
+        {
+            trigger.TransitionDialogue();
+            counter++;
+        }
+
+    }
+
+    public void SkipDialogue()
+    {
+        if (animationController.Operation.TriggerAnimation.Done && animationController.Operation.TriggerAnimation.Active)
+        {
+            DeactivateAtEndDialogue.SetActive(false);
+            trigger.TransitionDialogue();
+            counter++;
+        }
+    }
+
+    void OnGUI()
+    {
+        if (Event.current.Equals(Event.KeyboardEvent(KeyCode.N.ToString())))
+        {
+            SkipDialogue();
+        }
     }
 
     public void switchLang() {

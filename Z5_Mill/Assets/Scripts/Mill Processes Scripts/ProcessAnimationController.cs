@@ -60,4 +60,9 @@ public class ProcessAnimationController : MonoBehaviour
         get => m_index;
     }
 
+    public AnimatorController Operation
+    {
+        get => operations[Index];
+    }
+
 }

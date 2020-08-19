@@ -38,17 +38,26 @@ MonoBehaviour:
   - name: Getting Started - Drilling
     frenchName: "Mise en route - Per\xE7age "
     sentences:
-    - Let's first examine the setup. The workpiece is firmly clamped into the vise
+    - 'Let''s first examine the setup. The workpiece is firmly clamped into the vise
       - it is important that the vice is not clamped too tightly, as this could deform
       the workpiece.
-    - The drill bit is also fixtured inside the drill chuck, and the drill chuck
+
+
+      Hint: Click on the workpiece'
+    - 'The drill bit is also fixtured inside the drill chuck, and the drill chuck
       is secured to the head of the mill.
+
+
+      Hint: Click on vise bolt'
     - There are also a few things to keep in mind when positioning the mill for drilling
       operations.
     - First locate the spot on the workpiece that you need to drill. Often times
       a centre-punch is used to mark this location.
-    - Next lower the head of the mill such that it is only a couple inches above
+    - 'Next lower the head of the mill such that it is only a couple inches above
       the workpiece
+
+
+      Hint: Click on Z Button in DRO Panel'
     - Now we can adjust the x and y position of the table to align the spot to drill
       directly under the drill-bit
     - With the workpiece and tool in position, we are almost ready to begin drilling.
@@ -69,11 +78,22 @@ MonoBehaviour:
 
       RPM
       = 640 RPM'
-    - With the correct speed set we can now turn on the machine.
-    - Proceed to lower the spindle with the quill feed until you touch the surface.
+    - 'With the correct speed set we can now turn on the machine.
+
+
+      Hint: Click
+      ON Button'
+    - 'Proceed to lower the spindle with the quill feed until you touch the surface.
       Remove material from the workpiece in increments by raising and lowering the
       drill in a pecking motion
-    - Continue until the drill bit has piereced through the matieral.
+
+
+      Hint: Click Quill Button in DRO Panel'
+    - 'Continue until the drill bit has piereced through the matieral.
+
+
+      Hint:
+      Click OFF Button'
     - Well done! Next we will learn side milling.
     sentencesFR:
     - "Examinons d'abord la configuration. La pi\xE8ce est fermement fix\xE9e dans
@@ -126,20 +146,47 @@ MonoBehaviour:
     - Face milling is the process of removing material from the face of a workpiece.
       Here we will use the same end mill that was used previously for the side milling
       operation
-    - The process here is very similar to the side milling operation.
-    - We will first lower the tool until it touches the surface, set the reference
+    - 'The process here is very similar to the side milling operation.
+
+
+      Hint:
+      Click on workpiece'
+    - 'We will first lower the tool until it touches the surface, set the reference
       point, move off of the surface, lower the depth of cut, then walk across the
       surface. removing material
-    - Proceed by lowering the head of the machine until the endmill touches the surface.
-    - Lower the quill feed so that the tool is now only slightly above the workpiece
+
+
+      Hint: Click on vise bolt'
+    - 'Proceed by lowering the head of the machine until the endmill touches the
+      surface.
+
+
+      Hint: Click Z Button on DRO Panel'
+    - 'Lower the quill feed so that the tool is now only slightly above the workpiece
       and the lock the quill into position
-    - Now you may turn on the machine.
-    - Proceed by using the fine adjustment knob to lower the tool until it contacts
+
+
+      Hint: Click Y Button on DRO Panel'
+    - 'Now you may turn on the machine.
+
+
+      Hint: Click ON Button'
+    - 'Proceed by using the fine adjustment knob to lower the tool until it contacts
       the surface of the workpiece
-    - Now you will set the reference point in the z direction, and then move the
+
+
+      Hint: Click Quill Button on DRO Panel'
+    - 'Now you will set the reference point in the z direction, and then move the
       tool off the workpiece by moving the table in the x direction.
-    - As before, set the depth of cut to 0.01 inch (0.254 mm) and walk across the
+
+
+      Hint:
+      Click X Button on DRO Panel'
+    - 'As before, set the depth of cut to 0.01 inch (0.254 mm) and walk across the
       surface of the material
+
+
+      Hint: Click OFF Button'
     - Similarly as with side milling, this process can be repeated many times until
       the desired dimensions are achieved
     sentencesFR:
@@ -178,28 +225,66 @@ MonoBehaviour:
   - name: Getting Started - Side Milling
     frenchName: "Mise en route - Fraisage lat\xE9rale"
     sentences:
-    - Side milling is the process of removing material from  the side of a workpiece.
+    - 'Side milling is the process of removing material from  the side of a workpiece.
+
+
+      Hint:
+      Click on workpiece'
     - For drilling we used a drillbit, however we must use a tool called an endmill
       for sidemilling operations.
     - End mills are similar to drill bits in that they have flutes that will allow
       them to drill into a workpiece...
     - but they also can be used to machine the side or face of a workpiece since
       they are more able to handle radial loads.
-    - The workpiece is fixed in place with the target face extending beyond the vise
-      so that it will not be damaged by the mill
-    - Again, we will lower the head into position and lock it place.
-    - Next lower the spindle so that bottom of the tool is well below the workpiece
-    - With everything in place, let's start the machine.
-    - Begin by moving the table slowly until the end mill touches the surface of
+    - 'The workpiece is fixed in place with the target face extending beyond the
+      vise so that it will not be damaged by the mill
+
+
+      Hint: Click on vise
+      bolt'
+    - 'Again, we will lower the head into position and lock it place.
+
+
+      Hint:
+      Click on Y Button on DRO Panel'
+    - 'Next lower the spindle so that bottom of the tool is well below the workpiece
+
+
+      Hint:
+      Click on Z Button on DRO Panel'
+    - 'With everything in place, let''s start the machine.
+
+
+      Hint: Click on
+      X Button on DRO Panel'
+    - 'Begin by moving the table slowly until the end mill touches the surface of
       the material
-    - One you have touched the surface, set the reference point along the x-axis
+
+
+      Hint: Click on Quill Button on DRO Panel'
+    - 'One you have touched the surface, set the reference point along the x-axis
       by hitting the zero button on the DRO
-    - Back off the end mill from the workpiece slightly, then move the table in the
-      y-direction until the end mill clears the workpiece
-    - Next move in the x direction to a controlled depth at which we will make our
+
+
+      Hint: Click on X Button on DRO
+      Panel'
+    - 'Back off the end mill from the workpiece slightly, then move the table in
+      the y-direction until the end mill clears the workpiece
+
+
+      Hint: Click
+      on ON Button'
+    - 'Next move in the x direction to a controlled depth at which we will make our
       first cut. This time we will use a depth of 0.01 inch (0.254 mm)
-    - To make the cut, move the table in the y-direction such that the tool is walking
+
+
+      Hint:
+      Click on Y Button on DRO Panel'
+    - 'To make the cut, move the table in the y-direction such that the tool is walking
       along the face of the workpiece
+
+
+      Hint: Click on OFF Button'
     - Note that because we only moved the y direction, we have created a uniform
       face that is perpendicular to the jaws of the vise
     - This process may be repeated until the desired amount of material is removed

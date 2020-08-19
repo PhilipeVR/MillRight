@@ -5,9 +5,13 @@ using UnityEngine;
 
 public class AnimatorController : MonoBehaviour
 {
+    [SerializeField] private int animIndex;
     [SerializeField] private string OnAnimationName;
     [SerializeField] private string OffAnimationName;
     [SerializeField] private GameObject bit, holder, dummyBit, vise;
+    [SerializeField] private AnimClipTrigger placePieceTrigger;
+    [SerializeField] private PowerTriggers powerTriggers;
+    [SerializeField] private List<ClipTriggers> buttonTriggers;
     [SerializeField] private string drillTag;
     [SerializeField] private string stopTag;
     [SerializeField] private string initialClip;
@@ -46,7 +50,11 @@ public class AnimatorController : MonoBehaviour
         {
             triggerAnimation.setAnimState(false);
             triggerAnimation.ResetParams();
-            
+        }
+        RevertDestruction revert = vise.GetComponentInChildren<RevertDestruction>();
+        if (revert != null)
+        {
+            revert.RevertStock();
         }
         if (prevState)
         {
@@ -54,13 +62,19 @@ public class AnimatorController : MonoBehaviour
         }
         if (counter > 0)
         {
+            foreach(ClipTriggers clipTriggers in buttonTriggers)
+            {
+                clipTriggers.ResetTriggers(animIndex);
+            }
+            placePieceTrigger.Reset();
+            powerTriggers.ResetTriggers(animIndex) ;
             setRestart();
         }
-        
+
+
         isActive = true;
         ActivateAnimator(true);
         counter++;
-
     }
     public void ActivateAnimator(Boolean state)
     {
@@ -139,5 +153,10 @@ public class AnimatorController : MonoBehaviour
         {
             triggerAnimation.ResetAnim();
         }
+    }
+
+    public TriggerAnimationController TriggerAnimation
+    {
+        get => GetComponent<TriggerAnimationController>();
     }
 }

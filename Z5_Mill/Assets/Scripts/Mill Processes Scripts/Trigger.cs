@@ -25,7 +25,7 @@ public class Trigger
 
             if (index[animIndex] == controller.Index)
             {
-                //Debug.Log("Clip Trigger Z: " + animationName[i] + " and " + transitionParams[i]);
+                Debug.Log("Clip Trigger: " + animationName[animIndex] + " and " + transitionParams[animIndex]);
                 val = controller.PlayAnimation(transitionParams[animIndex], animationName[animIndex]);
 
                 if (val)

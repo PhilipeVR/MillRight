@@ -94,4 +94,10 @@ public class PowerButtonToggle
     {
         get => anim;
     }
+
+    public int Index
+    {
+        get => i;
+        set => i = value;
+    }
 }

@@ -13,10 +13,7 @@ public class ClipTriggers : MonoBehaviour
     // Start is called before the first frame update
     void Awake() {
         triggers = animTriggers.triggers;
-        foreach(Trigger mia in triggers)
-        {
-            mia.Index = 0;
-        }
+        ResetTriggers(-1);
     }
 
     // Update is called once per frame
@@ -41,6 +38,22 @@ public class ClipTriggers : MonoBehaviour
     private void OnMouseDown()
     {
         PlaySequence();
+    }
+
+    public void ResetTriggers(int anim)
+    {
+        foreach (Trigger trigger in triggers)
+        {
+            if (anim < 0)
+            {
+                trigger.Index = 0;
+            }
+            else if (trigger.Anim == anim)
+            {
+                trigger.Index = 0;
+            }
+            
+        }
     }
 
 

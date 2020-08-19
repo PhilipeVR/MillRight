@@ -1,6 +1,8 @@
-﻿using System;
+﻿
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Threading;
 using UnityEngine;
 
 public class CollisionVisibility : MonoBehaviour
@@ -26,11 +28,21 @@ public class CollisionVisibility : MonoBehaviour
     void Start()
     {
         initialCountdown = timerCountDown;
-        sparks = GameObject.Find(gameObjectParentName).transform.GetChild(0).gameObject;
-        if (sparks != null)
+        FindSpark();
+
+    }
+
+    public void FindSpark()
+    {
+        GameObject tmpObject = GameObject.Find(gameObjectParentName);
+        if (tmpObject != null)
         {
-            sparks.SetActive(false);
-        } 
+            sparks = tmpObject.transform.GetChild(0).gameObject;
+            if (sparks != null)
+            {
+                sparks.SetActive(false);
+            }
+        }
     }
 
     // Update is called once per frame
@@ -94,6 +106,11 @@ public class CollisionVisibility : MonoBehaviour
                     {
                         bitCollisionController.EndCollsion();
                     }
+                    RevertDestruction revertDestruction = GetComponentInParent<RevertDestruction>();
+                    if(revertDestruction != null)
+                    {
+                        revertDestruction.SaveTransform(transform.localPosition, transform.localRotation, transform.localScale);
+                    }
                 }
                 sparks.SetActive(false);
             }
@@ -117,6 +134,29 @@ public class CollisionVisibility : MonoBehaviour
             isColliding = false;
             sparks.SetActive(false);
         }
+    }
+
+    public string CollisionTag
+    {
+        get => collisionTag;
+        set => collisionTag = value;
+    }
+
+    public float Countdown
+    {
+        get => initialCountdown;
+        set => initialCountdown = value;
+    }
+
+    public float Timer
+    {
+        set => timerCountDown = value;
+    }
+
+    public string ParentName
+    {
+        get => gameObjectParentName;
+        set => gameObjectParentName = value;
     }
 
 }
