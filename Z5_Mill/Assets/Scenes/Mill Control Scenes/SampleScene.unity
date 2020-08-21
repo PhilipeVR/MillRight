@@ -4850,6 +4850,8 @@ MonoBehaviour:
   wheel: {fileID: 1155322361}
   lockHandle: {fileID: 1677665264}
   enable: 1
+  speedMultiplier: 7
+  currentSpeed: 0
   leftCollision: 0
   rightCollision: 0
   object_anim: {fileID: 402590985}
@@ -4917,6 +4919,8 @@ MonoBehaviour:
   wheel: {fileID: 346131233}
   lockHandle: {fileID: 553108621}
   enable: 1
+  speedMultiplier: 1.5
+  currentSpeed: 0
 --- !u!1 &1079926638
 GameObject:
   m_ObjectHideFlags: 0
@@ -7343,6 +7347,8 @@ MonoBehaviour:
   wheel: {fileID: 5175314770203662113}
   lockHandle: {fileID: 8619910113599060837}
   enable: 1
+  speedMultiplier: 80
+  currentSpeed: 0
   forwardCollision: 0
   backwardCollision: 0
   object_anim: {fileID: 402590985}

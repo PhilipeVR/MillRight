@@ -15,7 +15,11 @@ public class ZWheelControl : MonoBehaviour
 
     [SerializeField]
     Boolean enable = true;
-   
+
+    [SerializeField] private float speedMultiplier;
+
+    private float new_time, prev_time, prev_distance;
+    public float currentSpeed;
 
     Boolean animated = true;
     Boolean handle_enabled, wheel_spin;
@@ -24,6 +28,8 @@ public class ZWheelControl : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
+        prev_time = 0;
+        prev_distance = 0;
         object_anim = animObject.GetComponent<Animator>();
         lock_anim = lockAnimObject.GetComponent<Animator>();
 
@@ -42,15 +48,23 @@ public class ZWheelControl : MonoBehaviour
     {
         if(ZLockButton.Activated == true)
         {
+            float distance, time;
+            if (Input.mouseScrollDelta.y != 0)
+            {
+                distance = Math.Abs(Input.mouseScrollDelta.y - prev_distance);
+                time = Math.Abs(Time.time - prev_time);
+                currentSpeed = (distance / time) * speedMultiplier;
+            }
+
             if (Input.mouseScrollDelta.y > 0f)
             {
                 object_anim.SetFloat("Reverse", 1);
-                setSpeed(0.25f);
+                setSpeed(currentSpeed);
             }
             else if (Input.mouseScrollDelta.y < 0f)
             {
                 object_anim.SetFloat("Reverse", -1);
-                setSpeed(0.25f);
+                setSpeed(currentSpeed);
             } else
             {
                 pause();
