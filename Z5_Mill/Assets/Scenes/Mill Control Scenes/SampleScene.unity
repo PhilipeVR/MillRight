@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.43826503, g: 0.4862997, b: 0.56657463, a: 1}
+  m_IndirectSpecularColor: {r: 0.43826476, g: 0.4862988, b: 0.5665738, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -6850,7 +6850,7 @@ MonoBehaviour:
   zoomSpeed: 2
   dragSpeed: 6
   panlLimit: {x: 0.15, y: 0.15}
-  maxBounds: {x: 0.5, y: 0.5, z: 0.5}
+  maxBounds: {x: 0.1, y: 0.1, z: 0.1}
   minBounds: {x: -0.5, y: -0.5, z: -0.5}
 --- !u!1 &1519603755
 GameObject:
@@ -7886,7 +7886,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh15396
+  m_Name: pb_Mesh706968
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2

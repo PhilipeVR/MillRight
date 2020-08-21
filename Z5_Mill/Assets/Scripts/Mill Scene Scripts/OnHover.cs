@@ -88,13 +88,18 @@ public class OnHover : MonoBehaviour
         hasBeenClicked = true;
     }
 
-    public IEnumerator FlashMesh(float interval)
+    public IEnumerator FlashMesh(float interval, int flashes)
     {
         if (!hasBeenClicked)
         {
-            GetComponent<Renderer>().material.color = hoverColor;
-            yield return new WaitForSecondsRealtime(interval);
-            GetComponent<Renderer>().material.color = basicColor;
+            for(int i = 0; i < flashes; i++)
+            {
+                GetComponent<Renderer>().material.color = hoverColor;
+                yield return new WaitForSecondsRealtime(interval);
+                GetComponent<Renderer>().material.color = basicColor;
+                yield return new WaitForSecondsRealtime(interval);
+            }
+
         }
     }
 }

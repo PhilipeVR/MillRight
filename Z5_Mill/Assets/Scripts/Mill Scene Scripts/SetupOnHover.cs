@@ -14,6 +14,7 @@ public class SetupOnHover : MonoBehaviour
     [SerializeField] private PanelHandler handler;
     [SerializeField] private Color onClickedColor;
     [SerializeField] private float FlashDelay = 0.25f;
+    [SerializeField] private int NumOfFlash = 5;
     public Boolean clicked = false;
     public Boolean flashing = false;
 
@@ -66,7 +67,7 @@ public class SetupOnHover : MonoBehaviour
         if (!clicked)
         {
             ObjectManager.GetComponent<ComponentManager>().incrementPartCounter();
-            handler.OnComponentClicked();
+            handler.activate(true);
             checkListElem.isOn = true;
             clicked = true;
             foreach(Transform children in transform)
@@ -112,7 +113,7 @@ public class SetupOnHover : MonoBehaviour
             if (tmpHover != null)
             {
                 Debug.Log("OnHover Flash Mesh Called");
-                StartCoroutine(tmpHover.FlashMesh(FlashDelay));
+                StartCoroutine(tmpHover.FlashMesh(FlashDelay, NumOfFlash));
             }
         }
         flashing = false;

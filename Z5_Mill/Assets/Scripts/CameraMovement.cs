@@ -8,6 +8,7 @@ public class CameraMovement : MonoBehaviour
     
 
     private Vector3 previousPosition;
+    private Vector3 previousPosition2;
 
     private float DistanceToTarget = 10f;
 
@@ -17,9 +18,13 @@ public class CameraMovement : MonoBehaviour
     public float dragSpeed = 0.2f;
     public Vector2 panlLimit;
     public Vector3 maxBounds;
+    private Vector3 maxDistance;
     public Vector3 minBounds;
+    private Vector3 minDistance;
 
     void Start(){
+        previousPosition2 = cam.transform.position;
+        UpdateBounds(previousPosition2);
         // Vector3 maxBounds = this.transform.position;
         // maxBounds.x = 5f;
         // maxBounds.y = 2f;
@@ -66,28 +71,39 @@ public class CameraMovement : MonoBehaviour
 
             //float xclamp = Mathf.Clamp(x, -mill.position.x * 2f, mill.position.x * 2f);
             //float yclamp = Mathf.Clamp(y, -mill.position.y * 2f, mill.position.y * 2f);
+            //Debug.Log("Cam Position Before Translate: " + pos);
 
             cam.transform.Translate(x, y, z);
             pos = cam.transform.position;
-            //Debug.Log(maxBounds.x);
-            //Debug.Log(minBounds.x);
+            //Debug.Log("Cam Position: " + pos);
 
-            if(pos.x > maxBounds.x){
-                pos.x = maxBounds.x;                
+            if(pos.x > maxDistance.x){
+                pos.x = maxDistance.x;                
             }
-            if(pos.x < minBounds.x){
-                pos.x = minBounds.x;
+            else if(pos.x < minDistance.x){
+                pos.x = minDistance.x;
             }
 
-            if(pos.y > maxBounds.y){
-                pos.y = maxBounds.y;
+            if(pos.y > maxDistance.y){
+                pos.y = maxDistance.y;
             }
-            if(pos.y < minBounds.y){
-                pos.y = minBounds.y;
+            else if(pos.y < minDistance.y){
+                pos.y = minDistance.y;
+            }
+
+            if (pos.z > maxDistance.z)
+            {
+                pos.z = maxDistance.z;
+            }
+            else if (pos.z < minDistance.z)
+            {
+                pos.z = minDistance.z;
             }
             cam.transform.position = pos; //update position as a whole
 
-            
+            previousPosition2 = pos;
+            UpdateBounds(previousPosition2);
+
 
             //Debug.Log(xclamp);
 
@@ -100,5 +116,11 @@ public class CameraMovement : MonoBehaviour
             cam.transform.Translate(0,0,Input.GetAxis("Mouse ScrollWheel") * zoomSpeed, Space.Self);
         }
 
+    }
+
+    private void UpdateBounds(Vector3 pos)
+    {
+        maxDistance = pos + maxBounds;
+        minDistance = pos + minBounds;
     }
 }
