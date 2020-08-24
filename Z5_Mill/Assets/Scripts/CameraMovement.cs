@@ -4,7 +4,7 @@ public class CameraMovement : MonoBehaviour
 {
     [SerializeField] private Transform cameraFocusPt;
 
-    public float dragSpeed = 4f;
+    public float dragSpeed = 6f;
     public Vector3 maxBounds;
     private Vector3 maxDistance;
     public Vector3 minBounds;
@@ -12,10 +12,10 @@ public class CameraMovement : MonoBehaviour
     private Vector3 moveXY;
 
     // Minimum and maximum values in world space
-    private float MIN_X = -11.5f;
-    private float MAX_X = 11.5f;
+    private float MIN_X = -3f;
+    private float MAX_X = 3f;
     private float MIN_Y = -4f;
-    private float MAX_Y = 8f;
+    private float MAX_Y = 2f;
     private float MIN_Z = 0f;
     private float MAX_Z = 10f;
 
@@ -24,7 +24,7 @@ public class CameraMovement : MonoBehaviour
     protected Transform _XForm_Parent; // CameraController
 
     protected Vector3 _LocalRotation; // final target rotation
-    protected float _CameraDistance = 5f;
+    protected float _CameraDistance = 5f; // controls zoom
 
     public float MouseSensitivity = 4f;
     public float ScrollSensitvity = 4f;
@@ -43,7 +43,6 @@ public class CameraMovement : MonoBehaviour
         // Variables for CameraOrbit Script
         this._XForm_Camera = this.transform;
         this._XForm_Parent = this.transform.parent;
-
     }
 
     void Update()
@@ -54,8 +53,7 @@ public class CameraMovement : MonoBehaviour
             moveXY = Vector3.zero;
             moveXY.x += (-Input.GetAxis("Mouse X"));
             moveXY.y += (-Input.GetAxis("Mouse Y"));
-            MoveFocusPointXY(moveXY);
-            
+            MoveFocusPointXY(moveXY);            
         }
 
         // Rotate camera relative to cameraPivot
@@ -70,9 +68,8 @@ public class CameraMovement : MonoBehaviour
 
                 //Clamp the y Rotation to horizon and not flipping over at the top
                 _LocalRotation.y = Mathf.Clamp(_LocalRotation.y, 0f, 90f);
-                _LocalRotation.x = Mathf.Clamp(_LocalRotation.x, -90f, 90f);
+                _LocalRotation.x = Mathf.Clamp(_LocalRotation.x, -40f, 40f);
             }
-            
         }        
 
         //Zooming Input from our Mouse Scroll Wheel
@@ -82,7 +79,7 @@ public class CameraMovement : MonoBehaviour
             ScrollAmount *= (this._CameraDistance * 0.3f);
             this._CameraDistance += ScrollAmount * -1f;
             //This makes camera go no closer than 1.5 meters from target, and no further than 10 meters.
-            this._CameraDistance = Mathf.Clamp(this._CameraDistance, 1.5f, 100f);
+            this._CameraDistance = Mathf.Clamp(this._CameraDistance, -4f, 13f);
         }
     }
 
@@ -98,11 +95,8 @@ public class CameraMovement : MonoBehaviour
         } 
     }
 
-
     private void MoveFocusPointXY(Vector3 movement){
-
         cameraFocusPt.transform.Translate(movement * dragSpeed * Time.deltaTime, Space.Self);
-
         cameraFocusPt.transform.position = new Vector3(
             Mathf.Clamp(cameraFocusPt.transform.position.x, MIN_X, MAX_X),
             Mathf.Clamp(cameraFocusPt.transform.position.y, MIN_Y, MAX_Y),

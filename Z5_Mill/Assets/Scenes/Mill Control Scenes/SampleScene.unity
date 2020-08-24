@@ -4646,8 +4646,8 @@ MonoBehaviour:
   maxBounds: {x: 0, y: 0, z: 0}
   minBounds: {x: 0, y: 0, z: 0}
   MouseSensitivity: 4
-  ScrollSensitvity: 2
-  OrbitDampening: 20
+  ScrollSensitvity: 4
+  OrbitDampening: 25
   ScrollDampening: 6
 --- !u!20 &963194227
 Camera:
@@ -8395,7 +8395,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1506251213}
-  - component: {fileID: 1506251214}
   - component: {fileID: 1506251215}
   m_Layer: 0
   m_Name: MobileCamController
@@ -8419,26 +8418,6 @@ Transform:
   m_Father: {fileID: 1435433870}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1506251214
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1506251212}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 88c5342e5ceb42a4597d9a1f594a7267, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cameraFocusPt: {fileID: 1435433870}
-  dragSpeed: 6
-  maxBounds: {x: 0.1, y: 0.1, z: 0.1}
-  minBounds: {x: -0.5, y: -0.5, z: -0.5}
-  MouseSensitivity: 4
-  ScrollSensitvity: 2
-  OrbitDampening: 20
-  ScrollDampening: 6
 --- !u!114 &1506251215
 MonoBehaviour:
   m_ObjectHideFlags: 0
