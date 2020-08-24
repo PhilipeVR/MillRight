@@ -43,7 +43,7 @@ public class AnimClipTrigger : MonoBehaviour
 
     private void OnMouseDown()
     {
-        if (colorChange && CheckManager())
+        if (colorChange && CheckManager() && index == trigger.Index)
         {
             GetComponent<Renderer>().material.color = clickedColor;
             if(activateOnClick != null)
@@ -58,7 +58,7 @@ public class AnimClipTrigger : MonoBehaviour
     private void OnMouseOver()
     {
         //Debug.Log("AnimClipTrigger " + "(" + gameObject.name + ") : " + manager.Index);
-        if (colorChange && CheckManager()) {
+        if (colorChange && CheckManager() && index == trigger.Index) {
             GetComponent<Renderer>().material.color = hoverColor;
 
         }

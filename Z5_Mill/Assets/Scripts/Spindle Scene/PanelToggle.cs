@@ -9,66 +9,55 @@ public class PanelToggle : MonoBehaviour
     [SerializeField] GameObject descriptionPanel, toolSetupExplanation;
 
     private GameObject currentPanel;
-    private Boolean state = false;
+    private Boolean visible = true;
 
     // Start is called before the first frame update
     void Start()
     {
         descriptionPanel.SetActive(false);
-        toolSetupExplanation.SetActive(true);
+        toolSetupExplanation.SetActive(false);
         currentPanel = toolSetupExplanation;
     }
 
     // Update is called once per frame
     public void showDescription()
     {
-        if (toolSetupExplanation.activeSelf)
+        if (visible)
         {
-            toolSetupExplanation.SetActive(false);
+            if (toolSetupExplanation.activeSelf)
+            {
+                toolSetupExplanation.SetActive(false);
+            }
+            descriptionPanel.SetActive(true);
         }
-        descriptionPanel.SetActive(true);
-
+        currentPanel = descriptionPanel;
     }
     public void showExplanation()
     {
-        if (descriptionPanel.activeSelf)
+        if (visible)
         {
-            descriptionPanel.SetActive(false);
+            if (descriptionPanel.activeSelf)
+            {
+                descriptionPanel.SetActive(false);
+            }
+            toolSetupExplanation.SetActive(true);
         }
-        toolSetupExplanation.SetActive(true);
+        currentPanel = toolSetupExplanation;
 
     }
 
     public void toggle()
     {
-        if (state)
+        if (!visible)
         {
-            if (currentPanel.Equals(toolSetupExplanation))
-            {
-                descriptionPanel.SetActive(false);
-                toolSetupExplanation.SetActive(true);
-            }
-            else
-            {
-                toolSetupExplanation.SetActive(false);
-                descriptionPanel.SetActive(true);
-
-            }
-        } else
-        {
-            if (toolSetupExplanation.activeSelf)
-            {
-                currentPanel = toolSetupExplanation;
-            } else
-            {
-                currentPanel = descriptionPanel;
-            }
-
-            toolSetupExplanation.SetActive(state);
-            descriptionPanel.SetActive(state);
+            currentPanel.SetActive(true);
         }
-
-        state = !state;
+        else
+        {
+            toolSetupExplanation.SetActive(false);
+            descriptionPanel.SetActive(false);
+        }
+        visible = !visible;
     }
 
 

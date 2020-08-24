@@ -1,0 +1,80 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6514887594a1703478cd02d95eb763bf, type: 3}
+  m_Name: ToolHoldingHints
+  m_EditorClassIdentifier: 
+  dialogues:
+  - name: Tool Holding Setup
+    frenchName: Installation des portes-outils
+    sentences:
+    - 'The mill possesses a variety of different tools that can be inserted in the
+      spindle. As a result, it is important to know how to interchange these parts.
+
+
+'
+    - 'Inside the spindle (on top of the mill) is a really long bolt called a drawbar.
+      The drawbar bolts into the back the holding tools. To insert a drill chuck,
+      we first insert the drawbar into the spindle (which is usually already in the
+      spindle).
+
+
+      Click on drawbar'
+    - 'Then, we move the table in the x-direction to make space for us to setup the
+      drill chuck.
+
+
+      Click on handle for X movement'
+    - 'The next step is to insert the drill chuck in the spindle and as the drill
+      chuck is to being pushed up, take notice of drawbar being raised up.
+
+
+      Click
+      on tool holder'
+    - 'We then thread in the drawbar by hand.
+
+
+      Click on drawbar'
+    - 'Use the wrenches to tighten the drawbar completely.
+
+
+      Click on wrench'
+    - 'Click on the restart button on the right-hand side to replay animation if
+      needed. To pass to the next phase click and read the description of the different
+      tools on the left-hand side. '
+    sentencesFR:
+    - "La fraiseuse poss\xE8de une vari\xE9t\xE9 d'outils diff\xE9rents qui peuvent
+      \xEAtre ins\xE9r\xE9s dans la broche. \rPar cons\xE9quent, il est important
+      de savoir comment \xE9changer ces pi\xE8ces. "
+    - "\xC0 l'int\xE9rieur de la broche (sur le dessus de la fraiseuse) se trouve
+      un tr\xE8s long boulon. Celui-ci se boulonne \xE0 l'arri\xE8re des porte-outils.
+      Pour ins\xE9rer un mandrin de per\xE7age, nous ins\xE9rons d'abord le boulon
+      dans la broche (qui est g\xE9n\xE9ralement d\xE9j\xE0 dans la broche).\n\nCliquer
+      sur le boulon"
+    - "Ensuite, nous d\xE9pla\xE7ons la table vers la gauche pour laisser de la place
+      pour ins\xE9rer le mandrin de per\xE7age.\n\nCliquer sur la poign\xE9e de mouvement
+      dans l'axe X"
+    - "L'\xE9tape suivante consiste \xE0 ins\xE9rer le mandrin dans la broche.  Lorsque
+      mandrin est ins\xE9rer, notez que le boulon est relev\xE9.\n\nCliquer sur le
+      mandrin"
+    - "Nous enfilons ensuite le boulon \xE0 la main\n\nCliquer sur le boulon"
+    - "Utilisez les cl\xE9s de serrage pour serrer le boulon compl\xE8tement."
+    - "Cliquez sur le bouton de red\xE9marrage sur le c\xF4t\xE9 droit pour rejouer
+      l'animation si n\xE9cessaire. Pour passer \xE0 la phase suivante, cliquez et
+      lisez la description des diff\xE9rents outils sur le c\xF4t\xE9 gauche."
+    images:
+    - {fileID: 21300000, guid: be5d46762a61dfd44a3ae316a96e167f, type: 3}
+    - {fileID: 21300000, guid: 83f2e7842936ef84f96896183999e50e, type: 3}
+    - {fileID: 21300000, guid: 6d44be96224546d488b71fadc5a15e3e, type: 3}
+    - {fileID: 21300000, guid: 43d6c3f7daa52eb4f9e9adc8d050f027, type: 3}
+    - {fileID: 21300000, guid: 0a8e015102743644d8eaae080f211cc7, type: 3}
+    - {fileID: 21300000, guid: 4ea39a8a28302ae4fbe53d842f53ec29, type: 3}
+    - {fileID: 21300000, guid: f575135d2274a4e4a968e6e68e6585c5, type: 3}

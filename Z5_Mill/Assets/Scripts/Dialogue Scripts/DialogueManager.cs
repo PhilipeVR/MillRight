@@ -24,8 +24,10 @@ public class DialogueManager : MonoBehaviour
     private Queue<string> currentLangSentence;
     private string lastSentence;
     private string titleLang;
+    private Boolean controllerPresent;
 
     void Awake () {
+        controllerPresent = animationController != null;
         counter = 0;
         sentences = new Queue<string>();
         sentencesFR = new Queue<string>();
@@ -103,16 +105,19 @@ public class DialogueManager : MonoBehaviour
     void EndDialogue()
     {
         DeactivateAtEndDialogue.SetActive(false);
-        if(!animationController.Operation.TriggerAnimation.Done && animationController.Operation.TriggerAnimation.Active)
+        if(controllerPresent)
         {
-            trigger.InteractButton();
-        }
-        else if (animationController.Operation.TriggerAnimation.Done || (counter == 0 && !animationController.Operation.TriggerAnimation.Active))
-        {
-            trigger.TransitionDialogue();
-            counter++;
-        }
+            if (!animationController.Operation.TriggerAnimation.Done && animationController.Operation.TriggerAnimation.Active)
+            {
+                trigger.InteractButton();
+            }
+            else if (animationController.Operation.TriggerAnimation.Done || (counter == 0 && !animationController.Operation.TriggerAnimation.Active))
+            {
+                trigger.TransitionDialogue();
+                counter++;
+            }
 
+        }
     }
 
     public void SkipDialogue()
@@ -127,7 +132,7 @@ public class DialogueManager : MonoBehaviour
 
     void OnGUI()
     {
-        if (Event.current.Equals(Event.KeyboardEvent(KeyCode.N.ToString())))
+        if (Event.current.Equals(Event.KeyboardEvent(KeyCode.N.ToString())) && controllerPresent)
         {
             SkipDialogue();
         }
