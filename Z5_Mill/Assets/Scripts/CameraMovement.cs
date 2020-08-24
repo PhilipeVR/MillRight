@@ -2,101 +2,111 @@
 
 public class CameraMovement : MonoBehaviour
 {
-    [SerializeField] private Camera cam;
-    [SerializeField] private Transform mill;
-    [SerializeField] private Transform target;
+    [SerializeField] private Transform cameraFocusPt;
 
-    private Vector3 previousPosition;
-    private Vector3 previousPosition2;
-
-    private float DistanceToTarget = 10f;
-
-
-    public float zoomSpeed = 0.2f;
-    public float dragSpeed = 2f;
- 
+    public float dragSpeed = 4f;
     public Vector3 maxBounds;
     private Vector3 maxDistance;
     public Vector3 minBounds;
     private Vector3 minDistance;
+    private Vector3 moveXY;
 
     // Minimum and maximum values in world space
-    private float MIN_X = 6f;
-    private float MAX_X = 12f;
-    private float MIN_Y = 5f;
-    private float MAX_Y = 11f;
-    private float MIN_Z = -21f;
-    private float MAX_Z = -9f;
+    private float MIN_X = -11.5f;
+    private float MAX_X = 11.5f;
+    private float MIN_Y = -4f;
+    private float MAX_Y = 8f;
+    private float MIN_Z = 0f;
+    private float MAX_Z = 10f;
 
+    // Variables for CameraOrbit Script
+    protected Transform _XForm_Camera;
+    protected Transform _XForm_Parent; // CameraController
 
+    protected Vector3 _LocalRotation; // final target rotation
+    protected float _CameraDistance = 5f;
 
-    Vector2 input;
+    public float MouseSensitivity = 4f;
+    public float ScrollSensitvity = 4f;
+    public float OrbitDampening = 25f;
+    public float ScrollDampening = 6f;
 
     void Start(){
-        previousPosition2 = cam.transform.position;
+        //previousPosition2 = cam.transform.position;
         Vector3 maxBounds = this.transform.position;
         maxBounds.x = 5f;
         maxBounds.y = 2f;
         Vector3 minBounds = this.transform.position;
         minBounds.x = -5f;
         minBounds.y = -2f;
+
+        // Variables for CameraOrbit Script
+        this._XForm_Camera = this.transform;
+        this._XForm_Parent = this.transform.parent;
+
     }
 
-    private void Update()
+    void Update()
     {
-        // Begin orbit
-        if (Input.GetMouseButtonDown(1))
-        {
-            previousPosition = cam.ScreenToViewportPoint(Input.mousePosition);
-        }
-
-        if (Input.GetMouseButton(1)) // true while button is held down (i.e. not released)
-        {
-            Vector3 newPosition = cam.ScreenToViewportPoint(Input.mousePosition);
-            Vector3 direction = previousPosition - newPosition;
-
-            float rotationAroundYAxis = -direction.x * 180; // camera moves horizontally
-            float rotationAroundXAxis = direction.y * 180; // camera moves vertically
-
-            //transform.position = target.position; // Reset position of camera to target.position
-            transform.position = target.position;
-            
-            transform.Rotate(new Vector3(1, 0, 0), rotationAroundXAxis); //rotation around xaxis
-            transform.Rotate(new Vector3(0, 1, 0), rotationAroundYAxis, Space.World); //roatation around y-axis
-            
-            transform.Translate(new Vector3(0, 0, -DistanceToTarget)); // move camera position backward so it is looking at target
-
-            previousPosition = newPosition;
-        }
-
-        //Pan camera
+        // Move Camera in front-facing (XY) plane
         if (Input.GetMouseButton(0))
         {
-
-            float x = -Input.GetAxis("Mouse X");
-            float y = -Input.GetAxis("Mouse Y");
-            float z = 0;
-
-            Vector3 movement = Vector3.zero;
-            movement.x += x;
-            movement.y += y;
-
-
-            transform.Translate(movement * dragSpeed * Time.deltaTime, Space.Self);
-
-            transform.position = new Vector3(
-                Mathf.Clamp(transform.position.x, MIN_X, MAX_X),
-                Mathf.Clamp(transform.position.y, MIN_Y, MAX_Y),
-                Mathf.Clamp(transform.position.z, MIN_Z, MAX_Z)
-            );
-
+            moveXY = Vector3.zero;
+            moveXY.x += (-Input.GetAxis("Mouse X"));
+            moveXY.y += (-Input.GetAxis("Mouse Y"));
+            MoveFocusPointXY(moveXY);
+            
         }
 
-        // Zoom scroll
-        if (Input.GetMouseButton(2))
+        // Rotate camera relative to cameraPivot
+        if (Input.GetMouseButton(1))
         {
-            cam.transform.Translate(0,0,Input.GetAxis("Mouse ScrollWheel") * zoomSpeed, Space.Self);
-        }
+            //Rotation of the Camera based on Mouse Coordinates
+            //Only triggers when mouse is not stationary
+            if (Input.GetAxis("Mouse X") != 0 || Input.GetAxis("Mouse Y") != 0)
+            {
+                _LocalRotation.x += Input.GetAxis("Mouse X") * MouseSensitivity;
+                _LocalRotation.y -= Input.GetAxis("Mouse Y") * MouseSensitivity; // Prevent inverted controls
 
+                //Clamp the y Rotation to horizon and not flipping over at the top
+                _LocalRotation.y = Mathf.Clamp(_LocalRotation.y, 0f, 90f);
+                _LocalRotation.x = Mathf.Clamp(_LocalRotation.x, -90f, 90f);
+            }
+            
+        }        
+
+        //Zooming Input from our Mouse Scroll Wheel
+        if (Input.GetAxis("Mouse ScrollWheel") != 0f)
+        {
+            float ScrollAmount = Input.GetAxis("Mouse ScrollWheel") * ScrollSensitvity;
+            ScrollAmount *= (this._CameraDistance * 0.3f);
+            this._CameraDistance += ScrollAmount * -1f;
+            //This makes camera go no closer than 1.5 meters from target, and no further than 10 meters.
+            this._CameraDistance = Mathf.Clamp(this._CameraDistance, 1.5f, 100f);
+        }
+    }
+
+    void LateUpdate() {
+        //Actual Camera Rig Transformations
+        //This must be in LastUpdate()
+        Quaternion QT = Quaternion.Euler(_LocalRotation.y, _LocalRotation.x, 0);
+        this._XForm_Parent.rotation = Quaternion.Lerp(this._XForm_Parent.rotation, QT, Time.deltaTime * OrbitDampening);
+
+        if ( this._XForm_Camera.localPosition.z != this._CameraDistance * -1f )
+        {
+            this._XForm_Camera.localPosition = new Vector3(0f, 0f, Mathf.Lerp(this._XForm_Camera.localPosition.z, this._CameraDistance * -1f, Time.deltaTime * ScrollDampening));
+        } 
+    }
+
+
+    private void MoveFocusPointXY(Vector3 movement){
+
+        cameraFocusPt.transform.Translate(movement * dragSpeed * Time.deltaTime, Space.Self);
+
+        cameraFocusPt.transform.position = new Vector3(
+            Mathf.Clamp(cameraFocusPt.transform.position.x, MIN_X, MAX_X),
+            Mathf.Clamp(cameraFocusPt.transform.position.y, MIN_Y, MAX_Y),
+            Mathf.Clamp(cameraFocusPt.transform.position.z, MIN_Z, MAX_Z)
+        );
     }
 }
