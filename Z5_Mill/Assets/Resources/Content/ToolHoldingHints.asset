@@ -27,26 +27,27 @@ MonoBehaviour:
       spindle).
 
 
-      Click on drawbar'
+      Hint: Click on drawbar'
     - 'Then, we move the table in the x-direction to make space for us to setup the
       drill chuck.
 
 
-      Click on handle for X movement'
+      Hint: Click on handle for X movement'
     - 'The next step is to insert the drill chuck in the spindle and as the drill
       chuck is to being pushed up, take notice of drawbar being raised up.
 
 
-      Click
-      on tool holder'
+      Hint:
+      Click on tool holder'
     - 'We then thread in the drawbar by hand.
 
 
-      Click on drawbar'
+      Hint: Click on drawbar'
     - 'Use the wrenches to tighten the drawbar completely.
 
 
-      Click on wrench'
+      Hint: Click on
+      a wrench'
     - 'Click on the restart button on the right-hand side to replay animation if
       needed. To pass to the next phase click and read the description of the different
       tools on the left-hand side. '
@@ -57,16 +58,17 @@ MonoBehaviour:
     - "\xC0 l'int\xE9rieur de la broche (sur le dessus de la fraiseuse) se trouve
       un tr\xE8s long boulon. Celui-ci se boulonne \xE0 l'arri\xE8re des porte-outils.
       Pour ins\xE9rer un mandrin de per\xE7age, nous ins\xE9rons d'abord le boulon
-      dans la broche (qui est g\xE9n\xE9ralement d\xE9j\xE0 dans la broche).\n\nCliquer
-      sur le boulon"
+      dans la broche (qui est g\xE9n\xE9ralement d\xE9j\xE0 dans la broche).\n\nIndice:
+      Cliquer sur le boulon"
     - "Ensuite, nous d\xE9pla\xE7ons la table vers la gauche pour laisser de la place
-      pour ins\xE9rer le mandrin de per\xE7age.\n\nCliquer sur la poign\xE9e de mouvement
-      dans l'axe X"
+      pour ins\xE9rer le mandrin de per\xE7age.\n\nIndice: Cliquer sur la poign\xE9e
+      de mouvement dans l'axe X"
     - "L'\xE9tape suivante consiste \xE0 ins\xE9rer le mandrin dans la broche.  Lorsque
-      mandrin est ins\xE9rer, notez que le boulon est relev\xE9.\n\nCliquer sur le
-      mandrin"
-    - "Nous enfilons ensuite le boulon \xE0 la main\n\nCliquer sur le boulon"
-    - "Utilisez les cl\xE9s de serrage pour serrer le boulon compl\xE8tement."
+      mandrin est ins\xE9rer, notez que le boulon est relev\xE9.\n\nIndice: Cliquer
+      sur le mandrin"
+    - "Nous enfilons ensuite le boulon \xE0 la main\n\nIndice: Cliquer sur le boulon"
+    - "Utilisez les cl\xE9s de serrage pour serrer le boulon compl\xE8tement.\n\nIndice:
+      Cliquez sur une des cl\xE9s de serrage"
     - "Cliquez sur le bouton de red\xE9marrage sur le c\xF4t\xE9 droit pour rejouer
       l'animation si n\xE9cessaire. Pour passer \xE0 la phase suivante, cliquez et
       lisez la description des diff\xE9rents outils sur le c\xF4t\xE9 gauche."
