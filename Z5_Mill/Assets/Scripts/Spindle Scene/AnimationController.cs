@@ -2,14 +2,18 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class AnimationController : MonoBehaviour
 {
     public int index = 0;
     private Animator animator;
+    [SerializeField] DialogueTrigger trigger;
+    [SerializeField] private int dialogIndex;
     [SerializeField] private string[] clipName;
     [SerializeField] private string resetParam;
     [SerializeField] private ButtonInteractable buttonInteractable;
+    [SerializeField] private Button restartButton;
     private List<AnimatorControllerParameter> parameters;
     private int counter = 0;
     private Boolean transitionDone, animDone;
@@ -17,6 +21,7 @@ public class AnimationController : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
+        restartButton.interactable = false;
         parameters = new List<AnimatorControllerParameter>();
         animator = GetComponent<Animator>();
         foreach (AnimatorControllerParameter param in animator.parameters)
@@ -58,9 +63,11 @@ public class AnimationController : MonoBehaviour
         if (index == parameters.Count)
         {
             transitionDone = true;
+            restartButton.interactable = true;
         }
         counter++;
         buttonInteractable.InteractButton();
+        
     }
 
     public void ResetParams()
@@ -79,10 +86,16 @@ public class AnimationController : MonoBehaviour
 
     public void ResetAnim()
     {
-        Debug.Log("TriggerAnimationController - " + name + ": " + resetParam);
-        animator.SetFloat(resetParam, 1f);
-        ResetParams();
-        index = 0;
+        if (transitionDone)
+        {
+            Debug.Log("TriggerAnimationController - " + name + ": " + resetParam);
+            animator.SetFloat(resetParam, 1f);
+            ResetParams();
+            index = 0;
+            transitionDone = false;
+            trigger.TriggerDialogue(dialogIndex);
+        }
+
     }
 
     public int Index
