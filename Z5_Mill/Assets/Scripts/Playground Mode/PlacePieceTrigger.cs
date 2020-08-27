@@ -10,14 +10,14 @@ public class PlacePieceTrigger : MonoBehaviour
     [SerializeField] private Color clickedColor;
     [SerializeField] private GameObject activateOnClick;
     private Color basicColor;
+    private Boolean Clicked;
 
 
     // Start is called before the first frame update
-    void Start()
+    public void Start()
     {
-        gameObject.SetActive(true);
-        activateOnClick.SetActive(false);
         basicColor = GetComponent<Renderer>().material.color;
+        Reset();
     }
 
     // Update is called once per frame
@@ -28,10 +28,14 @@ public class PlacePieceTrigger : MonoBehaviour
 
     private void OnMouseDown()
     {
-        GetComponent<Renderer>().material.color = clickedColor;
-        activateOnClick.SetActive(true);
-        gameObject.SetActive(false);
-        PlaySequence();
+        if (!Clicked)
+        {
+            GetComponent<Renderer>().material.color = clickedColor;
+            activateOnClick.SetActive(true);
+            gameObject.SetActive(false);
+            PlaySequence();
+        }
+
     }
 
     private void OnMouseExit()
@@ -41,7 +45,10 @@ public class PlacePieceTrigger : MonoBehaviour
 
     private void OnMouseOver()
     {
-        GetComponent<Renderer>().material.color = hoverColor;
+        if (!Clicked)
+        {
+            GetComponent<Renderer>().material.color = hoverColor;
+        }
     }
 
     public void Reset()
@@ -49,5 +56,6 @@ public class PlacePieceTrigger : MonoBehaviour
         GetComponent<Renderer>().material.color = basicColor;
         gameObject.SetActive(true);
         activateOnClick.SetActive(false);
+        Clicked = false;
     }
 }

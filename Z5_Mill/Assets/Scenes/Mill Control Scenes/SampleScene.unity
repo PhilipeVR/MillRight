@@ -122,81 +122,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!21 &14210909
-Material:
-  serializedVersion: 6
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: Mtl17 (Instance)
-  m_Shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
-  m_ShaderKeywords: 
-  m_LightmapFlags: 4
-  m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
-  disabledShaderPasses: []
-  m_SavedProperties:
-    serializedVersion: 3
-    m_TexEnvs:
-    - _BumpMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _DetailAlbedoMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _DetailMask:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _DetailNormalMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _EmissionMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _MainTex:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _MetallicGlossMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _OcclusionMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _ParallaxMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    m_Floats:
-    - _BumpScale: 1
-    - _Cutoff: 0.5
-    - _DetailNormalMapScale: 1
-    - _DstBlend: 0
-    - _GlossMapScale: 1
-    - _Glossiness: 0
-    - _GlossyReflections: 1
-    - _Metallic: 0
-    - _Mode: 0
-    - _OcclusionStrength: 1
-    - _Parallax: 0.02
-    - _SmoothnessTextureChannel: 0
-    - _SpecularHighlights: 1
-    - _SrcBlend: 1
-    - _UVSec: 0
-    - _ZWrite: 1
-    m_Colors:
-    - _Color: {r: 0.6509434, g: 0.6509434, b: 0.6509434, a: 0}
-    - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
 --- !u!1 &44375224
 GameObject:
   m_ObjectHideFlags: 0
@@ -2328,6 +2253,7 @@ MonoBehaviour:
   prevAnimator: {fileID: 779585576}
   hoverColor: {r: 0.118490815, g: 1, b: 0, a: 0}
   clickedColor: {r: 0.012408879, g: 0.3490566, b: 0, a: 0}
+  basic: {r: 0.6509804, g: 0.6509804, b: 0.6509804, a: 0}
   Speed: 0.2
 --- !u!1 &336104563
 GameObject:
@@ -2339,6 +2265,7 @@ GameObject:
   m_Component:
   - component: {fileID: 336104565}
   - component: {fileID: 336104564}
+  - component: {fileID: 336104566}
   m_Layer: 0
   m_Name: UserControlManager
   m_TagString: Untagged
@@ -2387,6 +2314,38 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &336104566
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 336104563}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 713ff9b26c4bec44b969f8de9c19516f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  controlX: {fileID: 1065909904}
+  controlY: {fileID: 1616185320}
+  controlZ: {fileID: 1077523318}
+  controlQuill: {fileID: 1020964412}
+  controlFine: {fileID: 443703468}
+  drilling:
+    name: Drilling
+    dummyCube: {fileID: 1265632415}
+    stockMaterial: {fileID: 933945645}
+    vise: {fileID: 1940318587}
+  sideMill:
+    name: Side Milling
+    dummyCube: {fileID: 1156831944}
+    stockMaterial: {fileID: 779585575}
+    vise: {fileID: 1103625567}
+  faceMill:
+    name: Face Milling
+    dummyCube: {fileID: 781836906}
+    stockMaterial: {fileID: 999474359}
+    vise: {fileID: 1576390985}
 --- !u!1 &340444176 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 9206275888445066084, guid: 83d399ffe9bbef046b7d9ca75d2c5d0b,
@@ -2409,6 +2368,7 @@ MonoBehaviour:
   prevAnimator: {fileID: 999474360}
   hoverColor: {r: 0.034150362, g: 1, b: 0, a: 0}
   clickedColor: {r: 0.045644782, g: 0.46226418, b: 0, a: 0}
+  basic: {r: 0.6509804, g: 0.6509804, b: 0.6509804, a: 0}
   Speed: 0.2
 --- !u!1 &340834062
 GameObject:
@@ -4277,7 +4237,40 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 680411098}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 336104566}
+        m_MethodName: ChangeOperation
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Face Milling
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1594221465}
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 652720830}
+        m_MethodName: set_interactable
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!114 &680411098
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5001,14 +4994,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   initialFinalPosition: {x: -0.0721, y: 0.0467, z: 0.1841}
+  initialStockPosition: {x: -0.191, y: 0.2141, z: 0.0192}
   referenceTransformX: {fileID: 697501552}
   referenceTransformY: {fileID: 1929230406}
   animator: {fileID: 779585576}
+  trigger: {fileID: 1156831945}
   time1: 0
   time2: 0.3
   time3: 0.6
   time4: 1
   Speed: 0.2
+  tableXref: 0
+  tableYref: -0.048
 --- !u!1 &781836906 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6020610256308280529, guid: 83d399ffe9bbef046b7d9ca75d2c5d0b,
@@ -5938,14 +5935,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   initialFinalPosition: {x: 0.0069, y: 0.0283, z: 0.1843}
+  initialStockPosition: {x: -0.1523, y: 0.187, z: 0.0289}
   referenceTransformX: {fileID: 697501552}
   referenceTransformY: {fileID: 1929230406}
   animator: {fileID: 933945646}
+  trigger: {fileID: 1265632417}
   time1: 0
   time2: 0.3
   time3: 0.6
   time4: 1
   Speed: 0.2
+  tableXref: 0
+  tableYref: -0.048
 --- !u!1 &949662692
 GameObject:
   m_ObjectHideFlags: 0
@@ -6263,14 +6264,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   initialFinalPosition: {x: -0.0388, y: 0.088, z: 0.17966}
+  initialStockPosition: {x: -0.1428, y: 0.2475, z: -0.0115}
   referenceTransformX: {fileID: 697501552}
   referenceTransformY: {fileID: 1929230406}
   animator: {fileID: 999474360}
+  trigger: {fileID: 781836907}
   time1: 0
   time2: 0.3
   time3: 0.6
   time4: 1
   Speed: 0.2
+  tableXref: 0
+  tableYref: -0.048
 --- !u!1 &1017435726
 GameObject:
   m_ObjectHideFlags: 0
@@ -6352,7 +6357,40 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1017435729}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 336104566}
+        m_MethodName: ChangeOperation
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Drilling
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1594221465}
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 652720830}
+        m_MethodName: set_interactable
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!114 &1017435729
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6657,7 +6695,40 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1066585346}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 336104566}
+        m_MethodName: ChangeOperation
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Side Milling
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1594221465}
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 652720830}
+        m_MethodName: set_interactable
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!114 &1066585346
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7543,81 +7614,6 @@ MonoBehaviour:
   hoverColor: {r: 0.07940275, g: 1, b: 0.0754717, a: 0}
   clickedColor: {r: 0.025704982, g: 0.3490566, b: 0, a: 0}
   activateOnClick: {fileID: 779585575}
---- !u!21 &1174051258
-Material:
-  serializedVersion: 6
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: Mtl17 (Instance)
-  m_Shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
-  m_ShaderKeywords: 
-  m_LightmapFlags: 4
-  m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
-  disabledShaderPasses: []
-  m_SavedProperties:
-    serializedVersion: 3
-    m_TexEnvs:
-    - _BumpMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _DetailAlbedoMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _DetailMask:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _DetailNormalMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _EmissionMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _MainTex:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _MetallicGlossMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _OcclusionMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _ParallaxMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    m_Floats:
-    - _BumpScale: 1
-    - _Cutoff: 0.5
-    - _DetailNormalMapScale: 1
-    - _DstBlend: 0
-    - _GlossMapScale: 1
-    - _Glossiness: 0
-    - _GlossyReflections: 1
-    - _Metallic: 0
-    - _Mode: 0
-    - _OcclusionStrength: 1
-    - _Parallax: 0.02
-    - _SmoothnessTextureChannel: 0
-    - _SpecularHighlights: 1
-    - _SrcBlend: 1
-    - _UVSec: 0
-    - _ZWrite: 1
-    m_Colors:
-    - _Color: {r: 0.6886792, g: 0.6886792, b: 0.6886792, a: 0}
-    - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
 --- !u!1 &1200113759
 GameObject:
   m_ObjectHideFlags: 0
@@ -11492,7 +11488,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh2733144
+  m_Name: pb_Mesh15142
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -12261,81 +12257,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 2443960360639499163}
   m_PrefabAsset: {fileID: 0}
---- !u!21 &1681358114
-Material:
-  serializedVersion: 6
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: Mtl17 (Instance)
-  m_Shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
-  m_ShaderKeywords: 
-  m_LightmapFlags: 4
-  m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
-  disabledShaderPasses: []
-  m_SavedProperties:
-    serializedVersion: 3
-    m_TexEnvs:
-    - _BumpMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _DetailAlbedoMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _DetailMask:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _DetailNormalMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _EmissionMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _MainTex:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _MetallicGlossMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _OcclusionMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _ParallaxMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    m_Floats:
-    - _BumpScale: 1
-    - _Cutoff: 0.5
-    - _DetailNormalMapScale: 1
-    - _DstBlend: 0
-    - _GlossMapScale: 1
-    - _Glossiness: 0
-    - _GlossyReflections: 1
-    - _Metallic: 0
-    - _Mode: 0
-    - _OcclusionStrength: 1
-    - _Parallax: 0.02
-    - _SmoothnessTextureChannel: 0
-    - _SpecularHighlights: 1
-    - _SrcBlend: 1
-    - _UVSec: 0
-    - _ZWrite: 1
-    m_Colors:
-    - _Color: {r: 0.5471698, g: 0.5471698, b: 0.5471698, a: 0}
-    - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
 --- !u!1 &1719464654
 GameObject:
   m_ObjectHideFlags: 0
@@ -12743,6 +12664,7 @@ MonoBehaviour:
   prevAnimator: {fileID: 933945646}
   hoverColor: {r: 0.07406341, g: 0.990566, b: 0, a: 0}
   clickedColor: {r: 0.044313952, g: 0.4528302, b: 0, a: 0}
+  basic: {r: 0.6509804, g: 0.6509804, b: 0.6509804, a: 0}
   Speed: 0.2
 --- !u!1 &1843901353
 GameObject:
@@ -14594,6 +14516,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 769668083}
     m_Modifications:
+    - target: {fileID: 22473699826101252, guid: 83d399ffe9bbef046b7d9ca75d2c5d0b,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 129731846749707485, guid: 83d399ffe9bbef046b7d9ca75d2c5d0b,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -15208,7 +15135,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 14210909}
+      objectReference: {fileID: 2100000, guid: 3a08692f177ed854a83a887244b8b5eb, type: 2}
     - target: {fileID: 3708699637867846666, guid: 83d399ffe9bbef046b7d9ca75d2c5d0b,
         type: 3}
       propertyPath: m_LocalPosition.z
@@ -15723,7 +15650,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 1174051258}
+      objectReference: {fileID: 2100000, guid: 3a08692f177ed854a83a887244b8b5eb, type: 2}
     - target: {fileID: 7531102675150042060, guid: 83d399ffe9bbef046b7d9ca75d2c5d0b,
         type: 3}
       propertyPath: m_LocalPosition.y
@@ -15753,7 +15680,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 1681358114}
+      objectReference: {fileID: 2100000, guid: 3a08692f177ed854a83a887244b8b5eb, type: 2}
     - target: {fileID: 7748596097876649226, guid: 83d399ffe9bbef046b7d9ca75d2c5d0b,
         type: 3}
       propertyPath: m_IsActive

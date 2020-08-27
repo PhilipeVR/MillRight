@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -7,27 +8,25 @@ public class ClampPiece : MonoBehaviour
     [SerializeField] private Animator animator, prevAnimator;
     [SerializeField] private Color hoverColor;
     [SerializeField] private Color clickedColor;
+    [SerializeField] private Color basic;
     [SerializeField] private float Speed;
     private Color basicColor;
+    private Boolean Clicked;
 
     void Start()
     {
-        basicColor = GetComponent<Renderer>().material.color;
+        GetComponent<Renderer>().material.color = basicColor;
         animator.speed = 0;
     }
 
     private void OnMouseExit()
     {
-        if(prevAnimator.GetCurrentAnimatorStateInfo(0).normalizedTime > 1f)
-        {
-            GetComponent<Renderer>().material.color = basicColor;
-        }
-        
+        GetComponent<Renderer>().material.color = basicColor;
     }
 
     private void OnMouseOver()
     {
-        if (prevAnimator.GetCurrentAnimatorStateInfo(0).normalizedTime > 1f)
+        if (prevAnimator.GetCurrentAnimatorStateInfo(0).normalizedTime > 1f && !Clicked)
         {
             GetComponent<Renderer>().material.color = hoverColor;
         }
@@ -36,10 +35,11 @@ public class ClampPiece : MonoBehaviour
     private void OnMouseDown()
     {
         Debug.Log(prevAnimator.name);
-        if (prevAnimator.GetCurrentAnimatorStateInfo(0).normalizedTime > 1f)
+        if (prevAnimator.GetCurrentAnimatorStateInfo(0).normalizedTime > 1f && !Clicked)
         {
             GetComponent<Renderer>().material.color = clickedColor;
             animator.speed = Speed;
+            Clicked = true;
         }
     }
 
@@ -48,5 +48,6 @@ public class ClampPiece : MonoBehaviour
         GetComponent<Renderer>().material.color = basicColor;
         animator.Play(animator.runtimeAnimatorController.animationClips[0].name, 0, 0);
         animator.speed = 0;
+        Clicked = false;
     }
 }
