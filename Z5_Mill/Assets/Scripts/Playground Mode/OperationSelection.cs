@@ -36,24 +36,27 @@ public class OperationSelection : MonoBehaviour
 
             PlacePiece resetPiece = null;
             ClampPiece resetClamp = null;
+            RevertDestruction revertStock = null;
             if (drilling.Name.Equals(name))
             {
                 drilling.activate(true);
                 resetPiece = drilling.GetPlacePiece();
                 resetClamp = drilling.Vise.GetComponentInChildren<ClampPiece>();
+                revertStock = drilling.RevertStockDestruction;
             }
             else if (sideMill.Name.Equals(name))
             {
                 sideMill.activate(true);
                 resetPiece = sideMill.GetPlacePiece();
                 resetClamp = sideMill.Vise.GetComponentInChildren<ClampPiece>();
-
+                revertStock = sideMill.RevertStockDestruction;
             }
             else if (faceMill.Name.Equals(name))
             {
                 faceMill.activate(true);
                 resetPiece = faceMill.GetPlacePiece();
                 resetClamp = faceMill.Vise.GetComponentInChildren<ClampPiece>();
+                revertStock = faceMill.RevertStockDestruction;
             }
 
             if (resetPiece != null)
@@ -63,14 +66,14 @@ public class OperationSelection : MonoBehaviour
             }
             if(resetClamp != null)
             {
-                //Debug.Log("Reset Clamp");
                 resetClamp.Reset();
             }
-
+            if(revertStock != null)
+            {
+                revertStock.RevertStock();
+            }
         }
     }
-
-    
 
     private Boolean CheckOperationChange()
     {
@@ -111,6 +114,11 @@ public class OperationSelection : MonoBehaviour
         public GameObject Vise
         {
             get => vise;
+        }
+
+        public RevertDestruction RevertStockDestruction
+        {
+            get => stockMaterial.GetComponent<RevertDestruction>();
         }
     }
 }
