@@ -89,7 +89,7 @@ public class CameraMovement : MonoBehaviour
         Quaternion QT = Quaternion.Euler(_LocalRotation.y, _LocalRotation.x, 0);
         this._XForm_Parent.rotation = Quaternion.Lerp(this._XForm_Parent.rotation, QT, Time.deltaTime * OrbitDampening);
 
-        if ( this._XForm_Camera.localPosition.z != this._CameraDistance * -1f )
+        if ( this._XForm_Camera.localPosition.z != this._CameraDistance * -1f ) // Camera Scroll / Zooming update
         {
             this._XForm_Camera.localPosition = new Vector3(0f, 0f, Mathf.Lerp(this._XForm_Camera.localPosition.z, this._CameraDistance * -1f, Time.deltaTime * ScrollDampening));
         } 
