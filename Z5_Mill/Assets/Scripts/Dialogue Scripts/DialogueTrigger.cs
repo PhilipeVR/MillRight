@@ -1,20 +1,29 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class DialogueTrigger : MonoBehaviour
 {
     public DialogBox dialogues;
     public InteractableManager manager;
+    public DialogueManager dialogueManager;
     private List<Dialogue> gameDialogues;
     private int currentIndex;
     private Boolean managerPresent;
+    public Boolean sentenceTrigger;
+    private void Awake()
+    {
+        gameDialogues = dialogues.dialogues;
+    }
 
     void Start(){
         managerPresent = manager != null;
-        gameDialogues = dialogues.dialogues;
-        TriggerDialogue(0);
+        if (!sentenceTrigger)
+        {
+            TriggerDialogue(0);
+        }
 
     }
 
@@ -24,7 +33,7 @@ public class DialogueTrigger : MonoBehaviour
         {
             manager.SetInteractionLevel(gameDialogues[i].name);
         }
-        FindObjectOfType<DialogueManager>().StartDialogue(gameDialogues[i]);
+        dialogueManager.StartDialogue(gameDialogues[i]);
         currentIndex = i;
     }
 

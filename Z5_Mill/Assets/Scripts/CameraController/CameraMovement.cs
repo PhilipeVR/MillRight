@@ -73,7 +73,7 @@ public class CameraMovement : MonoBehaviour
         }        
 
         //Zooming Input from our Mouse Scroll Wheel
-        if (Input.GetAxis("Mouse ScrollWheel") != 0f)
+        if ((Input.GetAxis("Mouse ScrollWheel") != 0f) && Input.GetKeyDown(KeyCode.LeftShift))
         {
             float ScrollAmount = Input.GetAxis("Mouse ScrollWheel") * ScrollSensitvity;
             ScrollAmount *= (this._CameraDistance * 0.3f);

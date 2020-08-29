@@ -50,6 +50,13 @@ MonoBehaviour:
     - Make sure you understand instructions (in manual) and are properly trained
       before operating a milling machine.
     - Make sure that all machines have an emergency stop button (e-stop).
+    - 'Please use a drill bit to perform drilling operations. While a endmill can
+      cut axially it is preffered to use drill bits because they are designed to
+      pungle directly into the material. '
+    - Please use an end mill to perform side milling operations. End mills are designed
+      to cut axially and in the radial direction.
+    - Please use an end mill to perform face milling operations. End mills are designed
+      to cut axially and in the radial direction.
     sentencesFR:
     - "\rD\xE9placez la table aussi loin que possible du couteau lors de la mise
       en place du travail pour \xE9viter de vous blesser les mains."
@@ -59,8 +66,20 @@ MonoBehaviour:
       correctement form\xE9 avant d'utiliser une fraiseuse."
     - "Assurez-vous que toutes les machines disposent d'un bouton d'arr\xEAt d'urgence
       (e-stop)."
+    - "Veuillez utiliser un foret pour effectuer les op\xE9rations de forage. Bien
+      qu'une fraise en bout puisse couper axialement, il est pr\xE9f\xE9rable d'utiliser
+      des forets car ils sont con\xE7us pour s'enfoncer directement dans le mat\xE9riau."
+    - "Veuillez utiliser une fraise en bout pour effectuer les op\xE9rations de fraisage
+      lat\xE9ral. Les fraises en bout sont con\xE7ues pour couper axialement et dans
+      le sens radial."
+    - "Veuillez utiliser une fraise en bout pour effectuer les op\xE9rations de surfa\xE7age.
+      Les fraises en bout sont con\xE7ues pour couper axialement et dans le sens
+      radial."
     images:
     - {fileID: 21300000, guid: 11233fab40f2dd648b37d595378443d1, type: 3}
     - {fileID: 21300000, guid: 3fbcd41248d4edf498805811b31c4614, type: 3}
     - {fileID: 21300000, guid: 746a8d5dcbe5ead4ca7a7d3666250f1d, type: 3}
+    - {fileID: 21300000, guid: b19af5f570b609741a3041f5fe02108d, type: 3}
+    - {fileID: 21300000, guid: b19af5f570b609741a3041f5fe02108d, type: 3}
+    - {fileID: 21300000, guid: b19af5f570b609741a3041f5fe02108d, type: 3}
     - {fileID: 21300000, guid: b19af5f570b609741a3041f5fe02108d, type: 3}

@@ -75,6 +75,21 @@ public class OperationSelection : MonoBehaviour
         }
     }
 
+    public Operation Drilling
+    {
+        get => drilling;
+    }
+
+    public Operation SideMill
+    {
+        get => sideMill;
+    }
+
+    public Operation FaceMill
+    {
+        get => faceMill;
+    }
+
     private Boolean CheckOperationChange()
     {
         return true;

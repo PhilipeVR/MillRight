@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -98,8 +99,6 @@ public class DialogueManager : MonoBehaviour
         dialogIndex.text = index + "/" + count;
         Image.GetComponent<Image>().sprite = images[index - 1];
         index++;
-
-
     }
 
     void EndDialogue()
