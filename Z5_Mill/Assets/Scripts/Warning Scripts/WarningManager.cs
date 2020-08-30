@@ -5,10 +5,10 @@ using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Warning : MonoBehaviour
+public class WarningManager : MonoBehaviour
 {
     // Start is called before the first frame update
-    [SerializeField] private DialogueTrigger trigger;
+    [SerializeField] private WarningTrigger trigger;
     [SerializeField] private Text nameText;
     [SerializeField] private Text dialogueText;
     [SerializeField] private GameObject spriteImage;

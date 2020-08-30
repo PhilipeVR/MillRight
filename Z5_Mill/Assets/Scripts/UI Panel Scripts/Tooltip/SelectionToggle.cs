@@ -17,8 +17,6 @@ public class SelectionToggle : MonoBehaviour
         int index = 0;
         foreach(Image image in images)
         {
-            Debug.Log("Image: " + image.name);
-
             if (image.name.Equals(name))
             {
                 pointer = index;

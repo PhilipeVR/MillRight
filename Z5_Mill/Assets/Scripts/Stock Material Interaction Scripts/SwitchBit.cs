@@ -55,6 +55,25 @@ public class SwitchBit : MonoBehaviour
         }
     }
 
+    public void Reset()
+    {
+        for (int i = 0; i < numOfDrillBits; i++)
+        {
+            DrillBits[i].SetActive(false);
+        }
+
+        for (int i = 0; i < numOfEndMills; i++)
+        {
+            EndMills[i].SetActive(false);
+        }
+
+        currentIndex = 0;
+        chuckType = true;
+        currentBit = DrillBits[0];
+        endMillHolder.SetActive(false);
+        drillChuck.SetActive(false);
+    }
+
     public void Switch(string bitTag)
     {
         if (enable)
@@ -66,9 +85,11 @@ public class SwitchBit : MonoBehaviour
                 {
                     Boolean bitTagSearch = findTag(bitTag);
                 } 
-                else if (first && bitTag.Equals(currentBit.tag) && chuckType)
+                else if (first && bitTag.Equals(currentBit.tag) && chuckType && drillChuck.activeSelf)
                 {
                     currentBit.SetActive(true);
+                    drillChuck.SetActive(true);
+                    chuckSelection.Clicked(drillChuck.name);
                     bitSelection.Clicked(currentBit.name);
                     first = false;
                 }
@@ -80,15 +101,17 @@ public class SwitchBit : MonoBehaviour
     private Boolean findTag(string tag)
     {
         spawnBitPosition = currentBit.transform.localPosition;
-
+        GameObject holder;
         List<GameObject> listBits;
         int listLength;
         if (chuckType)
         {
+            holder = drillChuck;
             listLength = numOfDrillBits;
             listBits = DrillBits;
         } else
         {
+            holder = endMillHolder;
             listLength = numOfEndMills;
             listBits = EndMills;
         }
@@ -112,6 +135,8 @@ public class SwitchBit : MonoBehaviour
                     fine_adjust.fineAdjustment = currentBit.transform.parent.gameObject;
                     manager.currentBit = currentBit.transform.GetChild(1).gameObject;
                     bitSelection.Clicked(currentBit.name);
+                    holder.SetActive(true);
+                    chuckSelection.Clicked(holder.name);
                     return true;
                 }
             }
@@ -130,17 +155,12 @@ public class SwitchBit : MonoBehaviour
                 drillChuck.SetActive(true);
                 endMillHolder.SetActive(false);
                 chuckSelection.Clicked(drillChuck.name);
-                Debug.Log(drillChuck.name);
-
             }
             else
             {
                 endMillHolder.SetActive(true);
                 drillChuck.SetActive(false);
                 chuckSelection.Clicked(endMillHolder.name);
-                Debug.Log(endMillHolder.name);
-
-
             }
             currentBit.SetActive(false);
             bitSelection.Clean();
@@ -163,6 +183,12 @@ public class SwitchBit : MonoBehaviour
         }
         chuckType = type;
     }
+
+    public Boolean holderState
+    {
+        get => endMillHolder.activeSelf || drillChuck.activeSelf;
+    }
+
 
     private void FixedUpdate()
     {

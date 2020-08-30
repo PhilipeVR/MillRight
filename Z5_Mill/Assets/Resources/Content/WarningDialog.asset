@@ -53,8 +53,8 @@ MonoBehaviour:
     - 'Please use a drill bit to perform drilling operations. While a endmill can
       cut axially it is preffered to use drill bits because they are designed to
       pungle directly into the material. '
-    - Please use an end mill to perform side milling operations. End mills are designed
-      to cut axially and in the radial direction.
+    - 'Please use an end mill to perform side milling operations. End mills are designed
+      to cut axially and in the radial direction. '
     - Please use an end mill to perform face milling operations. End mills are designed
       to cut axially and in the radial direction.
     sentencesFR:

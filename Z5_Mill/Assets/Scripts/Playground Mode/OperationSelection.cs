@@ -10,7 +10,10 @@ public class OperationSelection : MonoBehaviour
     [SerializeField] private ZWheelControl controlZ;
     [SerializeField] private QuillFeedControl controlQuill;
     [SerializeField] private FineAdjustmentControl controlFine;
-    [SerializeField] private Operation drilling, sideMill, faceMill;
+    [SerializeField] private SwitchBit switchBit;
+    [SerializeField] private Operation drilling, sideMill, faceMill, current;
+    [SerializeField] private List<SelectionToggle> bitButtons;
+    [SerializeField] private GameObject warningBox;
     // Start is called before the first frame update
     void Start()
     {
@@ -24,6 +27,7 @@ public class OperationSelection : MonoBehaviour
     {
         if (CheckOperationChange())
         {
+            warningBox.SetActive(false);
             controlX.resetAnim(0);
             controlY.resetAnim(0);
             controlZ.resetAnim(0);
@@ -34,6 +38,13 @@ public class OperationSelection : MonoBehaviour
             sideMill.activate(false);
             faceMill.activate(false);
 
+            switchBit.Reset();
+
+            foreach(SelectionToggle toggle in bitButtons)
+            {
+                toggle.Clean();
+            }
+
             PlacePiece resetPiece = null;
             ClampPiece resetClamp = null;
             RevertDestruction revertStock = null;
@@ -43,6 +54,7 @@ public class OperationSelection : MonoBehaviour
                 resetPiece = drilling.GetPlacePiece();
                 resetClamp = drilling.Vise.GetComponentInChildren<ClampPiece>();
                 revertStock = drilling.RevertStockDestruction;
+                current = drilling;
             }
             else if (sideMill.Name.Equals(name))
             {
@@ -50,6 +62,8 @@ public class OperationSelection : MonoBehaviour
                 resetPiece = sideMill.GetPlacePiece();
                 resetClamp = sideMill.Vise.GetComponentInChildren<ClampPiece>();
                 revertStock = sideMill.RevertStockDestruction;
+                current = sideMill;
+
             }
             else if (faceMill.Name.Equals(name))
             {
@@ -57,6 +71,8 @@ public class OperationSelection : MonoBehaviour
                 resetPiece = faceMill.GetPlacePiece();
                 resetClamp = faceMill.Vise.GetComponentInChildren<ClampPiece>();
                 revertStock = faceMill.RevertStockDestruction;
+                current = faceMill;
+
             }
 
             if (resetPiece != null)
@@ -73,6 +89,11 @@ public class OperationSelection : MonoBehaviour
                 revertStock.RevertStock();
             }
         }
+    }
+
+    public Operation Current
+    {
+        get => current;
     }
 
     public Operation Drilling
@@ -95,12 +116,13 @@ public class OperationSelection : MonoBehaviour
         return true;
     }
 
+    
     [Serializable]
     public struct Operation
     {
         [SerializeField] string name;
         [SerializeField] GameObject dummyCube, stockMaterial, vise;
-        private Boolean activated;
+        [SerializeField] private Boolean activated;
 
         public Boolean Activated
         {
@@ -115,7 +137,7 @@ public class OperationSelection : MonoBehaviour
 
         public void activate(Boolean val)
         {
-            Activated = val;
+            activated = val;
             dummyCube.SetActive(Activated);
             stockMaterial.SetActive(Activated);
             vise.SetActive(Activated);
