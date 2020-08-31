@@ -9,6 +9,8 @@ public class GameManager : MonoBehaviour {
 
     #region Variables
 
+    [SerializeField]    ProgressBar         _progressBar            = null;
+
     private             Question[]          _questions              = null;
     public              Question[]          Questions               { get { return _questions; } }
 
@@ -41,31 +43,25 @@ public class GameManager : MonoBehaviour {
 
     #region Default Unity methods
 
-    /// <summary>
-    /// Function that is called when the object becomes enabled and active
-    /// </summary>
+    // Function that is called when the object becomes enabled and active
     void OnEnable()
     {
         events.UpdateQuestionAnswer += UpdateAnswers;
     }
-    /// <summary>
-    /// Function that is called when the behaviour becomes disabled
-    /// </summary>
+
+    // Function that is called when the behaviour becomes disabled
     void OnDisable()
     {
         events.UpdateQuestionAnswer -= UpdateAnswers;
     }
 
-    /// <summary>
-    /// Function that is called on the frame when a script is enabled just before any of the Update methods are called the first time.
-    /// </summary>
+    // Function that is called on the frame when a script is enabled just before any of the Update methods are called the first time.
     void Awake()
     {
         events.CurrentFinalScore = 0;
     }
-    /// <summary>
-    /// Function that is called when the script instance is being loaded.
-    /// </summary>
+
+    // Function that is called when the script instance is being loaded.
     void Start()
     {
         events.StartupHighscore = PlayerPrefs.GetInt(GameUtility.SavePrefKey);
@@ -83,9 +79,7 @@ public class GameManager : MonoBehaviour {
 
     #endregion
 
-    /// <summary>
-    /// Function that is called to update new selected answer.
-    /// </summary>
+    // Function that is called to update new selected answer.
     public void UpdateAnswers(AnswerData newAnswer)
     {
         if (Questions[currentQuestion].GetAnswerType == Question.AnswerType.Single)
@@ -114,17 +108,13 @@ public class GameManager : MonoBehaviour {
         }
     }
 
-    /// <summary>
-    /// Function that is called to clear PickedAnswers list.
-    /// </summary>
+    // Function that is called to clear PickedAnswers list.
     public void EraseAnswers()
     {
         PickedAnswers = new List<AnswerData>();
     }
 
-    /// <summary>
-    /// Function that is called to display new question.
-    /// </summary>
+    // Function that is called to display new question.
     void Display()
     {
         EraseAnswers();
@@ -133,17 +123,17 @@ public class GameManager : MonoBehaviour {
         if (events.UpdateQuestionUI != null)
         {
             events.UpdateQuestionUI(question);
-        } else { Debug.LogWarning("Ups! Something went wrong while trying to display new Question UI Data. GameEvents.UpdateQuestionUI is null. Issue occured in GameManager.Display() method."); }
+        } else { Debug.LogWarning("Something went wrong while trying to display new Question UI Data. GameEvents.UpdateQuestionUI is null. Issue occured in GameManager.Display() method."); }
 
         if (question.UseTimer)
         {
             UpdateTimer(question.UseTimer);
         }
+
+        UpdateProgressBar(FinishedQuestions.Count, Questions.Length);
     }
 
-    /// <summary>
-    /// Function that is called to accept picked answers and check/display the result.
-    /// </summary>
+    // Function that is called to accept picked answers and check/display the result.
     public void Accept()
     {
         UpdateTimer(false);
@@ -241,9 +231,7 @@ public class GameManager : MonoBehaviour {
 
     #endregion
 
-    /// <summary>
-    /// Function that is called to check currently picked answers and return the result.
-    /// </summary>
+    // Function that is called to check currently picked answers and return the result.
     bool CheckAnswers()
     {
         if (!CompareAnswers())
@@ -252,9 +240,8 @@ public class GameManager : MonoBehaviour {
         }
         return true;
     }
-    /// <summary>
-    /// Function that is called to compare picked answers with question correct answers.
-    /// </summary>
+
+    // Function that is called to compare picked answers with question correct answers.
     bool CompareAnswers()
     {
         if (PickedAnswers.Count > 0)
@@ -270,9 +257,8 @@ public class GameManager : MonoBehaviour {
         return false;
     }
 
-    /// <summary>
-    /// Function that is called to load all questions from the Resource folder.
-    /// </summary>
+
+    // Function that is called to load all questions from the Resource folder.
     void LoadQuestions()
     {
         Object[] objs = Resources.LoadAll("Questions", typeof(Question));
@@ -283,24 +269,19 @@ public class GameManager : MonoBehaviour {
         }
     }
 
-    /// <summary>
-    /// Function that is called restart the game.
-    /// </summary>
+    // Function that is called restart the game.
     public void RestartGame()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
-    /// <summary>
-    /// Function that is called to quit the application.
-    /// </summary>
+
+    // Function that is called to quit the application.
     public void QuitGame()
     {
         Application.Quit();
     }
 
-    /// <summary>
-    /// Function that is called to set new highscore if game score is higher.
-    /// </summary>
+    // Function that is called to set new highscore if game score is higher.
     private void SetHighscore()
     {
         var highscore = PlayerPrefs.GetInt(GameUtility.SavePrefKey);
@@ -309,9 +290,8 @@ public class GameManager : MonoBehaviour {
             PlayerPrefs.SetInt(GameUtility.SavePrefKey, events.CurrentFinalScore);
         }
     }
-    /// <summary>
-    /// Function that is called update the score and update the UI.
-    /// </summary>
+
+    // Function that is called update the score and update the UI.
     private void UpdateScore(int add)
     {
         events.CurrentFinalScore += add;
@@ -320,6 +300,11 @@ public class GameManager : MonoBehaviour {
         {
             events.ScoreUpdated();
         }
+    }
+
+    private void UpdateProgressBar(int current, int max)
+    {
+        _progressBar.UpdateProgressBar(current, max);
     }
 
     #region Getters
@@ -331,6 +316,7 @@ public class GameManager : MonoBehaviour {
 
         return Questions[currentQuestion];
     }
+
     int GetRandomQuestionIndex()
     {
         var random = 0;

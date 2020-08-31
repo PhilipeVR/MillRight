@@ -11,6 +11,7 @@ public struct Answer
     [SerializeField] private bool _isCorrect;
     public bool IsCorrect { get { return _isCorrect; } }
 }
+
 [CreateAssetMenu(fileName = "New Question", menuName = "Quiz/new Question")]
 public class Question : ScriptableObject {
 
