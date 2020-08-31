@@ -73,7 +73,8 @@ public class CameraMovement : MonoBehaviour
         }        
 
         //Zooming Input from our Mouse Scroll Wheel
-        if ((Input.GetAxis("Mouse ScrollWheel") != 0f) && Input.GetKeyDown(KeyCode.LeftShift))
+
+        if ((Input.GetAxis("Mouse ScrollWheel") != 0f) && Input.GetKey(KeyCode.LeftShift))
         {
             float ScrollAmount = Input.GetAxis("Mouse ScrollWheel") * ScrollSensitvity;
             ScrollAmount *= (this._CameraDistance * 0.3f);
@@ -81,6 +82,7 @@ public class CameraMovement : MonoBehaviour
             //This makes camera go no closer than 1.5 meters from target, and no further than 10 meters.
             this._CameraDistance = Mathf.Clamp(this._CameraDistance, -4f, 13f);
         }
+        
     }
 
     void LateUpdate() {
