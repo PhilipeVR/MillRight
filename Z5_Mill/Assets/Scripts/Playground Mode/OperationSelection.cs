@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class OperationSelection : MonoBehaviour
 {
+    [SerializeField] private Toggle_On_Off powerButton;
     [SerializeField] private XWheelControl controlX;
     [SerializeField] private YWheelControl controlY;
     [SerializeField] private ZWheelControl controlZ;
@@ -79,10 +80,16 @@ public class OperationSelection : MonoBehaviour
             {
                 resetPiece.ResetAnim();
                 resetPiece.ResetTrigger();
+                powerButton.Place = resetPiece;
+                controlX.Place = resetPiece;
+                controlY.Place = resetPiece;
+                controlZ.Place = resetPiece;
             }
             if(resetClamp != null)
             {
                 resetClamp.Reset();
+                powerButton.Clamp = resetClamp;
+                controlZ.Clamp = resetClamp;
             }
             if(revertStock != null)
             {

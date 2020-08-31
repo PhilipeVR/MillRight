@@ -6,15 +6,24 @@ using UnityEngine.UI;
 
 public class Toggle_On_Off : MonoBehaviour
 {
+    [SerializeField] private OperationSelection selection;
+    [SerializeField] private SwitchBit bitState;
+    [SerializeField] private string NoNameOperation;
+    private PlacePiece placePiece;
+    private ClampPiece clampPiece;
     Boolean millOn = false;
     public String OnText, OffText;
     public GameObject manager;
+    private Boolean state;
 
     public void Awake()
     {
-        millOn = false;
+        millOn = true;
         transform.GetChild(0).gameObject.GetComponent<Text>().text = OffText;
         GetComponent<Image>().color = Color.red;
+        state = false;
+        clampPiece = null;
+        placePiece = null;
 
     }
 
@@ -24,30 +33,91 @@ public class Toggle_On_Off : MonoBehaviour
 
         if (millOn)
         {
-            transform.GetChild(0).gameObject.GetComponent<Text>().text = OnText;
-            GetComponent<Image>().color = Color.green;
-            if (buttonManager != null)
+            Boolean testClamp = clampPiece != null;
+            Boolean testPlace = placePiece != null;
+            if (selection.Current.Name.Equals(NoNameOperation))
             {
-                buttonManager.turnOn();
+                Debug.Log("LOCATED");
+                WarningEvents.current.OperationSelected();
+                millOn = !millOn;
+
             }
+            else if (!bitState.CheckState())
+            {
+                WarningEvents.current.ToolSelection();
+                millOn = !millOn;
+
+            }
+            else if(testPlace && placePiece.animTime < 1f)
+            {
+                WarningEvents.current.PlacePiece();
+                millOn = !millOn;
+            }
+            else if (testClamp && clampPiece.animTime < 1f)
+            {
+                WarningEvents.current.ClampWorkpiece();
+                millOn = !millOn;
+            }
+            else
+            {
+                transform.GetChild(0).gameObject.GetComponent<Text>().text = OnText;
+                GetComponent<Image>().color = Color.green;
+                if (buttonManager != null)
+                {
+                    buttonManager.turnOn();
+                }
+                state = true;
+            }
+
 
         }
         else
         {
             transform.GetChild(0).gameObject.GetComponent<Text>().text = OffText;
             GetComponent<Image>().color = Color.red;
-            if(buttonManager != null)
+            if (buttonManager != null)
             {
                 buttonManager.turnOff();
             }
+            state = false;
 
 
         }
         millOn = !millOn;
     }
 
+    public void EmergencyStop()
+    {
+        GameButtonManager buttonManager = manager.GetComponent<GameButtonManager>();
+ 
+        transform.GetChild(0).gameObject.GetComponent<Text>().text = OffText;
+        GetComponent<Image>().color = Color.red;
+        if (buttonManager != null)
+        {
+            buttonManager.turnOff();
+        }
+        state = false;
+        millOn = true;
+    }
+
     public Boolean getMillState()
     {
         return millOn;
+    }
+
+    public ClampPiece Clamp {
+        get => clampPiece;
+        set => clampPiece = value;
+    }
+
+    public PlacePiece Place
+    {
+        get => placePiece;
+        set => placePiece = value;
+    }
+
+    public Boolean PowerState
+    {
+        get => state;
     }
 }

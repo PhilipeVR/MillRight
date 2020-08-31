@@ -55,14 +55,14 @@ public class WarningManager : MonoBehaviour
                 currentLangSentences = sentences;
                 nameText.text = dialogue.name;
                 titleLang = dialogue.frenchName;
-                lastSentence = sentencesFR[index];
+                lastSentence = sentencesFR[sentenceIndex];
             }
             else
             {
                 currentLangSentences = sentencesFR;
                 nameText.text = dialogue.frenchName;
                 titleLang = dialogue.name;
-                lastSentence = sentences[index];
+                lastSentence = sentences[sentenceIndex];
             }
             images = dialogue.images;
         }

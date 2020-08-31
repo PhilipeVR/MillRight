@@ -117,4 +117,9 @@ public class PlacePiece : MonoBehaviour
     {
         trigger.Reset();
     }
+
+    public float animTime
+    {
+        get => animator.GetCurrentAnimatorStateInfo(0).normalizedTime;
+    }
 }

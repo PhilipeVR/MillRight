@@ -137,4 +137,9 @@ public class QuillFeedControl : MonoBehaviour
         collided = false;
 
     }
+
+    public float animTime
+    {
+        get => object_anim.GetCurrentAnimatorStateInfo(0).normalizedTime * object_anim.GetCurrentAnimatorClipInfo(0)[0].clip.length;
+    }
 }

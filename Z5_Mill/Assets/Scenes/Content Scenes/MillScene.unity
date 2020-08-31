@@ -1429,6 +1429,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   toggleOptionText: ENG
+  toggleOptionText2: 
   currentText: {fileID: 1556837435}
 --- !u!1 &198144154
 GameObject:
@@ -13429,6 +13430,7 @@ GameObject:
   - component: {fileID: 1524794992}
   - component: {fileID: 1524794991}
   - component: {fileID: 1524794993}
+  - component: {fileID: 1524794994}
   m_Layer: 5
   m_Name: MainGameplay_Panel
   m_TagString: Untagged
@@ -13515,6 +13517,18 @@ MonoBehaviour:
   Button1: {fileID: 1757929038}
   Button2: {fileID: 2097448484}
   tutorial: {fileID: 1615564893}
+--- !u!114 &1524794994
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1524794989}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf89ce06d3bf240418090b53619ef3f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1540528940 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2123592474342242849, guid: 9203eff60ac2ef14993dedd9dcbb20f6,
@@ -13945,6 +13959,7 @@ MonoBehaviour:
   toggleHint: {fileID: 0}
   languageScene: {fileID: 1615564895}
   toggleLangManager: {fileID: 0}
+  warningLangManager: {fileID: 0}
   toggleComponentLangManager: {fileID: 865799118}
   imageToggle: {fileID: 0}
   toolHolderManager: {fileID: 0}
@@ -15053,7 +15068,6 @@ GameObject:
   - component: {fileID: 1757929043}
   - component: {fileID: 1757929042}
   - component: {fileID: 1757929041}
-  - component: {fileID: 1757929040}
   m_Layer: 5
   m_Name: NextButton
   m_TagString: Untagged
@@ -15081,18 +15095,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: -250}
   m_SizeDelta: {x: 65, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1757929040
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1757929038}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf89ce06d3bf240418090b53619ef3f1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1757929041
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15136,7 +15138,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1757929040}
+      - m_Target: {fileID: 1524794994}
         m_MethodName: loadlevel
         m_Mode: 5
         m_Arguments:
@@ -16939,7 +16941,6 @@ GameObject:
   - component: {fileID: 2097448488}
   - component: {fileID: 2097448487}
   - component: {fileID: 2097448486}
-  - component: {fileID: 2097448489}
   m_Layer: 5
   m_Name: Menu_Button
   m_TagString: Untagged
@@ -17010,7 +17011,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2097448489}
+      - m_Target: {fileID: 1524794994}
         m_MethodName: loadlevel
         m_Mode: 5
         m_Arguments:
@@ -17058,18 +17059,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2097448484}
   m_CullTransparentMesh: 0
---- !u!114 &2097448489
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2097448484}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf89ce06d3bf240418090b53619ef3f1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &2121364640
 GameObject:
   m_ObjectHideFlags: 0

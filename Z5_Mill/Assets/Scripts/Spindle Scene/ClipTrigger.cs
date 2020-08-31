@@ -2,15 +2,19 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ClipTrigger : MonoBehaviour
 {
+    [SerializeField] private DialogueManager manager;
     [SerializeField] private string transitionParameter;
     [SerializeField] private string animationName;
     [SerializeField] private int index;
+    [SerializeField] private int sentenceIndex;
     [SerializeField] private AnimationController controller;
     [SerializeField] private Color hoverColor;
     [SerializeField] private Color clickedColor;
+    [SerializeField] private Button continueBTN;
 
     public Color[] basicColor;
 
@@ -36,9 +40,19 @@ public class ClipTrigger : MonoBehaviour
         }
     }
 
+    private void LateUpdate()
+    {
+        Debug.Log(manager.SentenceIndex);
+        if(manager.SentenceIndex == sentenceIndex  && index == controller.Index)
+        {
+            continueBTN.interactable = false;
+        }
+    }
+
     private void PlaySequence()
     {
         controller.PlayAnimation(transitionParameter, animationName);
+        continueBTN.interactable = true;
     }
 
     private void OnMouseOver()

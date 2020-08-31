@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class ClampPiece : MonoBehaviour
 {
+    [SerializeField] private ZWheelControl WheelControl;
+    [SerializeField] private SwitchBit checkBitState;
     [SerializeField] private Animator animator, prevAnimator;
     [SerializeField] private Color hoverColor;
     [SerializeField] private Color clickedColor;
@@ -34,13 +36,23 @@ public class ClampPiece : MonoBehaviour
 
     private void OnMouseDown()
     {
-        Debug.Log(prevAnimator.name);
-        if (prevAnimator.GetCurrentAnimatorStateInfo(0).normalizedTime > 1f && !Clicked)
+        Debug.Log(WheelControl.animTime);
+
+        if (WheelControl.animTime > 0 && checkBitState.CheckState())
+        {
+            WarningEvents.current.CutterNear();
+        }
+        else if (prevAnimator.GetCurrentAnimatorStateInfo(0).normalizedTime > 1f && !Clicked)
         {
             GetComponent<Renderer>().material.color = clickedColor;
             animator.speed = Speed;
             Clicked = true;
         }
+    }
+
+    public float animTime
+    {
+        get => animator.GetCurrentAnimatorStateInfo(0).normalizedTime * animator.GetCurrentAnimatorClipInfo(0)[0].clip.length;
     }
 
     public void Reset()

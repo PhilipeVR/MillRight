@@ -7,6 +7,7 @@ using UnityEngine;
 
 public class SwitchBit : MonoBehaviour
 {
+    [SerializeField] private Toggle_On_Off PowerButton;
     public GameObject fineAdjustment;
     public List<GameObject> DrillBits;
     public List<GameObject> EndMills;
@@ -74,12 +75,43 @@ public class SwitchBit : MonoBehaviour
         drillChuck.SetActive(false);
     }
 
+    public Boolean CheckState()
+    {
+        Boolean bitState = false;
+
+        for (int i = 0; i < numOfDrillBits; i++)
+        {
+            if (DrillBits[i].activeSelf)
+            {
+                bitState = true;
+                break;
+            }
+        }
+        if (!bitState)
+        {
+            for (int i = 0; i < numOfEndMills; i++)
+            {
+                if (EndMills[i].activeSelf)
+                {
+                    bitState = true;
+                    break;
+                }
+            }
+        }
+        return bitState && (endMillHolder.activeSelf || drillChuck.activeSelf);
+
+    }
+
     public void Switch(string bitTag)
     {
         if (enable)
         {
-
-            if (!manager.state)
+            if (PowerButton.PowerState)
+            {
+                Debug.Log("HELLO PERFECT");
+                WarningEvents.current.CantChangeCutter();
+            }
+            else 
             {
                 if (!bitTag.Equals(currentBit.tag))
                 {
@@ -147,41 +179,47 @@ public class SwitchBit : MonoBehaviour
     public void changeChuck(Boolean type)
     {
         spawnBitPosition = currentBit.transform.localPosition;
-
-        if (chuckType != type)
+        if (PowerButton.PowerState)
         {
-            if (type)
-            {
-                drillChuck.SetActive(true);
-                endMillHolder.SetActive(false);
-                chuckSelection.Clicked(drillChuck.name);
-            }
-            else
-            {
-                endMillHolder.SetActive(true);
-                drillChuck.SetActive(false);
-                chuckSelection.Clicked(endMillHolder.name);
-            }
-            currentBit.SetActive(false);
-            bitSelection.Clean();
-
+            WarningEvents.current.CantChangeCutter();
         }
         else
         {
-            if (type)
+            if (chuckType != type)
             {
-                drillChuck.SetActive(true);
-                chuckSelection.Clicked(drillChuck.name);
+                if (type)
+                {
+                    drillChuck.SetActive(true);
+                    endMillHolder.SetActive(false);
+                    chuckSelection.Clicked(drillChuck.name);
+                }
+                else
+                {
+                    endMillHolder.SetActive(true);
+                    drillChuck.SetActive(false);
+                    chuckSelection.Clicked(endMillHolder.name);
+                }
+                currentBit.SetActive(false);
+                bitSelection.Clean();
 
             }
             else
             {
-                endMillHolder.SetActive(true);
-                chuckSelection.Clicked(endMillHolder.name);
+                if (type)
+                {
+                    drillChuck.SetActive(true);
+                    chuckSelection.Clicked(drillChuck.name);
 
+                }
+                else
+                {
+                    endMillHolder.SetActive(true);
+                    chuckSelection.Clicked(endMillHolder.name);
+
+                }
             }
+            chuckType = type;
         }
-        chuckType = type;
     }
 
     public Boolean holderState

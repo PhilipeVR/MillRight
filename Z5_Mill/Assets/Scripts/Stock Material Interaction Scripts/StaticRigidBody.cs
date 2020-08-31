@@ -7,12 +7,10 @@ public class StaticRigidBody : MonoBehaviour
 {
     Vector3 init_pos, spindle_pos;
     Quaternion init_rot;
-
-    [SerializeField]
-    GameObject Spindle;
-
-    [SerializeField]
-    GameObject quillFeedController, fineAdjustmentController, XWheelController, YWheelController;
+    [SerializeField] Toggle_On_Off PowerButton;
+    [SerializeField] GameObject Spindle;
+    [SerializeField] private string DrillingTag;
+    [SerializeField] GameObject quillFeedController, fineAdjustmentController, XWheelController, YWheelController;
     // Start is called before the first frame update
     void Start()
     {
@@ -24,7 +22,7 @@ public class StaticRigidBody : MonoBehaviour
     }
 
     // Update is called once per frame
-    void FixedUpdate()
+    void LateUpdate()
     {
         updateStaticRigidBody();
        
@@ -32,6 +30,11 @@ public class StaticRigidBody : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
+        if(!collision.collider.tag.Equals(DrillingTag) && PowerButton.PowerState)
+        {
+            WarningEvents.current.TurnOFF();
+            PowerButton.EmergencyStop();
+        }
         if (quillFeedController.GetComponent<QuillFeedControl>().QuillLockButton.Activated || fineAdjustmentController.GetComponent<FineAdjustmentControl>().FineAdjustmentButton.Activated)
         {
             quillFeedController.GetComponent<QuillFeedControl>().collided = true;

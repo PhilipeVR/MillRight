@@ -13,12 +13,12 @@ public class WarningEvents : MonoBehaviour
     }
 
     // Update is called once per frame
-    public event Action cutterChangeON;
-    public void CutterChangeON()
+    public event Action cantChangeCutter;
+    public void CantChangeCutter()
     {
-        if(cutterChangeON != null)
+        if(cantChangeCutter != null)
         {
-            cutterChangeON();
+            cantChangeCutter();
         }
     }
 
@@ -50,7 +50,6 @@ public class WarningEvents : MonoBehaviour
     }
 
     public event Action clampWorkpiece;
-
     public void ClampWorkpiece()
     {
         if(clampWorkpiece != null)
@@ -60,7 +59,6 @@ public class WarningEvents : MonoBehaviour
     }
 
     public event Action placePiece;
-
     public void PlacePiece()
     {
         if (placePiece != null)
@@ -70,7 +68,6 @@ public class WarningEvents : MonoBehaviour
     }
 
     public event Action toolSelection;
-
     public void ToolSelection()
     {
         if (toolSelection != null)
@@ -80,12 +77,29 @@ public class WarningEvents : MonoBehaviour
     }
 
     public event Action operationSelected;
-
     public void OperationSelected()
     {
         if (operationSelected != null)
         {
             operationSelected();
+        }
+    }
+
+    public event Action stopTableMovement;
+    public void StopTableMovement()
+    {
+        if (stopTableMovement != null)
+        {
+            stopTableMovement();
+        }
+    }
+
+    public event Action noAction;
+    public void NoAction()
+    {
+        if (noAction != null)
+        {
+            noAction();
         }
     }
 

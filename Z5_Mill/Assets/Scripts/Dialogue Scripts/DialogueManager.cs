@@ -19,7 +19,7 @@ public class DialogueManager : MonoBehaviour
 
     private Sprite[] images;
     private int count;
-    private int index;
+    private int index, sentenceIndex;
     private Queue<string> sentences; // Keeps track of all sentences in current dialogue
     private Queue<string> sentencesFR;
     private Queue<string> currentLangSentence;
@@ -33,6 +33,7 @@ public class DialogueManager : MonoBehaviour
         sentences = new Queue<string>();
         sentencesFR = new Queue<string>();
         index = 1;
+        sentenceIndex = -1;
     }
 
     public void StartDialogue (Dialogue dialogue)
@@ -41,6 +42,7 @@ public class DialogueManager : MonoBehaviour
         titleLang = dialogue.frenchName;
         sentences.Clear();
         index = 1;
+        sentenceIndex = -1;
         DeactivateAtEndDialogue.SetActive(true);
 
         if (language)
@@ -99,6 +101,8 @@ public class DialogueManager : MonoBehaviour
         dialogIndex.text = index + "/" + count;
         Image.GetComponent<Image>().sprite = images[index - 1];
         index++;
+        sentenceIndex++;
+
     }
 
     void EndDialogue()
@@ -156,4 +160,9 @@ public class DialogueManager : MonoBehaviour
 
         language = !language;
      }
+
+    public int SentenceIndex
+    {
+        get => sentenceIndex;
+    }
 }

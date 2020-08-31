@@ -637,6 +637,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   toggleOptionText: "Op\xE9rations de la fraiseuse"
+  toggleOptionText2: 
   currentText: {fileID: 1094801700}
 --- !u!114 &637833812
 MonoBehaviour:
@@ -1292,6 +1293,7 @@ MonoBehaviour:
   toggleHint: {fileID: 0}
   languageScene: {fileID: 1101169958}
   toggleLangManager: {fileID: 0}
+  warningLangManager: {fileID: 0}
   toggleComponentLangManager: {fileID: 0}
   imageToggle: {fileID: 2101881461}
   toolHolderManager: {fileID: 0}
@@ -1623,6 +1625,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   toggleOptionText: Tutoriel du porte-outils
+  toggleOptionText2: 
   currentText: {fileID: 1009505720}
 --- !u!1 &1266584078
 GameObject:
@@ -1816,7 +1819,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: SampleScene
+          m_StringArgument: Mill Simulation Scene
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1266584083
@@ -1869,6 +1872,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   toggleOptionText: Simulation de la fraiseuse
+  toggleOptionText2: 
   currentText: {fileID: 1049735015}
 --- !u!1 &1302074344
 GameObject:
@@ -1925,6 +1929,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   toggleOptionText: ENG
+  toggleOptionText2: 
   currentText: {fileID: 633916050}
 --- !u!114 &1302074347
 MonoBehaviour:
@@ -2416,6 +2421,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   toggleOptionText: Retour au Menu Principal
+  toggleOptionText2: 
   currentText: {fileID: 1470138664}
 --- !u!1 &1470138662
 GameObject:
@@ -2742,6 +2748,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   toggleOptionText: "D\xE9couvrir les composantes "
+  toggleOptionText2: 
   currentText: {fileID: 580147474}
 --- !u!1 &2101881457
 GameObject:

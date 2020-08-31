@@ -5,18 +5,13 @@ using UnityEngine;
 
 public class YWheelControl : MonoBehaviour
 {
-    [SerializeField]
-    GameObject animObject, lockAnimObject;
-
+    [SerializeField] GameObject animObject, lockAnimObject;
     [SerializeField] public DRO_Button YLockButton;
-
-    [SerializeField]
-    GameObject wheel, lockHandle;
-
-    [SerializeField]
-    Boolean enable = true;
-
+    [SerializeField] GameObject wheel, lockHandle;
+    [SerializeField] Boolean enable = true;
     [SerializeField] private float speedMultiplier;
+    private PlacePiece placePiece;
+
 
     private float new_time, prev_time, prev_distance;
     public float currentSpeed;
@@ -63,21 +58,44 @@ public class YWheelControl : MonoBehaviour
 
             if (Input.mouseScrollDelta.y > 0f && !forwardCollision)
             {
-                object_anim.SetFloat("Reverse", 1);
-                setSpeed(currentSpeed);
-                //Debug.Log(Input.mouseScrollDelta.y);
-                //Debug.Log(Input.GetAxis("Mouse ScrollWheel"));
+                Boolean testPlace = placePiece != null;
+                if (testPlace && placePiece.animTime > 0f && placePiece.animTime < 1f)
+                {
+                    StopMovement();
+                }
+                else {
+                    object_anim.SetFloat("Reverse", 1);
+                    setSpeed(currentSpeed);
+                    //Debug.Log(Input.mouseScrollDelta.y);
+                    //Debug.Log(Input.GetAxis("Mouse ScrollWheel"));
+                }
             }
             else if (Input.mouseScrollDelta.y < 0f && !backwardCollision)
             {
-                object_anim.SetFloat("Reverse", -1);
-                setSpeed(currentSpeed);
-            } else
+                Boolean testPlace = placePiece != null;
+                if (testPlace && placePiece.animTime > 0f && placePiece.animTime < 1f)
+                {
+                    StopMovement();
+                }
+                else
+                {
+                    object_anim.SetFloat("Reverse", -1);
+                    setSpeed(currentSpeed);
+                }
+            }
+            else
             {
                 pause();
             }
+            
 
         }
+    }
+
+    private void StopMovement()
+    {
+        pause();
+        WarningEvents.current.StopTableMovement();
     }
 
     private void pause()
@@ -113,4 +131,17 @@ public class YWheelControl : MonoBehaviour
         forwardCollision = false;
         backwardCollision = false;
     }
+
+    public float animTime
+    {
+        get => object_anim.GetCurrentAnimatorStateInfo(0).normalizedTime * object_anim.GetCurrentAnimatorClipInfo(0)[0].clip.length;
+    }
+
+
+    public PlacePiece Place
+    {
+        get => placePiece;
+        set => placePiece = value;
+    }
+
 }

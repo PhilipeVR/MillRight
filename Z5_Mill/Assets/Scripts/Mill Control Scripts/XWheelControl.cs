@@ -7,18 +7,12 @@ using UnityEngine;
 
 public class XWheelControl : MonoBehaviour
 {
-    [SerializeField]
-    GameObject animObject, lockAnimObject;
-
+    [SerializeField] GameObject animObject, lockAnimObject;
     [SerializeField] public DRO_Button XLockButton;
-
-    [SerializeField]
-    GameObject wheel, lockHandle;
-
-    [SerializeField]
-    Boolean enable = true;
-
+    [SerializeField] GameObject wheel, lockHandle;
+    [SerializeField] Boolean enable = true;
     [SerializeField] private float speedMultiplier;
+    private PlacePiece placePiece;
 
     private float new_time, prev_time, prev_distance;
     public float currentSpeed;
@@ -52,7 +46,7 @@ public class XWheelControl : MonoBehaviour
         if(XLockButton.Activated == true)
         {
             float distance, time;
-            if(Input.mouseScrollDelta.y != 0)
+            if (Input.mouseScrollDelta.y != 0)
             {
                 distance = Math.Abs(Input.mouseScrollDelta.y - prev_distance);
                 time = Math.Abs(Time.time - prev_time);
@@ -62,21 +56,43 @@ public class XWheelControl : MonoBehaviour
 
             if (Input.mouseScrollDelta.y > 0f && !leftCollision)
             {
-                object_anim.SetFloat("Reverse", 1);
-                setSpeed(currentSpeed);
-                //Debug.Log(Input.mouseScrollDelta.y);
-                //Debug.Log(Input.GetAxis("Mouse ScrollWheel"));
+                Boolean testPlace = placePiece != null;
+                if (testPlace && placePiece.animTime > 0f && placePiece.animTime < 1f)
+                {
+                    StopMovement();
+                }
+                else
+                {
+                    object_anim.SetFloat("Reverse", 1);
+                    setSpeed(currentSpeed);
+                    //Debug.Log(Input.mouseScrollDelta.y);
+                    //Debug.Log(Input.GetAxis("Mouse ScrollWheel"));
+                }
             }
             else if (Input.mouseScrollDelta.y < 0f && !rightCollision)
             {
-                object_anim.SetFloat("Reverse", -1);
-                setSpeed(currentSpeed);
-            } else
+                Boolean testPlace = placePiece != null;
+                if (testPlace && placePiece.animTime > 0f && placePiece.animTime < 1f)
+                {
+                    StopMovement();
+                }
+                else
+                {
+                    object_anim.SetFloat("Reverse", -1);
+                    setSpeed(currentSpeed);
+                }
+            }
+            else
             {
                 pause();
             }
-
         }
+    }
+
+    private void StopMovement()
+    {
+        pause();
+        WarningEvents.current.StopTableMovement();
     }
 
     private void pause()
@@ -111,5 +127,16 @@ public class XWheelControl : MonoBehaviour
         object_anim.speed = 0;
         leftCollision = false;
         rightCollision = false;
+    }
+
+    public float animTime
+    {
+        get => object_anim.GetCurrentAnimatorStateInfo(0).normalizedTime * object_anim.GetCurrentAnimatorClipInfo(0)[0].clip.length;
+    }
+
+    public PlacePiece Place
+    {
+        get => placePiece;
+        set => placePiece = value;
     }
 }

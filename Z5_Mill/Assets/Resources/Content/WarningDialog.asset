@@ -20,16 +20,19 @@ MonoBehaviour:
     - Make sure the power is off before changing cutters.
     - Beware changing the gear might change spinning direction.
     - 'Never adjust the workpiece or work mounting devices when the machine is operating. '
+    - Danger!! Please ONLY mill workpiece.
     sentencesFR:
     - "Arr\xEAtez la machine avant d'effectuer des r\xE9glages ou des mesures."
     - "\rAssurez-vous que la machine est \xE9teinte avant de changer les couteaux."
     - Attention, changer de vitesse peut changer le sens de rotation.
     - "Ne r\xE9glez jamais la pi\xE8ce \xE0 usiner ou les dispositifs de montage
       lorsque la machine est en marche."
+    - "Danger!! Veuillez SEULEMENT fraiser la pi\xE8ce.\r\n"
     images:
     - {fileID: 21300000, guid: 78f3f03552bc6be4fa4d6187dcd9a47b, type: 3}
     - {fileID: 21300000, guid: 22117155ba12dad4d8a4b2fb6e7af78a, type: 3}
     - {fileID: 21300000, guid: 91b93e274b122644f917a7105e8ca512, type: 3}
+    - {fileID: 21300000, guid: c1cd32cdf1c26e448a689b38fc231bb6, type: 3}
     - {fileID: 21300000, guid: c1cd32cdf1c26e448a689b38fc231bb6, type: 3}
   - name: Mill Safety - Post-Operation
     frenchName: "S\xE9curit\xE9 de fraiseuse - Apr\xE8s l'op\xE9ration"
@@ -57,6 +60,10 @@ MonoBehaviour:
       to cut axially and in the radial direction. '
     - Please use an end mill to perform face milling operations. End mills are designed
       to cut axially and in the radial direction.
+    - Wait! Please choose an operation before turning machine ON.
+    - Wait! Please choose cuttings tools before turning machine ON.
+    - Do not move table while placing workpiece.
+    - Wait! Please place and clamp workpiece before turning machine ON.
     sentencesFR:
     - "\rD\xE9placez la table aussi loin que possible du couteau lors de la mise
       en place du travail pour \xE9viter de vous blesser les mains."
@@ -75,10 +82,18 @@ MonoBehaviour:
     - "Veuillez utiliser une fraise en bout pour effectuer les op\xE9rations de surfa\xE7age.
       Les fraises en bout sont con\xE7ues pour couper axialement et dans le sens
       radial."
+    - "Attendez! Veuillez choisir une op\xE9ration avant d'allumer la machine."
+    - Attendez! Veuillez choisir les outils de coupe avant d'allumer la machine.
+    - "Ne d\xE9placez pas la table pendant le serrage de la pi\xE8ce."
+    - "Attendez! Veuillez placer et serrer la pi\xE8ce avant d'allumer la machine."
     images:
     - {fileID: 21300000, guid: 11233fab40f2dd648b37d595378443d1, type: 3}
     - {fileID: 21300000, guid: 3fbcd41248d4edf498805811b31c4614, type: 3}
     - {fileID: 21300000, guid: 746a8d5dcbe5ead4ca7a7d3666250f1d, type: 3}
+    - {fileID: 21300000, guid: b19af5f570b609741a3041f5fe02108d, type: 3}
+    - {fileID: 21300000, guid: b19af5f570b609741a3041f5fe02108d, type: 3}
+    - {fileID: 21300000, guid: b19af5f570b609741a3041f5fe02108d, type: 3}
+    - {fileID: 21300000, guid: b19af5f570b609741a3041f5fe02108d, type: 3}
     - {fileID: 21300000, guid: b19af5f570b609741a3041f5fe02108d, type: 3}
     - {fileID: 21300000, guid: b19af5f570b609741a3041f5fe02108d, type: 3}
     - {fileID: 21300000, guid: b19af5f570b609741a3041f5fe02108d, type: 3}
