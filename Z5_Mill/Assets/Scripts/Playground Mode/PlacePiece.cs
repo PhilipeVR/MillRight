@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -11,65 +12,23 @@ public class PlacePiece : MonoBehaviour
     [SerializeField] private float time1, time2, time3, time4, Speed, tableXref, tableYref;
     private AnimationClip clip;
     private Vector3 initialReferencePositionX, initialReferencePositionY, offset, constantReference;
+    private Boolean clicked;
     private void Awake()
     {
         clip = animator.runtimeAnimatorController.animationClips[0];
         initialReferencePositionX.x = tableXref;
         initialReferencePositionY.y = tableYref;
         ResetAnim();
-
     }
 
     // Update is called once per frame
     public void PlaceStock()
     {
-        float offSetVal;
-        AnimationCurve curve;
-        offset.x = referenceTransformX.localPosition.x - initialReferencePositionX.x;
-        offset.y = referenceTransformY.localPosition.y - initialReferencePositionY.y;
-        constantReference.x = referenceTransformX.localPosition.x;
-        constantReference.y = referenceTransformY.localPosition.y;
-        //Debug.Log("referenceTransformY: " + referenceTransformY.localPosition.y.ToString());
-        //Debug.Log("initialReferencePositionY: " + initialReferencePositionY.y.ToString());
-        Keyframe[] keysX = new Keyframe[4];
-        offSetVal = initialFinalPosition.x + offset.x;
-
-
-        keysX[0] = new Keyframe(time1, initialStockPosition.x);
-        keysX[1] = new Keyframe(time2, initialStockPosition.x);
-        keysX[2] = new Keyframe(time3, initialStockPosition.x);
-        keysX[3] = new Keyframe(time4, offSetVal);
-
-        curve = new AnimationCurve(keysX);
-
-        clip.SetCurve("", typeof(Transform), "localPosition.x", curve);
-
-        Keyframe[] keysY = new Keyframe[4];
-        offSetVal = initialFinalPosition.y + offset.y;
-
-        keysY[0] = new Keyframe(time1, initialStockPosition.y);
-        keysY[1] = new Keyframe(time2, initialStockPosition.y);
-        keysY[2] = new Keyframe(time3, offSetVal);
-        keysY[3] = new Keyframe(time4, offSetVal);
-
-        curve = new AnimationCurve(keysY);
-
-        clip.SetCurve("", typeof(Transform), "localPosition.y", curve);
-
-        Keyframe[] keysZ = new Keyframe[4];
-        offSetVal = initialFinalPosition.z + offset.z;
-
-        keysZ[0] = new Keyframe(time1, initialStockPosition.z);
-        keysZ[1] = new Keyframe(time2, offSetVal);
-        keysZ[2] = new Keyframe(time3, offSetVal);
-        keysZ[3] = new Keyframe(time4, offSetVal);
-
-        curve = new AnimationCurve(keysZ);
-
-        clip.SetCurve("", typeof(Transform), "localPosition.z", curve);
 
         animator.Play(clip.name,0,0);
         animator.speed = Speed;
+        clicked = true;
+
 
     }
 
@@ -111,6 +70,7 @@ public class PlacePiece : MonoBehaviour
         constantReference.y = referenceTransformY.localPosition.y;
         initialReferencePositionX.x = tableXref;
         initialReferencePositionY.y = tableYref;
+        clicked = false;
     }
 
     public void ResetTrigger()
@@ -121,5 +81,10 @@ public class PlacePiece : MonoBehaviour
     public float animTime
     {
         get => animator.GetCurrentAnimatorStateInfo(0).normalizedTime;
+    }
+
+    public Boolean Clicked
+    {
+        get => clicked;
     }
 }

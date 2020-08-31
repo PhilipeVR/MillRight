@@ -57,7 +57,12 @@ public class XWheelControl : MonoBehaviour
             if (Input.mouseScrollDelta.y > 0f && !leftCollision)
             {
                 Boolean testPlace = placePiece != null;
-                if (testPlace && placePiece.animTime > 0f && placePiece.animTime < 1f)
+                if(testPlace && !placePiece.Clicked)
+                {
+                    pause();
+                    WarningEvents.current.PieceFirst();
+                }
+                else if (testPlace && placePiece.animTime > 0f && placePiece.animTime < 1f)
                 {
                     StopMovement();
                 }
@@ -72,7 +77,12 @@ public class XWheelControl : MonoBehaviour
             else if (Input.mouseScrollDelta.y < 0f && !rightCollision)
             {
                 Boolean testPlace = placePiece != null;
-                if (testPlace && placePiece.animTime > 0f && placePiece.animTime < 1f)
+                if (testPlace && !placePiece.Clicked)
+                {
+                    pause();
+                    WarningEvents.current.PieceFirst();
+                }
+                else if (testPlace && placePiece.animTime > 0f && placePiece.animTime < 1f)
                 {
                     StopMovement();
                 }

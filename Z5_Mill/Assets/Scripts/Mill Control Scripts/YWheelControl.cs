@@ -59,7 +59,12 @@ public class YWheelControl : MonoBehaviour
             if (Input.mouseScrollDelta.y > 0f && !forwardCollision)
             {
                 Boolean testPlace = placePiece != null;
-                if (testPlace && placePiece.animTime > 0f && placePiece.animTime < 1f)
+                if (testPlace && !placePiece.Clicked)
+                {
+                    pause();
+                    WarningEvents.current.PieceFirst();
+                }
+                else if (testPlace && placePiece.animTime > 0f && placePiece.animTime < 1f)
                 {
                     StopMovement();
                 }
@@ -73,7 +78,12 @@ public class YWheelControl : MonoBehaviour
             else if (Input.mouseScrollDelta.y < 0f && !backwardCollision)
             {
                 Boolean testPlace = placePiece != null;
-                if (testPlace && placePiece.animTime > 0f && placePiece.animTime < 1f)
+                if (testPlace && !placePiece.Clicked)
+                {
+                    pause();
+                    WarningEvents.current.PieceFirst();
+                }
+                else if (testPlace && placePiece.animTime > 0f && placePiece.animTime < 1f)
                 {
                     StopMovement();
                 }

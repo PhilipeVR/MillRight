@@ -103,6 +103,15 @@ public class WarningEvents : MonoBehaviour
         }
     }
 
+    public event Action pieceFirst;
+    public void PieceFirst()
+    {
+        if (pieceFirst != null)
+        {
+            pieceFirst();
+        }
+    }
+
 
 
 }

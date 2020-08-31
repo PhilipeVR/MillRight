@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
-using System.Security.Policy;
 using UnityEngine;
 
 public class WarningSubscribers : MonoBehaviour
@@ -19,6 +18,7 @@ public class WarningSubscribers : MonoBehaviour
         WarningEvents.current.cantChangeCutter += CantChangeCutter;
         WarningEvents.current.turnOFF += NotMillingPiece;
         WarningEvents.current.noAction += NoAnimAction;
+        WarningEvents.current.pieceFirst += PieceSetup;
     }
 
     // Update is called once per frame
@@ -73,6 +73,12 @@ public class WarningSubscribers : MonoBehaviour
     private void NoAnimAction()
     {
         WarningTriggerInformation triggerInformation = FindWarningInfo("NoAnimAction");
+        warningTrigger.TriggerSentence(triggerInformation.DialogIndex, triggerInformation.SentenceIndex);
+    }
+
+    private void PieceSetup()
+    {
+        WarningTriggerInformation triggerInformation = FindWarningInfo("PieceSetup");
         warningTrigger.TriggerSentence(triggerInformation.DialogIndex, triggerInformation.SentenceIndex);
     }
 
