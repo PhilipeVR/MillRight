@@ -5,10 +5,12 @@ using UnityEngine.UI;
 
 public class PowerTriggers : MonoBehaviour
 {
+    [SerializeField] private DialogueManager dialogueManager;
     [SerializeField] private int[] anim;
     [SerializeField] private string[] transitionParameter;
     [SerializeField] private string[] animationName;
     [SerializeField] private int[] index;
+    [SerializeField] private int[] sentenceIndex;
     [SerializeField] private TriggerAnimationController[] trigger;
     [SerializeField] private ProcessAnimationController manager;
     [SerializeField] private string OnText, OffText;
@@ -22,7 +24,7 @@ public class PowerTriggers : MonoBehaviour
         {
             int a = i * 2;
             int b = a + 1;
-            powers.Add(new PowerButtonToggle(transform, GetComponent<Image>(), manager, OnText, OffText, trigger[i], transitionParameter, new string[] { animationName[a], animationName[b] }, anim[i], new int[] { index[a], index[b] }));
+            powers.Add(new PowerButtonToggle(transform, GetComponent<Image>(), manager, OnText, OffText, trigger[i], transitionParameter, new string[] { animationName[a], animationName[b] }, anim[i], new int[] { index[a], index[b] }, new int[] { sentenceIndex[a], sentenceIndex[b] }));
         }
     }
 
@@ -42,6 +44,10 @@ public class PowerTriggers : MonoBehaviour
         if (buttonToggle != null)
         {
             buttonToggle.OnOffToggle();
+            /*if(dialogueManager.SentenceIndex == buttonToggle.CurrentSentenceIndex)
+            {
+                   dialogueManager.DisplayNextSentence();
+            }*/
         }
     }
 

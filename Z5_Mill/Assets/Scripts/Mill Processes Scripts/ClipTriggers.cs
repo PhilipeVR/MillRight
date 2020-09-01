@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class ClipTriggers : MonoBehaviour
 {
+    [SerializeField] private DialogueManager dialogueManager;
     [SerializeField] private Triggers animTriggers;
     [SerializeField] private TriggerAnimationController[] triggerController;
     [SerializeField] private ProcessAnimationController manager;
@@ -32,6 +33,10 @@ public class ClipTriggers : MonoBehaviour
         if(tmpTrigger != null)
         {
             tmpTrigger.PlaySequence(controller);
+            /*if(dialogueManager.SentenceIndex == tmpTrigger.CurrentSentenceIndex)
+            {
+                dialogueManager.DisplayNextSentence();
+            }*/
         }
     }
 

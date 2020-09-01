@@ -11,6 +11,7 @@ public class Trigger
     public string[] transitionParams;
     public string[] animationName;
     public int[] index;
+    public int[] sentenceIndex;
 
     private int animIndex = 0;
 
@@ -53,5 +54,10 @@ public class Trigger
     {
         get => animIndex;
         set => animIndex = value;
+    }
+
+    public int CurrentSentenceIndex
+    {
+        get => sentenceIndex[Index];
     }
 }

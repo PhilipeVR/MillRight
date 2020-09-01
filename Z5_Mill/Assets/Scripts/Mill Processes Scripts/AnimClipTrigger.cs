@@ -5,11 +5,13 @@ using UnityEngine;
 
 public class AnimClipTrigger : MonoBehaviour
 {
+    [SerializeField] private DialogueManager dialogueManager;
     [SerializeField] private ProcessAnimationController manager;
     [SerializeField] private int anim;
     [SerializeField] private string transitionParameter;
     [SerializeField] private string animationName;
     [SerializeField] private int index;
+    [SerializeField] private int sentenceIndex;
     [SerializeField] private TriggerAnimationController trigger;
     [SerializeField] private Color hoverColor;
     [SerializeField] private Color clickedColor;
@@ -53,6 +55,10 @@ public class AnimClipTrigger : MonoBehaviour
             }
         }
         PlaySequence();
+        /*if(dialogueManager.SentenceIndex == sentenceIndex)
+        {
+            dialogueManager.DisplayNextSentence();
+        }*/
     }
 
     private void OnMouseOver()

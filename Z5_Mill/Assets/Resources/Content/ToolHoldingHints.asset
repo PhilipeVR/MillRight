@@ -48,9 +48,9 @@ MonoBehaviour:
 
       Hint: Click on
       a wrench'
-    - 'Click on the restart button on the right-hand side to replay animation if
-      needed. To pass to the next phase click and read the description of the different
-      tools on the left-hand side. '
+    - 'Click on the restart button on the left-hand side to replay animation if needed.
+      To pass to the next phase click and read the description of the different tools
+      on the right-hand side. '
     sentencesFR:
     - "La fraiseuse poss\xE8de une vari\xE9t\xE9 d'outils diff\xE9rents qui peuvent
       \xEAtre ins\xE9r\xE9s dans la broche. \rPar cons\xE9quent, il est important
@@ -69,9 +69,9 @@ MonoBehaviour:
     - "Nous enfilons ensuite le boulon \xE0 la main\n\nIndice: Cliquer sur le boulon"
     - "Utilisez les cl\xE9s de serrage pour serrer le boulon compl\xE8tement.\n\nIndice:
       Cliquez sur une des cl\xE9s de serrage"
-    - "Cliquez sur le bouton de red\xE9marrage sur le c\xF4t\xE9 droit pour rejouer
+    - "Cliquez sur le bouton de red\xE9marrage sur le c\xF4t\xE9 gauche pour rejouer
       l'animation si n\xE9cessaire. Pour passer \xE0 la phase suivante, cliquez et
-      lisez la description des diff\xE9rents outils sur le c\xF4t\xE9 gauche."
+      lisez la description des diff\xE9rents outils sur le c\xF4t\xE9 droit."
     images:
     - {fileID: 21300000, guid: be5d46762a61dfd44a3ae316a96e167f, type: 3}
     - {fileID: 21300000, guid: 83f2e7842936ef84f96896183999e50e, type: 3}

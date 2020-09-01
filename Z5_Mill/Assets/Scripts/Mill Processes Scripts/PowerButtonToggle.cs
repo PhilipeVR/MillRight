@@ -10,6 +10,7 @@ public class PowerButtonToggle
     private string[] transitionParameter;
     private string[] animationName;
     private int[] index;
+    private int[] sentenceIndex;
     private TriggerAnimationController trigger;
     private string OnText, OffText;
     private int i = 0;
@@ -19,7 +20,7 @@ public class PowerButtonToggle
     private Boolean millOn = false;
 
     // Start is called before the first frame update
-    public PowerButtonToggle(Transform transform, Image image, ProcessAnimationController manager, string onText, string offText, TriggerAnimationController trigger, string[] transitionParameter, string[] animationName, int anim, int[] index)
+    public PowerButtonToggle(Transform transform, Image image, ProcessAnimationController manager, string onText, string offText, TriggerAnimationController trigger, string[] transitionParameter, string[] animationName, int anim, int[] index, int[] sentenceIndex)
     {
         this.OnText = onText;
         this.OffText = offText;
@@ -27,6 +28,7 @@ public class PowerButtonToggle
         this.image = image;
         this.manager = manager;
         this.index = index;
+        this.sentenceIndex = sentenceIndex;
         this.trigger = trigger;
         this.animationName = animationName;
         this.anim = anim;
@@ -99,5 +101,10 @@ public class PowerButtonToggle
     {
         get => i;
         set => i = value;
+    }
+
+    public int CurrentSentenceIndex
+    {
+        get => sentenceIndex[Index];
     }
 }

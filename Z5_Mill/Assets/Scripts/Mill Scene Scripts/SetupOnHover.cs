@@ -2,21 +2,20 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.UI;
 
 public class SetupOnHover : MonoBehaviour
 {
-
     [SerializeField] private Color onHoverColor;
     [SerializeField] private int detailIndex;
     [SerializeField] GameObject ObjectManager;
-    [SerializeField] private Toggle checkListElem;
-    [SerializeField] private PanelHandler handler;
     [SerializeField] private Color onClickedColor;
     [SerializeField] private float FlashDelay = 0.25f;
     [SerializeField] private int NumOfFlash = 5;
     public Boolean clicked = false;
     public Boolean flashing = false;
+    public UnityEvent clickEvent;
 
     void Start()
     {
@@ -66,9 +65,7 @@ public class SetupOnHover : MonoBehaviour
         StopAllCoroutines();
         if (!clicked)
         {
-            ObjectManager.GetComponent<ComponentManager>().incrementPartCounter();
-            handler.activate(true);
-            checkListElem.isOn = true;
+            clickEvent.Invoke();
             clicked = true;
             foreach(Transform children in transform)
             {
@@ -77,11 +74,6 @@ public class SetupOnHover : MonoBehaviour
                 {
                     tmpHover.SetClickedColor();
                 }
-            }
-            ComponentHint hintToRemove = GetComponentInParent<ComponentHint>();
-            if(hintToRemove != null)
-            {
-                hintToRemove.RemoveClickedHint(this);
             }
         }
     }
