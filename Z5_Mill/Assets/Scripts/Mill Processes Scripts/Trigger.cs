@@ -14,6 +14,7 @@ public class Trigger
     public int[] sentenceIndex;
 
     private int animIndex = 0;
+    private int LateAnimIndex = 0;
 
     public Boolean PlaySequence(TriggerAnimationController controller)
     {
@@ -56,8 +57,16 @@ public class Trigger
         set => animIndex = value;
     }
 
-    public int CurrentSentenceIndex
+    public int CurrentSentenceIndex()
     {
-        get => sentenceIndex[Index];
+        int val = sentenceIndex[Index - 1];
+        return val;
+    }
+
+
+    public int SentenceIndex()
+    {
+        int val = sentenceIndex[Index];
+        return val;
     }
 }

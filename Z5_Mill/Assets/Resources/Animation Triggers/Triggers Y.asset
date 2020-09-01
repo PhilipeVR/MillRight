@@ -20,6 +20,7 @@ MonoBehaviour:
     animationName:
     - Slide Head
     index: 03000000
+    sentenceIndex: 04000000
   - TriggerControllerName: Mill_Organized
     anim: 2
     transitionParams:
@@ -29,3 +30,4 @@ MonoBehaviour:
     - Clamp Piece
     - Turn ON
     index: 0200000008000000
+    sentenceIndex: 050000000b000000

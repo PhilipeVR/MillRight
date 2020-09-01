@@ -8,6 +8,7 @@ public class TriggerAnimationController : MonoBehaviour
 {
     int index = 0;
     private Animator animator;
+    [SerializeField] private HintTriggerFlash triggerFlash;
     [SerializeField] private string[] clipName;
     [SerializeField] private string resetParam, restartParam;
     private List<AnimatorControllerParameter> parameters;
@@ -60,6 +61,7 @@ public class TriggerAnimationController : MonoBehaviour
             ResetLoopParams();
             StartAnimation();
             index++;
+            triggerFlash.StopAllCoroutines();
             return true;
         }
 
@@ -74,6 +76,7 @@ public class TriggerAnimationController : MonoBehaviour
             
                 index++;
                 checkTransitionEnd();
+                triggerFlash.StopRoutine();
                 return true;
             }
         }
@@ -148,5 +151,10 @@ public class TriggerAnimationController : MonoBehaviour
     public string RestartParam
     {
         get => restartParam;
+    }
+
+    public Boolean CurrentAnimationStatus
+    {
+        get => animator.GetCurrentAnimatorStateInfo(0).normalizedTime > 1f;
     }
 }

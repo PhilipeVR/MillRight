@@ -31,7 +31,7 @@ public class PowerTriggers : MonoBehaviour
     // Update is called once per frame
     public void PlaySequence()
     {
-        powers[manager.Index].OnOffToggle();
+        powers[manager.Index].OnOffToggle(dialogueManager);
         PowerButtonToggle buttonToggle = null;
         foreach (PowerButtonToggle toggle in powers)
         {
@@ -43,11 +43,7 @@ public class PowerTriggers : MonoBehaviour
         }
         if (buttonToggle != null)
         {
-            buttonToggle.OnOffToggle();
-            /*if(dialogueManager.SentenceIndex == buttonToggle.CurrentSentenceIndex)
-            {
-                   dialogueManager.DisplayNextSentence();
-            }*/
+            buttonToggle.OnOffToggle(dialogueManager);
         }
     }
 

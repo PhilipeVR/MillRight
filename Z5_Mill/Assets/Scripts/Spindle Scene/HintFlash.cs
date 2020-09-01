@@ -12,7 +12,7 @@ public class HintFlash : MonoBehaviour
     [SerializeField] private Button hint;
     [SerializeField] private Color HintColor;
     [SerializeField] private int NumOfFlashForHint;
-    [SerializeField] private int DelayForFlash;
+    [SerializeField] private float DelayForFlash;
     [SerializeField] private int HintCountdown;
 
     private List<GameObject> current = null;
@@ -21,11 +21,13 @@ public class HintFlash : MonoBehaviour
     private int prevVal = 0;
     private int triggerIndex = -1;
     private float timer = -1;
+    private int currentInfoSentence = -1;
+    private Image currentImage = null;
+    private Color color;
     // Start is called before the first frame update
     void Start()
     {
         hint.interactable = false;
-        hint.gameObject.SetActive(false);
         timer = -1;
         IncrementAnim();
     }
@@ -33,23 +35,27 @@ public class HintFlash : MonoBehaviour
     public void StopRoutine()
     {
         StopAllCoroutines();
+        if (currentImage != null)
+        {
+            currentImage.color = color;
+        }
     }
 
     public void IncrementAnim()
     {
         current = new List<GameObject>();
         triggerIndex = -1;
+        currentInfoSentence = -1;
         hint.interactable = false;
         state = false;
         timer = -1;
-        hint.gameObject.SetActive(false);
         foreach (ObjectTriggerInfo triggerInfo in triggerInfos)
         {
             if(sentenceIndex == triggerInfo.SenteceIndex)
             {
                 current = triggerInfo.TriggerObject;
                 triggerIndex = triggerInfo.TriggerIndex;
-                hint.interactable = true;
+                currentInfoSentence = triggerInfo.SenteceIndex;
                 state = true;
                 timer = HintCountdown;
                 break;
@@ -65,12 +71,12 @@ public class HintFlash : MonoBehaviour
             prevVal = manager.SentenceIndex;
             IncrementAnim();
         }
-        if (state)
+        if (state && controller.CurrentAnimationStatus && currentInfoSentence == manager.SentenceIndex)
         {
             timer -= Time.deltaTime;
             if(timer < 0)
             {
-                hint.gameObject.SetActive(true);
+                hint.interactable = true;
                 state = false;
                 timer = -1;
             }
@@ -110,6 +116,8 @@ public class HintFlash : MonoBehaviour
     public IEnumerator FlashImage (Image image)
     {
         Color basicColor = image.color;
+        color = basicColor;
+        currentImage = image;
         for (int i = 0; i < NumOfFlashForHint; i++)
         {
             image.color = HintColor;

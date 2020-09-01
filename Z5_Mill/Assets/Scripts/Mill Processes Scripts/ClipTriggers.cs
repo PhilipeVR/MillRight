@@ -24,7 +24,7 @@ public class ClipTriggers : MonoBehaviour
         TriggerAnimationController controller = triggerController[manager.Index];
         foreach (Trigger trigger in triggers)
         {
-            if(trigger.Anim == manager.Index && trigger.Name == controller.name)
+            if(trigger.Anim == manager.Index && trigger.Name == controller.name && trigger.SentenceIndex() == dialogueManager.SentenceIndex)
             {
                 tmpTrigger = trigger;
                 break;
@@ -32,11 +32,14 @@ public class ClipTriggers : MonoBehaviour
         }
         if(tmpTrigger != null)
         {
-            tmpTrigger.PlaySequence(controller);
-            /*if(dialogueManager.SentenceIndex == tmpTrigger.CurrentSentenceIndex)
+            Boolean val = tmpTrigger.PlaySequence(controller);
+            if(val)
             {
-                dialogueManager.DisplayNextSentence();
-            }*/
+                if(dialogueManager.SentenceIndex == tmpTrigger.CurrentSentenceIndex())
+                {
+                    dialogueManager.DisplayNextSentence();
+                }
+            }
         }
     }
 
