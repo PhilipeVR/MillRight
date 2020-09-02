@@ -10,16 +10,21 @@ public class CameraToggle : MonoBehaviour
     Camera[] cameras;
     [SerializeField] string genericCameraTag;
     [SerializeField] Text camCurrentNum;
+    [SerializeField] Camera camController;
     private static string MAIN_CAM_TAG = "MainCamera"; 
     private int index;
     void Awake()
     {
         index = 0;
         cameras = GetComponentsInChildren<Camera>();
+
+        List<Camera> camList = new List<Camera>(cameras);
+        camList.Insert(0, camController); // insert camera controller at index 0
+        cameras = camList.ToArray();
+
         camCurrentNum.text = "1";
         deactivateAll();
         SwtichView();
-        
     }
 
     // Update is called once per frame
