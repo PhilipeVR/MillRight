@@ -78,7 +78,7 @@ public class AnswerData : MonoBehaviour {
 
     public void ShowSolution (bool b) // My function
     {
-        Debug.Log(b);
+        //Debug.Log(b);
         if(b==true)
         {
             checkmark.enabled = true;

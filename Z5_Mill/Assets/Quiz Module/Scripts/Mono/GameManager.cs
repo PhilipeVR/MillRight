@@ -31,8 +31,9 @@ public class GameManager : MonoBehaviour {
 
     private             int                 timerStateParaHash      = 0;
 
-    private             IEnumerator         IE_WaitTillNextRound    = null;
-    private             IEnumerator         IE_StartTimer           = null;
+    private             IEnumerator         IE_WaitTillNextRound                 = null;
+    private             IEnumerator         IE_StartTimer                        = null;
+    private             IEnumerator         IE_WaitTillNextRound_FromSolution    = null; // mine
 
     private             bool                IsFinished
     {
@@ -170,33 +171,13 @@ public class GameManager : MonoBehaviour {
 
         if (type == UIManager.ResolutionScreenType.Incorrect) // >>> Show solution after incorrect resolution screen
         {
-            events.UpdateSolutionUI(Questions[currentQuestion]);
+            
 
-            List<int> c = Questions[currentQuestion].GetCorrectAnswers();
-            List<int> p = PickedAnswers.Select(x => x.AnswerIndex).ToList();
-
-            for(int i = 0; i<Questions[currentQuestion].Answers.Count(); i++)
-            {
-                if ( c.Contains(i) ) 
-                {
-                    events.ShowSolution(i, true); // enable checkmark
-                }
-                else 
-                {
-                    events.ShowSolution(i, false); // enable xmark
-                }
-            }
-
-            _nextButton.gameObject.SetActive(false);
-            _continueButton.gameObject.SetActive(true);
+            StartCoroutine(ShowSolution()); // Adds a delay so SolutionUI elements are not added until after animation
+            StopCoroutine(ShowSolution());
 
             StartCoroutine(SolutionScreen());
             StopCoroutine(SolutionScreen());
-
-            // foreach (int index in c)
-            // {
-            //     events.ShowSolution(index, false); //disable checkmark
-            // }
             
         }
 
@@ -267,23 +248,52 @@ public class GameManager : MonoBehaviour {
         Display();
     }
 
+    IEnumerator WaitTillNextRound_FromSolution()
+    {
+        yield return new WaitForSeconds(0);
+        _nextButton.gameObject.SetActive(true);
+        _continueButton.gameObject.SetActive(false);
+        Display();
+    }
+
+    IEnumerator ShowSolution()
+    {
+        yield return new WaitForSeconds(1);
+
+        events.UpdateSolutionUI(Questions[currentQuestion]);
+
+        List<int> c = Questions[currentQuestion].GetCorrectAnswers();
+        List<int> p = PickedAnswers.Select(x => x.AnswerIndex).ToList();
+
+        for(int i = 0; i<Questions[currentQuestion].Answers.Count(); i++)
+        {
+            if ( c.Contains(i) ) 
+            {
+                events.ShowSolution(i, true); // enable checkmark
+            }
+            else 
+            {
+                events.ShowSolution(i, false); // enable xmark
+            }
+        }
+
+        _nextButton.gameObject.SetActive(false);
+        _continueButton.gameObject.SetActive(true);
+    }
+
     IEnumerator SolutionScreen()
     {
         var waitForButton = new WaitForUIButtons(continueButton);
         yield return waitForButton.Reset();
         if (waitForButton.PressedButton == continueButton)
-        {
-            _nextButton.gameObject.SetActive(true);
-            _continueButton.gameObject.SetActive(false);
-
-            if (IE_WaitTillNextRound != null)
+        {            
+            if (IE_WaitTillNextRound_FromSolution != null)
             {
-                StopCoroutine(IE_WaitTillNextRound);
+                StopCoroutine(IE_WaitTillNextRound_FromSolution);
             }
-            IE_WaitTillNextRound = WaitTillNextRound();
-            StartCoroutine(IE_WaitTillNextRound);
-        }
-                
+            IE_WaitTillNextRound_FromSolution = WaitTillNextRound_FromSolution();
+            StartCoroutine(IE_WaitTillNextRound_FromSolution);            
+        }                
     }
 
     

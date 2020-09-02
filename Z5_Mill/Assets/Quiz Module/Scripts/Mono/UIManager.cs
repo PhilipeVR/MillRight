@@ -34,7 +34,6 @@ public struct SolutionUIElements
     [SerializeField] TextMeshProUGUI solution_Info;
     public TextMeshProUGUI Solution_Info { get { return solution_Info; } }
 
-
 }
 
 [Serializable()]
@@ -51,8 +50,6 @@ public struct UIManagerParameters
     public Color IncorrectBGColor { get { return incorrectBGColor; } }
     [SerializeField] Color finalBGColor;
     public Color FinalBGColor { get { return finalBGColor; } }
-    [SerializeField] Color solutionBGColor;
-    public Color SolutionBGColor { get { return solutionBGColor; } }
 }
 
 [Serializable()]
@@ -107,7 +104,7 @@ public struct UIElements
 public class UIManager : MonoBehaviour {
 
     #region Variables
-    public enum         ResolutionScreenType   { Correct, Incorrect, Solution, Finish }
+    public enum         ResolutionScreenType   { Correct, Incorrect, Finish }
 
     [Header("References")]
     [SerializeField]    GameEvents             events                       = null;
@@ -254,22 +251,6 @@ public class UIManager : MonoBehaviour {
                 uIElements.FinishUIElements.gameObject.SetActive(true);
                 uIElements.HighScoreText.gameObject.SetActive(true);
                 uIElements.HighScoreText.text = ((highscore > events.StartupHighscore) ? "<color=yellow>new </color>" : string.Empty) + "Highscore: " + highscore;
-                break;
-            case ResolutionScreenType.Solution:
-                uIElements.ResolutionBG.color = parameters.SolutionBGColor;
-                uIElements.ResolutionStateInfoText.text = "View Solution";
-
-                uIElements.SolutionUIElements.gameObject.SetActive(true);
-                uIElements.SolutionQInfo.gameObject.SetActive(true);
-                uIElements.SolutionQInfo.text = uIElements.QuestionInfoTextObject.text + "\n\n Solution: ";
-                for(int i =0; i<currentAnswers.Count; i++){
-                    AnswerData newAnswer = (AnswerData)Instantiate(currentAnswers[i], uIElements.SolutionsContentArea);
-                }
-                //StartCoroutine(SolutionScreen());
-                //StopCoroutine(SolutionScreen());
-
-                //uIElements.SolutionUIElements.gameObject.SetActive(false);
-                //uIElements.SolutionQInfo.gameObject.SetActive(false);
                 break;
         }
     }
