@@ -5,11 +5,13 @@ using UnityEngine;
 
 public class AnimClipTrigger : MonoBehaviour
 {
+    [SerializeField] private DialogueManager dialogueManager;
     [SerializeField] private ProcessAnimationController manager;
     [SerializeField] private int anim;
     [SerializeField] private string transitionParameter;
     [SerializeField] private string animationName;
     [SerializeField] private int index;
+    [SerializeField] private int sentenceIndex;
     [SerializeField] private TriggerAnimationController trigger;
     [SerializeField] private Color hoverColor;
     [SerializeField] private Color clickedColor;
@@ -30,20 +32,22 @@ public class AnimClipTrigger : MonoBehaviour
         }
     }
 
-    public void PlaySequence()
+    public Boolean PlaySequence()
     {
        
         //Debug.Log(animationName);
-        if(index == trigger.Index && CheckManager())
+        if(index == trigger.Index && CheckManager() && sentenceIndex == dialogueManager.SentenceIndex)
         {
-            trigger.PlayAnimation(transitionParameter, animationName);
+           return trigger.PlayAnimation(transitionParameter, animationName);
         }
+
+        return false;
         
     }
 
     private void OnMouseDown()
     {
-        if (colorChange && CheckManager() && index == trigger.Index)
+        if (colorChange && CheckManager() && index == trigger.Index && sentenceIndex == dialogueManager.SentenceIndex)
         {
             GetComponent<Renderer>().material.color = clickedColor;
             if(activateOnClick != null)
@@ -52,13 +56,17 @@ public class AnimClipTrigger : MonoBehaviour
                 gameObject.SetActive(false);
             }
         }
-        PlaySequence();
+        Boolean val = PlaySequence();
+        if((dialogueManager.SentenceIndex == sentenceIndex) && val)
+        {
+            dialogueManager.DisplayNextSentence();
+        }
     }
 
     private void OnMouseOver()
     {
         //Debug.Log("AnimClipTrigger " + "(" + gameObject.name + ") : " + manager.Index);
-        if (colorChange && CheckManager() && index == trigger.Index) {
+        if (colorChange && CheckManager() && index == trigger.Index && sentenceIndex == dialogueManager.SentenceIndex) {
             GetComponent<Renderer>().material.color = hoverColor;
 
         }
@@ -66,10 +74,7 @@ public class AnimClipTrigger : MonoBehaviour
 
     private void OnMouseExit()
     {
-        if (colorChange && CheckManager())
-        {
-            GetComponent<Renderer>().material.color = basicColor;
-        }
+        GetComponent<Renderer>().material.color = basicColor;
     }
 
     private Boolean CheckManager()

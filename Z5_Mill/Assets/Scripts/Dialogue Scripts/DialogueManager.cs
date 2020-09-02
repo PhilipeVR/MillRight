@@ -19,7 +19,7 @@ public class DialogueManager : MonoBehaviour
 
     private Sprite[] images;
     private int count;
-    private int index, sentenceIndex;
+    public int index, sentenceIndex;
     private Queue<string> sentences; // Keeps track of all sentences in current dialogue
     private Queue<string> sentencesFR;
     private Queue<string> currentLangSentence;

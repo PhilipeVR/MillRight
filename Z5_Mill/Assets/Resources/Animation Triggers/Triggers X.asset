@@ -20,6 +20,7 @@ MonoBehaviour:
     animationName:
     - Quill Movement 0
     index: 06000000
+    sentenceIndex: 07000000
   - TriggerControllerName: Mill_Organized
     anim: 2
     transitionParams:
@@ -29,3 +30,4 @@ MonoBehaviour:
     - Slide Head
     - Slide Quill
     index: 0400000006000000
+    sentenceIndex: 0700000009000000

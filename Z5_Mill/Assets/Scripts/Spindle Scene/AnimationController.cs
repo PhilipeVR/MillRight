@@ -63,11 +63,18 @@ public class AnimationController : MonoBehaviour
         if (index == parameters.Count)
         {
             transitionDone = true;
-            restartButton.interactable = true;
         }
         counter++;
         buttonInteractable.InteractButton();
         
+    }
+
+    public void LateUpdate()
+    {
+        if(transitionDone && CurrentAnimationStatus)
+        {
+            restartButton.interactable = true;
+        }
     }
 
     public void ResetParams()
@@ -86,7 +93,7 @@ public class AnimationController : MonoBehaviour
 
     public void ResetAnim()
     {
-        if (transitionDone)
+        if (transitionDone && CurrentAnimationStatus)
         {
             Debug.Log("TriggerAnimationController - " + name + ": " + resetParam);
             animator.SetFloat(resetParam, 1f);
@@ -116,5 +123,10 @@ public class AnimationController : MonoBehaviour
     public int Counter
     {
         get => counter;
+    }
+
+    public Boolean CurrentAnimationStatus
+    {
+        get => animator.GetCurrentAnimatorStateInfo(0).normalizedTime > 1f;
     }
 }

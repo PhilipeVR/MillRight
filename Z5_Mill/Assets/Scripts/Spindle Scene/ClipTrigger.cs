@@ -6,6 +6,7 @@ using UnityEngine.UI;
 
 public class ClipTrigger : MonoBehaviour
 {
+    [SerializeField] private HintFlash flash;
     [SerializeField] private DialogueManager manager;
     [SerializeField] private string transitionParameter;
     [SerializeField] private string animationName;
@@ -42,7 +43,6 @@ public class ClipTrigger : MonoBehaviour
 
     private void LateUpdate()
     {
-        Debug.Log(manager.SentenceIndex);
         if(manager.SentenceIndex == sentenceIndex  && index == controller.Index)
         {
             continueBTN.interactable = false;
@@ -52,12 +52,13 @@ public class ClipTrigger : MonoBehaviour
     private void PlaySequence()
     {
         controller.PlayAnimation(transitionParameter, animationName);
+        flash.StopRoutine();
         continueBTN.interactable = true;
     }
 
     private void OnMouseOver()
     {
-        if (index == controller.Index)
+        if(manager.SentenceIndex == sentenceIndex && index == controller.Index)
         {
             ChangeColor(hoverColor);
         }
@@ -65,10 +66,11 @@ public class ClipTrigger : MonoBehaviour
 
     private void OnMouseDown()
     {
-        if(index == controller.Index)
+        if(manager.SentenceIndex == sentenceIndex && index == controller.Index && controller.CurrentAnimationStatus)
         {
             ChangeColor(clickedColor);
             PlaySequence();
+            manager.DisplayNextSentence();
         }
     }
 

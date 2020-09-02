@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class ProcessAnimationController : MonoBehaviour
 {
+    [SerializeField] private HintTriggerFlash hintTriggerFlash;
     [SerializeField] private List<AnimatorController> operations;
     [SerializeField] private float animSpeed;
     private int m_index;
@@ -51,6 +52,7 @@ public class ProcessAnimationController : MonoBehaviour
                 controller = operations[index];
                 controller.ResetAnim(prevState, prevController);
                 m_index = index;
+                hintTriggerFlash.SetAnimIndex();
             }
         }
     }

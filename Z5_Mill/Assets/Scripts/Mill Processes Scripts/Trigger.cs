@@ -11,8 +11,10 @@ public class Trigger
     public string[] transitionParams;
     public string[] animationName;
     public int[] index;
+    public int[] sentenceIndex;
 
     private int animIndex = 0;
+    private int LateAnimIndex = 0;
 
     public Boolean PlaySequence(TriggerAnimationController controller)
     {
@@ -53,5 +55,18 @@ public class Trigger
     {
         get => animIndex;
         set => animIndex = value;
+    }
+
+    public int CurrentSentenceIndex()
+    {
+        int val = sentenceIndex[Index - 1];
+        return val;
+    }
+
+
+    public int SentenceIndex()
+    {
+        int val = sentenceIndex[Index];
+        return val;
     }
 }
