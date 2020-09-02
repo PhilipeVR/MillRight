@@ -17,7 +17,9 @@ public class SelectionToggle : MonoBehaviour
         int index = 0;
         foreach(Image image in images)
         {
-            if (image.name.Equals(name))
+            Debug.Log(image.gameObject.name);
+            Debug.Log(name);
+            if (image.gameObject.name.Equals(name))
             {
                 pointer = index;
                 image.color = color;

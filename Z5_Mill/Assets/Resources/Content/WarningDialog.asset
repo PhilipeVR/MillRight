@@ -65,6 +65,13 @@ MonoBehaviour:
     - Do not move table while placing workpiece.
     - Wait! Please place and clamp workpiece before turning machine ON.
     - Please place workpiece before moving table.
+    - Using a drill chuck with an end mill is dangerous because the chuck will not
+      grip correctly the end mill and will damage the holder and end mill. Collets
+      provide better grip and accuracy for end mills.
+    - While it is possible to use a drill bits in a collet. Please use the drill
+      bits with a drill chuck because it is more versatile and allows for better
+      interchangeability of parts. During drilling operations those features are
+      very important.
     sentencesFR:
     - "\rD\xE9placez la table aussi loin que possible du couteau lors de la mise
       en place du travail pour \xE9viter de vous blesser les mains."
@@ -88,10 +95,20 @@ MonoBehaviour:
     - "Ne d\xE9placez pas la table pendant le serrage de la pi\xE8ce."
     - "Attendez! Veuillez placer et serrer la pi\xE8ce avant d'allumer la machine."
     - "Veuillez placer la pi\xE8ce avant de d\xE9placer la table.\r"
+    - "L'utilisation d'un mandrin de per\xE7age avec une fraise en bout est dangereuse
+      car le mandrin ne saisit pas correctement la fraise et endommagera le support
+      et la fraise en bout. Les pinces offrent une meilleure adh\xE9rence et une
+      meilleure pr\xE9cision pour les fraises en bout."
+    - "Bien qu'il soit possible d'utiliser un foret dans une pince. Veuillez utiliser
+      les forets avec un mandrin de per\xE7age car il est plus polyvalent et permet
+      une meilleure interchangeabilit\xE9 des pi\xE8ces. Lors des op\xE9rations de
+      forage, ces caract\xE9ristiques sont tr\xE8s importantes."
     images:
     - {fileID: 21300000, guid: 11233fab40f2dd648b37d595378443d1, type: 3}
     - {fileID: 21300000, guid: 3fbcd41248d4edf498805811b31c4614, type: 3}
     - {fileID: 21300000, guid: 746a8d5dcbe5ead4ca7a7d3666250f1d, type: 3}
+    - {fileID: 21300000, guid: b19af5f570b609741a3041f5fe02108d, type: 3}
+    - {fileID: 21300000, guid: b19af5f570b609741a3041f5fe02108d, type: 3}
     - {fileID: 21300000, guid: b19af5f570b609741a3041f5fe02108d, type: 3}
     - {fileID: 21300000, guid: b19af5f570b609741a3041f5fe02108d, type: 3}
     - {fileID: 21300000, guid: b19af5f570b609741a3041f5fe02108d, type: 3}

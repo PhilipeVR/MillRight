@@ -24,7 +24,9 @@ public class QuillFeedControl : MonoBehaviour
 
     public float movementInterval = 0.001f;
 
-    
+    private PlacePiece placePiece;
+    private ClampPiece clampPiece;
+
 
     Boolean animated = true;
     Boolean handle_enabled, wheel_spin;
@@ -40,8 +42,8 @@ public class QuillFeedControl : MonoBehaviour
             object_anim = animObject.GetComponent<Animator>();
             lock_anim = lockAnimObject.GetComponent<Animator>();
 
-            MIN_HEIGHT = wheel.transform.localPosition.z - 10f;
-            MAX_HEIGHT = wheel.transform.localPosition.z;
+            MIN_HEIGHT = wheel.transform.localPosition.y - 0.15f;
+            MAX_HEIGHT = wheel.transform.localPosition.y;
 
 
             setSpeed(0.2f);
@@ -60,39 +62,56 @@ public class QuillFeedControl : MonoBehaviour
     {
         if (enable)
         {
-            if (QuillLockButton.Activated == true)
+            if (QuillLockButton.Activated == true && wheel.activeSelf)
             {
 
                 if (Input.mouseScrollDelta.y > 0f && !collided)
                 {
-                    Vector3 tmp_pos = wheel.transform.localPosition;
-                    float z_pos = tmp_pos.z - movementInterval;
-
-                    if (z_pos < MAX_HEIGHT && z_pos > MIN_HEIGHT)
+                    Boolean testPlace = placePiece != null;
+                    Boolean testClamp = clampPiece != null;
+                    if ((testPlace && placePiece.animTime > 0f && placePiece.animTime < 1f) || (testClamp && clampPiece.animTime > 0f && clampPiece.animTime < 1f))
                     {
-                        moving = true;
+                        StopMovement();
+                    }
+                    else
+                    {
+                        Vector3 tmp_pos = wheel.transform.localPosition;
+                        float y_pos = tmp_pos.y - movementInterval;
 
-                        Vector3 new_pos = new Vector3(tmp_pos.x, tmp_pos.y, z_pos);
-                        wheel.transform.localPosition = new_pos;
-                        object_anim.SetFloat("Reverse", 1);
-                        setSpeed(2f);
+                        if (y_pos <= MAX_HEIGHT && y_pos >= MIN_HEIGHT)
+                        {
+                            moving = true;
+
+                            Vector3 new_pos = new Vector3(tmp_pos.x, y_pos, tmp_pos.z);
+                            wheel.transform.localPosition = new_pos;
+                            object_anim.SetFloat("Reverse", 1);
+                            setSpeed(2f);
+                        }
                     }
                 }
                 else if (Input.mouseScrollDelta.y < 0f)
                 {
-
-                    Vector3 tmp_pos = wheel.transform.localPosition;
-                    float z_pos = tmp_pos.z + movementInterval;
-
-                    if (z_pos < MAX_HEIGHT && z_pos > MIN_HEIGHT)
+                    Boolean testPlace = placePiece != null;
+                    Boolean testClamp = clampPiece != null;
+                    if ((testPlace && placePiece.animTime > 0f && placePiece.animTime < 1f) || (testClamp && clampPiece.animTime > 0f && clampPiece.animTime < 1f))
                     {
-                        moving = true;
+                        StopMovement();
+                    }
+                    else
+                    {
+                        Vector3 tmp_pos = wheel.transform.localPosition;
+                        float y_pos = tmp_pos.y + movementInterval;
 
-                        Vector3 new_pos = new Vector3(tmp_pos.x, tmp_pos.y, z_pos);
+                        if (y_pos <= MAX_HEIGHT && y_pos >= MIN_HEIGHT)
+                        {
+                            moving = true;
 
-                        wheel.transform.localPosition = new_pos;
-                        object_anim.SetFloat("Reverse", -1);
-                        setSpeed(2f);
+                            Vector3 new_pos = new Vector3(tmp_pos.x, y_pos, tmp_pos.z);
+
+                            wheel.transform.localPosition = new_pos;
+                            object_anim.SetFloat("Reverse", -1);
+                            setSpeed(2f);
+                        }
                     }
                 }
                 else
@@ -108,6 +127,12 @@ public class QuillFeedControl : MonoBehaviour
     {
         object_anim.speed = 0;
         animated = false;
+    }
+
+    private void StopMovement()
+    {
+        pause();
+        WarningEvents.current.CutterNear();
     }
 
     private void pauseLock()
@@ -141,5 +166,15 @@ public class QuillFeedControl : MonoBehaviour
     public float animTime
     {
         get => object_anim.GetCurrentAnimatorStateInfo(0).normalizedTime * object_anim.GetCurrentAnimatorClipInfo(0)[0].clip.length;
+    }
+
+    public float Height
+    {
+        get => wheel.transform.localPosition.y;
+    }
+
+    public float MaxHeight
+    {
+        get => MAX_HEIGHT;
     }
 }

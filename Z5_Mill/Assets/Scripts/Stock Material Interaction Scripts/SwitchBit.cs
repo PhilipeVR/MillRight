@@ -73,6 +73,8 @@ public class SwitchBit : MonoBehaviour
         currentBit = DrillBits[0];
         endMillHolder.SetActive(false);
         drillChuck.SetActive(false);
+        bitSelection.Clean();
+        chuckSelection.Clean();
     }
 
     public Boolean CheckState()
@@ -225,6 +227,16 @@ public class SwitchBit : MonoBehaviour
     public Boolean holderState
     {
         get => endMillHolder.activeSelf || drillChuck.activeSelf;
+    }
+
+    public GameObject EndMillHolder
+    {
+        get => endMillHolder;
+    }
+
+    public GameObject DrillChuck
+    {
+        get => drillChuck;
     }
 
 

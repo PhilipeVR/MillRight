@@ -19,8 +19,8 @@ public class Toggle_On_Off : MonoBehaviour
     public void Awake()
     {
         millOn = true;
-        transform.GetChild(0).gameObject.GetComponent<Text>().text = OffText;
-        GetComponent<Image>().color = Color.red;
+        transform.GetChild(0).gameObject.GetComponent<Text>().text = OnText;
+        GetComponent<Image>().color = Color.green;
         state = false;
         clampPiece = null;
         placePiece = null;
@@ -60,8 +60,8 @@ public class Toggle_On_Off : MonoBehaviour
             }
             else
             {
-                transform.GetChild(0).gameObject.GetComponent<Text>().text = OnText;
-                GetComponent<Image>().color = Color.green;
+                transform.GetChild(0).gameObject.GetComponent<Text>().text = OffText;
+                GetComponent<Image>().color = Color.red;
                 if (buttonManager != null)
                 {
                     buttonManager.turnOn();
@@ -73,8 +73,8 @@ public class Toggle_On_Off : MonoBehaviour
         }
         else
         {
-            transform.GetChild(0).gameObject.GetComponent<Text>().text = OffText;
-            GetComponent<Image>().color = Color.red;
+            transform.GetChild(0).gameObject.GetComponent<Text>().text = OnText;
+            GetComponent<Image>().color = Color.green;
             if (buttonManager != null)
             {
                 buttonManager.turnOff();
@@ -90,8 +90,8 @@ public class Toggle_On_Off : MonoBehaviour
     {
         GameButtonManager buttonManager = manager.GetComponent<GameButtonManager>();
  
-        transform.GetChild(0).gameObject.GetComponent<Text>().text = OffText;
-        GetComponent<Image>().color = Color.red;
+        transform.GetChild(0).gameObject.GetComponent<Text>().text = OnText;
+        GetComponent<Image>().color = Color.green;
         if (buttonManager != null)
         {
             buttonManager.turnOff();

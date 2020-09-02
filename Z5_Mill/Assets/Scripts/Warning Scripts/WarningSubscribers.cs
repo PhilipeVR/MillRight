@@ -18,7 +18,11 @@ public class WarningSubscribers : MonoBehaviour
         WarningEvents.current.cantChangeCutter += CantChangeCutter;
         WarningEvents.current.turnOFF += NotMillingPiece;
         WarningEvents.current.noAction += NoAnimAction;
-        WarningEvents.current.pieceFirst += PieceSetup;
+        WarningEvents.current.sideMillingCutter += SideMillingCutter;
+        WarningEvents.current.faceMillingCutter += FaceMillingCutter;
+        WarningEvents.current.drillingCutter += DrillingCutter;
+        WarningEvents.current.wrongHolderDrillChuck += WrongHolderDrill;
+        WarningEvents.current.wrongHolderEndMillHolder += WrongHolderEndMill;
     }
 
     // Update is called once per frame
@@ -82,6 +86,36 @@ public class WarningSubscribers : MonoBehaviour
         warningTrigger.TriggerSentence(triggerInformation.DialogIndex, triggerInformation.SentenceIndex);
     }
 
+    private void SideMillingCutter()
+    {
+        WarningTriggerInformation triggerInformation = FindWarningInfo("SideMillingCutter");
+        warningTrigger.TriggerSentence(triggerInformation.DialogIndex, triggerInformation.SentenceIndex);
+    }
+
+    private void FaceMillingCutter()
+    {
+        WarningTriggerInformation triggerInformation = FindWarningInfo("FaceMillingCutter");
+        warningTrigger.TriggerSentence(triggerInformation.DialogIndex, triggerInformation.SentenceIndex);
+    }
+
+
+    private void DrillingCutter()
+    {
+        WarningTriggerInformation triggerInformation = FindWarningInfo("DrillingCutter");
+        warningTrigger.TriggerSentence(triggerInformation.DialogIndex, triggerInformation.SentenceIndex);
+    }
+
+    private void WrongHolderDrill()
+    {
+        WarningTriggerInformation triggerInformation = FindWarningInfo("WrongHolderDrill");
+        warningTrigger.TriggerSentence(triggerInformation.DialogIndex, triggerInformation.SentenceIndex);
+    }
+
+    private void WrongHolderEndMill()
+    {
+        WarningTriggerInformation triggerInformation = FindWarningInfo("WrongHolderEndMill");
+        warningTrigger.TriggerSentence(triggerInformation.DialogIndex, triggerInformation.SentenceIndex);
+    }
 
     private WarningTriggerInformation FindWarningInfo(string eventName)
     {

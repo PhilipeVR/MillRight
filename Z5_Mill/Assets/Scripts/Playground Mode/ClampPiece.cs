@@ -6,6 +6,7 @@ using UnityEngine;
 public class ClampPiece : MonoBehaviour
 {
     [SerializeField] private ZWheelControl WheelControl;
+    [SerializeField] private QuillFeedControl QuillControl;
     [SerializeField] private SwitchBit checkBitState;
     [SerializeField] private Animator animator, prevAnimator;
     [SerializeField] private Color hoverColor;
@@ -38,7 +39,7 @@ public class ClampPiece : MonoBehaviour
     {
         Debug.Log(WheelControl.animTime);
 
-        if (WheelControl.animTime > 0 && checkBitState.CheckState())
+        if ((WheelControl.animTime > 0 || (QuillControl.Height < QuillControl.MaxHeight)) && checkBitState.CheckState())
         {
             WarningEvents.current.CutterNear();
         }

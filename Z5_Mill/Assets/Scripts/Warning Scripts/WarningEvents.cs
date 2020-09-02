@@ -112,6 +112,50 @@ public class WarningEvents : MonoBehaviour
         }
     }
 
+    public event Action sideMillingCutter;
+    public void SideMillingCutter()
+    {
+        if (sideMillingCutter != null)
+        {
+            sideMillingCutter();
+        }
+    }
+
+    public event Action faceMillingCutter;
+    public void FaceMillingCutter()
+    {
+        if (faceMillingCutter != null)
+        {
+            faceMillingCutter();
+        }
+    }
+
+    public event Action drillingCutter;
+    public void DrillingCutter()
+    {
+        if (drillingCutter != null)
+        {
+            drillingCutter();
+        }
+    }
+
+    public event Action wrongHolderDrillChuck;
+    public void WrongHolderDrillChuck()
+    {
+        if (wrongHolderDrillChuck != null)
+        {
+            wrongHolderDrillChuck();
+        }
+    }
+
+    public event Action wrongHolderEndMillHolder;
+    public void WrongHolderEndMillHolder()
+    {
+        if (wrongHolderEndMillHolder != null)
+        {
+            wrongHolderEndMillHolder();
+        }
+    }
 
 
 }

@@ -10,6 +10,7 @@ public class PlacePieceTrigger : MonoBehaviour
     [SerializeField] private Color clickedColor;
     [SerializeField] private GameObject activateOnClick;
     [SerializeField] private ZWheelControl WheelControl;
+    [SerializeField] private QuillFeedControl QuillControl;
     [SerializeField] private SwitchBit checkBitState;
     private Color basicColor;
     private Boolean Clicked;
@@ -34,9 +35,10 @@ public class PlacePieceTrigger : MonoBehaviour
 
         if (!Clicked)
         {
-            Debug.Log(WheelControl.animTime);
+            Debug.Log(QuillControl.Height);
+            Debug.Log(QuillControl.MaxHeight);
 
-            if (WheelControl.animTime > 0 && checkBitState.CheckState())
+            if ((WheelControl.animTime > 0 || (QuillControl.Height < QuillControl.MaxHeight)) && checkBitState.CheckState())
             {
 
                 WarningEvents.current.CutterNear();
