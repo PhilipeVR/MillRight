@@ -3,13 +3,16 @@ using System.Collections.Generic;
 using System.Linq;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour {
 
     #region Variables
 
-    [SerializeField]    ProgressBar         _progressBar            = null;
+    [SerializeField]    ProgressBar         _progressBar            = null; // mine
+    [SerializeField]    Button              _nextButton             = null; // mine
+    [SerializeField]    Button              _continueButton         = null; // mine
 
     private             Question[]          _questions              = null;
     public              Question[]          Questions               { get { return _questions; } }
@@ -38,6 +41,7 @@ public class GameManager : MonoBehaviour {
             return (FinishedQuestions.Count < Questions.Length) ? false : true;
         }
     }
+    [SerializeField] Button continueButton;
 
     #endregion
 
@@ -152,19 +156,51 @@ public class GameManager : MonoBehaviour {
         }
 
         var type 
-            = (IsFinished) 
-            ? UIManager.ResolutionScreenType.Finish 
-            : (isCorrect) ? UIManager.ResolutionScreenType.Correct 
-            : UIManager.ResolutionScreenType.Incorrect;
+            = (IsFinished) // Call IsFinished property
+            ? UIManager.ResolutionScreenType.Finish // If IsFinished==true, then type =  UIManager.ResolutionScreenType.Finish
+            : (isCorrect) ? UIManager.ResolutionScreenType.Correct // If IsFinished != true, check if answers are correct
+            : UIManager.ResolutionScreenType.Incorrect; // If isCorrect != true, then type = UIManager.ResolutionScreenType.Incorrect
 
         if (events.DisplayResolutionScreen != null)
         {
             events.DisplayResolutionScreen(type, Questions[currentQuestion].AddScore);
         }
 
-        AudioManager.Instance.PlaySound((isCorrect) ? "CorrectSFX" : "IncorrectSFX");
+        //AudioManager.Instance.PlaySound((isCorrect) ? "CorrectSFX" : "IncorrectSFX");
 
-        if (type != UIManager.ResolutionScreenType.Finish)
+        if (type == UIManager.ResolutionScreenType.Incorrect) // >>> Show solution after incorrect resolution screen
+        {
+            events.UpdateSolutionUI(Questions[currentQuestion]);
+
+            List<int> c = Questions[currentQuestion].GetCorrectAnswers();
+            List<int> p = PickedAnswers.Select(x => x.AnswerIndex).ToList();
+
+            for(int i = 0; i<Questions[currentQuestion].Answers.Count(); i++)
+            {
+                if ( c.Contains(i) ) 
+                {
+                    events.ShowSolution(i, true); // enable checkmark
+                }
+                else 
+                {
+                    events.ShowSolution(i, false); // enable xmark
+                }
+            }
+
+            _nextButton.gameObject.SetActive(false);
+            _continueButton.gameObject.SetActive(true);
+
+            StartCoroutine(SolutionScreen());
+            StopCoroutine(SolutionScreen());
+
+            // foreach (int index in c)
+            // {
+            //     events.ShowSolution(index, false); //disable checkmark
+            // }
+            
+        }
+
+        if ((type != UIManager.ResolutionScreenType.Finish) && (type != UIManager.ResolutionScreenType.Incorrect))
         {
             if (IE_WaitTillNextRound != null)
             {
@@ -172,7 +208,7 @@ public class GameManager : MonoBehaviour {
             }
             IE_WaitTillNextRound = WaitTillNextRound();
             StartCoroutine(IE_WaitTillNextRound);
-        }
+        }       
     }
 
     #region Timer Methods
@@ -223,14 +259,34 @@ public class GameManager : MonoBehaviour {
         }
         Accept();
     }
+    #endregion
+
     IEnumerator WaitTillNextRound()
     {
         yield return new WaitForSeconds(GameUtility.ResolutionDelayTime);
         Display();
     }
 
-    #endregion
+    IEnumerator SolutionScreen()
+    {
+        var waitForButton = new WaitForUIButtons(continueButton);
+        yield return waitForButton.Reset();
+        if (waitForButton.PressedButton == continueButton)
+        {
+            _nextButton.gameObject.SetActive(true);
+            _continueButton.gameObject.SetActive(false);
 
+            if (IE_WaitTillNextRound != null)
+            {
+                StopCoroutine(IE_WaitTillNextRound);
+            }
+            IE_WaitTillNextRound = WaitTillNextRound();
+            StartCoroutine(IE_WaitTillNextRound);
+        }
+                
+    }
+
+    
     // Function that is called to check currently picked answers and return the result.
     bool CheckAnswers()
     {
@@ -249,14 +305,13 @@ public class GameManager : MonoBehaviour {
             List<int> c = Questions[currentQuestion].GetCorrectAnswers();
             List<int> p = PickedAnswers.Select(x => x.AnswerIndex).ToList();
 
-            var f = c.Except(p).ToList();
-            var s = p.Except(c).ToList();
+            var f = c.Except(p).ToList(); // Remove all elements from list except the elements that can be found in list "p"
+            var s = p.Except(c).ToList(); // Remove all elements from list except the elements that can be found in list "c"
 
-            return !f.Any() && !s.Any();
+            return !f.Any() && !s.Any(); // If "f" and "s" contains elements, return false
         }
         return false;
     }
-
 
     // Function that is called to load all questions from the Resource folder.
     void LoadQuestions()

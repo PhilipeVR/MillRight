@@ -6,6 +6,12 @@ public class GameEvents : ScriptableObject {
     public delegate void    UpdateQuestionUICallback            (Question question);
     public                  UpdateQuestionUICallback            UpdateQuestionUI                = null;
 
+    public delegate void    UpdateSolutionUICallback            (Question question);
+    public                  UpdateSolutionUICallback            UpdateSolutionUI                = null;
+
+    public delegate void    ShowSolutionCallback                (int index, bool b);
+    public                  ShowSolutionCallback                ShowSolution                    = null;
+
     public delegate void    UpdateQuestionAnswerCallback        (AnswerData pickedAnswer);
     public                  UpdateQuestionAnswerCallback        UpdateQuestionAnswer            = null;
 

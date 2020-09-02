@@ -6,6 +6,38 @@ using UnityEngine;
 using UnityEngine.UI;
 
 [Serializable()]
+public struct SolutionUIElements
+{
+    [SerializeField] Image bG;
+    public Image BG { get { return bG; } }
+
+    [SerializeField] Image quizTableBG;
+    public Image QuizTableBG { get { return quizTableBG; } }
+
+    [Header("SolutionUI Screen Options")]
+
+    [SerializeField] Color default_BG_Color;
+    public Color Default_BG_Color { get { return default_BG_Color; } }
+
+    [SerializeField] Color default_QuizTableBG_Color;
+    public Color Default_QuizTableBG_Color { get { return default_QuizTableBG_Color; } }
+
+    [SerializeField] Color solution_BG_Color;
+    public Color Solution_BG_Color { get { return solution_BG_Color; } }
+
+    [SerializeField] Color solution_QuizTableBG_Color;
+    public Color Solution_QuizTableBG_Color { get { return solution_QuizTableBG_Color; } }
+
+    [SerializeField] TextMeshProUGUI solution_QInfo;
+    public TextMeshProUGUI Solution_QInfo { get { return solution_QInfo; } }
+
+    [SerializeField] TextMeshProUGUI solution_Info;
+    public TextMeshProUGUI Solution_Info { get { return solution_Info; } }
+
+
+}
+
+[Serializable()]
 public struct UIManagerParameters
 {
     [Header("Answers Options")]
@@ -19,6 +51,8 @@ public struct UIManagerParameters
     public Color IncorrectBGColor { get { return incorrectBGColor; } }
     [SerializeField] Color finalBGColor;
     public Color FinalBGColor { get { return finalBGColor; } }
+    [SerializeField] Color solutionBGColor;
+    public Color SolutionBGColor { get { return solutionBGColor; } }
 }
 
 [Serializable()]
@@ -57,13 +91,23 @@ public struct UIElements
 
     [SerializeField] RectTransform finishUIElements;
     public RectTransform FinishUIElements { get { return finishUIElements; } }
+
+    [Space] // Mine
+
+    [SerializeField] RectTransform solutionUIElements;
+    public RectTransform SolutionUIElements { get { return solutionUIElements; } }
+
+    [SerializeField] TextMeshProUGUI solutionQInfo;
+    public TextMeshProUGUI SolutionQInfo { get { return solutionQInfo; } }
+
+    [SerializeField] RectTransform solutionsContentArea;
+    public RectTransform SolutionsContentArea { get { return solutionsContentArea; } }
 }
 
 public class UIManager : MonoBehaviour {
 
     #region Variables
-
-    public enum         ResolutionScreenType   { Correct, Incorrect, Finish }
+    public enum         ResolutionScreenType   { Correct, Incorrect, Solution, Finish }
 
     [Header("References")]
     [SerializeField]    GameEvents             events                       = null;
@@ -81,6 +125,14 @@ public class UIManager : MonoBehaviour {
 
     private             IEnumerator            IE_DisplayTimedResolution    = null;
     private int QuestionCounter = 0;
+    private bool solutionAccepted = false;
+    
+    [Space]
+    [SerializeField] Button continueButton;
+
+    [Space]
+    [SerializeField]    SolutionUIElements     solutionUIElements                   = new SolutionUIElements();
+
 
     #endregion
 
@@ -92,6 +144,8 @@ public class UIManager : MonoBehaviour {
         events.UpdateQuestionUI         += UpdateQuestionUI;
         events.DisplayResolutionScreen  += DisplayResolution;
         events.ScoreUpdated             += UpdateScoreUI;
+        events.ShowSolution             += ShowSolutionUI;
+        events.UpdateSolutionUI         += UpdateSolutionUI;
     }
 
     /// Function that is called when the behaviour becomes disabled
@@ -100,6 +154,8 @@ public class UIManager : MonoBehaviour {
         events.UpdateQuestionUI         -= UpdateQuestionUI;
         events.DisplayResolutionScreen  -= DisplayResolution;
         events.ScoreUpdated             -= UpdateScoreUI;
+        events.ShowSolution             -= ShowSolutionUI;
+        events.UpdateSolutionUI         -= UpdateSolutionUI;
     }
 
     /// Function that is called when the script instance is being loaded.
@@ -114,19 +170,47 @@ public class UIManager : MonoBehaviour {
     /// Function that is used to update new question UI information.
     void UpdateQuestionUI(Question question)
     {
+        solutionUIElements.Solution_QInfo.enabled = false;
+        solutionUIElements.Solution_QInfo.gameObject.SetActive(false);
+
+        solutionUIElements.Solution_Info.enabled = false;
+        solutionUIElements.Solution_Info.gameObject.SetActive(false);
+
+
         uIElements.QuestionInfoTextObject.text = question.Info;
         CreateAnswers(question);
         QuestionCounter++;
+    }
+
+    public void UpdateSolutionUI(Question question)
+    {
+        //uIElements.QuestionInfoTextObject.text = "Click 'Continue' after reviewing the solution to proceed to the next question.";
+        uIElements.QuestionInfoTextObject.text = "";
+
+
+        solutionUIElements.Solution_QInfo.enabled = true;
+        solutionUIElements.Solution_QInfo.gameObject.SetActive(true);
+        solutionUIElements.Solution_QInfo.text = "Question: " + question.Info;
+
+        solutionUIElements.Solution_Info.enabled = true;
+        solutionUIElements.Solution_Info.gameObject.SetActive(true);
+        solutionUIElements.Solution_Info.text = "Solution: ";
+    }
+
+    void ShowSolutionUI(int index, bool b) // mine
+    {
+        currentAnswers[index].ShowSolution(b);
     }
 
     /// Function that is used to display resolution screen.
     void DisplayResolution(ResolutionScreenType type, int score)
     {
         UpdateResUI(type, score);
-        uIElements.ResolutionScreenAnimator.SetInteger(resStateParaHash, 2);
-        uIElements.MainCanvasGroup.blocksRaycasts = false;
+        uIElements.ResolutionScreenAnimator.SetInteger(resStateParaHash, 2); // transition from hidden resolution screen to PopUp (i.e. ScreenState > 1)
+        uIElements.MainCanvasGroup.blocksRaycasts = false; // Blocks the main canvas elements from being interacted with while ResolutionDisplay 
 
-        if (type != ResolutionScreenType.Finish)
+        //if ((type != ResolutionScreenType.Finish) && (type != ResolutionScreenType.Solution) && (type != ResolutionScreenType.Incorrect))
+        if (type != ResolutionScreenType.Finish) // If type not Finish and not Solution resolution screen, fade out resolution screen in certain amount of seconds
         {
             if (IE_DisplayTimedResolution != null)
             {
@@ -136,11 +220,13 @@ public class UIManager : MonoBehaviour {
             StartCoroutine(IE_DisplayTimedResolution);
         }
     }
+
+
     IEnumerator DisplayTimedResolution()
     {
         yield return new WaitForSeconds(GameUtility.ResolutionDelayTime);
-        uIElements.ResolutionScreenAnimator.SetInteger(resStateParaHash, 1);
-        uIElements.MainCanvasGroup.blocksRaycasts = true;
+        uIElements.ResolutionScreenAnimator.SetInteger(resStateParaHash, 1); // 1 is fade out animation
+        uIElements.MainCanvasGroup.blocksRaycasts = true;   
     }
 
     /// Function that is used to display resolution UI information.
@@ -152,25 +238,56 @@ public class UIManager : MonoBehaviour {
         {
             case ResolutionScreenType.Correct:
                 uIElements.ResolutionBG.color = parameters.CorrectBGColor;
-                uIElements.ResolutionStateInfoText.text = "CORRECT!";
+                uIElements.ResolutionStateInfoText.text = "Correct";
                 uIElements.ResolutionScoreText.text = "+" + score;
                 break;
             case ResolutionScreenType.Incorrect:
                 uIElements.ResolutionBG.color = parameters.IncorrectBGColor;
-                uIElements.ResolutionStateInfoText.text = "WRONG!";
+                uIElements.ResolutionStateInfoText.text = "Incorrect";
                 uIElements.ResolutionScoreText.text = "X";
                 break;
             case ResolutionScreenType.Finish:
                 uIElements.ResolutionBG.color = parameters.FinalBGColor;
-                uIElements.ResolutionStateInfoText.text = "FINAL SCORE";
+                uIElements.ResolutionStateInfoText.text = "Final Score";
 
                 StartCoroutine(CalculateScore());
                 uIElements.FinishUIElements.gameObject.SetActive(true);
                 uIElements.HighScoreText.gameObject.SetActive(true);
                 uIElements.HighScoreText.text = ((highscore > events.StartupHighscore) ? "<color=yellow>new </color>" : string.Empty) + "Highscore: " + highscore;
                 break;
+            case ResolutionScreenType.Solution:
+                uIElements.ResolutionBG.color = parameters.SolutionBGColor;
+                uIElements.ResolutionStateInfoText.text = "View Solution";
+
+                uIElements.SolutionUIElements.gameObject.SetActive(true);
+                uIElements.SolutionQInfo.gameObject.SetActive(true);
+                uIElements.SolutionQInfo.text = uIElements.QuestionInfoTextObject.text + "\n\n Solution: ";
+                for(int i =0; i<currentAnswers.Count; i++){
+                    AnswerData newAnswer = (AnswerData)Instantiate(currentAnswers[i], uIElements.SolutionsContentArea);
+                }
+                //StartCoroutine(SolutionScreen());
+                //StopCoroutine(SolutionScreen());
+
+                //uIElements.SolutionUIElements.gameObject.SetActive(false);
+                //uIElements.SolutionQInfo.gameObject.SetActive(false);
+                break;
         }
     }
+
+    // IEnumerator SolutionScreen()
+    // {
+    //     var waitForButton = new WaitForUIButtons(continueButton);
+    //     yield return waitForButton.Reset();
+    //     if (waitForButton.PressedButton == continueButton)
+    //     {
+    //         if (IE_DisplayTimedResolution != null)
+    //         {
+    //             StopCoroutine(IE_DisplayTimedResolution);
+    //         }
+    //         IE_DisplayTimedResolution = DisplayTimedResolution();
+    //         StartCoroutine(IE_DisplayTimedResolution);
+    //     }     
+    // }
 
     /// Function that is used to calculate and display the score.
     IEnumerator CalculateScore()

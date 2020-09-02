@@ -9,10 +9,15 @@ public class AnswerData : MonoBehaviour {
     [Header("UI Elements")]
     [SerializeField]    TextMeshProUGUI infoTextObject      = null;
     [SerializeField]    Image           toggle              = null;
+    [SerializeField]    Image           checkmark           = null;
+    [SerializeField]    Image           xmark               = null;
 
     [Header("Textures")]
     [SerializeField]    Sprite          uncheckedToggle     = null;
     [SerializeField]    Sprite          checkedToggle       = null;
+    [SerializeField]    Sprite          checkmarkSprite     = null;
+    
+
 
     [Header("References")]
     [SerializeField]    GameEvents      events              = null;
@@ -37,25 +42,21 @@ public class AnswerData : MonoBehaviour {
 
     #endregion
 
-    /// <summary>
-    /// Function that is called to update the answer data.
-    /// </summary>
+    // Function that is called to update the answer data.
     public void UpdateData (string info, int index)
     {
         infoTextObject.text = info;
         _answerIndex = index;
     }
-    /// <summary>
-    /// Function that is called to reset values back to default.
-    /// </summary>
+
+    // Function that is called to reset values back to default.
     public void Reset ()
     {
         Checked = false;
         UpdateUI();
     }
-    /// <summary>
-    /// Function that is called to switch the state.
-    /// </summary>
+
+    // Function that is called to switch the state.
     public void SwitchState ()
     {
         Checked = !Checked;
@@ -66,13 +67,33 @@ public class AnswerData : MonoBehaviour {
             events.UpdateQuestionAnswer(this);
         }
     }
-    /// <summary>
-    /// Function that is called to update UI.
-    /// </summary>
+
+    // Function that is called to update UI.
     void UpdateUI ()
     {
         if (toggle == null) return;
 
-        toggle.sprite = (Checked) ? checkedToggle : uncheckedToggle;
+        toggle.sprite = (Checked) ? checkedToggle : uncheckedToggle; 
+    }
+
+    public void ShowSolution (bool b) // My function
+    {
+        Debug.Log(b);
+        if(b==true)
+        {
+            checkmark.enabled = true;
+            checkmark.gameObject.SetActive(true);
+            xmark.enabled = false;
+            xmark.gameObject.SetActive(false);
+        }
+        else
+        {
+            checkmark.enabled = false;
+            checkmark.gameObject.SetActive(false);
+            xmark.enabled = true;
+            xmark.gameObject.SetActive(true);
+        }
+        
+
     }
 }
