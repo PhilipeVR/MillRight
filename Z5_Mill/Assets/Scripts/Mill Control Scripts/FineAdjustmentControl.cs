@@ -24,7 +24,7 @@ public class FineAdjustmentControl : MonoBehaviour
     public Boolean collided, moving;
     Boolean animated, handle_enabled, wheel_spin;
 
-    public float movementInterval = 0.001f;
+    [SerializeField] private float movementInterval;
     Animator object_anim, lock_anim;
 
     // Start is called before the first frame update
@@ -54,7 +54,7 @@ public class FineAdjustmentControl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (enable)
+        if (enable && !Input.GetKey(KeyCode.LeftShift)) // Do not execute when left shift held down (to not interfere with camera controller)
         {
             if (!prevAdjustment.Equals(fineAdjustment))
             {

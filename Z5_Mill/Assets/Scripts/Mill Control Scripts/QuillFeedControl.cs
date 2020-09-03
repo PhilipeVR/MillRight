@@ -22,7 +22,7 @@ public class QuillFeedControl : MonoBehaviour
 
     public Boolean collided, moving, prev_state;
 
-    public float movementInterval = 0.001f;
+    [SerializeField] private float movementInterval;
 
     private PlacePiece placePiece;
     private ClampPiece clampPiece;
@@ -60,7 +60,7 @@ public class QuillFeedControl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (enable)
+        if (enable && !Input.GetKey(KeyCode.LeftShift)) // Do not execute when left shift held down (to not interfere with camera controller)
         {
             if (QuillLockButton.Activated == true && wheel.activeSelf)
             {

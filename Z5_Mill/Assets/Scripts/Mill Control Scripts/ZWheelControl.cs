@@ -48,48 +48,50 @@ public class ZWheelControl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(ZLockButton.Activated == true)
+        if (enable && !Input.GetKey(KeyCode.LeftShift)) // Do not execute when left shift held down (to not interfere with camera controller)
         {
-            float distance, time;
-            if (Input.mouseScrollDelta.y != 0)
+            if(ZLockButton.Activated == true)
             {
-                distance = Math.Abs(Input.mouseScrollDelta.y - prev_distance);
-                time = Math.Abs(Time.time - prev_time);
-                currentSpeed = (distance / time) * speedMultiplier;
-            }
+                float distance, time;
+                if (Input.mouseScrollDelta.y != 0)
+                {
+                    distance = Math.Abs(Input.mouseScrollDelta.y - prev_distance);
+                    time = Math.Abs(Time.time - prev_time);
+                    currentSpeed = (distance / time) * speedMultiplier;
+                }
 
-            if (Input.mouseScrollDelta.y > 0f)
-            {
-                Boolean testPlace = placePiece != null;
-                Boolean testClamp = clampPiece != null;
-                if ((testPlace && placePiece.animTime > 0f && placePiece.animTime < 1f) || (testClamp && clampPiece.animTime > 0f && clampPiece.animTime < 1f))
+                if (Input.mouseScrollDelta.y > 0f)
                 {
-                    StopMovement();
+                    Boolean testPlace = placePiece != null;
+                    Boolean testClamp = clampPiece != null;
+                    if ((testPlace && placePiece.animTime > 0f && placePiece.animTime < 1f) || (testClamp && clampPiece.animTime > 0f && clampPiece.animTime < 1f))
+                    {
+                        StopMovement();
+                    }
+                    else
+                    {
+                        object_anim.SetFloat("Reverse", 1);
+                        setSpeed(currentSpeed);
+                    }
                 }
-                else
+                else if (Input.mouseScrollDelta.y < 0f)
                 {
-                    object_anim.SetFloat("Reverse", 1);
-                    setSpeed(currentSpeed);
+                    Boolean testPlace = placePiece != null;
+                    Boolean testClamp = clampPiece != null;
+                    if ((testPlace && placePiece.animTime > 0f && placePiece.animTime < 1f )|| (testClamp && clampPiece.animTime > 0f && clampPiece.animTime < 1f))
+                    {
+                        StopMovement();
+                    }
+                    else
+                    {
+                        object_anim.SetFloat("Reverse", -1);
+                        setSpeed(currentSpeed);
+                    }
+                } else
+                {
+                    pause();
                 }
             }
-            else if (Input.mouseScrollDelta.y < 0f)
-            {
-                Boolean testPlace = placePiece != null;
-                Boolean testClamp = clampPiece != null;
-                if ((testPlace && placePiece.animTime > 0f && placePiece.animTime < 1f )|| (testClamp && clampPiece.animTime > 0f && clampPiece.animTime < 1f))
-                {
-                    StopMovement();
-                }
-                else
-                {
-                    object_anim.SetFloat("Reverse", -1);
-                    setSpeed(currentSpeed);
-                }
-            } else
-            {
-                pause();
-            }
-
         }
     }
 

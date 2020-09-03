@@ -15,6 +15,7 @@ TagManager:
   - DrillBit3
   - 3FluteEndMill
   - OtherCamera
+  - MillControl
   layers:
   - Default
   - TransparentFX

@@ -43,58 +43,61 @@ public class XWheelControl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(XLockButton.Activated == true)
+        if (enable && !Input.GetKey(KeyCode.LeftShift)) // Do not execute when left shift held down (to not interfere with camera controller)
         {
-            float distance, time;
-            if (Input.mouseScrollDelta.y != 0)
+            if(XLockButton.Activated == true)
             {
-                distance = Math.Abs(Input.mouseScrollDelta.y - prev_distance);
-                time = Math.Abs(Time.time - prev_time);
-                currentSpeed = (distance / time) * speedMultiplier;
-            }
-
-
-            if (Input.mouseScrollDelta.y > 0f && !leftCollision)
-            {
-                Boolean testPlace = placePiece != null;
-                if(testPlace && !placePiece.Clicked)
+                float distance, time;
+                if (Input.mouseScrollDelta.y != 0)
                 {
-                    pause();
-                    WarningEvents.current.PieceFirst();
+                    distance = Math.Abs(Input.mouseScrollDelta.y - prev_distance);
+                    time = Math.Abs(Time.time - prev_time);
+                    currentSpeed = (distance / time) * speedMultiplier;
                 }
-                else if (testPlace && placePiece.animTime > 0f && placePiece.animTime < 1f)
+
+
+                if (Input.mouseScrollDelta.y > 0f && !leftCollision)
                 {
-                    StopMovement();
+                    Boolean testPlace = placePiece != null;
+                    if(testPlace && !placePiece.Clicked)
+                    {
+                        pause();
+                        WarningEvents.current.PieceFirst();
+                    }
+                    else if (testPlace && placePiece.animTime > 0f && placePiece.animTime < 1f)
+                    {
+                        StopMovement();
+                    }
+                    else
+                    {
+                        object_anim.SetFloat("Reverse", 1);
+                        setSpeed(currentSpeed);
+                        //Debug.Log(Input.mouseScrollDelta.y);
+                        //Debug.Log(Input.GetAxis("Mouse ScrollWheel"));
+                    }
+                }
+                else if (Input.mouseScrollDelta.y < 0f && !rightCollision)
+                {
+                    Boolean testPlace = placePiece != null;
+                    if (testPlace && !placePiece.Clicked)
+                    {
+                        pause();
+                        WarningEvents.current.PieceFirst();
+                    }
+                    else if (testPlace && placePiece.animTime > 0f && placePiece.animTime < 1f)
+                    {
+                        StopMovement();
+                    }
+                    else
+                    {
+                        object_anim.SetFloat("Reverse", -1);
+                        setSpeed(currentSpeed);
+                    }
                 }
                 else
                 {
-                    object_anim.SetFloat("Reverse", 1);
-                    setSpeed(currentSpeed);
-                    //Debug.Log(Input.mouseScrollDelta.y);
-                    //Debug.Log(Input.GetAxis("Mouse ScrollWheel"));
-                }
-            }
-            else if (Input.mouseScrollDelta.y < 0f && !rightCollision)
-            {
-                Boolean testPlace = placePiece != null;
-                if (testPlace && !placePiece.Clicked)
-                {
                     pause();
-                    WarningEvents.current.PieceFirst();
                 }
-                else if (testPlace && placePiece.animTime > 0f && placePiece.animTime < 1f)
-                {
-                    StopMovement();
-                }
-                else
-                {
-                    object_anim.SetFloat("Reverse", -1);
-                    setSpeed(currentSpeed);
-                }
-            }
-            else
-            {
-                pause();
             }
         }
     }
