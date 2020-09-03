@@ -8,6 +8,7 @@ public class ButtonInteractable : MonoBehaviour
     [SerializeField] private int finalNum;
     [SerializeField] private Button button;
     [SerializeField] private AnimationController controller;
+    [SerializeField] private VideoController videoController;
     private List<int> countChecker;
     private int counter;
 
@@ -27,7 +28,12 @@ public class ButtonInteractable : MonoBehaviour
 
     public void InteractButton()
     {
-        if (counter == finalNum && controller.Counter > 0)
+        if(counter == finalNum && controller.Counter > 0 && !videoController.PlayedOnce)
+        {
+            videoController.StartVideo();
+            videoController.PlayVideo();
+        }
+        else if (counter == finalNum && controller.Counter > 0 && videoController.PlayedOnce)
         {
             button.interactable = true;
         }
