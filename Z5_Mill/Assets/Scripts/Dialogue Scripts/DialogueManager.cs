@@ -8,6 +8,7 @@ using UnityEngine.UI;
 public class DialogueManager : MonoBehaviour
 {
     [SerializeField] private ProcessAnimationController animationController;
+    [SerializeField] private Button backButton;
     private int counter;
     public GameObject DeactivateAtEndDialogue;
     public DialogueTrigger trigger;
@@ -18,32 +19,28 @@ public class DialogueManager : MonoBehaviour
     public Boolean language = true;
 
     private Sprite[] images;
-    private int count;
+    public int tracker, count;
     public int index, sentenceIndex;
-    private Queue<string> sentences; // Keeps track of all sentences in current dialogue
-    private Queue<string> sentencesFR;
-    private Queue<string> currentLangSentence;
+    private string[] sentences, sentencesFR, currentLangSentence;
     private string lastSentence;
     private string titleLang;
     private Boolean controllerPresent;
 
-    void Awake () {
+    void Awake() {
         controllerPresent = animationController != null;
         counter = 0;
-        sentences = new Queue<string>();
-        sentencesFR = new Queue<string>();
-        index = 1;
+
+        index = 0;
         sentenceIndex = -1;
     }
 
-    public void StartDialogue (Dialogue dialogue)
+    public void StartDialogue(Dialogue dialogue)
     {
         nameText.text = dialogue.name;
         titleLang = dialogue.frenchName;
-        sentences.Clear();
-        index = 1;
         sentenceIndex = -1;
         DeactivateAtEndDialogue.SetActive(true);
+        backButton.interactable = false;
 
         if (language)
         {
@@ -55,18 +52,12 @@ public class DialogueManager : MonoBehaviour
             nameText.text = dialogue.frenchName;
             titleLang = dialogue.name;
         }
-        foreach (string sentence in dialogue.sentences)
-        {
-            sentences.Enqueue(sentence);
-        }
 
-        foreach(string sentece in dialogue.sentencesFR)
-        {
-            sentencesFR.Enqueue(sentece);
-        }
+        sentences = dialogue.sentences;
+        sentencesFR = dialogue.sentencesFR;
 
-        count = sentences.Count;
-
+        tracker = count = sentences.Length;
+       
         images = dialogue.images;
 
         if (language)
@@ -81,34 +72,70 @@ public class DialogueManager : MonoBehaviour
         DisplayNextSentence();
     }
 
-    public void DisplayNextSentence ()
+    public void DisplayPreviousSentece()
     {
-        if (sentences.Count == 0)
+        sentenceIndex-- ;
+        tracker ++;
+
+        dialogIndex.text = (sentenceIndex + 1) + "/" + count;
+        Image.GetComponent<Image>().sprite = images[sentenceIndex];
+
+        string sentence = currentLangSentence[sentenceIndex];
+        if (language)
+        {
+            lastSentence = sentencesFR[sentenceIndex];
+        }
+        else
+        {
+            lastSentence = sentences[sentenceIndex];
+        }
+
+        dialogueText.text = sentence;
+
+        if (tracker+1 >= count)
+        {
+            backButton.interactable = false;
+        }
+        else
+        {
+            backButton.interactable = true;
+        }
+    }
+
+    public void DisplayNextSentence()
+    {
+        sentenceIndex++;
+        if (tracker < count)
+        {
+            backButton.interactable = true;
+        }
+        if (tracker == 0)
         {
             EndDialogue();
             return;
         }
-        string sentence = currentLangSentence.Dequeue();
+        string sentence = currentLangSentence[sentenceIndex];
         if (language)
         {
-            lastSentence = sentencesFR.Dequeue();
+            lastSentence = sentencesFR[sentenceIndex];
         } else
         {
-            lastSentence = sentences.Dequeue();
+            lastSentence = sentences[sentenceIndex];
         }
 
         dialogueText.text = sentence;
-        dialogIndex.text = index + "/" + count;
-        Image.GetComponent<Image>().sprite = images[index - 1];
-        index++;
-        sentenceIndex++;
+        dialogIndex.text = (sentenceIndex + 1) + "/" + count;
+        Image.GetComponent<Image>().sprite = images[sentenceIndex];
+
+        tracker--;
+
 
     }
 
     void EndDialogue()
     {
         DeactivateAtEndDialogue.SetActive(false);
-        if(controllerPresent)
+        if (controllerPresent)
         {
             if (!animationController.Operation.TriggerAnimation.Done && animationController.Operation.TriggerAnimation.Active)
             {
@@ -159,10 +186,11 @@ public class DialogueManager : MonoBehaviour
         lastSentence = tmp2;
 
         language = !language;
-     }
+    }
 
     public int SentenceIndex
     {
         get => sentenceIndex;
     }
+
 }

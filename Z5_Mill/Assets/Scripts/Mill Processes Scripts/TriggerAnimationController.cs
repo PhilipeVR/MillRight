@@ -61,7 +61,8 @@ public class TriggerAnimationController : MonoBehaviour
             ResetLoopParams();
             StartAnimation();
             index++;
-            triggerFlash.StopAllCoroutines();
+            triggerFlash.StopRoutine();
+            triggerFlash.AnimPlayed();
             return true;
         }
 
@@ -77,6 +78,7 @@ public class TriggerAnimationController : MonoBehaviour
                 index++;
                 checkTransitionEnd();
                 triggerFlash.StopRoutine();
+                triggerFlash.AnimPlayed();
                 return true;
             }
         }

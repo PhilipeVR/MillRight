@@ -14,10 +14,10 @@ public class Trigger
     public int[] sentenceIndex;
 
     private int animIndex = 0;
-    private int LateAnimIndex = 0;
 
     public Boolean PlaySequence(TriggerAnimationController controller)
     {
+
         Boolean val = false;
         Debug.Log("Index: " + animIndex);
         Debug.Log("Transition Params Length: " + transitionParams.Length);

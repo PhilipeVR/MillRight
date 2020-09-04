@@ -42,8 +42,8 @@ public class QuillFeedControl : MonoBehaviour
             object_anim = animObject.GetComponent<Animator>();
             lock_anim = lockAnimObject.GetComponent<Animator>();
 
-            MIN_HEIGHT = wheel.transform.localPosition.y - 0.15f;
-            MAX_HEIGHT = wheel.transform.localPosition.y;
+            MIN_HEIGHT = wheel.transform.localPosition.z - 0.15f;
+            MAX_HEIGHT = wheel.transform.localPosition.z;
 
 
             setSpeed(0.2f);
@@ -76,13 +76,13 @@ public class QuillFeedControl : MonoBehaviour
                     else
                     {
                         Vector3 tmp_pos = wheel.transform.localPosition;
-                        float y_pos = tmp_pos.y - movementInterval;
+                        float z_pos = tmp_pos.z - movementInterval;
 
-                        if (y_pos <= MAX_HEIGHT && y_pos >= MIN_HEIGHT)
+                        if (z_pos <= MAX_HEIGHT && z_pos >= MIN_HEIGHT)
                         {
                             moving = true;
 
-                            Vector3 new_pos = new Vector3(tmp_pos.x, y_pos, tmp_pos.z);
+                            Vector3 new_pos = new Vector3(tmp_pos.x, tmp_pos.y, z_pos);
                             wheel.transform.localPosition = new_pos;
                             object_anim.SetFloat("Reverse", 1);
                             setSpeed(2f);
@@ -100,13 +100,13 @@ public class QuillFeedControl : MonoBehaviour
                     else
                     {
                         Vector3 tmp_pos = wheel.transform.localPosition;
-                        float y_pos = tmp_pos.y + movementInterval;
+                        float z_pos = tmp_pos.z + movementInterval;
 
-                        if (y_pos <= MAX_HEIGHT && y_pos >= MIN_HEIGHT)
+                        if (z_pos <= MAX_HEIGHT && z_pos >= MIN_HEIGHT)
                         {
                             moving = true;
 
-                            Vector3 new_pos = new Vector3(tmp_pos.x, y_pos, tmp_pos.z);
+                            Vector3 new_pos = new Vector3(tmp_pos.x, tmp_pos.y, z_pos);
 
                             wheel.transform.localPosition = new_pos;
                             object_anim.SetFloat("Reverse", -1);

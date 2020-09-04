@@ -171,7 +171,8 @@ MonoBehaviour:
       surface.
 
 
-      Hint: Click Z Button on DRO Panel to lower mill head'
+      Hint: Click Z Button on DRO Panel to lower mill head (Click
+      on DRO button to open DRO Panel)'
     - 'Lower the quill feed so that the tool is now only slightly above the workpiece
       and the lock the quill into position
 
@@ -215,7 +216,8 @@ MonoBehaviour:
       Cliquez sur le boulon situ\xE9 sur l'\xE9tau pour serrer la pi\xE8ce rigidement"
     - "Continuez en abaissant la t\xEAte de la machine jusqu'\xE0 ce que la fraise
       en bout touche la surface.\n\nIndice: Cliquez sur le bouton Z du panneau DRO
-      pour abaisser la t\xEAte de fraisage"
+      pour abaisser la t\xEAte de fraisage (Cliquert sur le bouton DRO pour ouvrir
+      le panneau DRO)"
     - "Abaisser l'avance de la plume de sorte que l'outil ne se trouve maintenant
       que l\xE9g\xE8rement au-dessus de la pi\xE8ce et verrouiller la plume en position.\n\nIndice:
       Cliquez sur le bouton Y sur le panneau DRO pour d\xE9placer la table vers l'arri\xE8re
@@ -300,21 +302,26 @@ MonoBehaviour:
 
 
       Hint: Click
-      on ON Button to turn milling machine ON'
+      on X Lock Button on DRO Panel to lock X axis (Located to the left of X Button
+      on the DRO panel)'
     - 'Next move in the x direction to a controlled depth at which we will make our
       first cut. This time we will use a depth of 0.01 inch (0.254 mm)
 
 
       Hint:
-      Click on Y Button on DRO Panel to perform side-milling operation'
+      Click on ON Button to turn milling machine ON'
     - 'To make the cut, move the table in the y-direction such that the tool is walking
       along the face of the workpiece
 
 
-      Hint: Click on OFF Button to turn milling
-      machine OFF'
-    - Note that because we only moved the y direction, we have created a uniform
+      Hint: Click on Y Button on DRO Panel
+      to perform side-milling operation'
+    - 'Note that because we only moved the y direction, we have created a uniform
       face that is perpendicular to the jaws of the vise
+
+
+      Hint: Click on OFF
+      Button to turn milling machine OFF'
     - This process may be repeated until the desired amount of material is removed
       from the workpiece.
     sentencesFR:
@@ -348,17 +355,18 @@ MonoBehaviour:
       de la fraise en bout"
     - "Reculez l\xE9g\xE8rement la fraise en bout de la pi\xE8ce, puis d\xE9placez
       la table dans la direction y jusqu'\xE0 ce que la fraise efface la pi\xE8ce.\n\nIndice:
-      Cliquez sur le bouton ON pour allumer la fraiseuse"
+      Cliquez sur le bouton de verrouillage X sur le panneau DRO pour verrouiller
+      l'axe X (situ\xE9 \xE0 gauche du bouton X sur le panneau DRO)"
     - "Ensuite, d\xE9placez-vous dans la direction x jusqu'\xE0 une profondeur contr\xF4l\xE9e
       \xE0 laquelle nous effectuerons notre premi\xE8re coupe. Cette fois, nous utiliserons
-      une profondeur de 0,01 pouce (0,254 mm).\n\nIndice: Cliquez sur le bouton Y
-      sur le panneau DRO pour effectuer l'op\xE9ration de fraisage lat\xE9ral"
+      une profondeur de 0,01 pouce (0,254 mm).\n\nIndice: Cliquez sur le bouton ON
+      pour allumer la fraiseuse"
     - "Pour effectuer la coupe, d\xE9placez la table dans la direction y de sorte
       que l'outil marche le long de la face de la pi\xE8ce.\n\nIndice: Cliquez sur
-      le bouton OFF pour \xE9teindre la fraiseuse"
+      le bouton Y sur le panneau DRO pour effectuer l'op\xE9ration de fraisage lat\xE9ral"
     - "Notez que parce que nous avons seulement d\xE9plac\xE9 la direction y, nous
       avons cr\xE9\xE9 une face uniforme qui est perpendiculaire aux m\xE2choires
-      de l'\xE9tau"
+      de l'\xE9tau\n\nIndice: Cliquez sur le bouton OFF pour \xE9teindre la fraiseuse"
     - "Ce processus peut \xEAtre r\xE9p\xE9t\xE9 jusqu'\xE0 ce que la quantit\xE9
       souhait\xE9e de mati\xE8re soit retir\xE9e de la pi\xE8ce."
     images:

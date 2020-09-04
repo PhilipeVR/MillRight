@@ -53,7 +53,7 @@ MonoBehaviour:
       mat\xE9riau afin de cr\xE9er des trous. Ces forets viennent dans de nombreuses
       tailles diff\xE9rentes et cr\xE9ent diff\xE9rents types de trous dans de nombreux
       mat\xE9riaux diff\xE9rents."
-    image: {fileID: 21300000, guid: 55bc2f83b3e47ba4db3b4bbb37c5812a, type: 3}
+    image: {fileID: 21300000, guid: c999b654412822641863468f67f273f0, type: 3}
   - partName: Drawbar
     partNameFR: Boulon
     sentence: A spindle drawbar is a tool that has a clamping mechanism to hold toolholders

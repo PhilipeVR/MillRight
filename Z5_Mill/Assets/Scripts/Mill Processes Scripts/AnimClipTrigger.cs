@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class AnimClipTrigger : MonoBehaviour
 {
+    [SerializeField] private HintTriggerFlash hintTrigger;
     [SerializeField] private DialogueManager dialogueManager;
     [SerializeField] private ProcessAnimationController manager;
     [SerializeField] private int anim;
@@ -60,6 +61,7 @@ public class AnimClipTrigger : MonoBehaviour
         if((dialogueManager.SentenceIndex == sentenceIndex) && val)
         {
             dialogueManager.DisplayNextSentence();
+            
         }
     }
 
@@ -95,6 +97,9 @@ public class AnimClipTrigger : MonoBehaviour
             }
         }
     }
+
+
+
 
 
 }

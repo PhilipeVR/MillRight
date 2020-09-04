@@ -18,6 +18,7 @@ public class HintFlash : MonoBehaviour
     private List<GameObject> current = null;
     private int sentenceIndex = 0;
     private Boolean state = false;
+    private Boolean react;
     private int prevVal = 0;
     private int triggerIndex = -1;
     private float timer = -1;
@@ -48,6 +49,7 @@ public class HintFlash : MonoBehaviour
         currentInfoSentence = -1;
         hint.interactable = false;
         state = false;
+        react = false;
         timer = -1;
         foreach (ObjectTriggerInfo triggerInfo in triggerInfos)
         {
@@ -71,16 +73,25 @@ public class HintFlash : MonoBehaviour
             prevVal = manager.SentenceIndex;
             IncrementAnim();
         }
+        if(currentInfoSentence != manager.SentenceIndex)
+        {
+            hint.interactable = false;
+        }
+        else
+        {
+            hint.interactable = react;
+        }
         if (state && controller.CurrentAnimationStatus && currentInfoSentence == manager.SentenceIndex)
         {
             timer -= Time.deltaTime;
             if(timer < 0)
             {
                 hint.interactable = true;
-                state = false;
+                react = true;
                 timer = -1;
             }
         }
+        
     }
 
     public void Reset()
@@ -151,6 +162,10 @@ public class HintFlash : MonoBehaviour
             yield return new WaitForSecondsRealtime(DelayForFlash);
         }
     }
+    public Boolean Hint
+    {
+        get => react;
+    }
 
     [Serializable]
     public struct ObjectTriggerInfo
@@ -158,6 +173,8 @@ public class HintFlash : MonoBehaviour
         [SerializeField] private int sentenceIndex;
         [SerializeField] private int triggerIndex;
         [SerializeField] private List<GameObject> triggerObject;
+
+        private Boolean clicked;
 
         public List<GameObject> TriggerObject
         {
@@ -173,5 +190,13 @@ public class HintFlash : MonoBehaviour
         {
             get => triggerIndex;
         }
+
+        public Boolean Clicked
+        {
+            get => clicked;
+            set => clicked = value;
+        }
+
+
     }
 }
