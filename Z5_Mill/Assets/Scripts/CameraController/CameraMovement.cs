@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class CameraMovement : MonoBehaviour
 {
@@ -47,40 +48,43 @@ public class CameraMovement : MonoBehaviour
 
     void Update()
     {
-        // Move Camera in front-facing (XY) plane
-        if (Input.GetMouseButton(0))
+        if(!EventSystem.current.IsPointerOverGameObject())
         {
-            moveXY = Vector3.zero;
-            moveXY.x += (-Input.GetAxis("Mouse X"));
-            moveXY.y += (-Input.GetAxis("Mouse Y"));
-            MoveFocusPointXY(moveXY);            
-        }
-
-        // Rotate camera relative to cameraPivot
-        if (Input.GetMouseButton(1))
-        {
-            //Rotation of the Camera based on Mouse Coordinates
-            //Only triggers when mouse is not stationary
-            if (Input.GetAxis("Mouse X") != 0 || Input.GetAxis("Mouse Y") != 0)
+            // Move Camera in front-facing (XY) plane
+            if (Input.GetMouseButton(0))
             {
-                _LocalRotation.x += Input.GetAxis("Mouse X") * MouseSensitivity;
-                _LocalRotation.y -= Input.GetAxis("Mouse Y") * MouseSensitivity; // Prevent inverted controls
-
-                //Clamp the y Rotation to horizon and not flipping over at the top
-                _LocalRotation.y = Mathf.Clamp(_LocalRotation.y, 0f, 90f);
-                _LocalRotation.x = Mathf.Clamp(_LocalRotation.x, -40f, 40f);
+                moveXY = Vector3.zero;
+                moveXY.x += (-Input.GetAxis("Mouse X"));
+                moveXY.y += (-Input.GetAxis("Mouse Y"));
+                MoveFocusPointXY(moveXY);            
             }
-        }        
 
-        //Zooming Input from our Mouse Scroll Wheel
+            // Rotate camera relative to cameraPivot
+            if (Input.GetMouseButton(1))
+            {
+                //Rotation of the Camera based on Mouse Coordinates
+                //Only triggers when mouse is not stationary
+                if (Input.GetAxis("Mouse X") != 0 || Input.GetAxis("Mouse Y") != 0)
+                {
+                    _LocalRotation.x += Input.GetAxis("Mouse X") * MouseSensitivity;
+                    _LocalRotation.y -= Input.GetAxis("Mouse Y") * MouseSensitivity; // Prevent inverted controls
 
-        if ((Input.GetAxis("Mouse ScrollWheel") != 0f) && Input.GetKey(KeyCode.LeftShift))
-        {
-            float ScrollAmount = Input.GetAxis("Mouse ScrollWheel") * ScrollSensitvity;
-            ScrollAmount *= (this._CameraDistance * 0.3f);
-            this._CameraDistance += ScrollAmount * -1f;
-            //This makes camera go no closer than 1.5 meters from target, and no further than 10 meters.
-            this._CameraDistance = Mathf.Clamp(this._CameraDistance, -4f, 13f);
+                    //Clamp the y Rotation to horizon and not flipping over at the top
+                    _LocalRotation.y = Mathf.Clamp(_LocalRotation.y, 0f, 90f);
+                    _LocalRotation.x = Mathf.Clamp(_LocalRotation.x, -40f, 40f);
+                }
+            }        
+
+            //Zooming Input from our Mouse Scroll Wheel
+
+            if ((Input.GetAxis("Mouse ScrollWheel") != 0f) && Input.GetKey(KeyCode.LeftShift))
+            {
+                float ScrollAmount = Input.GetAxis("Mouse ScrollWheel") * ScrollSensitvity;
+                ScrollAmount *= (this._CameraDistance * 0.3f);
+                this._CameraDistance += ScrollAmount * -1f;
+                //This makes camera go no closer than 1.5 meters from target, and no further than 10 meters.
+                this._CameraDistance = Mathf.Clamp(this._CameraDistance, -4f, 13f);
+            }
         }
         
     }
