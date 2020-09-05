@@ -66,7 +66,14 @@ public class Trigger
 
     public int SentenceIndex()
     {
-        int val = sentenceIndex[Index];
-        return val;
+        try
+        {
+            int val = sentenceIndex[Index];
+            return val;
+        } catch(IndexOutOfRangeException e)
+        {
+            return -1;
+        }
+       
     }
 }

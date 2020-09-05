@@ -25,6 +25,7 @@ public class DialogueManager : MonoBehaviour
     private string lastSentence;
     private string titleLang;
     private Boolean controllerPresent;
+    [SerializeField] private GameObject open, close, holder;
 
     void Awake() {
         controllerPresent = animationController != null;
@@ -104,6 +105,9 @@ public class DialogueManager : MonoBehaviour
 
     public void DisplayNextSentence()
     {
+        open.SetActive(false);
+        close.SetActive(true);
+        holder.SetActive(true);
         sentenceIndex++;
         if (tracker < count)
         {

@@ -18,9 +18,9 @@ MonoBehaviour:
     transitionParams:
     - Slide Y
     animationName:
-    - Slide Head
-    index: 03000000
-    sentenceIndex: 04000000
+    - Lock Z Axis
+    index: 04000000
+    sentenceIndex: 05000000
   - TriggerControllerName: Mill_Organized
     anim: 2
     transitionParams:
@@ -28,6 +28,6 @@ MonoBehaviour:
     - Slide Y 2
     animationName:
     - Clamp Piece
-    - Turn ON
-    index: 0200000009000000
-    sentenceIndex: 050000000c000000
+    - Zero X Axis
+    index: 020000000b000000
+    sentenceIndex: 050000000e000000

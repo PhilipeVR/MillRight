@@ -20,7 +20,7 @@ MonoBehaviour:
     animationName:
     - Clamp Piece
     index: 02000000
-    sentenceIndex: 04000000
+    sentenceIndex: 05000000
   - TriggerControllerName: Mill_Model
     anim: 1
     transitionParams:

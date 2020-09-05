@@ -19,5 +19,5 @@ MonoBehaviour:
     - Lock X Axis
     animationName:
     - Slide Back (Left)
-    index: 07000000
-    sentenceIndex: 0a000000
+    index: 08000000
+    sentenceIndex: 0b000000

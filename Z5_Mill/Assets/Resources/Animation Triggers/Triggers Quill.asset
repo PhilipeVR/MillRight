@@ -20,20 +20,20 @@ MonoBehaviour:
     animationName:
     - Turn ON
     index: 04000000
-    sentenceIndex: 0b000000
+    sentenceIndex: 09000000
   - TriggerControllerName: Mill_Model
     anim: 1
     transitionParams:
     - Slide Quill
     animationName:
     - Turn ON
-    index: 05000000
-    sentenceIndex: 06000000
+    index: 06000000
+    sentenceIndex: 07000000
   - TriggerControllerName: Mill_Organized
     anim: 2
     transitionParams:
     - Slide Quill
     animationName:
     - Slide Left
-    index: 05000000
-    sentenceIndex: 08000000
+    index: 06000000
+    sentenceIndex: 09000000

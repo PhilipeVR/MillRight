@@ -18,16 +18,16 @@ MonoBehaviour:
     transitionParams:
     - Slide X
     animationName:
-    - Quill Movement 0
-    index: 06000000
-    sentenceIndex: 07000000
+    - Zero Z Axis
+    index: 08000000
+    sentenceIndex: 09000000
   - TriggerControllerName: Mill_Organized
     anim: 2
     transitionParams:
     - Slide X
     - Slide X 2
     animationName:
-    - Slide Head
+    - Lock Z Axis
     - Slide Quill
-    index: 0400000006000000
-    sentenceIndex: 0700000009000000
+    index: 0500000007000000
+    sentenceIndex: 080000000a000000
