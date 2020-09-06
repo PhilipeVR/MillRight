@@ -38,6 +38,7 @@ public class GameButtonManager : MonoBehaviour
 
     public void turnOn()
     {
+        Debug.Log("ON");
         anim_object.speed = 2f;
         currentBit.tag = drillTag;
         state = true;

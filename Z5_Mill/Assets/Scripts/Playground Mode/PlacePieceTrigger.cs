@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlacePieceTrigger : MonoBehaviour
 {
@@ -11,7 +12,9 @@ public class PlacePieceTrigger : MonoBehaviour
     [SerializeField] private GameObject activateOnClick;
     [SerializeField] private ZWheelControl WheelControl;
     [SerializeField] private QuillFeedControl QuillControl;
+    [SerializeField] private FineAdjustmentControl fineAdjustmentControl;
     [SerializeField] private SwitchBit checkBitState;
+    [SerializeField] private Button operate;
     private Color basicColor;
     private Boolean Clicked;
 
@@ -33,6 +36,12 @@ public class PlacePieceTrigger : MonoBehaviour
     private void OnMouseDown()
     {
 
+        Debug.Log(WheelControl.animTime);
+        Debug.Log("Quill Height: " + QuillControl.Height);
+        Debug.Log("Quill Max Height: " + QuillControl.MaxHeight);
+        Debug.Log("Fine Height: " + QuillControl.MaxHeight);
+        Debug.Log("Fine Max Height: " + QuillControl.MaxHeight);
+
         if (!Clicked)
         {
             Debug.Log(QuillControl.Height);
@@ -48,6 +57,7 @@ public class PlacePieceTrigger : MonoBehaviour
                 GetComponent<Renderer>().material.color = clickedColor;
                 activateOnClick.SetActive(true);
                 gameObject.SetActive(false);
+                operate.interactable = false;
                 PlaySequence();
             }
 

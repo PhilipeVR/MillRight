@@ -5,12 +5,15 @@ using UnityEngine;
 
 public class YWheelControl : MonoBehaviour
 {
+    [SerializeField] private DRO_Manager manager;
+    [SerializeField] private OperationSelection selector;
     [SerializeField] GameObject animObject, lockAnimObject;
     [SerializeField] public DRO_Button YLockButton;
     [SerializeField] GameObject wheel, lockHandle;
     [SerializeField] Boolean enable = true;
     [SerializeField] private float speedMultiplier;
     private PlacePiece placePiece;
+    [SerializeField] private string lockBool, unlockBool;
 
 
     private float new_time, prev_time, prev_distance;
@@ -19,7 +22,7 @@ public class YWheelControl : MonoBehaviour
 
     Boolean animated = true;
     Boolean handle_enabled, wheel_spin;
-    public Boolean forwardCollision, backwardCollision;
+    public Boolean forwardCollision, backwardCollision, locked;
     public Animator object_anim, lock_anim;
 
     // Start is called before the first frame update
@@ -32,9 +35,8 @@ public class YWheelControl : MonoBehaviour
 
         forwardCollision = false;
         backwardCollision = false;
-
+        locked = false;
         setSpeed(0.2f);
-        setLockSpeed(0.5f);
         pause();
         pauseLock();
         //Debug.LogWarning(lock_anim.runtimeAnimatorController.animationClips[0].name);
@@ -43,13 +45,27 @@ public class YWheelControl : MonoBehaviour
         wheel_spin = true;
     }
 
+    public Boolean Locked
+    {
+        get => locked;
+    }
+
     // Update is called once per frame
     void Update()
     {
         if (enable && !Input.GetKey(KeyCode.LeftShift)) // Do not execute when left shift held down (to not interfere with camera controller)
         {
-            if(YLockButton.Activated == true)
+            if (YLockButton.Activated)
             {
+                if(selector.Current.Name != "Null" && !selector.Current.GetPlacePiece().Clicked)
+                {
+                    WarningEvents.current.PieceFirst();
+                    manager.resetDRO();
+                }
+            }
+            if ((YLockButton.Activated == true) && !locked)
+            {
+
                 float distance, time;
                 if (Input.mouseScrollDelta.y != 0)
                 {
@@ -115,6 +131,22 @@ public class YWheelControl : MonoBehaviour
         animated = false;
     }
 
+    public void ToggleLock(float speed)
+    {
+        if (locked)
+        {
+            lock_anim.SetBool(lockBool, false);
+            lock_anim.SetBool(unlockBool, true);
+        }
+        else
+        {
+            lock_anim.SetBool(lockBool, true);
+            lock_anim.SetBool(unlockBool, false);
+        }
+        locked = !locked;
+        setLockSpeed(speed);
+    }
+
     private void pauseLock()
     {
         lock_anim.speed = 0;
@@ -138,7 +170,12 @@ public class YWheelControl : MonoBehaviour
     public void resetAnim(float time)
     {
         object_anim.Play(object_anim.runtimeAnimatorController.animationClips[0].name, 0, time);
+        lock_anim.Play(lock_anim.runtimeAnimatorController.animationClips[0].name, 0, time);
         object_anim.speed = 0;
+        lock_anim.speed = 0;
+        lock_anim.SetBool(lockBool, true);
+        lock_anim.SetBool(unlockBool, false);
+        locked = false;
         forwardCollision = false;
         backwardCollision = false;
     }

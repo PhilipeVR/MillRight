@@ -144,17 +144,18 @@ MonoBehaviour:
     - "Bien jou\xE9! Ensuite, nous apprendrons le fraisage lat\xE9ral. Cliquez sur
       le bouton d'op\xE9ration de fraisage lat\xE9ral sur le c\xF4t\xE9 droit."
     images:
+    - {fileID: 21300000, guid: fe582710cf3797f488e7c2de77c2ea4b, type: 3}
     - {fileID: 21300000, guid: fb74a5427d9f3db4aa95428fb5940d16, type: 3}
     - {fileID: 21300000, guid: ce9d6efa35fdc934aa85cd8d81c55def, type: 3}
-    - {fileID: 21300000, guid: 841326bc6756b39488f64efecc9893a9, type: 3}
+    - {fileID: 21300000, guid: 061edef650e577d468060ed279580c01, type: 3}
     - {fileID: 21300000, guid: 971b9279cecf96f4bb7f7a35150c1930, type: 3}
     - {fileID: 21300000, guid: f7fcddfcd3df33f4ca6026006eaf85c9, type: 3}
-    - {fileID: 21300000, guid: 68f4794d0b0cd5143b7b45d6b2bf3519, type: 3}
-    - {fileID: 21300000, guid: c018060771ae9564baa1831287498e6e, type: 3}
-    - {fileID: 21300000, guid: ebf3c27fdb13163498657e68274fd5eb, type: 3}
-    - {fileID: 21300000, guid: b7245a42f13c7c54e83fa7f370233f31, type: 3}
+    - {fileID: 21300000, guid: 841326bc6756b39488f64efecc9893a9, type: 3}
     - {fileID: 21300000, guid: 7cb962a47cd6b4049922ffc01101f823, type: 3}
     - {fileID: 21300000, guid: 54227f23060d9de4686676b6e6564268, type: 3}
+    - {fileID: 21300000, guid: 68f4794d0b0cd5143b7b45d6b2bf3519, type: 3}
+    - {fileID: 21300000, guid: 41b610a3f00945941967c1ce85d74bc4, type: 3}
+    - {fileID: 21300000, guid: 52512d8627d119947811d0a14b178ce4, type: 3}
   - name: Getting Started - Face Milling
     frenchName: Mise en route - Fraisage de face
     sentences:
@@ -245,10 +246,10 @@ MonoBehaviour:
       afin de vous assurer que la fraise est juste au-dessus de la pi\xE8ce"
     - 'Vous pouvez maintenant allumer la machine.
 
-      
 
-      Indice: Cliquez
-      sur le bouton ON pour allumer la fraiseuse'
+
+      Indice: Cliquez sur le
+      bouton ON pour allumer la fraiseuse'
     - "Proc\xE9dez en utilisant l'avance de la plume pour abaisser l'outil jusqu'\xE0
       ce qu'il entre en contact avec la surface de la pi\xE8ce.\r\n\r\nIndice: Cliquez
       sur le bouton Plume sur le panneau DRO pour d\xE9finir la profondeur de coupe"
@@ -268,19 +269,19 @@ MonoBehaviour:
       dans ce tutoriel avant de poursuivre en cliquant sur les bouttons d'op\xE9rations
       sur le cot\xE9 droit."
     images:
-    - {fileID: 21300000, guid: acfe2f871ffa35643a330a44ae78768e, type: 3}
-    - {fileID: 21300000, guid: 841326bc6756b39488f64efecc9893a9, type: 3}
+    - {fileID: 21300000, guid: 3ef9f1deb9c5e0e488b6496ba46b5e18, type: 3}
+    - {fileID: 21300000, guid: 0a8e015102743644d8eaae080f211cc7, type: 3}
+    - {fileID: 21300000, guid: ce9d6efa35fdc934aa85cd8d81c55def, type: 3}
     - {fileID: 21300000, guid: f7fcddfcd3df33f4ca6026006eaf85c9, type: 3}
-    - {fileID: 21300000, guid: f7fcddfcd3df33f4ca6026006eaf85c9, type: 3}
-    - {fileID: 21300000, guid: f7fcddfcd3df33f4ca6026006eaf85c9, type: 3}
-    - {fileID: 21300000, guid: 54227f23060d9de4686676b6e6564268, type: 3}
+    - {fileID: 21300000, guid: eb57f130b0c8d4b4cbc2f137cf20de1b, type: 3}
     - {fileID: 21300000, guid: 52b2d0a10350f5944901a12df193eaad, type: 3}
+    - {fileID: 21300000, guid: 54227f23060d9de4686676b6e6564268, type: 3}
+    - {fileID: 21300000, guid: c7d39ecdeeec25e48ae6eeb44eb26183, type: 3}
+    - {fileID: 21300000, guid: 8f27edd6fc012684fb0e4ec274719306, type: 3}
     - {fileID: 21300000, guid: 44dd9f1e3343032468d16a05b736df04, type: 3}
-    - {fileID: 21300000, guid: 01d330608e7cadb468c8287b112dd7ae, type: 3}
-    - {fileID: 21300000, guid: 0d6789746ccf4f14ea663d513da56698, type: 3}
-    - {fileID: 21300000, guid: 0d6789746ccf4f14ea663d513da56698, type: 3}
-    - {fileID: 21300000, guid: 0d6789746ccf4f14ea663d513da56698, type: 3}
-    - {fileID: 21300000, guid: 0d6789746ccf4f14ea663d513da56698, type: 3}
+    - {fileID: 21300000, guid: 41b610a3f00945941967c1ce85d74bc4, type: 3}
+    - {fileID: 21300000, guid: f575135d2274a4e4a968e6e68e6585c5, type: 3}
+    - {fileID: 21300000, guid: 1be1f05657646e944a6b2dded6bf4e61, type: 3}
   - name: Getting Started - Side Milling
     frenchName: "Mise en route - Fraisage lat\xE9rale"
     sentences:
@@ -396,7 +397,7 @@ MonoBehaviour:
       DRO)"
     - 'Nous devons maintenant ajuster la table le long de l''axe X.
 
-      
+
 
       Indice:
       Cliquez sur le bouton X du panneau DRO pour ajuster la table'
@@ -428,21 +429,21 @@ MonoBehaviour:
     - "Excellent travail! Ensuite, nous apprenons l'op\xE9ration de surfa\xE7age.
       Cliquez sur le bouton d'op\xE9ration de surfa\xE7age pour commencer."
     images:
-    - {fileID: 21300000, guid: acfe2f871ffa35643a330a44ae78768e, type: 3}
-    - {fileID: 21300000, guid: 68f4794d0b0cd5143b7b45d6b2bf3519, type: 3}
-    - {fileID: 21300000, guid: 44dd9f1e3343032468d16a05b736df04, type: 3}
+    - {fileID: 21300000, guid: a446326d88b1b3a4a93ac253758f7645, type: 3}
+    - {fileID: 21300000, guid: 65bb866b46a6f7d4da5f6502b9a416fd, type: 3}
+    - {fileID: 21300000, guid: 4bbfe3d8eb91da84091d6f3deec073d2, type: 3}
     - {fileID: 21300000, guid: fb74a5427d9f3db4aa95428fb5940d16, type: 3}
     - {fileID: 21300000, guid: ce9d6efa35fdc934aa85cd8d81c55def, type: 3}
-    - {fileID: 21300000, guid: eb57f130b0c8d4b4cbc2f137cf20de1b, type: 3}
-    - {fileID: 21300000, guid: f7fcddfcd3df33f4ca6026006eaf85c9, type: 3}
-    - {fileID: 21300000, guid: 54227f23060d9de4686676b6e6564268, type: 3}
-    - {fileID: 21300000, guid: f7fcddfcd3df33f4ca6026006eaf85c9, type: 3}
-    - {fileID: 21300000, guid: 7cb962a47cd6b4049922ffc01101f823, type: 3}
-    - {fileID: 21300000, guid: 44dd9f1e3343032468d16a05b736df04, type: 3}
-    - {fileID: 21300000, guid: 0d6789746ccf4f14ea663d513da56698, type: 3}
-    - {fileID: 21300000, guid: 9c4310a352b17b741a7afe84a5cce3a2, type: 3}
     - {fileID: 21300000, guid: 01d330608e7cadb468c8287b112dd7ae, type: 3}
+    - {fileID: 21300000, guid: f7fcddfcd3df33f4ca6026006eaf85c9, type: 3}
+    - {fileID: 21300000, guid: eb57f130b0c8d4b4cbc2f137cf20de1b, type: 3}
+    - {fileID: 21300000, guid: 52b2d0a10350f5944901a12df193eaad, type: 3}
+    - {fileID: 21300000, guid: c7d39ecdeeec25e48ae6eeb44eb26183, type: 3}
+    - {fileID: 21300000, guid: 68f4794d0b0cd5143b7b45d6b2bf3519, type: 3}
+    - {fileID: 21300000, guid: eb57f130b0c8d4b4cbc2f137cf20de1b, type: 3}
+    - {fileID: 21300000, guid: 54227f23060d9de4686676b6e6564268, type: 3}
+    - {fileID: 21300000, guid: 8f27edd6fc012684fb0e4ec274719306, type: 3}
+    - {fileID: 21300000, guid: acfe2f871ffa35643a330a44ae78768e, type: 3}
+    - {fileID: 21300000, guid: 41b610a3f00945941967c1ce85d74bc4, type: 3}
     - {fileID: 21300000, guid: 0d6789746ccf4f14ea663d513da56698, type: 3}
-    - {fileID: 21300000, guid: 0d6789746ccf4f14ea663d513da56698, type: 3}
-    - {fileID: 21300000, guid: 0d6789746ccf4f14ea663d513da56698, type: 3}
-    - {fileID: 21300000, guid: 0d6789746ccf4f14ea663d513da56698, type: 3}
+    - {fileID: 21300000, guid: 52512d8627d119947811d0a14b178ce4, type: 3}

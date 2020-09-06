@@ -23,8 +23,11 @@ public class ZWheelControl : MonoBehaviour
     private float new_time, prev_time, prev_distance;
     public float currentSpeed;
 
+    [SerializeField] private string lockBool, unlockBool;
+
+
     Boolean animated = true;
-    Boolean handle_enabled, wheel_spin;
+    Boolean handle_enabled, wheel_spin, locked;
     Animator object_anim, lock_anim;
 
     // Start is called before the first frame update
@@ -34,9 +37,8 @@ public class ZWheelControl : MonoBehaviour
         prev_distance = 0;
         object_anim = animObject.GetComponent<Animator>();
         lock_anim = lockAnimObject.GetComponent<Animator>();
-
+        locked = false;
         setSpeed(0.2f);
-        setLockSpeed(0.5f);
         pause();
         pauseLock();
         //Debug.LogWarning(lock_anim.runtimeAnimatorController.animationClips[0].name);
@@ -45,13 +47,20 @@ public class ZWheelControl : MonoBehaviour
         wheel_spin = true;
     }
 
+
+    public Boolean Locked
+    {
+        get => locked;
+    }
+
     // Update is called once per frame
     void Update()
     {
         if (enable && !Input.GetKey(KeyCode.LeftShift)) // Do not execute when left shift held down (to not interfere with camera controller)
         {
-            if(ZLockButton.Activated == true)
+            if ((ZLockButton.Activated == true) && !locked)
             {
+
                 float distance, time;
                 if (Input.mouseScrollDelta.y != 0)
                 {
@@ -112,6 +121,22 @@ public class ZWheelControl : MonoBehaviour
         lock_anim.speed = 0;
     }
 
+    public void ToggleLock(float speed)
+    {
+        if (locked)
+        {
+            lock_anim.SetBool(lockBool, false);
+            lock_anim.SetBool(unlockBool, true);
+        }
+        else
+        {
+            lock_anim.SetBool(lockBool, true);
+            lock_anim.SetBool(unlockBool, false);
+        }
+        locked = !locked;
+        setLockSpeed(speed);
+    }
+
     private void setSpeed(float mph)
     {
         //Debug.Log(mph);
@@ -130,7 +155,12 @@ public class ZWheelControl : MonoBehaviour
     public void resetAnim(float time)
     {
         object_anim.Play(object_anim.runtimeAnimatorController.animationClips[0].name, 0, time);
+        lock_anim.Play(lock_anim.runtimeAnimatorController.animationClips[0].name, 0, time);
         object_anim.speed = 0;
+        lock_anim.speed = 0;
+        lock_anim.SetBool(lockBool, true);
+        lock_anim.SetBool(unlockBool, false);
+        locked = false;
     }
 
     public float animTime

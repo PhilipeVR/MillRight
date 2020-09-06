@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class OperationSelection : MonoBehaviour
 {
+    [SerializeField] private DRO_Manager droManager;
     [SerializeField] private Toggle_On_Off powerButton;
     [SerializeField] private XWheelControl controlX;
     [SerializeField] private YWheelControl controlY;
@@ -14,11 +15,12 @@ public class OperationSelection : MonoBehaviour
     [SerializeField] private SwitchBit switchBit;
     [SerializeField] private Operation drilling, sideMill, faceMill, current;
     [SerializeField] private List<SelectionToggle> bitButtons;
-    [SerializeField] private GameObject warningBox;
+    [SerializeField] private GameObject warningBox, doneBTN;
+    [SerializeField] private ProcessChecker checker;
     // Start is called before the first frame update
     void Start()
     {
-
+        doneBTN.SetActive(false);
         drilling.activate(false);
         sideMill.activate(false);
         faceMill.activate(false);
@@ -28,6 +30,7 @@ public class OperationSelection : MonoBehaviour
     {
         if (CheckOperationChange())
         {
+            droManager.resetDRO();
             warningBox.SetActive(false);
             controlX.resetAnim(0);
             controlY.resetAnim(0);
@@ -38,6 +41,8 @@ public class OperationSelection : MonoBehaviour
             drilling.activate(false);
             sideMill.activate(false);
             faceMill.activate(false);
+            doneBTN.SetActive(false);
+
 
             switchBit.Reset();
 
@@ -55,6 +60,7 @@ public class OperationSelection : MonoBehaviour
                 resetPiece = drilling.GetPlacePiece();
                 resetClamp = drilling.Vise.GetComponentInChildren<ClampPiece>();
                 revertStock = drilling.RevertStockDestruction;
+                checker.ChangeListener(drilling.Name);
                 current = drilling;
             }
             else if (sideMill.Name.Equals(name))
@@ -63,6 +69,7 @@ public class OperationSelection : MonoBehaviour
                 resetPiece = sideMill.GetPlacePiece();
                 resetClamp = sideMill.Vise.GetComponentInChildren<ClampPiece>();
                 revertStock = sideMill.RevertStockDestruction;
+                checker.ChangeListener(sideMill.Name);
                 current = sideMill;
 
             }
@@ -72,6 +79,7 @@ public class OperationSelection : MonoBehaviour
                 resetPiece = faceMill.GetPlacePiece();
                 resetClamp = faceMill.Vise.GetComponentInChildren<ClampPiece>();
                 revertStock = faceMill.RevertStockDestruction;
+                checker.ChangeListener(faceMill.Name);
                 current = faceMill;
 
             }

@@ -1441,7 +1441,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   toggleOptionText: ENG
-  toggleOptionText2: 
+  toggleOptionText2: FR
   currentText: {fileID: 1556837435}
 --- !u!1 &198144154
 GameObject:
@@ -16619,6 +16619,7 @@ MonoBehaviour:
   toggleComponentLangManager: {fileID: 865799118}
   imageToggle: {fileID: 0}
   toolHolderManager: {fileID: 0}
+  toggleScene: {fileID: 0}
 --- !u!1 &1620793614
 GameObject:
   m_ObjectHideFlags: 0

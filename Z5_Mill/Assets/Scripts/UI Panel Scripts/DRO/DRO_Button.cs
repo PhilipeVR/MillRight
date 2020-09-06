@@ -14,7 +14,7 @@ public class DRO_Button : MonoBehaviour
     private Image m_buttonImage;
 
   
-    void Start()
+    void Awake()
     {
         m_buttonImage = GetComponent<Image>();
         m_buttonImage.color = disabledColor;
@@ -33,6 +33,36 @@ public class DRO_Button : MonoBehaviour
             m_buttonImage.color = disabledColor;
             m_activated = false;
         }
+
+    }
+
+    public void Btn_LockSetEnabled(bool value)
+    {
+        if (value == true)
+        {
+            m_buttonImage.color = disabledColor;
+            m_activated = true;
+        }
+        else
+        {
+            m_buttonImage.color = enabledColor;
+            m_activated = false;
+        }
+
+    }
+
+    public void Btn_Toggle()
+    {
+        if (m_activated)
+        {
+            m_buttonImage.color = enabledColor;
+        }
+        else
+        {
+            m_buttonImage.color = disabledColor;
+        }
+
+        m_activated = !m_activated;
 
     }
 

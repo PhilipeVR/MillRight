@@ -7,17 +7,17 @@ public class PlacePiece : MonoBehaviour
 {
     [SerializeField] private Vector3 initialFinalPosition, initialStockPosition;
     [SerializeField] private Transform referenceTransformX, referenceTransformY;
+    [SerializeField] private float referenceX, referenceY;
     [SerializeField] private Animator animator;
     [SerializeField] private PlacePieceTrigger trigger;
-    [SerializeField] private float time1, time2, time3, time4, Speed, tableXref, tableYref;
+    [SerializeField] private float Speed;
     private AnimationClip clip;
-    private Vector3 initialReferencePositionX, initialReferencePositionY, offset, constantReference;
+    private Vector3 offset, constantReference;
     private Boolean clicked;
     private void Awake()
     {
         clip = animator.runtimeAnimatorController.animationClips[0];
-        initialReferencePositionX.x = tableXref;
-        initialReferencePositionY.y = tableYref;
+
         ResetAnim();
     }
 
@@ -43,8 +43,8 @@ public class PlacePiece : MonoBehaviour
 
             constantReference.x = referenceTransformX.localPosition.x;
             constantReference.y = referenceTransformY.localPosition.y;
-            //Debug.Log("Offset X: " + offset.x.ToString());
-            //Debug.Log("Offset Y: " + offset.y.ToString());
+            Debug.Log("Offset X: " + offset.x.ToString());
+            Debug.Log("Offset Y: " + offset.y.ToString());
             //Debug.Log("LocalPos X: " + transform.localPosition.x.ToString());
             //Debug.Log("LocalPos Y: " + transform.localPosition.y.ToString());
             //Debug.Log("LocalPos Z: " + transform.localPosition.z.ToString());
@@ -58,6 +58,10 @@ public class PlacePiece : MonoBehaviour
 
             gameObject.transform.localPosition = offsetVal;
         }
+        else
+        {
+            offset = new Vector3(0, 0, 0);
+        }
     }
 
     public void ResetAnim()
@@ -66,10 +70,8 @@ public class PlacePiece : MonoBehaviour
         animator.speed = 0;
         gameObject.transform.localPosition = initialStockPosition;
         offset = new Vector3(0, 0, 0);
-        constantReference.x = referenceTransformX.localPosition.x;
-        constantReference.y = referenceTransformY.localPosition.y;
-        initialReferencePositionX.x = tableXref;
-        initialReferencePositionY.y = tableYref;
+        constantReference.x = referenceX;
+        constantReference.y = referenceY;
         clicked = false;
     }
 

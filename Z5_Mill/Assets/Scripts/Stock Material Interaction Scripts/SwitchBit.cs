@@ -123,6 +123,7 @@ public class SwitchBit : MonoBehaviour
                 {
                     currentBit.SetActive(true);
                     drillChuck.SetActive(true);
+                    manager.currentBit = currentBit.transform.GetChild(1).gameObject;
                     chuckSelection.Clicked(drillChuck.name);
                     bitSelection.Clicked(currentBit.name);
                     first = false;
@@ -166,7 +167,6 @@ public class SwitchBit : MonoBehaviour
                     currentBit.SetActive(true);
                     currentBit.transform.localPosition = spawnBitPosition;
                     currentIndex = i;
-                    fine_adjust.fineAdjustment = currentBit.transform.parent.gameObject;
                     manager.currentBit = currentBit.transform.GetChild(1).gameObject;
                     bitSelection.Clicked(currentBit.name);
                     holder.SetActive(true);

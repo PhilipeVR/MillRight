@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Threading;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class RevertDestruction : MonoBehaviour
 {
@@ -11,6 +12,8 @@ public class RevertDestruction : MonoBehaviour
     [SerializeField] private List<Quaternion> destroyedTransformRot;
     [SerializeField] private float Countdown;
     [SerializeField] private string CollisionTag;
+    [SerializeField] private Button doneButton;
+    [SerializeField] private int numOfCubesToDestroy;
     private CollisionVisibility collisionVisibility;
     // Start is called before the first frame update
     void Start()
@@ -35,6 +38,17 @@ public class RevertDestruction : MonoBehaviour
         destroyedTransformPos.Add(pos);
         destroyedTransformRot.Add(rot);
         destroyedTransformScale.Add(scale);
+
+        if(destroyedTransformPos.Count > numOfCubesToDestroy)
+        {
+            doneButton.gameObject.SetActive(true);
+            doneButton.interactable = true;
+        }
+    }
+
+    public int CubeDestroyed
+    {
+        get => destroyedTransformPos.Count;
     }
 
     public void RevertStock()

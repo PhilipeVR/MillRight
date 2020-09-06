@@ -157,5 +157,88 @@ public class WarningEvents : MonoBehaviour
         }
     }
 
+    public event Action drillingCompleted;
+    public void DrillingCompleted()
+    {
+        if (drillingCompleted != null)
+        {
+            drillingCompleted();
+        }
+    }
+
+    public event Action faceMillingCompleted;
+    public void FaceMillingCompleted()
+    {
+        if (faceMillingCompleted != null)
+        {
+            faceMillingCompleted();
+        }
+    }
+
+
+    public event Action sideMillingCompleted;
+    public void SideMillingCompleted()
+    {
+        if (sideMillingCompleted != null)
+        {
+            sideMillingCompleted();
+        }
+    }
+
+    public event Action allCompleted;
+    public void AllCompleted()
+    {
+        if (allCompleted != null)
+        {
+            allCompleted();
+        }
+    }
+
+    public event Action turnOFFMill;
+    public void TurnOFFMill()
+    {
+        if (turnOFFMill != null)
+        {
+            turnOFFMill();
+        }
+    }
+
+    public event Action lockZ;
+    public void LockZ()
+    {
+        if (lockZ != null)
+        {
+            lockZ();
+        }
+    }
+
+    public event Action lockX;
+    public void LockX()
+    {
+        if (lockX != null)
+        {
+            lockX();
+        }
+    }
+
+    public event Action zeroZ;
+    public void ZeroZ()
+    {
+        if (zeroZ != null)
+        {
+            zeroZ();
+        }
+    }
+
+    public event Action zeroX;
+    public void ZeroX()
+    {
+        if (zeroX != null)
+        {
+            zeroX();
+        }
+    }
+
+
 
 }

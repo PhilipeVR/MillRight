@@ -21,18 +21,19 @@ public class DRO_Manager : MonoBehaviour
     bool toggle; // Activate or deactivate buttons
     private string currentAxis;
 
-    void start()
+    void Start()
     {
         // Units inch default
         inch.Btn_SetEnabled(true);
-        mm.Btn_SetEnabled(false); 
+        mm.Btn_SetEnabled(false);
+        resetDRO();
     }
 
     public void resetDRO(){
 
-        xLock.Btn_SetEnabled(false);
-        yLock.Btn_SetEnabled(false);
-        zLock.Btn_SetEnabled(false);
+        xLock.Btn_LockSetEnabled(false);
+        yLock.Btn_LockSetEnabled(false);
+        zLock.Btn_LockSetEnabled(false);
 
         x.Btn_SetEnabled(false);
         y.Btn_SetEnabled(false);
@@ -40,18 +41,21 @@ public class DRO_Manager : MonoBehaviour
 
         quillFeed.Btn_SetEnabled(false);
         fineAdjust.Btn_SetEnabled(false);
+
+        displayHandler.ResetZero();
     }
 
     public void Click_X(){
 
+        Debug.Log(x.Activated);
         toggle = x.Activated;
-        xLock.Btn_SetEnabled(!toggle);
+        //xLock.Btn_SetEnabled(!toggle);
         x.Btn_SetEnabled(!toggle);
 
         if (toggle == false) // Ensures all other buttons are deactivated
         {
-            yLock.Btn_SetEnabled(toggle);
-            zLock.Btn_SetEnabled(toggle);
+            //yLock.Btn_SetEnabled(toggle);
+            //zLock.Btn_SetEnabled(toggle);
             
             y.Btn_SetEnabled(toggle);
             z.Btn_SetEnabled(toggle);
@@ -64,13 +68,13 @@ public class DRO_Manager : MonoBehaviour
     public void Click_Y(){
 
         toggle = y.Activated;
-        yLock.Btn_SetEnabled(!toggle);
+        //yLock.Btn_SetEnabled(!toggle);
         y.Btn_SetEnabled(!toggle);
 
         if (toggle == false) // Ensures all other buttons are deactivated
         {
-            xLock.Btn_SetEnabled(toggle);
-            zLock.Btn_SetEnabled(toggle);
+            //xLock.Btn_SetEnabled(toggle);
+            //zLock.Btn_SetEnabled(toggle);
             
             x.Btn_SetEnabled(toggle);
             z.Btn_SetEnabled(toggle);
@@ -83,13 +87,13 @@ public class DRO_Manager : MonoBehaviour
     public void Click_Z(){
 
         toggle = z.Activated;
-        zLock.Btn_SetEnabled(!toggle);
+        //zLock.Btn_SetEnabled(!toggle);
         z.Btn_SetEnabled(!toggle);
 
         if (toggle == false) // Ensures all other buttons are deactivated
         {
-            xLock.Btn_SetEnabled(toggle);
-            yLock.Btn_SetEnabled(toggle);
+            //xLock.Btn_SetEnabled(toggle);
+            //yLock.Btn_SetEnabled(toggle);
             
             x.Btn_SetEnabled(toggle);
             y.Btn_SetEnabled(toggle);
@@ -106,9 +110,9 @@ public class DRO_Manager : MonoBehaviour
 
         if (toggle == false) // Ensures all other buttons are deactivated
         {
-            xLock.Btn_SetEnabled(toggle);
-            yLock.Btn_SetEnabled(toggle);
-            zLock.Btn_SetEnabled(toggle);
+            //xLock.Btn_SetEnabled(toggle);
+            //yLock.Btn_SetEnabled(toggle);
+            //zLock.Btn_SetEnabled(toggle);
             
             x.Btn_SetEnabled(toggle);
             y.Btn_SetEnabled(toggle);
@@ -125,9 +129,9 @@ public class DRO_Manager : MonoBehaviour
 
         if (toggle == false) // Ensures all other buttons are deactivated
         {
-            xLock.Btn_SetEnabled(toggle);
-            yLock.Btn_SetEnabled(toggle);
-            zLock.Btn_SetEnabled(toggle);
+            //xLock.Btn_SetEnabled(toggle);
+            //yLock.Btn_SetEnabled(toggle);
+            //zLock.Btn_SetEnabled(toggle);
             
             x.Btn_SetEnabled(toggle);
             y.Btn_SetEnabled(toggle);

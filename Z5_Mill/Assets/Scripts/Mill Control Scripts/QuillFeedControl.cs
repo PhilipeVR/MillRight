@@ -6,8 +6,12 @@ using UnityEngine;
 public class QuillFeedControl : MonoBehaviour
 {
 
-    float MAX_HEIGHT;
-    float MIN_HEIGHT;
+    public static float MAX_HEIGHT;
+    public static float MIN_HEIGHT;
+
+    [SerializeField] private Toggle_On_Off powerBTN;
+    [SerializeField] private OperationSelection selector;
+
 
     [SerializeField]
     GameObject animObject, lockAnimObject;
@@ -20,7 +24,7 @@ public class QuillFeedControl : MonoBehaviour
     [SerializeField]
     Boolean enable = true;
 
-    public Boolean collided, moving, prev_state;
+    public Boolean collided, moving, prev_state, reminder;
 
     [SerializeField] private float movementInterval;
 
@@ -37,6 +41,7 @@ public class QuillFeedControl : MonoBehaviour
     {
         if (enable)
         {
+            reminder = false;
             moving = false;
             collided = false;
             object_anim = animObject.GetComponent<Animator>();
@@ -64,6 +69,8 @@ public class QuillFeedControl : MonoBehaviour
         {
             if (QuillLockButton.Activated == true && wheel.activeSelf)
             {
+
+                RemindUser();
 
                 if (Input.mouseScrollDelta.y > 0f && !collided)
                 {
@@ -150,6 +157,15 @@ public class QuillFeedControl : MonoBehaviour
         }
     }
 
+    private void RemindUser()
+    {
+        if (powerBTN.isON && !reminder && (selector.Current.Name == selector.FaceMill.Name))
+        {
+            WarningEvents.current.ZeroZ();
+            reminder = true;
+        }
+    }
+
     private void setLockSpeed(float mph)
     {
         lock_anim.speed = mph;
@@ -160,6 +176,7 @@ public class QuillFeedControl : MonoBehaviour
         object_anim.Play(object_anim.runtimeAnimatorController.animationClips[0].name, 0, time);
         wheel.transform.localPosition = new Vector3(wheel.transform.localPosition.x, wheel.transform.localPosition.y, MAX_HEIGHT);
         collided = false;
+        reminder = false;
 
     }
 
@@ -170,11 +187,16 @@ public class QuillFeedControl : MonoBehaviour
 
     public float Height
     {
-        get => wheel.transform.localPosition.y;
+        get => wheel.transform.localPosition.z;
     }
 
     public float MaxHeight
     {
         get => MAX_HEIGHT;
+    }
+
+    public float MinHeight
+    {
+        get => MIN_HEIGHT;
     }
 }

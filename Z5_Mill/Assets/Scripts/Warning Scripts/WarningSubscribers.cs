@@ -23,6 +23,16 @@ public class WarningSubscribers : MonoBehaviour
         WarningEvents.current.drillingCutter += DrillingCutter;
         WarningEvents.current.wrongHolderDrillChuck += WrongHolderDrill;
         WarningEvents.current.wrongHolderEndMillHolder += WrongHolderEndMill;
+        WarningEvents.current.faceMillingCompleted += FaceMillingDone;
+        WarningEvents.current.sideMillingCompleted += SideMillingDone;
+        WarningEvents.current.drillingCompleted += DrillingDone;
+        WarningEvents.current.allCompleted += AllCompleted;
+        WarningEvents.current.turnOFFMill += TurnOFFMill;
+        WarningEvents.current.lockX += LockXAxis;
+        WarningEvents.current.lockZ += LockZAxis;
+        WarningEvents.current.zeroX += ZeroXAxis;
+        WarningEvents.current.zeroZ += ZeroZAxis;
+        WarningEvents.current.pieceFirst += PieceSetup;
     }
 
     // Update is called once per frame
@@ -114,6 +124,63 @@ public class WarningSubscribers : MonoBehaviour
     private void WrongHolderEndMill()
     {
         WarningTriggerInformation triggerInformation = FindWarningInfo("WrongHolderEndMill");
+        warningTrigger.TriggerSentence(triggerInformation.DialogIndex, triggerInformation.SentenceIndex);
+    }
+
+
+    private void SideMillingDone()
+    {
+        WarningTriggerInformation triggerInformation = FindWarningInfo("SideMillingDone");
+        warningTrigger.TriggerSentence(triggerInformation.DialogIndex, triggerInformation.SentenceIndex);
+    }
+
+
+    private void FaceMillingDone()
+    {
+        WarningTriggerInformation triggerInformation = FindWarningInfo("FaceMillingDone");
+        warningTrigger.TriggerSentence(triggerInformation.DialogIndex, triggerInformation.SentenceIndex);
+    }
+
+
+    private void DrillingDone()
+    {
+        WarningTriggerInformation triggerInformation = FindWarningInfo("DrillingDone");
+        warningTrigger.TriggerSentence(triggerInformation.DialogIndex, triggerInformation.SentenceIndex);
+    }
+
+    private void AllCompleted()
+    {
+        WarningTriggerInformation triggerInformation = FindWarningInfo("AllCompleted");
+        warningTrigger.TriggerSentence(triggerInformation.DialogIndex, triggerInformation.SentenceIndex);
+    }
+
+    private void TurnOFFMill()
+    {
+        WarningTriggerInformation triggerInformation = FindWarningInfo("TurnOFFMill");
+        warningTrigger.TriggerSentence(triggerInformation.DialogIndex, triggerInformation.SentenceIndex);
+    }
+
+    private void LockXAxis()
+    {
+        WarningTriggerInformation triggerInformation = FindWarningInfo("LockXAxis");
+        warningTrigger.TriggerSentence(triggerInformation.DialogIndex, triggerInformation.SentenceIndex);
+    }
+
+    private void LockZAxis()
+    {
+        WarningTriggerInformation triggerInformation = FindWarningInfo("LockZAxis");
+        warningTrigger.TriggerSentence(triggerInformation.DialogIndex, triggerInformation.SentenceIndex);
+    }
+
+    private void ZeroXAxis()
+    {
+        WarningTriggerInformation triggerInformation = FindWarningInfo("ZeroXAxis");
+        warningTrigger.TriggerSentence(triggerInformation.DialogIndex, triggerInformation.SentenceIndex);
+    }
+
+    private void ZeroZAxis()
+    {
+        WarningTriggerInformation triggerInformation = FindWarningInfo("ZeroZAxis");
         warningTrigger.TriggerSentence(triggerInformation.DialogIndex, triggerInformation.SentenceIndex);
     }
 

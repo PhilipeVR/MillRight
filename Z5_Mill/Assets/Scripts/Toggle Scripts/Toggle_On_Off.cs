@@ -8,6 +8,7 @@ public class Toggle_On_Off : MonoBehaviour
 {
     [SerializeField] private OperationSelection selection;
     [SerializeField] private SwitchBit bitState;
+    [SerializeField] private ZWheelControl zWheelControl;
     [SerializeField] private string NoNameOperation;
     private PlacePiece placePiece;
     private ClampPiece clampPiece;
@@ -58,6 +59,11 @@ public class Toggle_On_Off : MonoBehaviour
                 WarningEvents.current.ClampWorkpiece();
                 millOn = !millOn;
             }
+            else if (!zWheelControl.Locked && ((selection.Current.Name == selection.FaceMill.Name) || (selection.Current.Name == selection.SideMill.Name)))
+            {
+                WarningEvents.current.LockZ();
+                millOn = !millOn;
+            }
             else
             {
                 transform.GetChild(0).gameObject.GetComponent<Text>().text = OffText;
@@ -103,6 +109,11 @@ public class Toggle_On_Off : MonoBehaviour
     public Boolean getMillState()
     {
         return millOn;
+    }
+
+    public Boolean isON
+    {
+        get => state;
     }
 
     public ClampPiece Clamp {

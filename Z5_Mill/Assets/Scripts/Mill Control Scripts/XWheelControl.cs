@@ -7,6 +7,9 @@ using UnityEngine;
 
 public class XWheelControl : MonoBehaviour
 {
+    [SerializeField] private Toggle_On_Off powerBTN;
+    [SerializeField] private DRO_Manager manager;
+    [SerializeField] private OperationSelection selector;
     [SerializeField] GameObject animObject, lockAnimObject;
     [SerializeField] public DRO_Button XLockButton;
     [SerializeField] GameObject wheel, lockHandle;
@@ -16,24 +19,27 @@ public class XWheelControl : MonoBehaviour
 
     private float new_time, prev_time, prev_distance;
     public float currentSpeed;
+    [SerializeField] private string lockBool, unlockBool;
 
     Boolean animated = true;
     Boolean handle_enabled, wheel_spin;
-    public Boolean leftCollision, rightCollision;
+    public Boolean leftCollision, rightCollision, locked;
     public Animator object_anim, lock_anim;
+    private Boolean reminder;
 
     // Start is called before the first frame update
     void Awake()
     {
+        reminder = false;
         prev_time = 0;
         prev_distance = 0;
         object_anim = animObject.GetComponent<Animator>();
         lock_anim = lockAnimObject.GetComponent<Animator>();
         leftCollision = false;
         rightCollision = false;
-        setLockSpeed(0.5f);
-        pause();
         pauseLock();
+        locked = false;
+        pause();
         //Debug.LogWarning(lock_anim.runtimeAnimatorController.animationClips[0].name);
 
         handle_enabled = true;
@@ -45,8 +51,18 @@ public class XWheelControl : MonoBehaviour
     {
         if (enable && !Input.GetKey(KeyCode.LeftShift)) // Do not execute when left shift held down (to not interfere with camera controller)
         {
-            if(XLockButton.Activated == true)
+            if (XLockButton.Activated)
             {
+                if (selector.Current.Name != "Null" && !selector.Current.GetPlacePiece().Clicked)
+                {
+                    WarningEvents.current.PieceFirst();
+                    manager.resetDRO();
+                }
+            }
+            if ((XLockButton.Activated == true) && !locked)
+            {
+                RemindUser();
+
                 float distance, time;
                 if (Input.mouseScrollDelta.y != 0)
                 {
@@ -58,6 +74,7 @@ public class XWheelControl : MonoBehaviour
 
                 if (Input.mouseScrollDelta.y > 0f && !leftCollision)
                 {
+
                     Boolean testPlace = placePiece != null;
                     if(testPlace && !placePiece.Clicked)
                     {
@@ -68,6 +85,7 @@ public class XWheelControl : MonoBehaviour
                     {
                         StopMovement();
                     }
+
                     else
                     {
                         object_anim.SetFloat("Reverse", 1);
@@ -78,6 +96,7 @@ public class XWheelControl : MonoBehaviour
                 }
                 else if (Input.mouseScrollDelta.y < 0f && !rightCollision)
                 {
+
                     Boolean testPlace = placePiece != null;
                     if (testPlace && !placePiece.Clicked)
                     {
@@ -102,10 +121,24 @@ public class XWheelControl : MonoBehaviour
         }
     }
 
+    private void RemindUser()
+    {
+        if (powerBTN.isON && !reminder && (selector.Current.Name == selector.SideMill.Name)) 
+        {
+            WarningEvents.current.LockX();
+            reminder = true;
+        }
+    }
+
     private void StopMovement()
     {
         pause();
         WarningEvents.current.StopTableMovement();
+    }
+
+    public Boolean Locked
+    {
+        get => locked;
     }
 
     private void pause()
@@ -129,6 +162,22 @@ public class XWheelControl : MonoBehaviour
         }
     }
 
+    public void ToggleLock(float speed)
+    {
+        if (locked)
+        {
+            lock_anim.SetBool(lockBool, false);
+            lock_anim.SetBool(unlockBool, true);
+        }
+        else
+        {
+            lock_anim.SetBool(lockBool, true);
+            lock_anim.SetBool(unlockBool, false);
+        }
+        locked = !locked;
+        setLockSpeed(speed);
+    }
+
     private void setLockSpeed(float mph)
     {
         lock_anim.speed = mph;
@@ -137,9 +186,15 @@ public class XWheelControl : MonoBehaviour
     public void resetAnim(float time)
     {
         object_anim.Play(object_anim.runtimeAnimatorController.animationClips[0].name, 0, time);
+        lock_anim.Play(lock_anim.runtimeAnimatorController.animationClips[0].name, 0, time);
         object_anim.speed = 0;
+        lock_anim.speed = 0;
+        lock_anim.SetBool(lockBool, true);
+        lock_anim.SetBool(unlockBool, false);
+        locked = false;
         leftCollision = false;
         rightCollision = false;
+        reminder = false;
     }
 
     public float animTime

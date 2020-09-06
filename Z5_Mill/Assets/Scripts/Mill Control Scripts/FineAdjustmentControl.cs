@@ -8,6 +8,10 @@ public class FineAdjustmentControl : MonoBehaviour
 
     float MAX_HEIGHT;
     float MIN_HEIGHT;
+    [SerializeField] private QuillFeedControl feedControl;
+
+    [SerializeField] private Toggle_On_Off powerBTN;
+    [SerializeField] private OperationSelection selector;
 
     [SerializeField]
     GameObject animObject;
@@ -22,7 +26,7 @@ public class FineAdjustmentControl : MonoBehaviour
     Boolean enable = true;
 
     public Boolean collided, moving;
-    Boolean animated, handle_enabled, wheel_spin;
+    Boolean animated, handle_enabled, wheel_spin, reminder;
 
     [SerializeField] private float movementInterval;
     Animator object_anim, lock_anim;
@@ -32,15 +36,13 @@ public class FineAdjustmentControl : MonoBehaviour
     {
         if (enable)
         {
+            reminder = false;
             moving = false;
             collided = false;
             object_anim = animObject.GetComponent<Animator>();
 
-            MIN_HEIGHT = fineAdjustment.transform.localPosition.y - 0.01f;
-            MAX_HEIGHT = fineAdjustment.transform.localPosition.y;
-
-            prevAdjustment = fineAdjustment;
-
+            MIN_HEIGHT = fineAdjustment.transform.localPosition.z - 0.15f;
+            MAX_HEIGHT = fineAdjustment.transform.localPosition.z;
 
             setSpeed(0.2f);
             pause();
@@ -56,27 +58,21 @@ public class FineAdjustmentControl : MonoBehaviour
     {
         if (enable && !Input.GetKey(KeyCode.LeftShift)) // Do not execute when left shift held down (to not interfere with camera controller)
         {
-            if (!prevAdjustment.Equals(fineAdjustment))
-            {
-                MIN_HEIGHT = fineAdjustment.transform.localPosition.y - 0.01f;
-                MAX_HEIGHT = fineAdjustment.transform.localPosition.y;
-            }
-
-            prevAdjustment = fineAdjustment;
-
             if (FineAdjustmentButton.Activated == true)
             {
+
+                RemindUser();
 
                 if (Input.mouseScrollDelta.y > 0f && !collided)
                 {
 
                     Vector3 tmp_pos = fineAdjustment.transform.localPosition;
-                    float y_pos = tmp_pos.y - movementInterval;
+                    float z_pos = tmp_pos.z - movementInterval;
 
-                    if (y_pos < MAX_HEIGHT && y_pos > MIN_HEIGHT)
+                    if (z_pos < MAX_HEIGHT && z_pos > MIN_HEIGHT)
                     {
                         moving = true;
-                        Vector3 new_pos = new Vector3(tmp_pos.x, y_pos, tmp_pos.z);
+                        Vector3 new_pos = new Vector3(tmp_pos.x, tmp_pos.y, z_pos);
                         fineAdjustment.transform.localPosition = new_pos;
                         object_anim.SetFloat("Reverse", 1);
                         setSpeed(2f);
@@ -89,11 +85,11 @@ public class FineAdjustmentControl : MonoBehaviour
                     moving = true;
 
                     Vector3 tmp_pos = fineAdjustment.transform.localPosition;
-                    float y_pos = tmp_pos.y + movementInterval;
+                    float z_pos = tmp_pos.z + movementInterval;
 
-                    if (y_pos < MAX_HEIGHT && y_pos > MIN_HEIGHT)
+                    if (z_pos < MAX_HEIGHT && z_pos > MIN_HEIGHT)
                     {
-                        Vector3 new_pos = new Vector3(tmp_pos.x, y_pos, tmp_pos.z);
+                        Vector3 new_pos = new Vector3(tmp_pos.x, tmp_pos.y, z_pos);
 
                         fineAdjustment.transform.localPosition = new_pos;
                         object_anim.SetFloat("Reverse", -1);
@@ -132,11 +128,31 @@ public class FineAdjustmentControl : MonoBehaviour
         object_anim.Play(object_anim.runtimeAnimatorController.animationClips[0].name, 0, time);
         object_anim.speed = 0;
         collided = false;
+        reminder = false;
+    }
+
+    private void RemindUser()
+    {
+        if (powerBTN.isON && !reminder && (selector.Current.Name == selector.FaceMill.Name))
+        {
+            WarningEvents.current.ZeroZ();
+            reminder = true;
+        }
     }
 
     public float animTime
     {
         get => object_anim.GetCurrentAnimatorStateInfo(0).normalizedTime * object_anim.GetCurrentAnimatorClipInfo(0)[0].clip.length;
+    }
+
+    public float Height
+    {
+        get => fineAdjustment.transform.localPosition.z;
+    }
+
+    public float MaxHeight
+    {
+        get => MAX_HEIGHT;
     }
 
 }

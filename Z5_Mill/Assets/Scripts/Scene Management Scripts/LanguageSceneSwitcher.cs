@@ -15,6 +15,7 @@ public class LanguageSceneSwitcher : MonoBehaviour
     public ComponentManager toggleComponentLangManager;
     public ImageToggle imageToggle;
     public AdditionalInfoManager toolHolderManager;
+    public ToggleScene toggleScene;
     void Start()
     {
         if (languageScene.getLanguage())
@@ -54,6 +55,10 @@ public class LanguageSceneSwitcher : MonoBehaviour
         if(warningLangManager != null)
         {
             warningLangManager.SwitchLang();
+        }
+        if(toggleScene != null)
+        {
+            toggleScene.SwitchLang();
         }
     }
 

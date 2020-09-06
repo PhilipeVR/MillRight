@@ -176,6 +176,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   toggleOptionText: ENG
+  toggleOptionText2: FR
   currentText: {fileID: 1665348365}
 --- !u!114 &42068470
 MonoBehaviour:
@@ -865,6 +866,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   toggleOptionText: Receuil de Tutoriel
+  toggleOptionText2: Tutorial Library
   currentText: {fileID: 1257985745}
 --- !u!1 &151977060
 GameObject:
@@ -1189,6 +1191,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   toggleOptionText: Sortie
+  toggleOptionText2: Exit
   currentText: {fileID: 1853418711}
 --- !u!1 &596159533
 GameObject:
@@ -1347,11 +1350,14 @@ MonoBehaviour:
   - {fileID: 137485069}
   - {fileID: 315427144}
   - {fileID: 42068469}
+  toggleHint: {fileID: 0}
   languageScene: {fileID: 885196804}
   toggleLangManager: {fileID: 0}
+  warningLangManager: {fileID: 0}
   toggleComponentLangManager: {fileID: 0}
   imageToggle: {fileID: 151977064}
   toolHolderManager: {fileID: 0}
+  toggleScene: {fileID: 0}
 --- !u!1 &948612267
 GameObject:
   m_ObjectHideFlags: 0
@@ -2644,6 +2650,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   toggleOptionText: "D\xE9butez l'entra\xEEnement"
+  toggleOptionText2: Begin Training
   currentText: {fileID: 1858334389}
 --- !u!1 &2105349667
 GameObject:

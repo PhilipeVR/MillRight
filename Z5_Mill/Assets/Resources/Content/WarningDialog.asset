@@ -21,6 +21,16 @@ MonoBehaviour:
     - Beware changing the gear might change spinning direction.
     - 'Never adjust the workpiece or work mounting devices when the machine is operating. '
     - Danger!! Please ONLY mill workpiece.
+    - Turn OFF milling machine before confirming end of operation.
+    - During a side milling operation, it is important to lock X axis and set your
+      reference point for that axis after choosing your depth of cut. This is done
+      to prevent any movement in the X direction while performing operation.
+    - During a milling operation, it is important to lock Z axis  before attempting
+      the operation to any prevent movement from the mill head .
+    - During face milling operation, make sure to set your reference point for the
+      Z axis after setting your depth of cut.
+    - During side milling operation, make sure to set your reference point for the
+      X axis after setting your depth of cut.
     sentencesFR:
     - "Arr\xEAtez la machine avant d'effectuer des r\xE9glages ou des mesures."
     - "\rAssurez-vous que la machine est \xE9teinte avant de changer les couteaux."
@@ -28,12 +38,31 @@ MonoBehaviour:
     - "Ne r\xE9glez jamais la pi\xE8ce \xE0 usiner ou les dispositifs de montage
       lorsque la machine est en marche."
     - "Danger!! Veuillez SEULEMENT fraiser la pi\xE8ce.\r\n"
+    - "\xC9teignez la fraiseuse avant de confirmer la fin de l'op\xE9ration."
+    - "Lors d'une op\xE9ration de fraisage lat\xE9ral, il est important de verrouiller
+      l'axe X et de d\xE9finir votre point de r\xE9f\xE9rence pour cet axe apr\xE8s
+      avoir choisi votre profondeur de coupe. Ceci est fait pour emp\xEAcher tout
+      mouvement dans la direction X pendant l'ex\xE9cution de l'op\xE9ration."
+    - "Pendant une op\xE9ration de fraisage, il est important de verrouiller l'axe
+      Z avant de tenter l'op\xE9ration pour emp\xEAcher tout mouvement de la t\xEAte
+      de la fraiseuse."
+    - "Pendant l'op\xE9ration de surfa\xE7age, assurez-vous de d\xE9finir votre point
+      de r\xE9f\xE9rence pour l'axe Z apr\xE8s avoir d\xE9fini votre profondeur de
+      coupe."
+    - "Pendant l'op\xE9ration de fraisage lat\xE9ral, assurez-vous de d\xE9finir
+      votre point de r\xE9f\xE9rence pour l'axe X apr\xE8s avoir d\xE9fini votre
+      profondeur de coupe."
     images:
     - {fileID: 21300000, guid: 78f3f03552bc6be4fa4d6187dcd9a47b, type: 3}
-    - {fileID: 21300000, guid: 22117155ba12dad4d8a4b2fb6e7af78a, type: 3}
+    - {fileID: 21300000, guid: 3fbcd41248d4edf498805811b31c4614, type: 3}
     - {fileID: 21300000, guid: 91b93e274b122644f917a7105e8ca512, type: 3}
+    - {fileID: 21300000, guid: 3cca92ba6850ec54abb4f1f8a2d69449, type: 3}
     - {fileID: 21300000, guid: c1cd32cdf1c26e448a689b38fc231bb6, type: 3}
-    - {fileID: 21300000, guid: c1cd32cdf1c26e448a689b38fc231bb6, type: 3}
+    - {fileID: 21300000, guid: 6f0070c3a2c78f04490d554713177cac, type: 3}
+    - {fileID: 21300000, guid: 40f97c8048d4e714aa93fe1dc68ad36b, type: 3}
+    - {fileID: 21300000, guid: 84a0219fbf1f6414cb71362e1a362221, type: 3}
+    - {fileID: 21300000, guid: 8f27edd6fc012684fb0e4ec274719306, type: 3}
+    - {fileID: 21300000, guid: 8f27edd6fc012684fb0e4ec274719306, type: 3}
   - name: Mill Safety - Post-Operation
     frenchName: "S\xE9curit\xE9 de fraiseuse - Apr\xE8s l'op\xE9ration"
     sentences:
@@ -43,7 +72,7 @@ MonoBehaviour:
     - "Ne laissez jamais la machine fonctionner sans surveillance. \xC9teignez la
       machine si elle n'est pas utilis\xE9e."
     images:
-    - {fileID: 21300000, guid: 9944c8b4ebcb09c41b67e5e93ba89f9c, type: 3}
+    - {fileID: 21300000, guid: 77ab97e3a6baa7643ab39a9aaaf4efee, type: 3}
   - name: Mill Safety - Before Starting the Mill
     frenchName: "S\xE9curit\xE9 de fraiseuse -  Pr\xE9-Op\xE9ration"
     sentences:
@@ -64,7 +93,7 @@ MonoBehaviour:
     - Wait! Please choose cuttings tools before turning machine ON.
     - Do not move table while placing workpiece.
     - Wait! Please place and clamp workpiece before turning machine ON.
-    - Please place workpiece before moving table.
+    - Wait! Please place workpiece before moving table.
     - Using a drill chuck with an end mill is dangerous because the chuck will not
       grip correctly the end mill and will damage the holder and end mill. Collets
       provide better grip and accuracy for end mills.
@@ -104,17 +133,50 @@ MonoBehaviour:
       une meilleure interchangeabilit\xE9 des pi\xE8ces. Lors des op\xE9rations de
       forage, ces caract\xE9ristiques sont tr\xE8s importantes."
     images:
-    - {fileID: 21300000, guid: 11233fab40f2dd648b37d595378443d1, type: 3}
-    - {fileID: 21300000, guid: 3fbcd41248d4edf498805811b31c4614, type: 3}
+    - {fileID: 21300000, guid: 81686f940da82cb419f3abda8ecfd001, type: 3}
+    - {fileID: 21300000, guid: c7066a35977844f418f349f3a35a6c55, type: 3}
     - {fileID: 21300000, guid: 746a8d5dcbe5ead4ca7a7d3666250f1d, type: 3}
     - {fileID: 21300000, guid: b19af5f570b609741a3041f5fe02108d, type: 3}
-    - {fileID: 21300000, guid: b19af5f570b609741a3041f5fe02108d, type: 3}
-    - {fileID: 21300000, guid: b19af5f570b609741a3041f5fe02108d, type: 3}
-    - {fileID: 21300000, guid: b19af5f570b609741a3041f5fe02108d, type: 3}
-    - {fileID: 21300000, guid: b19af5f570b609741a3041f5fe02108d, type: 3}
-    - {fileID: 21300000, guid: b19af5f570b609741a3041f5fe02108d, type: 3}
-    - {fileID: 21300000, guid: b19af5f570b609741a3041f5fe02108d, type: 3}
-    - {fileID: 21300000, guid: b19af5f570b609741a3041f5fe02108d, type: 3}
-    - {fileID: 21300000, guid: b19af5f570b609741a3041f5fe02108d, type: 3}
-    - {fileID: 21300000, guid: b19af5f570b609741a3041f5fe02108d, type: 3}
-    - {fileID: 21300000, guid: b19af5f570b609741a3041f5fe02108d, type: 3}
+    - {fileID: 21300000, guid: beb62864ec9bc384292cbda27d687631, type: 3}
+    - {fileID: 21300000, guid: 65bb866b46a6f7d4da5f6502b9a416fd, type: 3}
+    - {fileID: 21300000, guid: 4bbfe3d8eb91da84091d6f3deec073d2, type: 3}
+    - {fileID: 21300000, guid: 24c78caebe9ed014c901a6c7695313da, type: 3}
+    - {fileID: 21300000, guid: c0029f1758fdc1a4ca017e099338b82d, type: 3}
+    - {fileID: 21300000, guid: 09140bbde5118b8479dfee7950fa2a43, type: 3}
+    - {fileID: 21300000, guid: 91b93e274b122644f917a7105e8ca512, type: 3}
+    - {fileID: 21300000, guid: 84a0219fbf1f6414cb71362e1a362221, type: 3}
+    - {fileID: 21300000, guid: d3c150ab2be8400409b329380b78d53b, type: 3}
+    - {fileID: 21300000, guid: 49d3a48f2305beb4d92ef59fef4d9294, type: 3}
+  - name: Operation Completed
+    frenchName: "Op\xE9ration termin\xE9e"
+    sentences:
+    - Good job you have completed the drilling operation. Please use the Operation
+      Selector Menu to choose to the next operation you want to complete.
+    - Good job  you have completed the side milling operation. Please use the Operation
+      Selector Menu to choose to the next operation you want to complete.
+    - Good job you have completed the face milling operation. Please use the Operation
+      Selector Menu to choose to the next operation you want to complete.
+    - Congrats you have completing all the operations. You can now click on the next
+      button to proceed to take the quiz. Make sure to choose the language you want
+      to take the quiz in before proceeding. You will not be able to change language
+      while taking the quiz.
+    sentencesFR:
+    - "Bon travail, vous avez termin\xE9 l'op\xE9ration de forage. Veuillez utiliser
+      le menu du s\xE9lecteur d'op\xE9rations pour choisir l'op\xE9ration suivante
+      que vous souhaitez effectuer."
+    - "Bon travail, vous avez termin\xE9 l'op\xE9ration de fraisage lat\xE9ral. Veuillez
+      utiliser le menu du s\xE9lecteur d'op\xE9rations pour choisir l'op\xE9ration
+      suivante que vous souhaitez effectuer."
+    - "Bon travail, vous avez termin\xE9 l'op\xE9ration de surfa\xE7age. Veuillez
+      utiliser le menu du s\xE9lecteur d'op\xE9rations pour choisir l'op\xE9ration
+      suivante que vous souhaitez effectuer."
+    - "F\xE9licitations, vous avez termin\xE9 toutes les op\xE9rations. Vous pouvez
+      maintenant cliquer sur le bouton suivant pour passer au quiz. Assurez-vous
+      de choisir la langue dans laquelle vous souhaitez r\xE9pondre au questionnaire
+      avant de continuer. Vous ne pourrez pas changer de langue pendant que vous
+      r\xE9pondez au quiz."
+    images:
+    - {fileID: 21300000, guid: 0a427ac2bc84e9048a06493842fc7484, type: 3}
+    - {fileID: 21300000, guid: 689a22329b4c5ad4da7bfcd5a866c100, type: 3}
+    - {fileID: 21300000, guid: 164dca76e3dc6ea4387f270b9e4400fe, type: 3}
+    - {fileID: 21300000, guid: 32a217d089acf3c48a3886907b1ffcfd, type: 3}
