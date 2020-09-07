@@ -9,6 +9,7 @@ public class QuillFeedControl : MonoBehaviour
     public static float MAX_HEIGHT;
     public static float MIN_HEIGHT;
 
+    [SerializeField] private FineAdjustmentControl fineControl;
     [SerializeField] private Toggle_On_Off powerBTN;
     [SerializeField] private OperationSelection selector;
 
@@ -59,6 +60,7 @@ public class QuillFeedControl : MonoBehaviour
 
             handle_enabled = true;
             wheel_spin = true;
+            fineControl.UpdateLimit();
         }
     }
 

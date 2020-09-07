@@ -53,6 +53,12 @@ public class FineAdjustmentControl : MonoBehaviour
         }
     }
 
+    public void UpdateLimit()
+    {
+        MIN_HEIGHT = feedControl.MinHeight;
+        MAX_HEIGHT = feedControl.MaxHeight;
+    }
+
     // Update is called once per frame
     void Update()
     {
@@ -69,7 +75,7 @@ public class FineAdjustmentControl : MonoBehaviour
                     Vector3 tmp_pos = fineAdjustment.transform.localPosition;
                     float z_pos = tmp_pos.z - movementInterval;
 
-                    if (z_pos < MAX_HEIGHT && z_pos > MIN_HEIGHT)
+                    if (z_pos <= MAX_HEIGHT && z_pos >= MIN_HEIGHT)
                     {
                         moving = true;
                         Vector3 new_pos = new Vector3(tmp_pos.x, tmp_pos.y, z_pos);
@@ -87,7 +93,7 @@ public class FineAdjustmentControl : MonoBehaviour
                     Vector3 tmp_pos = fineAdjustment.transform.localPosition;
                     float z_pos = tmp_pos.z + movementInterval;
 
-                    if (z_pos < MAX_HEIGHT && z_pos > MIN_HEIGHT)
+                    if (z_pos <= MAX_HEIGHT && z_pos >= MIN_HEIGHT)
                     {
                         Vector3 new_pos = new Vector3(tmp_pos.x, tmp_pos.y, z_pos);
 
