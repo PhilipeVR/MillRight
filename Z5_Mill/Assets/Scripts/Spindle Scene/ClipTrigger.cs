@@ -25,6 +25,7 @@ public class ClipTrigger : MonoBehaviour
     void Start()
     {
         int index = 0;
+        AnimatorEvents.current.animationDone += TriggerReset;
         Debug.Log(name + ": " + GetComponent<Renderer>().materials.Length);
         if (GetComponent<Renderer>().materials.Length > 1)
         {
@@ -134,5 +135,10 @@ public class ClipTrigger : MonoBehaviour
     public int SentenceIndex
     {
         get => sentenceIndex;
+    }
+
+    private void TriggerReset()
+    {
+        TriggerClicked = false;
     }
 }

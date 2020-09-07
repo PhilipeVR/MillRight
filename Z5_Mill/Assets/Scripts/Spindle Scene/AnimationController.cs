@@ -14,7 +14,6 @@ public class AnimationController : MonoBehaviour
     [SerializeField] private string resetParam;
     [SerializeField] private ButtonInteractable buttonInteractable;
     [SerializeField] private Button restartButton;
-    private ClipTrigger[] clipTriggers;
     private List<AnimatorControllerParameter> parameters;
     private int counter = 0;
     private Boolean transitionDone, animDone;
@@ -22,7 +21,6 @@ public class AnimationController : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
-        clipTriggers = GetComponents<ClipTrigger>();
         restartButton.interactable = false;
         parameters = new List<AnimatorControllerParameter>();
         animator = GetComponent<Animator>();
@@ -86,11 +84,7 @@ public class AnimationController : MonoBehaviour
         {
             animator.SetBool(parameters[i].name, false);
         }
-        foreach(ClipTrigger clipTrigger in clipTriggers)
-        {
-            Debug.Log("Reset: " + clipTrigger.SentenceIndex);
-            clipTrigger.TriggerClicked = false;
-        }
+
     }
 
     private void ResetLoopParams()
@@ -108,6 +102,7 @@ public class AnimationController : MonoBehaviour
             index = 0;
             transitionDone = false;
             trigger.TriggerDialogue(dialogIndex);
+            AnimatorEvents.current.AnimationDone();
         }
 
     }

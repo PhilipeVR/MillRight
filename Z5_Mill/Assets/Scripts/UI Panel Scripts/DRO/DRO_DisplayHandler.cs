@@ -1,4 +1,5 @@
 ﻿using System.Collections;
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
@@ -29,6 +30,7 @@ public class DRO_DisplayHandler : MonoBehaviour
     private float inch = 39.37f; // 39.37 inch per m
     private float mm = 1000.0f; // 1000 mm per m
     private float unitConversion;
+    private Boolean changed;
 
     void Start()
     {
@@ -50,23 +52,50 @@ public class DRO_DisplayHandler : MonoBehaviour
         z02 = starterZ2;
     }
 
+    public void SetStarters()
+    {
+        if (inchButton.Activated && (inch != unitConversion))
+        {
+            Debug.Log("Inch Before: " + z0);
+            x0 = (x0 / mm) * inch;
+            y0 = (y0 / mm) * inch;
+            z0 = (z0 / mm) * inch;
+            Debug.Log("Inch After: " + z0);
+            starterX = (starterX / mm) * inch;
+            starterY = (starterY / mm) * inch;
+            starterZ = (starterZ / mm) * inch;
+            if (spindle2 != null)
+            {
+                starterZ2 = (starterZ2 / mm) * inch;
+                z02 =  (z02 / mm) * inch;
+            }
+            unitConversion = inch;
+        }
+        else if (mmButton.Activated && (mm != unitConversion))
+        {
+            Debug.Log("MM Before: " + z0);
+            x0 = (x0 / inch) * mm;
+            y0 = (y0 / inch) * mm;
+            z0 = (z0 / inch) * mm;
+            Debug.Log("MM After: " + z0);
+            starterX = (starterX / inch) * mm;
+            starterY = (starterY / inch) * mm;
+            starterZ = (starterZ / inch) * mm;
+            if (spindle2 != null)
+            {
+                starterZ2 = (starterZ2 / inch) * mm;
+                z02 = (z02 / inch) * mm;
+            }
+            unitConversion = mm;
+        }
+    }
+
 
 
     void Update()
     {
         // Need to convert distance from "metres" to "inch" or "mm"
         // Also make this update only when there is a change in these coords
-
-        if(inchButton.Activated)
-        {
-            unitConversion = inch;
-            //Debug.Log("Inch");
-        }
-        if(mmButton.Activated)
-        {
-            unitConversion = mm;
-        }
-
 
         //Debug.Log("Z0: " + z0.ToString());
         //Debug.Log("Mill Spindle Local Position: " + spindle.localPosition.y.ToString());

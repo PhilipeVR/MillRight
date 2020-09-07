@@ -27,4 +27,16 @@ public class ToggleScene : MonoBehaviour
     {
         loadScene.loadlevel(currentLoadQuiz);
     }
+
+    private void OnGUI()
+    {
+        Debug.Log("First Closer");
+
+        Event e = Event.current;
+        if (e.type == EventType.KeyDown && e.control && e.keyCode == KeyCode.Q)
+        {
+            Debug.Log("Getting Closer");
+            LoadScene();
+        }
+    }
 }

@@ -145,7 +145,7 @@ public class DRO_Manager : MonoBehaviour
 
         toggle = inch.Activated;
         inch.Btn_SetEnabled(!toggle);
-
+        displayHandler.SetStarters();
         if (toggle == false) // Ensures all other buttons are deactivated
         {
             mm.Btn_SetEnabled(toggle);
@@ -153,10 +153,9 @@ public class DRO_Manager : MonoBehaviour
     }
 
     public void Click_Mm(){
-
         toggle = mm.Activated;
         mm.Btn_SetEnabled(!toggle);
-
+        displayHandler.SetStarters();
         if (toggle == false) // Ensures all other buttons are deactivated
         {
             inch.Btn_SetEnabled(toggle);
