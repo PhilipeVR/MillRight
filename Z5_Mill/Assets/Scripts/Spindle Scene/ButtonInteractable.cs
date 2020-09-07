@@ -30,6 +30,7 @@ public class ButtonInteractable : MonoBehaviour
     {
         if(counter == finalNum && controller.Counter > 0 && !videoController.PlayedOnce)
         {
+            Debug.Log("Trying to play");
             videoController.StartVideo();
             videoController.PlayVideo();
         }

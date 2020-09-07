@@ -105,8 +105,14 @@ public class DialogueManager : MonoBehaviour
 
     public void DisplayNextSentence()
     {
-        open.SetActive(false);
-        close.SetActive(true);
+        if(open != null)
+        {
+            open.SetActive(false);
+        }
+        if(close != null)
+        {
+            close.SetActive(true);
+        }
         holder.SetActive(true);
         sentenceIndex++;
         if (tracker < count)

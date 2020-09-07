@@ -15,6 +15,7 @@ public class DialogueTrigger : MonoBehaviour
     public Boolean sentenceTrigger;
     private void Awake()
     {
+        Debug.Log("NOT HERE");
         gameDialogues = dialogues.dialogues;
     }
 

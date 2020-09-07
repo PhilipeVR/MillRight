@@ -106,6 +106,15 @@ public class OperationSelection : MonoBehaviour
         }
     }
 
+    private void OnGUI()
+    {
+        Event e = Event.current;
+        if (e.type == EventType.KeyDown && e.control && e.keyCode == KeyCode.R)
+        {
+            ChangeOperation(current.Name);
+        }
+    }
+
     public Operation Current
     {
         get => current;
@@ -128,7 +137,7 @@ public class OperationSelection : MonoBehaviour
 
     private Boolean CheckOperationChange()
     {
-        return true;
+        return !powerButton.isON;
     }
 
     

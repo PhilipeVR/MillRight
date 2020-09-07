@@ -17,7 +17,7 @@ public class ClipTrigger : MonoBehaviour
     [SerializeField] private Color clickedColor;
     [SerializeField] private Button continueBTN;
 
-    public Boolean triggerClicked;
+    public Boolean triggerClicked = false;
     public Color[] basicColor;
 
 
@@ -48,6 +48,7 @@ public class ClipTrigger : MonoBehaviour
         {
             if (!triggerClicked)
             {
+                Debug.Log("WTATATA");
                 continueBTN.interactable = false;
             }
             else

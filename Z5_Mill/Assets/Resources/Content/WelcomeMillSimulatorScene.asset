@@ -1,0 +1,359 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6514887594a1703478cd02d95eb763bf, type: 3}
+  m_Name: WelcomeMillSimulatorScene
+  m_EditorClassIdentifier: 
+  dialogues:
+  - name: Mill Simulator Tutorial
+    frenchName: Tutoriel sur le simulateur de fraiseuse
+    sentences:
+    - Welcome to the mill simulator module. In this segment, YOU take control of
+      the mill and try the different operations learned in the previous segment.
+    - 'In the previous section, you used the DRO panel to trigger animations while
+      reading and watching how the operations were performed. Well...now it''s your
+      turn. This time you have full control of the DRO panel and a tool box to choose
+      the tools you desire to perform those operations. '
+    - 'You simply choose your operation and use the mill to perform it. '
+    - But, before diving straight into the operations. Let's take a detour to learn
+      how to use the controls and buttons of this module.
+    - 'The DRO panel is the panel of control. It allows you to control the mill and
+      observe the values in inches or milli metres. You can also set your point of
+      reference for the three axes. The DRO panel can be opened by simply clicking
+      on the DRO button on the right-hand side. '
+    - 'The X button allows the user to move the table of the mill side to side. The
+      user simply has to use the mouse scroll wheel or scroll using the touchpad
+      after clicking the button. The X button will be highlighted to indicate the
+      mill is being controlled in the X direction. '
+    - The Y button allows the user to move the table of the mill forward and backward.
+      The user again simply has to use the mouse scroll wheel or scroll using the
+      touchpad after clicking the button. The Y button will be highlighted to indicate
+      the mill is being controlled in the Y direction.
+    - The Z button allows the user to control the head of the mill (up/down movement).
+      The user once more simply has to use the mouse scroll wheel or drag on the
+      mouse pad after clicking the button. The Z button will be highlighted to indicate
+      the mill is being controlled in the Z direction.
+    - 'The X, Y and Z buttons all have a lock toggle located to the direct left of
+      their buttons on the DRO panel. When a lock is turned ON, it prevents any movement
+      from that control. '
+    - The Quill Feed toggle allows for control of the quill which allows the milling
+      cutters to be raised and lowered. The fine adjustment toggle allows for a more
+      accurate control of the quill when fine margins are needed during the operations.
+    - "The zero button allows you to set your point of reference by simply clicking
+      on the zero button while a control button/toggle is clicked. It will set the
+      current location of the axis clicked as the reference point (you will notice
+      that the LED values for that axis will be set to 0). \r\n\r\nNote: The Z button,
+      quill feed and fine adjustment controls all set the reference point for the
+      Z axis "
+    - The tool panel allows you to choose the tool holder and cutter from a selection
+      of holders/cutters. The tool panel can be opened easily by clicking on the
+      tool button on the right hand side.
+    - 'It is also important to mention that certain cutters can only be used with
+      specific tool holders and to perform specific operations. '
+    - Now that we have a better idea on how the controls work we can almost start
+      performing the operations. However, there's still information we wish to convey
+      regarding the gameplay.
+    - 'The first step is to choose the operation that you want to perform (drilling,
+      side milling or face milling). To choose the operation you simply have to click
+      on the Operation Selection button on the right hand side, which will prompt
+      a selection menu.  '
+    - You can change to a different operation either before starting operation (placing
+      workpiece inside vise) or after finishing the current operation you have selected.
+    - Similarly to the previous tutorial, to start an operation you simply have to
+      place the piece in the vise (clicking on the workpiece) and clamp it using
+      the vise (click on the bolt located on the vise).
+    - 'The next step is to choose your tools and use the DRO panel to perform the
+      operation. As you may have guessed the ON/OFF switch is to turn the mill ON
+      and OFF.  '
+    - 'When an operation is almost done, a verification button will appear on the
+      top left corner. After you finish the operation and turn the Mill OFF please
+      click of that button to confirm that you have performed the operation. '
+    - If the operation has been well performed you can move on to the next one. You
+      will notice check marks on the operations that you have performed already in
+      the selection menu.
+    - 'After finishing all the operations, you will be prompted to move on to the
+      final phase: the quiz.'
+    - While performing the operations, safety tips, warnings and danger alerts will
+      be given to guide you towards performing the operation the proper way.
+    - You can refer at any time to the tool box, DRO controls and gameplay explanation
+      using the user manual button located right above the camera button.
+    - Good luck and enjoy!
+    sentencesFR:
+    - "Bienvenue dans le mode simulation de la fraiseuse. Dans ce segment, VOUS prenez
+      le contr\xF4le de la fraiseuse et essayez les diff\xE9rentes op\xE9rations
+      apprises dans le segment pr\xE9c\xE9dent."
+    - "Dans la section pr\xE9c\xE9dente, vous avez utilis\xE9 le panneau DRO pour
+      d\xE9clencher des animations tout en lisant et en regardant comment les op\xE9rations
+      \xE9taient effectu\xE9es. Eh bien ... maintenant c'est \xE0 vous. Cette fois,
+      vous avez le contr\xF4le total du panneau DRO. De plus, vous poss\xE9dez aussi
+      une bo\xEEte \xE0 outils pour choisir les outils que vous avez besoin pour
+      effectuer ces op\xE9rations."
+    - "Vous choisissez simplement votre op\xE9ration et utilisez la fraiseuse pour
+      l'ex\xE9cuter."
+    - "Mais, avant de plonger directement dans les op\xE9rations. Prenons un d\xE9tour
+      pour apprendre \xE0 utiliser les commandes et boutons de ce module."
+    - "Le panneau DRO est le panneau de contr\xF4le. Il vous permet de contr\xF4ler
+      la fraiseuse et d'observer les valeurs en pouces ou en milli m\xE8tres. Vous
+      pouvez \xE9galement d\xE9finir votre point de r\xE9f\xE9rence pour les trois
+      axes. Le panneau DRO peut \xEAtre ouvert en cliquant simplement sur le bouton
+      DRO sur le c\xF4t\xE9 droit."
+    - "\rLe bouton X permet \xE0 l'utilisateur de d\xE9placer la table du moulin
+      d'un c\xF4t\xE9 \xE0 l'autre. L'utilisateur doit simplement utiliser la molette
+      de d\xE9filement de la souris ou faire d\xE9filer \xE0 l'aide du pav\xE9 tactile
+      apr\xE8s avoir cliqu\xE9 sur le bouton. Le bouton X sera mis en surbrillance
+      pour indiquer que la fraiseuse est contr\xF4l\xE9e dans la direction X."
+    - "Le bouton Y permet \xE0 l'utilisateur de d\xE9placer la table de la fraiseuse
+      vers l'avant et vers l'arri\xE8re. L'utilisateur doit \xE0 nouveau simplement
+      utiliser la molette de d\xE9filement de la souris ou faire d\xE9filer \xE0
+      l'aide du pav\xE9 tactile apr\xE8s avoir cliqu\xE9 sur le bouton. Le bouton
+      Y sera mis en surbrillance pour indiquer que la fraiseuse est contr\xF4l\xE9e
+      dans la direction Y."
+    - "Le bouton Z permet \xE0 l'utilisateur de d\xE9placer la t\xEAte de la fraiseuse
+      de haut en bas. L'utilisateur doit \xE0 nouveau simplement utiliser la molette
+      de d\xE9filement de la souris ou faire d\xE9filer \xE0 l'aide du pav\xE9 tactile
+      apr\xE8s avoir cliqu\xE9 sur le bouton. Le bouton Z sera mis en surbrillance
+      pour indiquer que la fraiseuse est contr\xF4l\xE9e dans la direction Z."
+    - "Les boutons X, Y et Z ont tous une bascule de verrouillage situ\xE9e directement
+      \xE0 gauche de leurs boutons sur le panneau DRO. Lorsqu'un verrou est activ\xE9,
+      il emp\xEAche tout mouvement de cette commande."
+    - "La bascule d'alimentation de la plume permet de contr\xF4ler la plume, ce
+      qui permet de lever et d'abaisser les fraises. La bascule de r\xE9glage fin
+      permet un contr\xF4le plus pr\xE9cis de la plume lorsque des marges fines sont
+      n\xE9cessaires pendant les op\xE9rations."
+    - "Le bouton z\xE9ro vous permet de d\xE9finir votre point de r\xE9f\xE9rence
+      en cliquant simplement sur le bouton z\xE9ro tout en cliquant sur un bouton
+      de commande / bascule. Il d\xE9finit l'emplacement actuel de l'axe sur lequel
+      vous avez cliqu\xE9 comme point de r\xE9f\xE9rence (vous remarquerez que les
+      valeurs de LED pour cet axe seront d\xE9finies sur 0).\n\nRemarque: le bouton
+      Z et les contr\xF4les du mouvement de la plume d\xE9finissent tous le point
+      de r\xE9f\xE9rence pour l'axe Z"
+    - "Le panneau d'outils vous permet de choisir le porte-outil et la fraise ou
+      foret parmi une s\xE9lection de porte outils, fraise et foret. Le panneau d'outils
+      peut \xEAtre ouvert facilement en cliquant sur le bouton d'outil sur le c\xF4t\xE9
+      droit."
+    - "Il est \xE9galement important de mentionner que certaines fraises/forets ne
+      peuvent \xEAtre utilis\xE9es qu'avec des porte-outils sp\xE9cifiques et pour
+      effectuer des op\xE9rations sp\xE9cifiques."
+    - "Maintenant que nous avons une meilleure id\xE9e du fonctionnement des commandes,
+      nous pouvons presque commencer \xE0 effectuer les op\xE9rations. Cependant,
+      il y a encore des informations que nous souhaitons transmettre concernant le
+      fonctionnement du module."
+    - "La premi\xE8re \xE9tape consiste \xE0 choisir l'op\xE9ration que vous souhaitez
+      effectuer (per\xE7age, fraisage lat\xE9ral ou surfa\xE7age). Pour choisir l'op\xE9ration,
+      il vous suffit de cliquer sur le bouton S\xE9lection d'op\xE9ration sur le
+      c\xF4t\xE9 droit, ce qui affichera un menu de s\xE9lection."
+    - "Vous pouvez passer \xE0 une op\xE9ration diff\xE9rente si vous n'avez pas
+      encore commenc\xE9 l'op\xE9ration actuel (placer la pi\xE8ce \xE0 l'int\xE9rieur
+      de l'\xE9tau). Sinon, il faudra avoir termin\xE9 l'op\xE9ration en cours avant
+      d'effectuer une autre op\xE9ration."
+    - "Comme pour le tutoriel pr\xE9c\xE9dent, pour d\xE9marrer une op\xE9ration
+      il suffit de placer la pi\xE8ce dans l'\xE9tau (en cliquant sur la pi\xE8ce)
+      et de la serrer \xE0 l'aide de l'\xE9tau (cliquez sur le boulon situ\xE9 sur
+      l'\xE9tau)."
+    - "L'\xE9tape suivante consiste \xE0 choisir vos outils et \xE0 utiliser le panneau
+      DRO pour effectuer l'op\xE9ration. Comme vous l'avez peut-\xEAtre devin\xE9,
+      le bouton ON/OFF sert \xE0 allumer et \xE9teindre la fraiseuse."
+    - "Lorsqu'une op\xE9ration est presque termin\xE9e, un bouton de v\xE9rification
+      appara\xEEtra dans le coin en haut \xE0 gauche. Apr\xE8s avoir termin\xE9 l'op\xE9ration
+      et \xE9teint la fraiseuse, veuillez cliquer sur ce bouton pour confirmer que
+      vous avez effectu\xE9 l'op\xE9ration."
+    - "Si l'op\xE9ration a \xE9t\xE9 bien r\xE9alis\xE9e, vous pouvez passer \xE0
+      la suivante. Vous remarquerez des coches sur les op\xE9rations que vous avez
+      d\xE9j\xE0 effectu\xE9es dans le menu de s\xE9lection."
+    - "Apr\xE8s avoir termin\xE9 toutes les op\xE9rations, vous serez invit\xE9 \xE0
+      passer \xE0 la phase finale: le quiz."
+    - "Lors de l'ex\xE9cution des op\xE9rations, des conseils de s\xE9curit\xE9,
+      des avertissements et des alertes de danger seront donn\xE9s pour vous guider
+      vers l'ex\xE9cution correcte de l'op\xE9ration."
+    - "Vous pouvez vous r\xE9f\xE9rer \xE0 tout moment \xE0 la bo\xEEte \xE0 outils,
+      aux commandes DRO et aux explications du module en utilisant le bouton du manuel
+      de l'utilisateur situ\xE9 juste au-dessus du bouton de la cam\xE9ra."
+    - Bonne chance et amusez-vous!
+    images:
+    - {fileID: 21300000, guid: 8775895a44357174eb0462650d27901e, type: 3}
+    - {fileID: 21300000, guid: fdc3bba53e8daba469303c82f0d5a587, type: 3}
+    - {fileID: 21300000, guid: f59f6696da7d05749aea7930a7cec594, type: 3}
+    - {fileID: 21300000, guid: d9529ba6dc2f59140a9e70f5c82c8d3d, type: 3}
+    - {fileID: 21300000, guid: 5f02642ec8b9b2544b38100874c9da31, type: 3}
+    - {fileID: 21300000, guid: 1cfb36e124fc2304e8ff46a2553a3af3, type: 3}
+    - {fileID: 21300000, guid: 99289ed609f64d6409b0b77d8e19e1cb, type: 3}
+    - {fileID: 21300000, guid: 25ce94f665f4c16458ad7e31989568ba, type: 3}
+    - {fileID: 21300000, guid: 30e7c7c2e7c35204b8e9df949a956e99, type: 3}
+    - {fileID: 21300000, guid: 830bf7255af159b4d8daab392d17001f, type: 3}
+    - {fileID: 21300000, guid: f9b8a380110ed574a8eeeaf8472582bf, type: 3}
+    - {fileID: 21300000, guid: c616d9019c11de44ea5e1c7f1e65d8cf, type: 3}
+    - {fileID: 21300000, guid: c616d9019c11de44ea5e1c7f1e65d8cf, type: 3}
+    - {fileID: 21300000, guid: 7ef65f571e8b45248ab472fc9fbc85a9, type: 3}
+    - {fileID: 21300000, guid: 017c957189dee624ea960ef3f8c6b2a5, type: 3}
+    - {fileID: 21300000, guid: 928cb28b1e6c4a84aa08dffeb29b2812, type: 3}
+    - {fileID: 21300000, guid: 36ca35890a85c7b4f87b809efc4bc445, type: 3}
+    - {fileID: 21300000, guid: a8731af58a7355f4996273b6bd31eaee, type: 3}
+    - {fileID: 21300000, guid: c590bb25670281c4c96136a1bece5ccb, type: 3}
+    - {fileID: 21300000, guid: a00742acdb0fb024b88e3eb016f4eec6, type: 3}
+    - {fileID: 21300000, guid: 74c27f6963e03b74787ea587d71814e9, type: 3}
+    - {fileID: 21300000, guid: bcab519712d7a5e4bb6f9ab0809e74d0, type: 3}
+    - {fileID: 21300000, guid: dfe27ba59674ec245be73e5f5122cff9, type: 3}
+    - {fileID: 21300000, guid: f5850ae1f437d104fba78efe4d6cf425, type: 3}
+  - name: Tool Panel
+    frenchName: Tutoriel sur le simulateur de fraiseuse
+    sentences:
+    - The tool panel allows you to choose the tool holder and cutter from a selection
+      of holders/cutters. The tool panel can be opened easily by clicking on the
+      tool button on the right hand side.
+    - 'It is important to mention that certain cutters can only be used with specific
+      tool holders and to perform specific operations. '
+    sentencesFR:
+    - "Le panneau d'outils vous permet de choisir le porte-outil et la fraise ou
+      foret parmi une s\xE9lection de porte outils, fraise et foret. Le panneau d'outils
+      peut \xEAtre ouvert facilement en cliquant sur le bouton d'outil sur le c\xF4t\xE9
+      droit."
+    - "Il est \xE9galement important de mentionner que certaines fraises/forets ne
+      peuvent \xEAtre utilis\xE9es qu'avec des porte-outils sp\xE9cifiques et pour
+      effectuer des op\xE9rations sp\xE9cifiques."
+    images:
+    - {fileID: 21300000, guid: c616d9019c11de44ea5e1c7f1e65d8cf, type: 3}
+    - {fileID: 21300000, guid: c616d9019c11de44ea5e1c7f1e65d8cf, type: 3}
+  - name: DRO Controls
+    frenchName: Tutoriel sur le simulateur de fraiseuse
+    sentences:
+    - 'The DRO panel is the panel of control. It allows you to control the mill and
+      observe the values in inches or milli metres. You can also set your point of
+      reference for the three axes. The DRO panel can be opened by simply clicking
+      on the DRO button on the right-hand side. '
+    - 'The X button allows the user to control the table of the mill in the X direction
+      (side movement). The user simply has to use the mouse scroll wheel or drag
+      on the mouse pad after clicking the button. The X button will be highlighted
+      to indicate the mill is being controlled in the X direction. '
+    - The Y button allows the user to control the table of the mill in the Y direction
+      (forward/backward movement). The user again simply has to use the mouse scroll
+      wheel or drag on the mouse pad after clicking the button. The Y button will
+      be highlighted to indicate the mill is being controlled in the Y direction.
+    - The Z button allows the user to control the head of the mill (up/down movement).
+      The user once more simply has to use the mouse scroll wheel or drag on the
+      mouse pad after clicking the button. The Z button will be highlighted to indicate
+      the mill is being controlled in the Z direction.
+    - 'The X, Y and Z buttons all have a lock toggle located to the direct left of
+      their buttons on the DRO panel. When a lock is turned ON, it prevents any movement
+      from that control. '
+    - The Quill Feed toggle allows for control of the quill which allows the milling
+      cutters to be raised and lowered. The fine adjustment toggle allows for a more
+      accurate control of the quill when fine margins are needed during the operations.
+    - "The zero button allows you to set your point of reference by simply clicking
+      on the zero button while a control button/toggle is clicked. It will set the
+      current location of the axis clicked as the reference point. \n\nNote: The
+      Z button, quill feed and fine adjustment controls all set the reference point
+      for the Z aces "
+    sentencesFR:
+    - "Le panneau DRO est le panneau de contr\xF4le. Il vous permet de contr\xF4ler
+      la fraiseuse et d'observer les valeurs en pouces ou en milli m\xE8tres. Vous
+      pouvez \xE9galement d\xE9finir votre point de r\xE9f\xE9rence pour les trois
+      axes. Le panneau DRO peut \xEAtre ouvert en cliquant simplement sur le bouton
+      DRO sur le c\xF4t\xE9 droit."
+    - "\rLe bouton X permet \xE0 l'utilisateur de d\xE9placer la table du moulin
+      d'un c\xF4t\xE9 \xE0 l'autre. L'utilisateur doit simplement utiliser la molette
+      de d\xE9filement de la souris ou faire d\xE9filer \xE0 l'aide du pav\xE9 tactile
+      apr\xE8s avoir cliqu\xE9 sur le bouton. Le bouton X sera mis en surbrillance
+      pour indiquer que la fraiseuse est contr\xF4l\xE9e dans la direction X."
+    - "Le bouton Y permet \xE0 l'utilisateur de d\xE9placer la table de la fraiseuse
+      vers l'avant et vers l'arri\xE8re. L'utilisateur doit \xE0 nouveau simplement
+      utiliser la molette de d\xE9filement de la souris ou faire d\xE9filer \xE0
+      l'aide du pav\xE9 tactile apr\xE8s avoir cliqu\xE9 sur le bouton. Le bouton
+      Y sera mis en surbrillance pour indiquer que la fraiseuse est contr\xF4l\xE9e
+      dans la direction Y."
+    - "Le bouton Z permet \xE0 l'utilisateur de d\xE9placer la t\xEAte de la fraiseuse
+      de haut en bas. L'utilisateur doit \xE0 nouveau simplement utiliser la molette
+      de d\xE9filement de la souris ou faire d\xE9filer \xE0 l'aide du pav\xE9 tactile
+      apr\xE8s avoir cliqu\xE9 sur le bouton. Le bouton Z sera mis en surbrillance
+      pour indiquer que la fraiseuse est contr\xF4l\xE9e dans la direction Z."
+    - "Les boutons X, Y et Z ont tous une bascule de verrouillage situ\xE9e directement
+      \xE0 gauche de leurs boutons sur le panneau DRO. Lorsqu'un verrou est activ\xE9,
+      il emp\xEAche tout mouvement de cette commande."
+    - "La bascule d'alimentation de la plume permet de contr\xF4ler la plume, ce
+      qui permet de lever et d'abaisser les fraises. La bascule de r\xE9glage fin
+      permet un contr\xF4le plus pr\xE9cis de la plume lorsque des marges fines sont
+      n\xE9cessaires pendant les op\xE9rations."
+    - "Le bouton z\xE9ro vous permet de d\xE9finir votre point de r\xE9f\xE9rence
+      en cliquant simplement sur le bouton z\xE9ro tout en cliquant sur un bouton
+      de commande / bascule. Il d\xE9finit l'emplacement actuel de l'axe sur lequel
+      vous avez cliqu\xE9 comme point de r\xE9f\xE9rence (vous remarquerez que les
+      valeurs de LED pour cet axe seront d\xE9finies sur 0).\n\nRemarque: le bouton
+      Z et les contr\xF4les du mouvement de la plume d\xE9finissent tous le point
+      de r\xE9f\xE9rence pour l'axe Z"
+    images:
+    - {fileID: 21300000, guid: 5f02642ec8b9b2544b38100874c9da31, type: 3}
+    - {fileID: 21300000, guid: 1cfb36e124fc2304e8ff46a2553a3af3, type: 3}
+    - {fileID: 21300000, guid: 99289ed609f64d6409b0b77d8e19e1cb, type: 3}
+    - {fileID: 21300000, guid: 25ce94f665f4c16458ad7e31989568ba, type: 3}
+    - {fileID: 21300000, guid: 30e7c7c2e7c35204b8e9df949a956e99, type: 3}
+    - {fileID: 21300000, guid: 830bf7255af159b4d8daab392d17001f, type: 3}
+    - {fileID: 21300000, guid: f9b8a380110ed574a8eeeaf8472582bf, type: 3}
+  - name: Gameplay
+    frenchName: Tutoriel sur le simulateur de fraiseuse
+    sentences:
+    - 'The first step is to choose the operation that you want to perform (drilling,
+      side milling or face milling). To choose the operation you simply have to click
+      on the Operation Selection button on the right hand side, which will prompt
+      a selection menu.  '
+    - You can change to a different operation either before starting operation (placing
+      workpiece inside vise) or after finishing the current operation you have selected.
+    - Similarly to the previous tutorial, to start an operation you simply have to
+      place the piece in the vise (clicking on the workpiece) and clamp it using
+      the vise (click on the bolt located on the vise).
+    - 'The next step is to choose your tools and use the DRO panel to perform the
+      operation. As you may have guessed the ON/OFF switch is to turn the mill ON
+      and OFF.  '
+    - 'When an operation is almost done, a verification button will appear on the
+      top left corner. After you finish the operation and turn the Mill OFF please
+      click of that button to confirm that you have performed the operation. '
+    - 'If the operation has been well performed you can move on to the next one.
+      You will notice checkmarks on the operations that you have performed already
+      in the selection menu. '
+    - After finishing all the operations, you will be prompted to move on to the
+      final phase which is the questionnaire.
+    - While performing the operations, safety tips, warnings and danger alerts will
+      be given to guide you towards performing the operation the proper way.
+    sentencesFR:
+    - "La premi\xE8re \xE9tape consiste \xE0 choisir l'op\xE9ration que vous souhaitez
+      effectuer (per\xE7age, fraisage lat\xE9ral ou surfa\xE7age). Pour choisir l'op\xE9ration,
+      il vous suffit de cliquer sur le bouton S\xE9lection d'op\xE9ration sur le
+      c\xF4t\xE9 droit, ce qui affichera un menu de s\xE9lection."
+    - "Vous pouvez passer \xE0 une op\xE9ration diff\xE9rente si vous n'avez pas
+      encore commenc\xE9 l'op\xE9ration actuel (placer la pi\xE8ce \xE0 l'int\xE9rieur
+      de l'\xE9tau). Sinon, il faudra avoir termin\xE9 l'op\xE9ration en cours avant
+      d'effectuer une autre op\xE9ration."
+    - "Comme pour le tutoriel pr\xE9c\xE9dent, pour d\xE9marrer une op\xE9ration
+      il suffit de placer la pi\xE8ce dans l'\xE9tau (en cliquant sur la pi\xE8ce)
+      et de la serrer \xE0 l'aide de l'\xE9tau (cliquez sur le boulon situ\xE9 sur
+      l'\xE9tau)."
+    - "L'\xE9tape suivante consiste \xE0 choisir vos outils et \xE0 utiliser le panneau
+      DRO pour effectuer l'op\xE9ration. Comme vous l'avez peut-\xEAtre devin\xE9,
+      le bouton ON/OFF sert \xE0 allumer et \xE9teindre la fraiseuse."
+    - "Lorsqu'une op\xE9ration est presque termin\xE9e, un bouton de v\xE9rification
+      appara\xEEtra dans le coin en haut \xE0 gauche. Apr\xE8s avoir termin\xE9 l'op\xE9ration
+      et \xE9teint la fraiseuse, veuillez cliquer sur ce bouton pour confirmer que
+      vous avez effectu\xE9 l'op\xE9ration."
+    - "Si l'op\xE9ration a \xE9t\xE9 bien r\xE9alis\xE9e, vous pouvez passer \xE0
+      la suivante. Vous remarquerez des coches sur les op\xE9rations que vous avez
+      d\xE9j\xE0 effectu\xE9es dans le menu de s\xE9lection."
+    - "Apr\xE8s avoir termin\xE9 toutes les op\xE9rations, vous serez invit\xE9 \xE0
+      passer \xE0 la phase finale: le quiz."
+    - "Lors de l'ex\xE9cution des op\xE9rations, des conseils de s\xE9curit\xE9,
+      des avertissements et des alertes de danger seront donn\xE9s pour vous guider
+      vers l'ex\xE9cution correcte de l'op\xE9ration."
+    images:
+    - {fileID: 21300000, guid: 017c957189dee624ea960ef3f8c6b2a5, type: 3}
+    - {fileID: 21300000, guid: 928cb28b1e6c4a84aa08dffeb29b2812, type: 3}
+    - {fileID: 21300000, guid: 36ca35890a85c7b4f87b809efc4bc445, type: 3}
+    - {fileID: 21300000, guid: a8731af58a7355f4996273b6bd31eaee, type: 3}
+    - {fileID: 21300000, guid: c590bb25670281c4c96136a1bece5ccb, type: 3}
+    - {fileID: 21300000, guid: a00742acdb0fb024b88e3eb016f4eec6, type: 3}
+    - {fileID: 21300000, guid: 74c27f6963e03b74787ea587d71814e9, type: 3}
+    - {fileID: 21300000, guid: bcab519712d7a5e4bb6f9ab0809e74d0, type: 3}

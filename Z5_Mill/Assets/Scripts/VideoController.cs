@@ -7,6 +7,7 @@ using UnityEngine.Video;
 
 public class VideoController : MonoBehaviour
 {
+    [SerializeField] private ButtonInteractable buttonInteractable;
     [SerializeField] private GameObject VideoPanel;
     [SerializeField] private VideoPlayer videoPlayer;
     [SerializeField] private Button StopVideoButton, playButton, pauseButton, stopButton;
@@ -75,6 +76,7 @@ public class VideoController : MonoBehaviour
             playedOnce = true;
             StopVideoButton.interactable = true;
             stopButton.interactable = true;
+            buttonInteractable.InteractButton();
         }
         playButton.gameObject.SetActive(true);
         pauseButton.gameObject.SetActive(false);
