@@ -15,6 +15,18 @@ MonoBehaviour:
   dialogues:
   - name: 'Camera Controller '
     frenchName: 
-    sentences: []
+    sentences:
+    - The camera button on the bottom left of your screen will allow you to cycle
+      through different cameras. The number on the button will correspond to the
+      Camera that is currently active.
+    - Camera 1 is controllable, the other cameras are stationary views. To control
+      Camera 1, first verify that the camera button displays a "1", indicating that
+      Camera 1 is active.
+    - Hold the left mouse button with accompanying mouse movement to drag the camera
+      around the screen.
+    - Hold the right mouse button with accompanying movement to rotate the camera
+      relative to its focus point.
+    - Hold the left-shift key while using the mouse scroll wheel to zoom in or out
+      with the camera.
     sentencesFR: []
     images: []
