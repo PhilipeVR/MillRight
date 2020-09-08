@@ -47,7 +47,6 @@ public class DRO_Manager : MonoBehaviour
 
     public void Click_X(){
 
-        Debug.Log(x.Activated);
         toggle = x.Activated;
         //xLock.Btn_SetEnabled(!toggle);
         x.Btn_SetEnabled(!toggle);

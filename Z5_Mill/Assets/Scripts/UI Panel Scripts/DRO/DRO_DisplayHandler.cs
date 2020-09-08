@@ -56,11 +56,9 @@ public class DRO_DisplayHandler : MonoBehaviour
     {
         if (inchButton.Activated && (inch != unitConversion))
         {
-            Debug.Log("Inch Before: " + z0);
             x0 = (x0 / mm) * inch;
             y0 = (y0 / mm) * inch;
             z0 = (z0 / mm) * inch;
-            Debug.Log("Inch After: " + z0);
             starterX = (starterX / mm) * inch;
             starterY = (starterY / mm) * inch;
             starterZ = (starterZ / mm) * inch;
@@ -73,11 +71,9 @@ public class DRO_DisplayHandler : MonoBehaviour
         }
         else if (mmButton.Activated && (mm != unitConversion))
         {
-            Debug.Log("MM Before: " + z0);
             x0 = (x0 / inch) * mm;
             y0 = (y0 / inch) * mm;
             z0 = (z0 / inch) * mm;
-            Debug.Log("MM After: " + z0);
             starterX = (starterX / inch) * mm;
             starterY = (starterY / inch) * mm;
             starterZ = (starterZ / inch) * mm;
@@ -96,9 +92,6 @@ public class DRO_DisplayHandler : MonoBehaviour
     {
         // Need to convert distance from "metres" to "inch" or "mm"
         // Also make this update only when there is a change in these coords
-
-        //Debug.Log("Z0: " + z0.ToString());
-        //Debug.Log("Mill Spindle Local Position: " + spindle.localPosition.y.ToString());
 
         x =  worktable.localPosition.x * unitConversion - x0;
         y =  table.localPosition.y * unitConversion - y0;

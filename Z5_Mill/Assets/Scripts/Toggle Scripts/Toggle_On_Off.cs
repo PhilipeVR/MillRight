@@ -38,7 +38,6 @@ public class Toggle_On_Off : MonoBehaviour
             Boolean testPlace = placePiece != null;
             if (selection.Current.Name.Equals(NoNameOperation))
             {
-                Debug.Log("LOCATED");
                 WarningEvents.current.OperationSelected();
                 millOn = !millOn;
 

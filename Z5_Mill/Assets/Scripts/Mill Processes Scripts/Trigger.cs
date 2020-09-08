@@ -19,20 +19,16 @@ public class Trigger
     {
 
         Boolean val = false;
-        Debug.Log("Index: " + animIndex);
-        Debug.Log("Transition Params Length: " + transitionParams.Length);
         if (animIndex < transitionParams.Length)
         {
             //Debug.Log("Clip Trigger X: " + index[i] + " and " + controller.Index);
 
             if (index[animIndex] == controller.Index)
             {
-                Debug.Log("Clip Trigger: " + animationName[animIndex] + " and " + transitionParams[animIndex]);
                 val = controller.PlayAnimation(transitionParams[animIndex], animationName[animIndex]);
 
                 if (val)
                 {
-                    Debug.Log("OLIVIER WHYYYYYYY");
                     animIndex++;
                 }
             }

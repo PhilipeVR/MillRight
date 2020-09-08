@@ -39,7 +39,6 @@ public class ComponentHint : MonoBehaviour
             index = UnityEngine.Random.Range(0, parts.Count);
             hintedPart = parts[index];
         }
-        Debug.Log("Hint Flash");
         if (!hintedPart.flashing)
         {
             hintedPart.HintFlash();

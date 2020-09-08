@@ -3738,6 +3738,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8eb390a1bbb07f941b1bbf993d086d40, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  loadScene: {fileID: 2105349673}
   displayToggle: {fileID: 885196802}
   InputInformation: {fileID: 885196804}
   fullNameText: {fileID: 1751545077}
@@ -3745,6 +3746,7 @@ MonoBehaviour:
   infoWarning: {fileID: 1761397004}
   panel: {fileID: 1861445350}
   begin: {fileID: 1917431164}
+  SceneName: MillScene
 --- !u!114 &1861445353
 MonoBehaviour:
   m_ObjectHideFlags: 0

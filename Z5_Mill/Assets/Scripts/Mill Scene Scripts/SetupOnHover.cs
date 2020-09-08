@@ -104,7 +104,6 @@ public class SetupOnHover : MonoBehaviour
             OnHover tmpHover = children.GetComponent<OnHover>();
             if (tmpHover != null)
             {
-                Debug.Log("OnHover Flash Mesh Called");
                 StartCoroutine(tmpHover.FlashMesh(FlashDelay, NumOfFlash));
             }
         }

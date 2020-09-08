@@ -110,7 +110,6 @@ public class SwitchBit : MonoBehaviour
         {
             if (PowerButton.PowerState)
             {
-                Debug.Log("HELLO PERFECT");
                 WarningEvents.current.CantChangeCutter();
             }
             else 
@@ -158,9 +157,6 @@ public class SwitchBit : MonoBehaviour
                 if (tag.Equals(listBits[i].tag))
                 {
                     Vector3 tmpPos = listBits[i].transform.localPosition;
-                    //Debug.LogWarning("Old Pos X: " + tmpPos.x + ", Y: " + tmpPos.y + ", Z: " + tmpPos.z);
-                    //Debug.LogWarning("New Pos X: " + spawnBitPosition.x + ", Y: " + spawnBitPosition.y + ", Z: " + spawnBitPosition.z);
-
                     currentBit.transform.localPosition = tmpPos;
                     currentBit.SetActive(false);
                     currentBit = listBits[i];

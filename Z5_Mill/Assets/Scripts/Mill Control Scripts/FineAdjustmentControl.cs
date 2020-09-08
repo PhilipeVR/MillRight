@@ -46,7 +46,6 @@ public class FineAdjustmentControl : MonoBehaviour
 
             setSpeed(0.2f);
             pause();
-            //Debug.LogWarning(lock_anim.runtimeAnimatorController.animationClips[0].name);
 
             handle_enabled = true;
             wheel_spin = true;
@@ -178,7 +177,6 @@ public class FineAdjustmentControl : MonoBehaviour
 
     private void setSpeed(float mph)
     {
-        //Debug.Log(mph);
         object_anim.speed = mph;
         if (mph > 0)
         {

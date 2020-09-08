@@ -23,6 +23,7 @@ public class PowerButtonToggle
     // Start is called before the first frame update
     public PowerButtonToggle(Transform transform, Image image, ProcessAnimationController manager, string onText, string offText, TriggerAnimationController trigger, string[] transitionParameter, string[] animationName, int anim, int[] index, int[] sentenceIndex)
     {
+
         this.OnText = onText;
         this.OffText = offText;
         this.transform = transform;
@@ -45,7 +46,6 @@ public class PowerButtonToggle
         Boolean val = false;
         if (i < 2)
         {
-            Debug.Log(animationName);
             if (index[i] == trigger.Index && CheckManager())
             {
                 val = trigger.PlayAnimation(transitionParameter[i], animationName[i]);

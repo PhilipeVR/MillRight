@@ -26,7 +26,6 @@ public class ClipTrigger : MonoBehaviour
     {
         int index = 0;
         AnimatorEvents.current.animationDone += TriggerReset;
-        Debug.Log(name + ": " + GetComponent<Renderer>().materials.Length);
         if (GetComponent<Renderer>().materials.Length > 1)
         {
             basicColor = new Color[GetComponent<Renderer>().materials.Length];
@@ -49,7 +48,6 @@ public class ClipTrigger : MonoBehaviour
         {
             if (!triggerClicked)
             {
-                Debug.Log("WTATATA");
                 continueBTN.interactable = false;
             }
             else

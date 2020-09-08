@@ -9,6 +9,7 @@ public class ButtonInteractable : MonoBehaviour
     [SerializeField] private Button button;
     [SerializeField] private AnimationController controller;
     [SerializeField] private VideoController videoController;
+    [SerializeField] private DialogueManager manager;
     private List<int> countChecker;
     private int counter;
 
@@ -26,15 +27,22 @@ public class ButtonInteractable : MonoBehaviour
         InteractButton();
     }
 
+    public void LateUpdate()
+    {
+        if(manager.SentenceIndex == manager.count - 1)
+        {
+            InteractButton();
+        }
+    }
+
     public void InteractButton()
     {
-        if(counter == finalNum && controller.Counter > 0 && !videoController.PlayedOnce)
+        if(counter == finalNum && controller.Counter > 0 && !videoController.PlayedOnce && manager.SentenceIndex == manager.count-1)
         {
-            Debug.Log("Trying to play");
             videoController.StartVideo();
             videoController.PlayVideo();
         }
-        else if (counter == finalNum && controller.Counter > 0 && videoController.PlayedOnce)
+        else if (counter == finalNum && controller.Counter > 0 && videoController.PlayedOnce && manager.SentenceIndex == manager.count - 1)
         {
             button.interactable = true;
         }

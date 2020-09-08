@@ -20,8 +20,6 @@ public class ZWheelControl : MonoBehaviour
 
     private PlacePiece placePiece;
     private ClampPiece clampPiece;
-    private float new_time, prev_time, prev_distance;
-    public float currentSpeed;
 
     [SerializeField] private string lockBool, unlockBool;
 
@@ -33,15 +31,12 @@ public class ZWheelControl : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
-        prev_time = 0;
-        prev_distance = 0;
         object_anim = animObject.GetComponent<Animator>();
         lock_anim = lockAnimObject.GetComponent<Animator>();
         locked = false;
         setSpeed(0.2f);
         pause();
         pauseLock();
-        //Debug.LogWarning(lock_anim.runtimeAnimatorController.animationClips[0].name);
 
         handle_enabled = true;
         wheel_spin = true;
@@ -61,16 +56,7 @@ public class ZWheelControl : MonoBehaviour
             if ((ZLockButton.Activated == true) && !locked)
             {
 
-                float distance, time;
-                if (Input.mouseScrollDelta.y != 0)
-                {
-                    distance = Math.Abs(Input.mouseScrollDelta.y - prev_distance);
-                    time = Math.Abs(Time.time - prev_time);
-                    currentSpeed = (distance / time) * speedMultiplier;
-                    scrollActive = true;
-                }
-
-                if (Input.mouseScrollDelta.y > 0f)
+                if (Input.mouseScrollDelta.y > 0f && animTime < 1f)
                 {
                     Boolean testPlace = placePiece != null;
                     Boolean testClamp = clampPiece != null;
@@ -81,10 +67,10 @@ public class ZWheelControl : MonoBehaviour
                     else
                     {
                         object_anim.SetFloat("Reverse", 1);
-                        setSpeed(currentSpeed);
+                        setSpeed(arrowSpeed);
                     }
                 }
-                else if (Input.mouseScrollDelta.y < 0f)
+                else if (Input.mouseScrollDelta.y < 0f && animTime > 0)
                 {
                     Boolean testPlace = placePiece != null;
                     Boolean testClamp = clampPiece != null;
@@ -95,7 +81,7 @@ public class ZWheelControl : MonoBehaviour
                     else
                     {
                         object_anim.SetFloat("Reverse", -1);
-                        setSpeed(currentSpeed);
+                        setSpeed(arrowSpeed);
                     }
                 } else
                 {
@@ -114,7 +100,7 @@ public class ZWheelControl : MonoBehaviour
             if ((ZLockButton.Activated == true) && !locked)
             {
 
-                if (e.type == EventType.KeyDown && e.keyCode == KeyCode.DownArrow)
+                if (e.type == EventType.KeyDown && e.keyCode == KeyCode.DownArrow && animTime < 1f)
                 {
                     keyActive = true;
                     Boolean testPlace = placePiece != null;
@@ -129,7 +115,7 @@ public class ZWheelControl : MonoBehaviour
                         setSpeed(arrowSpeed);
                     }
                 }
-                else if (e.type == EventType.KeyDown && e.keyCode == KeyCode.UpArrow)
+                else if (e.type == EventType.KeyDown && e.keyCode == KeyCode.UpArrow && animTime > 0)
                 {
                     keyActive = true;
                     Boolean testPlace = placePiece != null;
@@ -188,7 +174,6 @@ public class ZWheelControl : MonoBehaviour
 
     private void setSpeed(float mph)
     {
-        //Debug.Log(mph);
         object_anim.speed = mph;
         if (mph > 0)
         {

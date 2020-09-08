@@ -17,8 +17,6 @@ public class XWheelControl : MonoBehaviour
     [SerializeField] private float speedMultiplier, arrowSpeed;
     private PlacePiece placePiece;
 
-    private float new_time, prev_time, prev_distance;
-    public float currentSpeed;
     [SerializeField] private string lockBool, unlockBool;
 
     Boolean animated = true;
@@ -31,8 +29,6 @@ public class XWheelControl : MonoBehaviour
     void Awake()
     {
         reminder = false;
-        prev_time = 0;
-        prev_distance = 0;
         object_anim = animObject.GetComponent<Animator>();
         lock_anim = lockAnimObject.GetComponent<Animator>();
         leftCollision = false;
@@ -40,7 +36,6 @@ public class XWheelControl : MonoBehaviour
         pauseLock();
         locked = false;
         pause();
-        //Debug.LogWarning(lock_anim.runtimeAnimatorController.animationClips[0].name);
 
         handle_enabled = true;
         wheel_spin = true;
@@ -63,17 +58,7 @@ public class XWheelControl : MonoBehaviour
             {
                 RemindUser();
 
-                float distance, time;
-                if (Input.mouseScrollDelta.y != 0)
-                {
-                    distance = Math.Abs(Input.mouseScrollDelta.y - prev_distance);
-                    time = Math.Abs(Time.time - prev_time);
-                    currentSpeed = (distance / time) * speedMultiplier;
-                    scrollActive = true;
-                }
-
-
-                if (Input.mouseScrollDelta.y > 0f && !leftCollision)
+                if (Input.mouseScrollDelta.y > 0f && !leftCollision && animTime < 1f)
                 {
 
                     Boolean testPlace = placePiece != null;
@@ -90,12 +75,10 @@ public class XWheelControl : MonoBehaviour
                     else
                     {
                         object_anim.SetFloat("Reverse", 1);
-                        setSpeed(currentSpeed);
-                        //Debug.Log(Input.mouseScrollDelta.y);
-                        //Debug.Log(Input.GetAxis("Mouse ScrollWheel"));
+                        setSpeed(arrowSpeed);
                     }
                 }
-                else if (Input.mouseScrollDelta.y < 0f && !rightCollision)
+                else if (Input.mouseScrollDelta.y < 0f && !rightCollision && animTime > 0)
                 {
 
                     Boolean testPlace = placePiece != null;
@@ -111,7 +94,7 @@ public class XWheelControl : MonoBehaviour
                     else
                     {
                         object_anim.SetFloat("Reverse", -1);
-                        setSpeed(currentSpeed);
+                        setSpeed(arrowSpeed);
                     }
                 }
                 else
@@ -140,8 +123,7 @@ public class XWheelControl : MonoBehaviour
             {
                 RemindUser();
 
-                Debug.Log(e.type);
-                if (e.type == EventType.KeyDown && e.keyCode == KeyCode.UpArrow && !leftCollision)
+                if (e.type == EventType.KeyDown && e.keyCode == KeyCode.UpArrow && !leftCollision && animTime < 1f)
                 {
                     keyActive = true;
                     Boolean testPlace = placePiece != null;
@@ -159,12 +141,10 @@ public class XWheelControl : MonoBehaviour
                     {
                         object_anim.SetFloat("Reverse", 1);
                         setSpeed(arrowSpeed);
-                        //Debug.Log(Input.mouseScrollDelta.y);
-                        //Debug.Log(Input.GetAxis("Mouse ScrollWheel"));
                     }
                 }
 
-                else if (e.type == EventType.KeyDown && e.keyCode == KeyCode.DownArrow && !rightCollision)
+                else if (e.type == EventType.KeyDown && e.keyCode == KeyCode.DownArrow && !rightCollision && animTime > 0)
                 {
                     keyActive = true;
                     Boolean testPlace = placePiece != null;
@@ -225,7 +205,6 @@ public class XWheelControl : MonoBehaviour
 
     private void setSpeed(float mph)
     {
-        //Debug.Log(mph);
         object_anim.speed = mph;
         if (mph > 0)
         {

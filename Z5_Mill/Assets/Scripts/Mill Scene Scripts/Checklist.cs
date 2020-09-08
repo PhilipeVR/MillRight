@@ -19,7 +19,6 @@ public class Checklist : MonoBehaviour
 
     public void LanguageSwitch()
     {
-        Debug.Log("Checklist Size: " + checklist.Length);
 
         for (int i = 0; i < checklist.Length; i++)
         {

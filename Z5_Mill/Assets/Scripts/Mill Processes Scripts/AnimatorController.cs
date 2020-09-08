@@ -86,7 +86,6 @@ public class AnimatorController : MonoBehaviour
         animator.enabled = state;
         holder.SetActive(state);
         vise.SetActive(state);
-        //Debug.Log(bit.name + ": " + bit.activeSelf.ToString());
         TriggerAnimationController triggerAnimation = GetComponent<TriggerAnimationController>();
         if (triggerAnimation != null)
         {
@@ -114,7 +113,6 @@ public class AnimatorController : MonoBehaviour
 
     public void setAnimSpeed(float speed)
     {
-        //Debug.Log(speed);
         animator.SetFloat("Speed", speed);
     }
 

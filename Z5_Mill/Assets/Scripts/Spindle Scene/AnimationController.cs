@@ -12,7 +12,6 @@ public class AnimationController : MonoBehaviour
     [SerializeField] private int dialogIndex;
     [SerializeField] private string[] clipName;
     [SerializeField] private string resetParam;
-    [SerializeField] private ButtonInteractable buttonInteractable;
     [SerializeField] private Button restartButton;
     private List<AnimatorControllerParameter> parameters;
     private int counter = 0;
@@ -36,16 +35,13 @@ public class AnimationController : MonoBehaviour
     // Update is called once per frame
     public Boolean PlayAnimation(string transition, string animationName)
     {
-        Debug.Log("Transition: " + transition + " and Animation Name: " + animationName);
         if (index < parameters.Count)
         {
             if(index == 0)
             {
                 ResetLoopParams();
             }
-            Debug.Log("Animation Time: " + animator.GetCurrentAnimatorStateInfo(0).normalizedTime);
             Boolean inRightTransition = animator.GetCurrentAnimatorStateInfo(0).normalizedTime > 1f;
-            Debug.Log(inRightTransition);
             if (transition == parameters[index].name && inRightTransition && animationName == clipName[index])
             {
                 animator.SetBool(transition, true);
@@ -63,10 +59,9 @@ public class AnimationController : MonoBehaviour
         if (index == parameters.Count)
         {
             transitionDone = true;
+            counter++;
         }
-        counter++;
-        buttonInteractable.InteractButton();
-        
+
     }
 
     public void LateUpdate()
@@ -79,7 +74,6 @@ public class AnimationController : MonoBehaviour
 
     public void ResetParams()
     {
-        Debug.Log("ResetParams: " + index);
         for (int i = 0; i < parameters.Count; i++)
         {
             animator.SetBool(parameters[i].name, false);
@@ -96,7 +90,6 @@ public class AnimationController : MonoBehaviour
     {
         if (transitionDone && CurrentAnimationStatus)
         {
-            Debug.Log("TriggerAnimationController - " + name + ": " + resetParam);
             animator.SetFloat(resetParam, 1f);
             ResetParams();
             index = 0;

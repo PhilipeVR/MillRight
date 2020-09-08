@@ -35,7 +35,6 @@ public class AnimClipTrigger : MonoBehaviour
     public Boolean PlaySequence()
     {
        
-        //Debug.Log(animationName);
         if(index == trigger.Index && CheckManager() && sentenceIndex == dialogueManager.SentenceIndex)
         {
            return trigger.PlayAnimation(transitionParameter, animationName);
@@ -66,7 +65,6 @@ public class AnimClipTrigger : MonoBehaviour
 
     private void OnMouseOver()
     {
-        //Debug.Log("AnimClipTrigger " + "(" + gameObject.name + ") : " + manager.Index);
         if (colorChange && CheckManager() && index == trigger.Index && sentenceIndex == dialogueManager.SentenceIndex) {
             GetComponent<Renderer>().material.color = hoverColor;
 

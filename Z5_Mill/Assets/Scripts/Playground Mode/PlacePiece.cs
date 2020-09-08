@@ -43,18 +43,8 @@ public class PlacePiece : MonoBehaviour
 
             constantReference.x = referenceTransformX.localPosition.x;
             constantReference.y = referenceTransformY.localPosition.y;
-            Debug.Log("Offset X: " + offset.x.ToString());
-            Debug.Log("Offset Y: " + offset.y.ToString());
-            //Debug.Log("LocalPos X: " + transform.localPosition.x.ToString());
-            //Debug.Log("LocalPos Y: " + transform.localPosition.y.ToString());
-            //Debug.Log("LocalPos Z: " + transform.localPosition.z.ToString());
 
             Vector3 offsetVal = new Vector3(transform.localPosition.x + offset.x, transform.localPosition.y + offset.y, transform.localPosition.z + offset.z);
-            //Debug.Log(offsetVal);
-            //Debug.Log("Val X: " + offsetVal.x.ToString());
-            //Debug.Log("Val Y: " + offsetVal.y.ToString());
-            //Debug.Log("Val Z: " + offsetVal.z.ToString());
-            //Debug.Log(transform.localPosition);
 
             gameObject.transform.localPosition = offsetVal;
         }

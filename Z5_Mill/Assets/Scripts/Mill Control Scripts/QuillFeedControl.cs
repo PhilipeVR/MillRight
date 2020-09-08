@@ -56,7 +56,6 @@ public class QuillFeedControl : MonoBehaviour
             setLockSpeed(0.5f);
             pause();
             pauseLock();
-            //Debug.LogWarning(lock_anim.runtimeAnimatorController.animationClips[0].name);
 
             handle_enabled = true;
             wheel_spin = true;
@@ -225,7 +224,6 @@ public class QuillFeedControl : MonoBehaviour
 
     private void setSpeed(float mph)
     {
-        //Debug.Log(mph);
         object_anim.speed = mph;
         if (mph > 0)
         {

@@ -62,8 +62,6 @@ public class CollisionVisibility : MonoBehaviour
 
     private void OnCollisionEnter(Collision collison)
     {
-        //Debug.LogWarning("Collision Present");
-        //Debug.LogWarning(collison.collider.tag);
 
         if (collison.collider.tag == collisionTag)
         {

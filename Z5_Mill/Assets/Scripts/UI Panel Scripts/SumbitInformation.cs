@@ -6,6 +6,7 @@ using UnityEngine.UI;
 
 public class SumbitInformation : MonoBehaviour
 {
+    [SerializeField] private LoadSceneScript loadScene;
     [SerializeField] private SceneDisplayToggle displayToggle;
     [SerializeField] private LanguageSceneToggle InputInformation;
     [SerializeField] private Text fullNameText;
@@ -13,6 +14,7 @@ public class SumbitInformation : MonoBehaviour
     [SerializeField] private Text infoWarning;
     [SerializeField] private GameObject panel;
     [SerializeField] private Button begin;
+    [SerializeField] private string SceneName;
     private string fullName, num;
 
     private void Start()
@@ -35,7 +37,8 @@ public class SumbitInformation : MonoBehaviour
             InputInformation.setNumber(studentNumberText.text);
             panel.SetActive(false);
             displayToggle.SubmitDone = true;
-}
+            loadScene.loadlevel(SceneName);
+        }
 
     }
 }

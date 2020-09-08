@@ -25,19 +25,7 @@ public class TriggerAnimationController : MonoBehaviour
                 parameters.Add(param);
             }
         }
-        /*string s = "| ";
-        AnimationClip[] clips = animator.runtimeAnimatorController.animationClips;
-        foreach (AnimationClip clip in clips)
-        {
-            s += clip.name + " | ";
-        }
-        string d = "| ";
-        foreach (AnimatorControllerParameter cf in parameters)
-        {
-            d += cf.name + " | ";
-        }
-        Debug.Log(s);
-        Debug.Log(d);*/
+    
         
     }
 
@@ -68,9 +56,7 @@ public class TriggerAnimationController : MonoBehaviour
 
 
         if (index < parameters.Count && activated) {
-            Debug.Log("Animation Time: " + animator.GetCurrentAnimatorStateInfo(0).normalizedTime);
             Boolean inRightTransition = animator.GetCurrentAnimatorStateInfo(0).normalizedTime > 1f;
-            Debug.Log(inRightTransition);
             if (transition == parameters[index].name && inRightTransition && animationName == clipName[index])
             {
                 animator.SetBool(transition, true);
@@ -101,7 +87,6 @@ public class TriggerAnimationController : MonoBehaviour
 
     public void ResetParams()
     {
-        Debug.Log("ResetParams: " + index);
         for (int i = 0; i < parameters.Count; i++)
         {
             animator.SetBool(parameters[i].name, false);
@@ -118,14 +103,12 @@ public class TriggerAnimationController : MonoBehaviour
 
     public void ResetAnim()
     {
-        Debug.Log("TriggerAnimationController - " + name + ": " + resetParam);
         animator.SetFloat(resetParam, 1f);
 
     }
 
     public void RestartAnim()
     {
-        Debug.Log("TriggerAnimationController - " + name + ": " + restartParam);
         animator.SetFloat(restartParam, 1f);
 
     }

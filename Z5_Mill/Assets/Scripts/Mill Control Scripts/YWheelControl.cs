@@ -15,11 +15,6 @@ public class YWheelControl : MonoBehaviour
     private PlacePiece placePiece;
     [SerializeField] private string lockBool, unlockBool;
 
-
-    private float new_time, prev_time, prev_distance;
-    public float currentSpeed;
-
-
     Boolean animated = true;
     Boolean handle_enabled, wheel_spin;
     public Boolean forwardCollision, backwardCollision, locked, scrollActive, keyActive;
@@ -28,8 +23,6 @@ public class YWheelControl : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
-        prev_time = 0;
-        prev_distance = 0;
         object_anim = animObject.GetComponent<Animator>();
         lock_anim = lockAnimObject.GetComponent<Animator>();
 
@@ -39,7 +32,6 @@ public class YWheelControl : MonoBehaviour
         setSpeed(0.2f);
         pause();
         pauseLock();
-        //Debug.LogWarning(lock_anim.runtimeAnimatorController.animationClips[0].name);
 
         handle_enabled = true;
         wheel_spin = true;
@@ -65,17 +57,7 @@ public class YWheelControl : MonoBehaviour
             }
             if ((YLockButton.Activated == true) && !locked)
             {
-
-                float distance, time;
-                if (Input.mouseScrollDelta.y != 0)
-                {
-                    distance = Math.Abs(Input.mouseScrollDelta.y - prev_distance);
-                    time = Math.Abs(Time.time - prev_time);
-                    currentSpeed = (distance / time) * speedMultiplier;
-                    scrollActive = true;
-                }
-
-                if (Input.mouseScrollDelta.y > 0f && !forwardCollision)
+                if (Input.mouseScrollDelta.y > 0f && !forwardCollision && animTime < 1f)
                 {
                     Boolean testPlace = placePiece != null;
                     if (testPlace && !placePiece.Clicked)
@@ -89,12 +71,10 @@ public class YWheelControl : MonoBehaviour
                     }
                     else {
                         object_anim.SetFloat("Reverse", 1);
-                        setSpeed(currentSpeed);
-                        //Debug.Log(Input.mouseScrollDelta.y);
-                        //Debug.Log(Input.GetAxis("Mouse ScrollWheel"));
+                        setSpeed(arrowSpeed);
                     }
                 }
-                else if (Input.mouseScrollDelta.y < 0f && !backwardCollision)
+                else if (Input.mouseScrollDelta.y < 0f && !backwardCollision && animTime > 0)
                 {
                     Boolean testPlace = placePiece != null;
                     if (testPlace && !placePiece.Clicked)
@@ -109,7 +89,7 @@ public class YWheelControl : MonoBehaviour
                     else
                     {
                         object_anim.SetFloat("Reverse", -1);
-                        setSpeed(currentSpeed);
+                        setSpeed(arrowSpeed);
                     }
                 }
                 else
@@ -137,7 +117,7 @@ public class YWheelControl : MonoBehaviour
             if ((YLockButton.Activated == true) && !locked)
             {
 
-                if (e.type == EventType.KeyDown && e.keyCode == KeyCode.UpArrow && !forwardCollision)
+                if (e.type == EventType.KeyDown && e.keyCode == KeyCode.UpArrow && !forwardCollision && animTime < 1f)
                 {
                     keyActive = true;
                     Boolean testPlace = placePiece != null;
@@ -154,11 +134,9 @@ public class YWheelControl : MonoBehaviour
                     {
                         object_anim.SetFloat("Reverse", 1);
                         setSpeed(arrowSpeed);
-                        //Debug.Log(Input.mouseScrollDelta.y);
-                        //Debug.Log(Input.GetAxis("Mouse ScrollWheel"));
                     }
                 }
-                else if (e.type == EventType.KeyDown && e.keyCode == KeyCode.DownArrow && !backwardCollision)
+                else if (e.type == EventType.KeyDown && e.keyCode == KeyCode.DownArrow && !backwardCollision && animTime > 0)
                 {
                     keyActive = true;
                     Boolean testPlace = placePiece != null;
@@ -221,7 +199,6 @@ public class YWheelControl : MonoBehaviour
 
     private void setSpeed(float mph)
     {
-        //Debug.Log(mph);
         object_anim.speed = mph;
         if (mph > 0)
         {

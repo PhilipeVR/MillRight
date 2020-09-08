@@ -35,7 +35,6 @@ public class BitCollisionController : MonoBehaviour
     {
         if(collision.transform.tag == StockTag)
         {
-            //Debug.Log("Im In A Collsion");
             controller.StartCollsion();
         }
 
@@ -45,7 +44,6 @@ public class BitCollisionController : MonoBehaviour
     {
         if (collision.transform.tag == StockTag)
         {
-            //Debug.Log("Im Still In A Collsion");
             controller.StartCollsion();
         }
     }
@@ -53,7 +51,6 @@ public class BitCollisionController : MonoBehaviour
 
     public void EndCollsion()
     {
-        //Debug.Log("Im Left the Collsion");
         controller.EndCollision();
     }
 }

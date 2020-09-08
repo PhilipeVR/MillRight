@@ -142,8 +142,6 @@ public class HintTriggerFlash : MonoBehaviour
             foreach (HintFlash.ObjectTriggerInfo info in currentInfo)
             {
                 i++;
-                Debug.Log("Manager: " + manager.SentenceIndex);
-                Debug.Log("Info: " + info.SenteceIndex);
                 if (manager.SentenceIndex == info.SenteceIndex)
                 {
                     found = true;
@@ -156,7 +154,6 @@ public class HintTriggerFlash : MonoBehaviour
             }
             else
             {
-                Debug.Log("I FOUND YOU");
                 proceedBTN.interactable = currentClickedInfo[i];
             }
            

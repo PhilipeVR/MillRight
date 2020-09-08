@@ -6,6 +6,7 @@ using UnityEngine.UI;
 
 public class RevertDestruction : MonoBehaviour
 {
+
     [SerializeField] private GameObject prefab;
     [SerializeField] private List<Vector3> destroyedTransformPos;
     [SerializeField] private List<Vector3> destroyedTransformScale;

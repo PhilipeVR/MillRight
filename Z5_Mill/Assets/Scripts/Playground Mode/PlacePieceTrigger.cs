@@ -36,16 +36,9 @@ public class PlacePieceTrigger : MonoBehaviour
     private void OnMouseDown()
     {
 
-        Debug.Log(WheelControl.animTime);
-        Debug.Log("Quill Height: " + QuillControl.Height);
-        Debug.Log("Quill Max Height: " + QuillControl.MaxHeight);
-        Debug.Log("Fine Height: " + QuillControl.MaxHeight);
-        Debug.Log("Fine Max Height: " + QuillControl.MaxHeight);
 
         if (!Clicked)
         {
-            Debug.Log(QuillControl.Height);
-            Debug.Log(QuillControl.MaxHeight);
 
             if ((WheelControl.animTime > 0 || (QuillControl.Height < QuillControl.MaxHeight)) && checkBitState.CheckState())
             {

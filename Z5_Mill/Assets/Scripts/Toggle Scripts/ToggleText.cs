@@ -26,12 +26,9 @@ public class ToggleText : MonoBehaviour
         {
             initialText = toggleOptionText2;
         }
-        Debug.Log(initialText + ": " + initialText.Length);
-        Debug.Log(currentText.text.ToString() + ": " + currentText.text.ToString().Length);
         
         if (currentText.text.Equals(initialText))
         {
-            Debug.Log("Not equal it seems: " + initialText);
             currentText.text = toggleOptionText;
         } 
         else
