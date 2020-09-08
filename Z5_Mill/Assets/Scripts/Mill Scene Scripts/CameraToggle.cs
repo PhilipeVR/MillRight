@@ -15,7 +15,7 @@ public class CameraToggle : MonoBehaviour
     [SerializeField] Camera camController;
     private static string MAIN_CAM_TAG = "MainCamera"; 
     private int index;
-    private Boolean ExplainCam;
+    private Boolean ExplainCam, Explained;
     void Awake()
     {
         index = 0;
@@ -26,6 +26,7 @@ public class CameraToggle : MonoBehaviour
         cameras = camList.ToArray();
 
         camCurrentNum.text = "1";
+        
         deactivateAll();
         SwtichView();
     }
@@ -36,6 +37,8 @@ public class CameraToggle : MonoBehaviour
         if (ExplainCam && dialogueTrigger != null)
         {
             dialogueTrigger.TriggerDialogue(0);
+            ExplainCam = false;
+            Explained = true;
         }
         else {
             if (index == cameras.Length)
@@ -53,11 +56,12 @@ public class CameraToggle : MonoBehaviour
             cameras[index].tag = MAIN_CAM_TAG;
             index++;
         }
-   
-        if(dialogueTrigger != null)
+
+        if (dialogueTrigger != null && !Explained)
         {
             ExplainCam = true;
         }
+
     }
 
     void deactivateAll()
