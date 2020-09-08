@@ -16,7 +16,7 @@ public class ZWheelControl : MonoBehaviour
     [SerializeField]
     Boolean enable = true;
 
-    [SerializeField] private float speedMultiplier;
+    [SerializeField] private float speedMultiplier, arrowSpeed;
 
     private PlacePiece placePiece;
     private ClampPiece clampPiece;
@@ -27,7 +27,7 @@ public class ZWheelControl : MonoBehaviour
 
 
     Boolean animated = true;
-    Boolean handle_enabled, wheel_spin, locked;
+    Boolean handle_enabled, wheel_spin, locked, scrollActive, keyActive;
     Animator object_anim, lock_anim;
 
     // Start is called before the first frame update
@@ -56,7 +56,7 @@ public class ZWheelControl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (enable && !Input.GetKey(KeyCode.LeftShift)) // Do not execute when left shift held down (to not interfere with camera controller)
+        if (enable && !Input.GetKey(KeyCode.LeftShift) && !keyActive) // Do not execute when left shift held down (to not interfere with camera controller)
         {
             if ((ZLockButton.Activated == true) && !locked)
             {
@@ -67,6 +67,7 @@ public class ZWheelControl : MonoBehaviour
                     distance = Math.Abs(Input.mouseScrollDelta.y - prev_distance);
                     time = Math.Abs(Time.time - prev_time);
                     currentSpeed = (distance / time) * speedMultiplier;
+                    scrollActive = true;
                 }
 
                 if (Input.mouseScrollDelta.y > 0f)
@@ -99,6 +100,54 @@ public class ZWheelControl : MonoBehaviour
                 } else
                 {
                     pause();
+                    scrollActive = false;
+                }
+            }
+        }
+    }
+
+    void OnGUI()
+    {
+        Event e = Event.current;
+        if (enable && !scrollActive) // Do not execute when left shift held down (to not interfere with camera controller)
+        {
+            if ((ZLockButton.Activated == true) && !locked)
+            {
+
+                if (e.type == EventType.KeyDown && e.keyCode == KeyCode.DownArrow)
+                {
+                    keyActive = true;
+                    Boolean testPlace = placePiece != null;
+                    Boolean testClamp = clampPiece != null;
+                    if ((testPlace && placePiece.animTime > 0f && placePiece.animTime < 1f) || (testClamp && clampPiece.animTime > 0f && clampPiece.animTime < 1f))
+                    {
+                        StopMovement();
+                    }
+                    else
+                    {
+                        object_anim.SetFloat("Reverse", 1);
+                        setSpeed(arrowSpeed);
+                    }
+                }
+                else if (e.type == EventType.KeyDown && e.keyCode == KeyCode.UpArrow)
+                {
+                    keyActive = true;
+                    Boolean testPlace = placePiece != null;
+                    Boolean testClamp = clampPiece != null;
+                    if ((testPlace && placePiece.animTime > 0f && placePiece.animTime < 1f) || (testClamp && clampPiece.animTime > 0f && clampPiece.animTime < 1f))
+                    {
+                        StopMovement();
+                    }
+                    else
+                    {
+                        object_anim.SetFloat("Reverse", -1);
+                        setSpeed(arrowSpeed);
+                    }
+                }
+                else
+                {
+                    pause();
+                    keyActive = false;
                 }
             }
         }

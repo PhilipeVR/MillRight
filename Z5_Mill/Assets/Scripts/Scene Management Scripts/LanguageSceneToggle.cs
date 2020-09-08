@@ -6,6 +6,8 @@ using UnityEngine;
 public class LanguageSceneToggle : MonoBehaviour
 {
     public static Boolean language;
+    public static string fullName;
+    public static string studentNumber;
     // Start is called before the first frame update
 
     public void setLanguage(Boolean lang)
@@ -17,4 +19,26 @@ public class LanguageSceneToggle : MonoBehaviour
     {
         return language;
     }
+
+    public void setName(string fullname)
+    {
+        fullName = fullname;
+    }
+
+    public void setNumber(string number)
+    {
+        studentNumber = number;
+    }
+
+    public string Name
+    {
+        get => fullName;
+    }
+
+    public string Number
+    {
+        get => studentNumber;
+    }
+
+
 }

@@ -14,7 +14,7 @@ public class XWheelControl : MonoBehaviour
     [SerializeField] public DRO_Button XLockButton;
     [SerializeField] GameObject wheel, lockHandle;
     [SerializeField] Boolean enable = true;
-    [SerializeField] private float speedMultiplier;
+    [SerializeField] private float speedMultiplier, arrowSpeed;
     private PlacePiece placePiece;
 
     private float new_time, prev_time, prev_distance;
@@ -23,7 +23,7 @@ public class XWheelControl : MonoBehaviour
 
     Boolean animated = true;
     Boolean handle_enabled, wheel_spin;
-    public Boolean leftCollision, rightCollision, locked;
+    public Boolean leftCollision, rightCollision, locked, scrollActive, keyActive;
     public Animator object_anim, lock_anim;
     private Boolean reminder;
 
@@ -49,7 +49,7 @@ public class XWheelControl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (enable && !Input.GetKey(KeyCode.LeftShift)) // Do not execute when left shift held down (to not interfere with camera controller)
+        if (enable && !Input.GetKey(KeyCode.LeftShift) && !keyActive) // Do not execute when left shift held down (to not interfere with camera controller)
         {
             if (XLockButton.Activated)
             {
@@ -69,6 +69,7 @@ public class XWheelControl : MonoBehaviour
                     distance = Math.Abs(Input.mouseScrollDelta.y - prev_distance);
                     time = Math.Abs(Time.time - prev_time);
                     currentSpeed = (distance / time) * speedMultiplier;
+                    scrollActive = true;
                 }
 
 
@@ -116,6 +117,76 @@ public class XWheelControl : MonoBehaviour
                 else
                 {
                     pause();
+                    scrollActive = false;
+                }
+            }
+        }
+    }
+
+    void OnGUI()
+    {
+        Event e = Event.current;
+        if (enable && !scrollActive) // Do not execute when left shift held down (to not interfere with camera controller)
+        {
+            if (XLockButton.Activated)
+            {
+                if (selector.Current.Name != "Null" && !selector.Current.GetPlacePiece().Clicked)
+                {
+                    WarningEvents.current.PieceFirst();
+                    manager.resetDRO();
+                }
+            }
+            if ((XLockButton.Activated == true) && !locked)
+            {
+                RemindUser();
+
+                Debug.Log(e.type);
+                if (e.type == EventType.KeyDown && e.keyCode == KeyCode.UpArrow && !leftCollision)
+                {
+                    keyActive = true;
+                    Boolean testPlace = placePiece != null;
+                    if (testPlace && !placePiece.Clicked)
+                    {
+                        pause();
+                        WarningEvents.current.PieceFirst();
+                    }
+                    else if (testPlace && placePiece.animTime > 0f && placePiece.animTime < 1f)
+                    {
+                        StopMovement();
+                    }
+
+                    else
+                    {
+                        object_anim.SetFloat("Reverse", 1);
+                        setSpeed(arrowSpeed);
+                        //Debug.Log(Input.mouseScrollDelta.y);
+                        //Debug.Log(Input.GetAxis("Mouse ScrollWheel"));
+                    }
+                }
+
+                else if (e.type == EventType.KeyDown && e.keyCode == KeyCode.DownArrow && !rightCollision)
+                {
+                    keyActive = true;
+                    Boolean testPlace = placePiece != null;
+                    if (testPlace && !placePiece.Clicked)
+                    {
+                        pause();
+                        WarningEvents.current.PieceFirst();
+                    }
+                    else if (testPlace && placePiece.animTime > 0f && placePiece.animTime < 1f)
+                    {
+                        StopMovement();
+                    }
+                    else
+                    {
+                        object_anim.SetFloat("Reverse", -1);
+                        setSpeed(arrowSpeed);
+                    }
+                }
+                else
+                {
+                    pause();
+                    keyActive = false;
                 }
             }
         }

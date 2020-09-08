@@ -25,7 +25,7 @@ public class QuillFeedControl : MonoBehaviour
     [SerializeField]
     Boolean enable = true;
 
-    public Boolean collided, moving, prev_state, reminder;
+    public Boolean collided, moving, prev_state, reminder, scrollActive, keyActive;
 
     [SerializeField] private float movementInterval;
 
@@ -67,7 +67,7 @@ public class QuillFeedControl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (enable && !Input.GetKey(KeyCode.LeftShift)) // Do not execute when left shift held down (to not interfere with camera controller)
+        if (enable && !Input.GetKey(KeyCode.LeftShift) && !keyActive) // Do not execute when left shift held down (to not interfere with camera controller)
         {
             if (QuillLockButton.Activated == true && wheel.activeSelf)
             {
@@ -76,6 +76,7 @@ public class QuillFeedControl : MonoBehaviour
 
                 if (Input.mouseScrollDelta.y > 0f && !collided)
                 {
+                    scrollActive = true;
                     Boolean testPlace = placePiece != null;
                     Boolean testClamp = clampPiece != null;
                     if ((testPlace && placePiece.animTime > 0f && placePiece.animTime < 1f) || (testClamp && clampPiece.animTime > 0f && clampPiece.animTime < 1f))
@@ -100,6 +101,7 @@ public class QuillFeedControl : MonoBehaviour
                 }
                 else if (Input.mouseScrollDelta.y < 0f)
                 {
+                    scrollActive = true;
                     Boolean testPlace = placePiece != null;
                     Boolean testClamp = clampPiece != null;
                     if ((testPlace && placePiece.animTime > 0f && placePiece.animTime < 1f) || (testClamp && clampPiece.animTime > 0f && clampPiece.animTime < 1f))
@@ -125,6 +127,78 @@ public class QuillFeedControl : MonoBehaviour
                 }
                 else
                 {
+                    scrollActive = false;
+                    moving = false;
+                    pause();
+                }
+            }
+        }
+    }
+
+    private void OnGUI()
+    {
+        Event e = Event.current;
+        if (enable && !scrollActive) // Do not execute when left shift held down (to not interfere with camera controller)
+        {
+            if (QuillLockButton.Activated == true && wheel.activeSelf)
+            {
+
+                RemindUser();
+
+                if (e.type == EventType.KeyDown && e.keyCode == KeyCode.DownArrow && !collided)
+                {
+                    keyActive = true;
+                    Boolean testPlace = placePiece != null;
+                    Boolean testClamp = clampPiece != null;
+                    if ((testPlace && placePiece.animTime > 0f && placePiece.animTime < 1f) || (testClamp && clampPiece.animTime > 0f && clampPiece.animTime < 1f))
+                    {
+                        StopMovement();
+                    }
+                    else
+                    {
+                        Vector3 tmp_pos = wheel.transform.localPosition;
+                        float z_pos = tmp_pos.z - movementInterval;
+
+                        if (z_pos <= MAX_HEIGHT && z_pos >= MIN_HEIGHT)
+                        {
+                            moving = true;
+
+                            Vector3 new_pos = new Vector3(tmp_pos.x, tmp_pos.y, z_pos);
+                            wheel.transform.localPosition = new_pos;
+                            object_anim.SetFloat("Reverse", 1);
+                            setSpeed(2f);
+                        }
+                    }
+                }
+                else if (e.type == EventType.KeyDown && e.keyCode == KeyCode.UpArrow)
+                {
+                    keyActive = true;
+                    Boolean testPlace = placePiece != null;
+                    Boolean testClamp = clampPiece != null;
+                    if ((testPlace && placePiece.animTime > 0f && placePiece.animTime < 1f) || (testClamp && clampPiece.animTime > 0f && clampPiece.animTime < 1f))
+                    {
+                        StopMovement();
+                    }
+                    else
+                    {
+                        Vector3 tmp_pos = wheel.transform.localPosition;
+                        float z_pos = tmp_pos.z + movementInterval;
+
+                        if (z_pos <= MAX_HEIGHT && z_pos >= MIN_HEIGHT)
+                        {
+                            moving = true;
+
+                            Vector3 new_pos = new Vector3(tmp_pos.x, tmp_pos.y, z_pos);
+
+                            wheel.transform.localPosition = new_pos;
+                            object_anim.SetFloat("Reverse", -1);
+                            setSpeed(2f);
+                        }
+                    }
+                }
+                else
+                {
+                    keyActive = false;
                     moving = false;
                     pause();
                 }

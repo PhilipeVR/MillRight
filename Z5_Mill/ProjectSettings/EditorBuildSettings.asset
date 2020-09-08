@@ -29,4 +29,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Mill Control Scenes/Mill Simulation Scene.unity
     guid: fc738de891c101748bc62fc549e41e0e
+  - enabled: 1
+    path: Assets/Scenes/Menu Scenes/Certificate.unity
+    guid: 13e2ec0c91680c047b8730e0213f3fac
   m_configObjects: {}

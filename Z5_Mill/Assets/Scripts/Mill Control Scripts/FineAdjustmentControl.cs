@@ -26,7 +26,7 @@ public class FineAdjustmentControl : MonoBehaviour
     Boolean enable = true;
 
     public Boolean collided, moving;
-    Boolean animated, handle_enabled, wheel_spin, reminder;
+    Boolean animated, handle_enabled, wheel_spin, reminder, scrollActive, keyActive;
 
     [SerializeField] private float movementInterval;
     Animator object_anim, lock_anim;
@@ -62,7 +62,7 @@ public class FineAdjustmentControl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (enable && !Input.GetKey(KeyCode.LeftShift)) // Do not execute when left shift held down (to not interfere with camera controller)
+        if (enable && !Input.GetKey(KeyCode.LeftShift) && !keyActive) // Do not execute when left shift held down (to not interfere with camera controller)
         {
             if (FineAdjustmentButton.Activated == true)
             {
@@ -71,6 +71,7 @@ public class FineAdjustmentControl : MonoBehaviour
 
                 if (Input.mouseScrollDelta.y > 0f && !collided)
                 {
+                    scrollActive = true;
 
                     Vector3 tmp_pos = fineAdjustment.transform.localPosition;
                     float z_pos = tmp_pos.z - movementInterval;
@@ -86,7 +87,62 @@ public class FineAdjustmentControl : MonoBehaviour
                 }
                 else if (Input.mouseScrollDelta.y < 0f)
                 {
+                    scrollActive = true;
 
+                    moving = true;
+
+                    Vector3 tmp_pos = fineAdjustment.transform.localPosition;
+                    float z_pos = tmp_pos.z + movementInterval;
+
+                    if (z_pos <= MAX_HEIGHT && z_pos >= MIN_HEIGHT)
+                    {
+                        Vector3 new_pos = new Vector3(tmp_pos.x, tmp_pos.y, z_pos);
+
+                        fineAdjustment.transform.localPosition = new_pos;
+                        object_anim.SetFloat("Reverse", -1);
+                        setSpeed(2f);
+                    }
+                }
+                else
+                {
+                    pause();
+                    scrollActive = false;
+                    moving = true;
+
+                }
+            }
+        }
+    }
+
+    void OnGUI()
+    {
+        Event e = Event.current;
+        if (enable && !scrollActive) // Do not execute when left shift held down (to not interfere with camera controller)
+        {
+            if (FineAdjustmentButton.Activated == true)
+            {
+
+                RemindUser();
+
+                if (e.type == EventType.KeyDown && e.keyCode == KeyCode.DownArrow && !collided)
+                {
+                    keyActive = true;
+
+                    Vector3 tmp_pos = fineAdjustment.transform.localPosition;
+                    float z_pos = tmp_pos.z - movementInterval;
+
+                    if (z_pos <= MAX_HEIGHT && z_pos >= MIN_HEIGHT)
+                    {
+                        moving = true;
+                        Vector3 new_pos = new Vector3(tmp_pos.x, tmp_pos.y, z_pos);
+                        fineAdjustment.transform.localPosition = new_pos;
+                        object_anim.SetFloat("Reverse", 1);
+                        setSpeed(2f);
+                    }
+                }
+                else if (e.type == EventType.KeyDown && e.keyCode == KeyCode.UpArrow)
+                {
+                    keyActive = true;
 
                     moving = true;
 
@@ -106,6 +162,7 @@ public class FineAdjustmentControl : MonoBehaviour
                 {
                     pause();
                     moving = true;
+                    keyActive = false;
 
                 }
             }

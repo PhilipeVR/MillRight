@@ -11,7 +11,7 @@ public class YWheelControl : MonoBehaviour
     [SerializeField] public DRO_Button YLockButton;
     [SerializeField] GameObject wheel, lockHandle;
     [SerializeField] Boolean enable = true;
-    [SerializeField] private float speedMultiplier;
+    [SerializeField] private float speedMultiplier, arrowSpeed;
     private PlacePiece placePiece;
     [SerializeField] private string lockBool, unlockBool;
 
@@ -22,7 +22,7 @@ public class YWheelControl : MonoBehaviour
 
     Boolean animated = true;
     Boolean handle_enabled, wheel_spin;
-    public Boolean forwardCollision, backwardCollision, locked;
+    public Boolean forwardCollision, backwardCollision, locked, scrollActive, keyActive;
     public Animator object_anim, lock_anim;
 
     // Start is called before the first frame update
@@ -53,7 +53,7 @@ public class YWheelControl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (enable && !Input.GetKey(KeyCode.LeftShift)) // Do not execute when left shift held down (to not interfere with camera controller)
+        if (enable && !Input.GetKey(KeyCode.LeftShift) && !keyActive) // Do not execute when left shift held down (to not interfere with camera controller)
         {
             if (YLockButton.Activated)
             {
@@ -72,6 +72,7 @@ public class YWheelControl : MonoBehaviour
                     distance = Math.Abs(Input.mouseScrollDelta.y - prev_distance);
                     time = Math.Abs(Time.time - prev_time);
                     currentSpeed = (distance / time) * speedMultiplier;
+                    scrollActive = true;
                 }
 
                 if (Input.mouseScrollDelta.y > 0f && !forwardCollision)
@@ -114,6 +115,72 @@ public class YWheelControl : MonoBehaviour
                 else
                 {
                     pause();
+                    scrollActive = false;
+                }
+            }
+        }
+    }
+
+    private void OnGUI()
+    {
+        Event e = Event.current;
+        if (enable && !scrollActive) // Do not execute when left shift held down (to not interfere with camera controller)
+        {
+            if (YLockButton.Activated)
+            {
+                if (selector.Current.Name != "Null" && !selector.Current.GetPlacePiece().Clicked)
+                {
+                    WarningEvents.current.PieceFirst();
+                    manager.resetDRO();
+                }
+            }
+            if ((YLockButton.Activated == true) && !locked)
+            {
+
+                if (e.type == EventType.KeyDown && e.keyCode == KeyCode.UpArrow && !forwardCollision)
+                {
+                    keyActive = true;
+                    Boolean testPlace = placePiece != null;
+                    if (testPlace && !placePiece.Clicked)
+                    {
+                        pause();
+                        WarningEvents.current.PieceFirst();
+                    }
+                    else if (testPlace && placePiece.animTime > 0f && placePiece.animTime < 1f)
+                    {
+                        StopMovement();
+                    }
+                    else
+                    {
+                        object_anim.SetFloat("Reverse", 1);
+                        setSpeed(arrowSpeed);
+                        //Debug.Log(Input.mouseScrollDelta.y);
+                        //Debug.Log(Input.GetAxis("Mouse ScrollWheel"));
+                    }
+                }
+                else if (e.type == EventType.KeyDown && e.keyCode == KeyCode.DownArrow && !backwardCollision)
+                {
+                    keyActive = true;
+                    Boolean testPlace = placePiece != null;
+                    if (testPlace && !placePiece.Clicked)
+                    {
+                        pause();
+                        WarningEvents.current.PieceFirst();
+                    }
+                    else if (testPlace && placePiece.animTime > 0f && placePiece.animTime < 1f)
+                    {
+                        StopMovement();
+                    }
+                    else
+                    {
+                        object_anim.SetFloat("Reverse", -1);
+                        setSpeed(arrowSpeed);
+                    }
+                }
+                else
+                {
+                    pause();
+                    keyActive = false;
                 }
             }
         }

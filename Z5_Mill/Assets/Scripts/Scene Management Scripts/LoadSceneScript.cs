@@ -18,6 +18,10 @@ public class LoadSceneScript : MonoBehaviour
         {
             SceneManager.LoadScene("MainMenu");
         }
+        else if (e.type == EventType.KeyDown && e.control && e.keyCode == KeyCode.C)
+        {
+            SceneManager.LoadScene("Certificate");
+        }
     }
 
     public void ExitGame()
