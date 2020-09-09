@@ -13,9 +13,20 @@ MonoBehaviour:
   m_Name: CameraController
   m_EditorClassIdentifier: 
   dialogues:
-  - name: 'Camera Controller '
-    frenchName: 
+  - name: Welcome to the Mill Right Workshop
+    frenchName: Bienvenue dans l'atelier Mill Right
     sentences:
+    - 'Welcome to the Mill Right Workshop. In this workshop you will learn about
+      the milling machine. A mill is machine which uses a lot of different rotary
+      cutters to remove material from a of workpiece. '
+    - 'Throughout these tutorials you will learn about the different parts of the
+      mill, the different operations and how to setup different tool holders. '
+    - On this first tutorial, the goal is to identify the different key parts of
+      the mill and read their description.
+    - 'Click on a part of the mill to get started. Upon finding all the parts you
+      will notice a button at the bottom right will appear. Click on that button
+      to go to the next tutorial. '
+    - 'If you need any help finding parts click on the lightbulb for a hint. '
     - The camera button on the bottom left of your screen will allow you to cycle
       through different cameras. The number on the button will correspond to the
       Camera that is currently active.
@@ -28,5 +39,50 @@ MonoBehaviour:
       relative to its focus point.
     - Hold the left-shift key while using the mouse scroll wheel to zoom in or out
       with the camera.
-    sentencesFR: []
-    images: []
+    - One final note before starting. These information boxes will acompanny you
+      all along these tutorials. If they're ever in the way you can simply click
+      and drag them into a more convenient location.
+    - 'Now you are set to start. Good luck and have fun. '
+    sentencesFR:
+    - "Bienvenue \xE0 l'atelier Mill Right. Dans cet atelier, vous apprendrez \xE0
+      propos de la machine de fraisage. "
+    - "Tout au long de ces tutoriels, vous d\xE9couvrirez les diff\xE9rentes parties
+      de la fraiseuse, les diff\xE9rentes op\xE9rations et comment configurer diff\xE9rents
+      porte-outils."
+    - "Sur ce premier tutoriel, le but est d'identifier les diff\xE9rents \xE9l\xE9ments
+      cl\xE9s de la machine de fraisage et de lire leurs descriptions."
+    - "Cliquez sur une partie de la fraiseuse pour commencer. Apr\xE8s avoir trouv\xE9
+      toutes les pi\xE8ces, vous remarquerez qu'un bouton en bas \xE0 droite appara\xEEtra.
+      Cliquez sur ce bouton pour acc\xE9der au didacticiel suivant."
+    - Besoin d'aide? Cliquez sur l'ampoule pour un indice.
+    - "Le bouton de la cam\xE9ra dans le coin inf\xE9rieur gauche de votre \xE9cran
+      vous permettra de parcourir diff\xE9rentes cam\xE9ras. Le num\xE9ro sur le
+      bouton correspondra \xE0 la cam\xE9ra actuellement active."
+    - "La cam\xE9ra 1 est contr\xF4lable, les autres cam\xE9ras sont des vues fixes.
+      Pour contr\xF4ler la cam\xE9ra 1, v\xE9rifiez d'abord que le bouton de la cam\xE9ra
+      affiche un ''1\", indiquant que la cam\xE9ra 1 est active."
+    - "Maintenez le bouton gauche de la souris en d\xE9pla\xE7ant celle-ci pour faire
+      tra\xEEner la cam\xE9ra sur l'\xE9cran."
+    - "Maintenez le bouton droit de la souris en d\xE9pla\xE7ant celle-ci pour faire
+      pivoter la cam\xE9ra par rapport \xE0 la fraiseuse."
+    - "Maintenez la touche Maj gauche tout en utilisant la molette de d\xE9filement
+      de la souris pour zoom vers l'avant ou l'arri\xE8re avec la cam\xE9ra."
+    - "Une derni\xE8re note avant de commencer. Ces bo\xEEtes d'information vous
+      accompagneront tout au long de ces tutoriels. S'ils sont dans le chemin, vous
+      pouvez simplement les cliqu\xE9 et les tra\xEEner vers un emplacement plus
+      convenable."
+    - "Vous \xEAtes maintenant pr\xEAt \xE0 commencer. Bonne chance et amusez-vous
+      bien."
+    images:
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
