@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe1e3773ddaa9ce48835846fb8e11c7f, type: 3}
   m_Name: axes
   m_EditorClassIdentifier: 
-  _info: How many axes does the vertical mill have?
+  _info: How many axes can the mill move in?
   _answers:
   - _info: 1
     _isCorrect: 0
@@ -20,6 +20,8 @@ MonoBehaviour:
     _isCorrect: 0
   - _info: 3
     _isCorrect: 1
+  - _info: 4
+    _isCorrect: 0
   _useTimer: 0
   _timer: 8
   _answerType: 1

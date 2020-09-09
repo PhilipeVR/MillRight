@@ -12,19 +12,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe1e3773ddaa9ce48835846fb8e11c7f, type: 3}
   m_Name: z movement
   m_EditorClassIdentifier: 
-  _info: What are the three levels of movement in the z-axis?
+  _info: How many ways is there to move the mill in the z-axis
   _answers:
-  - _info: Saddle
+  - _info: 1
     _isCorrect: 0
-  - _info: Moving the head up and down
-    _isCorrect: 1
-  - _info: Quill feed
-    _isCorrect: 1
-  - _info: Table movement
+  - _info: 2
     _isCorrect: 0
-  - _info: Fine adjustment wheel
+  - _info: 3
     _isCorrect: 1
+  - _info: 4
+    _isCorrect: 0
   _useTimer: 0
   _timer: 6
-  _answerType: 0
+  _answerType: 1
   _addScore: 1

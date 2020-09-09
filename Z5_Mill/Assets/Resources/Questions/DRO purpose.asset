@@ -10,21 +10,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe1e3773ddaa9ce48835846fb8e11c7f, type: 3}
-  m_Name: center drill
+  m_Name: DRO purpose
   m_EditorClassIdentifier: 
-  _info: What is a center drill used for? (select all that apply)
+  _info: What is the main purpose of the DRO on the mill?
   _answers:
-  - _info: Pre-drill holes
-    _isCorrect: 1
-  - _info: 'When large radial loads need to be withstood '
+  - _info: Keep track of your highscore
     _isCorrect: 0
-  - _info: Ensures proper location
+  - _info: Display your position in space
     _isCorrect: 1
-  - _info: Rigid enough to avoid deflection
-    _isCorrect: 1
-  - _info: When adjustments are required for various diameters
+  - _info: 'Calculate and output the proper speed '
+    _isCorrect: 0
+  - _info: All of the above
     _isCorrect: 0
   _useTimer: 0
-  _timer: 4
-  _answerType: 0
+  _timer: 0
+  _answerType: 1
   _addScore: 1
