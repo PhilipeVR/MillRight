@@ -361,8 +361,8 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: 'Congratulations, you have finished Mill Right''s Mill Workshop. There''s
     only one last thing to do. Take a screenshot of your certificate and submit it
-    on Brightspace. After you''ve done that press Ctrl + Z to go to the main menu.
-    Thank for playing our tutorial. '
+    on Brightspace. After you''ve done that press Ctrl + alt + Z to go to the main
+    menu. Thank for playing our tutorial. '
 --- !u!222 &560484409
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -390,8 +390,8 @@ MonoBehaviour:
     jou\xE9 \xE0 notre tutoriel."
   toggleOptionText2: 'Congratulations, you have finished Mill Right''s Mill Workshop.
     There''s only one last thing to do. Take a screenshot of your certificate and
-    submit it on Brightspace. After you''ve done that press Ctrl + Z to go to the
-    main menu. Thank for playing our tutorial. '
+    submit it on Brightspace. After you''ve done that press Ctrl + alt + Z to go
+    to the main menu. Thank for playing our tutorial. '
   currentText: {fileID: 560484408}
 --- !u!1 &590608596
 GameObject:
