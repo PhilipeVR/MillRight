@@ -10,19 +10,21 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe1e3773ddaa9ce48835846fb8e11c7f, type: 3}
-  m_Name: chatter
+  m_Name: drill chuck v collet
   m_EditorClassIdentifier: 
-  _info: Why does chatter occur?
+  _info: What is the difference between a collet and a drill chuck?
   _answers:
-  - _info: Results when there is a space of no contact
+  - _info: 'Drill chucks have three fingers that hold on to the tools while the collet
+      uses the whole circumference '
     _isCorrect: 0
-  - _info: Vibration between workpiece and tool bit
+  - _info: Drill chucks cannot withstand radial forces, but collets can
     _isCorrect: 0
-  - _info: The material isn't effectively secured with the clamp
+  - _info: Drill chucks are made to hold onto drill bits while collets are meant
+      to hold endmills
+    _isCorrect: 0
+  - _info: All of the above
     _isCorrect: 1
-  - _info: Lack of lubrication
-    _isCorrect: 0
   _useTimer: 0
-  _timer: 0
+  _timer: 10
   _answerType: 1
   _addScore: 1

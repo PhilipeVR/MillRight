@@ -10,16 +10,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe1e3773ddaa9ce48835846fb8e11c7f, type: 3}
-  m_Name: drilling
+  m_Name: axis locks
   m_EditorClassIdentifier: 
-  _info: What is the first step when drilling holes?
+  _info: Why do we want to lock the x-axis while performing a side milling operation?
   _answers:
-  - _info: Drill with center drill
+  - _info: To avoid moving the x-axis by accident while side milling
     _isCorrect: 0
-  - _info: Set up a reference system
+  - _info: The same reason we lock the y-axis; to get a better surface finish
+    _isCorrect: 0
+  - _info: To eliminate any vibrations that could translate over to the y axis
+    _isCorrect: 0
+  - _info: To prevent the table from walking while we machine the side face causing
+      a crooked cut
     _isCorrect: 1
-  - _info: Clamp workpiece
-    _isCorrect: 0
   _useTimer: 0
   _timer: 10
   _answerType: 1

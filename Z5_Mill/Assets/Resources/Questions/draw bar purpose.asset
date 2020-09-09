@@ -10,17 +10,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe1e3773ddaa9ce48835846fb8e11c7f, type: 3}
-  m_Name: flute
+  m_Name: draw bar purpose
   m_EditorClassIdentifier: 
-  _info: How many flutes are on a steel drill bit?
+  _info: What is the main purpose of the draw bar?
   _answers:
-  - _info: 2
+  - _info: To draw in the chips away from the workpiece
     _isCorrect: 0
-  - _info: 3
-    _isCorrect: 0
-  - _info: 4
+  - _info: To hold on to whatever tool holder is inserted into the spindle of the
+      machine
     _isCorrect: 1
-  - _info: None of the above
+  - _info: To cut threads into a workpiece
+    _isCorrect: 0
+  - _info: To hold the spindle together as the machine spins
     _isCorrect: 0
   _useTimer: 0
   _timer: 0

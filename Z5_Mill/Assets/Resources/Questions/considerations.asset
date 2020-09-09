@@ -10,19 +10,24 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe1e3773ddaa9ce48835846fb8e11c7f, type: 3}
-  m_Name: vice
+  m_Name: considerations
   m_EditorClassIdentifier: 
-  _info: What is the use of a vice?
+  _info: What are things you need to consider when choosing the amount of material
+    to remove when machining with a mill?
   _answers:
-  - _info: Can machine difficult to reach areas
+  - _info: Depth
     _isCorrect: 0
-  - _info: Supports the work table
+  - _info: Diameter
     _isCorrect: 0
-  - _info: Mount for cutting features
+  - _info: Speed
     _isCorrect: 0
-  - _info: Hold workpiece still
+  - _info: Travel Speed
+    _isCorrect: 0
+  - _info: Step-over
+    _isCorrect: 0
+  - _info: All of the above
     _isCorrect: 1
   _useTimer: 0
-  _timer: 10
+  _timer: 0
   _answerType: 1
   _addScore: 1
