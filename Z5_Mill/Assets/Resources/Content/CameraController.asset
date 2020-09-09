@@ -74,15 +74,15 @@ MonoBehaviour:
     - "Vous \xEAtes maintenant pr\xEAt \xE0 commencer. Bonne chance et amusez-vous
       bien."
     images:
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
+    - {fileID: 21300000, guid: a63dc4ffc1da78e4196c2e5360fed166, type: 3}
+    - {fileID: 21300000, guid: c87eda925a6b1c94ca927abf3094db91, type: 3}
+    - {fileID: 21300000, guid: 6b3332ac5106d7d4a94346b2b31eb71e, type: 3}
+    - {fileID: 21300000, guid: 06036ce3e6e7b2547923ae47b48db856, type: 3}
+    - {fileID: 21300000, guid: eb50766eaf392c94ab92e88fa6c4acbd, type: 3}
+    - {fileID: 21300000, guid: b4666515b8331da4d871ac3f3ab27a9b, type: 3}
+    - {fileID: 21300000, guid: d78e1ecb5fb882e4897c921dae6fbd72, type: 3}
+    - {fileID: 21300000, guid: ab55075fbbd4cdc499fb72f7965e48bd, type: 3}
+    - {fileID: 21300000, guid: 00de86b5b56ae66448c3cf68fcdd3850, type: 3}
+    - {fileID: 21300000, guid: 1cb492967cdc01742aef3407e9565b7a, type: 3}
+    - {fileID: 21300000, guid: fcbeeff6271b7fa4daa47e4303e698d6, type: 3}
+    - {fileID: 21300000, guid: 58f800628730cf643b8ca093f1427d47, type: 3}

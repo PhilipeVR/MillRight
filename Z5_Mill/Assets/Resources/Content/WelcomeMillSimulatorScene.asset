@@ -47,6 +47,8 @@ MonoBehaviour:
     - The Quill Feed toggle allows for control of the quill which allows the milling
       cutters to be raised and lowered. The fine adjustment toggle allows for a more
       accurate control of the quill when fine margins are needed during the operations.
+    - 'If any problem arise with using the mouse wheel or touchpad, you can use the
+      up and down keys to move the mill instead. '
     - "The zero button allows you to set your point of reference by simply clicking
       on the zero button while a control button/toggle is clicked. It will set the
       current location of the axis clicked as the reference point (you will notice
@@ -128,6 +130,9 @@ MonoBehaviour:
       qui permet de lever et d'abaisser les fraises. La bascule de r\xE9glage fin
       permet un contr\xF4le plus pr\xE9cis de la plume lorsque des marges fines sont
       n\xE9cessaires pendant les op\xE9rations."
+    - "Si un probl\xE8me survient lors de l'utilisation de la molette de la souris
+      ou du pav\xE9 tactile, vous pouvez utiliser les touches haut et bas pour d\xE9placer
+      la fraiseuse au lieu."
     - "Le bouton z\xE9ro vous permet de d\xE9finir votre point de r\xE9f\xE9rence
       en cliquant simplement sur le bouton z\xE9ro tout en cliquant sur un bouton
       de commande / bascule. Il d\xE9finit l'emplacement actuel de l'axe sur lequel
@@ -188,6 +193,7 @@ MonoBehaviour:
     - {fileID: 21300000, guid: 25ce94f665f4c16458ad7e31989568ba, type: 3}
     - {fileID: 21300000, guid: 30e7c7c2e7c35204b8e9df949a956e99, type: 3}
     - {fileID: 21300000, guid: 830bf7255af159b4d8daab392d17001f, type: 3}
+    - {fileID: 21300000, guid: 0c1fb5b94d2dd0d44b7eb26258c24bd5, type: 3}
     - {fileID: 21300000, guid: f9b8a380110ed574a8eeeaf8472582bf, type: 3}
     - {fileID: 21300000, guid: c616d9019c11de44ea5e1c7f1e65d8cf, type: 3}
     - {fileID: 21300000, guid: c616d9019c11de44ea5e1c7f1e65d8cf, type: 3}
@@ -246,6 +252,8 @@ MonoBehaviour:
     - The Quill Feed toggle allows for control of the quill which allows the milling
       cutters to be raised and lowered. The fine adjustment toggle allows for a more
       accurate control of the quill when fine margins are needed during the operations.
+    - 'If any problem arise with using the mouse wheel or touchpad, you can use the
+      up and down keys to move the mill instead. '
     - "The zero button allows you to set your point of reference by simply clicking
       on the zero button while a control button/toggle is clicked. It will set the
       current location of the axis clicked as the reference point. \n\nNote: The
@@ -280,6 +288,9 @@ MonoBehaviour:
       qui permet de lever et d'abaisser les fraises. La bascule de r\xE9glage fin
       permet un contr\xF4le plus pr\xE9cis de la plume lorsque des marges fines sont
       n\xE9cessaires pendant les op\xE9rations."
+    - "Si un probl\xE8me survient lors de l'utilisation de la molette de la souris
+      ou du pav\xE9 tactile, vous pouvez utiliser les touches haut et bas pour d\xE9placer
+      la fraiseuse au lieu."
     - "Le bouton z\xE9ro vous permet de d\xE9finir votre point de r\xE9f\xE9rence
       en cliquant simplement sur le bouton z\xE9ro tout en cliquant sur un bouton
       de commande / bascule. Il d\xE9finit l'emplacement actuel de l'axe sur lequel
@@ -294,6 +305,7 @@ MonoBehaviour:
     - {fileID: 21300000, guid: 25ce94f665f4c16458ad7e31989568ba, type: 3}
     - {fileID: 21300000, guid: 30e7c7c2e7c35204b8e9df949a956e99, type: 3}
     - {fileID: 21300000, guid: 830bf7255af159b4d8daab392d17001f, type: 3}
+    - {fileID: 21300000, guid: 0c1fb5b94d2dd0d44b7eb26258c24bd5, type: 3}
     - {fileID: 21300000, guid: f9b8a380110ed574a8eeeaf8472582bf, type: 3}
   - name: Gameplay
     frenchName: Tutoriel sur le simulateur de fraiseuse
