@@ -31,6 +31,7 @@ public class SumbitInformation : MonoBehaviour
         }
         else
         {
+            displayToggle.setTutorial(true);
             infoWarning.gameObject.SetActive(false);
             begin.interactable = true;
             InputInformation.setName(fullNameText.text);

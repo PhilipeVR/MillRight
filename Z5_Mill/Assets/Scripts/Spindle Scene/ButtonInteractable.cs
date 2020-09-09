@@ -29,7 +29,7 @@ public class ButtonInteractable : MonoBehaviour
 
     public void LateUpdate()
     {
-        if(manager.SentenceIndex == manager.count - 1)
+        if(manager.SentenceIndex == manager.count)
         {
             InteractButton();
         }
@@ -37,12 +37,12 @@ public class ButtonInteractable : MonoBehaviour
 
     public void InteractButton()
     {
-        if(counter == finalNum && controller.Counter > 0 && !videoController.PlayedOnce && manager.SentenceIndex == manager.count-1)
+        if(counter == finalNum && controller.Counter > 0 && !videoController.PlayedOnce && manager.SentenceIndex == manager.count)
         {
             videoController.StartVideo();
             videoController.PlayVideo();
         }
-        else if (counter == finalNum && controller.Counter > 0 && videoController.PlayedOnce && manager.SentenceIndex == manager.count - 1)
+        else if (counter == finalNum && controller.Counter > 0 && videoController.PlayedOnce && manager.SentenceIndex == manager.count)
         {
             button.interactable = true;
         }

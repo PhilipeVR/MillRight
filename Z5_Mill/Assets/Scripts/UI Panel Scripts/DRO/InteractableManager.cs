@@ -51,6 +51,7 @@ public class InteractableManager : MonoBehaviour
             FaceMill.interactable = true;
             SideMill.interactable = true;
             MainMenu.interactable = true;
+            Next.interactable = true;
         }
 
         else if (dialogueName.Equals(intro))
@@ -72,6 +73,7 @@ public class InteractableManager : MonoBehaviour
             FaceMill.interactable = true;
             SideMill.interactable = true;
             MainMenu.interactable = true;
+            Next.interactable = true;
             SequenceDone = true;
 
         }
@@ -97,6 +99,7 @@ public class InteractableManager : MonoBehaviour
     {
         DRO_BTN.interactable = false;
         ON.interactable = false;
+        Next.interactable = false;
         MainMenu.interactable = false;
         FaceMill.interactable = false;
         SideMill.interactable = false;
