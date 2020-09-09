@@ -86,7 +86,7 @@ MonoBehaviour:
     - While performing the operations, safety tips, warnings and danger alerts will
       be given to guide you towards performing the operation the proper way.
     - You can refer at any time to the tool box, DRO controls and gameplay explanation
-      using the user manual button located right above the camera button.
+      using the user manual button located above the camera button.
     - Good luck and enjoy!
     sentencesFR:
     - "Bienvenue dans le mode simulation de la fraiseuse. Dans ce segment, VOUS prenez
@@ -180,7 +180,7 @@ MonoBehaviour:
       vers l'ex\xE9cution correcte de l'op\xE9ration."
     - "Vous pouvez vous r\xE9f\xE9rer \xE0 tout moment \xE0 la bo\xEEte \xE0 outils,
       aux commandes DRO et aux explications du module en utilisant le bouton du manuel
-      de l'utilisateur situ\xE9 juste au-dessus du bouton de la cam\xE9ra."
+      de l'utilisateur situ\xE9 au-dessus du bouton de la cam\xE9ra."
     - Bonne chance et amusez-vous!
     images:
     - {fileID: 21300000, guid: 8775895a44357174eb0462650d27901e, type: 3}
