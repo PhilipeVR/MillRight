@@ -24,9 +24,19 @@ public class CollisionVisibility : MonoBehaviour
     [SerializeField] private Boolean reset = true;
     private bool isColliding = false;
     private float initialCountdown;
+    private Renderer renderer;
+    private RevertDestruction revertDestruction;
+    private Boolean staticBodyPresent, bitCollisionPresent, revertPresent;
+
 
     void Start()
     {
+        renderer = GetComponent<Renderer>();
+        revertDestruction = GetComponentInParent<RevertDestruction>();
+        if (revertDestruction != null)
+        {
+            revertPresent = true;
+        }
         initialCountdown = timerCountDown;
         FindSpark();
 
@@ -91,7 +101,7 @@ public class CollisionVisibility : MonoBehaviour
                 }
                 else
                 {
-                    gameObject.GetComponent<Renderer>().enabled = false;
+                    renderer.enabled = false;
                     Destroy(gameObject);
                     Destroy(this);
                     StaticRigidBody staticRigidBody = collison.transform.gameObject.GetComponent<StaticRigidBody>();
@@ -104,8 +114,7 @@ public class CollisionVisibility : MonoBehaviour
                     {
                         bitCollisionController.EndCollsion();
                     }
-                    RevertDestruction revertDestruction = GetComponentInParent<RevertDestruction>();
-                    if(revertDestruction != null)
+                    if(revertPresent)
                     {
                         revertDestruction.SaveTransform(transform.localPosition, transform.localRotation, transform.localScale);
                     }
@@ -113,7 +122,7 @@ public class CollisionVisibility : MonoBehaviour
                 sparks.SetActive(false);
             }
 
-            if (!gameObject.GetComponent<Renderer>().enabled)
+            if (!renderer.enabled)
             {
                 sparks.SetActive(false);
             }

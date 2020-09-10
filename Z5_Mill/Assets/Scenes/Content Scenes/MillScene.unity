@@ -2647,6 +2647,7 @@ MonoBehaviour:
   dialogueText: {fileID: 1767346379}
   dialogIndex: {fileID: 1920778749}
   Image: {fileID: 838774083}
+  dialogImage: {fileID: 838774084}
   language: 1
   tracker: 0
   count: 0

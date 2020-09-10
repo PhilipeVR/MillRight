@@ -7,17 +7,23 @@ public class StaticRigidBody : MonoBehaviour
 {
 
     Vector3 init_pos, spindle_pos;
+    private Rigidbody rigidbody;
     Quaternion init_rot;
     [SerializeField] Toggle_On_Off PowerButton;
     [SerializeField] GameObject Spindle;
     [SerializeField] private string DrillingTag;
-    [SerializeField] GameObject quillFeedController, fineAdjustmentController, XWheelController, YWheelController;
+    [SerializeField] private QuillFeedControl quillFeed;
+    [SerializeField] private XWheelControl xWheel;
+    [SerializeField] private YWheelControl yWheel;
+    [SerializeField] private FineAdjustmentControl fine;
     // Start is called before the first frame update
     void Start()
     {
         init_pos = transform.localPosition;
-        init_rot = GetComponent<Rigidbody>().rotation;
-        GetComponent<Rigidbody>().velocity = new Vector3(0, 0, 0);
+        rigidbody = GetComponent<Rigidbody>();
+        init_rot = rigidbody.rotation;
+        rigidbody.velocity = new Vector3(0, 0, 0);
+        
         
     }
 
@@ -30,64 +36,64 @@ public class StaticRigidBody : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if(!collision.collider.tag.Equals(DrillingTag) && PowerButton.PowerState)
+        if (!collision.collider.tag.Equals(DrillingTag) && PowerButton.PowerState)
         {
             WarningEvents.current.TurnOFF();
             PowerButton.EmergencyStop();
         }
-        if (quillFeedController.GetComponent<QuillFeedControl>().QuillLockButton.Activated || fineAdjustmentController.GetComponent<FineAdjustmentControl>().FineAdjustmentButton.Activated)
+        if (quillFeed.QuillLockButton.Activated || fine.FineAdjustmentButton.Activated)
         {
-            quillFeedController.GetComponent<QuillFeedControl>().collided = true;
-            fineAdjustmentController.GetComponent<FineAdjustmentControl>().collided = true;
+            quillFeed.collided = true;
+            fine.collided = true;
         }
-        else if (XWheelController.GetComponent<XWheelControl>().XLockButton.Activated && XWheelController.GetComponent<XWheelControl>().object_anim.GetFloat("Reverse") > 0)
+        else if (xWheel.XLockButton.Activated && xWheel.object_anim.GetFloat("Reverse") > 0)
         {
-            XWheelController.GetComponent<XWheelControl>().leftCollision = true;
+            xWheel.leftCollision = true;
         }
-        else if (XWheelController.GetComponent<XWheelControl>().XLockButton.Activated && XWheelController.GetComponent<XWheelControl>().object_anim.GetFloat("Reverse") < 0)
+        else if (xWheel.XLockButton.Activated && xWheel.object_anim.GetFloat("Reverse") < 0)
         {
-            XWheelController.GetComponent<XWheelControl>().rightCollision = true;
+            xWheel.rightCollision = true;
         }
-        else if (YWheelController.GetComponent<YWheelControl>().YLockButton.Activated && YWheelController.GetComponent<YWheelControl>().object_anim.GetFloat("Reverse") > 0)
+        else if (yWheel.YLockButton.Activated && yWheel.object_anim.GetFloat("Reverse") > 0)
         {
-            YWheelController.GetComponent<YWheelControl>().forwardCollision = true;
+            yWheel.forwardCollision = true;
         }
-        else if (YWheelController.GetComponent<YWheelControl>().YLockButton.Activated && YWheelController.GetComponent<YWheelControl>().object_anim.GetFloat("Reverse") < 0)
+        else if (yWheel.YLockButton.Activated && yWheel.object_anim.GetFloat("Reverse") < 0)
         {
-            YWheelController.GetComponent<YWheelControl>().backwardCollision = true;
+            yWheel.backwardCollision = true;
         }
         updateStaticRigidBody();
         
     }
+
 
     private void OnCollisionStay(Collision collision)
     {
         updateStaticRigidBody();
-        
     }
 
     private void OnCollisionExit(Collision collision)
     {
-        
         endCollision();
     }
 
     public void endCollision()
     {
-        quillFeedController.GetComponent<QuillFeedControl>().collided = false;
-        fineAdjustmentController.GetComponent<FineAdjustmentControl>().collided = false;
-        XWheelController.GetComponent<XWheelControl>().rightCollision = false;
-        XWheelController.GetComponent<XWheelControl>().leftCollision = false;
-        YWheelController.GetComponent<YWheelControl>().backwardCollision = false;
-        YWheelController.GetComponent<YWheelControl>().forwardCollision = false;
+        quillFeed.collided = false;
+        fine.collided = false;
+        xWheel.rightCollision = false;
+        xWheel.leftCollision = false;
+        yWheel.backwardCollision = false;
+        yWheel.forwardCollision = false;
     }
+
 
 
     public void updateStaticRigidBody()
     {
 
         transform.localPosition = init_pos;
-        GetComponent<Rigidbody>().rotation = init_rot;
+        rigidbody.rotation = init_rot;
 
     }
 }

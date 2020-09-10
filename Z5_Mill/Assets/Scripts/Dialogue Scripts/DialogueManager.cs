@@ -15,7 +15,7 @@ public class DialogueManager : MonoBehaviour
     public Text nameText;
     public Text dialogueText;
     public Text dialogIndex;
-    public GameObject Image;
+    [SerializeField] private Image dialogImage;
     public Boolean language = true;
 
     private Sprite[] images;
@@ -79,7 +79,7 @@ public class DialogueManager : MonoBehaviour
         tracker ++;
 
         dialogIndex.text = (sentenceIndex + 1) + "/" + count;
-        Image.GetComponent<Image>().sprite = images[sentenceIndex];
+        dialogImage.sprite = images[sentenceIndex];
 
         string sentence = currentLangSentence[sentenceIndex];
         if (language)
@@ -135,8 +135,7 @@ public class DialogueManager : MonoBehaviour
 
         dialogueText.text = sentence;
         dialogIndex.text = (sentenceIndex + 1) + "/" + count;
-        Image.GetComponent<Image>().sprite = images[sentenceIndex];
-
+        dialogImage.sprite = images[sentenceIndex];
         tracker--;
 
 

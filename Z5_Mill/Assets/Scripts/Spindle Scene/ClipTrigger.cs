@@ -17,6 +17,8 @@ public class ClipTrigger : MonoBehaviour
     [SerializeField] private Color clickedColor;
     [SerializeField] private Button continueBTN;
 
+
+    private Renderer m_renderer;
     public Boolean triggerClicked = false;
     public Color[] basicColor;
 
@@ -26,10 +28,11 @@ public class ClipTrigger : MonoBehaviour
     {
         int index = 0;
         AnimatorEvents.current.animationDone += TriggerReset;
-        if (GetComponent<Renderer>().materials.Length > 1)
+        m_renderer = GetComponent<Renderer>();
+        if (m_renderer.materials.Length > 1)
         {
-            basicColor = new Color[GetComponent<Renderer>().materials.Length];
-            foreach (Material material in GetComponent<Renderer>().materials)
+            basicColor = new Color[m_renderer.materials.Length];
+            foreach (Material material in m_renderer.materials)
             {
                 basicColor[index] = material.color;
                 index++;
@@ -38,7 +41,7 @@ public class ClipTrigger : MonoBehaviour
         else
         {
             basicColor = new Color[1];
-            basicColor[index] = GetComponent<Renderer>().material.color;
+            basicColor[index] = m_renderer.material.color;
         }
     }
 
@@ -93,9 +96,9 @@ public class ClipTrigger : MonoBehaviour
     public void ChangeColor(Color color)
     {
         int index = 0;
-        if (GetComponent<Renderer>().materials.Length > 1)
+        if (m_renderer.materials.Length > 1)
         {
-            foreach (Material material in GetComponent<Renderer>().materials)
+            foreach (Material material in m_renderer.materials)
             {
                 material.color = color;
                 index++;
@@ -103,15 +106,15 @@ public class ClipTrigger : MonoBehaviour
         }
         else
         {
-            GetComponent<Renderer>().material.color = color;
+            m_renderer.material.color = color;
         }
     }
     public void BasicColor()
     {
         int index = 0;
-        if (GetComponent<Renderer>().materials.Length > 1)
+        if (m_renderer.materials.Length > 1)
         {
-            foreach (Material material in GetComponent<Renderer>().materials)
+            foreach (Material material in m_renderer.materials)
             {
                 material.color = basicColor[index];
                 index++;
@@ -119,7 +122,7 @@ public class ClipTrigger : MonoBehaviour
         }
         else
         {
-            GetComponent<Renderer>().material.color = basicColor[index];
+            m_renderer.material.color = basicColor[index];
         }
 
     }
