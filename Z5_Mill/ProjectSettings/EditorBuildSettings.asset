@@ -6,30 +6,30 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Menu Scenes/MainMenu.unity
+    path: Assets/MILL/Scenes/Menu Scenes/MainMenu.unity
     guid: f6123af6b0306654ba53f9b4ec017fa4
   - enabled: 1
-    path: Assets/Scenes/Content Scenes/SpindleScene.unity
+    path: Assets/MILL/Scenes/Content Scenes/ToolHolding.unity
     guid: f07a8bf2995aa0a4fb861e490594e5f7
   - enabled: 1
     path: Assets/Scenes/Mill Control Scenes/SampleScene.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
   - enabled: 1
-    path: Assets/Scenes/Content Scenes/MillScene.unity
+    path: Assets/MILL/Scenes/Content Scenes/ComponentDiscovery.unity
     guid: 9cab58150b765d84f8574d99dfa1dc1a
   - enabled: 1
-    path: Assets/Scenes/Mill Control Scenes/IntroTutorial.unity
+    path: Assets/MILL/Scenes/Mill Control Scenes/IntroTutorial.unity
     guid: 9ec2b9eeae304bb4ab191605283d870c
   - enabled: 1
-    path: Assets/Scenes/Menu Scenes/AdditionalContentScene.unity
+    path: Assets/MILL/Scenes/Menu Scenes/AdditionalContentScene.unity
     guid: 46ab3e5d36619dd46bbd87be22666e8f
   - enabled: 1
     path: Assets/Quiz Module/quiz_final.unity
     guid: 37d87564075eb4425b8c9dac3d4a5218
   - enabled: 1
-    path: Assets/Scenes/Mill Control Scenes/Mill Simulation Scene.unity
+    path: Assets/MILL/Scenes/Mill Control Scenes/Mill Simulation Scene.unity
     guid: fc738de891c101748bc62fc549e41e0e
   - enabled: 1
-    path: Assets/Scenes/Menu Scenes/Certificate.unity
+    path: Assets/MILL/Scenes/Menu Scenes/Certificate.unity
     guid: 13e2ec0c91680c047b8730e0213f3fac
   m_configObjects: {}
