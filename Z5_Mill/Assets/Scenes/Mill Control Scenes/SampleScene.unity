@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.43826503, g: 0.4862997, b: 0.56657463, a: 1}
+  m_IndirectSpecularColor: {r: 0.43826476, g: 0.4862988, b: 0.5665738, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -365,6 +365,7 @@ MonoBehaviour:
   toggleComponentLangManager: {fileID: 0}
   imageToggle: {fileID: 0}
   toolHolderManager: {fileID: 0}
+  toggleScene: {fileID: 0}
 --- !u!1 &103676642
 GameObject:
   m_ObjectHideFlags: 0
@@ -2251,6 +2252,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   WheelControl: {fileID: 0}
+  QuillControl: {fileID: 0}
+  fineAdjustmentControl: {fileID: 0}
   checkBitState: {fileID: 0}
   animator: {fileID: 1103625569}
   prevAnimator: {fileID: 779585576}
@@ -2329,6 +2332,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 713ff9b26c4bec44b969f8de9c19516f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  droManager: {fileID: 0}
   powerButton: {fileID: 0}
   controlX: {fileID: 1065909904}
   controlY: {fileID: 1616185320}
@@ -2362,6 +2366,8 @@ MonoBehaviour:
     activated: 0
   bitButtons: []
   warningBox: {fileID: 0}
+  doneBTN: {fileID: 0}
+  checker: {fileID: 0}
 --- !u!1 &340444176 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 9206275888445066084, guid: 83d399ffe9bbef046b7d9ca75d2c5d0b,
@@ -2381,6 +2387,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   WheelControl: {fileID: 0}
+  QuillControl: {fileID: 0}
+  fineAdjustmentControl: {fileID: 0}
   checkBitState: {fileID: 0}
   animator: {fileID: 1576390987}
   prevAnimator: {fileID: 999474360}
@@ -3275,6 +3283,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe704b2c79f76ce4bb46de8dbafcf65d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  feedControl: {fileID: 0}
+  powerBTN: {fileID: 0}
+  selector: {fileID: 0}
   animObject: {fileID: 485619489}
   FineAdjustmentButton: {fileID: 2098731959}
   fineAdjustment: {fileID: 933370981}
@@ -4817,15 +4828,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animationController: {fileID: 0}
+  backButton: {fileID: 0}
   DeactivateAtEndDialogue: {fileID: 232290540}
   trigger: {fileID: 1648882021}
   nameText: {fileID: 162358193}
   dialogueText: {fileID: 869350187}
   dialogIndex: {fileID: 1107903454}
-  Image: {fileID: 2032864429}
+  dialogImage: {fileID: 0}
   language: 1
+  tracker: 0
+  count: 0
   index: 0
   sentenceIndex: 0
+  open: {fileID: 0}
+  close: {fileID: 0}
+  holder: {fileID: 0}
 --- !u!4 &769668083 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: d5c7849c7b02809408e4dc78469bad93,
@@ -5017,15 +5034,11 @@ MonoBehaviour:
   initialStockPosition: {x: -0.191, y: 0.2141, z: 0.0192}
   referenceTransformX: {fileID: 697501552}
   referenceTransformY: {fileID: 1929230406}
+  referenceX: 0
+  referenceY: 0
   animator: {fileID: 779585576}
   trigger: {fileID: 1156831945}
-  time1: 0
-  time2: 0.3
-  time3: 0.6
-  time4: 1
   Speed: 0.2
-  tableXref: 0
-  tableYref: -0.048
 --- !u!1 &781836906 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6020610256308280529, guid: 83d399ffe9bbef046b7d9ca75d2c5d0b,
@@ -5049,7 +5062,10 @@ MonoBehaviour:
   clickedColor: {r: 0.025704982, g: 0.3490566, b: 0, a: 0}
   activateOnClick: {fileID: 999474359}
   WheelControl: {fileID: 0}
+  QuillControl: {fileID: 0}
+  fineAdjustmentControl: {fileID: 0}
   checkBitState: {fileID: 0}
+  operate: {fileID: 0}
 --- !u!1 &787070215 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3312799077755689803, guid: 83d399ffe9bbef046b7d9ca75d2c5d0b,
@@ -5960,15 +5976,11 @@ MonoBehaviour:
   initialStockPosition: {x: -0.1523, y: 0.187, z: 0.0289}
   referenceTransformX: {fileID: 697501552}
   referenceTransformY: {fileID: 1929230406}
+  referenceX: 0
+  referenceY: 0
   animator: {fileID: 933945646}
   trigger: {fileID: 1265632417}
-  time1: 0
-  time2: 0.3
-  time3: 0.6
-  time4: 1
   Speed: 0.2
-  tableXref: 0
-  tableYref: -0.048
 --- !u!1 &949662692
 GameObject:
   m_ObjectHideFlags: 0
@@ -6184,15 +6196,11 @@ MonoBehaviour:
   initialStockPosition: {x: -0.1428, y: 0.2475, z: -0.0115}
   referenceTransformX: {fileID: 697501552}
   referenceTransformY: {fileID: 1929230406}
+  referenceX: 0
+  referenceY: 0
   animator: {fileID: 999474360}
   trigger: {fileID: 781836907}
-  time1: 0
-  time2: 0.3
-  time3: 0.6
-  time4: 1
   Speed: 0.2
-  tableXref: 0
-  tableYref: -0.048
 --- !u!1 &1017435726
 GameObject:
   m_ObjectHideFlags: 0
@@ -6388,6 +6396,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e698ac8963fd5b743a689807ab16074b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fineControl: {fileID: 0}
+  powerBTN: {fileID: 0}
+  selector: {fileID: 0}
   animObject: {fileID: 886245741}
   lockAnimObject: {fileID: 1362754916}
   QuillLockButton: {fileID: 949662699}
@@ -6397,6 +6408,9 @@ MonoBehaviour:
   collided: 0
   moving: 0
   prev_state: 0
+  reminder: 0
+  scrollActive: 0
+  keyActive: 0
   movementInterval: 0.005
 --- !u!1 &1021082145
 GameObject:
@@ -6505,6 +6519,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c0a77ae419de5644d87c17aa361be5e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  powerBTN: {fileID: 0}
+  manager: {fileID: 0}
+  selector: {fileID: 0}
   animObject: {fileID: 402590982}
   lockAnimObject: {fileID: 635628748}
   XLockButton: {fileID: 1079926644}
@@ -6512,9 +6529,14 @@ MonoBehaviour:
   lockHandle: {fileID: 1677665264}
   enable: 1
   speedMultiplier: 7
-  currentSpeed: 0
+  arrowSpeed: 0
+  lockBool: 
+  unlockBool: 
   leftCollision: 0
   rightCollision: 0
+  locked: 0
+  scrollActive: 0
+  keyActive: 0
   object_anim: {fileID: 402590985}
   lock_anim: {fileID: 402590985}
 --- !u!4 &1065909905
@@ -6733,7 +6755,9 @@ MonoBehaviour:
   lockHandle: {fileID: 553108621}
   enable: 1
   speedMultiplier: 1.5
-  currentSpeed: 0
+  arrowSpeed: 0
+  lockBool: 
+  unlockBool: 
 --- !u!1 &1079926638
 GameObject:
   m_ObjectHideFlags: 0
@@ -7532,7 +7556,10 @@ MonoBehaviour:
   clickedColor: {r: 0.025704982, g: 0.3490566, b: 0, a: 0}
   activateOnClick: {fileID: 779585575}
   WheelControl: {fileID: 0}
+  QuillControl: {fileID: 0}
+  fineAdjustmentControl: {fileID: 0}
   checkBitState: {fileID: 0}
+  operate: {fileID: 0}
 --- !u!1 &1200113759
 GameObject:
   m_ObjectHideFlags: 0
@@ -7917,7 +7944,10 @@ MonoBehaviour:
   clickedColor: {r: 0.038337875, g: 0.4245283, b: 0, a: 0}
   activateOnClick: {fileID: 933945645}
   WheelControl: {fileID: 0}
+  QuillControl: {fileID: 0}
+  fineAdjustmentControl: {fileID: 0}
   checkBitState: {fileID: 0}
+  operate: {fileID: 0}
 --- !u!21 &1295501803
 Material:
   serializedVersion: 6
@@ -8353,6 +8383,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selection: {fileID: 0}
   bitState: {fileID: 0}
+  zWheelControl: {fileID: 0}
   NoNameOperation: 
   OnText: ON
   OffText: OFF
@@ -9827,7 +9858,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh113616
+  m_Name: pb_Mesh157948
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -10253,6 +10284,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a248101e87ae00a429360ecc41221e71, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  manager: {fileID: 0}
+  selector: {fileID: 0}
   animObject: {fileID: 870283013555409097}
   lockAnimObject: {fileID: 870283013826537361}
   YLockButton: {fileID: 1334058747}
@@ -10260,9 +10293,14 @@ MonoBehaviour:
   lockHandle: {fileID: 8619910113599060837}
   enable: 1
   speedMultiplier: 13
-  currentSpeed: 0
+  arrowSpeed: 0
+  lockBool: 
+  unlockBool: 
   forwardCollision: 0
   backwardCollision: 0
+  locked: 0
+  scrollActive: 0
+  keyActive: 0
   object_anim: {fileID: 402590985}
   lock_anim: {fileID: 402590985}
 --- !u!4 &1616185321
@@ -10953,6 +10991,7 @@ MonoBehaviour:
   worktable: {fileID: 697501552}
   table: {fileID: 1929230406}
   spindle: {fileID: 2443960360639499168}
+  spindle2: {fileID: 0}
   xText: {fileID: 554158782}
   yText: {fileID: 928572596}
   zText: {fileID: 68134932}
@@ -11002,6 +11041,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   WheelControl: {fileID: 0}
+  QuillControl: {fileID: 0}
+  fineAdjustmentControl: {fileID: 0}
   checkBitState: {fileID: 0}
   animator: {fileID: 1940318589}
   prevAnimator: {fileID: 933945646}
@@ -12498,6 +12539,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -4644589223396780668, guid: d5c7849c7b02809408e4dc78469bad93,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: d5c7849c7b02809408e4dc78469bad93,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -12577,6 +12623,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Mill Platform
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: d5c7849c7b02809408e4dc78469bad93,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d5c7849c7b02809408e4dc78469bad93, type: 3}
@@ -13364,6 +13415,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Mill_Organized
       objectReference: {fileID: 0}
+    - target: {fileID: 3312799079067245394, guid: 83d399ffe9bbef046b7d9ca75d2c5d0b,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3312799079067245395, guid: 83d399ffe9bbef046b7d9ca75d2c5d0b,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -13939,6 +13995,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 0.00920713
       objectReference: {fileID: 0}
+    - target: {fileID: 6834353326626998768, guid: 83d399ffe9bbef046b7d9ca75d2c5d0b,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6852192965134288471, guid: 83d399ffe9bbef046b7d9ca75d2c5d0b,
         type: 3}
       propertyPath: m_IsActive
@@ -14313,6 +14374,75 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 2443960360639499163}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &4091359389136583250
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1077523959239975365, guid: 2019af8ccfa7d5c48a1f91728184ef88,
+        type: 3}
+      propertyPath: m_Name
+      value: Lathe
+      objectReference: {fileID: 0}
+    - target: {fileID: 4084619228625130454, guid: 2019af8ccfa7d5c48a1f91728184ef88,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -5.51
+      objectReference: {fileID: 0}
+    - target: {fileID: 4084619228625130454, guid: 2019af8ccfa7d5c48a1f91728184ef88,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2.62
+      objectReference: {fileID: 0}
+    - target: {fileID: 4084619228625130454, guid: 2019af8ccfa7d5c48a1f91728184ef88,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -2.96
+      objectReference: {fileID: 0}
+    - target: {fileID: 4084619228625130454, guid: 2019af8ccfa7d5c48a1f91728184ef88,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4084619228625130454, guid: 2019af8ccfa7d5c48a1f91728184ef88,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4084619228625130454, guid: 2019af8ccfa7d5c48a1f91728184ef88,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4084619228625130454, guid: 2019af8ccfa7d5c48a1f91728184ef88,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4084619228625130454, guid: 2019af8ccfa7d5c48a1f91728184ef88,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 4084619228625130454, guid: 2019af8ccfa7d5c48a1f91728184ef88,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4084619228625130454, guid: 2019af8ccfa7d5c48a1f91728184ef88,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 180
+      objectReference: {fileID: 0}
+    - target: {fileID: 4084619228625130454, guid: 2019af8ccfa7d5c48a1f91728184ef88,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 2019af8ccfa7d5c48a1f91728184ef88, type: 3}
 --- !u!1 &5175314770203662113 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7365876484061256890, guid: 83d399ffe9bbef046b7d9ca75d2c5d0b,
