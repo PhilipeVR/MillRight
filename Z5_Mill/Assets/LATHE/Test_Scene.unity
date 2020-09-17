@@ -121,6 +121,75 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1001 &840945856
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1077523959239975365, guid: 2019af8ccfa7d5c48a1f91728184ef88,
+        type: 3}
+      propertyPath: m_Name
+      value: Lathe (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4084619228625130454, guid: 2019af8ccfa7d5c48a1f91728184ef88,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -4.73
+      objectReference: {fileID: 0}
+    - target: {fileID: 4084619228625130454, guid: 2019af8ccfa7d5c48a1f91728184ef88,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -3.52
+      objectReference: {fileID: 0}
+    - target: {fileID: 4084619228625130454, guid: 2019af8ccfa7d5c48a1f91728184ef88,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -2.96
+      objectReference: {fileID: 0}
+    - target: {fileID: 4084619228625130454, guid: 2019af8ccfa7d5c48a1f91728184ef88,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4084619228625130454, guid: 2019af8ccfa7d5c48a1f91728184ef88,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4084619228625130454, guid: 2019af8ccfa7d5c48a1f91728184ef88,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4084619228625130454, guid: 2019af8ccfa7d5c48a1f91728184ef88,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4084619228625130454, guid: 2019af8ccfa7d5c48a1f91728184ef88,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4084619228625130454, guid: 2019af8ccfa7d5c48a1f91728184ef88,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4084619228625130454, guid: 2019af8ccfa7d5c48a1f91728184ef88,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 180
+      objectReference: {fileID: 0}
+    - target: {fileID: 4084619228625130454, guid: 2019af8ccfa7d5c48a1f91728184ef88,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 2019af8ccfa7d5c48a1f91728184ef88, type: 3}
 --- !u!1 &892341503
 GameObject:
   m_ObjectHideFlags: 0
@@ -204,75 +273,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &1091661670
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 5429425170698263320, guid: fbb56be8fe14b8a41a9320a7eeffa63f,
-        type: 3}
-      propertyPath: m_Name
-      value: Lathe
-      objectReference: {fileID: 0}
-    - target: {fileID: 9007877334608259339, guid: fbb56be8fe14b8a41a9320a7eeffa63f,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -4
-      objectReference: {fileID: 0}
-    - target: {fileID: 9007877334608259339, guid: fbb56be8fe14b8a41a9320a7eeffa63f,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -4
-      objectReference: {fileID: 0}
-    - target: {fileID: 9007877334608259339, guid: fbb56be8fe14b8a41a9320a7eeffa63f,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -2
-      objectReference: {fileID: 0}
-    - target: {fileID: 9007877334608259339, guid: fbb56be8fe14b8a41a9320a7eeffa63f,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9007877334608259339, guid: fbb56be8fe14b8a41a9320a7eeffa63f,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 9007877334608259339, guid: fbb56be8fe14b8a41a9320a7eeffa63f,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9007877334608259339, guid: fbb56be8fe14b8a41a9320a7eeffa63f,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9007877334608259339, guid: fbb56be8fe14b8a41a9320a7eeffa63f,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 9007877334608259339, guid: fbb56be8fe14b8a41a9320a7eeffa63f,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9007877334608259339, guid: fbb56be8fe14b8a41a9320a7eeffa63f,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 180
-      objectReference: {fileID: 0}
-    - target: {fileID: 9007877334608259339, guid: fbb56be8fe14b8a41a9320a7eeffa63f,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: fbb56be8fe14b8a41a9320a7eeffa63f, type: 3}
 --- !u!1001 &1604805987
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -318,7 +318,7 @@ PrefabInstance:
     - target: {fileID: 4484081589782622783, guid: 37c584658efa4584f80d6a0d18f647b3,
         type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4484081589782622783, guid: 37c584658efa4584f80d6a0d18f647b3,
         type: 3}
@@ -442,7 +442,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 --- !u!43 &2000031145
 Mesh:
