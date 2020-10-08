@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f500407be70d0c644a82c4610cbe0354, type: 3}
+  m_Name: FR_6
+  m_EditorClassIdentifier: 
+  _info: "Quelle sont des diff\xE9rences entre un collet et le mandrin \xE0 perceuse?"
+  _answers:
+  - _info: "Le mandrin \xE0 perceuse a trois doigts qui vont tenir l\u2019outils
+      tandis qu\u2019un collet utilise toute sa circonf\xE9rence pour tenir l\u2019outil "
+    _isCorrect: 0
+  - _info: "Le mandrin \xE0 perceuse ne peut pas r\xE9sister \xE0 des forces lat\xE9rales"
+    _isCorrect: 0
+  - _info: "Le mandrin \xE0 perceuse est con\xE7u pour tenir des m\xE8ches tandis
+      qu\u2019un collet est con\xE7u pour tenir des fraise en bouts. "
+    _isCorrect: 0
+  - _info: "Tout ce qui pr\xE9c\xE8de"
+    _isCorrect: 1
+  _useTimer: 0
+  _timer: 0
+  _answerType: 1
+  _addScore: 1
