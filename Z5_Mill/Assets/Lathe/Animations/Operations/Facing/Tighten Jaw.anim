@@ -191,7 +191,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: Chuck Assembly/Chuck Cylinders/Cylinder Stock Material
+    path: Chuck Assembly/Cylinder Stock Material
   m_ScaleCurves: []
   m_FloatCurves:
   - curve:
@@ -282,7 +282,7 @@ AnimationClip:
       customType: 0
       isPPtrCurve: 0
     - serializedVersion: 2
-      path: 731764720
+      path: 3576280441
       attribute: 1
       script: {fileID: 0}
       typeID: 4
@@ -873,7 +873,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalPosition.x
-    path: Chuck Assembly/Chuck Cylinders/Cylinder Stock Material
+    path: Chuck Assembly/Cylinder Stock Material
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -901,7 +901,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalPosition.y
-    path: Chuck Assembly/Chuck Cylinders/Cylinder Stock Material
+    path: Chuck Assembly/Cylinder Stock Material
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -929,7 +929,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalPosition.z
-    path: Chuck Assembly/Chuck Cylinders/Cylinder Stock Material
+    path: Chuck Assembly/Cylinder Stock Material
     classID: 4
     script: {fileID: 0}
   m_EulerEditorCurves:

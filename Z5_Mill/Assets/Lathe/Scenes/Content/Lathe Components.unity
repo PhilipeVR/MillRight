@@ -705,6 +705,41 @@ PrefabInstance:
       propertyPath: timerCountDown
       value: 0.1
       objectReference: {fileID: 0}
+    - target: {fileID: 263781016587437481, guid: 47f24e795ba2a334d8fc07652923cca1,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 50.383
+      objectReference: {fileID: 0}
+    - target: {fileID: 263781016587437481, guid: 47f24e795ba2a334d8fc07652923cca1,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 263781016587437481, guid: 47f24e795ba2a334d8fc07652923cca1,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 263781016587437481, guid: 47f24e795ba2a334d8fc07652923cca1,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 270
+      objectReference: {fileID: 0}
+    - target: {fileID: 263781016587437481, guid: 47f24e795ba2a334d8fc07652923cca1,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 263781016587437481, guid: 47f24e795ba2a334d8fc07652923cca1,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -34.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 263781016587437481, guid: 47f24e795ba2a334d8fc07652923cca1,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -53.4
+      objectReference: {fileID: 0}
     - target: {fileID: 298342317616271051, guid: 47f24e795ba2a334d8fc07652923cca1,
         type: 3}
       propertyPath: reset
@@ -964,6 +999,11 @@ PrefabInstance:
         type: 3}
       propertyPath: timerCountDown
       value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 780906098193557494, guid: 47f24e795ba2a334d8fc07652923cca1,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -70.1
       objectReference: {fileID: 0}
     - target: {fileID: 788596976023091752, guid: 47f24e795ba2a334d8fc07652923cca1,
         type: 3}
@@ -1869,6 +1909,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.y
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2550399604990363283, guid: 47f24e795ba2a334d8fc07652923cca1,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -58.8
       objectReference: {fileID: 0}
     - target: {fileID: 2561096575613171821, guid: 47f24e795ba2a334d8fc07652923cca1,
         type: 3}
@@ -5915,6 +5960,11 @@ PrefabInstance:
       propertyPath: timerCountDown
       value: 0.1
       objectReference: {fileID: 0}
+    - target: {fileID: 5037021075938452115, guid: 47f24e795ba2a334d8fc07652923cca1,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -58.8
+      objectReference: {fileID: 0}
     - target: {fileID: 5041557677074777375, guid: 47f24e795ba2a334d8fc07652923cca1,
         type: 3}
       propertyPath: reset
@@ -6185,6 +6235,11 @@ PrefabInstance:
       propertyPath: timerCountDown
       value: 0.1
       objectReference: {fileID: 0}
+    - target: {fileID: 5376057198066097880, guid: 47f24e795ba2a334d8fc07652923cca1,
+        type: 3}
+      propertyPath: m_Name
+      value: Facing
+      objectReference: {fileID: 0}
     - target: {fileID: 5382432727005904547, guid: 47f24e795ba2a334d8fc07652923cca1,
         type: 3}
       propertyPath: reset
@@ -6194,6 +6249,11 @@ PrefabInstance:
         type: 3}
       propertyPath: timerCountDown
       value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5410394013170221917, guid: 47f24e795ba2a334d8fc07652923cca1,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -54.6
       objectReference: {fileID: 0}
     - target: {fileID: 5415846808126056598, guid: 47f24e795ba2a334d8fc07652923cca1,
         type: 3}
@@ -6344,6 +6404,11 @@ PrefabInstance:
         type: 3}
       propertyPath: timerCountDown
       value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5646456630681090802, guid: 47f24e795ba2a334d8fc07652923cca1,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5662469000230623833, guid: 47f24e795ba2a334d8fc07652923cca1,
         type: 3}
@@ -6655,6 +6720,11 @@ PrefabInstance:
       propertyPath: timerCountDown
       value: 0.1
       objectReference: {fileID: 0}
+    - target: {fileID: 6250047570248172466, guid: 47f24e795ba2a334d8fc07652923cca1,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6270875894888626071, guid: 47f24e795ba2a334d8fc07652923cca1,
         type: 3}
       propertyPath: reset
@@ -6794,6 +6864,11 @@ PrefabInstance:
         type: 3}
       propertyPath: timerCountDown
       value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6497030891532783888, guid: 47f24e795ba2a334d8fc07652923cca1,
+        type: 3}
+      propertyPath: m_Name
+      value: Turning Dummy GO
       objectReference: {fileID: 0}
     - target: {fileID: 6504012095033134960, guid: 47f24e795ba2a334d8fc07652923cca1,
         type: 3}
@@ -7050,6 +7125,11 @@ PrefabInstance:
       propertyPath: timerCountDown
       value: 0.1
       objectReference: {fileID: 0}
+    - target: {fileID: 6917765922989798915, guid: 47f24e795ba2a334d8fc07652923cca1,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -54.6
+      objectReference: {fileID: 0}
     - target: {fileID: 6926887068902036145, guid: 47f24e795ba2a334d8fc07652923cca1,
         type: 3}
       propertyPath: reset
@@ -7219,6 +7299,11 @@ PrefabInstance:
         type: 3}
       propertyPath: timerCountDown
       value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7221743980327693272, guid: 47f24e795ba2a334d8fc07652923cca1,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7225142831738192714, guid: 47f24e795ba2a334d8fc07652923cca1,
         type: 3}
@@ -7369,6 +7454,11 @@ PrefabInstance:
         type: 3}
       propertyPath: timerCountDown
       value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7455040191582357694, guid: 47f24e795ba2a334d8fc07652923cca1,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7471034753212278034, guid: 47f24e795ba2a334d8fc07652923cca1,
         type: 3}
@@ -8194,6 +8284,11 @@ PrefabInstance:
         type: 3}
       propertyPath: timerCountDown
       value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8854404958282786603, guid: 47f24e795ba2a334d8fc07652923cca1,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8855727868912761537, guid: 47f24e795ba2a334d8fc07652923cca1,
         type: 3}
