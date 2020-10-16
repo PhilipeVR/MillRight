@@ -16,6 +16,7 @@ TagManager:
   - 3FluteEndMill
   - OtherCamera
   - MillControl
+  - CylinderStock
   layers:
   - Default
   - TransparentFX
