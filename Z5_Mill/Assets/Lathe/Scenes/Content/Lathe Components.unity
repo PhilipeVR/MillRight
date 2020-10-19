@@ -980,6 +980,11 @@ PrefabInstance:
       propertyPath: timerCountDown
       value: 0.1
       objectReference: {fileID: 0}
+    - target: {fileID: 746640580079896876, guid: 47f24e795ba2a334d8fc07652923cca1,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 767555658850247184, guid: 47f24e795ba2a334d8fc07652923cca1,
         type: 3}
       propertyPath: reset
@@ -1214,6 +1219,11 @@ PrefabInstance:
         type: 3}
       propertyPath: timerCountDown
       value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1280903405159782441, guid: 47f24e795ba2a334d8fc07652923cca1,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1309339020382814888, guid: 47f24e795ba2a334d8fc07652923cca1,
         type: 3}
@@ -6305,6 +6315,11 @@ PrefabInstance:
       propertyPath: timerCountDown
       value: 0.1
       objectReference: {fileID: 0}
+    - target: {fileID: 5498734671445119343, guid: 47f24e795ba2a334d8fc07652923cca1,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5502757243059521433, guid: 47f24e795ba2a334d8fc07652923cca1,
         type: 3}
       propertyPath: reset
@@ -6868,7 +6883,7 @@ PrefabInstance:
     - target: {fileID: 6497030891532783888, guid: 47f24e795ba2a334d8fc07652923cca1,
         type: 3}
       propertyPath: m_Name
-      value: Turning Dummy GO
+      value: Turning
       objectReference: {fileID: 0}
     - target: {fileID: 6504012095033134960, guid: 47f24e795ba2a334d8fc07652923cca1,
         type: 3}

@@ -53,7 +53,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: {x: -147.55, y: 0, z: 0}
+        value: {x: -128.27979, y: 0, z: 0}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
@@ -123,7 +123,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: {x: -10.28676, y: -37.986206, z: 3.3844757}
+        value: {x: -5.4694476, y: -37.986206, z: 3.3844757}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
@@ -158,7 +158,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: {x: 67.012, y: -43.401245, z: 3.88945}
+        value: {x: 71.82931, y: -43.401245, z: 3.88945}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
@@ -193,7 +193,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: {x: -46.845, y: 0, z: 0}
+        value: {x: -42.027603, y: 0, z: 0}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
@@ -228,7 +228,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: {x: -46.845, y: 0, z: 0}
+        value: {x: -42.027603, y: 0, z: 0}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
@@ -566,7 +566,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: -10.28676
+        value: -5.4694476
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -680,7 +680,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 67.012
+        value: 71.82931
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -794,7 +794,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: -46.845
+        value: -42.027603
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -908,7 +908,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: -46.845
+        value: -42.027603
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -1022,7 +1022,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: -147.55
+        value: -128.27979
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -1139,8 +1139,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.z
-    path: Facing/Carriage Assembly/Tool Post Assembly/Compound Assembly/Tool Post
-      ASM/Tool Post Handwheel
+    path: Facing/Carriage Assembly/Tool Post Assembly/Top Slide Handwheel
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -1150,8 +1149,17 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.y
-    path: Facing/Carriage Assembly/Tool Post Assembly/Compound Assembly/Tool Post
-      ASM/Tool Post Handwheel
+    path: Facing/Carriage Assembly/Tool Post Assembly/Top Slide Handwheel
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.x
+    path: Facing/Carriage Assembly/Tool Post Assembly/Top Slide Handwheel
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -1171,18 +1179,9 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    attribute: m_LocalEulerAngles.x
-    path: Facing/Carriage Assembly/Tool Post Assembly/Top Slide Handwheel
-    classID: 4
-    script: {fileID: 0}
-  - curve:
-      serializedVersion: 2
-      m_Curve: []
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
     attribute: m_LocalEulerAngles.y
-    path: Facing/Carriage Assembly/Tool Post Assembly/Top Slide Handwheel
+    path: Facing/Carriage Assembly/Tool Post Assembly/Compound Assembly/Tool Post
+      ASM/Tool Post Handwheel
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -1192,7 +1191,8 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.z
-    path: Facing/Carriage Assembly/Tool Post Assembly/Top Slide Handwheel
+    path: Facing/Carriage Assembly/Tool Post Assembly/Compound Assembly/Tool Post
+      ASM/Tool Post Handwheel
     classID: 4
     script: {fileID: 0}
   m_HasGenericRootTransform: 0
