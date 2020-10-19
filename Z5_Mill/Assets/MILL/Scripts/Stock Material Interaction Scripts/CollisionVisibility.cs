@@ -114,7 +114,12 @@ public class CollisionVisibility : MonoBehaviour
                     {
                         bitCollisionController.EndCollsion();
                     }
-                    if(revertPresent)
+                    TestCylinderStock testCylinderStock = collison.transform.gameObject.GetComponent<TestCylinderStock>();
+                    if (testCylinderStock != null)
+                    {
+                        testCylinderStock.EndCollision();
+                    }
+                    if (revertPresent)
                     {
                         revertDestruction.SaveTransform(transform.localPosition, transform.localRotation, transform.localScale);
                     }
