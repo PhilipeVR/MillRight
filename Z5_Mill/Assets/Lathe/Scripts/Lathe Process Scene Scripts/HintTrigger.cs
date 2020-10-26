@@ -14,7 +14,6 @@ public class HintTrigger : MonoBehaviour
     [SerializeField] private float DelayForFlash;
     [SerializeField] private int HintCountdown;
     [SerializeField] private Button proceedBTN;
-    [SerializeField] private DROToggle panel;
     [SerializeField] private List<HintFlash.ObjectTriggerInfo> drillingInfo, turningInfo, facingInfo;
     private bool[] drillingClicked, turningClicked, facingClicked;
 
@@ -180,7 +179,19 @@ public class HintTrigger : MonoBehaviour
                 }
                 else if (image != null && (animationController.Operation.Index == triggerIndex))
                 {
-                    panel.activate(true);
+                    if (currentInfo[triggerIndex].Panel)
+                    {
+                        currentInfo[triggerIndex].PanelGO.SetActive(true);
+                        if(currentInfo[triggerIndex].Control != null)
+                        {
+                            currentInfo[triggerIndex].Control.togglePanel2();
+                        }
+                        if (currentInfo[triggerIndex].ControlPanel)
+                        {
+                            currentInfo[triggerIndex].PanelControl.TabActive(currentInfo[triggerIndex].Tab);
+
+                        }
+                    }
                     StartCoroutine(FlashImage(image));
                 }
             }

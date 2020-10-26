@@ -54,7 +54,7 @@ public class HintFlash : MonoBehaviour
         timer = -1;
         foreach (ObjectTriggerInfo triggerInfo in triggerInfos)
         {
-            if(sentenceIndex == triggerInfo.SenteceIndex)
+            if (sentenceIndex == triggerInfo.SenteceIndex)
             {
                 current = triggerInfo.TriggerObject;
                 triggerIndex = triggerInfo.TriggerIndex;
@@ -69,12 +69,12 @@ public class HintFlash : MonoBehaviour
 
     public void LateUpdate()
     {
-        if(manager.SentenceIndex > prevVal)
+        if (manager.SentenceIndex > prevVal)
         {
             prevVal = manager.SentenceIndex;
             IncrementAnim();
         }
-        if(currentInfoSentence != manager.SentenceIndex)
+        if (currentInfoSentence != manager.SentenceIndex)
         {
             hint.interactable = false;
         }
@@ -85,14 +85,14 @@ public class HintFlash : MonoBehaviour
         if (state && controller.CurrentAnimationStatus && currentInfoSentence == manager.SentenceIndex)
         {
             timer -= Time.deltaTime;
-            if(timer < 0)
+            if (timer < 0)
             {
                 hint.interactable = true;
                 react = true;
                 timer = -1;
             }
         }
-        
+
     }
 
     public void Reset()
@@ -106,9 +106,9 @@ public class HintFlash : MonoBehaviour
 
     public void GiveHint()
     {
-        if(current.Count != 0)
+        if (current.Count != 0)
         {
-            foreach(GameObject go in current)
+            foreach (GameObject go in current)
             {
                 Material[] material = go.GetComponent<MeshRenderer>().materials;
                 Image image = go.GetComponent<Image>();
@@ -125,7 +125,7 @@ public class HintFlash : MonoBehaviour
         }
     }
 
-    public IEnumerator FlashImage (Image image)
+    public IEnumerator FlashImage(Image image)
     {
         Color basicColor = image.color;
         color = basicColor;
@@ -142,14 +142,14 @@ public class HintFlash : MonoBehaviour
     public IEnumerator FlashMesh(Material[] materials)
     {
         List<Color> basicColors = new List<Color>();
-        foreach(Material material in materials)
+        foreach (Material material in materials)
         {
             basicColors.Add(material.color);
         }
 
         for (int i = 0; i < NumOfFlashForHint; i++)
         {
-            foreach(Material material in materials)
+            foreach (Material material in materials)
             {
                 material.color = HintColor;
             }
@@ -168,17 +168,18 @@ public class HintFlash : MonoBehaviour
         get => react;
     }
 
-    [Serializable]
+    [System.Serializable]
     public struct ObjectTriggerInfo
     {
         [SerializeField] private int sentenceIndex;
         [SerializeField] private int triggerIndex;
         [SerializeField] private List<GameObject> triggerObject;
-        [SerializeField] public bool panel;
-        [HideInInspector] [SerializeField] public GameObject panelGO;
-        [HideInInspector] [SerializeField] public bool controlPanel;
-        [HideInInspector][SerializeField] public PanelControl panelControl;
-        [HideInInspector] [SerializeField] public bool tab;
+        [SerializeField] private bool panel;
+        [SerializeField] private GameObject panelGO;
+        [SerializeField] private bool controlPanel;
+        [SerializeField] private ControlPanel panelControl;
+        [SerializeField] private bool tab;
+        [SerializeField] private PanelControl control;
 
         private Boolean clicked;
 
@@ -203,34 +204,39 @@ public class HintFlash : MonoBehaviour
             set => clicked = value;
         }
 
-
-    }
-
-
-    #if UNITY_EDITOR
-    [CustomEditor(typeof(ObjectTriggerInfo))]
-    public class ObjectTriggerInfoEditor : Editor
-    {
-        public override void OnInspectorGUI()
+        public GameObject PanelGO
         {
-            DrawDefaultInspector(); // for other non-HideInInspector fields
-            SerializedObject profiles = new SerializedObject(HintFlash.ObjectTriggerInfo);
-            ObjectTriggerInfo script = (ObjectTriggerInfo) target;
-
-            // draw checkbox for the bool
-            if (script.panel) // if bool is true, show other fields
-            {
-                script.panelGO = EditorGUILayout.ObjectField("Game Object", script.panelGO, typeof(GameObject), true) as GameObject;
-                script.controlPanel = EditorGUILayout.Toggle(script.controlPanel);
-                if (script.controlPanel)
-                {
-                    script.panelControl = EditorGUILayout.ObjectField("Panel Control", script.panelControl, typeof(PanelControl), true) as PanelControl;
-                    script.tab = EditorGUILayout.Toggle(script.tab);
-                }
-            }
+            get => panelGO;
         }
+
+        public bool Tab
+        {
+            get => tab;
+        }
+
+        public bool Panel
+        {
+            get => panel;
+        }
+
+        public bool ControlPanel
+        {
+            get => controlPanel;
+        }
+
+        public ControlPanel PanelControl
+        {
+            get => panelControl;
+        }
+
+        public PanelControl Control
+        {
+            get => control;
+        }
+
+
     }
-    #endif
+
 }
 
 

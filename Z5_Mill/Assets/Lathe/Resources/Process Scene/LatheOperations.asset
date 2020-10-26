@@ -27,21 +27,21 @@ MonoBehaviour:
   - name: Facing Operation
     frenchName: "Op\xE9ration de surfa\xE7age"
     sentences:
-    - Open Guard - Press Guard Button on General Panel
+    - Open Guard - Press Guard Button on Control Panel
     - Place Piece - Click on piece
     - Tighten Jaw - Click on chuck key
-    - Close Guard - Press Guard Button on General Panel
+    - Close Guard - Press Guard Button on Control Panel
     - Setup Tool Holder - Click on tool holder
     - Lock Tool Holder - Click on tool post handle
-    - Move Carriage - Press Carriage Button on General Panel
-    - Top Slide - Press Top Slide Button on General Panel
+    - Move Carriage - Press Carriage Button on Control Panel
+    - Top Slide - Press Compound Slide Button on Control Panel
     - 'Turn ON '
-    - Set Contact - Press Tool Post Movement Button on General Panel
+    - Set Contact - Press Cross Slide Button on Control Panel
     - Zero DRO Panel (Will be implemented later)
-    - Retreat Cutter - Press Tool Post Movement Button on General Panel
-    - Set Cut Depth - Press Top Slide on General Panel
-    - Machine Across - Press Tool Post Movement Button on General Panel
-    - Retreat - Press Top Slide Button on General Panel
+    - Retreat Cutter - Press Cross Slide Button on Control Panel
+    - Set Cut Depth - Press Compound on General Panel
+    - Machine Across - Press Cross Slide Button on Control Panel
+    - Retreat - Press Compound Slide Button on Control Panel
     - Turn OFF
     - End  of operation
     sentencesFR:
@@ -83,21 +83,22 @@ MonoBehaviour:
   - name: Turning Operation
     frenchName: "Op\xE9ration de tournage"
     sentences:
-    - Open Guard - Press Guard Button on General Panel
+    - Open Guard - Press Guard Button on Control Panel
     - Place Piece - Click on piece
     - Tighten Jaw - Click on chuck key
-    - Close Guard - Press Guard Button on General Panel
+    - Close Guard - Press Guard Button on Control Panel
     - Setup Tool Holder - Click on tool holder
     - Lock Tool Holder - Click on tool post handle
-    - Move Carriage - Press Carriage Button on General Panel
-    - Top Slide - Press Top Slide Button on General Panel
-    - Tool Post Movement - Press Tool Post Movement Button on General Panel
+    - Move Carriage - Press Carriage Button on Control Panel
+    - Compound Slide - Press Compound Slide Button on Control Panel
+    - Cross Slide Movement - Press Cross Slide Movement Button on Control Panel
     - Turn ON
-    - Set Contact - Press Top Slide Button on General Panel
-    - Zero DRO Panel (Will be implemented later)
-    - Set Cut Depth - Press Tool Post Movement  on General Panel
-    - Machine Across - Press Top Slide Button on General Panel
-    - Retreat - Press Top Slide Button on General Panel
+    - Set Contact - Press Cross Slide Slide Button on Control Panel
+    - Zero DRO Panel (Will be implemented later) - Press Button on Top Corner for
+      now
+    - Set Cut Depth - Press Cross Slide Button  on Control Panel
+    - Machine Across - Press Compound Slide Button on Control Panel
+    - Retreat - Press Cross Slide Button on Control Panel
     - Turn OFF
     - End of operation
     sentencesFR:
@@ -139,18 +140,18 @@ MonoBehaviour:
   - name: Drilling Operation
     frenchName: "Op\xE9ration de forage"
     sentences:
-    - Open Guard - Press Guard Button on General Panel
+    - Open Guard - Press Guard Button on Control Panel
     - Place Piece - Click on piece
     - Tighten Jaw - Click on chuck key
-    - Close Guard - Press Guard Button on General Panel
-    - Insert Drill Bit - Click on drill bit 1
+    - Close Guard - Press Guard Button on Control Panel
+    - Insert Drill Bit - Click on drill bit 1 on Tailstock Tools Panel
     - Tighten Bit - Click on drill chuck (for now)
-    - Move Carriage - Press Carriage Button on General Panel
-    - Move Tailstock - Press Tailstock Button on Tailstock Panel
-    - Lock Tailstock - Press Lock Tailstock on Tailstock panel
-    - Move Tailstock Quill - Press Tailstock Quill
+    - Move Carriage - Press Carriage Button on Control Panel
+    - Move Tailstock - Press Tailstock Button on Control Panel (Tab Tailstock)
+    - Lock Tailstock - Press Lock Tailstock on Control panel (Tab Tailstock)
+    - Move Tailstock Quill - Press Tailstock Quill on Control Panel (Tab Tailstock)
     - Turn ON
-    - Drill into workpiece - Press Tailstock Quill
+    - Drill into workpiece - Press Tailstock Quill on Control Panel (Tab Tailstock)
     - Turn OFF
     - End of operation
     sentencesFR:
