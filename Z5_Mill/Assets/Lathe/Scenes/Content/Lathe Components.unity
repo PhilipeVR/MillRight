@@ -122,6 +122,12 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &73885488 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2381035514679850041, guid: 47f24e795ba2a334d8fc07652923cca1,
+    type: 3}
+  m_PrefabInstance: {fileID: 6504012094340415408}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &360451043
 GameObject:
   m_ObjectHideFlags: 0
@@ -2241,12 +2247,17 @@ PrefabInstance:
     - target: {fileID: 6162113169624468165, guid: a051b3db1e47e4e4fa98f291d856042c,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6162113169624468165, guid: a051b3db1e47e4e4fa98f291d856042c,
         type: 3}
       propertyPath: m_StaticEditorFlags
       value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 6162113169624468218, guid: a051b3db1e47e4e4fa98f291d856042c,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6162113169639339333, guid: a051b3db1e47e4e4fa98f291d856042c,
         type: 3}
@@ -2361,7 +2372,7 @@ PrefabInstance:
     - target: {fileID: 6162113169856215603, guid: a051b3db1e47e4e4fa98f291d856042c,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6162113169856215603, guid: a051b3db1e47e4e4fa98f291d856042c,
         type: 3}
@@ -11505,6 +11516,11 @@ PrefabInstance:
       propertyPath: timerCountDown
       value: 0.1
       objectReference: {fileID: 0}
+    - target: {fileID: 9116584575628201050, guid: 47f24e795ba2a334d8fc07652923cca1,
+        type: 3}
+      propertyPath: prefab
+      value: 
+      objectReference: {fileID: 73885488}
     - target: {fileID: 9130859365847304164, guid: 47f24e795ba2a334d8fc07652923cca1,
         type: 3}
       propertyPath: reset

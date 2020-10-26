@@ -4197,6 +4197,11 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 619636241}
+    - target: {fileID: 8083552895908864499, guid: 37c584658efa4584f80d6a0d18f647b3,
+        type: 3}
+      propertyPath: m_Depth
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8083552895908864501, guid: 37c584658efa4584f80d6a0d18f647b3,
         type: 3}
       propertyPath: m_Enabled
@@ -13272,7 +13277,7 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 40
+  m_fontSize: 38.65
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
