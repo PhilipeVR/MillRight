@@ -42,8 +42,11 @@ public class RevertDestruction : MonoBehaviour
 
         if(destroyedTransformPos.Count > numOfCubesToDestroy)
         {
-            doneButton.gameObject.SetActive(true);
-            doneButton.interactable = true;
+            if (doneButton != null)
+            {
+                doneButton.gameObject.SetActive(true);
+                doneButton.interactable = true;
+            }
         }
     }
 

@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEditor;
 
 public class HintFlash : MonoBehaviour
 {
@@ -173,6 +174,11 @@ public class HintFlash : MonoBehaviour
         [SerializeField] private int sentenceIndex;
         [SerializeField] private int triggerIndex;
         [SerializeField] private List<GameObject> triggerObject;
+        [SerializeField] public bool panel;
+        [HideInInspector] [SerializeField] public GameObject panelGO;
+        [HideInInspector] [SerializeField] public bool controlPanel;
+        [HideInInspector][SerializeField] public PanelControl panelControl;
+        [HideInInspector] [SerializeField] public bool tab;
 
         private Boolean clicked;
 
@@ -199,4 +205,33 @@ public class HintFlash : MonoBehaviour
 
 
     }
+
+
+    #if UNITY_EDITOR
+    [CustomEditor(typeof(ObjectTriggerInfo))]
+    public class ObjectTriggerInfoEditor : Editor
+    {
+        public override void OnInspectorGUI()
+        {
+            DrawDefaultInspector(); // for other non-HideInInspector fields
+            SerializedObject profiles = new SerializedObject(HintFlash.ObjectTriggerInfo);
+            ObjectTriggerInfo script = (ObjectTriggerInfo) target;
+
+            // draw checkbox for the bool
+            if (script.panel) // if bool is true, show other fields
+            {
+                script.panelGO = EditorGUILayout.ObjectField("Game Object", script.panelGO, typeof(GameObject), true) as GameObject;
+                script.controlPanel = EditorGUILayout.Toggle(script.controlPanel);
+                if (script.controlPanel)
+                {
+                    script.panelControl = EditorGUILayout.ObjectField("Panel Control", script.panelControl, typeof(PanelControl), true) as PanelControl;
+                    script.tab = EditorGUILayout.Toggle(script.tab);
+                }
+            }
+        }
+    }
+    #endif
 }
+
+
+

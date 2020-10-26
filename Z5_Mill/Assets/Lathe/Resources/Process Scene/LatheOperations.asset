@@ -1,0 +1,185 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6514887594a1703478cd02d95eb763bf, type: 3}
+  m_Name: LatheOperations
+  m_EditorClassIdentifier: 
+  dialogues:
+  - name: Intro Dialog
+    frenchName: Dialogue Intro
+    sentences:
+    - Intro Dialog
+    - Intro Dialog
+    sentencesFR:
+    - To be implemented
+    - To be implemented
+    images:
+    - {fileID: 21300000, guid: 971b9279cecf96f4bb7f7a35150c1930, type: 3}
+    - {fileID: 21300000, guid: 971b9279cecf96f4bb7f7a35150c1930, type: 3}
+  - name: Facing Operation
+    frenchName: "Op\xE9ration de surfa\xE7age"
+    sentences:
+    - Open Guard - Press Guard Button on General Panel
+    - Place Piece - Click on piece
+    - Tighten Jaw - Click on chuck key
+    - Close Guard - Press Guard Button on General Panel
+    - Setup Tool Holder - Click on tool holder
+    - Lock Tool Holder - Click on tool post handle
+    - Move Carriage - Press Carriage Button on General Panel
+    - Top Slide - Press Top Slide Button on General Panel
+    - 'Turn ON '
+    - Set Contact - Press Tool Post Movement Button on General Panel
+    - Zero DRO Panel (Will be implemented later)
+    - Retreat Cutter - Press Tool Post Movement Button on General Panel
+    - Set Cut Depth - Press Top Slide on General Panel
+    - Machine Across - Press Tool Post Movement Button on General Panel
+    - Retreat - Press Top Slide Button on General Panel
+    - Turn OFF
+    - End  of operation
+    sentencesFR:
+    - To be implemented
+    - To be implemented
+    - To be implemented
+    - To be implemented
+    - To be implemented
+    - To be implemented
+    - To be implemented
+    - To be implemented
+    - To be implemented
+    - To be implemented
+    - To be implemented
+    - To be implemented
+    - To be implemented
+    - To be implemented
+    - To be implemented
+    - To be implemented
+    - To be implemented
+    images:
+    - {fileID: 21300000, guid: 7cb962a47cd6b4049922ffc01101f823, type: 3}
+    - {fileID: 21300000, guid: 7cb962a47cd6b4049922ffc01101f823, type: 3}
+    - {fileID: 21300000, guid: 7cb962a47cd6b4049922ffc01101f823, type: 3}
+    - {fileID: 21300000, guid: 7cb962a47cd6b4049922ffc01101f823, type: 3}
+    - {fileID: 21300000, guid: 7cb962a47cd6b4049922ffc01101f823, type: 3}
+    - {fileID: 21300000, guid: 7cb962a47cd6b4049922ffc01101f823, type: 3}
+    - {fileID: 21300000, guid: 7cb962a47cd6b4049922ffc01101f823, type: 3}
+    - {fileID: 21300000, guid: 7cb962a47cd6b4049922ffc01101f823, type: 3}
+    - {fileID: 21300000, guid: 7cb962a47cd6b4049922ffc01101f823, type: 3}
+    - {fileID: 21300000, guid: 7cb962a47cd6b4049922ffc01101f823, type: 3}
+    - {fileID: 21300000, guid: 7cb962a47cd6b4049922ffc01101f823, type: 3}
+    - {fileID: 21300000, guid: 7cb962a47cd6b4049922ffc01101f823, type: 3}
+    - {fileID: 21300000, guid: 7cb962a47cd6b4049922ffc01101f823, type: 3}
+    - {fileID: 21300000, guid: 7cb962a47cd6b4049922ffc01101f823, type: 3}
+    - {fileID: 21300000, guid: 7cb962a47cd6b4049922ffc01101f823, type: 3}
+    - {fileID: 21300000, guid: 7cb962a47cd6b4049922ffc01101f823, type: 3}
+    - {fileID: 21300000, guid: 7cb962a47cd6b4049922ffc01101f823, type: 3}
+  - name: Turning Operation
+    frenchName: "Op\xE9ration de tournage"
+    sentences:
+    - Open Guard - Press Guard Button on General Panel
+    - Place Piece - Click on piece
+    - Tighten Jaw - Click on chuck key
+    - Close Guard - Press Guard Button on General Panel
+    - Setup Tool Holder - Click on tool holder
+    - Lock Tool Holder - Click on tool post handle
+    - Move Carriage - Press Carriage Button on General Panel
+    - Top Slide - Press Top Slide Button on General Panel
+    - Tool Post Movement - Press Tool Post Movement Button on General Panel
+    - Turn ON
+    - Set Contact - Press Top Slide Button on General Panel
+    - Zero DRO Panel (Will be implemented later)
+    - Set Cut Depth - Press Tool Post Movement  on General Panel
+    - Machine Across - Press Top Slide Button on General Panel
+    - Retreat - Press Top Slide Button on General Panel
+    - Turn OFF
+    - End of operation
+    sentencesFR:
+    - To be implemented
+    - To be implemented
+    - To be implemented
+    - To be implemented
+    - To be implemented
+    - To be implemented
+    - To be implemented
+    - To be implemented
+    - To be implemented
+    - To be implemented
+    - To be implemented
+    - To be implemented
+    - To be implemented
+    - To be implemented
+    - To be implemented
+    - To be implemented
+    - To be implemented
+    images:
+    - {fileID: 21300000, guid: 7cb962a47cd6b4049922ffc01101f823, type: 3}
+    - {fileID: 21300000, guid: 7cb962a47cd6b4049922ffc01101f823, type: 3}
+    - {fileID: 21300000, guid: 7cb962a47cd6b4049922ffc01101f823, type: 3}
+    - {fileID: 21300000, guid: 7cb962a47cd6b4049922ffc01101f823, type: 3}
+    - {fileID: 21300000, guid: 7cb962a47cd6b4049922ffc01101f823, type: 3}
+    - {fileID: 21300000, guid: 7cb962a47cd6b4049922ffc01101f823, type: 3}
+    - {fileID: 21300000, guid: 7cb962a47cd6b4049922ffc01101f823, type: 3}
+    - {fileID: 21300000, guid: 7cb962a47cd6b4049922ffc01101f823, type: 3}
+    - {fileID: 21300000, guid: 7cb962a47cd6b4049922ffc01101f823, type: 3}
+    - {fileID: 21300000, guid: 7cb962a47cd6b4049922ffc01101f823, type: 3}
+    - {fileID: 21300000, guid: 7cb962a47cd6b4049922ffc01101f823, type: 3}
+    - {fileID: 21300000, guid: 7cb962a47cd6b4049922ffc01101f823, type: 3}
+    - {fileID: 21300000, guid: 7cb962a47cd6b4049922ffc01101f823, type: 3}
+    - {fileID: 21300000, guid: 7cb962a47cd6b4049922ffc01101f823, type: 3}
+    - {fileID: 21300000, guid: 7cb962a47cd6b4049922ffc01101f823, type: 3}
+    - {fileID: 21300000, guid: 7cb962a47cd6b4049922ffc01101f823, type: 3}
+    - {fileID: 21300000, guid: 7cb962a47cd6b4049922ffc01101f823, type: 3}
+  - name: Drilling Operation
+    frenchName: "Op\xE9ration de forage"
+    sentences:
+    - Open Guard - Press Guard Button on General Panel
+    - Place Piece - Click on piece
+    - Tighten Jaw - Click on chuck key
+    - Close Guard - Press Guard Button on General Panel
+    - Insert Drill Bit - Click on drill bit 1
+    - Tighten Bit - Click on drill chuck (for now)
+    - Move Carriage - Press Carriage Button on General Panel
+    - Move Tailstock - Press Tailstock Button on Tailstock Panel
+    - Lock Tailstock - Press Lock Tailstock on Tailstock panel
+    - Move Tailstock Quill - Press Tailstock Quill
+    - Turn ON
+    - Drill into workpiece - Press Tailstock Quill
+    - Turn OFF
+    - End of operation
+    sentencesFR:
+    - To be implemented
+    - To be implemented
+    - To be implemented
+    - To be implemented
+    - To be implemented
+    - To be implemented
+    - To be implemented
+    - To be implemented
+    - To be implemented
+    - To be implemented
+    - To be implemented
+    - To be implemented
+    - To be implemented
+    - To be implemented
+    images:
+    - {fileID: 21300000, guid: 7cb962a47cd6b4049922ffc01101f823, type: 3}
+    - {fileID: 21300000, guid: 7cb962a47cd6b4049922ffc01101f823, type: 3}
+    - {fileID: 21300000, guid: 7cb962a47cd6b4049922ffc01101f823, type: 3}
+    - {fileID: 21300000, guid: 7cb962a47cd6b4049922ffc01101f823, type: 3}
+    - {fileID: 21300000, guid: 7cb962a47cd6b4049922ffc01101f823, type: 3}
+    - {fileID: 21300000, guid: 7cb962a47cd6b4049922ffc01101f823, type: 3}
+    - {fileID: 21300000, guid: 7cb962a47cd6b4049922ffc01101f823, type: 3}
+    - {fileID: 21300000, guid: 7cb962a47cd6b4049922ffc01101f823, type: 3}
+    - {fileID: 21300000, guid: 7cb962a47cd6b4049922ffc01101f823, type: 3}
+    - {fileID: 21300000, guid: 7cb962a47cd6b4049922ffc01101f823, type: 3}
+    - {fileID: 21300000, guid: 7cb962a47cd6b4049922ffc01101f823, type: 3}
+    - {fileID: 21300000, guid: 7cb962a47cd6b4049922ffc01101f823, type: 3}
+    - {fileID: 21300000, guid: 7cb962a47cd6b4049922ffc01101f823, type: 3}
+    - {fileID: 21300000, guid: 7cb962a47cd6b4049922ffc01101f823, type: 3}

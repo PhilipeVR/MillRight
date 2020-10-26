@@ -5300,7 +5300,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &6162113169487684688
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6089,7 +6089,7 @@ MonoBehaviour:
   tracker: 0
   count: 0
   index: 0
-  sentenceIndex: 0
+  sentenceIndex: 7
   open: {fileID: 0}
   close: {fileID: 0}
   holder: {fileID: 6162113171356023929}

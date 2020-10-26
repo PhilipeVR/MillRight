@@ -1,0 +1,41 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ee79008135f12f4591841e430f1f2cf, type: 3}
+  m_Name: Top Slide Button
+  m_EditorClassIdentifier: 
+  triggers:
+  - TriggerControllerName: Facing
+    anim: 0
+    transitionParams:
+    - Top Slide
+    - Set Cut Depth
+    - Top Retreat
+    animationName:
+    - Carriage Move
+    - Retreat (Tool Post Movement)
+    - Across (Tool Post Movement)
+    index: 070000000c0000000e000000
+    sentenceIndex: 070000000c0000000e000000
+  - TriggerControllerName: Turning
+    anim: 1
+    transitionParams:
+    - Top Slide
+    - Set Contact Point
+    - Slide Across
+    - Tool Post Retreat
+    animationName:
+    - Carriage
+    - Turn ON
+    - Set Cut Depth
+    - Slide Across
+    index: 070000000a0000000d0000000e000000
+    sentenceIndex: 070000000a0000000d0000000e000000
