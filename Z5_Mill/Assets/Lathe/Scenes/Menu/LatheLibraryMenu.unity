@@ -755,7 +755,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &805070757
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1086,7 +1086,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1271905328
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1477,7 +1477,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1366053422
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1724,7 +1724,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1460978889
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2386,7 +2386,7 @@ GameObject:
   - component: {fileID: 1867587138}
   - component: {fileID: 1867587137}
   m_Layer: 5
-  m_Name: MillingProcessTutorialBTN
+  m_Name: LatheProcessTutorialBTN
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2557,7 +2557,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: IntroTutorial
+          m_StringArgument: Lathe 2
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1867587141
@@ -2614,7 +2614,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -858, y: -466}
+  m_AnchoredPosition: {x: -858, y: 263}
   m_SizeDelta: {x: 1800, y: 136.81128}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &2015213326
@@ -2806,7 +2806,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Milling Processes Tutorial
+  m_Text: 'Lathe Processes Tutorial
 
 '
 --- !u!222 &2034215699
