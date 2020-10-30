@@ -32,19 +32,26 @@ MonoBehaviour:
     - Tighten Jaw - Click on chuck key
     - Close Guard - Press Guard Button on Control Panel
     - Setup Tool Holder - Click on tool holder
+    - Increase tool holder height 1 - Click on increase height button in tool post
+      panel
+    - Increase tool holder height 2 - Click on increase height button in tool post
+      panel
+    - Increase tool holder height 3 - Click on increase height button in tool post
+      panel
     - Lock Tool Holder - Click on tool post handle
     - Move Carriage - Press Carriage Button on Control Panel
-    - Top Slide - Press Compound Slide Button on Control Panel
-    - 'Turn ON '
-    - Set Contact - Press Cross Slide Button on Control Panel
-    - Zero DRO Panel (Will be implemented later)
+    - Turn ON - Press on On Button on Lathe
+    - 'Set Contact - Press Cross Slide Button on Control Panel
+
+'
     - Retreat Cutter - Press Cross Slide Button on Control Panel
-    - Set Cut Depth - Press Compound on General Panel
+    - Set Cut Depth - Press Carriage Button on General Panel
     - Machine Across - Press Cross Slide Button on Control Panel
-    - Retreat - Press Compound Slide Button on Control Panel
-    - Turn OFF
-    - End  of operation
+    - Retreat - Press Carriage Button on Control Panel
+    - Turn OFF - Press Stop Button on Lathe
+    - End of Operation
     sentencesFR:
+    - To be implemented
     - To be implemented
     - To be implemented
     - To be implemented
@@ -80,6 +87,7 @@ MonoBehaviour:
     - {fileID: 21300000, guid: 7cb962a47cd6b4049922ffc01101f823, type: 3}
     - {fileID: 21300000, guid: 7cb962a47cd6b4049922ffc01101f823, type: 3}
     - {fileID: 21300000, guid: 7cb962a47cd6b4049922ffc01101f823, type: 3}
+    - {fileID: 21300000, guid: 7cb962a47cd6b4049922ffc01101f823, type: 3}
   - name: Turning Operation
     frenchName: "Op\xE9ration de tournage"
     sentences:
@@ -88,18 +96,19 @@ MonoBehaviour:
     - Tighten Jaw - Click on chuck key
     - Close Guard - Press Guard Button on Control Panel
     - Setup Tool Holder - Click on tool holder
+    - Increase tool holder height 1 - Click on increase height button in tool post
+      panel
+    - Increase tool holder height 2 - Click on increase height button in tool post
+      panel
     - Lock Tool Holder - Click on tool post handle
     - Move Carriage - Press Carriage Button on Control Panel
-    - Compound Slide - Press Compound Slide Button on Control Panel
     - Cross Slide Movement - Press Cross Slide Movement Button on Control Panel
-    - Turn ON
-    - Set Contact - Press Cross Slide Slide Button on Control Panel
-    - Zero DRO Panel (Will be implemented later) - Press Button on Top Corner for
-      now
+    - Turn ON - Press on ON Button on Lathe
+    - Set Contact - Press Carriage Button on Control Panel
     - Set Cut Depth - Press Cross Slide Button  on Control Panel
-    - Machine Across - Press Compound Slide Button on Control Panel
+    - Machine Across - Press Carriage Button on Control Panel
     - Retreat - Press Cross Slide Button on Control Panel
-    - Turn OFF
+    - Turn OFF - Press Stop Button on Lathe
     - End of operation
     sentencesFR:
     - To be implemented
@@ -150,9 +159,9 @@ MonoBehaviour:
     - Move Tailstock - Press Tailstock Button on Control Panel (Tab Tailstock)
     - Lock Tailstock - Press Lock Tailstock on Control panel (Tab Tailstock)
     - Move Tailstock Quill - Press Tailstock Quill on Control Panel (Tab Tailstock)
-    - Turn ON
+    - Turn ON - Press On Button on Lathe
     - Drill into workpiece - Press Tailstock Quill on Control Panel (Tab Tailstock)
-    - Turn OFF
+    - Turn OFF - Press Stop Button on Lathe
     - End of operation
     sentencesFR:
     - To be implemented

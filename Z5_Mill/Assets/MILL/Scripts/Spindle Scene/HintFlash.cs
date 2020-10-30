@@ -178,6 +178,7 @@ public class HintFlash : MonoBehaviour
         [SerializeField] private GameObject panelGO;
         [SerializeField] private bool controlPanel;
         [SerializeField] private ControlPanel panelControl;
+        [SerializeField] private bool panelControlBool;
         [SerializeField] private bool tab;
         [SerializeField] private PanelControl control;
 
@@ -222,6 +223,11 @@ public class HintFlash : MonoBehaviour
         public bool ControlPanel
         {
             get => controlPanel;
+        }
+        
+        public bool PanelControlBool
+        {
+            get => panelControlBool;
         }
 
         public ControlPanel PanelControl

@@ -65,6 +65,10 @@ public class OperationManager : MonoBehaviour
             }            
             foreach (RendererTrigger clipTriggers in rendererTriggers)
             {
+                if (!clipTriggers.gameObject.activeSelf)
+                {
+                    clipTriggers.gameObject.SetActive(true);
+                }
                 clipTriggers.ResetTriggers(animIndex);
             }
             RestartAnim();

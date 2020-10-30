@@ -9,6 +9,8 @@ public class ProcessController : MonoBehaviour
     //[SerializeField] private ButtonReset reset;
     [SerializeField] private List<OperationManager> operations;
     [SerializeField] private RevertDestruction revertDestruction;
+    [SerializeField] private RendererTrigger stockTrigger;
+    [SerializeField] private List<GameObject> dummyStock;
     [SerializeField] private float animSpeed;
 
     private int m_index;
@@ -21,6 +23,10 @@ public class ProcessController : MonoBehaviour
         {
             operation.ActivateAnimator(false);
         }
+        foreach (GameObject obj in dummyStock)
+        {
+            obj.SetActive(false);
+        }
     }
 
     public void ChangeAnimator(int index)
@@ -31,9 +37,15 @@ public class ProcessController : MonoBehaviour
         {
             if (controller != null)
             {
+                foreach (GameObject obj in dummyStock)
+                {
+                    obj.SetActive(false);
+                }
                 prevState = controller.Done;
                 controller.ActivateAnimator(false);
-                revertDestruction.RevertStock();
+                //revertDestruction.RevertStock();
+                //stockTrigger.gameObject.SetActive(true);
+                //stockTrigger.ResetStock();
 
             }
             if (index >= 0 && index < operations.Count)
@@ -42,6 +54,7 @@ public class ProcessController : MonoBehaviour
                 controller.ResetAnim(prevState, prevController);
                 m_index = index;
                 hintTriggerFlash.SetAnimIndex();
+                dummyStock[index].SetActive(true);
                 //reset.ResetDRO();
             }
         }

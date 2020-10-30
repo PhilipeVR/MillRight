@@ -51,9 +51,9 @@ public class InteractionManager : MonoBehaviour
         NoInteraction();
         if (SequenceDone)
         {
-            Drill.interactable = true;
-            Turning.interactable = true;
-            Facing.interactable = true;
+            Drill.interactable = false;
+            Turning.interactable = false;
+            Facing.interactable = false;
             MainMenu.interactable = true;
             Next.interactable = true;
         }

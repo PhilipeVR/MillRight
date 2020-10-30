@@ -21,19 +21,3 @@ MonoBehaviour:
     - Guard Open
     index: 01000000
     sentenceIndex: 01000000
-  - TriggerControllerName: Turning
-    anim: 1
-    transitionParams:
-    - Place Piece
-    animationName:
-    - Open Guard
-    index: 01000000
-    sentenceIndex: 01000000
-  - TriggerControllerName: Lathe (Centered) Operations
-    anim: 2
-    transitionParams:
-    - Place Piece
-    animationName:
-    - Open Guard
-    index: 01000000
-    sentenceIndex: 01000000

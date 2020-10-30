@@ -10,32 +10,30 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8ee79008135f12f4591841e430f1f2cf, type: 3}
-  m_Name: Top Slide Button
+  m_Name: OFF Button
   m_EditorClassIdentifier: 
   triggers:
   - TriggerControllerName: Facing
     anim: 0
     transitionParams:
-    - Top Slide
-    - Set Cut Depth
-    - Top Retreat
+    - Turn OFF
     animationName:
-    - Carriage Move
-    - Retreat (Tool Post Movement)
-    - Across (Tool Post Movement)
-    index: 070000000c0000000e000000
-    sentenceIndex: 070000000c0000000e000000
+    - Retreat (Carriage)
+    index: 10000000
+    sentenceIndex: 10000000
   - TriggerControllerName: Turning
     anim: 1
     transitionParams:
-    - Top Slide
-    - Set Contact Point
-    - Slide Across
-    - Tool Post Retreat
+    - Turn OFF
     animationName:
-    - Carriage
-    - Turn ON
-    - Set Cut Depth
-    - Slide Across
-    index: 070000000a0000000d0000000e000000
-    sentenceIndex: 070000000a0000000d0000000e000000
+    - Tool Post Retreat
+    index: 0f000000
+    sentenceIndex: 0f000000
+  - TriggerControllerName: Lathe (Centered) Operations
+    anim: 2
+    transitionParams:
+    - Turn OFF
+    animationName:
+    - Pecking
+    index: 0c000000
+    sentenceIndex: 0c000000

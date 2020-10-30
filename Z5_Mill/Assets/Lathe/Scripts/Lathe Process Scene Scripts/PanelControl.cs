@@ -45,4 +45,28 @@ public class PanelControl : MonoBehaviour
         }
         isActive2 = !isActive2;
     }
+
+    public void SetPanel1(bool value)
+    {
+        if (isActive2 && value)
+        {
+            Panel2.SetActive(false);
+        }
+        Panel1.SetActive(value);
+
+        isActive1 = value;
+        isActive2 = false;
+    }
+
+    public void SetPanel2(bool value)
+    {
+        if (isActive1 && value)
+        {
+            Panel1.SetActive(false);
+        }
+        Panel2.SetActive(value);
+
+        isActive2 = value;
+        isActive1 = false;
+    }
 }

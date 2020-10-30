@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEditor;
+
 
 public class RendererTrigger : MonoBehaviour
 {
@@ -11,6 +13,9 @@ public class RendererTrigger : MonoBehaviour
     [SerializeField] private Color clickedColor;
     [SerializeField] private bool colorChange;
     [SerializeField] private GameObject activateOnClick;
+    [SerializeField] public bool powerTrigger;
+    [HideInInspector] [SerializeField] public PowerToggle powerToggle;
+    [HideInInspector] [SerializeField] public bool power;
     private List<Trigger> triggers;
     private Color basicColor;
 
@@ -46,18 +51,26 @@ public class RendererTrigger : MonoBehaviour
         if (tmpTrigger != null)
         {
             Debug.Log(tmpTrigger.TriggerControllerName);
-            bool val = tmpTrigger.PlaySequence(controller);
-            if (val)
+            if (controller.CurrentAnimationStatus)
             {
                 if (colorChange)
                 {
                     GetComponent<Renderer>().material.color = clickedColor;
                     if (activateOnClick != null)
                     {
-                        activateOnClick.SetActive(true);
+                        //activateOnClick.SetActive(true);
                         gameObject.SetActive(false);
                     }
                 }
+            }
+            bool val = tmpTrigger.PlaySequence(controller);
+            if (val)
+            {
+                if (powerTrigger)
+                {
+                    powerToggle.TogglePower(power);
+                }
+                
                 if (dialogueManager.SentenceIndex == tmpTrigger.CurrentSentenceIndex())
                 {
                     dialogueManager.DisplayNextSentence();
@@ -107,5 +120,37 @@ public class RendererTrigger : MonoBehaviour
             }
 
         }
+        ResetStock();
+    }
+
+    public void ResetStock()
+    {
+        if (activateOnClick != null)
+        {
+            activateOnClick.SetActive(false);
+            GetComponent<Renderer>().material.color = basicColor;
+
+        }
     }
 }
+
+#if UNITY_EDITOR
+[CustomEditor(typeof(RendererTrigger))]
+public class RendererTriggerEditor : Editor
+{
+    public override void OnInspectorGUI()
+    {
+        DrawDefaultInspector(); // for other non-HideInInspector fields
+
+        RendererTrigger script = (RendererTrigger) target;
+
+        // draw checkbox for the bool
+        if (script.powerTrigger) // if bool is true, show other fields
+        {
+            script.powerToggle = EditorGUILayout.ObjectField("Power Toggle", script.powerToggle, typeof(PowerToggle), true) as PowerToggle;
+            script.power = EditorGUILayout.Toggle("ON/OFF", script.power);
+        }
+    }
+}
+#endif
+

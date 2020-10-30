@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Top Slide
+  m_Name: Tighten Jaw 2
   serializedVersion: 6
   m_Legacy: 0
   m_Compressed: 0
@@ -28,7 +28,7 @@ AnimationClip:
         outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
       - serializedVersion: 3
         time: 1
-        value: {x: 58.469448, y: 0, z: 0}
+        value: {x: 0, y: 120, z: 0}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
@@ -38,15 +38,39 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: Carriage Assembly/Tool Post Assembly/Compound Assembly/Tool Post ASM/Tool
-      Post Handwheel
+    path: Facing/Chuck Assembly/Chuck Cylinders/Cylinder 1
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: {x: 0, y: 20.435001, z: 0}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+      - serializedVersion: 3
+        time: 1
+        value: {x: 0, y: 140.435, z: 0}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: Facing/Chuck Assembly/Chuck Jaws/Chuck Key
   m_PositionCurves:
   - curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: {x: 36.558167, y: -37.986206, z: 3.3844757}
+        value: {x: 0, y: 16.613525, z: -27.8797}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
@@ -55,7 +79,7 @@ AnimationClip:
         outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
       - serializedVersion: 3
         time: 1
-        value: {x: 22.499886, y: -37.986206, z: 3.3844757}
+        value: {x: 0, y: 18.48, z: -26.01}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
@@ -65,14 +89,13 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: Carriage Assembly/Tool Post Assembly/Compound Assembly/Tool Post ASM/Compound
-      Slide T
+    path: Facing/Chuck Assembly/Chuck Jaws/Jaw 3
   - curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: {x: 113.85632, y: -43.401245, z: 3.88945}
+        value: {x: 0, y: 15.861572, z: 28.302979}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
@@ -81,7 +104,7 @@ AnimationClip:
         outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
       - serializedVersion: 3
         time: 1
-        value: {x: 99.79867, y: -43.401245, z: 3.88945}
+        value: {x: 0, y: 19.3, z: 27.1}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
@@ -91,14 +114,13 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: Carriage Assembly/Tool Post Assembly/Compound Assembly/Tool Post ASM/Handle
-      Plate
+    path: Facing/Chuck Assembly/Chuck Jaws/Jaw 2
   - curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: -32.417603, z: -0.4369812}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
@@ -107,7 +129,7 @@ AnimationClip:
         outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
       - serializedVersion: 3
         time: 1
-        value: {x: -14.058256, y: 0, z: 0}
+        value: {x: 0, y: -23.4, z: -0.4369812}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
@@ -117,13 +139,13 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: Carriage Assembly/Tool Post Assembly/Compound Assembly/Tool Post ASM/Screws
+    path: Facing/Chuck Assembly/Chuck Jaws/Jaw 1
   - curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: {x: 0, y: 0, z: 0}
+        value: {x: -1167.9, y: 1994.7, z: 581.8}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
@@ -132,7 +154,7 @@ AnimationClip:
         outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
       - serializedVersion: 3
         time: 1
-        value: {x: -14.058256, y: 0, z: 0}
+        value: {x: -1167.9, y: 1994.7, z: 581.8}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
@@ -142,10 +164,37 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: Carriage Assembly/Tool Post Assembly/Compound Assembly/Tool Post ASM/Tool
-      Post
+    path: Facing/Chuck Assembly/Cylinder Stock Material 2
   m_ScaleCurves: []
-  m_FloatCurves: []
+  m_FloatCurves:
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 1
+        inSlope: Infinity
+        outSlope: Infinity
+        tangentMode: 103
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 1
+        value: 0
+        inSlope: Infinity
+        outSlope: Infinity
+        tangentMode: 103
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_IsActive
+    path: Facing/Chuck Assembly/Chuck Jaws/Chuck Key
+    classID: 1
+    script: {fileID: 0}
   m_PPtrCurves: []
   m_SampleRate: 60
   m_WrapMode: 0
@@ -155,39 +204,53 @@ AnimationClip:
   m_ClipBindingConstant:
     genericBindings:
     - serializedVersion: 2
-      path: 2087192460
+      path: 2179976336
       attribute: 1
       script: {fileID: 0}
       typeID: 4
       customType: 0
       isPPtrCurve: 0
     - serializedVersion: 2
-      path: 1687563710
+      path: 4142464006
       attribute: 1
       script: {fileID: 0}
       typeID: 4
       customType: 0
       isPPtrCurve: 0
     - serializedVersion: 2
-      path: 4181412325
+      path: 1877061052
       attribute: 1
       script: {fileID: 0}
       typeID: 4
       customType: 0
       isPPtrCurve: 0
     - serializedVersion: 2
-      path: 4199875214
-      attribute: 1
-      script: {fileID: 0}
-      typeID: 4
-      customType: 0
-      isPPtrCurve: 0
-    - serializedVersion: 2
-      path: 825278720
+      path: 1665372870
       attribute: 4
       script: {fileID: 0}
       typeID: 4
       customType: 4
+      isPPtrCurve: 0
+    - serializedVersion: 2
+      path: 261805821
+      attribute: 4
+      script: {fileID: 0}
+      typeID: 4
+      customType: 4
+      isPPtrCurve: 0
+    - serializedVersion: 2
+      path: 261805821
+      attribute: 2086281974
+      script: {fileID: 0}
+      typeID: 1
+      customType: 0
+      isPPtrCurve: 0
+    - serializedVersion: 2
+      path: 2548197991
+      attribute: 1
+      script: {fileID: 0}
+      typeID: 4
+      customType: 0
       isPPtrCurve: 0
     pptrCurveMapping: []
   m_AnimationClipSettings:
@@ -216,7 +279,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 36.558167
+        value: 0
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -225,7 +288,7 @@ AnimationClip:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 1
-        value: 22.499886
+        value: 0
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -236,8 +299,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalPosition.x
-    path: Carriage Assembly/Tool Post Assembly/Compound Assembly/Tool Post ASM/Compound
-      Slide T
+    path: Facing/Chuck Assembly/Chuck Jaws/Jaw 3
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -245,7 +307,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: -37.986206
+        value: 16.613525
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -254,7 +316,7 @@ AnimationClip:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 1
-        value: -37.986206
+        value: 18.48
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -265,8 +327,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalPosition.y
-    path: Carriage Assembly/Tool Post Assembly/Compound Assembly/Tool Post ASM/Compound
-      Slide T
+    path: Facing/Chuck Assembly/Chuck Jaws/Jaw 3
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -274,7 +335,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 3.3844757
+        value: -27.8797
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -283,7 +344,7 @@ AnimationClip:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 1
-        value: 3.3844757
+        value: -26.01
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -294,8 +355,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalPosition.z
-    path: Carriage Assembly/Tool Post Assembly/Compound Assembly/Tool Post ASM/Compound
-      Slide T
+    path: Facing/Chuck Assembly/Chuck Jaws/Jaw 3
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -303,7 +363,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 113.85632
+        value: 0
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -312,7 +372,7 @@ AnimationClip:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 1
-        value: 99.79867
+        value: 0
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -323,8 +383,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalPosition.x
-    path: Carriage Assembly/Tool Post Assembly/Compound Assembly/Tool Post ASM/Handle
-      Plate
+    path: Facing/Chuck Assembly/Chuck Jaws/Jaw 2
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -332,7 +391,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: -43.401245
+        value: 15.861572
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -341,7 +400,7 @@ AnimationClip:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 1
-        value: -43.401245
+        value: 19.3
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -352,8 +411,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalPosition.y
-    path: Carriage Assembly/Tool Post Assembly/Compound Assembly/Tool Post ASM/Handle
-      Plate
+    path: Facing/Chuck Assembly/Chuck Jaws/Jaw 2
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -361,7 +419,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 3.88945
+        value: 28.302979
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -370,7 +428,7 @@ AnimationClip:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 1
-        value: 3.88945
+        value: 27.1
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -381,8 +439,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalPosition.z
-    path: Carriage Assembly/Tool Post Assembly/Compound Assembly/Tool Post ASM/Handle
-      Plate
+    path: Facing/Chuck Assembly/Chuck Jaws/Jaw 2
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -399,7 +456,7 @@ AnimationClip:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 1
-        value: -14.058256
+        value: 0
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -410,7 +467,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalPosition.x
-    path: Carriage Assembly/Tool Post Assembly/Compound Assembly/Tool Post ASM/Screws
+    path: Facing/Chuck Assembly/Chuck Jaws/Jaw 1
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -418,7 +475,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 0
+        value: -32.417603
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -427,7 +484,7 @@ AnimationClip:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 1
-        value: 0
+        value: -23.4
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -438,7 +495,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalPosition.y
-    path: Carriage Assembly/Tool Post Assembly/Compound Assembly/Tool Post ASM/Screws
+    path: Facing/Chuck Assembly/Chuck Jaws/Jaw 1
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -446,7 +503,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 0
+        value: -0.4369812
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -455,7 +512,7 @@ AnimationClip:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 1
-        value: 0
+        value: -0.4369812
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -466,7 +523,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalPosition.z
-    path: Carriage Assembly/Tool Post Assembly/Compound Assembly/Tool Post ASM/Screws
+    path: Facing/Chuck Assembly/Chuck Jaws/Jaw 1
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -474,7 +531,35 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
+        value: 1
+        inSlope: Infinity
+        outSlope: Infinity
+        tangentMode: 103
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 1
         value: 0
+        inSlope: Infinity
+        outSlope: Infinity
+        tangentMode: 103
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_IsActive
+    path: Facing/Chuck Assembly/Chuck Jaws/Chuck Key
+    classID: 1
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: -1167.9
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -483,7 +568,7 @@ AnimationClip:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 1
-        value: -14.058256
+        value: -1167.9
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -494,8 +579,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalPosition.x
-    path: Carriage Assembly/Tool Post Assembly/Compound Assembly/Tool Post ASM/Tool
-      Post
+    path: Facing/Chuck Assembly/Cylinder Stock Material 2
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -503,7 +587,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 0
+        value: 1994.7
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -512,7 +596,7 @@ AnimationClip:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 1
-        value: 0
+        value: 1994.7
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -523,8 +607,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalPosition.y
-    path: Carriage Assembly/Tool Post Assembly/Compound Assembly/Tool Post ASM/Tool
-      Post
+    path: Facing/Chuck Assembly/Cylinder Stock Material 2
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -532,7 +615,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 0
+        value: 581.8
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -541,7 +624,7 @@ AnimationClip:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 1
-        value: 0
+        value: 581.8
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -552,8 +635,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalPosition.z
-    path: Carriage Assembly/Tool Post Assembly/Compound Assembly/Tool Post ASM/Tool
-      Post
+    path: Facing/Chuck Assembly/Cylinder Stock Material 2
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -570,7 +652,7 @@ AnimationClip:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 1
-        value: 58.469448
+        value: 0
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -581,8 +663,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: localEulerAnglesRaw.x
-    path: Carriage Assembly/Tool Post Assembly/Compound Assembly/Tool Post ASM/Tool
-      Post Handwheel
+    path: Facing/Chuck Assembly/Chuck Cylinders/Cylinder 1
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -599,7 +680,7 @@ AnimationClip:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 1
-        value: 0
+        value: 120
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -610,8 +691,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: localEulerAnglesRaw.y
-    path: Carriage Assembly/Tool Post Assembly/Compound Assembly/Tool Post ASM/Tool
-      Post Handwheel
+    path: Facing/Chuck Assembly/Chuck Cylinders/Cylinder 1
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -639,8 +719,91 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: localEulerAnglesRaw.z
-    path: Carriage Assembly/Tool Post Assembly/Compound Assembly/Tool Post ASM/Tool
-      Post Handwheel
+    path: Facing/Chuck Assembly/Chuck Cylinders/Cylinder 1
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: localEulerAnglesRaw.x
+    path: Facing/Chuck Assembly/Chuck Jaws/Chuck Key
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 20.435001
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1
+        value: 140.435
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: localEulerAnglesRaw.y
+    path: Facing/Chuck Assembly/Chuck Jaws/Chuck Key
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: localEulerAnglesRaw.z
+    path: Facing/Chuck Assembly/Chuck Jaws/Chuck Key
     classID: 4
     script: {fileID: 0}
   m_EulerEditorCurves:
@@ -650,9 +813,8 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    attribute: m_LocalEulerAngles.x
-    path: Carriage Assembly/Tool Post Assembly/Compound Assembly/Tool Post ASM/Tool
-      Post Handwheel
+    attribute: m_LocalEulerAngles.z
+    path: Facing/Chuck Assembly/Chuck Cylinders/Cylinder 1
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -662,8 +824,37 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.y
-    path: Carriage Assembly/Tool Post Assembly/Compound Assembly/Tool Post ASM/Tool
-      Post Handwheel
+    path: Facing/Chuck Assembly/Chuck Cylinders/Cylinder 1
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.x
+    path: Facing/Chuck Assembly/Chuck Cylinders/Cylinder 1
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.x
+    path: Facing/Chuck Assembly/Chuck Jaws/Chuck Key
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.y
+    path: Facing/Chuck Assembly/Chuck Jaws/Chuck Key
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -673,8 +864,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.z
-    path: Carriage Assembly/Tool Post Assembly/Compound Assembly/Tool Post ASM/Tool
-      Post Handwheel
+    path: Facing/Chuck Assembly/Chuck Jaws/Chuck Key
     classID: 4
     script: {fileID: 0}
   m_HasGenericRootTransform: 0

@@ -2,6 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
 public class TestCylinderStock : MonoBehaviour
 {
 
@@ -10,27 +14,26 @@ public class TestCylinderStock : MonoBehaviour
     [SerializeField] private Animator controller;
     [SerializeField] private string StockTag;
     [SerializeField] private float speed;
+    [SerializeField] private Transform follow;
 
     private void Start()
     {
-        init_pos = transform.localPosition;
-        init_rot = GetComponent<Rigidbody>().rotation;
+        init_pos = follow.localPosition;
+        init_rot = follow.localRotation;
         GetComponent<Rigidbody>().velocity = new Vector3(0, 0, 0);
     }
 
     void FixedUpdate()
     {
         updateStaticRigidBody();
-
     }
 
     public void updateStaticRigidBody()
     {
-
         transform.localPosition = init_pos;
-        GetComponent<Rigidbody>().rotation = init_rot;
-
+        transform.localRotation = init_rot;
     }
+
 
     private void OnCollisionEnter(Collision collision)
     {

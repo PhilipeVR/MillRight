@@ -21,17 +21,19 @@ MonoBehaviour:
     - Machine Across
     animationName:
     - Turn ON
-    - Zero DRO Panel
-    - Set Cut Depth (Top Slide)
-    index: 090000000b0000000d000000
-    sentenceIndex: 090000000b0000000d000000
+    - Set Contact (Tool Post Movement)
+    - Set Cut Depth (Carriage)
+    index: 0b0000000c0000000e000000
+    sentenceIndex: 0b0000000c0000000e000000
   - TriggerControllerName: Turning
     anim: 1
     transitionParams:
     - Tool Post Movement
     - Set Cut Depth
+    - Tool Post Retreat
     animationName:
-    - Top Slide
-    - Zero DRO Panel
-    index: 080000000c000000
-    sentenceIndex: 080000000c000000
+    - Carriage
+    - Set Contact Point (Carriage)
+    - Slide Across
+    index: 090000000c0000000e000000
+    sentenceIndex: 090000000c0000000e000000

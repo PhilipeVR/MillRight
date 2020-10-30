@@ -181,16 +181,27 @@ public class HintTrigger : MonoBehaviour
                 {
                     if (currentInfo[triggerIndex].Panel)
                     {
-                        currentInfo[triggerIndex].PanelGO.SetActive(true);
-                        if(currentInfo[triggerIndex].Control != null)
-                        {
-                            currentInfo[triggerIndex].Control.togglePanel2();
-                        }
-                        if (currentInfo[triggerIndex].ControlPanel)
-                        {
-                            currentInfo[triggerIndex].PanelControl.TabActive(currentInfo[triggerIndex].Tab);
 
+                        if (currentInfo[triggerIndex].Control != null)
+                        {
+                            if (currentInfo[triggerIndex].PanelControlBool)
+                            {
+                                currentInfo[triggerIndex].Control.SetPanel1(true);
+
+                            }
+                            else
+                            {
+                                currentInfo[triggerIndex].Control.SetPanel2(true);
+                            }
                         }
+
+
+                    }
+                    if (currentInfo[triggerIndex].PanelControl != null)
+                    {
+                        currentInfo[triggerIndex].PanelGO.SetActive(true);
+                        currentInfo[triggerIndex].PanelControl.TabActive(currentInfo[triggerIndex].Tab);
+
                     }
                     StartCoroutine(FlashImage(image));
                 }

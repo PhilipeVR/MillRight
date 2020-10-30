@@ -10,22 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8ee79008135f12f4591841e430f1f2cf, type: 3}
-  m_Name: ZeroDRO
+  m_Name: Place Piece 3
   m_EditorClassIdentifier: 
   triggers:
-  - TriggerControllerName: Facing
-    anim: 0
+  - TriggerControllerName: Lathe (Centered) Operations
+    anim: 2
     transitionParams:
-    - DRO Zero
+    - Place Piece
     animationName:
-    - Set Contact (Tool Post Movement)
-    index: 0a000000
-    sentenceIndex: 0a000000
-  - TriggerControllerName: Turning
-    anim: 1
-    transitionParams:
-    - Zero DRO Panel
-    animationName:
-    - Set Contact Point (Top Slide)
-    index: 0b000000
-    sentenceIndex: 0b000000
+    - Open Guard
+    index: 01000000
+    sentenceIndex: 01000000
