@@ -135,6 +135,8 @@ GameObject:
   - component: {fileID: 74082667}
   - component: {fileID: 74082666}
   - component: {fileID: 74082669}
+  - component: {fileID: 74082670}
+  - component: {fileID: 74082665}
   m_Layer: 5
   m_Name: Tailstock Movement
   m_TagString: Untagged
@@ -162,6 +164,60 @@ RectTransform:
   m_AnchoredPosition: {x: 5.300049, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &74082665
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 74082663}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1115814037}
+          m_MethodName: setToolTipToggle
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 74082670}
+            m_ObjectArgumentAssemblyTypeName: ToolTipToggle, Assembly-CSharp
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 1115814037}
+          m_MethodName: ShowTip
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 1
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1115814037}
+          m_MethodName: HideTip
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!114 &74082666
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -271,6 +327,20 @@ MonoBehaviour:
   toggleImage: 0
   colorChange: 0
   imageToggle: {fileID: 0}
+--- !u!114 &74082670
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 74082663}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 40c63fb1bd12d334f82217a3b94fd9ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  name: Tailstock Movement
+  nameFR: 
 --- !u!1 &82178291 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7209546796855175646, guid: 47f24e795ba2a334d8fc07652923cca1,
@@ -319,7 +389,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-1194
+  m_Name: pb_Mesh-144348
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -640,6 +710,8 @@ GameObject:
   - component: {fileID: 149272042}
   - component: {fileID: 149272041}
   - component: {fileID: 149272040}
+  - component: {fileID: 149272045}
+  - component: {fileID: 149272044}
   m_Layer: 5
   m_Name: Carriage Movement
   m_TagString: Untagged
@@ -776,6 +848,74 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 149272038}
   m_CullTransparentMesh: 0
+--- !u!114 &149272044
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 149272038}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1115814037}
+          m_MethodName: setToolTipToggle
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 149272045}
+            m_ObjectArgumentAssemblyTypeName: ToolTipToggle, Assembly-CSharp
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 1115814037}
+          m_MethodName: ShowTip
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 1
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1115814037}
+          m_MethodName: HideTip
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+--- !u!114 &149272045
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 149272038}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 40c63fb1bd12d334f82217a3b94fd9ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  name: Carriage
+  nameFR: 
 --- !u!1 &222877433
 GameObject:
   m_ObjectHideFlags: 0
@@ -1041,6 +1181,8 @@ GameObject:
   - component: {fileID: 325688710}
   - component: {fileID: 325688709}
   - component: {fileID: 325688708}
+  - component: {fileID: 325688713}
+  - component: {fileID: 325688712}
   m_Layer: 5
   m_Name: Cross Slide
   m_TagString: Untagged
@@ -1177,6 +1319,74 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 325688706}
   m_CullTransparentMesh: 0
+--- !u!114 &325688712
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 325688706}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1115814037}
+          m_MethodName: setToolTipToggle
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 325688713}
+            m_ObjectArgumentAssemblyTypeName: ToolTipToggle, Assembly-CSharp
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 1115814037}
+          m_MethodName: ShowTip
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 2
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1115814037}
+          m_MethodName: HideTip
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+--- !u!114 &325688713
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 325688706}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 40c63fb1bd12d334f82217a3b94fd9ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  name: Cross Slide
+  nameFR: 
 --- !u!1 &360451043
 GameObject:
   m_ObjectHideFlags: 0
@@ -1359,6 +1569,8 @@ GameObject:
   - component: {fileID: 669639657}
   - component: {fileID: 669639656}
   - component: {fileID: 669639659}
+  - component: {fileID: 669639660}
+  - component: {fileID: 669639655}
   m_Layer: 5
   m_Name: Tailstock Quill
   m_TagString: Untagged
@@ -1386,6 +1598,60 @@ RectTransform:
   m_AnchoredPosition: {x: 117.30005, y: 0.0000038146973}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &669639655
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 669639653}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1115814037}
+          m_MethodName: setToolTipToggle
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 669639660}
+            m_ObjectArgumentAssemblyTypeName: ToolTipToggle, Assembly-CSharp
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 1115814037}
+          m_MethodName: ShowTip
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 1
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1115814037}
+          m_MethodName: HideTip
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!114 &669639656
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1495,6 +1761,20 @@ MonoBehaviour:
   toggleImage: 0
   colorChange: 0
   imageToggle: {fileID: 0}
+--- !u!114 &669639660
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 669639653}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 40c63fb1bd12d334f82217a3b94fd9ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  name: Tailstock Quill
+  nameFR: 
 --- !u!1 &676078371
 GameObject:
   m_ObjectHideFlags: 0
@@ -1723,7 +2003,7 @@ RectTransform:
   m_Children:
   - {fileID: 2145799819}
   m_Father: {fileID: 6162113171354923055}
-  m_RootOrder: 12
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.12, y: 0.64}
   m_AnchorMax: {x: 0.88, y: 0.71}
@@ -1938,7 +2218,7 @@ RectTransform:
   m_Children:
   - {fileID: 1797243151}
   m_Father: {fileID: 6162113171354923055}
-  m_RootOrder: 10
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.12, y: 0.64}
   m_AnchorMax: {x: 0.88, y: 0.71}
@@ -2031,7 +2311,7 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 2
+          m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -2042,7 +2322,7 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 3
+          m_IntArgument: 1
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -2491,6 +2771,57 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1053042662}
   m_CullTransparentMesh: 0
+--- !u!1 &1115814035
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1115814036}
+  - component: {fileID: 1115814037}
+  m_Layer: 5
+  m_Name: Tooltip
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &1115814036
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1115814035}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_Children:
+  - {fileID: 1174752998}
+  - {fileID: 1185613400}
+  m_Father: {fileID: 6162113171354923055}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -268.7998, y: -140.39996}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1115814037
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1115814035}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1c7de4f6eff4934c8a85f1edbf60794, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  uiCamera: {fileID: 6162113169864912054}
 --- !u!1 &1153935654
 GameObject:
   m_ObjectHideFlags: 0
@@ -2537,6 +2868,158 @@ MonoBehaviour:
   animator: {fileID: 0}
   startingAnimTime: 0
   animationSpeed: 0.5
+--- !u!1 &1174752997
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1174752998}
+  - component: {fileID: 1174753000}
+  - component: {fileID: 1174752999}
+  m_Layer: 5
+  m_Name: tip_bg
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1174752998
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1174752997}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1115814036}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: -30}
+  m_SizeDelta: {x: 86.24, y: 29.6}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1174752999
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1174752997}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_RaycastTarget: 0
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1174753000
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1174752997}
+  m_CullTransparentMesh: 0
+--- !u!1 &1185613399
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1185613400}
+  - component: {fileID: 1185613402}
+  - component: {fileID: 1185613401}
+  m_Layer: 5
+  m_Name: tip_text
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1185613400
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1185613399}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1115814036}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: -30}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1185613401
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1185613399}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 12
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 1
+    m_MaxSize: 40
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 1
+    m_VerticalOverflow: 1
+    m_LineSpacing: 1
+  m_Text: ToolTip
+--- !u!222 &1185613402
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1185613399}
+  m_CullTransparentMesh: 0
 --- !u!1 &1200023254
 GameObject:
   m_ObjectHideFlags: 0
@@ -2549,6 +3032,8 @@ GameObject:
   - component: {fileID: 1200023259}
   - component: {fileID: 1200023258}
   - component: {fileID: 1200023257}
+  - component: {fileID: 1200023260}
+  - component: {fileID: 1200023256}
   m_Layer: 5
   m_Name: Compound Slide
   m_TagString: Untagged
@@ -2576,6 +3061,20 @@ RectTransform:
   m_AnchoredPosition: {x: 229.3, y: 0.0000038146973}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1200023256
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1200023254}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 40c63fb1bd12d334f82217a3b94fd9ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  name: Compound Slide
+  nameFR: 
 --- !u!114 &1200023257
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2656,6 +3155,60 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1200023254}
   m_CullTransparentMesh: 0
+--- !u!114 &1200023260
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1200023254}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1115814037}
+          m_MethodName: setToolTipToggle
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 1200023256}
+            m_ObjectArgumentAssemblyTypeName: ToolTipToggle, Assembly-CSharp
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 1115814037}
+          m_MethodName: ShowTip
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 2
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1115814037}
+          m_MethodName: HideTip
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &1204536905
 GameObject:
   m_ObjectHideFlags: 0
@@ -3121,7 +3674,7 @@ RectTransform:
   m_Children:
   - {fileID: 1491244914}
   m_Father: {fileID: 6162113171354923055}
-  m_RootOrder: 11
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.12, y: 0.64}
   m_AnchorMax: {x: 0.88, y: 0.71}
@@ -4691,7 +5244,7 @@ RectTransform:
   m_Children:
   - {fileID: 1053042663}
   m_Father: {fileID: 6162113171354923055}
-  m_RootOrder: 13
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.12, y: 0.64}
   m_AnchorMax: {x: 0.88, y: 0.71}
@@ -5444,7 +5997,7 @@ RectTransform:
   - {fileID: 1907817803}
   - {fileID: 436264066}
   m_Father: {fileID: 6162113171354923055}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: -3, y: 0.5}
   m_AnchorMax: {x: -0.05, y: 1}
@@ -6442,7 +6995,7 @@ RectTransform:
   - {fileID: 2432506238026790192}
   - {fileID: 2432506239610475766}
   m_Father: {fileID: 6162113171354923055}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: -3, y: 0}
   m_AnchorMax: {x: -0.05, y: 0.5}
@@ -10863,7 +11416,7 @@ RectTransform:
   - {fileID: 2432506239599961921}
   - {fileID: 2432506238266222502}
   m_Father: {fileID: 6162113171354923055}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: -3, y: 0.5}
   m_AnchorMax: {x: -0.05, y: 1}
@@ -11004,7 +11557,7 @@ RectTransform:
   m_Children:
   - {fileID: 2432506238716588875}
   m_Father: {fileID: 6162113171354923055}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.12, y: 0.73}
   m_AnchorMax: {x: 0.88, y: 0.8}
@@ -11862,7 +12415,7 @@ RectTransform:
   m_Children:
   - {fileID: 1645872600}
   m_Father: {fileID: 6162113171354923055}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.12, y: 0.64}
   m_AnchorMax: {x: 0.88, y: 0.71}
@@ -12054,7 +12607,7 @@ RectTransform:
   m_Children:
   - {fileID: 6162113170013790632}
   m_Father: {fileID: 6162113171354923055}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.12, y: 0.02}
   m_AnchorMax: {x: 0.88, y: 0.09}
@@ -12378,7 +12931,7 @@ RectTransform:
   m_Children:
   - {fileID: 6162113170092004996}
   m_Father: {fileID: 6162113171354923055}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.12, y: 0.02}
   m_AnchorMax: {x: 0.88, y: 0.09}
@@ -13477,7 +14030,7 @@ RectTransform:
   m_Children:
   - {fileID: 6162113171544427777}
   m_Father: {fileID: 6162113171354923055}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.12, y: 0.11}
   m_AnchorMax: {x: 0.88, y: 0.18}
@@ -13519,7 +14072,7 @@ RectTransform:
   m_Children:
   - {fileID: 6162113170179185094}
   m_Father: {fileID: 6162113171354923055}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.12, y: 0.91}
   m_AnchorMax: {x: 0.88, y: 0.98}
@@ -13835,6 +14388,7 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 1115814036}
   - {fileID: 6162113171053969625}
   - {fileID: 6162113171427069397}
   - {fileID: 6162113169624605347}
@@ -13996,7 +14550,7 @@ RectTransform:
   m_Children:
   - {fileID: 6162113169556884917}
   m_Father: {fileID: 6162113171354923055}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.12, y: 0.82}
   m_AnchorMax: {x: 0.88, y: 0.89}
