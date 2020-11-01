@@ -16,7 +16,7 @@ public class CameraMovement : MonoBehaviour
     private float MIN_X = -3f;
     private float MAX_X = 3f;
     private float MIN_Y = -4f;
-    private float MAX_Y = 2f;
+    private float MAX_Y = 3f;
     private float MIN_Z = 0f;
     private float MAX_Z = 10f;
 
@@ -36,7 +36,7 @@ public class CameraMovement : MonoBehaviour
         //previousPosition2 = cam.transform.position;
         Vector3 maxBounds = this.transform.position;
         maxBounds.x = 5f;
-        maxBounds.y = 2f;
+        maxBounds.y = 3f;
         Vector3 minBounds = this.transform.position;
         minBounds.x = -5f;
         minBounds.y = -2f;
