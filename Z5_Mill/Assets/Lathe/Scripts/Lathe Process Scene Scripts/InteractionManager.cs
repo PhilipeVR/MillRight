@@ -5,8 +5,9 @@ using UnityEngine.UI;
 
 public class InteractionManager : MonoBehaviour
 {
-    [SerializeField] public Button ON, MainMenu, Next, Facing, Turning, Drill, ToolPost, Tailstock, General;
-    [SerializeField] public GameObject TailstockPanel, GeneralPanel, ToolPostPanel;
+    [SerializeField] public Button ON, MainMenu, Next, Facing, Turning, Drill, ToolPost, Tailstock;
+    [SerializeField] public List<Button> controls;
+    [SerializeField] public GameObject TailstockPanel, ToolPostPanel;
     [SerializeField] public string intro, facing, turning, drilling;
     private bool SequenceDone;
 
@@ -26,21 +27,23 @@ public class InteractionManager : MonoBehaviour
             ON.interactable = true;
             ToolPost.interactable = true;
             Tailstock.interactable = false;
-            General.interactable = true;
-        }       
+            ControlState(true);
+
+        }
         else if (dialogueName.Equals(turning))
         {
             ON.interactable = true;
             ToolPost.interactable = true;
             Tailstock.interactable = false;
-            General.interactable = true;
+            ControlState(true);
+
         }
         else if (dialogueName.Equals(drilling))
         {
             ON.interactable = true;
             ToolPost.interactable = true;
             Tailstock.interactable = true;
-            General.interactable = true;
+            ControlState(true);
         }
 
     }
@@ -51,9 +54,9 @@ public class InteractionManager : MonoBehaviour
         NoInteraction();
         if (SequenceDone)
         {
-            Drill.interactable = false;
-            Turning.interactable = false;
-            Facing.interactable = false;
+            Drill.interactable = true;
+            Turning.interactable = true;
+            Facing.interactable = true;
             MainMenu.interactable = true;
             Next.interactable = true;
         }
@@ -102,7 +105,6 @@ public class InteractionManager : MonoBehaviour
     }
     void NoInteraction()
     {
-        General.interactable = false;
         ToolPost.interactable = false;
         Tailstock.interactable = false;
         ON.interactable = false;
@@ -113,6 +115,14 @@ public class InteractionManager : MonoBehaviour
         Drill.interactable = false;
         TailstockPanel.SetActive(false);
         ToolPostPanel.SetActive(false);
-        GeneralPanel.SetActive(false);
+        ControlState(false);
+    }
+
+    private void ControlState(bool val)
+    {
+        foreach(Button button in controls)
+        {
+            button.interactable = val;
+        }
     }
 }
