@@ -40,40 +40,43 @@ public class RendererTrigger : MonoBehaviour
     {
         Trigger tmpTrigger = null;
         OperationManager controller = manager.Operation;
-        foreach (Trigger trigger in triggers)
+        if (controller != null)
         {
-            if (trigger.Anim == manager.Index && trigger.Name == controller.name && trigger.SentenceIndex() == dialogueManager.SentenceIndex)
+            foreach (Trigger trigger in triggers)
             {
-                tmpTrigger = trigger;
-                break;
-            }
-        }
-        if (tmpTrigger != null)
-        {
-            Debug.Log(tmpTrigger.TriggerControllerName);
-            if (controller.CurrentAnimationStatus)
-            {
-                if (colorChange)
+                if (trigger.Anim == manager.Index && trigger.Name == controller.name && trigger.SentenceIndex() == dialogueManager.SentenceIndex)
                 {
-                    GetComponent<Renderer>().material.color = clickedColor;
-                    if (activateOnClick != null)
+                    tmpTrigger = trigger;
+                    break;
+                }
+            }
+            if (tmpTrigger != null)
+            {
+                Debug.Log(tmpTrigger.TriggerControllerName);
+                if (controller.CurrentAnimationStatus)
+                {
+                    if (colorChange)
                     {
-                        //activateOnClick.SetActive(true);
-                        gameObject.SetActive(false);
+                        GetComponent<Renderer>().material.color = clickedColor;
+                        if (activateOnClick != null)
+                        {
+                            //activateOnClick.SetActive(true);
+                            gameObject.SetActive(false);
+                        }
                     }
                 }
-            }
-            bool val = tmpTrigger.PlaySequence(controller);
-            if (val)
-            {
-                if (powerTrigger)
+                bool val = tmpTrigger.PlaySequence(controller);
+                if (val)
                 {
-                    powerToggle.TogglePower(power);
-                }
-                
-                if (dialogueManager.SentenceIndex == tmpTrigger.CurrentSentenceIndex())
-                {
-                    dialogueManager.DisplayNextSentence();
+                    if (powerTrigger)
+                    {
+                        powerToggle.TogglePower(power);
+                    }
+
+                    if (dialogueManager.SentenceIndex == tmpTrigger.CurrentSentenceIndex())
+                    {
+                        dialogueManager.DisplayNextSentence();
+                    }
                 }
             }
         }
