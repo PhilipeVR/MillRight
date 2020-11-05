@@ -135,6 +135,12 @@ public class RendererTrigger : MonoBehaviour
 
         }
     }
+
+    public GameObject ActivateOnClick
+    {
+        get => activateOnClick;
+        set => activateOnClick = value;
+    }
 }
 
 #if UNITY_EDITOR

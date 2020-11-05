@@ -15,8 +15,7 @@ public class LatheCollisionVisibility : MonoBehaviour
 
     public bool TrainingWheels = false;
 
-    GameObject sparks;
-
+    [SerializeField] private GameObject sparks;
     [SerializeField] private float timerCountDown = 10f;
     [SerializeField] private bool reset = true;
     private bool isColliding = false;
@@ -35,21 +34,7 @@ public class LatheCollisionVisibility : MonoBehaviour
             revertPresent = true;
         }
         initialCountdown = timerCountDown;
-        FindSpark();
 
-    }
-
-    public void FindSpark()
-    {
-        GameObject tmpObject = GameObject.Find(gameObjectParentName);
-        if (tmpObject != null)
-        {
-            sparks = tmpObject.transform.GetChild(0).gameObject;
-            if (sparks != null)
-            {
-                sparks.SetActive(false);
-            }
-        }
     }
 
     // Update is called once per frame

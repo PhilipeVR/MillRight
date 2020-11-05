@@ -8,7 +8,7 @@ public class ProcessController : MonoBehaviour
     [SerializeField] private HintTrigger hintTriggerFlash;
     //[SerializeField] private ButtonReset reset;
     [SerializeField] private List<OperationManager> operations;
-    [SerializeField] private RevertDestruction revertDestruction;
+    [SerializeField] private RestartStock restartStock;
     [SerializeField] private RendererTrigger stockTrigger;
     [SerializeField] private List<GameObject> dummyStock;
     [SerializeField] private float animSpeed;
@@ -42,8 +42,9 @@ public class ProcessController : MonoBehaviour
                     obj.SetActive(false);
                 }
                 prevState = controller.Done;
+                restartStock.ResetStock(m_index);
                 controller.ActivateAnimator(false);
-                //revertDestruction.RevertStock();
+
                 //stockTrigger.gameObject.SetActive(true);
                 //stockTrigger.ResetStock();
 

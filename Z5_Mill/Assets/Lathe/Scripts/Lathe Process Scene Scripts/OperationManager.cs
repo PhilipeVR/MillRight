@@ -79,6 +79,7 @@ public class OperationManager : MonoBehaviour
 
     public void ActivateAnimator(bool state)
     {
+        animator.Rebind();
         animator.enabled = state;
         holder.SetActive(state);
         cutter.SetActive(state);
@@ -167,6 +168,11 @@ public class OperationManager : MonoBehaviour
     {
         animDone = state;
         transitionDone = state;
+    }
+
+    public Animator Animation
+    {
+        get => animator;
     }
 
     private void ResetLoopParams()

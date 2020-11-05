@@ -62,6 +62,7 @@ public class InteractionManager : MonoBehaviour
         }
         else if (dialogueName.Equals(intro))
         {
+            Turning.interactable = true;
             Facing.interactable = true;
         }
 
@@ -83,7 +84,7 @@ public class InteractionManager : MonoBehaviour
             SequenceDone = true;
 
         }
-        //SequenceDone = true; Debug purposes
+        SequenceDone = true;
 
         Debug.Log(intro);
         Debug.Log(dialogueName);
