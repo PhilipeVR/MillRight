@@ -1,0 +1,130 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 288b3ad9a3683cc4ebce607e447e3cca, type: 3}
+  m_Name: Lathe Component Details
+  m_EditorClassIdentifier: 
+  components:
+  - partName: Carriage
+    partNameFR: Chariot
+    sentence: Carriage Description
+    sentenceFR: Chariot Description
+    image: {fileID: 0}
+  - partName: Carriage Feed Wheel
+    partNameFR: Roue d'alimentation de chariot
+    sentence: Carriage Feed Wheel Description
+    sentenceFR: Roue d'alimentation de chariot description
+    image: {fileID: 0}
+  - partName: Safety Guard
+    partNameFR: "Panneau de s\xE9curit\xE9"
+    sentence: Safety Guard Description
+    sentenceFR: "Panneau de s\xE9curit\xE9 description"
+    image: {fileID: 0}
+  - partName: Headstock
+    partNameFR: "Poup\xE9e Fixe"
+    sentence: Headstock Description
+    sentenceFR: "Poup\xE9e Fixe Description"
+    image: {fileID: 0}
+  - partName: Control Box
+    partNameFR: "Bo\xEEte de contr\xF4le"
+    sentence: Control Box Description
+    sentenceFR: "Bo\xEEte de contr\xF4le Description"
+    image: {fileID: 0}
+  - partName: Forward/Reverse Switch
+    partNameFR: "Int\xE9rrupteur de sens de rotation"
+    sentence: Forward/Reverse Switch Description
+    sentenceFR: "Int\xE9rrupteur de sens de rotation description"
+    image: {fileID: 0}
+  - partName: Feed Direction/Neutral Selector Dial
+    partNameFR: Cadran de direction d'alimentation
+    sentence: Feed Direction/Neutral Selector Dial Description
+    sentenceFR: Cadran de direction d'alimentation description
+    image: {fileID: 0}
+  - partName: Gear Selector Dial
+    partNameFR: Cadran de selection de vitesse
+    sentence: Gear Selector Dial Description
+    sentenceFR: Cadran de selection de vitesse description
+    image: {fileID: 0}
+  - partName: Speed Indicator
+    partNameFR: Indicateur de vitesse
+    sentence: Speed Indicator Description
+    sentenceFR: Indicateur de vitesse description
+    image: {fileID: 0}
+  - partName: Variable Speed Dial
+    partNameFR: Cadran de vitesse variable
+    sentence: Variable Speed Dial Description
+    sentenceFR: Cadran de vitesse variable description
+    image: {fileID: 0}
+  - partName: Half Nut Lever
+    partNameFR: "\xC9crou de filetage"
+    sentence: Half Nut Lever Description
+    sentenceFR: "\xC9crou de filetage description"
+    image: {fileID: 0}
+  - partName: Power Feed Engagement Level
+    partNameFR: "Levier d'alimentation \xE9lectrique"
+    sentence: Power Feed Engagement Level Description
+    sentenceFR: "Levier d'alimentation \xE9lectrique description"
+    image: {fileID: 0}
+  - partName: Thread Chaser
+    partNameFR: Suiveur de filetage
+    sentence: Thread Chaser Description
+    sentenceFR: Suiveur de filetage description
+    image: {fileID: 0}
+  - partName: Cross Feed Wheel
+    partNameFR: Roue d'alimentation tranversale
+    sentence: Cross Feed Wheel Description
+    sentenceFR: Roue d'alimentation tranversale description
+    image: {fileID: 0}
+  - partName: Tailstock Quill Feed Wheel
+    partNameFR: Roue de fourreau
+    sentence: Tailstock Quill Feed Wheel Description
+    sentenceFR: Roue de fourreau description
+    image: {fileID: 0}
+  - partName: Tool Post
+    partNameFR: Poteau d'outil
+    sentence: Tool Post Description
+    sentenceFR: Poteau d'outil description
+    image: {fileID: 0}
+  - partName: Compound Slide
+    partNameFR: "Glissi\xE8re Compos\xE9e"
+    sentence: Compound Slide Description
+    sentenceFR: "Glissi\xE8re Compos\xE9e description"
+    image: {fileID: 0}
+  - partName: Tailstock
+    partNameFR: "Poup\xE9e Mobile"
+    sentence: Tailstock Description
+    sentenceFR: "Poup\xE9e Mobile Description"
+    image: {fileID: 0}
+  - partName: Tailstock Quill Lock
+    partNameFR: Serrure de fourreau
+    sentence: Tailstock Quill Lock Description
+    sentenceFR: Serrure de fourreau description
+    image: {fileID: 0}
+  - partName: Tailstock Quill
+    partNameFR: Fourreau
+    sentence: Tailstock Quill Description
+    sentenceFR: Fourreau description
+    image: {fileID: 0}
+  - partName: Tailstock Lock Handle
+    partNameFR: "Serrure de poup\xE9e mobile"
+    sentence: Tailstock Lock Handle Description
+    sentenceFR: "Serrure de poup\xE9e mobile description"
+    image: {fileID: 0}
+  - partName: Ways
+    partNameFR: Banc
+    sentence: Ways Description
+    sentenceFR: Banc Description
+    image: {fileID: 0}
+  - partName: Chuck With Spindle
+    partNameFR: Mandrin
+    sentence: Chuck With Spindle Description
+    sentenceFR: Mandrin Description
+    image: {fileID: 0}
