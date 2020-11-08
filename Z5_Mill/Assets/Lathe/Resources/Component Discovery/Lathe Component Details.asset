@@ -17,114 +17,114 @@ MonoBehaviour:
     partNameFR: Chariot
     sentence: Carriage Description
     sentenceFR: Chariot Description
-    image: {fileID: 0}
+    image: {fileID: 21300000, guid: 4dc15a8f61a681e4fbd53560bb31fc13, type: 3}
   - partName: Carriage Feed Wheel
     partNameFR: Roue d'alimentation de chariot
     sentence: Carriage Feed Wheel Description
     sentenceFR: Roue d'alimentation de chariot description
-    image: {fileID: 0}
+    image: {fileID: 21300000, guid: dee5e8e55025eb544bb9e4c3ba666583, type: 3}
   - partName: Safety Guard
     partNameFR: "Panneau de s\xE9curit\xE9"
     sentence: Safety Guard Description
     sentenceFR: "Panneau de s\xE9curit\xE9 description"
-    image: {fileID: 0}
+    image: {fileID: 21300000, guid: aa21d19f3f65ef74b8ffffa7bb5a24ab, type: 3}
   - partName: Headstock
     partNameFR: "Poup\xE9e Fixe"
     sentence: Headstock Description
     sentenceFR: "Poup\xE9e Fixe Description"
-    image: {fileID: 0}
+    image: {fileID: 21300000, guid: d8c53a1246a2bf34585f7195d37d5df7, type: 3}
   - partName: Control Box
     partNameFR: "Bo\xEEte de contr\xF4le"
     sentence: Control Box Description
     sentenceFR: "Bo\xEEte de contr\xF4le Description"
-    image: {fileID: 0}
+    image: {fileID: 21300000, guid: 91274a2f6b512554cb355632ef00b36b, type: 3}
   - partName: Forward/Reverse Switch
     partNameFR: "Int\xE9rrupteur de sens de rotation"
     sentence: Forward/Reverse Switch Description
     sentenceFR: "Int\xE9rrupteur de sens de rotation description"
-    image: {fileID: 0}
+    image: {fileID: 21300000, guid: d2e213979c129384a8feacdbf7480b51, type: 3}
   - partName: Feed Direction/Neutral Selector Dial
     partNameFR: Cadran de direction d'alimentation
     sentence: Feed Direction/Neutral Selector Dial Description
     sentenceFR: Cadran de direction d'alimentation description
-    image: {fileID: 0}
+    image: {fileID: 21300000, guid: b78f6467d8ac6b7478767721aa2b9470, type: 3}
   - partName: Gear Selector Dial
     partNameFR: Cadran de selection de vitesse
     sentence: Gear Selector Dial Description
     sentenceFR: Cadran de selection de vitesse description
-    image: {fileID: 0}
+    image: {fileID: 21300000, guid: 7e1b77c67a168194bba84aab2824d645, type: 3}
   - partName: Speed Indicator
     partNameFR: Indicateur de vitesse
     sentence: Speed Indicator Description
     sentenceFR: Indicateur de vitesse description
-    image: {fileID: 0}
+    image: {fileID: 21300000, guid: 85d684bc91d249547a27155cdc5fd2ab, type: 3}
   - partName: Variable Speed Dial
     partNameFR: Cadran de vitesse variable
     sentence: Variable Speed Dial Description
     sentenceFR: Cadran de vitesse variable description
-    image: {fileID: 0}
+    image: {fileID: 21300000, guid: 22968fb9dcef03149bfa8fe5ecb57efd, type: 3}
   - partName: Half Nut Lever
     partNameFR: "\xC9crou de filetage"
     sentence: Half Nut Lever Description
     sentenceFR: "\xC9crou de filetage description"
-    image: {fileID: 0}
+    image: {fileID: 21300000, guid: b874b350357b4ae45bff0cadfcced1d7, type: 3}
   - partName: Power Feed Engagement Level
     partNameFR: "Levier d'alimentation \xE9lectrique"
     sentence: Power Feed Engagement Level Description
     sentenceFR: "Levier d'alimentation \xE9lectrique description"
-    image: {fileID: 0}
+    image: {fileID: 21300000, guid: b7d246c3a4c6b444e9a5e316e69628c6, type: 3}
   - partName: Thread Chaser
     partNameFR: Suiveur de filetage
     sentence: Thread Chaser Description
     sentenceFR: Suiveur de filetage description
-    image: {fileID: 0}
+    image: {fileID: 21300000, guid: 21905f506fb498344990e4064ba29e44, type: 3}
   - partName: Cross Feed Wheel
     partNameFR: Roue d'alimentation tranversale
     sentence: Cross Feed Wheel Description
     sentenceFR: Roue d'alimentation tranversale description
-    image: {fileID: 0}
+    image: {fileID: 21300000, guid: d64cec637f49ec349b60bdb3bba6ac06, type: 3}
   - partName: Tailstock Quill Feed Wheel
     partNameFR: Roue de fourreau
     sentence: Tailstock Quill Feed Wheel Description
     sentenceFR: Roue de fourreau description
-    image: {fileID: 0}
+    image: {fileID: 21300000, guid: 79d4018c8501ac941b161e6c395f772a, type: 3}
   - partName: Tool Post
     partNameFR: Poteau d'outil
     sentence: Tool Post Description
     sentenceFR: Poteau d'outil description
-    image: {fileID: 0}
+    image: {fileID: 21300000, guid: cf1d9a0fcfa3ca645a0a254b4c6c9279, type: 3}
   - partName: Compound Slide
     partNameFR: "Glissi\xE8re Compos\xE9e"
     sentence: Compound Slide Description
     sentenceFR: "Glissi\xE8re Compos\xE9e description"
-    image: {fileID: 0}
+    image: {fileID: 21300000, guid: 51dd3a9e425e49a4dbef974913ef2956, type: 3}
   - partName: Tailstock
     partNameFR: "Poup\xE9e Mobile"
     sentence: Tailstock Description
     sentenceFR: "Poup\xE9e Mobile Description"
-    image: {fileID: 0}
+    image: {fileID: 21300000, guid: 64af7509bebcfb4468fc6cda1e89cff3, type: 3}
   - partName: Tailstock Quill Lock
     partNameFR: Serrure de fourreau
     sentence: Tailstock Quill Lock Description
     sentenceFR: Serrure de fourreau description
-    image: {fileID: 0}
+    image: {fileID: 21300000, guid: 492dd517c39201447ae6b202dbd2a541, type: 3}
   - partName: Tailstock Quill
     partNameFR: Fourreau
     sentence: Tailstock Quill Description
     sentenceFR: Fourreau description
-    image: {fileID: 0}
+    image: {fileID: 21300000, guid: 1ac1018918ac0a24cbe550f4ecdbc50e, type: 3}
   - partName: Tailstock Lock Handle
     partNameFR: "Serrure de poup\xE9e mobile"
     sentence: Tailstock Lock Handle Description
     sentenceFR: "Serrure de poup\xE9e mobile description"
-    image: {fileID: 0}
+    image: {fileID: 21300000, guid: fdb18ca2f6a1b1e43ba9850e5155b1b0, type: 3}
   - partName: Ways
     partNameFR: Banc
     sentence: Ways Description
     sentenceFR: Banc Description
-    image: {fileID: 0}
+    image: {fileID: 21300000, guid: 86a01b37062d53a4e8a8879d525fda2a, type: 3}
   - partName: Chuck With Spindle
     partNameFR: Mandrin
     sentence: Chuck With Spindle Description
     sentenceFR: Mandrin Description
-    image: {fileID: 0}
+    image: {fileID: 21300000, guid: 3ea4d47a705c91e4fac006f711fd2a2d, type: 3}

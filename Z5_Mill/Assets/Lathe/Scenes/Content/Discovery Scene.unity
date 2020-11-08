@@ -2279,7 +2279,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &349154534
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6891,7 +6891,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1041450908
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6899,19 +6899,19 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1041450907}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7cfea0e6951643b418626597561e2324, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  partData: {fileID: 0}
+  partData: {fileID: 11400000, guid: 55a549edb99d41541958e1dd3fd34265, type: 2}
   continueBTN: {fileID: 6162113170246996648}
   menuBTN: {fileID: 6162113170295436518}
-  namePart: {fileID: 0}
-  info: {fileID: 0}
+  namePart: {fileID: 649394251}
+  info: {fileID: 1754423319}
   partsExamined: {fileID: 457704286}
   totalNumOfParts: {fileID: 1876133872}
-  infoImage: {fileID: 0}
+  infoImage: {fileID: 1703954036}
   initialTextFR: "Cliquez sur une partie de la fraiseuse pour commencer. Trouvez
     toutes les diff\xE9rentes parties cl\xE9s de la fraiseuse et lisez leur description
     pour passer au didacticiel suivant. Utilisez les diff\xE9rentes cam\xE9ras pour
@@ -10694,8 +10694,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_MethodName: GiveHint
+      - m_Target: {fileID: 5487113818345643146}
+        m_MethodName: ShowHint
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -12401,7 +12401,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-19762
+  m_Name: pb_Mesh-1194
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2

@@ -39,7 +39,7 @@ public class ComponentManager : MonoBehaviour
         updateCounter();
         continueBTN.SetActive(false);
         menuBTN.SetActive(false);
-
+        Debug.Log(details.Count);
     }
 
 
