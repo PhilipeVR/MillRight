@@ -3393,6 +3393,26 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 2039411392}
+    - target: {fileID: 8083552895361146189, guid: 37c584658efa4584f80d6a0d18f647b3,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8083552895361146191, guid: 37c584658efa4584f80d6a0d18f647b3,
+        type: 3}
+      propertyPath: offset.z
+      value: -2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8083552895361146191, guid: 37c584658efa4584f80d6a0d18f647b3,
+        type: 3}
+      propertyPath: offset.y
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8083552895567247118, guid: 37c584658efa4584f80d6a0d18f647b3,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8083552895908864498, guid: 37c584658efa4584f80d6a0d18f647b3,
         type: 3}
       propertyPath: dragSpeed
@@ -3402,6 +3422,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Depth
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8083552895908864499, guid: 37c584658efa4584f80d6a0d18f647b3,
+        type: 3}
+      propertyPath: field of view
+      value: 45
       objectReference: {fileID: 0}
     - target: {fileID: 8083552895908864501, guid: 37c584658efa4584f80d6a0d18f647b3,
         type: 3}
@@ -3413,7 +3438,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Room_And_Controller_Prefab
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8083552895908864501, guid: 37c584658efa4584f80d6a0d18f647b3, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 37c584658efa4584f80d6a0d18f647b3, type: 3}
 --- !u!1 &1745234146
 GameObject:
