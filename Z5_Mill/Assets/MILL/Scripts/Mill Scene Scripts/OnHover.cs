@@ -11,6 +11,7 @@ public class OnHover : MonoBehaviour
     public Color onClickedColor;
     private Color basicColor;
     private Boolean hovering = false;
+    public float timer, counter;
     [SerializeField] private int detailIndex;
     [SerializeField] public GameObject ObjectManager;
 
@@ -35,14 +36,27 @@ public class OnHover : MonoBehaviour
             GetComponentInParent<SetupOnHover>().hasBeenClicked();
         }
     }
+    private void LateUpdate()
+    {
+        if (hovering)
+        {
+            counter -= Time.deltaTime;
+            if(counter <= 0)
+            {
+                SiblingHover();
+                GetComponentInParent<SetupOnHover>().Hovering(hovering);
 
+            }
+        }
+        else
+        {
+            counter = timer; 
+        }
+    }
     // Update is called once per frame
     void OnMouseOver()
     {
-        SiblingHover();
         hovering = true;
-        GetComponentInParent<SetupOnHover>().Hovering(hovering);
-
     }
 
     void OnMouseExit()
@@ -56,10 +70,7 @@ public class OnHover : MonoBehaviour
     {
         if (!hasBeenClicked)
         {
-            if (!hovering)
-            {
-                GetComponent<Renderer>().material.color = hoverColor;
-            }
+            GetComponent<Renderer>().material.color = hoverColor;
         }
     }
 
@@ -78,6 +89,11 @@ public class OnHover : MonoBehaviour
     private void setBasicColor()
     {
         basicColor = GetComponent<Renderer>().material.color;
+    }
+
+    public void SetTimer(float timeToSet)
+    {
+        timer = counter = timeToSet;
     }
 
     public void SetClickedColor()

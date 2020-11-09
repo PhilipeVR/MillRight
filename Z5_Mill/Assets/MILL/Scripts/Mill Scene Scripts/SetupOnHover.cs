@@ -13,6 +13,7 @@ public class SetupOnHover : MonoBehaviour
     [SerializeField] private Color onClickedColor;
     [SerializeField] private float FlashDelay = 0.25f;
     [SerializeField] private int NumOfFlash = 5;
+    [SerializeField] private float timer = 0.1f;
     public Boolean clicked = false;
     public Boolean flashing = false;
     public UnityEvent clickEvent;
@@ -30,7 +31,6 @@ public class SetupOnHover : MonoBehaviour
 
     private void setupMesh(Transform child)
     {
-        //BoxCollider collider = child.GetComponent<BoxCollider>();
         MeshCollider collider = child.GetComponent<MeshCollider>();
 
         if (collider==null)
@@ -58,6 +58,7 @@ public class SetupOnHover : MonoBehaviour
         hover.setDetailIndex(detailIndex);
         hover.ObjectManager = ObjectManager;
         hover.onClickedColor = onClickedColor;
+        hover.SetTimer(timer);
 
     }
 
