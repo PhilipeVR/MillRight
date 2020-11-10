@@ -27,7 +27,7 @@ public class OnHover : MonoBehaviour
         detailIndex = index;
     }
 
-    private void OnMouseDown()
+    public void OnMouseDown()
     {
         ObjectManager.GetComponent<ComponentManager>().SetDetails(detailIndex);
         if (!hasBeenClicked)
@@ -54,12 +54,12 @@ public class OnHover : MonoBehaviour
         }
     }
     // Update is called once per frame
-    void OnMouseOver()
+    public void OnMouseOver()
     {
         hovering = true;
     }
 
-    void OnMouseExit()
+    public void OnMouseExit()
     {
         SiblingHoverExit();
         hovering = false;

@@ -1521,13 +1521,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 981af44f30af2cd4185ac0cdd2abd996, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  onHoverColor: {r: 0.4811321, g: 0.5962805, b: 1, a: 0}
+  onHoverColor: {r: 0.4811321, g: 0.5962805, b: 1, a: 1}
   detailIndex: 12
   ObjectManager: {fileID: 1041450907}
-  onClickedColor: {r: 0.28355286, g: 0.38800856, b: 0.5566038, a: 0}
+  onClickedColor: {r: 0.28355286, g: 0.38800856, b: 0.5566038, a: 1}
   FlashDelay: 0.25
   NumOfFlash: 5
-  timer: 0.2
+  timer: 0
   clicked: 0
   flashing: 0
   clickEvent:
@@ -2209,13 +2209,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 981af44f30af2cd4185ac0cdd2abd996, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  onHoverColor: {r: 0.41937158, g: 0.3070488, b: 0.47058824, a: 0}
+  onHoverColor: {r: 0.41937158, g: 0.3070488, b: 0.47058824, a: 1}
   detailIndex: 15
   ObjectManager: {fileID: 1041450907}
-  onClickedColor: {r: 0.22119233, g: 0.14898542, b: 0.254717, a: 0}
+  onClickedColor: {r: 0.22119233, g: 0.14898542, b: 0.254717, a: 1}
   FlashDelay: 0.25
   NumOfFlash: 5
-  timer: 0.2
+  timer: 0
   clicked: 0
   flashing: 0
   clickEvent:
@@ -3027,13 +3027,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 981af44f30af2cd4185ac0cdd2abd996, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  onHoverColor: {r: 0.61826754, g: 0.46226418, b: 1, a: 0}
+  onHoverColor: {r: 0.61826754, g: 0.46226418, b: 1, a: 1}
   detailIndex: 7
   ObjectManager: {fileID: 1041450907}
-  onClickedColor: {r: 0.4403944, g: 0, b: 1, a: 0}
+  onClickedColor: {r: 0.4403944, g: 0, b: 1, a: 1}
   FlashDelay: 0.25
   NumOfFlash: 5
-  timer: 0.2
+  timer: 0
   clicked: 0
   flashing: 0
   clickEvent:
@@ -3444,13 +3444,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 981af44f30af2cd4185ac0cdd2abd996, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  onHoverColor: {r: 0.15686275, g: 0.6745098, b: 0.4, a: 0}
+  onHoverColor: {r: 0.15686275, g: 0.6745098, b: 0.4, a: 1}
   detailIndex: 14
   ObjectManager: {fileID: 1041450907}
-  onClickedColor: {r: 0.12842648, g: 0.3679245, b: 0.24091798, a: 0}
+  onClickedColor: {r: 0.12842648, g: 0.3679245, b: 0.24091798, a: 1}
   FlashDelay: 0.25
   NumOfFlash: 5
-  timer: 0.2
+  timer: 0
   clicked: 0
   flashing: 0
   clickEvent:
@@ -4246,13 +4246,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 981af44f30af2cd4185ac0cdd2abd996, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  onHoverColor: {r: 0.5411765, g: 0.57415044, b: 0.7075472, a: 0}
+  onHoverColor: {r: 0.8113208, g: 0.7898325, b: 0, a: 1}
   detailIndex: 20
   ObjectManager: {fileID: 1041450907}
-  onClickedColor: {r: 0.35635456, g: 0.38444534, b: 0.49056602, a: 0}
+  onClickedColor: {r: 0.3679245, g: 0.3666091, b: 0, a: 1}
   FlashDelay: 0.25
   NumOfFlash: 5
-  timer: 0.2
+  timer: 0
   clicked: 0
   flashing: 0
   clickEvent:
@@ -4507,13 +4507,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 981af44f30af2cd4185ac0cdd2abd996, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  onHoverColor: {r: 0.7735849, g: 0.5911356, b: 0.5911356, a: 0}
+  onHoverColor: {r: 0.7735849, g: 0.5911356, b: 0.5911356, a: 1}
   detailIndex: 13
   ObjectManager: {fileID: 1041450907}
-  onClickedColor: {r: 0.8679245, g: 0.22107512, b: 0.22107512, a: 0}
+  onClickedColor: {r: 0.8679245, g: 0.22107512, b: 0.22107512, a: 1}
   FlashDelay: 0.25
   NumOfFlash: 5
-  timer: 0.2
+  timer: 0
   clicked: 0
   flashing: 0
   clickEvent:
@@ -5809,7 +5809,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 5798343291949859787}
+  - {fileID: 1513940551}
   m_Father: {fileID: 8826348467534687898}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -5825,13 +5825,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 981af44f30af2cd4185ac0cdd2abd996, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  onHoverColor: {r: 1, g: 0.3962264, b: 0.3962264, a: 0}
+  onHoverColor: {r: 1, g: 0.3962264, b: 0.3962264, a: 1}
   detailIndex: 3
   ObjectManager: {fileID: 1041450907}
-  onClickedColor: {r: 1, g: 0, b: 0, a: 0}
+  onClickedColor: {r: 1, g: 0, b: 0, a: 1}
   FlashDelay: 0.25
   NumOfFlash: 5
-  timer: 0.2
+  timer: 0
   clicked: 0
   flashing: 0
   clickEvent:
@@ -6320,13 +6320,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 981af44f30af2cd4185ac0cdd2abd996, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  onHoverColor: {r: 0.722374, g: 0.990566, b: 0.495283, a: 0}
+  onHoverColor: {r: 0.722374, g: 0.990566, b: 0.495283, a: 1}
   detailIndex: 9
   ObjectManager: {fileID: 1041450907}
-  onClickedColor: {r: 0.18639351, g: 0.6886792, b: 0, a: 0}
+  onClickedColor: {r: 0.18639351, g: 0.6886792, b: 0, a: 1}
   FlashDelay: 0.25
   NumOfFlash: 5
-  timer: 0.2
+  timer: 0
   clicked: 0
   flashing: 0
   clickEvent:
@@ -7368,13 +7368,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 981af44f30af2cd4185ac0cdd2abd996, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  onHoverColor: {r: 1, g: 0.697773, b: 0.16981131, a: 0}
+  onHoverColor: {r: 1, g: 0.697773, b: 0.16981131, a: 1}
   detailIndex: 11
   ObjectManager: {fileID: 1041450907}
-  onClickedColor: {r: 0.6509434, g: 0.545233, b: 0.049127806, a: 0}
+  onClickedColor: {r: 0.6509434, g: 0.545233, b: 0.049127806, a: 1}
   FlashDelay: 0.25
   NumOfFlash: 5
-  timer: 0.2
+  timer: 0
   clicked: 0
   flashing: 0
   clickEvent:
@@ -8840,6 +8840,118 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1500630939}
   m_CullTransparentMesh: 0
+--- !u!1 &1513940550
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1513940551}
+  - component: {fileID: 1513940552}
+  - component: {fileID: 1513940553}
+  m_Layer: 0
+  m_Name: Dummy Headstock
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1513940551
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1513940550}
+  m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: -0.7071068}
+  m_LocalPosition: {x: -182.9158, y: 982, z: -363.5426}
+  m_LocalScale: {x: 100, y: 100, z: 90}
+  m_Children:
+  - {fileID: 5798343291949859787}
+  m_Father: {fileID: 922094826}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 270, y: 0, z: 0}
+--- !u!64 &1513940552
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1513940550}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 1734726908766714474, guid: 7d91d150387ea064ab89eda21f30ffc7, type: 3}
+--- !u!114 &1513940553
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1513940550}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ee284ef1b4edce4980d61979a322344, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clickEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 7687622214185911193}
+        m_MethodName: OnMouseDown
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 7687622214185911193}
+        m_MethodName: SetClickedColor
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  hoverEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 7687622214185911193}
+        m_MethodName: OnMouseOver
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  exitEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 7687622214185911193}
+        m_MethodName: OnMouseExit
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1522621364
 GameObject:
   m_ObjectHideFlags: 0
@@ -8969,13 +9081,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 981af44f30af2cd4185ac0cdd2abd996, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  onHoverColor: {r: 0.49803922, g: 0.24705882, b: 0.20392157, a: 0}
+  onHoverColor: {r: 0.49803922, g: 0.24705882, b: 0.20392157, a: 1}
   detailIndex: 19
   ObjectManager: {fileID: 1041450907}
-  onClickedColor: {r: 0.2924528, g: 0.12529488, b: 0.09656461, a: 0}
+  onClickedColor: {r: 0.2924528, g: 0.12529488, b: 0.09656461, a: 1}
   FlashDelay: 0.25
   NumOfFlash: 5
-  timer: 0.2
+  timer: 0
   clicked: 0
   flashing: 0
   clickEvent:
@@ -9454,13 +9566,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 981af44f30af2cd4185ac0cdd2abd996, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  onHoverColor: {r: 0.21477304, g: 0.6886792, b: 0.025987875, a: 0}
+  onHoverColor: {r: 0.21477304, g: 0.6886792, b: 0.025987875, a: 1}
   detailIndex: 0
   ObjectManager: {fileID: 1041450907}
-  onClickedColor: {r: 0.05414168, g: 0.3962264, b: 0, a: 0}
+  onClickedColor: {r: 0.05414168, g: 0.3962264, b: 0, a: 1}
   FlashDelay: 0.25
   NumOfFlash: 5
-  timer: 0.2
+  timer: 0
   clicked: 0
   flashing: 0
   clickEvent:
@@ -9721,13 +9833,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 981af44f30af2cd4185ac0cdd2abd996, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  onHoverColor: {r: 0.9716981, g: 0.65818214, b: 0.33001065, a: 0}
+  onHoverColor: {r: 0.9716981, g: 0.65818214, b: 0.33001065, a: 1}
   detailIndex: 16
   ObjectManager: {fileID: 1041450907}
-  onClickedColor: {r: 0.7830189, g: 0.42743352, b: 0.0147739295, a: 0}
+  onClickedColor: {r: 0.7830189, g: 0.42743352, b: 0.0147739295, a: 1}
   FlashDelay: 0.25
   NumOfFlash: 5
-  timer: 0.2
+  timer: 0
   clicked: 0
   flashing: 0
   clickEvent:
@@ -9899,13 +10011,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 981af44f30af2cd4185ac0cdd2abd996, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  onHoverColor: {r: 0.20754719, g: 0.91717523, b: 1, a: 0}
+  onHoverColor: {r: 0.20754719, g: 0.91717523, b: 1, a: 1}
   detailIndex: 1
   ObjectManager: {fileID: 1041450907}
-  onClickedColor: {r: 0, g: 0.5262697, b: 0.6698113, a: 0}
+  onClickedColor: {r: 0, g: 0.5262697, b: 0.6698113, a: 1}
   FlashDelay: 0.25
   NumOfFlash: 5
-  timer: 0.2
+  timer: 0
   clicked: 0
   flashing: 0
   clickEvent:
@@ -10075,13 +10187,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 981af44f30af2cd4185ac0cdd2abd996, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  onHoverColor: {r: 0.990566, g: 0.4765931, b: 0.73416704, a: 0}
+  onHoverColor: {r: 0.990566, g: 0.4765931, b: 0.73416704, a: 1}
   detailIndex: 6
   ObjectManager: {fileID: 1041450907}
-  onClickedColor: {r: 1, g: 0, b: 0.97320795, a: 0}
+  onClickedColor: {r: 1, g: 0, b: 0.97320795, a: 1}
   FlashDelay: 0.25
   NumOfFlash: 5
-  timer: 0.2
+  timer: 0
   clicked: 0
   flashing: 0
   clickEvent:
@@ -10344,13 +10456,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 981af44f30af2cd4185ac0cdd2abd996, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  onHoverColor: {r: 0.3679245, g: 0.57906324, b: 1, a: 0}
+  onHoverColor: {r: 0.3679245, g: 0.57906324, b: 1, a: 1}
   detailIndex: 5
   ObjectManager: {fileID: 1041450907}
-  onClickedColor: {r: 0, g: 0.1475563, b: 1, a: 0}
+  onClickedColor: {r: 0, g: 0.1475563, b: 1, a: 1}
   FlashDelay: 0.25
   NumOfFlash: 5
-  timer: 0.2
+  timer: 0
   clicked: 0
   flashing: 0
   clickEvent:
@@ -10811,13 +10923,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 981af44f30af2cd4185ac0cdd2abd996, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  onHoverColor: {r: 0.23137255, g: 0.4441783, b: 0.5377358, a: 0}
+  onHoverColor: {r: 0.23137255, g: 0.4441783, b: 0.5377358, a: 1}
   detailIndex: 22
   ObjectManager: {fileID: 1041450907}
-  onClickedColor: {r: 0.057493772, g: 0.14225751, b: 0.1792453, a: 0}
+  onClickedColor: {r: 0.057493772, g: 0.14225751, b: 0.1792453, a: 1}
   FlashDelay: 0.25
   NumOfFlash: 5
-  timer: 0.2
+  timer: 0
   clicked: 0
   flashing: 0
   clickEvent:
@@ -11387,13 +11499,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 981af44f30af2cd4185ac0cdd2abd996, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  onHoverColor: {r: 0.509434, g: 1, b: 0.9181738, a: 0}
+  onHoverColor: {r: 0.509434, g: 1, b: 0.9181738, a: 1}
   detailIndex: 18
   ObjectManager: {fileID: 1041450907}
-  onClickedColor: {r: 0, g: 0.8301887, b: 0.8215719, a: 0}
+  onClickedColor: {r: 0, g: 0.8301887, b: 0.8215719, a: 1}
   FlashDelay: 0.25
   NumOfFlash: 5
-  timer: 0.2
+  timer: 0
   clicked: 0
   flashing: 0
   clickEvent:
@@ -11791,13 +11903,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 981af44f30af2cd4185ac0cdd2abd996, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  onHoverColor: {r: 1, g: 0.6132076, b: 0.80123776, a: 0}
+  onHoverColor: {r: 1, g: 0.6132076, b: 0.80123776, a: 1}
   detailIndex: 21
   ObjectManager: {fileID: 1041450907}
-  onClickedColor: {r: 1, g: 0, b: 0.8524437, a: 0}
+  onClickedColor: {r: 1, g: 0, b: 0.8524437, a: 1}
   FlashDelay: 0.25
   NumOfFlash: 5
-  timer: 0.2
+  timer: 0
   clicked: 0
   flashing: 0
   clickEvent:
@@ -12362,13 +12474,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 981af44f30af2cd4185ac0cdd2abd996, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  onHoverColor: {r: 0, g: 1, b: 0.61335707, a: 0}
+  onHoverColor: {r: 0, g: 1, b: 0.61335707, a: 1}
   detailIndex: 10
   ObjectManager: {fileID: 1041450907}
-  onClickedColor: {r: 0, g: 0.6603774, b: 0.46717826, a: 0}
+  onClickedColor: {r: 0, g: 0.6603774, b: 0.46717826, a: 1}
   FlashDelay: 0.25
   NumOfFlash: 5
-  timer: 0.2
+  timer: 0
   clicked: 0
   flashing: 0
   clickEvent:
@@ -13026,13 +13138,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 981af44f30af2cd4185ac0cdd2abd996, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  onHoverColor: {r: 0.8509804, g: 0.8039216, b: 0, a: 0}
+  onHoverColor: {r: 0.8509804, g: 0.8039216, b: 0, a: 1}
   detailIndex: 17
   ObjectManager: {fileID: 1041450907}
-  onClickedColor: {r: 0.4528302, g: 0.4277889, b: 0, a: 0}
+  onClickedColor: {r: 0.4528302, g: 0.4277889, b: 0, a: 1}
   FlashDelay: 0.25
   NumOfFlash: 5
-  timer: 0.2
+  timer: 0
   clicked: 0
   flashing: 0
   clickEvent:
@@ -15311,13 +15423,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 981af44f30af2cd4185ac0cdd2abd996, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  onHoverColor: {r: 0.33107865, g: 0.5849056, b: 0.5246755, a: 0}
+  onHoverColor: {r: 0.33107865, g: 0.5849056, b: 0.5246755, a: 1}
   detailIndex: 8
   ObjectManager: {fileID: 1041450907}
-  onClickedColor: {r: 0.16862746, g: 0.31132078, b: 0.31132078, a: 0}
+  onClickedColor: {r: 0.16862746, g: 0.31132078, b: 0.31132078, a: 1}
   FlashDelay: 0.25
   NumOfFlash: 5
-  timer: 0.2
+  timer: 0
   clicked: 0
   flashing: 0
   clickEvent:
@@ -20888,11 +21000,11 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7687622214185911191}
-  m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071067}
-  m_LocalPosition: {x: -182.91577, y: 999.9629, z: -363.5426}
-  m_LocalScale: {x: 100, y: 100, z: 100}
+  m_LocalRotation: {x: 0.000000119209275, y: -0, z: 0, w: -1}
+  m_LocalPosition: {x: 0, y: 0, z: 0.19959107}
+  m_LocalScale: {x: 1, y: 1, z: 1.1111115}
   m_Children: []
-  m_Father: {fileID: 922094826}
+  m_Father: {fileID: 1513940551}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &5806460979608967238
@@ -23251,13 +23363,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 981af44f30af2cd4185ac0cdd2abd996, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  onHoverColor: {r: 0.9550186, g: 0.6320754, b: 1, a: 0}
+  onHoverColor: {r: 0.9550186, g: 0.6320754, b: 1, a: 1}
   detailIndex: 2
   ObjectManager: {fileID: 1041450907}
-  onClickedColor: {r: 0.8773585, g: 0.34763262, b: 0.8447798, a: 0}
+  onClickedColor: {r: 0.8773585, g: 0.34763262, b: 0.8447798, a: 1}
   FlashDelay: 0.25
   NumOfFlash: 5
-  timer: 0.2
+  timer: 0
   clicked: 0
   flashing: 0
   clickEvent:
@@ -24440,13 +24552,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 981af44f30af2cd4185ac0cdd2abd996, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  onHoverColor: {r: 0.7735495, g: 0.4811321, b: 1, a: 0}
+  onHoverColor: {r: 0.7735495, g: 0.4811321, b: 1, a: 1}
   detailIndex: 4
   ObjectManager: {fileID: 1041450907}
-  onClickedColor: {r: 0.6555848, g: 0.066037714, b: 1, a: 0}
+  onClickedColor: {r: 0.6555848, g: 0.066037714, b: 1, a: 1}
   FlashDelay: 0.25
   NumOfFlash: 5
-  timer: 0.2
+  timer: 0
   clicked: 0
   flashing: 0
   clickEvent:
@@ -24461,7 +24573,7 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
-          m_BoolArgument: 0
+          m_BoolArgument: 1
         m_CallState: 2
       - m_Target: {fileID: 1041450908}
         m_MethodName: incrementPartCounter
@@ -25238,6 +25350,7 @@ GameObject:
   - component: {fileID: 979524168256455773}
   - component: {fileID: 3061563514898020878}
   - component: {fileID: 7687622214185911192}
+  - component: {fileID: 7687622214185911193}
   m_Layer: 0
   m_Name: Headstock
   m_TagString: Untagged
@@ -25253,12 +25366,31 @@ MeshCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7687622214185911191}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
+  m_IsTrigger: 0
+  m_Enabled: 0
   serializedVersion: 4
-  m_Convex: 1
+  m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 1734726908766714474, guid: 7d91d150387ea064ab89eda21f30ffc7, type: 3}
+--- !u!114 &7687622214185911193
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7687622214185911191}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3de0c1d00f7878d4da290cc9d694f22b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hoverColor: {r: 1, g: 0.3962264, b: 0.3962264, a: 0}
+  onClickedColor: {r: 1, g: 0, b: 0, a: 0}
+  timer: 0.2
+  counter: 0.2
+  detailIndex: 3
+  ObjectManager: {fileID: 1041450907}
+  hasBeenClicked: 0
 --- !u!4 &7750650884875766255
 Transform:
   m_ObjectHideFlags: 0

@@ -118,10 +118,17 @@ public class ComponentManager : MonoBehaviour
         updateCounter();
         if(counter == numOfParts)
         {
-            if (toggle.getTutorial())
+            if (toggle != null)
             {
-                continueBTN.SetActive(true);
-            } 
+                if (toggle.getTutorial())
+                {
+                    continueBTN.SetActive(true);
+                }
+                else
+                {
+                    menuBTN.SetActive(true);
+                }
+            }
             else
             {
                 menuBTN.SetActive(true);
