@@ -10402,7 +10402,7 @@ PrefabInstance:
     - target: {fileID: 8083552895908864498, guid: 37c584658efa4584f80d6a0d18f647b3,
         type: 3}
       propertyPath: dragSpeed
-      value: 12
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 8083552895908864499, guid: 37c584658efa4584f80d6a0d18f647b3,
         type: 3}
