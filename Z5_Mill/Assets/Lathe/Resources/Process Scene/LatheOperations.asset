@@ -27,27 +27,29 @@ MonoBehaviour:
   - name: Facing Operation
     frenchName: "Op\xE9ration de surfa\xE7age"
     sentences:
-    - Open Guard - Press Guard Button on Control Panel
+    - Open Guard - Click on Guard
     - Place Piece - Click on piece
     - Tighten Jaw - Click on chuck key
-    - Close Guard - Press Guard Button on Control Panel
+    - Close Guard - Click on Guard
     - Setup Tool Holder - Click on tool holder
+    - Untighten Tool Post - Click on wrench
+    - Rotate Tool Post - Click on Tool Post
+    - Move Tailstock Closer - Click on Tailstock
     - Increase tool holder height 1 - Click on increase height button in tool post
       panel
-    - Increase tool holder height 2 - Click on increase height button in tool post
-      panel
-    - Increase tool holder height 3 - Click on increase height button in tool post
-      panel
     - Lock Tool Holder - Click on tool post handle
-    - Move Carriage - Press Carriage Button on Control Panel
+    - Move Tailstock Back - Click on Tailstock
+    - Rotate Tool Post Back To Original Position - Click on Tool Post
+    - Tighten Tool Post - Click on Wrench
+    - Move Carriage - Click on Carriage Feed Wheel
     - Turn ON - Press on On Button on Lathe
-    - 'Set Contact - Press Cross Slide Button on Control Panel
+    - 'Set Contact - Click on Cross Feed Wheel
 
 '
-    - Retreat Cutter - Press Cross Slide Button on Control Panel
-    - Set Cut Depth - Press Carriage Button on General Panel
-    - Machine Across - Press Cross Slide Button on Control Panel
-    - Retreat - Press Carriage Button on Control Panel
+    - Retreat Cutter - Click on Cross Feed Wheel
+    - Set Cut Depth - Click on Carriage Feed Wheel
+    - Machine Across - Click on Cross Feed Wheel
+    - Retreat - Click on Carriage Feed Wheel
     - Turn OFF - Press Stop Button on Lathe
     - End of Operation
     sentencesFR:
@@ -69,7 +71,15 @@ MonoBehaviour:
     - To be implemented
     - To be implemented
     - To be implemented
+    - To be implemented
+    - To be implemented
+    - To be implemented
+    - To be implemented
     images:
+    - {fileID: 21300000, guid: 7cb962a47cd6b4049922ffc01101f823, type: 3}
+    - {fileID: 21300000, guid: 7cb962a47cd6b4049922ffc01101f823, type: 3}
+    - {fileID: 21300000, guid: 7cb962a47cd6b4049922ffc01101f823, type: 3}
+    - {fileID: 21300000, guid: 7cb962a47cd6b4049922ffc01101f823, type: 3}
     - {fileID: 21300000, guid: 7cb962a47cd6b4049922ffc01101f823, type: 3}
     - {fileID: 21300000, guid: 7cb962a47cd6b4049922ffc01101f823, type: 3}
     - {fileID: 21300000, guid: 7cb962a47cd6b4049922ffc01101f823, type: 3}
@@ -91,23 +101,27 @@ MonoBehaviour:
   - name: Turning Operation
     frenchName: "Op\xE9ration de tournage"
     sentences:
-    - Open Guard - Press Guard Button on Control Panel
+    - Open Guard - Click on Guard
     - Place Piece - Click on piece
     - Tighten Jaw - Click on chuck key
-    - Close Guard - Press Guard Button on Control Panel
+    - Close Guard - Click on Guard
     - Setup Tool Holder - Click on tool holder
+    - Untighten Tool Post - Click on wrench
+    - Rotate Tool Post - Click on Tool Post
+    - Move Tailstock Closer - Click on Tailstock
     - Increase tool holder height 1 - Click on increase height button in tool post
       panel
-    - Increase tool holder height 2 - Click on increase height button in tool post
-      panel
     - Lock Tool Holder - Click on tool post handle
-    - Move Carriage - Press Carriage Button on Control Panel
-    - Cross Slide Movement - Press Cross Slide Movement Button on Control Panel
+    - Move Tailstock Back - Click on Tailstock
+    - Rotate Tool Post Back To Original Position - Click on Tool Post
+    - Tighten Tool Post - Click on Wrench
+    - Move Carriage - Click on Carriage Feed Wheel
+    - Cross Slide Movement - Click on Cross Feed Wheel
     - Turn ON - Press on ON Button on Lathe
-    - Set Contact - Press Carriage Button on Control Panel
-    - Set Cut Depth - Press Cross Slide Button  on Control Panel
-    - Machine Across - Press Carriage Button on Control Panel
-    - Retreat - Press Cross Slide Button on Control Panel
+    - Set Contact - Click on Carriage Feed Wheel
+    - Set Cut Depth -  Click on Cross Feed Wheel
+    - Machine Across - Click on Carriage Feed Wheel
+    - Retreat -  Click on Cross Feed Wheel
     - Turn OFF - Press Stop Button on Lathe
     - End of operation
     sentencesFR:
@@ -128,7 +142,17 @@ MonoBehaviour:
     - To be implemented
     - To be implemented
     - To be implemented
+    - To be implemented
+    - To be implemented
+    - To be implemented
+    - To be implemented
+    - To be implemented
     images:
+    - {fileID: 21300000, guid: 7cb962a47cd6b4049922ffc01101f823, type: 3}
+    - {fileID: 21300000, guid: 7cb962a47cd6b4049922ffc01101f823, type: 3}
+    - {fileID: 21300000, guid: 7cb962a47cd6b4049922ffc01101f823, type: 3}
+    - {fileID: 21300000, guid: 7cb962a47cd6b4049922ffc01101f823, type: 3}
+    - {fileID: 21300000, guid: 7cb962a47cd6b4049922ffc01101f823, type: 3}
     - {fileID: 21300000, guid: 7cb962a47cd6b4049922ffc01101f823, type: 3}
     - {fileID: 21300000, guid: 7cb962a47cd6b4049922ffc01101f823, type: 3}
     - {fileID: 21300000, guid: 7cb962a47cd6b4049922ffc01101f823, type: 3}

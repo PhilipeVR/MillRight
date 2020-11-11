@@ -23,8 +23,8 @@ MonoBehaviour:
     - Turn ON
     - Set Contact (Tool Post Movement)
     - Set Cut Depth (Carriage)
-    index: 0b0000000c0000000e000000
-    sentenceIndex: 0b0000000c0000000e000000
+    index: 0f0000001000000012000000
+    sentenceIndex: 0f0000001000000012000000
   - TriggerControllerName: Turning
     anim: 1
     transitionParams:
@@ -35,5 +35,5 @@ MonoBehaviour:
     - Carriage
     - Set Contact Point (Carriage)
     - Slide Across
-    index: 090000000c0000000e000000
-    sentenceIndex: 090000000c0000000e000000
+    index: 0e0000001100000013000000
+    sentenceIndex: 0e0000001100000013000000

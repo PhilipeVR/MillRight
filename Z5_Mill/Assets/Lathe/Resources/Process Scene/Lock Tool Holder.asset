@@ -18,14 +18,14 @@ MonoBehaviour:
     transitionParams:
     - Lock Tool Holder
     animationName:
-    - Height 3
-    index: 08000000
-    sentenceIndex: 08000000
+    - Height 1
+    index: 09000000
+    sentenceIndex: 09000000
   - TriggerControllerName: Turning
     anim: 1
     transitionParams:
     - Lock Tool Holder
     animationName:
-    - Height 2
-    index: 07000000
-    sentenceIndex: 07000000
+    - Height 1
+    index: 09000000
+    sentenceIndex: 09000000

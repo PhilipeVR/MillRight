@@ -19,16 +19,16 @@ MonoBehaviour:
     - Turn OFF
     animationName:
     - Retreat (Carriage)
-    index: 10000000
-    sentenceIndex: 10000000
+    index: 14000000
+    sentenceIndex: 14000000
   - TriggerControllerName: Turning
     anim: 1
     transitionParams:
     - Turn OFF
     animationName:
     - Tool Post Retreat
-    index: 0f000000
-    sentenceIndex: 0f000000
+    index: 14000000
+    sentenceIndex: 14000000
   - TriggerControllerName: Lathe (Centered) Operations
     anim: 2
     transitionParams:

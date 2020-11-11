@@ -20,11 +20,11 @@ MonoBehaviour:
     - Set Cut Depth
     - Carriage Retreat
     animationName:
-    - Lock Tool Holder
+    - Tighten
     - Retreat (Tool Post Movement)
     - Across (Tool Post Movement)
-    index: 090000000d0000000f000000
-    sentenceIndex: 090000000d0000000f000000
+    index: 0d0000001100000013000000
+    sentenceIndex: 0d0000001100000013000000
   - TriggerControllerName: Turning
     anim: 1
     transitionParams:
@@ -32,11 +32,11 @@ MonoBehaviour:
     - Set Contact Point
     - Slide Across
     animationName:
-    - Lock Tool Holder
+    - Tighten
     - Turn ON
     - Set Cut Depth
-    index: 080000000b0000000d000000
-    sentenceIndex: 080000000b0000000d000000
+    index: 0d0000001000000012000000
+    sentenceIndex: 0d0000001000000012000000
   - TriggerControllerName: Lathe (Centered) Operations
     anim: 2
     transitionParams:

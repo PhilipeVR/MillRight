@@ -19,16 +19,16 @@ MonoBehaviour:
     - Turn ON
     animationName:
     - Carriage Move
-    index: 0a000000
-    sentenceIndex: 0a000000
+    index: 0e000000
+    sentenceIndex: 0e000000
   - TriggerControllerName: Turning
     anim: 1
     transitionParams:
     - Turn ON
     animationName:
     - Tool Post Movement
-    index: 0a000000
-    sentenceIndex: 0a000000
+    index: 0f000000
+    sentenceIndex: 0f000000
   - TriggerControllerName: Lathe (Centered) Operations
     anim: 2
     transitionParams:

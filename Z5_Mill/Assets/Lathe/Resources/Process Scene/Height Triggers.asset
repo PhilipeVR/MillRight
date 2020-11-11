@@ -17,21 +17,15 @@ MonoBehaviour:
     anim: 0
     transitionParams:
     - Height 1
-    - Height 2
-    - Height 3
     animationName:
-    - Setup Tool Holder
-    - Height 1
-    - Height 2
-    index: 050000000600000007000000
-    sentenceIndex: 050000000600000007000000
+    - Move Tailstock
+    index: 08000000
+    sentenceIndex: 08000000
   - TriggerControllerName: Turning
     anim: 1
     transitionParams:
     - Height 1
-    - Height 2
     animationName:
-    - Setup Tool Holder
-    - Height 1
-    index: 0500000006000000
-    sentenceIndex: 0500000006000000
+    - Move Tailstock
+    index: 08000000
+    sentenceIndex: 08000000

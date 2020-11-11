@@ -143,7 +143,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &74082664
 RectTransform:
   m_ObjectHideFlags: 0
@@ -555,7 +555,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &149272039
 RectTransform:
   m_ObjectHideFlags: 0
@@ -902,7 +902,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &325688707
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1241,7 +1241,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &669639654
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2037,6 +2037,48 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
+--- !u!1 &911880141 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4514876800767546861, guid: 47f24e795ba2a334d8fc07652923cca1,
+    type: 3}
+  m_PrefabInstance: {fileID: 6504012094340415408}
+  m_PrefabAsset: {fileID: 0}
+--- !u!64 &911880143
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 911880141}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -2929090590322275015, guid: 5f9582df21a11074894dd25fc6d02892, type: 3}
+--- !u!114 &911880145
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 911880141}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6931392fc3ed37147b7249e377f803f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueManager: {fileID: 1867811367}
+  animTriggers: {fileID: 11400000, guid: d41010b8d3c613443b70c570dccdc92d, type: 2}
+  manager: {fileID: 6504012094340415409}
+  hoverColor: {r: 0, g: 0.7830189, b: 0.000017175134, a: 1}
+  clickedColor: {r: 0, g: 0.3773585, b: 0.0018868357, a: 1}
+  colorChange: 1
+  activateOnClick: {fileID: 0}
+  powerTrigger: 0
+  powerToggle: {fileID: 0}
+  power: 0
 --- !u!1 &938153348
 GameObject:
   m_ObjectHideFlags: 0
@@ -2361,6 +2403,24 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1053042662}
   m_CullTransparentMesh: 0
+--- !u!1 &1076082259 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3520952313231853232, guid: 47f24e795ba2a334d8fc07652923cca1,
+    type: 3}
+  m_PrefabInstance: {fileID: 6504012094340415408}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1076082263 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8413855727490898200, guid: 47f24e795ba2a334d8fc07652923cca1,
+    type: 3}
+  m_PrefabInstance: {fileID: 6504012094340415408}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1076082259}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6931392fc3ed37147b7249e377f803f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1115814035
 GameObject:
   m_ObjectHideFlags: 0
@@ -2630,7 +2690,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1200023255
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2934,6 +2994,48 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 6504012094340415408}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1403765636 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2935570852002057830, guid: 47f24e795ba2a334d8fc07652923cca1,
+    type: 3}
+  m_PrefabInstance: {fileID: 6504012094340415408}
+  m_PrefabAsset: {fileID: 0}
+--- !u!64 &1403765638
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1403765636}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -6392772931664812685, guid: ddc7160b6539bf441a8a414d9af628b1, type: 3}
+--- !u!114 &1403765640
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1403765636}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6931392fc3ed37147b7249e377f803f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueManager: {fileID: 1867811367}
+  animTriggers: {fileID: 11400000, guid: da15408395602da46b6ffd58c2c72efc, type: 2}
+  manager: {fileID: 6504012094340415409}
+  hoverColor: {r: 0, g: 1, b: 0.74972606, a: 1}
+  clickedColor: {r: 0, g: 0.5754717, b: 0.43329632, a: 1}
+  colorChange: 1
+  activateOnClick: {fileID: 0}
+  powerTrigger: 0
+  powerToggle: {fileID: 0}
+  power: 0
 --- !u!1 &1486755782
 GameObject:
   m_ObjectHideFlags: 0
@@ -3247,6 +3349,24 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 6504012094340415408}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1710856516 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5424359676816121897, guid: 47f24e795ba2a334d8fc07652923cca1,
+    type: 3}
+  m_PrefabInstance: {fileID: 6504012094340415408}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1710856518 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4678956774775487917, guid: 47f24e795ba2a334d8fc07652923cca1,
+    type: 3}
+  m_PrefabInstance: {fileID: 6504012094340415408}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1710856516}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6931392fc3ed37147b7249e377f803f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1736279424
 GameObject:
   m_ObjectHideFlags: 0
@@ -3521,6 +3641,48 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 6504012094340415408}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1773376802 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2417736913782709242, guid: 47f24e795ba2a334d8fc07652923cca1,
+    type: 3}
+  m_PrefabInstance: {fileID: 6504012094340415408}
+  m_PrefabAsset: {fileID: 0}
+--- !u!64 &1773376804
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1773376802}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 275177244860422564, guid: ddc7160b6539bf441a8a414d9af628b1, type: 3}
+--- !u!114 &1773376806
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1773376802}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6931392fc3ed37147b7249e377f803f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueManager: {fileID: 1867811367}
+  animTriggers: {fileID: 11400000, guid: b4755fc28b904534a864cef00c4afa4f, type: 2}
+  manager: {fileID: 6504012094340415409}
+  hoverColor: {r: 1, g: 0.50459486, b: 0, a: 1}
+  clickedColor: {r: 0.5188679, g: 0.2826857, b: 0, a: 1}
+  colorChange: 1
+  activateOnClick: {fileID: 0}
+  powerTrigger: 0
+  powerToggle: {fileID: 0}
+  power: 0
 --- !u!1 &1774465188
 GameObject:
   m_ObjectHideFlags: 0
@@ -3787,12 +3949,12 @@ MonoBehaviour:
     triggerIndex: 3
     triggerObject:
     - {fileID: 714392837}
-    panel: 1
+    panel: 0
     panelGO: {fileID: 0}
-    controlPanel: 1
+    controlPanel: 0
     panelControl: {fileID: 0}
     panelControlBool: 0
-    tab: 1
+    tab: 0
     control: {fileID: 0}
   - sentenceIndex: 4
     triggerIndex: 4
@@ -3808,29 +3970,29 @@ MonoBehaviour:
   - sentenceIndex: 5
     triggerIndex: 5
     triggerObject:
-    - {fileID: 2432506239605973728}
-    panel: 1
+    - {fileID: 911880141}
+    panel: 0
     panelGO: {fileID: 0}
     controlPanel: 0
     panelControl: {fileID: 0}
-    panelControlBool: 1
+    panelControlBool: 0
     tab: 0
-    control: {fileID: 6162113171354923056}
+    control: {fileID: 0}
   - sentenceIndex: 6
     triggerIndex: 6
     triggerObject:
-    - {fileID: 2432506239605973728}
-    panel: 1
+    - {fileID: 2021416436}
+    panel: 0
     panelGO: {fileID: 0}
     controlPanel: 0
     panelControl: {fileID: 0}
-    panelControlBool: 1
+    panelControlBool: 0
     tab: 0
-    control: {fileID: 6162113171354923056}
+    control: {fileID: 0}
   - sentenceIndex: 7
     triggerIndex: 7
     triggerObject:
-    - {fileID: 6504012094340415410}
+    - {fileID: 1710856516}
     panel: 0
     panelGO: {fileID: 0}
     controlPanel: 0
@@ -3841,18 +4003,18 @@ MonoBehaviour:
   - sentenceIndex: 8
     triggerIndex: 8
     triggerObject:
-    - {fileID: 149272038}
-    panel: 0
+    - {fileID: 2432506239605973728}
+    panel: 1
     panelGO: {fileID: 0}
     controlPanel: 0
     panelControl: {fileID: 0}
-    panelControlBool: 0
+    panelControlBool: 1
     tab: 0
-    control: {fileID: 0}
+    control: {fileID: 6162113171354923056}
   - sentenceIndex: 9
     triggerIndex: 9
     triggerObject:
-    - {fileID: 325688706}
+    - {fileID: 6504012094340415410}
     panel: 0
     panelGO: {fileID: 0}
     controlPanel: 0
@@ -3863,7 +4025,7 @@ MonoBehaviour:
   - sentenceIndex: 10
     triggerIndex: 10
     triggerObject:
-    - {fileID: 82178291}
+    - {fileID: 1710856516}
     panel: 0
     panelGO: {fileID: 0}
     controlPanel: 0
@@ -3874,7 +4036,7 @@ MonoBehaviour:
   - sentenceIndex: 11
     triggerIndex: 11
     triggerObject:
-    - {fileID: 149272038}
+    - {fileID: 2021416436}
     panel: 0
     panelGO: {fileID: 0}
     controlPanel: 0
@@ -3885,7 +4047,7 @@ MonoBehaviour:
   - sentenceIndex: 12
     triggerIndex: 12
     triggerObject:
-    - {fileID: 325688706}
+    - {fileID: 911880141}
     panel: 0
     panelGO: {fileID: 0}
     controlPanel: 0
@@ -3896,7 +4058,7 @@ MonoBehaviour:
   - sentenceIndex: 13
     triggerIndex: 13
     triggerObject:
-    - {fileID: 149272038}
+    - {fileID: 1773376802}
     panel: 0
     panelGO: {fileID: 0}
     controlPanel: 0
@@ -3907,7 +4069,7 @@ MonoBehaviour:
   - sentenceIndex: 14
     triggerIndex: 14
     triggerObject:
-    - {fileID: 325688706}
+    - {fileID: 1076082259}
     panel: 0
     panelGO: {fileID: 0}
     controlPanel: 0
@@ -3917,6 +4079,61 @@ MonoBehaviour:
     control: {fileID: 0}
   - sentenceIndex: 15
     triggerIndex: 15
+    triggerObject:
+    - {fileID: 82178291}
+    panel: 0
+    panelGO: {fileID: 0}
+    controlPanel: 0
+    panelControl: {fileID: 0}
+    panelControlBool: 0
+    tab: 0
+    control: {fileID: 0}
+  - sentenceIndex: 16
+    triggerIndex: 16
+    triggerObject:
+    - {fileID: 1773376802}
+    panel: 0
+    panelGO: {fileID: 0}
+    controlPanel: 0
+    panelControl: {fileID: 0}
+    panelControlBool: 0
+    tab: 0
+    control: {fileID: 0}
+  - sentenceIndex: 17
+    triggerIndex: 17
+    triggerObject:
+    - {fileID: 1076082259}
+    panel: 0
+    panelGO: {fileID: 0}
+    controlPanel: 0
+    panelControl: {fileID: 0}
+    panelControlBool: 0
+    tab: 0
+    control: {fileID: 0}
+  - sentenceIndex: 18
+    triggerIndex: 18
+    triggerObject:
+    - {fileID: 1773376802}
+    panel: 0
+    panelGO: {fileID: 0}
+    controlPanel: 0
+    panelControl: {fileID: 0}
+    panelControlBool: 0
+    tab: 0
+    control: {fileID: 0}
+  - sentenceIndex: 19
+    triggerIndex: 19
+    triggerObject:
+    - {fileID: 1076082259}
+    panel: 0
+    panelGO: {fileID: 0}
+    controlPanel: 0
+    panelControl: {fileID: 0}
+    panelControlBool: 0
+    tab: 0
+    control: {fileID: 0}
+  - sentenceIndex: 20
+    triggerIndex: 20
     triggerObject:
     - {fileID: 1240663166}
     panel: 0
@@ -3985,29 +4202,29 @@ MonoBehaviour:
   - sentenceIndex: 5
     triggerIndex: 5
     triggerObject:
-    - {fileID: 2432506239605973728}
-    panel: 1
+    - {fileID: 911880141}
+    panel: 0
     panelGO: {fileID: 0}
     controlPanel: 0
     panelControl: {fileID: 0}
-    panelControlBool: 1
+    panelControlBool: 0
     tab: 0
-    control: {fileID: 6162113171354923056}
+    control: {fileID: 0}
   - sentenceIndex: 6
     triggerIndex: 6
     triggerObject:
-    - {fileID: 2432506239605973728}
-    panel: 1
+    - {fileID: 2021416436}
+    panel: 0
     panelGO: {fileID: 0}
     controlPanel: 0
     panelControl: {fileID: 0}
-    panelControlBool: 1
+    panelControlBool: 0
     tab: 0
-    control: {fileID: 6162113171354923056}
+    control: {fileID: 0}
   - sentenceIndex: 7
     triggerIndex: 7
     triggerObject:
-    - {fileID: 2432506239605973728}
+    - {fileID: 1710856516}
     panel: 1
     panelGO: {fileID: 0}
     controlPanel: 0
@@ -4018,29 +4235,29 @@ MonoBehaviour:
   - sentenceIndex: 8
     triggerIndex: 8
     triggerObject:
-    - {fileID: 6504012094340415410}
-    panel: 0
+    - {fileID: 2432506239605973728}
+    panel: 1
     panelGO: {fileID: 0}
     controlPanel: 0
     panelControl: {fileID: 0}
-    panelControlBool: 0
+    panelControlBool: 1
     tab: 0
-    control: {fileID: 0}
+    control: {fileID: 6162113171354923056}
   - sentenceIndex: 9
     triggerIndex: 9
     triggerObject:
-    - {fileID: 149272038}
-    panel: 0
+    - {fileID: 6504012094340415410}
+    panel: 1
     panelGO: {fileID: 0}
     controlPanel: 0
     panelControl: {fileID: 0}
-    panelControlBool: 0
+    panelControlBool: 1
     tab: 0
-    control: {fileID: 0}
+    control: {fileID: 6162113171354923056}
   - sentenceIndex: 10
     triggerIndex: 10
     triggerObject:
-    - {fileID: 82178291}
+    - {fileID: 1710856516}
     panel: 0
     panelGO: {fileID: 0}
     controlPanel: 0
@@ -4051,7 +4268,7 @@ MonoBehaviour:
   - sentenceIndex: 11
     triggerIndex: 11
     triggerObject:
-    - {fileID: 325688706}
+    - {fileID: 2021416436}
     panel: 0
     panelGO: {fileID: 0}
     controlPanel: 0
@@ -4062,7 +4279,7 @@ MonoBehaviour:
   - sentenceIndex: 12
     triggerIndex: 12
     triggerObject:
-    - {fileID: 325688706}
+    - {fileID: 2021416436}
     panel: 0
     panelGO: {fileID: 0}
     controlPanel: 0
@@ -4073,7 +4290,7 @@ MonoBehaviour:
   - sentenceIndex: 13
     triggerIndex: 13
     triggerObject:
-    - {fileID: 149272038}
+    - {fileID: 1773376802}
     panel: 0
     panelGO: {fileID: 0}
     controlPanel: 0
@@ -4084,7 +4301,7 @@ MonoBehaviour:
   - sentenceIndex: 14
     triggerIndex: 14
     triggerObject:
-    - {fileID: 325688706}
+    - {fileID: 82178291}
     panel: 0
     panelGO: {fileID: 0}
     controlPanel: 0
@@ -4095,7 +4312,7 @@ MonoBehaviour:
   - sentenceIndex: 15
     triggerIndex: 15
     triggerObject:
-    - {fileID: 149272038}
+    - {fileID: 1076082259}
     panel: 0
     panelGO: {fileID: 0}
     controlPanel: 0
@@ -4105,6 +4322,50 @@ MonoBehaviour:
     control: {fileID: 0}
   - sentenceIndex: 16
     triggerIndex: 16
+    triggerObject:
+    - {fileID: 1076082259}
+    panel: 0
+    panelGO: {fileID: 0}
+    controlPanel: 0
+    panelControl: {fileID: 0}
+    panelControlBool: 0
+    tab: 0
+    control: {fileID: 0}
+  - sentenceIndex: 17
+    triggerIndex: 17
+    triggerObject:
+    - {fileID: 1773376802}
+    panel: 0
+    panelGO: {fileID: 0}
+    controlPanel: 0
+    panelControl: {fileID: 0}
+    panelControlBool: 0
+    tab: 0
+    control: {fileID: 0}
+  - sentenceIndex: 18
+    triggerIndex: 18
+    triggerObject:
+    - {fileID: 1076082259}
+    panel: 0
+    panelGO: {fileID: 0}
+    controlPanel: 0
+    panelControl: {fileID: 0}
+    panelControlBool: 0
+    tab: 0
+    control: {fileID: 0}
+  - sentenceIndex: 19
+    triggerIndex: 19
+    triggerObject:
+    - {fileID: 1773376802}
+    panel: 0
+    panelGO: {fileID: 0}
+    controlPanel: 0
+    panelControl: {fileID: 0}
+    panelControlBool: 0
+    tab: 0
+    control: {fileID: 0}
+  - sentenceIndex: 20
+    triggerIndex: 20
     triggerObject:
     - {fileID: 1240663166}
     panel: 0
@@ -4662,6 +4923,48 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 6504012094340415408}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2021416436 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 347077170929371843, guid: 47f24e795ba2a334d8fc07652923cca1,
+    type: 3}
+  m_PrefabInstance: {fileID: 6504012094340415408}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2021416438
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2021416436}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6931392fc3ed37147b7249e377f803f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueManager: {fileID: 1867811367}
+  animTriggers: {fileID: 11400000, guid: 14acef50211a8c447955d8a59830f10a, type: 2}
+  manager: {fileID: 6504012094340415409}
+  hoverColor: {r: 0.5294118, g: 0.26666668, b: 0.34117648, a: 1}
+  clickedColor: {r: 0.6037736, g: 0, b: 0.17121945, a: 0}
+  colorChange: 1
+  activateOnClick: {fileID: 0}
+  powerTrigger: 0
+  powerToggle: {fileID: 0}
+  power: 0
+--- !u!64 &2021416440
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2021416436}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4974399269466625021, guid: ddc7160b6539bf441a8a414d9af628b1, type: 3}
 --- !u!114 &2028133335 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1922976073594558173, guid: 47f24e795ba2a334d8fc07652923cca1,
@@ -4680,7 +4983,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-1194
+  m_Name: pb_Mesh-1738
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -17926,6 +18229,11 @@ PrefabInstance:
       propertyPath: timerCountDown
       value: 0.1
       objectReference: {fileID: 0}
+    - target: {fileID: 4678956774775487917, guid: 47f24e795ba2a334d8fc07652923cca1,
+        type: 3}
+      propertyPath: dialogueManager
+      value: 
+      objectReference: {fileID: 1867811367}
     - target: {fileID: 4681441395849838733, guid: 47f24e795ba2a334d8fc07652923cca1,
         type: 3}
       propertyPath: timerCountDown
@@ -20734,12 +21042,7 @@ PrefabInstance:
     - target: {fileID: 4940816929698950990, guid: 47f24e795ba2a334d8fc07652923cca1,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 33.660767
-      objectReference: {fileID: 0}
-    - target: {fileID: 4940816929698950990, guid: 47f24e795ba2a334d8fc07652923cca1,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 41
+      value: 32.5
       objectReference: {fileID: 0}
     - target: {fileID: 4941989024762202215, guid: 47f24e795ba2a334d8fc07652923cca1,
         type: 3}
@@ -21278,6 +21581,21 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5434450909104701175, guid: 47f24e795ba2a334d8fc07652923cca1,
         type: 3}
+      propertyPath: clipName.Array.size
+      value: 22
+      objectReference: {fileID: 0}
+    - target: {fileID: 5434450909104701175, guid: 47f24e795ba2a334d8fc07652923cca1,
+        type: 3}
+      propertyPath: buttonTriggers.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5434450909104701175, guid: 47f24e795ba2a334d8fc07652923cca1,
+        type: 3}
+      propertyPath: rendererTriggers.Array.size
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 5434450909104701175, guid: 47f24e795ba2a334d8fc07652923cca1,
+        type: 3}
       propertyPath: triggerFlash
       value: 
       objectReference: {fileID: 1774465191}
@@ -21330,12 +21648,12 @@ PrefabInstance:
         type: 3}
       propertyPath: buttonTriggers.Array.data[0]
       value: 
-      objectReference: {fileID: 149272040}
+      objectReference: {fileID: 2432506239605973729}
     - target: {fileID: 5434450909104701175, guid: 47f24e795ba2a334d8fc07652923cca1,
         type: 3}
       propertyPath: buttonTriggers.Array.data[1]
       value: 
-      objectReference: {fileID: 2432506239605973729}
+      objectReference: {fileID: 0}
     - target: {fileID: 5434450909104701175, guid: 47f24e795ba2a334d8fc07652923cca1,
         type: 3}
       propertyPath: buttonTriggers.Array.data[2]
@@ -21369,17 +21687,17 @@ PrefabInstance:
     - target: {fileID: 5434450909104701175, guid: 47f24e795ba2a334d8fc07652923cca1,
         type: 3}
       propertyPath: clipName.Array.data[18]
-      value: Turn OFF
+      value: Set Cut Depth (Carriage)
       objectReference: {fileID: 0}
     - target: {fileID: 5434450909104701175, guid: 47f24e795ba2a334d8fc07652923cca1,
         type: 3}
       propertyPath: clipName.Array.data[19]
-      value: Turn OFF
+      value: Across (Tool Post Movement)
       objectReference: {fileID: 0}
     - target: {fileID: 5434450909104701175, guid: 47f24e795ba2a334d8fc07652923cca1,
         type: 3}
       propertyPath: clipName.Array.data[20]
-      value: Turn OFF
+      value: Retreat (Carriage)
       objectReference: {fileID: 0}
     - target: {fileID: 5434450909104701175, guid: 47f24e795ba2a334d8fc07652923cca1,
         type: 3}
@@ -21410,7 +21728,82 @@ PrefabInstance:
         type: 3}
       propertyPath: rendererTriggers.Array.data[7]
       value: 
-      objectReference: {fileID: 714392838}
+      objectReference: {fileID: 1773376806}
+    - target: {fileID: 5434450909104701175, guid: 47f24e795ba2a334d8fc07652923cca1,
+        type: 3}
+      propertyPath: clipName.Array.data[7]
+      value: Tool Post Rotation
+      objectReference: {fileID: 0}
+    - target: {fileID: 5434450909104701175, guid: 47f24e795ba2a334d8fc07652923cca1,
+        type: 3}
+      propertyPath: clipName.Array.data[8]
+      value: Move Tailstock
+      objectReference: {fileID: 0}
+    - target: {fileID: 5434450909104701175, guid: 47f24e795ba2a334d8fc07652923cca1,
+        type: 3}
+      propertyPath: clipName.Array.data[9]
+      value: Height 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5434450909104701175, guid: 47f24e795ba2a334d8fc07652923cca1,
+        type: 3}
+      propertyPath: clipName.Array.data[10]
+      value: Lock Tool Holder
+      objectReference: {fileID: 0}
+    - target: {fileID: 5434450909104701175, guid: 47f24e795ba2a334d8fc07652923cca1,
+        type: 3}
+      propertyPath: clipName.Array.data[11]
+      value: Bring Back
+      objectReference: {fileID: 0}
+    - target: {fileID: 5434450909104701175, guid: 47f24e795ba2a334d8fc07652923cca1,
+        type: 3}
+      propertyPath: clipName.Array.data[12]
+      value: Rotate Back
+      objectReference: {fileID: 0}
+    - target: {fileID: 5434450909104701175, guid: 47f24e795ba2a334d8fc07652923cca1,
+        type: 3}
+      propertyPath: clipName.Array.data[13]
+      value: Tighten
+      objectReference: {fileID: 0}
+    - target: {fileID: 5434450909104701175, guid: 47f24e795ba2a334d8fc07652923cca1,
+        type: 3}
+      propertyPath: clipName.Array.data[14]
+      value: Carriage Move
+      objectReference: {fileID: 0}
+    - target: {fileID: 5434450909104701175, guid: 47f24e795ba2a334d8fc07652923cca1,
+        type: 3}
+      propertyPath: clipName.Array.data[15]
+      value: Turn ON
+      objectReference: {fileID: 0}
+    - target: {fileID: 5434450909104701175, guid: 47f24e795ba2a334d8fc07652923cca1,
+        type: 3}
+      propertyPath: clipName.Array.data[16]
+      value: Set Contact (Tool Post Movement)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5434450909104701175, guid: 47f24e795ba2a334d8fc07652923cca1,
+        type: 3}
+      propertyPath: clipName.Array.data[17]
+      value: Retreat (Tool Post Movement)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5434450909104701175, guid: 47f24e795ba2a334d8fc07652923cca1,
+        type: 3}
+      propertyPath: clipName.Array.data[6]
+      value: Untighten
+      objectReference: {fileID: 0}
+    - target: {fileID: 5434450909104701175, guid: 47f24e795ba2a334d8fc07652923cca1,
+        type: 3}
+      propertyPath: rendererTriggers.Array.data[8]
+      value: 
+      objectReference: {fileID: 1076082263}
+    - target: {fileID: 5434450909104701175, guid: 47f24e795ba2a334d8fc07652923cca1,
+        type: 3}
+      propertyPath: rendererTriggers.Array.data[9]
+      value: 
+      objectReference: {fileID: 2021416438}
+    - target: {fileID: 5434450909104701175, guid: 47f24e795ba2a334d8fc07652923cca1,
+        type: 3}
+      propertyPath: rendererTriggers.Array.data[10]
+      value: 
+      objectReference: {fileID: 911880145}
     - target: {fileID: 5444412031435410344, guid: 47f24e795ba2a334d8fc07652923cca1,
         type: 3}
       propertyPath: timerCountDown
@@ -21659,7 +22052,7 @@ PrefabInstance:
     - target: {fileID: 5646456630681090802, guid: 47f24e795ba2a334d8fc07652923cca1,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5653064669424536104, guid: 47f24e795ba2a334d8fc07652923cca1,
         type: 3}
@@ -22214,7 +22607,7 @@ PrefabInstance:
     - target: {fileID: 6250047570248172466, guid: 47f24e795ba2a334d8fc07652923cca1,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6256755677403796293, guid: 47f24e795ba2a334d8fc07652923cca1,
         type: 3}
@@ -22224,7 +22617,17 @@ PrefabInstance:
     - target: {fileID: 6256755677403796293, guid: 47f24e795ba2a334d8fc07652923cca1,
         type: 3}
       propertyPath: clipName.Array.size
-      value: 18
+      value: 22
+      objectReference: {fileID: 0}
+    - target: {fileID: 6256755677403796293, guid: 47f24e795ba2a334d8fc07652923cca1,
+        type: 3}
+      propertyPath: rendererTriggers.Array.size
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 6256755677403796293, guid: 47f24e795ba2a334d8fc07652923cca1,
+        type: 3}
+      propertyPath: buttonTriggers.Array.size
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6256755677403796293, guid: 47f24e795ba2a334d8fc07652923cca1,
         type: 3}
@@ -22319,22 +22722,22 @@ PrefabInstance:
     - target: {fileID: 6256755677403796293, guid: 47f24e795ba2a334d8fc07652923cca1,
         type: 3}
       propertyPath: clipName.Array.data[17]
-      value: Turn OFF
+      value: Set Contact Point (Carriage)
       objectReference: {fileID: 0}
     - target: {fileID: 6256755677403796293, guid: 47f24e795ba2a334d8fc07652923cca1,
         type: 3}
       propertyPath: clipName.Array.data[18]
-      value: Turn OFF
+      value: Set Cut Depth
       objectReference: {fileID: 0}
     - target: {fileID: 6256755677403796293, guid: 47f24e795ba2a334d8fc07652923cca1,
         type: 3}
       propertyPath: clipName.Array.data[19]
-      value: Turn OFF
+      value: Slide Across
       objectReference: {fileID: 0}
     - target: {fileID: 6256755677403796293, guid: 47f24e795ba2a334d8fc07652923cca1,
         type: 3}
       propertyPath: clipName.Array.data[20]
-      value: Turn OFF
+      value: Tool Post Retreat
       objectReference: {fileID: 0}
     - target: {fileID: 6256755677403796293, guid: 47f24e795ba2a334d8fc07652923cca1,
         type: 3}
@@ -22364,18 +22767,83 @@ PrefabInstance:
     - target: {fileID: 6256755677403796293, guid: 47f24e795ba2a334d8fc07652923cca1,
         type: 3}
       propertyPath: clipName.Array.data[13]
-      value: Set Cut Depth
+      value: Tighten
       objectReference: {fileID: 0}
     - target: {fileID: 6256755677403796293, guid: 47f24e795ba2a334d8fc07652923cca1,
         type: 3}
       propertyPath: clipName.Array.data[14]
-      value: Slide Across
+      value: Carriage
       objectReference: {fileID: 0}
     - target: {fileID: 6256755677403796293, guid: 47f24e795ba2a334d8fc07652923cca1,
         type: 3}
       propertyPath: clipName.Array.data[16]
-      value: Tool Post Retreat
+      value: Turn ON
       objectReference: {fileID: 0}
+    - target: {fileID: 6256755677403796293, guid: 47f24e795ba2a334d8fc07652923cca1,
+        type: 3}
+      propertyPath: clipName.Array.data[8]
+      value: Move Tailstock
+      objectReference: {fileID: 0}
+    - target: {fileID: 6256755677403796293, guid: 47f24e795ba2a334d8fc07652923cca1,
+        type: 3}
+      propertyPath: clipName.Array.data[9]
+      value: Height 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6256755677403796293, guid: 47f24e795ba2a334d8fc07652923cca1,
+        type: 3}
+      propertyPath: clipName.Array.data[10]
+      value: Lock Tool Holder
+      objectReference: {fileID: 0}
+    - target: {fileID: 6256755677403796293, guid: 47f24e795ba2a334d8fc07652923cca1,
+        type: 3}
+      propertyPath: clipName.Array.data[11]
+      value: Move Back
+      objectReference: {fileID: 0}
+    - target: {fileID: 6256755677403796293, guid: 47f24e795ba2a334d8fc07652923cca1,
+        type: 3}
+      propertyPath: clipName.Array.data[12]
+      value: Rotate Back
+      objectReference: {fileID: 0}
+    - target: {fileID: 6256755677403796293, guid: 47f24e795ba2a334d8fc07652923cca1,
+        type: 3}
+      propertyPath: clipName.Array.data[15]
+      value: Tool Post Movement
+      objectReference: {fileID: 0}
+    - target: {fileID: 6256755677403796293, guid: 47f24e795ba2a334d8fc07652923cca1,
+        type: 3}
+      propertyPath: clipName.Array.data[7]
+      value: Rotate Tool Post
+      objectReference: {fileID: 0}
+    - target: {fileID: 6256755677403796293, guid: 47f24e795ba2a334d8fc07652923cca1,
+        type: 3}
+      propertyPath: clipName.Array.data[6]
+      value: Untighten
+      objectReference: {fileID: 0}
+    - target: {fileID: 6256755677403796293, guid: 47f24e795ba2a334d8fc07652923cca1,
+        type: 3}
+      propertyPath: rendererTriggers.Array.data[7]
+      value: 
+      objectReference: {fileID: 1076082263}
+    - target: {fileID: 6256755677403796293, guid: 47f24e795ba2a334d8fc07652923cca1,
+        type: 3}
+      propertyPath: rendererTriggers.Array.data[8]
+      value: 
+      objectReference: {fileID: 911880145}
+    - target: {fileID: 6256755677403796293, guid: 47f24e795ba2a334d8fc07652923cca1,
+        type: 3}
+      propertyPath: rendererTriggers.Array.data[9]
+      value: 
+      objectReference: {fileID: 2021416438}
+    - target: {fileID: 6256755677403796293, guid: 47f24e795ba2a334d8fc07652923cca1,
+        type: 3}
+      propertyPath: rendererTriggers.Array.data[10]
+      value: 
+      objectReference: {fileID: 1710856518}
+    - target: {fileID: 6256755677403796293, guid: 47f24e795ba2a334d8fc07652923cca1,
+        type: 3}
+      propertyPath: rendererTriggers.Array.data[11]
+      value: 
+      objectReference: {fileID: 1773376806}
     - target: {fileID: 6270875894888626071, guid: 47f24e795ba2a334d8fc07652923cca1,
         type: 3}
       propertyPath: reset
@@ -22655,6 +23123,11 @@ PrefabInstance:
         type: 3}
       propertyPath: timerCountDown
       value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6588053509846468670, guid: 47f24e795ba2a334d8fc07652923cca1,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.16
       objectReference: {fileID: 0}
     - target: {fileID: 6593529596224006296, guid: 47f24e795ba2a334d8fc07652923cca1,
         type: 3}
@@ -24331,6 +24804,26 @@ PrefabInstance:
       propertyPath: timerCountDown
       value: 0.001
       objectReference: {fileID: 0}
+    - target: {fileID: 8413855727490898200, guid: 47f24e795ba2a334d8fc07652923cca1,
+        type: 3}
+      propertyPath: dialogueManager
+      value: 
+      objectReference: {fileID: 1867811367}
+    - target: {fileID: 8413855727490898200, guid: 47f24e795ba2a334d8fc07652923cca1,
+        type: 3}
+      propertyPath: colorChange
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8413855727490898200, guid: 47f24e795ba2a334d8fc07652923cca1,
+        type: 3}
+      propertyPath: hoverColor.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8413855727490898200, guid: 47f24e795ba2a334d8fc07652923cca1,
+        type: 3}
+      propertyPath: clickedColor.a
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8415518909209831804, guid: 47f24e795ba2a334d8fc07652923cca1,
         type: 3}
       propertyPath: reset
@@ -24660,6 +25153,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Cylinder Stock Material 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8702496162553754422, guid: 47f24e795ba2a334d8fc07652923cca1,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8702496162553754422, guid: 47f24e795ba2a334d8fc07652923cca1,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8702496162553754422, guid: 47f24e795ba2a334d8fc07652923cca1,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8702496162553754422, guid: 47f24e795ba2a334d8fc07652923cca1,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8705403080610718814, guid: 47f24e795ba2a334d8fc07652923cca1,
         type: 3}

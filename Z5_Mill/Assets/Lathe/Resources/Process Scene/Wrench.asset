@@ -10,34 +10,26 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8ee79008135f12f4591841e430f1f2cf, type: 3}
-  m_Name: Tailstock Button
+  m_Name: Wrench
   m_EditorClassIdentifier: 
   triggers:
   - TriggerControllerName: Facing
     anim: 0
     transitionParams:
-    - Move Closer
-    - Move Back
+    - Untighten
+    - Tighten
     animationName:
-    - Tool Post Rotation
-    - Lock Tool Holder
-    index: 070000000a000000
-    sentenceIndex: 070000000a000000
+    - Setup Tool Holder
+    - Rotate Back
+    index: 050000000c000000
+    sentenceIndex: 050000000c000000
   - TriggerControllerName: Turning
     anim: 1
     transitionParams:
-    - Move Tailstock
-    - Move Back
+    - Untighten
+    - Tighten
     animationName:
-    - Rotate Tool Post
-    - Lock Tool Holder
-    index: 070000000a000000
-    sentenceIndex: 070000000a000000
-  - TriggerControllerName: Lathe (Centered) Operations
-    anim: 2
-    transitionParams:
-    - Move Tailstock
-    animationName:
-    - Move Carriage
-    index: 07000000
-    sentenceIndex: 07000000
+    - Setup Tool Holder
+    - Rotate Back
+    index: 050000000c000000
+    sentenceIndex: 050000000c000000
