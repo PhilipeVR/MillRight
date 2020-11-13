@@ -1901,7 +1901,7 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 2
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -1912,7 +1912,7 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 1
+          m_IntArgument: 3
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -4620,9 +4620,12 @@ MonoBehaviour:
   count: 0
   index: 0
   sentenceIndex: 0
+  buttonOC: {fileID: 6162113170941842254}
   open: {fileID: 115078960}
   close: {fileID: 957553213}
   holder: {fileID: 6162113169859475044}
+  MachiningWait: 1
+  indexWait: 13000000130000000c000000
 --- !u!114 &1867811377
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4983,7 +4986,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-1738
+  m_Name: pb_Mesh-1198
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -13750,6 +13753,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 219696056845014630, guid: 47f24e795ba2a334d8fc07652923cca1,
         type: 3}
+      propertyPath: buttonTriggers.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 219696056845014630, guid: 47f24e795ba2a334d8fc07652923cca1,
+        type: 3}
+      propertyPath: rendererTriggers.Array.size
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 219696056845014630, guid: 47f24e795ba2a334d8fc07652923cca1,
+        type: 3}
       propertyPath: triggerFlash
       value: 
       objectReference: {fileID: 1774465191}
@@ -13767,17 +13780,17 @@ PrefabInstance:
         type: 3}
       propertyPath: buttonTriggers.Array.data[0]
       value: 
-      objectReference: {fileID: 149272040}
+      objectReference: {fileID: 2432506238511747415}
     - target: {fileID: 219696056845014630, guid: 47f24e795ba2a334d8fc07652923cca1,
         type: 3}
       propertyPath: buttonTriggers.Array.data[1]
       value: 
-      objectReference: {fileID: 74082669}
+      objectReference: {fileID: 2432506238511747415}
     - target: {fileID: 219696056845014630, guid: 47f24e795ba2a334d8fc07652923cca1,
         type: 3}
       propertyPath: buttonTriggers.Array.data[2]
       value: 
-      objectReference: {fileID: 669639659}
+      objectReference: {fileID: 2432506238511747415}
     - target: {fileID: 219696056845014630, guid: 47f24e795ba2a334d8fc07652923cca1,
         type: 3}
       propertyPath: buttonTriggers.Array.data[3]
@@ -13818,6 +13831,21 @@ PrefabInstance:
       propertyPath: rendererTriggers.Array.data[6]
       value: 
       objectReference: {fileID: 6504012094340415417}
+    - target: {fileID: 219696056845014630, guid: 47f24e795ba2a334d8fc07652923cca1,
+        type: 3}
+      propertyPath: rendererTriggers.Array.data[7]
+      value: 
+      objectReference: {fileID: 1773376806}
+    - target: {fileID: 219696056845014630, guid: 47f24e795ba2a334d8fc07652923cca1,
+        type: 3}
+      propertyPath: rendererTriggers.Array.data[8]
+      value: 
+      objectReference: {fileID: 1710856518}
+    - target: {fileID: 219696056845014630, guid: 47f24e795ba2a334d8fc07652923cca1,
+        type: 3}
+      propertyPath: rendererTriggers.Array.data[9]
+      value: 
+      objectReference: {fileID: 1403765640}
     - target: {fileID: 227123266150546830, guid: 47f24e795ba2a334d8fc07652923cca1,
         type: 3}
       propertyPath: reset
@@ -14201,7 +14229,7 @@ PrefabInstance:
     - target: {fileID: 599512093309953899, guid: 47f24e795ba2a334d8fc07652923cca1,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 603811582689142720, guid: 47f24e795ba2a334d8fc07652923cca1,
         type: 3}
@@ -17609,6 +17637,11 @@ PrefabInstance:
       propertyPath: timerCountDown
       value: 0.1
       objectReference: {fileID: 0}
+    - target: {fileID: 4020640909545206212, guid: 47f24e795ba2a334d8fc07652923cca1,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4023012607057730335, guid: 47f24e795ba2a334d8fc07652923cca1,
         type: 3}
       propertyPath: reset
@@ -18153,6 +18186,31 @@ PrefabInstance:
         type: 3}
       propertyPath: timerCountDown
       value: 0.001
+      objectReference: {fileID: 0}
+    - target: {fileID: 4573807919658101852, guid: 47f24e795ba2a334d8fc07652923cca1,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.0001
+      objectReference: {fileID: 0}
+    - target: {fileID: 4573807919658101852, guid: 47f24e795ba2a334d8fc07652923cca1,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.0001
+      objectReference: {fileID: 0}
+    - target: {fileID: 4573807919658101852, guid: 47f24e795ba2a334d8fc07652923cca1,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.0127
+      objectReference: {fileID: 0}
+    - target: {fileID: 4573807919658101852, guid: 47f24e795ba2a334d8fc07652923cca1,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.008
+      objectReference: {fileID: 0}
+    - target: {fileID: 4573807919658101852, guid: 47f24e795ba2a334d8fc07652923cca1,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.0044
       objectReference: {fileID: 0}
     - target: {fileID: 4578581418594244204, guid: 47f24e795ba2a334d8fc07652923cca1,
         type: 3}
@@ -21907,7 +21965,7 @@ PrefabInstance:
     - target: {fileID: 5524435260911143824, guid: 47f24e795ba2a334d8fc07652923cca1,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5529662603654936095, guid: 47f24e795ba2a334d8fc07652923cca1,
         type: 3}
@@ -23344,6 +23402,11 @@ PrefabInstance:
       propertyPath: timerCountDown
       value: 0.001
       objectReference: {fileID: 0}
+    - target: {fileID: 6821981247845899567, guid: 47f24e795ba2a334d8fc07652923cca1,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6829074639762999604, guid: 47f24e795ba2a334d8fc07652923cca1,
         type: 3}
       propertyPath: reset
@@ -23992,12 +24055,17 @@ PrefabInstance:
     - target: {fileID: 7530389787089809115, guid: 47f24e795ba2a334d8fc07652923cca1,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.01269984
+      value: 0.0127
       objectReference: {fileID: 0}
     - target: {fileID: 7530389787089809115, guid: 47f24e795ba2a334d8fc07652923cca1,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0
+      value: 0.0044
+      objectReference: {fileID: 0}
+    - target: {fileID: 7530389787089809115, guid: 47f24e795ba2a334d8fc07652923cca1,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.008
       objectReference: {fileID: 0}
     - target: {fileID: 7534586511105319760, guid: 47f24e795ba2a334d8fc07652923cca1,
         type: 3}

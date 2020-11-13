@@ -131,6 +131,10 @@ public class HintTrigger : MonoBehaviour
                 timer -= Time.deltaTime;
                 if (timer < 0)
                 {
+                    if((manager.sentenceIndex == manager.indexWait[animationController.Index]) && manager.MachiningWait)
+                    {
+                        manager.DialogWait();
+                    }
                     hint.interactable = true;
                     state = false;
                     timer = -1;

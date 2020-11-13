@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEditor;
+
 
 public class DialogueOperator : MonoBehaviour
 {
@@ -23,7 +25,11 @@ public class DialogueOperator : MonoBehaviour
     private string lastSentence;
     private string titleLang;
     private bool controllerPresent;
+    [SerializeField] private GameObject buttonOC;
     [SerializeField] private GameObject open, close, holder;
+    [SerializeField] public bool MachiningWait;
+    [SerializeField] public List<int> indexWait;
+
 
     void Awake()
     {
@@ -102,17 +108,46 @@ public class DialogueOperator : MonoBehaviour
         }
     }
 
+    public void DialogWait()
+    {
+        if (open != null) { open.SetActive(false); }
+        if (close != null) { close.SetActive(true); }
+        if (buttonOC != null) { buttonOC.SetActive(true); }
+        holder.SetActive(true);
+    }
+
     public void DisplayNextSentence()
     {
-        if (open != null)
+        if (MachiningWait)
         {
-            open.SetActive(false);
+            if(indexWait[animationController.Index] == sentenceIndex+1)
+            {
+                if (open != null) { open.SetActive(false); }
+                if (close != null) { close.SetActive(false); }
+                if (buttonOC != null) { buttonOC.SetActive(false); }
+                holder.SetActive(false);
+                
+            }
+            else
+            {
+                if (open != null) { open.SetActive(false); }
+                if (close != null) { close.SetActive(true); }
+                holder.SetActive(true);
+            }
         }
-        if (close != null)
+        else
         {
-            close.SetActive(true);
+            if (open != null)
+            {
+                open.SetActive(false);
+            }
+            if (close != null)
+            {
+                close.SetActive(true);
+            }
+            holder.SetActive(true);
+
         }
-        holder.SetActive(true);
         sentenceIndex++;
         if (tracker < count)
         {
@@ -217,3 +252,5 @@ public class DialogueOperator : MonoBehaviour
     }
 
 }
+
+
