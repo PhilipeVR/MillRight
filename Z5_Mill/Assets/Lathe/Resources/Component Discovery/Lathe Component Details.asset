@@ -128,3 +128,13 @@ MonoBehaviour:
     sentence: Chuck With Spindle Description
     sentenceFR: Mandrin Description
     image: {fileID: 21300000, guid: 3ea4d47a705c91e4fac006f711fd2a2d, type: 3}
+  - partName: Lead Screw
+    partNameFR: -----
+    sentence: Lead Screw Description
+    sentenceFR: -------
+    image: {fileID: 21300000, guid: 2bd89a3b52d3b054fa86544498aa9596, type: 3}
+  - partName: Cross Slide
+    partNameFR: --------
+    sentence: Cross Slide Description
+    sentenceFR: ----------
+    image: {fileID: 21300000, guid: 4e501ea4b02d45c4d81963eb372f7e58, type: 3}
