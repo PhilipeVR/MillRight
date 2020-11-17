@@ -33,7 +33,9 @@ MonoBehaviour:
     anim: 2
     transitionParams:
     - Turn OFF
+    - Turn OFF 2
     animationName:
     - Pecking
-    index: 0c000000
-    sentenceIndex: 0c000000
+    - Pecking 2
+    index: 0c00000012000000
+    sentenceIndex: 0c00000012000000

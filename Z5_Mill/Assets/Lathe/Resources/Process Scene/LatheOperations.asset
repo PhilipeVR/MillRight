@@ -173,18 +173,25 @@ MonoBehaviour:
   - name: Drilling Operation
     frenchName: "Op\xE9ration de forage"
     sentences:
-    - Open Guard - Press Guard Button on Control Panel
+    - Open Guard - Press Guard
     - Place Piece - Click on piece
     - Tighten Jaw - Click on chuck key
-    - Close Guard - Press Guard Button on Control Panel
+    - Close Guard - Press Guard
     - Insert Drill Bit - Click on drill bit 1 on Tailstock Tools Panel
     - Tighten Bit - Click on drill chuck (for now)
-    - Move Carriage - Press Carriage Button on Control Panel
-    - Move Tailstock - Press Tailstock Button on Control Panel (Tab Tailstock)
-    - Lock Tailstock - Press Lock Tailstock on Control panel (Tab Tailstock)
-    - Move Tailstock Quill - Press Tailstock Quill on Control Panel (Tab Tailstock)
+    - Move Carriage - Press Carriage Wheel
+    - Move Tailstock - Press Tailstock
+    - Lock Tailstock - Press Tailstock Lock Handle
+    - Move Tailstock Quill - Press Tailstock Quill Wheel
     - Turn ON - Press On Button on Lathe
-    - Drill into workpiece - Press Tailstock Quill on Control Panel (Tab Tailstock)
+    - Drill into workpiece - Press Tailstock Quill Wheel
+    - Turn OFF - Press Stop Button on Lathe
+    - Untighten Bit - Press On Chuck Key (Make sure to wait till 3 Jaw Chuck is completely
+      stopped)
+    - Switch Bit - Press on Click on drill bit 2 on Tailstock Tools Panel
+    - 'Tighten Bit - Press On Chuck Key '
+    - Turn ON - Press On Button on Lathe
+    - Drill into workpiece - Press Tailstock Quill Wheel
     - Turn OFF - Press Stop Button on Lathe
     - End of operation
     sentencesFR:
@@ -202,7 +209,19 @@ MonoBehaviour:
     - To be implemented
     - To be implemented
     - To be implemented
+    - To be implemented
+    - To be implemented
+    - To be implemented
+    - To be implemented
+    - To be implemented
+    - To be implemented
     images:
+    - {fileID: 21300000, guid: 7cb962a47cd6b4049922ffc01101f823, type: 3}
+    - {fileID: 21300000, guid: 7cb962a47cd6b4049922ffc01101f823, type: 3}
+    - {fileID: 21300000, guid: 7cb962a47cd6b4049922ffc01101f823, type: 3}
+    - {fileID: 21300000, guid: 7cb962a47cd6b4049922ffc01101f823, type: 3}
+    - {fileID: 21300000, guid: 7cb962a47cd6b4049922ffc01101f823, type: 3}
+    - {fileID: 21300000, guid: 7cb962a47cd6b4049922ffc01101f823, type: 3}
     - {fileID: 21300000, guid: 7cb962a47cd6b4049922ffc01101f823, type: 3}
     - {fileID: 21300000, guid: 7cb962a47cd6b4049922ffc01101f823, type: 3}
     - {fileID: 21300000, guid: 7cb962a47cd6b4049922ffc01101f823, type: 3}

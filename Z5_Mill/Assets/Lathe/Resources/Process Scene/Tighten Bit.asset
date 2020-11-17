@@ -17,7 +17,11 @@ MonoBehaviour:
     anim: 2
     transitionParams:
     - Tighten Bit
+    - Untighten Bit
+    - Tighten Bit 2
     animationName:
     - Insert Drill Bit
-    index: 05000000
-    sentenceIndex: 05000000
+    - Turn OFF
+    - Switch Bit
+    index: 050000000d0000000f000000
+    sentenceIndex: 050000000d0000000f000000

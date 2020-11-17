@@ -18,8 +18,10 @@ MonoBehaviour:
     transitionParams:
     - Quill Forward
     - Pecking
+    - Pecking 2
     animationName:
     - Lock Tailstock
     - Turn ON
-    index: 090000000b000000
-    sentenceIndex: 090000000b000000
+    - Turn ON 2
+    index: 090000000b00000011000000
+    sentenceIndex: 090000000b00000011000000

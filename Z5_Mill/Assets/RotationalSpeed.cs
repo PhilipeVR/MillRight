@@ -5,13 +5,13 @@ using UnityEngine;
 public class RotationalSpeed : StateMachineBehaviour
 {
     [SerializeField]
-    private string roatationVariableName;
+    private string rotationVariableName;
 
 
     // OnStateExit is called when a transition ends and the state 
     //machine finishes evaluating this state
     override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        animator.SetFloat(roatationVariableName, 1f);
+        animator.SetFloat(rotationVariableName, 1f);
     }
 }

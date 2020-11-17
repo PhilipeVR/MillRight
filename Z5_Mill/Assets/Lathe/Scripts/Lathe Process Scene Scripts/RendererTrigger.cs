@@ -52,7 +52,6 @@ public class RendererTrigger : MonoBehaviour
             }
             if (tmpTrigger != null)
             {
-                Debug.Log(tmpTrigger.TriggerControllerName);
                 if (controller.CurrentAnimationStatus)
                 {
                     if (colorChange)
@@ -66,6 +65,7 @@ public class RendererTrigger : MonoBehaviour
                     }
                 }
                 bool val = tmpTrigger.PlaySequence(controller);
+
                 if (val)
                 {
                     if (powerTrigger)
@@ -77,6 +77,8 @@ public class RendererTrigger : MonoBehaviour
                     {
                         dialogueManager.DisplayNextSentence();
                     }
+                    GetComponent<Renderer>().material.color = basicColor;
+
                 }
             }
         }
