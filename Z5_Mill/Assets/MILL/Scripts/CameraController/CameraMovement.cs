@@ -5,7 +5,7 @@ public class CameraMovement : MonoBehaviour
 {
     [SerializeField] private Transform cameraFocusPt;
 
-    public float dragSpeed = 6f;
+    public float dragSpeed = 9f;
     public Vector3 maxBounds;
     private Vector3 maxDistance;
     public Vector3 minBounds;
@@ -13,10 +13,10 @@ public class CameraMovement : MonoBehaviour
     private Vector3 moveXY;
 
     // Minimum and maximum values in world space
-    private float MIN_X = -3f;
-    private float MAX_X = 3f;
+    private float MIN_X = -10f;
+    private float MAX_X = 10f;
     private float MIN_Y = -4f;
-    private float MAX_Y = 3f;
+    private float MAX_Y = 10f;
     private float MIN_Z = 0f;
     private float MAX_Z = 10f;
 
@@ -35,11 +35,11 @@ public class CameraMovement : MonoBehaviour
     void Start(){
         //previousPosition2 = cam.transform.position;
         Vector3 maxBounds = this.transform.position;
-        maxBounds.x = 5f;
-        maxBounds.y = 3f;
+        maxBounds.x = 10f;
+        maxBounds.y = 10f;
         Vector3 minBounds = this.transform.position;
-        minBounds.x = -5f;
-        minBounds.y = -2f;
+        minBounds.x = -10f;
+        minBounds.y = -4f;
 
         // Variables for CameraOrbit Script
         this._XForm_Camera = this.transform;
@@ -71,7 +71,7 @@ public class CameraMovement : MonoBehaviour
 
                     //Clamp the y Rotation to horizon and not flipping over at the top
                     _LocalRotation.y = Mathf.Clamp(_LocalRotation.y, 0f, 90f);
-                    _LocalRotation.x = Mathf.Clamp(_LocalRotation.x, -40f, 40f);
+                    //_LocalRotation.x = Mathf.Clamp(_LocalRotation.x, -40f, 40f);
                 }
             }        
 
