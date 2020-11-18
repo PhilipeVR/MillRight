@@ -3,40 +3,33 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Video;
+using YoutubePlayer;
 
 public class VideoManager : MonoBehaviour
 {
+    [SerializeField] private ProcessController operationController;
+    [SerializeField] private TriggerDialogueInterface dialogueInterface;
     [SerializeField] private GameObject VideoPanel;
     [SerializeField] private VideoPlayer videoPlayer;
+    [SerializeField] private YoutubePlayer.YoutubePlayer youtubePlayer;
     [SerializeField] private Button StopVideoButton, playButton, pauseButton, stopButton;
     [SerializeField] private bool playedOnce;
-
+    [SerializeField] private List<string> YoutubeLinks;
+    [SerializeField] private List<Sprite> operationSprite;
+    [SerializeField] private List<int> animatorIndex;
+    [SerializeField] private List<int> dialogueIndex;
+    [SerializeField] private Image exitImage; 
+    private int m_index = -1;
     // Start is called before the first frame update
     void Start()
     {
         StopVideoButton.interactable = false;
         stopButton.interactable = false;
-        VideoPanel.SetActive(true);
+        VideoPanel.SetActive(false);
         //videoPlayer.Stop();
         videoPlayer.loopPointReached += VideoPlayed;
-
     }
 
-    public void PlayVideo()
-    {
-        videoPlayer.Play();
-        if (!playedOnce)
-        {
-            StopVideoButton.interactable = false;
-            stopButton.interactable = false;
-        }
-        else
-        {
-            StopVideoButton.interactable = true;
-            stopButton.interactable = true;
-
-        }
-    }
 
     public void PauseVideo()
     {
@@ -58,6 +51,12 @@ public class VideoManager : MonoBehaviour
         if (playedOnce)
         {
             VideoPanel.SetActive(false);
+            if(m_index  != -1)
+            {
+                operationController.ChangeAnimator(animatorIndex[m_index]);
+                dialogueInterface.TriggerDialogue(dialogueIndex[m_index]);
+
+            }
         }
     }
 
@@ -77,6 +76,32 @@ public class VideoManager : MonoBehaviour
         playButton.gameObject.SetActive(true);
         pauseButton.gameObject.SetActive(false);
     }
+
+    public async void PlayYoutubeVideo(int index)
+    {
+        if( index >= 0 && index < YoutubeLinks.Count)
+        {
+            VideoPanel.SetActive(true);
+            exitImage.sprite = operationSprite[index];
+            if (!playedOnce)
+            {
+                StopVideoButton.interactable = false;
+                stopButton.interactable = false;
+            }
+            else
+            {
+                StopVideoButton.interactable = true;
+                stopButton.interactable = true;
+
+            }
+            await youtubePlayer.PlayVideoAsync(YoutubeLinks[index]);
+            
+            m_index = index;
+        }
+    }
+
+
+
 
     public bool PlayedOnce
     {

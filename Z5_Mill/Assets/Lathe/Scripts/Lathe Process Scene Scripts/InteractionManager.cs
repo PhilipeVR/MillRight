@@ -62,7 +62,6 @@ public class InteractionManager : MonoBehaviour
         }
         else if (dialogueName.Equals(intro))
         {
-            Turning.interactable = true;
             Facing.interactable = true;
         }
 
