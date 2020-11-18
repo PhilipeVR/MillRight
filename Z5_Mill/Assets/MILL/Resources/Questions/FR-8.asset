@@ -20,9 +20,9 @@ MonoBehaviour:
   - _info: "Mandrin \xE0 trois mors universel"
     _isCorrect: 0
   - _info: "Poup\xE9e fixe"
-    _isCorrect: 0
-  - _info: "Poup\xE9e mobile"
     _isCorrect: 1
+  - _info: "Poup\xE9e mobile"
+    _isCorrect: 0
   _useTimer: 0
   _timer: 0
   _answerType: 1

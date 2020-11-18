@@ -16,11 +16,11 @@ MonoBehaviour:
     onto a workpiece?
   _answers:
   - _info: 4xD
-    _isCorrect: 1
+    _isCorrect: 0
   - _info: 1.5"
     _isCorrect: 0
   - _info: 3xD
-    _isCorrect: 0
+    _isCorrect: 1
   - _info: 3"
     _isCorrect: 0
   _useTimer: 0

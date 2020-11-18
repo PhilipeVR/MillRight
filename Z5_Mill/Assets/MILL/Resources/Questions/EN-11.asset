@@ -19,9 +19,9 @@ MonoBehaviour:
   - _info: There is no difference
     _isCorrect: 0
   - _info: 'The angle with which the cutter is pointing '
-    _isCorrect: 0
-  - _info: 'One is to cut left-handed threads and the other right-handed threads '
     _isCorrect: 1
+  - _info: 'One is to cut left-handed threads and the other right-handed threads '
+    _isCorrect: 0
   _useTimer: 0
   _timer: 8
   _answerType: 1

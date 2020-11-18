@@ -15,13 +15,13 @@ MonoBehaviour:
   _info: 'What is an essential part of setting up your tools on the lathe? '
   _answers:
   - _info: Setting your tools to the appropriate heght
-    _isCorrect: 0
+    _isCorrect: 1
   - _info: Tighten your tools properly in the chucl
     _isCorrect: 0
   - _info: 'Locking down the X-Axis while machining '
     _isCorrect: 0
   - _info: All of the above
-    _isCorrect: 1
+    _isCorrect: 0
   _useTimer: 0
   _timer: 8
   _answerType: 1

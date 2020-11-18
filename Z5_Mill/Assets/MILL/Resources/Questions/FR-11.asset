@@ -19,10 +19,10 @@ MonoBehaviour:
   - _info: "Il n'y a pas de diff\xE9rence"
     _isCorrect: 0
   - _info: L'angle avec lequel le couteau pointe
-    _isCorrect: 0
+    _isCorrect: 1
   - _info: "Le premi\xE8re consiste \xE0 couper les fils \xE0 gauche et l\u2019autres
       \xE0 droite"
-    _isCorrect: 1
+    _isCorrect: 0
   _useTimer: 0
   _timer: 0
   _answerType: 1

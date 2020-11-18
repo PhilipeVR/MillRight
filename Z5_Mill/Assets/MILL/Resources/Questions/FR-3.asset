@@ -18,9 +18,9 @@ MonoBehaviour:
   - _info: Pointe
     _isCorrect: 0
   - _info: "Poin\xE7on central"
-    _isCorrect: 1
-  - _info: "Foret \xE0 centrer"
     _isCorrect: 0
+  - _info: "Foret \xE0 centrer"
+    _isCorrect: 1
   - _info: Foret
     _isCorrect: 0
   _useTimer: 0

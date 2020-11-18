@@ -19,12 +19,12 @@ MonoBehaviour:
     _isCorrect: 0
   - _info: "Mettez la pointe de l'outil \xE0 la pointe de la pointe puis serrez ou
       desserrez la vis \xE0 oreilles sur le porte-outil"
-    _isCorrect: 0
+    _isCorrect: 1
   - _info: "Placez l'outil contre le mandrin \xE0 trois mors universel et alignez-le
       avec la ligne centrale"
     _isCorrect: 0
   - _info: "Mesurer la hauteur \xE0 l'aide d'un microm\xE8tre"
-    _isCorrect: 1
+    _isCorrect: 0
   _useTimer: 0
   _timer: 0
   _answerType: 1

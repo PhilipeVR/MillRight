@@ -17,11 +17,11 @@ MonoBehaviour:
   - _info: "Votre travail est tenu lat\xE9ralement pendant l'usinage"
     _isCorrect: 0
   - _info: "La pi\xE8ce tourne alors que l'outil est stationnaire"
-    _isCorrect: 0
+    _isCorrect: 1
   - _info: "Le tour peut couper du bois ainsi que du m\xE9tal"
     _isCorrect: 0
   - _info: "Tout ce qui pr\xE9c\xE8de "
-    _isCorrect: 1
+    _isCorrect: 0
   _useTimer: 0
   _timer: 0
   _answerType: 1

@@ -16,13 +16,13 @@ MonoBehaviour:
     tour? '
   _answers:
   - _info: "R\xE9gler vos outils \xE0 la hauteur appropri\xE9e "
-    _isCorrect: 0
+    _isCorrect: 1
   - _info: 'Serrez correctement vos outils dans le mandrin '
     _isCorrect: 0
   - _info: 'Verrouillage de l''axe X pendant l''usinage '
     _isCorrect: 0
   - _info: "Toutes les r\xE9ponses sont bonnes "
-    _isCorrect: 1
+    _isCorrect: 0
   _useTimer: 0
   _timer: 0
   _answerType: 1

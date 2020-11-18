@@ -17,11 +17,11 @@ MonoBehaviour:
     est la vitesse maximale que l\u2019on devrait utiliser sur le tour? "
   _answers:
   - _info: 1250
-    _isCorrect: 1
+    _isCorrect: 0
   - _info: 1000
     _isCorrect: 0
   - _info: 500
-    _isCorrect: 0
+    _isCorrect: 1
   - _info: 250
     _isCorrect: 0
   _useTimer: 0

@@ -15,13 +15,13 @@ MonoBehaviour:
   _info: Lors du forage, il est important de le faire avec quel type de mouvement?
   _answers:
   - _info: Picorer
-    _isCorrect: 0
+    _isCorrect: 1
   - _info: Vers le haut et vers le bas
     _isCorrect: 0
   - _info: Rotationnel
     _isCorrect: 0
   - _info: Contact complet
-    _isCorrect: 1
+    _isCorrect: 0
   _useTimer: 0
   _timer: 0
   _answerType: 1

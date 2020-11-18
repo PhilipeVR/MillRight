@@ -15,11 +15,11 @@ MonoBehaviour:
   _info: What tool should you always use first when drilling a workpiece on the lathe?
   _answers:
   - _info: Live center
-    _isCorrect: 1
+    _isCorrect: 0
   - _info: Center punch
     _isCorrect: 0
   - _info: Center drill
-    _isCorrect: 0
+    _isCorrect: 1
   - _info: 'Drill bit '
     _isCorrect: 0
   _useTimer: 0
