@@ -14,14 +14,14 @@ public class OperationManager : MonoBehaviour
     [SerializeField] private string resetParam, restartParam;
     [SerializeField] private List<ButtonTrigger> buttonTriggers;
     [SerializeField] private List<RendererTrigger> rendererTriggers;
-    private List<AnimatorControllerParameter> parameters;
-    private bool transitionDone, animDone;
-    private int m_counter, m_index = 0;
-    private bool isActive = false;
-    private AnimationEvent eventSys1, eventSys2;
+    public List<AnimatorControllerParameter> parameters;
+    public bool transitionDone, animDone;
+    public int m_counter, m_index = 0;
+    public bool isActive = false;
+    private AnimationEvent eventSys1, eventSys2, eventSys3;
     [SerializeField] public bool addCutters;
     [HideInInspector] [SerializeField] public GameObject cutter2, dummyCutter2;
-     [SerializeField] public string OnAnimationName2, OffAnimationName2;
+     [SerializeField] public string OnAnimationName2, OffAnimationName2, ContinueAnimatioName;
 
     private int addCutterCounter = 0;
 
@@ -30,7 +30,9 @@ public class OperationManager : MonoBehaviour
         eventSys1 = new AnimationEvent();
         eventSys1.functionName = "TurnOn";
         eventSys2 = new AnimationEvent();
-        eventSys2.functionName = "TurnOFF";
+        eventSys2.functionName = "TurnOFF";        
+        eventSys3 = new AnimationEvent();
+        eventSys3.functionName = "ContinueAnim";
         parameters = new List<AnimatorControllerParameter>();
         
         foreach (AnimatorControllerParameter param in animator.parameters)
@@ -61,8 +63,14 @@ public class OperationManager : MonoBehaviour
                 {
                     clip.AddEvent(eventSys2);
                 }
+                else if (clip.name == ContinueAnimatioName)
+                {
+                    clip.AddEvent(eventSys3);
+                }
+
             }
         }
+        addCutterCounter = 0;
     }
 
     public void ResetAnim(bool prevState, OperationManager prevOperationManager)
@@ -127,16 +135,10 @@ public class OperationManager : MonoBehaviour
             triggerFlash.AnimPlayed();
             return true;
         }
-        Debug.Log("m_index: " + m_index);
-        Debug.Log("param.count: " + parameters.Count);
-        Debug.Log("active: " + isActive);
 
 
         if (m_index < parameters.Count && isActive)
         {
-            Debug.Log("transtion: " + animator.GetCurrentAnimatorStateInfo(0).normalizedTime);
-            Debug.Log("transtion params: " + transition + " vs " + parameters[m_index].name + " = " + (transition == parameters[m_index].name));
-            Debug.Log("animation params: " + animationName + " vs " + clipName[m_index] + " = " + (animationName == clipName[m_index]));
             bool inRightTransition = animator.GetCurrentAnimatorStateInfo(0).normalizedTime > 1f;
             if (transition == parameters[m_index].name && inRightTransition && animationName == clipName[m_index])
             {
@@ -164,7 +166,7 @@ public class OperationManager : MonoBehaviour
 
     public void CheckTransitionEnd()
     {
-        if (m_index == parameters.Count && isActive)
+        if ((m_index == parameters.Count) && isActive)
         {
             transitionDone = true;
         }
@@ -176,6 +178,7 @@ public class OperationManager : MonoBehaviour
         if (addCutters)
         {
             dummyCutter2.tag = drillTag;
+
         }
         animator.SetFloat("TurnOFF", 1);
     }
@@ -183,26 +186,36 @@ public class OperationManager : MonoBehaviour
     public void TurnOFF()
     {
         dummyCutter.tag = stopTag;
-        animator.SetFloat("TurnOFF", 0);
         if (addCutters)
         {
             dummyCutter2.tag = stopTag;
 
-            if (addCutterCounter > 1)
+            if (addCutterCounter > 0)
             {
                 isActive = false;
                 SetAnimState(true);
 
             }
+
             addCutterCounter++;
             Debug.Log("Add Cutter Counter: " + addCutterCounter);
+
         }
         else
         {
             isActive = false;
             SetAnimState(true);
 
+
         }
+        animator.SetFloat("TurnOFF", 0);
+
+    }
+
+    public void ContinueAnim()
+    {
+        TurnOn();
+        animator.SetFloat("Rotational Speed", 0.0000000000000000000000000000000000000001f);
     }
 
     public void SetAnimSpeed(float speed)
@@ -235,6 +248,7 @@ public class OperationManager : MonoBehaviour
 
     public void RestartAnim()
     {
+        addCutterCounter = 0;
         animator.SetFloat(restartParam, 1f);
 
     }

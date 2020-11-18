@@ -11,7 +11,7 @@ public class ProcessController : MonoBehaviour
     [SerializeField] private RestartStock restartStock;
     [SerializeField] private RendererTrigger stockTrigger;
     [SerializeField] private List<GameObject> dummyStock;
-    [SerializeField] private float animSpeed;
+    [SerializeField] public float animSpeed;
 
     private int m_index;
     private OperationManager controller;
