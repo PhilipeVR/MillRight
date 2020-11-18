@@ -31,8 +31,11 @@ namespace YoutubePlayer
             if (playbackProgress.sprite == null)
             {
                 var texture = Texture2D.whiteTexture;
+                Debug.Log(texture.width);
                 var sprite = Sprite.Create(texture, new Rect(0, 0, texture.width, texture.height), Vector2.zero, 100);
                 playbackProgress.sprite = sprite;
+                playbackProgress.type = Image.Type.Filled;
+                playbackProgress.fillMethod = Image.FillMethod.Horizontal;
             }
         }
 
