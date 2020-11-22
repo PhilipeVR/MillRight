@@ -1470,6 +1470,7 @@ MonoBehaviour:
   - {fileID: 1659843988}
   - {fileID: 1900119647}
   toggleHint: {fileID: 0}
+  dialogueOperator: {fileID: 0}
   languageScene: {fileID: 833299586}
   toggleLangManager: {fileID: 0}
   warningLangManager: {fileID: 0}
@@ -1477,6 +1478,7 @@ MonoBehaviour:
   imageToggle: {fileID: 118416715}
   toolHolderManager: {fileID: 0}
   toggleScene: {fileID: 0}
+  videoManager: {fileID: 0}
 --- !u!114 &833299586
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3186,9 +3188,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Exit
-
-'
+  m_Text: Exit
 --- !u!222 &1802333833
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3303,7 +3303,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1900119646
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3525,17 +3525,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 833299585}
-        m_MethodName: updateLanguageState
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 1659843988}
         m_MethodName: toggle
         m_Mode: 1
@@ -3571,6 +3560,17 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 1158143634}
         m_MethodName: toggle
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 833299585}
+        m_MethodName: updateLanguageState
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

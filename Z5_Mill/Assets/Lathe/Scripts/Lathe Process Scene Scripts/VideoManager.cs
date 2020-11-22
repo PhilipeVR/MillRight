@@ -7,6 +7,7 @@ using YoutubePlayer;
 
 public class VideoManager : MonoBehaviour
 {
+
     [SerializeField] private ProcessController operationController;
     [SerializeField] private TriggerDialogueInterface dialogueInterface;
     [SerializeField] private GameObject VideoPanel;
@@ -14,12 +15,16 @@ public class VideoManager : MonoBehaviour
     [SerializeField] private YoutubePlayer.YoutubePlayer youtubePlayer;
     [SerializeField] private Button StopVideoButton, playButton, pauseButton, stopButton;
     [SerializeField] private bool playedOnce;
+    [SerializeField] private Text title;
     [SerializeField] private List<string> YoutubeLinks;
     [SerializeField] private List<Sprite> operationSprite;
     [SerializeField] private List<int> animatorIndex;
     [SerializeField] private List<int> dialogueIndex;
+    [SerializeField] private List<string> titles, titlesFR;
     [SerializeField] private Image exitImage; 
     private int m_index = -1;
+    public bool language = true;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -82,6 +87,13 @@ public class VideoManager : MonoBehaviour
         if( index >= 0 && index < YoutubeLinks.Count)
         {
             VideoPanel.SetActive(true);
+            if (language)
+            {
+                title.text = titles[index];
+            } else
+            {
+                title.text = titlesFR[index];
+            }
             exitImage.sprite = operationSprite[index];
             if (!playedOnce)
             {
@@ -98,6 +110,11 @@ public class VideoManager : MonoBehaviour
             
             m_index = index;
         }
+    }
+
+    public void SwitchLang()
+    {
+        language = !language;
     }
 
 

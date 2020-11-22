@@ -13,10 +13,7 @@ public class ToggleText : MonoBehaviour
     public Text currentText;
     void Start()
     {
-
         initialText = currentText.text;
-
-
     }
 
     // Update is called once per frame

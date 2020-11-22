@@ -38,7 +38,6 @@ public class ComponentManager : MonoBehaviour
         checklist.SetupToggleList(details);
         updateCounter();
         continueBTN.SetActive(false);
-        menuBTN.SetActive(false);
         Debug.Log(details.Count);
     }
 
@@ -124,10 +123,6 @@ public class ComponentManager : MonoBehaviour
                 {
                     continueBTN.SetActive(true);
                 }
-                else
-                {
-                    menuBTN.SetActive(true);
-                }
             }
             else
             {
@@ -146,14 +141,6 @@ public class ComponentManager : MonoBehaviour
         {
             partsExamined.text = partsExamFR + counter.ToString();
 
-        }
-    }
-
-    public void FixedUpdate()
-    {
-        if ((menuBTN.activeSelf || continueBTN.activeSelf) && (counter < numOfParts)){
-            continueBTN.SetActive(false);
-            menuBTN.SetActive(false);
         }
     }
 }

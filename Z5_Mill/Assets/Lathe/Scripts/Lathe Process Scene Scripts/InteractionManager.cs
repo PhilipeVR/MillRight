@@ -78,7 +78,6 @@ public class InteractionManager : MonoBehaviour
             Drill.interactable = true;
             Turning.interactable = true;
             Facing.interactable = true;
-            MainMenu.interactable = true;
             Next.interactable = true;
             SequenceDone = true;
 
@@ -111,7 +110,6 @@ public class InteractionManager : MonoBehaviour
         Tailstock.interactable = false;
         ON.interactable = false;
         Next.interactable = false;
-        MainMenu.interactable = false;
         Turning.interactable = false;
         Facing.interactable = false;
         Drill.interactable = false;

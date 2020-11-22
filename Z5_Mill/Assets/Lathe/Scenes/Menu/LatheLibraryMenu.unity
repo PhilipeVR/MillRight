@@ -1032,6 +1032,7 @@ MonoBehaviour:
   - {fileID: 1271905329}
   - {fileID: 1867587137}
   toggleHint: {fileID: 0}
+  dialogueOperator: {fileID: 0}
   languageScene: {fileID: 1232288752}
   toggleLangManager: {fileID: 0}
   warningLangManager: {fileID: 0}
@@ -1039,6 +1040,7 @@ MonoBehaviour:
   imageToggle: {fileID: 1634892710}
   toolHolderManager: {fileID: 0}
   toggleScene: {fileID: 0}
+  videoManager: {fileID: 0}
 --- !u!114 &1232288752
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1086,7 +1088,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1271905328
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1732,7 +1734,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1460978888}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6334ee3e139481b49813dc7c33170d08, type: 3}
   m_Name: 
