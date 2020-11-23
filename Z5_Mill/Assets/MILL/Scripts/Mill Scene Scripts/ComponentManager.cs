@@ -38,7 +38,7 @@ public class ComponentManager : MonoBehaviour
         checklist.SetupToggleList(details);
         updateCounter();
         continueBTN.SetActive(false);
-        Debug.Log(details.Count);
+        //Debug.Log(details.Count);
     }
 
 

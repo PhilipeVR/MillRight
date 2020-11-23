@@ -39,7 +39,7 @@ EditorBuildSettings:
     path: Assets/Lathe/Scenes/Content/Discovery Scene.unity
     guid: de3f16c3ee1b7d445a421bfa1892ebca
   - enabled: 1
-    path: Assets/Lathe/Scenes/Content/Lathe 2.unity
+    path: Assets/LATHE/Scenes/Content/Operations Scene.unity
     guid: 29195684d763cf24196b0f1b66cd0f4a
   - enabled: 1
     path: Assets/Lathe/Quiz Module/quiz_final.unity

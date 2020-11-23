@@ -78,7 +78,7 @@ public class CameraController : MonoBehaviour
     }
 
     private void MovePivotPoint(Vector3 movement){
-        this._XForm_Parent.transform.Translate(_PivotMove * MouseSensitivity * 5 * Time.deltaTime, Space.Self);
+        this._XForm_Parent.transform.Translate(_PivotMove * MouseSensitivity * 3 * Time.deltaTime, Space.Self);
         this._XForm_Parent.transform.position = new Vector3(
             Mathf.Clamp(this._XForm_Parent.transform.position.x, -15, 15),
             Mathf.Clamp(this._XForm_Parent.transform.position.y, 2, 15),
