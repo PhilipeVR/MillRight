@@ -28,8 +28,8 @@ MonoBehaviour:
       all the different operations and prompt the next steps by following the hints
       given. After finishing all the operations you can either move on to the next
       phase or retry an operation if there's something you didn't understand.
-    - Similarly to the previous tutorial, the hint button will activated only if
-      your struggling with steps.
+    - Similarly to the previous tutorial, the hint button will activate only if your
+      struggling with steps.
     - To get started select the drilling operation button on the right-hand side.
       Good Luck!
     sentencesFR:

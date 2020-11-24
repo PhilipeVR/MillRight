@@ -13,15 +13,55 @@ MonoBehaviour:
   m_Name: LatheOperations
   m_EditorClassIdentifier: 
   dialogues:
-  - name: Intro Dialog
-    frenchName: Dialogue Intro
+  - name: Lathe Right's Training Workshop
+    frenchName: Simulation de la Tour de Lathe Right
     sentences:
-    - Intro Dialog
-    - Intro Dialog
+    - Welcome to the Basic Lathe Training Workshop
+    - The lathe machine is an advanced piece of machinery used in substrative manufacturing
+    - It is a machine used for the removal of material from a workpiece by gripping
+      it securely in a holding device and rotating it under power against a suitable
+      cutting tool.
+    - 'In this tutorial we will learn 3 fundamental operations that can be performed
+      on the lathe: Facing, Turning, and Drilling. While it is possible to perform
+      a multitude of operations on a lathe such as grinding, boring, and knurling,
+      we will be focusing on those three operations.'
+    - This tutorial will allow you to sequentially go through each step to perform
+      an operation. You will go through all the different operations and prompt the
+      next steps by following the clues given. After finishing all the operations,
+      you can either move on to the next phase or retry an operation if there is
+      something you didn't understand.
+    - Similarly, to the previous tutorial, the hint button will activate only if
+      your struggling with steps.
+    - To get started select the facing operation button on the right-hand side. A
+      video will show up to explain the operation. After finishing the video, a button
+      will be made accessible to try out the operation for yourself. Good Luck!
     sentencesFR:
-    - To be implemented
-    - To be implemented
+    - "Bienvenue \xE0 l'atelier de formation de base sur les tours"
+    - "La tour est une machine avanc\xE9e utilis\xE9e dans la fabrication soustractive"
+    - "Celle-ci est une machine d\u2019outil destin\xE9e \xE0 usiner des pi\xE8ces
+      de r\xE9volution par enl\xE8vement de mati\xE8re."
+    - "Dans ce tutoriel, nous apprendrons 3 op\xE9rations fondamentales qui peuvent
+      \xEAtre effectu\xE9es sur la tour: le surfa\xE7age, le tournage de surface
+      et le per\xE7age. M\xEAme s'il est possible de r\xE9aliser une multitude d'op\xE9rations
+      sur une tour comme le meulage, l\u2019al\xE9sage et le moletage, nous nous
+      concentrerons sur ces trois op\xE9rations."
+    - "Ce tutoriel vous permettra de parcourir s\xE9quentiellement chaque \xE9tape
+      pour effectuer une op\xE9ration. Vous allez entreprendre les op\xE9rations
+      en suivant les conseils donn\xE9s. Apr\xE8s avoir termin\xE9 toutes les op\xE9rations,
+      vous pouvez passer \xE0 la phase suivante ou r\xE9essayer une op\xE9ration
+      s'il y a quelque chose que vous n'avez pas compris."
+    - "De la m\xEAme mani\xE8re que le didacticiel pr\xE9c\xE9dent, le bouton d'indication
+      ne sera activ\xE9 que si vous avez vraiment besoin de celui-ci."
+    - "Pour commencer, s\xE9lectionnez le bouton d'op\xE9ration de surfa\xE7age sur
+      le c\xF4t\xE9 droit. Une vid\xE9o appara\xEEtra pour expliquer l'op\xE9ration.
+      Apr\xE8s avoir termin\xE9 la vid\xE9o, un bouton sera rendu accessible pour
+      essayer l'op\xE9ration par vous-m\xEAme. Bonne chance!"
     images:
+    - {fileID: 21300000, guid: 971b9279cecf96f4bb7f7a35150c1930, type: 3}
+    - {fileID: 21300000, guid: 971b9279cecf96f4bb7f7a35150c1930, type: 3}
+    - {fileID: 21300000, guid: 971b9279cecf96f4bb7f7a35150c1930, type: 3}
+    - {fileID: 21300000, guid: 971b9279cecf96f4bb7f7a35150c1930, type: 3}
+    - {fileID: 21300000, guid: 971b9279cecf96f4bb7f7a35150c1930, type: 3}
     - {fileID: 21300000, guid: 971b9279cecf96f4bb7f7a35150c1930, type: 3}
     - {fileID: 21300000, guid: 971b9279cecf96f4bb7f7a35150c1930, type: 3}
   - name: Facing Operation

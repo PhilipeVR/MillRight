@@ -82,7 +82,23 @@ public class VideoManager : MonoBehaviour
         pauseButton.gameObject.SetActive(false);
     }
 
-    public async void PlayYoutubeVideo(int index)
+    public void PlayVideo()
+    {
+        videoPlayer.Play();
+        if (!playedOnce)
+        {
+            StopVideoButton.interactable = false;
+            stopButton.interactable = false;
+        }
+        else
+        {
+            StopVideoButton.interactable = true;
+            stopButton.interactable = true;
+
+        }
+    }
+
+        public async void PlayYoutubeVideo(int index)
     {
         if( index >= 0 && index < YoutubeLinks.Count)
         {
