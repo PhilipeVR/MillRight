@@ -20,7 +20,7 @@ MonoBehaviour:
     animationName:
     - Guard Close
     index: 04000000
-    sentenceIndex: 04000000
+    sentenceIndex: 08000000
   - TriggerControllerName: Turning
     anim: 1
     transitionParams:
@@ -28,4 +28,4 @@ MonoBehaviour:
     animationName:
     - Close Guard
     index: 04000000
-    sentenceIndex: 04000000
+    sentenceIndex: 07000000

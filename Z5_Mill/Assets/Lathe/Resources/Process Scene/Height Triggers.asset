@@ -20,7 +20,7 @@ MonoBehaviour:
     animationName:
     - Move Tailstock
     index: 08000000
-    sentenceIndex: 08000000
+    sentenceIndex: 10000000
   - TriggerControllerName: Turning
     anim: 1
     transitionParams:
@@ -28,4 +28,4 @@ MonoBehaviour:
     animationName:
     - Move Tailstock
     index: 08000000
-    sentenceIndex: 08000000
+    sentenceIndex: 0c000000

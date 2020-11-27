@@ -22,7 +22,7 @@ MonoBehaviour:
     - Setup Tool Holder
     - Rotate Back
     index: 050000000c000000
-    sentenceIndex: 050000000c000000
+    sentenceIndex: 0d00000014000000
   - TriggerControllerName: Turning
     anim: 1
     transitionParams:
@@ -32,4 +32,4 @@ MonoBehaviour:
     - Setup Tool Holder
     - Rotate Back
     index: 050000000c000000
-    sentenceIndex: 050000000c000000
+    sentenceIndex: 0900000011000000

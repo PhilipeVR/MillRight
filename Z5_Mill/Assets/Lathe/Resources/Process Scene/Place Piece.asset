@@ -20,4 +20,4 @@ MonoBehaviour:
     animationName:
     - Guard Open
     index: 01000000
-    sentenceIndex: 01000000
+    sentenceIndex: 03000000

@@ -20,7 +20,7 @@ MonoBehaviour:
     animationName:
     - Carriage Move
     index: 0e000000
-    sentenceIndex: 0e000000
+    sentenceIndex: 17000000
   - TriggerControllerName: Turning
     anim: 1
     transitionParams:
@@ -28,7 +28,7 @@ MonoBehaviour:
     animationName:
     - Tool Post Movement
     index: 0f000000
-    sentenceIndex: 0f000000
+    sentenceIndex: 15000000
   - TriggerControllerName: Lathe (Centered) Operations
     anim: 2
     transitionParams:
@@ -38,4 +38,4 @@ MonoBehaviour:
     - Quill Forward
     - Tighten Bit 2
     index: 0a00000010000000
-    sentenceIndex: 0a00000010000000
+    sentenceIndex: 0f00000015000000

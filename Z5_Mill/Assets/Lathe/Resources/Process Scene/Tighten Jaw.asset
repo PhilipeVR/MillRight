@@ -20,7 +20,7 @@ MonoBehaviour:
     animationName:
     - Place Piece
     index: 02000000
-    sentenceIndex: 02000000
+    sentenceIndex: 05000000
   - TriggerControllerName: Turning
     anim: 1
     transitionParams:
@@ -28,7 +28,7 @@ MonoBehaviour:
     animationName:
     - Place Piece
     index: 02000000
-    sentenceIndex: 02000000
+    sentenceIndex: 04000000
   - TriggerControllerName: Lathe (Centered) Operations
     anim: 2
     transitionParams:
@@ -36,4 +36,4 @@ MonoBehaviour:
     animationName:
     - Place Piece
     index: 02000000
-    sentenceIndex: 02000000
+    sentenceIndex: 05000000

@@ -22,7 +22,7 @@ MonoBehaviour:
     - Tool Post Rotation
     - Lock Tool Holder
     index: 070000000a000000
-    sentenceIndex: 070000000a000000
+    sentenceIndex: 0f00000012000000
   - TriggerControllerName: Turning
     anim: 1
     transitionParams:
@@ -32,7 +32,7 @@ MonoBehaviour:
     - Rotate Tool Post
     - Lock Tool Holder
     index: 070000000a000000
-    sentenceIndex: 070000000a000000
+    sentenceIndex: 0b0000000f000000
   - TriggerControllerName: Lathe (Centered) Operations
     anim: 2
     transitionParams:
@@ -40,4 +40,4 @@ MonoBehaviour:
     animationName:
     - Move Carriage
     index: 07000000
-    sentenceIndex: 07000000
+    sentenceIndex: 0c000000

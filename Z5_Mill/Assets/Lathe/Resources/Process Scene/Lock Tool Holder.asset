@@ -20,7 +20,7 @@ MonoBehaviour:
     animationName:
     - Height 1
     index: 09000000
-    sentenceIndex: 09000000
+    sentenceIndex: 11000000
   - TriggerControllerName: Turning
     anim: 1
     transitionParams:
@@ -28,4 +28,4 @@ MonoBehaviour:
     animationName:
     - Height 1
     index: 09000000
-    sentenceIndex: 09000000
+    sentenceIndex: 0e000000

@@ -22,7 +22,7 @@ MonoBehaviour:
     - Idle
     - Tighten Jaw
     index: 0000000003000000
-    sentenceIndex: 0000000003000000
+    sentenceIndex: 0200000006000000
   - TriggerControllerName: Turning
     anim: 1
     transitionParams:
@@ -32,7 +32,7 @@ MonoBehaviour:
     - Idle
     - Tighten Jaw
     index: 0000000003000000
-    sentenceIndex: 0000000003000000
+    sentenceIndex: 0200000005000000
   - TriggerControllerName: Lathe (Centered) Operations
     anim: 2
     transitionParams:
@@ -42,4 +42,4 @@ MonoBehaviour:
     - Idle
     - Tighten Jaw
     index: 0000000003000000
-    sentenceIndex: 0000000003000000
+    sentenceIndex: 0300000006000000

@@ -20,7 +20,7 @@ MonoBehaviour:
     animationName:
     - Retreat (Carriage)
     index: 14000000
-    sentenceIndex: 14000000
+    sentenceIndex: 1f000000
   - TriggerControllerName: Turning
     anim: 1
     transitionParams:
@@ -28,7 +28,7 @@ MonoBehaviour:
     animationName:
     - Tool Post Retreat
     index: 14000000
-    sentenceIndex: 14000000
+    sentenceIndex: 1b000000
   - TriggerControllerName: Lathe (Centered) Operations
     anim: 2
     transitionParams:
@@ -38,4 +38,4 @@ MonoBehaviour:
     - Pecking
     - Pecking 2
     index: 0c00000012000000
-    sentenceIndex: 0c00000012000000
+    sentenceIndex: 1100000017000000

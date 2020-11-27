@@ -211,12 +211,12 @@ MonoBehaviour:
       pour les op\xE9rations de filetage de vis. "
     image: {fileID: 21300000, guid: 2bd89a3b52d3b054fa86544498aa9596, type: 3}
   - partName: Cross Slide
-    partNameFR: "Glissi\xE8re Transversale"
+    partNameFR: Chariot Transversale
     sentence: The cross slide allows for tool travel 90 degrees to the bed of the
       lathe. The cross slide makes up the X axis of the machine. The X axis of the
       machine controls the diameter of your work.
-    sentenceFR: "La glissi\xE8re transversale permet un d\xE9placement de l'outil
-      de 90 degr\xE9s par rapport au banc de la tour. Le chariot transversal constitue
+    sentenceFR: "La chariot transversale permet un d\xE9placement de l'outil de 90
+      degr\xE9s par rapport au banc de la tour. Le chariot transversal constitue
       l'axe X de la machine. L'axe X de la machine contr\xF4le le diam\xE8tre de
       votre travail."
     image: {fileID: 21300000, guid: 4e501ea4b02d45c4d81963eb372f7e58, type: 3}
