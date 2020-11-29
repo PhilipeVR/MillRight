@@ -8,7 +8,7 @@ public class ToggleScene : MonoBehaviour
     [SerializeField] private string frenchLoadQuiz, englishLoadQuiz;
     [SerializeField] private LoadSceneScript loadScene;
     [SerializeField] public string currentLoadQuiz;
-    private Boolean language = false;
+    private bool language = false;
     public void SwitchLang()
     {
         if (!language)

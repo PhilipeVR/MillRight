@@ -57,13 +57,13 @@ MonoBehaviour:
       Apr\xE8s avoir termin\xE9 la vid\xE9o, un bouton sera rendu accessible pour
       essayer l'op\xE9ration par vous-m\xEAme. Bonne chance!"
     images:
-    - {fileID: 21300000, guid: 971b9279cecf96f4bb7f7a35150c1930, type: 3}
-    - {fileID: 21300000, guid: 971b9279cecf96f4bb7f7a35150c1930, type: 3}
-    - {fileID: 21300000, guid: 971b9279cecf96f4bb7f7a35150c1930, type: 3}
-    - {fileID: 21300000, guid: 971b9279cecf96f4bb7f7a35150c1930, type: 3}
-    - {fileID: 21300000, guid: 971b9279cecf96f4bb7f7a35150c1930, type: 3}
-    - {fileID: 21300000, guid: 971b9279cecf96f4bb7f7a35150c1930, type: 3}
-    - {fileID: 21300000, guid: 971b9279cecf96f4bb7f7a35150c1930, type: 3}
+    - {fileID: 21300000, guid: 71fd86be3a05da640be99c12380ff01c, type: 3}
+    - {fileID: 21300000, guid: 39dd51e12e188414b8f448d7b2e98deb, type: 3}
+    - {fileID: 21300000, guid: 5ef570f60d92f2c498314b04a2bff279, type: 3}
+    - {fileID: 21300000, guid: bef9a4ee8d45eda419a1521c9f44de5c, type: 3}
+    - {fileID: 21300000, guid: 462d9ed28ec66f94a8143b87a4237572, type: 3}
+    - {fileID: 21300000, guid: c94657301ef508a4388ab6ac9c33bdbc, type: 3}
+    - {fileID: 21300000, guid: 07432d451aa02d74e93e6537d16791cd, type: 3}
   - name: Getting Started - Facing
     frenchName: "Mise en route - Surfa\xE7age"
     sentences:
@@ -123,12 +123,8 @@ MonoBehaviour:
 
       Hint:
       Click on wrench to untighten tool post'
-    - 'Now that we centered our cutting tool, we can lock the tool holder at that
-      position using the tool post handle.
-
-
-      Hint: Click on tool post to rotate
-      it'
+    - "Now that the tool post is untightened, rotate the tool post so that it\u2019s
+      in line with the live center\n\nHint: Click on tool post to rotate it"
     - "Next, let\u2019s bring the tailstock closer to accurately center our tool.
       \n\nHint: Click on Tailstock to move it closer to tool post"
     - "We can finally center our tool. You can use the camera controller to get a
@@ -303,40 +299,40 @@ MonoBehaviour:
       Cliquez sur le bouton d'op\xE9ration de tournage sur le c\xF4t\xE9 droit pour
       commencer."
     images:
-    - {fileID: 21300000, guid: 7cb962a47cd6b4049922ffc01101f823, type: 3}
-    - {fileID: 21300000, guid: 7cb962a47cd6b4049922ffc01101f823, type: 3}
-    - {fileID: 21300000, guid: 7cb962a47cd6b4049922ffc01101f823, type: 3}
-    - {fileID: 21300000, guid: 7cb962a47cd6b4049922ffc01101f823, type: 3}
-    - {fileID: 21300000, guid: 7cb962a47cd6b4049922ffc01101f823, type: 3}
-    - {fileID: 21300000, guid: 7cb962a47cd6b4049922ffc01101f823, type: 3}
-    - {fileID: 21300000, guid: 7cb962a47cd6b4049922ffc01101f823, type: 3}
-    - {fileID: 21300000, guid: 7cb962a47cd6b4049922ffc01101f823, type: 3}
-    - {fileID: 21300000, guid: 7cb962a47cd6b4049922ffc01101f823, type: 3}
-    - {fileID: 21300000, guid: 7cb962a47cd6b4049922ffc01101f823, type: 3}
-    - {fileID: 21300000, guid: 7cb962a47cd6b4049922ffc01101f823, type: 3}
-    - {fileID: 21300000, guid: 7cb962a47cd6b4049922ffc01101f823, type: 3}
-    - {fileID: 21300000, guid: 7cb962a47cd6b4049922ffc01101f823, type: 3}
-    - {fileID: 21300000, guid: 7cb962a47cd6b4049922ffc01101f823, type: 3}
-    - {fileID: 21300000, guid: 7cb962a47cd6b4049922ffc01101f823, type: 3}
-    - {fileID: 21300000, guid: 7cb962a47cd6b4049922ffc01101f823, type: 3}
-    - {fileID: 21300000, guid: 7cb962a47cd6b4049922ffc01101f823, type: 3}
-    - {fileID: 21300000, guid: 7cb962a47cd6b4049922ffc01101f823, type: 3}
-    - {fileID: 21300000, guid: 7cb962a47cd6b4049922ffc01101f823, type: 3}
-    - {fileID: 21300000, guid: 7cb962a47cd6b4049922ffc01101f823, type: 3}
-    - {fileID: 21300000, guid: 7cb962a47cd6b4049922ffc01101f823, type: 3}
-    - {fileID: 21300000, guid: 7cb962a47cd6b4049922ffc01101f823, type: 3}
-    - {fileID: 21300000, guid: 7cb962a47cd6b4049922ffc01101f823, type: 3}
-    - {fileID: 21300000, guid: 7cb962a47cd6b4049922ffc01101f823, type: 3}
-    - {fileID: 21300000, guid: 7cb962a47cd6b4049922ffc01101f823, type: 3}
-    - {fileID: 21300000, guid: 7cb962a47cd6b4049922ffc01101f823, type: 3}
-    - {fileID: 21300000, guid: 7cb962a47cd6b4049922ffc01101f823, type: 3}
-    - {fileID: 21300000, guid: 7cb962a47cd6b4049922ffc01101f823, type: 3}
-    - {fileID: 21300000, guid: 7cb962a47cd6b4049922ffc01101f823, type: 3}
-    - {fileID: 21300000, guid: 7cb962a47cd6b4049922ffc01101f823, type: 3}
-    - {fileID: 21300000, guid: 7cb962a47cd6b4049922ffc01101f823, type: 3}
-    - {fileID: 21300000, guid: 7cb962a47cd6b4049922ffc01101f823, type: 3}
-    - {fileID: 21300000, guid: 7cb962a47cd6b4049922ffc01101f823, type: 3}
-    - {fileID: 21300000, guid: 7cb962a47cd6b4049922ffc01101f823, type: 3}
+    - {fileID: 21300000, guid: 78d654f26370ca84eaca560899cfa4b6, type: 3}
+    - {fileID: 21300000, guid: 43d6c3f7daa52eb4f9e9adc8d050f027, type: 3}
+    - {fileID: 21300000, guid: 91d2007b7323dec4eaef615e61a59ccc, type: 3}
+    - {fileID: 21300000, guid: a30edabb945b9b74aacc425fb22ce76b, type: 3}
+    - {fileID: 21300000, guid: aae053bb5e64f5e4d9aafb19523fb4f5, type: 3}
+    - {fileID: 21300000, guid: 446cec598c9e1c0488d5ecdde08167d8, type: 3}
+    - {fileID: 21300000, guid: 55be8e988b4b89549b153ced8f1bf6ac, type: 3}
+    - {fileID: 21300000, guid: d38b6a387701963499aa72523cd870ed, type: 3}
+    - {fileID: 21300000, guid: 39b540b396308044aa874a7dd17e9be5, type: 3}
+    - {fileID: 21300000, guid: 52b2d0a10350f5944901a12df193eaad, type: 3}
+    - {fileID: 21300000, guid: 971b9279cecf96f4bb7f7a35150c1930, type: 3}
+    - {fileID: 21300000, guid: afe524e964e726a4393c42b0fa96f09a, type: 3}
+    - {fileID: 21300000, guid: fe71865d81d7a1a4aa1c15f863862734, type: 3}
+    - {fileID: 21300000, guid: 4ea39a8a28302ae4fbe53d842f53ec29, type: 3}
+    - {fileID: 21300000, guid: 976904e8e4178d147ae8078964924aaa, type: 3}
+    - {fileID: 21300000, guid: 89310f32db618064f97a3e20593bbd65, type: 3}
+    - {fileID: 21300000, guid: 3586e3685d6623e4e930f892a551b1c9, type: 3}
+    - {fileID: 21300000, guid: eb57f130b0c8d4b4cbc2f137cf20de1b, type: 3}
+    - {fileID: 21300000, guid: 0fa75fbb43f33df47907d0c5a6178e70, type: 3}
+    - {fileID: 21300000, guid: 3dbcfcf6ae3ed534cae66ca6b239bc83, type: 3}
+    - {fileID: 21300000, guid: 4ea39a8a28302ae4fbe53d842f53ec29, type: 3}
+    - {fileID: 21300000, guid: 9bfb2c872fcfeda43bb07f7d00f93e63, type: 3}
+    - {fileID: 21300000, guid: fc5cb857627be5e41a7606a67f17a9d3, type: 3}
+    - {fileID: 21300000, guid: 54227f23060d9de4686676b6e6564268, type: 3}
+    - {fileID: 21300000, guid: 3347465f3afc7f04e8b55e7c78ecf649, type: 3}
+    - {fileID: 21300000, guid: 3347465f3afc7f04e8b55e7c78ecf649, type: 3}
+    - {fileID: 21300000, guid: fc5cb857627be5e41a7606a67f17a9d3, type: 3}
+    - {fileID: 21300000, guid: b7245a42f13c7c54e83fa7f370233f31, type: 3}
+    - {fileID: 21300000, guid: 061edef650e577d468060ed279580c01, type: 3}
+    - {fileID: 21300000, guid: 3347465f3afc7f04e8b55e7c78ecf649, type: 3}
+    - {fileID: 21300000, guid: fc5cb857627be5e41a7606a67f17a9d3, type: 3}
+    - {fileID: 21300000, guid: 41b610a3f00945941967c1ce85d74bc4, type: 3}
+    - {fileID: 21300000, guid: f575135d2274a4e4a968e6e68e6585c5, type: 3}
+    - {fileID: 21300000, guid: 163d537f83803134ea30184589de387a, type: 3}
   - name: Getting Started - Turning
     frenchName: Mise en route - Tournage
     sentences:
@@ -526,36 +522,36 @@ MonoBehaviour:
     - "Excellent travail! La prochaine op\xE9ration est le per\xE7age. Cliquez sur
       le bouton d'op\xE9ration de per\xE7age sur le c\xF4t\xE9 droit pour commencer."
     images:
-    - {fileID: 21300000, guid: 7cb962a47cd6b4049922ffc01101f823, type: 3}
-    - {fileID: 21300000, guid: 7cb962a47cd6b4049922ffc01101f823, type: 3}
-    - {fileID: 21300000, guid: 7cb962a47cd6b4049922ffc01101f823, type: 3}
-    - {fileID: 21300000, guid: 7cb962a47cd6b4049922ffc01101f823, type: 3}
-    - {fileID: 21300000, guid: 7cb962a47cd6b4049922ffc01101f823, type: 3}
-    - {fileID: 21300000, guid: 7cb962a47cd6b4049922ffc01101f823, type: 3}
-    - {fileID: 21300000, guid: 7cb962a47cd6b4049922ffc01101f823, type: 3}
-    - {fileID: 21300000, guid: 7cb962a47cd6b4049922ffc01101f823, type: 3}
-    - {fileID: 21300000, guid: 7cb962a47cd6b4049922ffc01101f823, type: 3}
-    - {fileID: 21300000, guid: 7cb962a47cd6b4049922ffc01101f823, type: 3}
-    - {fileID: 21300000, guid: 7cb962a47cd6b4049922ffc01101f823, type: 3}
-    - {fileID: 21300000, guid: 7cb962a47cd6b4049922ffc01101f823, type: 3}
-    - {fileID: 21300000, guid: 7cb962a47cd6b4049922ffc01101f823, type: 3}
-    - {fileID: 21300000, guid: 7cb962a47cd6b4049922ffc01101f823, type: 3}
-    - {fileID: 21300000, guid: 7cb962a47cd6b4049922ffc01101f823, type: 3}
-    - {fileID: 21300000, guid: 7cb962a47cd6b4049922ffc01101f823, type: 3}
-    - {fileID: 21300000, guid: 7cb962a47cd6b4049922ffc01101f823, type: 3}
-    - {fileID: 21300000, guid: 7cb962a47cd6b4049922ffc01101f823, type: 3}
-    - {fileID: 21300000, guid: 7cb962a47cd6b4049922ffc01101f823, type: 3}
-    - {fileID: 21300000, guid: 7cb962a47cd6b4049922ffc01101f823, type: 3}
-    - {fileID: 21300000, guid: 7cb962a47cd6b4049922ffc01101f823, type: 3}
-    - {fileID: 21300000, guid: 7cb962a47cd6b4049922ffc01101f823, type: 3}
-    - {fileID: 21300000, guid: 7cb962a47cd6b4049922ffc01101f823, type: 3}
-    - {fileID: 21300000, guid: 7cb962a47cd6b4049922ffc01101f823, type: 3}
-    - {fileID: 21300000, guid: 7cb962a47cd6b4049922ffc01101f823, type: 3}
-    - {fileID: 21300000, guid: 7cb962a47cd6b4049922ffc01101f823, type: 3}
-    - {fileID: 21300000, guid: 7cb962a47cd6b4049922ffc01101f823, type: 3}
-    - {fileID: 21300000, guid: 7cb962a47cd6b4049922ffc01101f823, type: 3}
-    - {fileID: 21300000, guid: 7cb962a47cd6b4049922ffc01101f823, type: 3}
-    - {fileID: 21300000, guid: 7cb962a47cd6b4049922ffc01101f823, type: 3}
+    - {fileID: 21300000, guid: 0f98411c53268e54eb4989cb73ef4a10, type: 3}
+    - {fileID: 21300000, guid: c87eda925a6b1c94ca927abf3094db91, type: 3}
+    - {fileID: 21300000, guid: 91d2007b7323dec4eaef615e61a59ccc, type: 3}
+    - {fileID: 21300000, guid: a30edabb945b9b74aacc425fb22ce76b, type: 3}
+    - {fileID: 21300000, guid: 446cec598c9e1c0488d5ecdde08167d8, type: 3}
+    - {fileID: 21300000, guid: 55be8e988b4b89549b153ced8f1bf6ac, type: 3}
+    - {fileID: 21300000, guid: 971b9279cecf96f4bb7f7a35150c1930, type: 3}
+    - {fileID: 21300000, guid: 39b540b396308044aa874a7dd17e9be5, type: 3}
+    - {fileID: 21300000, guid: 830bf7255af159b4d8daab392d17001f, type: 3}
+    - {fileID: 21300000, guid: 4ea39a8a28302ae4fbe53d842f53ec29, type: 3}
+    - {fileID: 21300000, guid: 976904e8e4178d147ae8078964924aaa, type: 3}
+    - {fileID: 21300000, guid: 89310f32db618064f97a3e20593bbd65, type: 3}
+    - {fileID: 21300000, guid: 3586e3685d6623e4e930f892a551b1c9, type: 3}
+    - {fileID: 21300000, guid: 52512d8627d119947811d0a14b178ce4, type: 3}
+    - {fileID: 21300000, guid: eb57f130b0c8d4b4cbc2f137cf20de1b, type: 3}
+    - {fileID: 21300000, guid: 89310f32db618064f97a3e20593bbd65, type: 3}
+    - {fileID: 21300000, guid: 3dbcfcf6ae3ed534cae66ca6b239bc83, type: 3}
+    - {fileID: 21300000, guid: 4ea39a8a28302ae4fbe53d842f53ec29, type: 3}
+    - {fileID: 21300000, guid: acfe2f871ffa35643a330a44ae78768e, type: 3}
+    - {fileID: 21300000, guid: fc5cb857627be5e41a7606a67f17a9d3, type: 3}
+    - {fileID: 21300000, guid: 3347465f3afc7f04e8b55e7c78ecf649, type: 3}
+    - {fileID: 21300000, guid: 54227f23060d9de4686676b6e6564268, type: 3}
+    - {fileID: 21300000, guid: fc5cb857627be5e41a7606a67f17a9d3, type: 3}
+    - {fileID: 21300000, guid: 68f4794d0b0cd5143b7b45d6b2bf3519, type: 3}
+    - {fileID: 21300000, guid: 3347465f3afc7f04e8b55e7c78ecf649, type: 3}
+    - {fileID: 21300000, guid: 0f98411c53268e54eb4989cb73ef4a10, type: 3}
+    - {fileID: 21300000, guid: 3347465f3afc7f04e8b55e7c78ecf649, type: 3}
+    - {fileID: 21300000, guid: 41b610a3f00945941967c1ce85d74bc4, type: 3}
+    - {fileID: 21300000, guid: 0d6789746ccf4f14ea663d513da56698, type: 3}
+    - {fileID: 21300000, guid: 164dca76e3dc6ea4387f270b9e4400fe, type: 3}
   - name: Getting Started - Drilling
     frenchName: "Mise en route - Per\xE7age"
     sentences:
@@ -721,29 +717,29 @@ MonoBehaviour:
     - "Travail fantastique! Vous avez termin\xE9 toutes les op\xE9rations. Vous pouvez
       r\xE9essayer l'une des op\xE9rations avant de passer \xE0 la partie suivante.\r"
     images:
-    - {fileID: 21300000, guid: 7cb962a47cd6b4049922ffc01101f823, type: 3}
-    - {fileID: 21300000, guid: 7cb962a47cd6b4049922ffc01101f823, type: 3}
-    - {fileID: 21300000, guid: 7cb962a47cd6b4049922ffc01101f823, type: 3}
-    - {fileID: 21300000, guid: 7cb962a47cd6b4049922ffc01101f823, type: 3}
-    - {fileID: 21300000, guid: 7cb962a47cd6b4049922ffc01101f823, type: 3}
-    - {fileID: 21300000, guid: 7cb962a47cd6b4049922ffc01101f823, type: 3}
-    - {fileID: 21300000, guid: 7cb962a47cd6b4049922ffc01101f823, type: 3}
-    - {fileID: 21300000, guid: 7cb962a47cd6b4049922ffc01101f823, type: 3}
-    - {fileID: 21300000, guid: 7cb962a47cd6b4049922ffc01101f823, type: 3}
-    - {fileID: 21300000, guid: 7cb962a47cd6b4049922ffc01101f823, type: 3}
-    - {fileID: 21300000, guid: 7cb962a47cd6b4049922ffc01101f823, type: 3}
-    - {fileID: 21300000, guid: 7cb962a47cd6b4049922ffc01101f823, type: 3}
-    - {fileID: 21300000, guid: 7cb962a47cd6b4049922ffc01101f823, type: 3}
-    - {fileID: 21300000, guid: 7cb962a47cd6b4049922ffc01101f823, type: 3}
-    - {fileID: 21300000, guid: 7cb962a47cd6b4049922ffc01101f823, type: 3}
-    - {fileID: 21300000, guid: 7cb962a47cd6b4049922ffc01101f823, type: 3}
-    - {fileID: 21300000, guid: 7cb962a47cd6b4049922ffc01101f823, type: 3}
-    - {fileID: 21300000, guid: 7cb962a47cd6b4049922ffc01101f823, type: 3}
-    - {fileID: 21300000, guid: 7cb962a47cd6b4049922ffc01101f823, type: 3}
-    - {fileID: 21300000, guid: 7cb962a47cd6b4049922ffc01101f823, type: 3}
-    - {fileID: 21300000, guid: 7cb962a47cd6b4049922ffc01101f823, type: 3}
-    - {fileID: 21300000, guid: 7cb962a47cd6b4049922ffc01101f823, type: 3}
-    - {fileID: 21300000, guid: 7cb962a47cd6b4049922ffc01101f823, type: 3}
-    - {fileID: 21300000, guid: 7cb962a47cd6b4049922ffc01101f823, type: 3}
-    - {fileID: 21300000, guid: 7cb962a47cd6b4049922ffc01101f823, type: 3}
-    - {fileID: 21300000, guid: 7cb962a47cd6b4049922ffc01101f823, type: 3}
+    - {fileID: 21300000, guid: c039b8e70f9887044b7a1cc530154445, type: 3}
+    - {fileID: 21300000, guid: 89310f32db618064f97a3e20593bbd65, type: 3}
+    - {fileID: 21300000, guid: 6b3332ac5106d7d4a94346b2b31eb71e, type: 3}
+    - {fileID: 21300000, guid: 91d2007b7323dec4eaef615e61a59ccc, type: 3}
+    - {fileID: 21300000, guid: a30edabb945b9b74aacc425fb22ce76b, type: 3}
+    - {fileID: 21300000, guid: 446cec598c9e1c0488d5ecdde08167d8, type: 3}
+    - {fileID: 21300000, guid: 55be8e988b4b89549b153ced8f1bf6ac, type: 3}
+    - {fileID: 21300000, guid: 02bbd1ab9368672479c12430cebcd0c5, type: 3}
+    - {fileID: 21300000, guid: c6df7c820c244c04387b66835b4a20a7, type: 3}
+    - {fileID: 21300000, guid: 860c26a6bfa3760419cbae98aa0fcc18, type: 3}
+    - {fileID: 21300000, guid: 58f800628730cf643b8ca093f1427d47, type: 3}
+    - {fileID: 21300000, guid: fc5cb857627be5e41a7606a67f17a9d3, type: 3}
+    - {fileID: 21300000, guid: 89310f32db618064f97a3e20593bbd65, type: 3}
+    - {fileID: 21300000, guid: eb57f130b0c8d4b4cbc2f137cf20de1b, type: 3}
+    - {fileID: 21300000, guid: e093a410e35be924cb2f8d9b4269b029, type: 3}
+    - {fileID: 21300000, guid: 54227f23060d9de4686676b6e6564268, type: 3}
+    - {fileID: 21300000, guid: c039b8e70f9887044b7a1cc530154445, type: 3}
+    - {fileID: 21300000, guid: bed322a4a6f78c44cb9aafebe2999eb9, type: 3}
+    - {fileID: 21300000, guid: 860c26a6bfa3760419cbae98aa0fcc18, type: 3}
+    - {fileID: 21300000, guid: f6e1040c23035cd4cbc7ecc7fa972255, type: 3}
+    - {fileID: 21300000, guid: 860c26a6bfa3760419cbae98aa0fcc18, type: 3}
+    - {fileID: 21300000, guid: 54227f23060d9de4686676b6e6564268, type: 3}
+    - {fileID: 21300000, guid: c039b8e70f9887044b7a1cc530154445, type: 3}
+    - {fileID: 21300000, guid: 41b610a3f00945941967c1ce85d74bc4, type: 3}
+    - {fileID: 21300000, guid: f575135d2274a4e4a968e6e68e6585c5, type: 3}
+    - {fileID: 21300000, guid: 47b1e3218429da34b8fd19335bbefdec, type: 3}

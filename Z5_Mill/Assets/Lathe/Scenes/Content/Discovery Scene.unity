@@ -7259,7 +7259,7 @@ MonoBehaviour:
   namePartFR: "Bienvenue \xE0 l'atelier de Lathe Right"
   checklist: {fileID: 999138942}
   language: 1
-  toggle: {fileID: 0}
+  toggle: {fileID: 1403452344}
 --- !u!4 &1041450909
 Transform:
   m_ObjectHideFlags: 0
@@ -22963,7 +22963,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 0
+  m_Interactable: 1
   m_TargetGraphic: {fileID: 6162113170246996660}
   m_OnClick:
     m_PersistentCalls:
@@ -22976,7 +22976,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: LatheLibraryMenu
+          m_StringArgument: Operations Scene
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!1 &6162113170248987185

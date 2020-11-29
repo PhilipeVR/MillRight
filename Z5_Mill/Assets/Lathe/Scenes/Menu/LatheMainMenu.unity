@@ -744,6 +744,7 @@ GameObject:
   - component: {fileID: 715902243}
   - component: {fileID: 715902246}
   - component: {fileID: 715902245}
+  - component: {fileID: 715902249}
   m_Layer: 5
   m_Name: QuizSelectionBTN
   m_TagString: Untagged
@@ -789,20 +790,31 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 0
+  m_Interactable: 1
   m_TargetGraphic: {fileID: 715902244}
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 392903338}
-        m_MethodName: loadlevel
-        m_Mode: 5
+      - m_Target: {fileID: 833299587}
+        m_MethodName: setTutorial
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: quiz_final
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 715902249}
+        m_MethodName: LoadScene
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &715902244
@@ -950,6 +962,22 @@ RectTransform:
   m_AnchoredPosition: {x: -1267, y: -232.99997}
   m_SizeDelta: {x: 500, y: 136.81128}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &715902249
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 715902242}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70416754a9a7f054aab4af7ce0d0cc77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  frenchLoadQuiz: FR_Quiz
+  englishLoadQuiz: quiz_final
+  loadScene: {fileID: 392903338}
+  currentLoadQuiz: quiz_final
 --- !u!1 &744354120
 GameObject:
   m_ObjectHideFlags: 0
@@ -961,7 +989,6 @@ GameObject:
   - component: {fileID: 744354121}
   - component: {fileID: 744354124}
   - component: {fileID: 744354123}
-  - component: {fileID: 744354122}
   m_Layer: 5
   m_Name: QuizText
   m_TagString: Untagged
@@ -988,60 +1015,6 @@ RectTransform:
   m_AnchoredPosition: {x: 72, y: 0}
   m_SizeDelta: {x: 600, y: 104.67224}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &744354122
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 744354120}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Navigation:
-    m_Mode: 3
-    m_SelectOnUp: {fileID: 0}
-    m_SelectOnDown: {fileID: 0}
-    m_SelectOnLeft: {fileID: 0}
-    m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
-  m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
-    m_ColorMultiplier: 1
-    m_FadeDuration: 0.1
-  m_SpriteState:
-    m_HighlightedSprite: {fileID: 0}
-    m_PressedSprite: {fileID: 0}
-    m_SelectedSprite: {fileID: 0}
-    m_DisabledSprite: {fileID: 0}
-  m_AnimationTriggers:
-    m_NormalTrigger: Normal
-    m_HighlightedTrigger: Highlighted
-    m_PressedTrigger: Pressed
-    m_SelectedTrigger: Selected
-    m_DisabledTrigger: Disabled
-  m_Interactable: 1
-  m_TargetGraphic: {fileID: 744354123}
-  m_OnClick:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 392903338}
-        m_MethodName: loadlevel
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: quiz_final
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!114 &744354123
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1356,7 +1329,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -979.4, y: 418}
+  m_AnchoredPosition: {x: -979.4, y: 35}
   m_SizeDelta: {x: 1108.3538, y: 136.81128}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &802545419
@@ -1477,7 +1450,7 @@ MonoBehaviour:
   toggleComponentLangManager: {fileID: 0}
   imageToggle: {fileID: 118416715}
   toolHolderManager: {fileID: 0}
-  toggleScene: {fileID: 0}
+  toggleScene: {fileID: 715902249}
   videoManager: {fileID: 0}
 --- !u!114 &833299586
 MonoBehaviour:
@@ -1864,7 +1837,7 @@ MonoBehaviour:
   infoWarning: {fileID: 648687888}
   panel: {fileID: 900961349}
   begin: {fileID: 1284852147}
-  SceneName: MillScene
+  SceneName: Discovery Scene
 --- !u!114 &900961352
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2482,7 +2455,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1284852147
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2521,7 +2494,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 0
+  m_Interactable: 1
   m_TargetGraphic: {fileID: 1284852149}
   m_OnClick:
     m_PersistentCalls:
@@ -2534,7 +2507,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Lathe Components
+          m_StringArgument: Discovery Scene
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1284852148
@@ -2710,7 +2683,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1164.7, y: 272}
+  m_AnchoredPosition: {x: -1164.7, y: 335}
   m_SizeDelta: {x: 737.75146, y: 143.28467}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1289454755
@@ -3571,6 +3544,17 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 833299585}
         m_MethodName: updateLanguageState
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 715902249}
+        m_MethodName: SwitchLang
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

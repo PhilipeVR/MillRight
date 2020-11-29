@@ -147,7 +147,7 @@ AnimationClip:
       m_RotationOrder: 4
     attribute: m_IsActive
     path: Turning/Facing/Tailstock/Tailstock Body/Tailstock Quill/Quill/Drill Chuck/Chuck
-      Key/Chuck Key 2
+      Key
     classID: 1
     script: {fileID: 0}
   m_PPtrCurves: []
@@ -187,7 +187,7 @@ AnimationClip:
       customType: 4
       isPPtrCurve: 0
     - serializedVersion: 2
-      path: 1675668207
+      path: 3700378681
       attribute: 2086281974
       script: {fileID: 0}
       typeID: 1
@@ -589,7 +589,7 @@ AnimationClip:
       m_RotationOrder: 4
     attribute: m_IsActive
     path: Turning/Facing/Tailstock/Tailstock Body/Tailstock Quill/Quill/Drill Chuck/Chuck
-      Key/Chuck Key 2
+      Key
     classID: 1
     script: {fileID: 0}
   m_EulerEditorCurves:
