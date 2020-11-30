@@ -1,0 +1,38 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6514887594a1703478cd02d95eb763bf, type: 3}
+  m_Name: Controller Instructions
+  m_EditorClassIdentifier: 
+  dialogues:
+  - name: Welcome
+    frenchName: 
+    sentences:
+    - Welcome to the Lathe Simulator. In this tutorial you will learn the different
+      components that make up the Lathe.
+    sentencesFR: []
+    images: []
+  - name: Controlling the Camera
+    frenchName: 
+    sentences:
+    - The default camera can be controller with your mouse. Pressing and holding
+      the left mouse button with accompanying mouse movement will drag the camera
+      around the scene accordingly.
+    - Pressing and holding the right mouse button with accompanying mouse movment
+      will orbit the camera around the center of the scene.
+    - Pressing and holding the LEFT shift key while scrolling the mouse wheel will
+      zoom the camera in or out.
+    - You may switch to different camera perspectives by clicking the button on the
+      bottom left of the screen.
+    - Please note that only camera 1 can be controlled as described previously. The
+      remaining cameras offer stationary perspectives only.
+    sentencesFR: []
+    images: []
