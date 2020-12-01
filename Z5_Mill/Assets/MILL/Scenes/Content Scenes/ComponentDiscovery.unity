@@ -775,6 +775,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hoverColor: {r: 0.0473478, g: 0.67866, b: 0.7169812, a: 0}
   onClickedColor: {r: 0, g: 0, b: 0, a: 0}
+  timer: 0
+  counter: 0
   detailIndex: 4
   ObjectManager: {fileID: 865799116}
   hasBeenClicked: 0
@@ -1060,6 +1062,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hoverColor: {r: 0.0473478, g: 0.67866, b: 0.7169812, a: 0}
   onClickedColor: {r: 0, g: 0, b: 0, a: 0}
+  timer: 0
+  counter: 0
   detailIndex: 4
   ObjectManager: {fileID: 865799116}
   hasBeenClicked: 0
@@ -1973,6 +1977,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hoverColor: {r: 0.0473478, g: 0.67866, b: 0.7169812, a: 0}
   onClickedColor: {r: 0, g: 0, b: 0, a: 0}
+  timer: 0
+  counter: 0
   detailIndex: 4
   ObjectManager: {fileID: 865799116}
   hasBeenClicked: 0
@@ -2010,6 +2016,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hoverColor: {r: 0.047058824, g: 0.6784314, b: 0.7176471, a: 0}
   onClickedColor: {r: 0, g: 0, b: 0, a: 0}
+  timer: 0
+  counter: 0
   detailIndex: 4
   ObjectManager: {fileID: 865799116}
   hasBeenClicked: 0
@@ -2199,6 +2207,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hoverColor: {r: 0.0473478, g: 0.67866, b: 0.7169812, a: 0}
   onClickedColor: {r: 0, g: 0, b: 0, a: 0}
+  timer: 0
+  counter: 0
   detailIndex: 4
   ObjectManager: {fileID: 865799116}
   hasBeenClicked: 0
@@ -2646,7 +2656,6 @@ MonoBehaviour:
   nameText: {fileID: 234537029}
   dialogueText: {fileID: 1767346379}
   dialogIndex: {fileID: 1920778749}
-  Image: {fileID: 838774083}
   dialogImage: {fileID: 838774084}
   language: 1
   tracker: 0
@@ -2671,7 +2680,7 @@ MonoBehaviour:
   dialogues: {fileID: 11400000, guid: bbcc217938b57594e9470636547a82c0, type: 2}
   manager: {fileID: 0}
   dialogueManager: {fileID: 432825065}
-  sentenceTrigger: 0
+  sentenceTrigger: 1
 --- !u!4 &432825067
 Transform:
   m_ObjectHideFlags: 0
@@ -3430,6 +3439,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hoverColor: {r: 0.0473478, g: 0.67866, b: 0.7169812, a: 0}
   onClickedColor: {r: 0, g: 0, b: 0, a: 0}
+  timer: 0
+  counter: 0
   detailIndex: 4
   ObjectManager: {fileID: 865799116}
   hasBeenClicked: 0
@@ -3901,6 +3912,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hoverColor: {r: 0.0473478, g: 0.67866, b: 0.7169812, a: 0}
   onClickedColor: {r: 0, g: 0, b: 0, a: 0}
+  timer: 0
+  counter: 0
   detailIndex: 4
   ObjectManager: {fileID: 865799116}
   hasBeenClicked: 0
@@ -3936,6 +3949,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hoverColor: {r: 0.0473478, g: 0.67866, b: 0.7169812, a: 0}
   onClickedColor: {r: 0, g: 0, b: 0, a: 0}
+  timer: 0
+  counter: 0
   detailIndex: 4
   ObjectManager: {fileID: 865799116}
   hasBeenClicked: 0
@@ -4387,6 +4402,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hoverColor: {r: 0.047058824, g: 0.6784314, b: 0.7176471, a: 0}
   onClickedColor: {r: 0, g: 0, b: 0, a: 0}
+  timer: 0
+  counter: 0
   detailIndex: 4
   ObjectManager: {fileID: 865799116}
   hasBeenClicked: 0
@@ -5230,6 +5247,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hoverColor: {r: 0.0473478, g: 0.67866, b: 0.7169812, a: 0}
   onClickedColor: {r: 0, g: 0, b: 0, a: 0}
+  timer: 0
+  counter: 0
   detailIndex: 4
   ObjectManager: {fileID: 865799116}
   hasBeenClicked: 0
@@ -5721,6 +5740,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hoverColor: {r: 0.0473478, g: 0.67866, b: 0.7169812, a: 0}
   onClickedColor: {r: 0, g: 0, b: 0, a: 0}
+  timer: 0
+  counter: 0
   detailIndex: 4
   ObjectManager: {fileID: 865799116}
   hasBeenClicked: 0
@@ -6551,6 +6572,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hoverColor: {r: 0.0473478, g: 0.67866, b: 0.7169812, a: 0}
   onClickedColor: {r: 0, g: 0, b: 0, a: 0}
+  timer: 0
+  counter: 0
   detailIndex: 4
   ObjectManager: {fileID: 865799116}
   hasBeenClicked: 0
@@ -15440,6 +15463,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hoverColor: {r: 0.5372549, g: 0, b: 0, a: 0}
   onClickedColor: {r: 0, g: 0, b: 0, a: 0}
+  timer: 0
+  counter: 0
   detailIndex: 2
   ObjectManager: {fileID: 865799116}
   hasBeenClicked: 0
@@ -15872,6 +15897,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hoverColor: {r: 0.0473478, g: 0.67866, b: 0.7169812, a: 0}
   onClickedColor: {r: 0, g: 0, b: 0, a: 0}
+  timer: 0
+  counter: 0
   detailIndex: 4
   ObjectManager: {fileID: 865799116}
   hasBeenClicked: 0
@@ -15983,6 +16010,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hoverColor: {r: 0.0473478, g: 0.67866, b: 0.7169812, a: 0}
   onClickedColor: {r: 0, g: 0, b: 0, a: 0}
+  timer: 0
+  counter: 0
   detailIndex: 4
   ObjectManager: {fileID: 865799116}
   hasBeenClicked: 0
@@ -16018,7 +16047,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-451240
+  m_Name: pb_Mesh-2754
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -16526,6 +16555,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hoverColor: {r: 0.047058824, g: 0.6784314, b: 0.7176471, a: 0}
   onClickedColor: {r: 0, g: 0, b: 0, a: 0}
+  timer: 0
+  counter: 0
   detailIndex: 4
   ObjectManager: {fileID: 865799116}
   hasBeenClicked: 0
@@ -16843,6 +16874,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hoverColor: {r: 0.0473478, g: 0.67866, b: 0.7169812, a: 0}
   onClickedColor: {r: 0, g: 0, b: 0, a: 0}
+  timer: 0
+  counter: 0
   detailIndex: 4
   ObjectManager: {fileID: 865799116}
   hasBeenClicked: 0
@@ -17251,6 +17284,7 @@ MonoBehaviour:
   toggleList:
   - {fileID: 192016322}
   toggleHint: {fileID: 0}
+  dialogueOperator: {fileID: 0}
   languageScene: {fileID: 1615564895}
   toggleLangManager: {fileID: 0}
   warningLangManager: {fileID: 0}
@@ -17258,6 +17292,7 @@ MonoBehaviour:
   imageToggle: {fileID: 0}
   toolHolderManager: {fileID: 0}
   toggleScene: {fileID: 0}
+  videoManager: {fileID: 0}
 --- !u!1 &1627191466
 GameObject:
   m_ObjectHideFlags: 0
@@ -17390,6 +17425,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hoverColor: {r: 0.047058824, g: 0.6784314, b: 0.7176471, a: 0}
   onClickedColor: {r: 0, g: 0, b: 0, a: 0}
+  timer: 0
+  counter: 0
   detailIndex: 4
   ObjectManager: {fileID: 865799116}
   hasBeenClicked: 0
@@ -17857,6 +17894,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hoverColor: {r: 0.0473478, g: 0.67866, b: 0.7169812, a: 0}
   onClickedColor: {r: 0, g: 0, b: 0, a: 0}
+  timer: 0
+  counter: 0
   detailIndex: 4
   ObjectManager: {fileID: 865799116}
   hasBeenClicked: 0
@@ -19612,7 +19651,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh379194
+  m_Name: pb_Mesh72866
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -20310,6 +20349,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hoverColor: {r: 0.0473478, g: 0.67866, b: 0.7169812, a: 0}
   onClickedColor: {r: 0, g: 0, b: 0, a: 0}
+  timer: 0
+  counter: 0
   detailIndex: 4
   ObjectManager: {fileID: 865799116}
   hasBeenClicked: 0
@@ -20347,6 +20388,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hoverColor: {r: 0.0473478, g: 0.67866, b: 0.7169812, a: 0}
   onClickedColor: {r: 0, g: 0, b: 0, a: 0}
+  timer: 0
+  counter: 0
   detailIndex: 4
   ObjectManager: {fileID: 865799116}
   hasBeenClicked: 0

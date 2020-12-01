@@ -20,8 +20,9 @@ namespace YoutubePlayer
         /// <summary>
         /// Youtube url (e.g. https://www.youtube.com/watch?v=VIDEO_ID)
         /// </summary>
+        /// 
         public string youtubeUrl;
-
+        public GameObject youtubeLink;
         /// <summary>
         /// VideoStartingDelegate 
         /// </summary>
@@ -77,7 +78,14 @@ namespace YoutubePlayer
             }
             catch (Exception ex)
             {
-                Debug.LogException(ex);
+                if (youtubeLink != null)
+                {
+                    youtubeLink.SetActive(true);
+                }
+                else
+                {
+                    Debug.LogException(ex);
+                }
             }
         }
 

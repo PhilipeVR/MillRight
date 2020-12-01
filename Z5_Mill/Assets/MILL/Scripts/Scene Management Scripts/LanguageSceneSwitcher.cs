@@ -18,6 +18,7 @@ public class LanguageSceneSwitcher : MonoBehaviour
     public AdditionalInfoManager toolHolderManager;
     public ToggleScene toggleScene;
     public VideoManager videoManager;
+    public VideoOperator videoOperator;
     void Start()
     {
         if (languageScene.getLanguage())
@@ -70,6 +71,11 @@ public class LanguageSceneSwitcher : MonoBehaviour
         {
             dialogueOperator.switchLang();
         }
+        if(videoOperator != null)
+        {
+            videoOperator.SwitchLang();
+        }
+
     }
 
     public void updateLanguageState()

@@ -13,6 +13,8 @@ public class ComponentManager : MonoBehaviour
     [SerializeField] private Image infoImage;
     [SerializeField] private string initialTextFR, namePartFR;
     [SerializeField] private Checklist checklist;
+    [SerializeField] private VideoOperator videoOperator;
+    [SerializeField] private int IndexVideo;
     private string initialText, initialName;
 
     public Boolean language = true;
@@ -127,6 +129,10 @@ public class ComponentManager : MonoBehaviour
             else
             {
                 menuBTN.SetActive(true);
+            }
+            if(videoOperator != null)
+            {
+                videoOperator.PlayYoutubeVideo(IndexVideo);
             }
         }
     }

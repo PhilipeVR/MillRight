@@ -29,6 +29,8 @@ public class DialogueOperator : MonoBehaviour
     [SerializeField] private GameObject open, close, holder;
     [SerializeField] public bool MachiningWait;
     [SerializeField] public List<int> indexWait;
+    [SerializeField] private VideoOperator videoOperator;
+    [SerializeField] private int indexVideo, OperationIndexVideo;
 
 
     void Awake()
@@ -179,6 +181,13 @@ public class DialogueOperator : MonoBehaviour
     void EndDialogue()
     {
         DeactivateAtEndDialogue.SetActive(false);
+        if(videoOperator != null)
+        {
+            if(animationController.Index == OperationIndexVideo)
+            {
+                videoOperator.PlayYoutubeVideo(indexVideo);
+            }
+        }
         if (controllerPresent)
         {
             OperationManager operation = animationController.Operation;
