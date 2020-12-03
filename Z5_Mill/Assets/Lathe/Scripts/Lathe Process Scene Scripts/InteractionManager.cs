@@ -82,11 +82,6 @@ public class InteractionManager : MonoBehaviour
             SequenceDone = true;
 
         }
-        SequenceDone = true;
-
-        Debug.Log(intro);
-        Debug.Log(dialogueName);
-
     }
 
     public void InteractButton(string dialogueName)

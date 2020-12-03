@@ -71,7 +71,6 @@ public class VideoManager : MonoBehaviour
                 videoPlayer.Stop();
                 playButton.gameObject.SetActive(true);
                 pauseButton.gameObject.SetActive(false);
-                m_index = -1;
 
             }
         }
@@ -88,7 +87,7 @@ public class VideoManager : MonoBehaviour
                 {
                     operationController.ChangeAnimator(animatorIndex[m_index]);
                     dialogueInterface.TriggerDialogue(dialogueIndex[m_index]);
-
+                    m_index = -1;
                 }
                 youtubeLink.gameObject.SetActive(false);
 

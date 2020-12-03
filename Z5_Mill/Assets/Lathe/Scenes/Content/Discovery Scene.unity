@@ -345,7 +345,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 854006876}
-        m_MethodName: StopVideo
+        m_MethodName: ExitVideo
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -6513,11 +6513,11 @@ MonoBehaviour:
   title: {fileID: 342329160}
   youtubeLink: {fileID: 2045909787}
   YoutubeLinks:
-  - https://www.youtube.com/watch?v=8JrpOFWczLs
-  - https://www.youtube.com/watch?v=8xH0sdjMINY
+  - https://www.youtube.com/watch?v=hw3ApTyIcrw&list=PLA-oTz8kRbrqxOWorp8Dy542YlPY9TQzO&index=1
+  - https://www.youtube.com/watch?v=E7uyAWA0knA&list=PLA-oTz8kRbrqxOWorp8Dy542YlPY9TQzO&index=3
   YoutubeLinksFR:
-  - https://www.youtube.com/watch?v=8JrpOFWczLs
-  - https://www.youtube.com/watch?v=8xH0sdjMINY
+  - https://www.youtube.com/watch?v=GICGKMdlIiA&list=PLA-oTz8kRbrrP4uM-ATzHfehMaSjBQHRE&index=1
+  - https://www.youtube.com/watch?v=Xo6aqY0dXJk&list=PLA-oTz8kRbrrP4uM-ATzHfehMaSjBQHRE&index=3
   indexes: 0000000001000000
   titles:
   - Introduction to Lathe
@@ -11132,7 +11132,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 854006876}
         m_MethodName: StopVideo
         m_Mode: 1
         m_Arguments:
@@ -24423,7 +24423,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &6162113170246996649
 RectTransform:
   m_ObjectHideFlags: 0
