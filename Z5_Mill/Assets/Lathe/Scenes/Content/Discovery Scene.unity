@@ -6514,10 +6514,10 @@ MonoBehaviour:
   youtubeLink: {fileID: 2045909787}
   YoutubeLinks:
   - https://www.youtube.com/watch?v=hw3ApTyIcrw&list=PLA-oTz8kRbrqxOWorp8Dy542YlPY9TQzO&index=1
-  - https://www.youtube.com/watch?v=E7uyAWA0knA&list=PLA-oTz8kRbrqxOWorp8Dy542YlPY9TQzO&index=3
+  - https://www.youtube.com/watch?v=b4XZjX_X85M&feature=youtu.be
   YoutubeLinksFR:
   - https://www.youtube.com/watch?v=GICGKMdlIiA&list=PLA-oTz8kRbrrP4uM-ATzHfehMaSjBQHRE&index=1
-  - https://www.youtube.com/watch?v=Xo6aqY0dXJk&list=PLA-oTz8kRbrrP4uM-ATzHfehMaSjBQHRE&index=3
+  - https://www.youtube.com/watch?v=-huSiAOm-bY&feature=youtu.be
   indexes: 0000000001000000
   titles:
   - Introduction to Lathe
