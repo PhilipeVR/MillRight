@@ -8,6 +8,7 @@ using System;
 
 public class VideoOperator : MonoBehaviour
 {
+    [SerializeField] private LanguageSceneSwitcher languageScene;
     [SerializeField] private GameObject VideoPanel;
     [SerializeField] private VideoPlayer videoPlayer;
     [SerializeField] private YoutubePlayer.YoutubePlayer youtubePlayer;
@@ -24,7 +25,7 @@ public class VideoOperator : MonoBehaviour
 
     private List<bool> playedOnces;
     private int m_index = -1;
-    public bool language = true;
+    public bool language;
 
 
     // Start is called before the first frame update
@@ -41,7 +42,7 @@ public class VideoOperator : MonoBehaviour
         VideoPanel.SetActive(false);
         videoPlayer.loopPointReached += VideoPlayed;
         VideoEvents.current.youtubePlayerException += SentLink;
-        if (onStart)
+        if (onStart && !languageScene.languageScene.getLanguage())
         {
             PlayYoutubeVideo(0);
         }
