@@ -83,6 +83,20 @@ public class Camera_Toggle : MonoBehaviour
         // cam_5.enabled = false;
     }
 
+    public void ChangeCamForVid(bool vid)
+    {
+        if (vid)
+        {
+            clickCounter = 4;
+            switchcam();
+        }
+        else
+        {
+            switchcam();
+        }
+
+    }
+
     private void countClicks()
     {
         if (clickCounter == numberOfCams)

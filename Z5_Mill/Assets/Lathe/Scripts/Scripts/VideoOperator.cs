@@ -8,6 +8,7 @@ using System;
 
 public class VideoOperator : MonoBehaviour
 {
+    [SerializeField] private Camera_Toggle camera_Toggle;
     [SerializeField] private LanguageSceneSwitcher languageScene;
     [SerializeField] private GameObject VideoPanel;
     [SerializeField] private VideoPlayer videoPlayer;
@@ -42,9 +43,12 @@ public class VideoOperator : MonoBehaviour
         VideoPanel.SetActive(false);
         videoPlayer.loopPointReached += VideoPlayed;
         VideoEvents.current.youtubePlayerException += SentLink;
-        if (onStart && !languageScene.languageScene.getLanguage())
+        if (languageScene != null)
         {
-            PlayYoutubeVideo(0);
+            if (onStart && !languageScene.languageScene.getLanguage())
+            {
+                PlayYoutubeVideo(0);
+            }
         }
     }
 
@@ -100,6 +104,7 @@ public class VideoOperator : MonoBehaviour
 
     public void ExitVideo()
     {
+        camera_Toggle.ChangeCamForVid(false);
         youtubeLink.gameObject.SetActive(false);
         VideoPanel.SetActive(false);
         m_index = -1;
@@ -122,6 +127,7 @@ public class VideoOperator : MonoBehaviour
     {
         if (index >= 0 && index < YoutubeLinks.Count)
         {
+            camera_Toggle.ChangeCamForVid(true);
             exitImage.sprite = exit;
             VideoPanel.SetActive(true);
 
