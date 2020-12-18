@@ -87,11 +87,6 @@ public class LatheCollisionVisibility : MonoBehaviour
                     renderer.enabled = false;
                     Destroy(gameObject);
                     Destroy(this);
-                    StaticRigidBody staticRigidBody = collison.transform.gameObject.GetComponent<StaticRigidBody>();
-                    if (staticRigidBody != null)
-                    {
-                        staticRigidBody.endCollision();
-                    }
                     BitCollisionController bitCollisionController = collison.transform.gameObject.GetComponent<BitCollisionController>();
                     if (bitCollisionController != null)
                     {
