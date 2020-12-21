@@ -15,28 +15,6 @@ public class Trigger
 
     private int animIndex = 0;
 
-    public Boolean PlaySequence(TriggerAnimationController controller)
-    {
-
-        Boolean val = false;
-        if (animIndex < transitionParams.Length)
-        {
-            //Debug.Log("Clip Trigger X: " + index[i] + " and " + controller.Index);
-
-            if (index[animIndex] == controller.Index)
-            {
-                val = controller.PlayAnimation(transitionParams[animIndex], animationName[animIndex]);
-
-                if (val)
-                {
-                    animIndex++;
-                }
-            }
-        }
-
-        return val;
-    }
-
     public Boolean PlaySequence(OperationManager controller)
     {
         Boolean val = false;

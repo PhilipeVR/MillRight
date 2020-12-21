@@ -21,18 +21,12 @@ public class LatheCollisionVisibility : MonoBehaviour
     private bool isColliding = false;
     private float initialCountdown;
     private Renderer renderer;
-    private RevertDestruction revertDestruction;
     private bool staticBodyPresent, bitCollisionPresent, revertPresent;
 
 
     void Start()
     {
         renderer = GetComponent<Renderer>();
-        revertDestruction = GetComponentInParent<RevertDestruction>();
-        if (revertDestruction != null)
-        {
-            revertPresent = true;
-        }
         initialCountdown = timerCountDown;
 
     }
@@ -87,16 +81,6 @@ public class LatheCollisionVisibility : MonoBehaviour
                     renderer.enabled = false;
                     Destroy(gameObject);
                     Destroy(this);
-                    BitCollisionController bitCollisionController = collison.transform.gameObject.GetComponent<BitCollisionController>();
-                    if (bitCollisionController != null)
-                    {
-                        bitCollisionController.EndCollsion();
-                    }
-                    
-                    if (revertPresent)
-                    {
-                        revertDestruction.SaveTransform(transform.localPosition, transform.localRotation, transform.localScale);
-                    }
                 }
                 sparks.SetActive(false);
             }

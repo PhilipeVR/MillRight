@@ -7,7 +7,6 @@ using UnityEngine.UI;
 
 public class DialogueManager : MonoBehaviour
 {
-    [SerializeField] private ProcessAnimationController animationController;
     [SerializeField] private Button backButton;
     private int counter;
     public GameObject DeactivateAtEndDialogue;
@@ -28,7 +27,6 @@ public class DialogueManager : MonoBehaviour
     [SerializeField] private GameObject open, close, holder;
 
     void Awake() {
-        controllerPresent = animationController != null;
         counter = 0;
 
         index = 0;
@@ -144,37 +142,6 @@ public class DialogueManager : MonoBehaviour
     void EndDialogue()
     {
         DeactivateAtEndDialogue.SetActive(false);
-        if (controllerPresent)
-        {
-            if (!animationController.Operation.TriggerAnimation.Done && animationController.Operation.TriggerAnimation.Active)
-            {
-                trigger.InteractButton();
-            }
-            else if (animationController.Operation.TriggerAnimation.Done || (counter == 0 && !animationController.Operation.TriggerAnimation.Active))
-            {
-                trigger.TransitionDialogue();
-                counter++;
-            }
-
-        }
-    }
-
-    public void SkipDialogue()
-    {
-        if (animationController.Operation.TriggerAnimation.Done && animationController.Operation.TriggerAnimation.Active)
-        {
-            DeactivateAtEndDialogue.SetActive(false);
-            trigger.TransitionDialogue();
-            counter++;
-        }
-    }
-
-    void OnGUI()
-    {
-        if (Event.current.Equals(Event.KeyboardEvent(KeyCode.N.ToString())) && controllerPresent)
-        {
-            SkipDialogue();
-        }
     }
 
     public void switchLang() {
