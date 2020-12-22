@@ -6502,22 +6502,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   camera_Toggle: {fileID: 6162113169864912054}
-  languageScene: {fileID: 0}
+  languageScene: {fileID: 1403452342}
   VideoPanel: {fileID: 348071742}
   videoPlayer: {fileID: 1941499489}
-  youtubePlayer: {fileID: 1941499490}
   StopVideoButton: {fileID: 65609375}
   playButton: {fileID: 2016799940}
   pauseButton: {fileID: 287832988}
   stopButton: {fileID: 1551503692}
   title: {fileID: 342329160}
-  youtubeLink: {fileID: 2045909787}
-  YoutubeLinks:
-  - https://www.youtube.com/watch?v=hw3ApTyIcrw&list=PLA-oTz8kRbrqxOWorp8Dy542YlPY9TQzO&index=1
-  - https://www.youtube.com/watch?v=b4XZjX_X85M&feature=youtu.be
-  YoutubeLinksFR:
-  - https://www.youtube.com/watch?v=GICGKMdlIiA&list=PLA-oTz8kRbrrP4uM-ATzHfehMaSjBQHRE&index=1
-  - https://www.youtube.com/watch?v=-huSiAOm-bY&feature=youtu.be
+  videoClips:
+  - {fileID: 32900000, guid: 3bad35b9791d42048a9760d216e359ff, type: 3}
+  - {fileID: 32900000, guid: f89aa4b1f979c7d49809344d101bf7a3, type: 3}
+  videoClipsFR:
+  - {fileID: 32900000, guid: f89aa4b1f979c7d49809344d101bf7a3, type: 3}
+  - {fileID: 32900000, guid: 3bad35b9791d42048a9760d216e359ff, type: 3}
   indexes: 0000000001000000
   titles:
   - Introduction to Lathe

@@ -1,10 +1,7 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Video;
-using System.IO;
-using System;
 
 public class VideoManager : MonoBehaviour
 {
@@ -13,12 +10,9 @@ public class VideoManager : MonoBehaviour
     [SerializeField] private TriggerDialogueInterface dialogueInterface;
     [SerializeField] private GameObject VideoPanel;
     [SerializeField] private VideoPlayer videoPlayer;
-    [SerializeField] private YoutubePlayer.YoutubePlayer youtubePlayer;
     [SerializeField] private Button StopVideoButton, playButton, pauseButton, stopButton;
     [SerializeField] private Text title;
-    [SerializeField] private InputField youtubeLink;
-    [SerializeField] private List<string> YoutubeLinks;
-    [SerializeField] private List<string> YoutubeLinksFR;
+    [SerializeField] private List<VideoClip> videoClips, videoClipsFR;
     [SerializeField] private List<Sprite> operationSprite;
     [SerializeField] private List<int> animatorIndex;
     [SerializeField] private List<int> dialogueIndex;
@@ -32,7 +26,7 @@ public class VideoManager : MonoBehaviour
     void Start()
     {
         playedOnces = new List<bool>(); //List to keep track of every video that has been played
-        for(int i = 0; i<YoutubeLinks.Count; i++)
+        for(int i = 0; i<videoClips.Count; i++)
         {
             playedOnces.Add(false);
         }
@@ -41,7 +35,6 @@ public class VideoManager : MonoBehaviour
         VideoPanel.SetActive(false); //Deactivates youtube link on video panel
         //videoPlayer.Stop();
         videoPlayer.loopPointReached += VideoPlayed; //Adds listener to video player event system, activates if video has ended
-        youtubeLink.gameObject.SetActive(false); //Deactivates youtube link on video panel title screen
         VideoEvents.current.youtubePlayerException += LinkSent; //Adds listener to Video Event System, activates if youtube link produces error
 
 
@@ -90,7 +83,6 @@ public class VideoManager : MonoBehaviour
                     dialogueInterface.TriggerDialogue(dialogueIndex[m_index]); //Trigger operation dialogue
                     m_index = -1; //reset index
                 }
-                youtubeLink.gameObject.SetActive(false);
 
             }
         }
@@ -103,14 +95,17 @@ public class VideoManager : MonoBehaviour
 
     public void VideoPlayed(VideoPlayer video) //Method played when video has ended (event listener)
     {
-        if (!playedOnces[m_index])
+        if (m_index > -1)
         {
-            playedOnces[m_index] = true;
-            StopVideoButton.interactable = true;
-            stopButton.interactable = true;
+            if (!playedOnces[m_index])
+            {
+                playedOnces[m_index] = true;
+                StopVideoButton.interactable = true;
+                stopButton.interactable = true;
+            }
+            playButton.gameObject.SetActive(true);
+            pauseButton.gameObject.SetActive(false);
         }
-        playButton.gameObject.SetActive(true);
-        pauseButton.gameObject.SetActive(false);
     }
 
     public void PlayVideo()
@@ -132,9 +127,9 @@ public class VideoManager : MonoBehaviour
         }
     }
 
-    public async void PlayYoutubeVideo(int index)
+    public void PlayVideoClip(int index)
     {
-        if( index >= 0 && index < YoutubeLinks.Count)
+        if( index >= 0 && index < videoClips.Count)
         {
             camera_Toggle.ChangeCamForVid(true); //Change camera view to improve performance(performance drops with camera controller view)
             VideoPanel.SetActive(true);
@@ -155,15 +150,15 @@ public class VideoManager : MonoBehaviour
             {
                 m_index = index;
                 title.text = titles[index];
-                youtubeLink.text = "Video not working? Use this link to watch it: " + YoutubeLinks[index]; //youtube link that will be displayed if errror with video occurs
-                await youtubePlayer.PlayVideoAsync(YoutubeLinks[index]); //play youtube vid
+                videoPlayer.clip = videoClips[index];
+                videoPlayer.Play();
             }
             else
             {
                 m_index = index;
                 title.text = titlesFR[index];
-                youtubeLink.text = "Le vidéo ne fonctionne pas? Utilise ce lien pour le regarder: " + YoutubeLinksFR[index]; //youtube link that will be displayed if errror with video occurs
-                await youtubePlayer.PlayVideoAsync(YoutubeLinksFR[index]); //play youtube vid
+                videoPlayer.clip = videoClipsFR[index];
+                videoPlayer.Play();
             }
         }
     }

@@ -1,9 +1,7 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Video;
-using System;
 
 
 public class VideoOperator : MonoBehaviour
@@ -12,12 +10,9 @@ public class VideoOperator : MonoBehaviour
     [SerializeField] private LanguageSceneSwitcher languageScene;
     [SerializeField] private GameObject VideoPanel;
     [SerializeField] private VideoPlayer videoPlayer;
-    [SerializeField] private YoutubePlayer.YoutubePlayer youtubePlayer;
     [SerializeField] private Button StopVideoButton, playButton, pauseButton, stopButton;
     [SerializeField] private Text title;
-    [SerializeField] private InputField youtubeLink;
-    [SerializeField] private List<string> YoutubeLinks;
-    [SerializeField] private List<string> YoutubeLinksFR;
+    [SerializeField] private List<VideoClip> videoClips, videoClipsFR;
     [SerializeField] private List<int> indexes;
     [SerializeField] private List<string> titles, titlesFR;
     [SerializeField] private bool onStart = false;
@@ -33,11 +28,10 @@ public class VideoOperator : MonoBehaviour
     void Start()
     {
         playedOnces = new List<bool>();
-        for (int i = 0; i < YoutubeLinks.Count; i++)
+        for (int i = 0; i < videoClips.Count; i++)
         {
             playedOnces.Add(false);
         }
-        youtubeLink.gameObject.SetActive(false);
         StopVideoButton.interactable = false;
         stopButton.interactable = false;
         VideoPanel.SetActive(false);
@@ -47,7 +41,7 @@ public class VideoOperator : MonoBehaviour
         {
             if (onStart && !languageScene.languageScene.getLanguage())
             {
-                PlayYoutubeVideo(0);
+                PlayVideoClip(0);
             }
         }
     }
@@ -82,14 +76,17 @@ public class VideoOperator : MonoBehaviour
 
     public void VideoPlayed(VideoPlayer video)
     {
-        if (!playedOnces[m_index])
+        if (m_index > -1)
         {
-            playedOnces[m_index] = true;
-            StopVideoButton.interactable = true;
-            stopButton.interactable = true;
+            if (!playedOnces[m_index])
+            {
+                playedOnces[m_index] = true;
+                StopVideoButton.interactable = true;
+                stopButton.interactable = true;
+            }
+            playButton.gameObject.SetActive(true);
+            pauseButton.gameObject.SetActive(false);
         }
-        playButton.gameObject.SetActive(true);
-        pauseButton.gameObject.SetActive(false);
     }
 
     public void PauseVideo()
@@ -105,7 +102,6 @@ public class VideoOperator : MonoBehaviour
     public void ExitVideo()
     {
         camera_Toggle.ChangeCamForVid(false);
-        youtubeLink.gameObject.SetActive(false);
         VideoPanel.SetActive(false);
         m_index = -1;
     }
@@ -123,9 +119,9 @@ public class VideoOperator : MonoBehaviour
         }
     }
 
-    public async void PlayYoutubeVideo(int index)
+    public void PlayVideoClip(int index)
     {
-        if (index >= 0 && index < YoutubeLinks.Count)
+        if (index >= 0 && index < videoClips.Count)
         {
             camera_Toggle.ChangeCamForVid(true);
             exitImage.sprite = exit;
@@ -146,15 +142,16 @@ public class VideoOperator : MonoBehaviour
             {
                 m_index = index;
                 title.text = titles[index];
-                youtubeLink.text = "Video not working? Use this link to watch it: " + YoutubeLinks[index];
-                await youtubePlayer.PlayVideoAsync(YoutubeLinks[index]);
+                videoPlayer.clip = videoClips[index];
+                videoPlayer.Play();
+
             }
             else
             {
                 m_index = index;
                 title.text = titlesFR[index];
-                youtubeLink.text = "Le vidéo ne fonctionne pas? Utilise ce lien pour le regarder: " + YoutubeLinksFR[index];
-                await youtubePlayer.PlayVideoAsync(YoutubeLinksFR[index]);
+                videoPlayer.clip = videoClipsFR[index];
+                videoPlayer.Play();
             }
 
         }

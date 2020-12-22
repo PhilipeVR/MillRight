@@ -185,7 +185,7 @@ public class DialogueOperator : MonoBehaviour
         {
             if(animationController.Index == OperationIndexVideo)
             {
-                videoOperator.PlayYoutubeVideo(indexVideo);
+                videoOperator.PlayVideoClip(indexVideo);
             }
         }
         if (controllerPresent)

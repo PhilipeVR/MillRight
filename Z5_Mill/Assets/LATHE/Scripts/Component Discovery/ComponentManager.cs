@@ -132,7 +132,7 @@ public class ComponentManager : MonoBehaviour
             }
             if(videoOperator != null)
             {
-                videoOperator.PlayYoutubeVideo(IndexVideo);
+                videoOperator.PlayVideoClip(IndexVideo);
             }
         }
     }
