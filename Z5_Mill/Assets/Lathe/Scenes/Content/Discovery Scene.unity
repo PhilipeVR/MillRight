@@ -1367,7 +1367,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf526edd0b70ee843b810d45ffed36c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animationController: {fileID: 0}
   backButton: {fileID: 845273893}
   DeactivateAtEndDialogue: {fileID: 1675099336}
   trigger: {fileID: 155548178}
@@ -1396,7 +1395,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogues: {fileID: 11400000, guid: e525b7fed6a8f9d4e872ee0be2aad566, type: 2}
-  manager: {fileID: 0}
   dialogueManager: {fileID: 155548177}
   sentenceTrigger: 0
 --- !u!4 &155548179
@@ -10131,7 +10129,6 @@ MonoBehaviour:
   dialogueOperator: {fileID: 0}
   languageScene: {fileID: 1403452343}
   toggleLangManager: {fileID: 155548177}
-  warningLangManager: {fileID: 0}
   toggleComponentLangManager: {fileID: 1041450908}
   imageToggle: {fileID: 0}
   toolHolderManager: {fileID: 0}
@@ -11009,7 +11006,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 4d1cb585f07fde44d8ccda8639496653, type: 2}
+  - {fileID: 2100000, guid: 123646370edc5f14a9a458eb254ce9b3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
