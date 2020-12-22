@@ -127,9 +127,9 @@ MonoBehaviour:
       in line with the live center\n\nHint: Click on tool post to rotate it"
     - "Next, let\u2019s bring the tailstock closer to accurately center our tool.
       \n\nHint: Click on Tailstock to move it closer to tool post"
-    - "We can finally center our tool. You can use the camera controller to get a
-      better view of the cutter and the live center. \n\nHint: Click on increase
-      height button in tool post panel to adjust height"
+    - "We can finally center our tool. You can use the camera controller or the camera
+      view 3 to get a better view of the cutter and the live center. \n\nHint: Click
+      on increase height button in tool post panel to adjust height"
     - "Now that we centered our tool, we can lock the tool holder at that position
       using the tool post handle mentioned previously. \n\nHint: Click on tool post
       handle to lock tool holder at current height"
@@ -155,7 +155,7 @@ MonoBehaviour:
       Carriage'
     - "Next, let\u2019s turn ON the machine. The power button is located on the headstock
       as seen in the previous tutorial.\n\nHint: Click on ON Button on the Lathe
-      to start machine"
+      Machine to start it"
     - 'The next step is to set our contact point. We will use the cross slide and
       carriage to set the contact point.
 
@@ -184,8 +184,8 @@ MonoBehaviour:
 
       Hint:
       Click on Carriage Feed Wheel to retreat cutter'
-    - "Now we can turn OFF the machine safely. \n\nHint: Click on Stop Button to
-      turn the lathe OFF "
+    - "Now we can turn OFF the machine safely. \n\nHint: Click on Stop Button on
+      the Lathe Machine to turn it OFF "
     - This process may be repeated until the desired amount of material is removed
       from the workpiece.
     - 'Well done! Next, we will learn how to perform the turning operation. Click
@@ -245,9 +245,9 @@ MonoBehaviour:
     - "Ensuite, rapprochons la poup\xE9e mobile du support porte-outil\n\nIndice:
       Cliquer sur la poup\xE9e mobile pour le rapprocher du support porte-outil"
     - "Nous pouvons enfin centrer notre outil. Vous pouvez utiliser le contr\xF4leur
-      de cam\xE9ra pour obtenir une meilleure vue de l\u2019outil de coupe et du
-      pointe vive.\n\nIndice: Cliquez sur le bouton d'augmentation de la hauteur
-      dans le panneau de support porte-outil pour r\xE9gler la hauteur"
+      de cam\xE9ra  ou la vue de cam\xE9ra 3 pour obtenir une meilleure vue de l\u2019outil
+      de coupe et du pointe vive.\n\nIndice: Cliquez sur le bouton d'augmentation
+      de la hauteur dans le panneau de support porte-outil pour r\xE9gler la hauteur"
     - "Maintenant que nous avons centr\xE9 notre outil, nous pouvons verrouiller
       le porte-outil \xE0 cette position \xE0 l'aide de la poign\xE9e de support
       porte-outil mentionn\xE9e pr\xE9c\xE9demment.\n\nIndice: Cliquez sur la poign\xE9e
@@ -375,7 +375,8 @@ MonoBehaviour:
     - "The next step is to bring the tailstock closer to adjust the height of our
       cutting tool. \n\nHint: Click on Tailstock to move it closer to tool post"
     - 'Now that we have better view to compare, we can adjust the cutting tool to
-      bring it in line with the live center.
+      bring it in line with the live center. Use camera controller or camera view
+      3 to get a clear view of centering.
 
 
       Hint: Click on increase height
@@ -413,7 +414,7 @@ MonoBehaviour:
 
 
       Hint: Click on ON Button on the Lathe
-      to start machine'
+      Machine to start it'
     - "Let\u2019s now use the carriage wheel to make light contact with the workpiece.\n\nHint:
       Click on the Carriage Feed Wheel to make contact with workpiece"
     - Next, we set our depth of cut.
@@ -433,8 +434,8 @@ MonoBehaviour:
     - 'We can now turn OFF the lathe.
 
 
-      Hint: Click on Stop Button to turn
-      the lathe OFF '
+      Hint: Click on Stop Button on the lathe
+      to turn it off'
     - This process may be repeated until the desired amount of material is removed
       from the workpiece.
     - 'Excellent work! Next, we will learn how to perform the drilling operation
@@ -474,9 +475,10 @@ MonoBehaviour:
       la hauteur de notre outil de coupe.\n\nIndice: Cliquer sur la poup\xE9e mobile
       pour rapprocher celle-ci"
     - "Maintenant que nous avons une meilleure vue, nous pouvons ajuster l'outil
-      de coupe pour l'aligner avec la pointe vive.\n\nIndice: Cliquez sur le bouton
-      d'augmentation de la hauteur dans le panneau de support porte-outil pour r\xE9gler
-      la hauteur"
+      de coupe pour l'aligner avec la pointe vive. Utilisez le contr\xF4leur de cam\xE9ra
+      ou la vue de la cam\xE9ra pour obtenir une vue claire du centrage.\n\nIndice:
+      Cliquez sur le bouton d'augmentation de la hauteur dans le panneau de support
+      porte-outil pour r\xE9gler la hauteur"
     - "Bon travail! L'outil de coupe est maintenant centr\xE9. Verrouillez le porte-outil
       \xE0 cette hauteur \xE0 l'aide de la poign\xE9e du support porte-outil."
     - "Maintenant que nous avons centr\xE9 notre outil de coupe, nous pouvons verrouiller
@@ -608,7 +610,7 @@ MonoBehaviour:
 
 
       Hint: Click on ON Button
-      on the Lathe to start machine'
+      on the Lathe Machine to start it'
     - 'Use a pecking motion while drilling in the material with the quill feed wheel.
 
 
@@ -618,7 +620,7 @@ MonoBehaviour:
 
 
       Hint: Click
-      on Stop Button to turn the lathe OFF '
+      on Stop Button on Lathe Machine to turn it OFF '
     - "Untighten the drill chuck using the chuck key\r.\n\nHint: Click on chuck key
       to untighten drill chuck"
     - "Swap the center drill with the other drill bit\r.\n\nHint: Click on drill
@@ -628,8 +630,8 @@ MonoBehaviour:
     - 'Turn ON the machine again
 
 
-      Hint: Click on ON Button on the Lathe to
-      start machine'
+      Hint: Click on ON Button on the Lathe Machine
+      to start it'
     - 'Remove material from the workpiece in increments by using a pecking motion
 
 
@@ -638,8 +640,8 @@ MonoBehaviour:
     - 'Turn OFF the machine
 
 
-      Hint: Click on Stop Button to turn the lathe
-      OFF '
+      Hint: Click on Stop Button on Lathe Machine to
+      turn it OFF '
     - "This process may be repeated until the desired amount of material is removed
       from the workpiece.\r\r\n"
     - 'Fantastic work! You finished all the operations. You can retry any of the

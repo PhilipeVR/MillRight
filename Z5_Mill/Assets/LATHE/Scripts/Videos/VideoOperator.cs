@@ -6,11 +6,8 @@ using UnityEngine.Video;
 
 public class VideoOperator : MonoBehaviour
 {
-<<<<<<< HEAD:Z5_Mill/Assets/LATHE/Scripts/Videos/VideoOperator.cs
     [SerializeField] private Camera_Toggle camera_Toggle;
     [SerializeField] private LanguageSceneSwitcher languageScene;
-=======
->>>>>>> parent of 3e875ac... FeedbackCommit:Z5_Mill/Assets/Lathe/Scripts/Scripts/VideoOperator.cs
     [SerializeField] private GameObject VideoPanel;
     [SerializeField] private VideoPlayer videoPlayer;
     [SerializeField] private Button StopVideoButton, playButton, pauseButton, stopButton;
@@ -24,7 +21,7 @@ public class VideoOperator : MonoBehaviour
 
     private List<bool> playedOnces;
     private int m_index = -1;
-    public bool language = true;
+    public bool language;
 
 
     // Start is called before the first frame update
@@ -40,11 +37,7 @@ public class VideoOperator : MonoBehaviour
         VideoPanel.SetActive(false);
         videoPlayer.loopPointReached += VideoPlayed;
         VideoEvents.current.youtubePlayerException += SentLink;
-<<<<<<< HEAD:Z5_Mill/Assets/LATHE/Scripts/Videos/VideoOperator.cs
         if (languageScene != null)
-=======
-        if (onStart)
->>>>>>> parent of 3e875ac... FeedbackCommit:Z5_Mill/Assets/Lathe/Scripts/Scripts/VideoOperator.cs
         {
             if (onStart && !languageScene.languageScene.getLanguage())
             {
