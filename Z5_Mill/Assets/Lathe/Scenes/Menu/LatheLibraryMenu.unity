@@ -1041,7 +1041,6 @@ MonoBehaviour:
   toolHolderManager: {fileID: 0}
   toggleScene: {fileID: 0}
   videoManager: {fileID: 0}
-  videoOperator: {fileID: 0}
 --- !u!114 &1232288752
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2407,8 +2406,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6334ee3e139481b49813dc7c33170d08, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  toggleOptionText: "Op\xE9rations de la tour"
-  toggleOptionText2: 'Lathe Processes Tutorial '
+  toggleOptionText: "Op\xE9rations de la fraiseuse"
+  toggleOptionText2: 'Milling Processes Tutorial '
   currentText: {fileID: 2034215698}
 --- !u!114 &1867587138
 MonoBehaviour:
