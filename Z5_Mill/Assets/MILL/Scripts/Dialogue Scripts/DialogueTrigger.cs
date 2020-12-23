@@ -7,6 +7,7 @@ using UnityEngine;
 public class DialogueTrigger : MonoBehaviour
 {
     public DialogBox dialogues;
+    public InteractableManager manager;
     public DialogueManager dialogueManager;
     private List<Dialogue> gameDialogues;
     private int currentIndex;
@@ -18,6 +19,7 @@ public class DialogueTrigger : MonoBehaviour
     }
 
     void Start(){
+        managerPresent = manager != null;
         if (!sentenceTrigger)
         {
             TriggerDialogue(0);
@@ -27,8 +29,27 @@ public class DialogueTrigger : MonoBehaviour
 
     public void TriggerDialogue (int i)
     {
+        if (managerPresent)
+        {
+            manager.SetInteractionLevel(gameDialogues[i].name);
+        }
         dialogueManager.StartDialogue(gameDialogues[i]);
         currentIndex = i;
+    }
+
+    public void TransitionDialogue() {
+        if (managerPresent)
+        {
+            manager.Transition(gameDialogues[currentIndex].name);
+        }
+    }
+
+    public void InteractButton()
+    {
+        if (managerPresent)
+        {
+            manager.InteractButton(gameDialogues[currentIndex].name);
+        }
     }
 
 }

@@ -12,6 +12,7 @@ public class LanguageSceneSwitcher : MonoBehaviour
     public DialogueOperator dialogueOperator;
     public LanguageSceneToggle languageScene;
     public DialogueManager toggleLangManager;
+    public WarningManager warningLangManager;
     public ComponentManager toggleComponentLangManager;
     public ImageToggle imageToggle;
     public AdditionalInfoManager toolHolderManager;
@@ -53,6 +54,10 @@ public class LanguageSceneSwitcher : MonoBehaviour
         if(toggleHint != null)
         {
             toggleHint.toggleLang();
+        }
+        if(warningLangManager != null)
+        {
+            warningLangManager.SwitchLang();
         }
         if(toggleScene != null)
         {
