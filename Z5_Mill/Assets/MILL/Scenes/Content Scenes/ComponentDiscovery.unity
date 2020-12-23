@@ -3756,7 +3756,7 @@ RectTransform:
   - {fileID: 432825067}
   - {fileID: 1983472141}
   m_Father: {fileID: 687966544}
-  m_RootOrder: 6
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.25, y: 0.35}
   m_AnchorMax: {x: 0.65, y: 0.75}
@@ -4148,9 +4148,9 @@ RectTransform:
   - {fileID: 466624117}
   - {fileID: 1612524694}
   - {fileID: 1541295186}
+  - {fileID: 608694218}
   - {fileID: 1524794990}
   - {fileID: 938291248}
-  - {fileID: 608694218}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -5225,6 +5225,8 @@ MonoBehaviour:
     pour un indice. Bonne chance."
   namePartFR: "Bienvenue \xE0 l'atelier de fraisage de Mill Right"
   checklist: {fileID: 466624114}
+  videoOperator: {fileID: 0}
+  IndexVideo: 0
   language: 1
   toggle: {fileID: 1615564893}
 --- !u!1 &867014055 stripped
@@ -5622,7 +5624,7 @@ RectTransform:
   - {fileID: 682414745}
   - {fileID: 450235751}
   m_Father: {fileID: 687966544}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.01, y: 0.02}
   m_AnchorMax: {x: 0.08, y: 0.095}
@@ -15805,7 +15807,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1225123067
 RectTransform:
   m_ObjectHideFlags: 0
@@ -16783,7 +16785,7 @@ RectTransform:
   - {fileID: 1757929039}
   - {fileID: 1225123067}
   m_Father: {fileID: 687966544}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.93, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -17293,6 +17295,7 @@ MonoBehaviour:
   toolHolderManager: {fileID: 0}
   toggleScene: {fileID: 0}
   videoManager: {fileID: 0}
+  videoOperator: {fileID: 0}
 --- !u!1 &1627191466
 GameObject:
   m_ObjectHideFlags: 0
@@ -19358,7 +19361,7 @@ RectTransform:
   m_Father: {fileID: 1225123067}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.03, y: 0.5}
+  m_AnchorMin: {x: 0.03, y: 0.37}
   m_AnchorMax: {x: 0.95, y: 0.85}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
@@ -20517,8 +20520,8 @@ RectTransform:
   m_Father: {fileID: 1225123067}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.1, y: 0.1}
-  m_AnchorMax: {x: 1, y: 0.45}
+  m_AnchorMin: {x: 0.1, y: 0}
+  m_AnchorMax: {x: 0.9, y: 0.35}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}

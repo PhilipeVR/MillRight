@@ -2345,9 +2345,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 598210516410203040}
-        m_MethodName: loadlevel
-        m_Mode: 5
+      - m_Target: {fileID: 598210516410203044}
+        m_MethodName: LoadScene
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -8259,7 +8259,6 @@ MonoBehaviour:
   cam_drill2: {fileID: 0}
   cam_sm1: {fileID: 0}
   cam_fm1: {fileID: 0}
-  cam_5: {fileID: 0}
   myText: {fileID: 598210516412668713}
 --- !u!1 &598210517070684018
 GameObject:
