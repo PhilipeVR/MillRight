@@ -9,10 +9,13 @@ public class VideoController : MonoBehaviour
 {
     [SerializeField] private ButtonInteractable buttonInteractable;
     [SerializeField] private GameObject VideoPanel;
+    [SerializeField] private Text Title;
     [SerializeField] private VideoPlayer videoPlayer;
+    [SerializeField] private VideoClip videoClip, videoClipFR;
+    [SerializeField] private string title, titleFR;
     [SerializeField] private Button StopVideoButton, playButton, pauseButton, stopButton;
-    [SerializeField] private Boolean playedOnce;
-    [SerializeField] private int videoFPS;
+    private Boolean playedOnce;
+    private bool language = true;
 
     // Start is called before the first frame update
     void Start()
@@ -67,6 +70,16 @@ public class VideoController : MonoBehaviour
     public void StartVideo()
     {
         VideoPanel.SetActive(true);
+        if (language)
+        {
+            videoPlayer.clip = videoClip;
+            Title.text = title;
+        }
+        else
+        {
+            videoPlayer.clip = videoClipFR;
+            Title.text = titleFR;
+        }
     }
 
     public void VideoPlayed(VideoPlayer video)
@@ -85,6 +98,11 @@ public class VideoController : MonoBehaviour
     public Boolean PlayedOnce
     {
         get => playedOnce;
+    }
+
+    public void SwitchLang()
+    {
+        language = !language;
     }
 
 

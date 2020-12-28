@@ -18,6 +18,9 @@ public class LanguageSceneSwitcher : MonoBehaviour
     public AdditionalInfoManager toolHolderManager;
     public ToggleScene toggleScene;
     public VideoManager videoManager;
+    public VideoProcessManager videoProcessManager;
+    public VideoStandardController videoStandardController;
+    public VideoController videoController;
     public VideoOperator videoOperator;
     void Start()
     {
@@ -71,11 +74,22 @@ public class LanguageSceneSwitcher : MonoBehaviour
         {
             dialogueOperator.switchLang();
         }
-        if(videoOperator != null)
+        if (videoOperator != null)
         {
             videoOperator.SwitchLang();
         }
-
+        if (videoController != null)
+        {
+            videoController.SwitchLang();
+        }
+        if(videoProcessManager != null)
+        {
+            videoProcessManager.SwitchLang();
+        }
+        if(videoStandardController != null)
+        {
+            videoStandardController.SwitchLang();
+        }
     }
 
     public void updateLanguageState()
