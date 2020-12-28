@@ -1,6 +1,10 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:Z5_Mill/Assets/MILL/Scripts/Video Scripts.meta
 guid: 3619c85dbac4d644b9f46292b6cc92da
 folderAsset: yes
+=======
+guid: 5bd76e325d94e9340b1b6bbe6982902a
+>>>>>>> MillForkBranch:Z5_Mill/Assets/Animations.meta~merged.meta
 DefaultImporter:
   externalObjects: {}
   userData: 
