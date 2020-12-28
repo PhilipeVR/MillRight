@@ -54,4 +54,15 @@ public class CameraToggle : MonoBehaviour
             cameras[i].enabled = false;
         }
     }
+
+    public int CameraNum
+    {
+        get => cameras.Length;
+    }
+
+    public int Index
+    {
+        get => index;
+        set => index = value;
+    }
 }

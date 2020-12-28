@@ -1603,7 +1603,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -0.5}
+  m_AnchoredPosition: {x: 40, y: -0.5}
   m_SizeDelta: {x: 1980, y: 187}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &850437759
@@ -1742,6 +1742,7 @@ MonoBehaviour:
   - {fileID: 26414677}
   - {fileID: 42068469}
   toggleHint: {fileID: 0}
+  dialogueOperator: {fileID: 0}
   languageScene: {fileID: 885196804}
   toggleLangManager: {fileID: 0}
   warningLangManager: {fileID: 0}
@@ -1749,6 +1750,8 @@ MonoBehaviour:
   imageToggle: {fileID: 151977064}
   toolHolderManager: {fileID: 0}
   toggleScene: {fileID: 0}
+  videoManager: {fileID: 0}
+  videoOperator: {fileID: 0}
 --- !u!114 &885196806
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2357,10 +2360,10 @@ MonoBehaviour:
       m_Calls: []
   m_CaretColor: {r: 0, g: 0, b: 0, a: 1}
   m_CustomCaretColor: 1
-  m_SelectionColor: {r: 0.65882355, g: 0.80784315, b: 1, a: 0.7529412}
+  m_SelectionColor: {r: 0.084905684, g: 0.084905684, b: 0.084905684, a: 0.7529412}
   m_Text: 
   m_CaretBlinkRate: 0.85
-  m_CaretWidth: 3
+  m_CaretWidth: 5
   m_ReadOnly: 0
 --- !u!114 &1184184681
 MonoBehaviour:
@@ -2525,7 +2528,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -0.5}
+  m_AnchoredPosition: {x: 40, y: -0.5}
   m_SizeDelta: {x: -20, y: -13}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1302721531
@@ -2792,7 +2795,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -0.5}
+  m_AnchoredPosition: {x: 40, y: -0.5}
   m_SizeDelta: {x: -20, y: -13}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1408682497
@@ -2894,10 +2897,10 @@ MonoBehaviour:
       m_Calls: []
   m_CaretColor: {r: 0, g: 0, b: 0, a: 1}
   m_CustomCaretColor: 1
-  m_SelectionColor: {r: 0.65882355, g: 0.80784315, b: 1, a: 0.7529412}
+  m_SelectionColor: {r: 0.084905684, g: 0.084905684, b: 0.084905684, a: 0.7529412}
   m_Text: 
   m_CaretBlinkRate: 0.85
-  m_CaretWidth: 3
+  m_CaretWidth: 5
   m_ReadOnly: 0
 --- !u!114 &1408682500
 MonoBehaviour:
@@ -3340,7 +3343,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -0.5}
+  m_AnchoredPosition: {x: 40, y: -0.5}
   m_SizeDelta: {x: -20, y: -13}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1761397001
@@ -3746,7 +3749,7 @@ MonoBehaviour:
   infoWarning: {fileID: 1761397004}
   panel: {fileID: 1861445350}
   begin: {fileID: 1917431164}
-  SceneName: MillScene
+  SceneName: ComponentDiscovery
 --- !u!114 &1861445353
 MonoBehaviour:
   m_ObjectHideFlags: 0

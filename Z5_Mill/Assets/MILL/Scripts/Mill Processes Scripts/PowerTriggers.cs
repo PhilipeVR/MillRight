@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class PowerTriggers : MonoBehaviour
 {
+    [SerializeField] private RampDownSpeedMill rampDownSpeed;
     [SerializeField] private DialogueManager dialogueManager;
     [SerializeField] private int[] anim;
     [SerializeField] private string[] transitionParameter;
@@ -15,6 +16,7 @@ public class PowerTriggers : MonoBehaviour
     [SerializeField] private ProcessAnimationController manager;
     [SerializeField] private string OnText, OffText;
     private List<PowerButtonToggle> powers;
+   
 
     // Start is called before the first frame update
     void Start()
@@ -44,6 +46,10 @@ public class PowerTriggers : MonoBehaviour
         if (buttonToggle != null)
         {
             buttonToggle.OnOffToggle(dialogueManager);
+            if (!buttonToggle.getMillState())
+            {
+                rampDownSpeed.RampDown();
+            }
         }
     }
 

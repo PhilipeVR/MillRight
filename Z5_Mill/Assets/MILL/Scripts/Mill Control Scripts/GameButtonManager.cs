@@ -13,6 +13,8 @@ public class GameButtonManager : MonoBehaviour
     [SerializeField]
     public GameObject animObject;
     public GameObject currentBit;
+    [SerializeField] private RampDownSpeedMill ramp;
+    [SerializeField] private String rotationParamName;
 
     public Boolean state;
     Animator anim_object, on_anim, off_anim;
@@ -38,7 +40,7 @@ public class GameButtonManager : MonoBehaviour
 
     public void turnOn()
     {
-        anim_object.speed = 2f;
+        anim_object.SetFloat(rotationParamName, 1f);
         currentBit.tag = drillTag;
         state = true;
     }
@@ -46,7 +48,7 @@ public class GameButtonManager : MonoBehaviour
     public void turnOff()
     {
         currentBit.tag = stopTag;
-        anim_object.speed = 0;
+        ramp.RampDown();
         state = false;
     }
 
