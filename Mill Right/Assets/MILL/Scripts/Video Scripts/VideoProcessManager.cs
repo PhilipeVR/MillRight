@@ -36,20 +36,7 @@ public class VideoProcessManager : MonoBehaviour
         VideoPanel.SetActive(false); //Deactivates youtube link on video panel
         //videoPlayer.Stop();
         videoPlayer.loopPointReached += VideoPlayed; //Adds listener to video player event system, activates if video has ended
-        VideoEvents.current.youtubePlayerException += LinkSent; //Adds listener to Video Event System, activates if youtube link produces error
-
-
     }
-
-    public void LinkSent() //Method called if error with video playback occurs
-    {
-        if (m_index > -1)
-        {
-            playedOnces[m_index] = true;
-            StopVideoButton.interactable = true;
-        }
-    }
-
 
     public void PauseVideo()
     {

@@ -37,26 +37,6 @@ public class Trigger
         return val;
     }
 
-    public Boolean PlaySequence(OperationManager controller)
-    {
-        Boolean val = false;
-        if (animIndex < transitionParams.Length)
-        {
-
-            if (index[animIndex] == controller.Index)
-            {
-                val = controller.PlayAnimation(transitionParams[animIndex], animationName[animIndex]);
-
-                if (val)
-                {
-                    animIndex++;
-                }
-            }
-        }
-
-        return val;
-    }
-
     public int Anim
     {
         get => anim;
@@ -89,7 +69,6 @@ public class Trigger
         } catch(IndexOutOfRangeException e)
         {
             return -1;
-        }
-       
+        }  
     }
 }

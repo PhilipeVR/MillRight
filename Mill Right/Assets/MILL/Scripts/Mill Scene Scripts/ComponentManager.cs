@@ -13,7 +13,6 @@ public class ComponentManager : MonoBehaviour
     [SerializeField] private Image infoImage;
     [SerializeField] private string initialTextFR, namePartFR;
     [SerializeField] private Checklist checklist;
-    [SerializeField] private VideoOperator videoOperator;
     [SerializeField] private int IndexVideo;
     private string initialText, initialName;
 
@@ -130,10 +129,7 @@ public class ComponentManager : MonoBehaviour
             {
                 menuBTN.SetActive(true);
             }
-            if(videoOperator != null)
-            {
-                videoOperator.PlayVideoClip(IndexVideo);
-            }
+            
         }
     }
 
