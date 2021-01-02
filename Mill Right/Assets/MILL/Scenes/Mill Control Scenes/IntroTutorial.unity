@@ -1593,7 +1593,7 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 38.65
+  m_fontSize: 37.55
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -3825,7 +3825,6 @@ MonoBehaviour:
   - {fileID: 2035754905}
   - {fileID: 762320803}
   toggleHint: {fileID: 0}
-  dialogueOperator: {fileID: 0}
   languageScene: {fileID: 852756862}
   toggleLangManager: {fileID: 420924302}
   warningLangManager: {fileID: 0}
@@ -3833,11 +3832,9 @@ MonoBehaviour:
   imageToggle: {fileID: 0}
   toolHolderManager: {fileID: 0}
   toggleScene: {fileID: 0}
-  videoManager: {fileID: 0}
   videoProcessManager: {fileID: 711629428}
   videoStandardController: {fileID: 1330229582}
   videoController: {fileID: 0}
-  videoOperator: {fileID: 0}
 --- !u!1 &869774087
 GameObject:
   m_ObjectHideFlags: 0
@@ -4413,10 +4410,8 @@ MonoBehaviour:
     panel: 0
     panelGO: {fileID: 0}
     controlPanel: 0
-    panelControl: {fileID: 0}
     panelControlBool: 0
     tab: 0
-    control: {fileID: 0}
   - sentenceIndex: 2
     triggerIndex: 1
     triggerObject:
@@ -4424,10 +4419,8 @@ MonoBehaviour:
     panel: 0
     panelGO: {fileID: 0}
     controlPanel: 0
-    panelControl: {fileID: 0}
     panelControlBool: 0
     tab: 0
-    control: {fileID: 0}
   - sentenceIndex: 5
     triggerIndex: 2
     triggerObject:
@@ -4435,10 +4428,8 @@ MonoBehaviour:
     panel: 0
     panelGO: {fileID: 0}
     controlPanel: 0
-    panelControl: {fileID: 0}
     panelControlBool: 0
     tab: 0
-    control: {fileID: 0}
   - sentenceIndex: 8
     triggerIndex: 3
     triggerObject:
@@ -4446,10 +4437,8 @@ MonoBehaviour:
     panel: 0
     panelGO: {fileID: 0}
     controlPanel: 0
-    panelControl: {fileID: 0}
     panelControlBool: 0
     tab: 0
-    control: {fileID: 0}
   - sentenceIndex: 9
     triggerIndex: 4
     triggerObject:
@@ -4457,10 +4446,8 @@ MonoBehaviour:
     panel: 0
     panelGO: {fileID: 0}
     controlPanel: 0
-    panelControl: {fileID: 0}
     panelControlBool: 0
     tab: 0
-    control: {fileID: 0}
   - sentenceIndex: 10
     triggerIndex: 5
     triggerObject:
@@ -4468,10 +4455,8 @@ MonoBehaviour:
     panel: 0
     panelGO: {fileID: 0}
     controlPanel: 0
-    panelControl: {fileID: 0}
     panelControlBool: 0
     tab: 0
-    control: {fileID: 0}
   sideMillingInfo:
   - sentenceIndex: 3
     triggerIndex: 0
@@ -4480,10 +4465,8 @@ MonoBehaviour:
     panel: 0
     panelGO: {fileID: 0}
     controlPanel: 0
-    panelControl: {fileID: 0}
     panelControlBool: 0
     tab: 0
-    control: {fileID: 0}
   - sentenceIndex: 4
     triggerIndex: 1
     triggerObject:
@@ -4491,10 +4474,8 @@ MonoBehaviour:
     panel: 0
     panelGO: {fileID: 0}
     controlPanel: 0
-    panelControl: {fileID: 0}
     panelControlBool: 0
     tab: 0
-    control: {fileID: 0}
   - sentenceIndex: 5
     triggerIndex: 2
     triggerObject:
@@ -4502,10 +4483,8 @@ MonoBehaviour:
     panel: 0
     panelGO: {fileID: 0}
     controlPanel: 0
-    panelControl: {fileID: 0}
     panelControlBool: 0
     tab: 0
-    control: {fileID: 0}
   - sentenceIndex: 6
     triggerIndex: 3
     triggerObject:
@@ -4513,10 +4492,8 @@ MonoBehaviour:
     panel: 0
     panelGO: {fileID: 0}
     controlPanel: 0
-    panelControl: {fileID: 0}
     panelControlBool: 0
     tab: 0
-    control: {fileID: 0}
   - sentenceIndex: 7
     triggerIndex: 4
     triggerObject:
@@ -4524,10 +4501,8 @@ MonoBehaviour:
     panel: 0
     panelGO: {fileID: 0}
     controlPanel: 0
-    panelControl: {fileID: 0}
     panelControlBool: 0
     tab: 0
-    control: {fileID: 0}
   - sentenceIndex: 8
     triggerIndex: 5
     triggerObject:
@@ -4535,10 +4510,8 @@ MonoBehaviour:
     panel: 0
     panelGO: {fileID: 0}
     controlPanel: 0
-    panelControl: {fileID: 0}
     panelControlBool: 0
     tab: 0
-    control: {fileID: 0}
   - sentenceIndex: 9
     triggerIndex: 6
     triggerObject:
@@ -4546,10 +4519,8 @@ MonoBehaviour:
     panel: 0
     panelGO: {fileID: 0}
     controlPanel: 0
-    panelControl: {fileID: 0}
     panelControlBool: 0
     tab: 0
-    control: {fileID: 0}
   - sentenceIndex: 10
     triggerIndex: 7
     triggerObject:
@@ -4557,10 +4528,8 @@ MonoBehaviour:
     panel: 0
     panelGO: {fileID: 0}
     controlPanel: 0
-    panelControl: {fileID: 0}
     panelControlBool: 0
     tab: 0
-    control: {fileID: 0}
   - sentenceIndex: 11
     triggerIndex: 8
     triggerObject:
@@ -4568,10 +4537,8 @@ MonoBehaviour:
     panel: 0
     panelGO: {fileID: 0}
     controlPanel: 0
-    panelControl: {fileID: 0}
     panelControlBool: 0
     tab: 0
-    control: {fileID: 0}
   - sentenceIndex: 12
     triggerIndex: 9
     triggerObject:
@@ -4579,10 +4546,8 @@ MonoBehaviour:
     panel: 0
     panelGO: {fileID: 0}
     controlPanel: 0
-    panelControl: {fileID: 0}
     panelControlBool: 0
     tab: 0
-    control: {fileID: 0}
   - sentenceIndex: 13
     triggerIndex: 10
     triggerObject:
@@ -4590,10 +4555,8 @@ MonoBehaviour:
     panel: 0
     panelGO: {fileID: 0}
     controlPanel: 0
-    panelControl: {fileID: 0}
     panelControlBool: 0
     tab: 0
-    control: {fileID: 0}
   - sentenceIndex: 14
     triggerIndex: 11
     triggerObject:
@@ -4601,10 +4564,8 @@ MonoBehaviour:
     panel: 0
     panelGO: {fileID: 0}
     controlPanel: 0
-    panelControl: {fileID: 0}
     panelControlBool: 0
     tab: 0
-    control: {fileID: 0}
   - sentenceIndex: 15
     triggerIndex: 12
     triggerObject:
@@ -4612,10 +4573,8 @@ MonoBehaviour:
     panel: 0
     panelGO: {fileID: 0}
     controlPanel: 0
-    panelControl: {fileID: 0}
     panelControlBool: 0
     tab: 0
-    control: {fileID: 0}
   faceMillingInfo:
   - sentenceIndex: 1
     triggerIndex: 0
@@ -4624,10 +4583,8 @@ MonoBehaviour:
     panel: 0
     panelGO: {fileID: 0}
     controlPanel: 0
-    panelControl: {fileID: 0}
     panelControlBool: 0
     tab: 0
-    control: {fileID: 0}
   - sentenceIndex: 2
     triggerIndex: 1
     triggerObject:
@@ -4635,10 +4592,8 @@ MonoBehaviour:
     panel: 0
     panelGO: {fileID: 0}
     controlPanel: 0
-    panelControl: {fileID: 0}
     panelControlBool: 0
     tab: 0
-    control: {fileID: 0}
   - sentenceIndex: 3
     triggerIndex: 2
     triggerObject:
@@ -4646,10 +4601,8 @@ MonoBehaviour:
     panel: 0
     panelGO: {fileID: 0}
     controlPanel: 0
-    panelControl: {fileID: 0}
     panelControlBool: 0
     tab: 0
-    control: {fileID: 0}
   - sentenceIndex: 4
     triggerIndex: 3
     triggerObject:
@@ -4657,10 +4610,8 @@ MonoBehaviour:
     panel: 0
     panelGO: {fileID: 0}
     controlPanel: 0
-    panelControl: {fileID: 0}
     panelControlBool: 0
     tab: 0
-    control: {fileID: 0}
   - sentenceIndex: 5
     triggerIndex: 4
     triggerObject:
@@ -4668,10 +4619,8 @@ MonoBehaviour:
     panel: 0
     panelGO: {fileID: 0}
     controlPanel: 0
-    panelControl: {fileID: 0}
     panelControlBool: 0
     tab: 0
-    control: {fileID: 0}
   - sentenceIndex: 6
     triggerIndex: 5
     triggerObject:
@@ -4679,10 +4628,8 @@ MonoBehaviour:
     panel: 0
     panelGO: {fileID: 0}
     controlPanel: 0
-    panelControl: {fileID: 0}
     panelControlBool: 0
     tab: 0
-    control: {fileID: 0}
   - sentenceIndex: 7
     triggerIndex: 6
     triggerObject:
@@ -4690,10 +4637,8 @@ MonoBehaviour:
     panel: 0
     panelGO: {fileID: 0}
     controlPanel: 0
-    panelControl: {fileID: 0}
     panelControlBool: 0
     tab: 0
-    control: {fileID: 0}
   - sentenceIndex: 8
     triggerIndex: 7
     triggerObject:
@@ -4701,10 +4646,8 @@ MonoBehaviour:
     panel: 0
     panelGO: {fileID: 0}
     controlPanel: 0
-    panelControl: {fileID: 0}
     panelControlBool: 0
     tab: 0
-    control: {fileID: 0}
   - sentenceIndex: 9
     triggerIndex: 8
     triggerObject:
@@ -4712,10 +4655,8 @@ MonoBehaviour:
     panel: 0
     panelGO: {fileID: 0}
     controlPanel: 0
-    panelControl: {fileID: 0}
     panelControlBool: 0
     tab: 0
-    control: {fileID: 0}
   - sentenceIndex: 10
     triggerIndex: 9
     triggerObject:
@@ -4723,10 +4664,8 @@ MonoBehaviour:
     panel: 0
     panelGO: {fileID: 0}
     controlPanel: 0
-    panelControl: {fileID: 0}
     panelControlBool: 0
     tab: 0
-    control: {fileID: 0}
 --- !u!4 &952629967
 Transform:
   m_ObjectHideFlags: 0
@@ -11718,6 +11657,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5521113171978516624, guid: 117951c1affdbae4a9000444b5825b8d,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.259
+      objectReference: {fileID: 0}
     - target: {fileID: 5521113172039544248, guid: 117951c1affdbae4a9000444b5825b8d,
         type: 3}
       propertyPath: camCurrentNum
@@ -11778,6 +11722,16 @@ PrefabInstance:
       propertyPath: buttonTriggers.Array.data[3]
       value: 
       objectReference: {fileID: 1937965049}
+    - target: {fileID: 5521113173305204014, guid: 117951c1affdbae4a9000444b5825b8d,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.1717
+      objectReference: {fileID: 0}
+    - target: {fileID: 5521113173305204014, guid: 117951c1affdbae4a9000444b5825b8d,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.09940001
+      objectReference: {fileID: 0}
     - target: {fileID: 5521113173332164553, guid: 117951c1affdbae4a9000444b5825b8d,
         type: 3}
       propertyPath: triggerFlash
@@ -11808,6 +11762,21 @@ PrefabInstance:
       propertyPath: buttonTriggers.Array.data[3]
       value: 
       objectReference: {fileID: 1937965049}
+    - target: {fileID: 5521113173388906144, guid: 117951c1affdbae4a9000444b5825b8d,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.14724222
+      objectReference: {fileID: 0}
+    - target: {fileID: 5521113173388906144, guid: 117951c1affdbae4a9000444b5825b8d,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.09640755
+      objectReference: {fileID: 0}
+    - target: {fileID: 5521113173388906144, guid: 117951c1affdbae4a9000444b5825b8d,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.10227907
+      objectReference: {fileID: 0}
     - target: {fileID: 5521113173450282288, guid: 117951c1affdbae4a9000444b5825b8d,
         type: 3}
       propertyPath: m_Name
@@ -11918,6 +11887,16 @@ PrefabInstance:
       propertyPath: buttonTriggers.Array.data[3]
       value: 
       objectReference: {fileID: 1937965049}
+    - target: {fileID: 5521113173922220268, guid: 117951c1affdbae4a9000444b5825b8d,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5521113173922220268, guid: 117951c1affdbae4a9000444b5825b8d,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 117951c1affdbae4a9000444b5825b8d, type: 3}
 --- !u!95 &5521113172093981814 stripped
