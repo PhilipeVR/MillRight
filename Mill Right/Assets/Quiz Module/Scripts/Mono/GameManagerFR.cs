@@ -326,7 +326,7 @@ public class GameManagerFR : MonoBehaviour {
     // Function that is called to load all questions from the Resource folder.
     void LoadQuestions()
     {
-        Object[] objs = Resources.LoadAll("Questions", typeof(QuestionFR));
+        Object[] objs = Resources.LoadAll("Questions 2", typeof(QuestionFR));
         _questions = new QuestionFR[objs.Length];
         for (int i = 0; i < objs.Length; i++)
         {
