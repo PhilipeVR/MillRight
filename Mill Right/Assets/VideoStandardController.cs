@@ -6,6 +6,7 @@ using UnityEngine.Video;
 
 public class VideoStandardController : MonoBehaviour
 {
+    [SerializeField] private CameraToggle cameraToggle;
     [SerializeField] private GameObject VideoPanel;
     [SerializeField] private Text Title;
     [SerializeField] private VideoPlayer videoPlayer;
@@ -36,6 +37,7 @@ public class VideoStandardController : MonoBehaviour
     public void PlayVideo()
     {
         videoPlayer.Play();
+
         if (!playedOnce)
         {
             StopVideoButton.interactable = false;
@@ -68,6 +70,7 @@ public class VideoStandardController : MonoBehaviour
     {
         if (playedOnce)
         {
+            cameraToggle.SwtichView(); //Change camera back to origin
             VideoPanel.SetActive(false);
         }
     }
@@ -75,6 +78,11 @@ public class VideoStandardController : MonoBehaviour
     public void StartVideo()
     {
         VideoPanel.SetActive(true);
+        int tmpIndex = cameraToggle.CameraNum;
+        for (int i = 0; i < tmpIndex -1; i++)
+        {
+            cameraToggle.SwtichView(); //Change camera view to improve performance(performance drops with camera controller view)
+        }
         if (language)
         {
             videoPlayer.clip = videoClip;

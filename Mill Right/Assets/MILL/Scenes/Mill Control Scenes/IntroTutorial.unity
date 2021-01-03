@@ -1593,7 +1593,7 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 37.55
+  m_fontSize: 38.65
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -7145,10 +7145,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e16c8102d41663341b767319bf0bee35, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cameraToggle: {fileID: 54655437}
   VideoPanel: {fileID: 1989399960}
   Title: {fileID: 2036849753}
   videoPlayer: {fileID: 1304403310}
-  videoClip: {fileID: 32900000, guid: 3bad35b9791d42048a9760d216e359ff, type: 3}
+  videoClip: {fileID: 32900000, guid: 50d9c6346f0cf17418cc70f820f5b264, type: 3}
   videoClipFR: {fileID: 32900000, guid: f89aa4b1f979c7d49809344d101bf7a3, type: 3}
   title: DRO & Speed Calculation
   titleFR: DRO & Calcul de la vitesse de coupe

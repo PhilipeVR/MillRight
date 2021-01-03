@@ -120,7 +120,7 @@ public class VideoProcessManager : MonoBehaviour
         if (index >= 0 && index < videoClips.Count)
         {
             int tmpIndex = cameraToggle.CameraNum;
-            for (int i = 0; i< tmpIndex; i++)
+            for (int i = 0; i< tmpIndex -1; i++)
             {
                 cameraToggle.SwtichView(); //Change camera view to improve performance(performance drops with camera controller view)
             }

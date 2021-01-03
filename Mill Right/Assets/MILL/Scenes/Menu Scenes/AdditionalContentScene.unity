@@ -1296,6 +1296,9 @@ MonoBehaviour:
   imageToggle: {fileID: 2101881461}
   toolHolderManager: {fileID: 0}
   toggleScene: {fileID: 0}
+  videoProcessManager: {fileID: 0}
+  videoStandardController: {fileID: 0}
+  videoController: {fileID: 0}
 --- !u!1 &1179126059
 GameObject:
   m_ObjectHideFlags: 0
@@ -1571,7 +1574,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: SpindleScene
+          m_StringArgument: ToolHolding
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1249432939
@@ -2692,7 +2695,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: MillScene
+          m_StringArgument: ComponentDiscovery
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1905269906
