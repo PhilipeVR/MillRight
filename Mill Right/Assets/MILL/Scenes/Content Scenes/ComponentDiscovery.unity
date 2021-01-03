@@ -2048,7 +2048,7 @@ MonoBehaviour:
   VideoPanel: {fileID: 2110359599}
   Title: {fileID: 1931217241}
   videoPlayer: {fileID: 879090626}
-  videoClip: {fileID: 32900000, guid: 50d9c6346f0cf17418cc70f820f5b264, type: 3}
+  videoClip: {fileID: 32900000, guid: 3bad35b9791d42048a9760d216e359ff, type: 3}
   videoClipFR: {fileID: 32900000, guid: 50d9c6346f0cf17418cc70f820f5b264, type: 3}
   title: Introduction
   titleFR: Introduction
@@ -21292,7 +21292,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &2110359600
 RectTransform:
   m_ObjectHideFlags: 0
