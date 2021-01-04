@@ -41,11 +41,15 @@ namespace YoutubePlayer
         private VideoPlayer videoPlayer;
         private YoutubeClient youtubeClient;
 
-        public void setIsFrench() {
+        public bool Lang {
+            get => isFrench;
+            set => isFrench = value;
+        }
 
-
-            isFrench = true;
-
+        public void Links(string LinkEN, string LinkFR)
+        {
+            youtubeUrlFR = LinkFR;
+            youtubeUrlEN = LinkEN;
 
         }
 
@@ -55,17 +59,25 @@ namespace YoutubePlayer
             videoPlayer = GetComponent<VideoPlayer>();
             if (isFrench)
             {
-
-
                 youtubeUrl = youtubeUrlFR;
-
             }
-
             else {
                 youtubeUrl = youtubeUrlEN;
-
             }
 
+        }
+
+        public async void PlayYoutubeVid()
+        {
+            if (isFrench)
+            {
+                youtubeUrl = youtubeUrlFR;
+            }
+            else
+            {
+                youtubeUrl = youtubeUrlEN;
+            }
+            await PlayVideoAsync();
         }
 
         private async void OnEnable()

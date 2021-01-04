@@ -2933,19 +2933,20 @@ MonoBehaviour:
   dialogueInterface: {fileID: 1290375430}
   VideoPanel: {fileID: 589037160}
   videoPlayer: {fileID: 2132701048}
+  youtubePlayer: {fileID: 2132701052}
   StopVideoButton: {fileID: 1931621263}
   playButton: {fileID: 850768457}
   pauseButton: {fileID: 1983954865}
   stopButton: {fileID: 1864256453}
   title: {fileID: 1134303694}
   videoClips:
-  - {fileID: 32900000, guid: 3bad35b9791d42048a9760d216e359ff, type: 3}
-  - {fileID: 32900000, guid: 50d9c6346f0cf17418cc70f820f5b264, type: 3}
-  - {fileID: 32900000, guid: f89aa4b1f979c7d49809344d101bf7a3, type: 3}
+  - https://www.youtube.com/watch?v=mHVXzNQBQM4&list=PLA-oTz8kRbroIWGOhI92m4hTYLP_2aNcx&index=5
+  - https://www.youtube.com/watch?v=xJzGX-dLg6c&list=PLA-oTz8kRbroIWGOhI92m4hTYLP_2aNcx&index=8
+  - https://www.youtube.com/watch?v=QJos54phnP4&list=PLA-oTz8kRbroIWGOhI92m4hTYLP_2aNcx&index=7
   videoClipsFR:
-  - {fileID: 32900000, guid: 3bad35b9791d42048a9760d216e359ff, type: 3}
-  - {fileID: 32900000, guid: 50d9c6346f0cf17418cc70f820f5b264, type: 3}
-  - {fileID: 32900000, guid: f89aa4b1f979c7d49809344d101bf7a3, type: 3}
+  - https://www.youtube.com/watch?v=mHVXzNQBQM4&list=PLA-oTz8kRbroIWGOhI92m4hTYLP_2aNcx&index=5
+  - https://www.youtube.com/watch?v=xJzGX-dLg6c&list=PLA-oTz8kRbroIWGOhI92m4hTYLP_2aNcx&index=8
+  - https://www.youtube.com/watch?v=QJos54phnP4&list=PLA-oTz8kRbroIWGOhI92m4hTYLP_2aNcx&index=7
   operationSprite:
   - {fileID: 21300000, guid: f2272e2fd9325c74c83193695454c89b, type: 3}
   - {fileID: 21300000, guid: c26f205cc478786458678189d979d312, type: 3}
@@ -6772,6 +6773,7 @@ GameObject:
   - component: {fileID: 1304403312}
   - component: {fileID: 1304403311}
   - component: {fileID: 1304403310}
+  - component: {fileID: 1304403314}
   m_Layer: 5
   m_Name: VideoPlayer
   m_TagString: Untagged
@@ -6797,7 +6799,7 @@ VideoPlayer:
   m_TargetMaterialProperty: _MainTex
   m_RenderMode: 2
   m_AspectRatio: 2
-  m_DataSource: 0
+  m_DataSource: 1
   m_PlaybackSpeed: 1
   m_AudioOutputMode: 2
   m_TargetAudioSources:
@@ -6866,6 +6868,20 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1304403314
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1304403309}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3768fe280903842fdaa2a016022624f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  youtubeUrlEN: 
+  youtubeUrlFR: 
 --- !u!1 &1308155209
 GameObject:
   m_ObjectHideFlags: 0
@@ -7149,8 +7165,9 @@ MonoBehaviour:
   VideoPanel: {fileID: 1989399960}
   Title: {fileID: 2036849753}
   videoPlayer: {fileID: 1304403310}
-  videoClip: {fileID: 32900000, guid: 50d9c6346f0cf17418cc70f820f5b264, type: 3}
-  videoClipFR: {fileID: 32900000, guid: f89aa4b1f979c7d49809344d101bf7a3, type: 3}
+  videoClip: https://www.youtube.com/watch?v=7tiSAp_0qG4&list=PLA-oTz8kRbroIWGOhI92m4hTYLP_2aNcx&index=6
+  videoClipFR: https://www.youtube.com/watch?v=7tiSAp_0qG4&list=PLA-oTz8kRbroIWGOhI92m4hTYLP_2aNcx&index=6
+  youtubePlayer: {fileID: 1304403314}
   title: DRO & Speed Calculation
   titleFR: DRO & Calcul de la vitesse de coupe
   StopVideoButton: {fileID: 1670098375}
@@ -11547,6 +11564,7 @@ GameObject:
   - component: {fileID: 2132701050}
   - component: {fileID: 2132701049}
   - component: {fileID: 2132701048}
+  - component: {fileID: 2132701052}
   m_Layer: 5
   m_Name: VideoPlayer
   m_TagString: Untagged
@@ -11572,7 +11590,7 @@ VideoPlayer:
   m_TargetMaterialProperty: _MainTex
   m_RenderMode: 2
   m_AspectRatio: 2
-  m_DataSource: 0
+  m_DataSource: 1
   m_PlaybackSpeed: 1
   m_AudioOutputMode: 2
   m_TargetAudioSources:
@@ -11641,6 +11659,20 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &2132701052
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2132701047}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3768fe280903842fdaa2a016022624f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  youtubeUrlEN: 
+  youtubeUrlFR: 
 --- !u!1001 &5521113172093981813
 PrefabInstance:
   m_ObjectHideFlags: 0

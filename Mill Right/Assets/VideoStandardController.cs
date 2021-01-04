@@ -10,7 +10,8 @@ public class VideoStandardController : MonoBehaviour
     [SerializeField] private GameObject VideoPanel;
     [SerializeField] private Text Title;
     [SerializeField] private VideoPlayer videoPlayer;
-    [SerializeField] private VideoClip videoClip, videoClipFR;
+    [SerializeField] private string videoClip, videoClipFR;
+    [SerializeField] private YoutubePlayer.YoutubePlayer youtubePlayer;
     [SerializeField] private string title, titleFR;
     [SerializeField] private Button StopVideoButton, playButton, pauseButton, stopButton;
     [SerializeField] private bool StartOnAwake;
@@ -29,7 +30,6 @@ public class VideoStandardController : MonoBehaviour
         if (StartOnAwake)
         {
             StartVideo();
-            PlayVideo();
         }
 
     }
@@ -37,7 +37,6 @@ public class VideoStandardController : MonoBehaviour
     public void PlayVideo()
     {
         videoPlayer.Play();
-
         if (!playedOnce)
         {
             StopVideoButton.interactable = false;
@@ -83,16 +82,29 @@ public class VideoStandardController : MonoBehaviour
         {
             cameraToggle.SwtichView(); //Change camera view to improve performance(performance drops with camera controller view)
         }
+        youtubePlayer.Links(videoClip, videoClipFR);
+        youtubePlayer.Lang = language;
         if (language)
         {
-            videoPlayer.clip = videoClip;
             Title.text = title;
         }
         else
         {
-            videoPlayer.clip = videoClipFR;
             Title.text = titleFR;
         }
+        youtubePlayer.PlayYoutubeVid();
+        if (!playedOnce)
+        {
+            StopVideoButton.interactable = false;
+            stopButton.interactable = false;
+        }
+        else
+        {
+            StopVideoButton.interactable = true;
+            stopButton.interactable = true;
+
+        }
+
     }
 
     public void VideoPlayed(VideoPlayer video)
