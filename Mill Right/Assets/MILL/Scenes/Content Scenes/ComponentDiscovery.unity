@@ -2781,6 +2781,7 @@ GameObject:
   - component: {fileID: 466624115}
   - component: {fileID: 466624114}
   - component: {fileID: 466624118}
+  - component: {fileID: 466624119}
   m_Layer: 5
   m_Name: Checklist_Panel
   m_TagString: Untagged
@@ -2854,7 +2855,7 @@ RectTransform:
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.01, y: 0.2}
-  m_AnchorMax: {x: 0.25, y: 0.9}
+  m_AnchorMax: {x: 0.2, y: 0.9}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -2870,6 +2871,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4cb645d67b6c4947a7f2f7cc34f27d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &466624119
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 466624113}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f3fd725f7ad7f04c88ad2301e8b9c48, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AnchorMinEN: {x: 0.01, y: 0.2}
+  AnchorMinFR: {x: 0.01, y: 0.2}
+  AnchorMaxEN: {x: 0.2, y: 0.9}
+  AnchorMaxFR: {x: 0.3, y: 0.9}
 --- !u!1 &468273670
 GameObject:
   m_ObjectHideFlags: 0
@@ -5148,6 +5165,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7cfea0e6951643b418626597561e2324, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  anchorSwitcher: {fileID: 466624119}
   partData: {fileID: 11400000, guid: 3794a188a118b5641bd1a2769ab87dac, type: 2}
   continueBTN: {fileID: 1757929038}
   menuBTN: {fileID: 2097448484}
@@ -7689,6 +7707,11 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1017425295757641600, guid: 9203eff60ac2ef14993dedd9dcbb20f6,
+        type: 3}
+      propertyPath: hintButton
+      value: 
+      objectReference: {fileID: 1857659903}
     - target: {fileID: 1019706685653696047, guid: 9203eff60ac2ef14993dedd9dcbb20f6,
         type: 3}
       propertyPath: m_StaticEditorFlags
@@ -21319,7 +21342,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2110359600
 RectTransform:
   m_ObjectHideFlags: 0

@@ -25,13 +25,14 @@ public class Checklist : MonoBehaviour
             if (language)
             {
                 checklist[i].GetComponentInChildren<Text>().text = details[i].partNameFR;
+
             }
             else
             {
                 checklist[i].GetComponentInChildren<Text>().text = details[i].partName;
             }
         }
-
+        
         language = !language;
     }
 }

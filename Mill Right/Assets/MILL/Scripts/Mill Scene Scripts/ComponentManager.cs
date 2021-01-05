@@ -7,6 +7,7 @@ using UnityEngine.UI;
 public class ComponentManager : MonoBehaviour
 {
     private List<ComponentDetail> details;
+    [SerializeField] private AnchorSwitcher anchorSwitcher;
     [SerializeField] private PartDataScriptable partData;
     [SerializeField] private GameObject continueBTN, menuBTN;
     [SerializeField] private Text namePart, info, partsExamined, totalNumOfParts;
@@ -85,7 +86,7 @@ public class ComponentManager : MonoBehaviour
             partsExamined.text = partsExam + counter.ToString();
 
         }
-
+        anchorSwitcher.SwitchAnchors(language);
         checklist.LanguageSwitch();
         language = !language;
     }

@@ -144,6 +144,7 @@ public class DialogueManager : MonoBehaviour
     void EndDialogue()
     {
         DeactivateAtEndDialogue.SetActive(false);
+        DialogEvents.current.DialogFinished();
         if (controllerPresent)
         {
             if (!animationController.Operation.TriggerAnimation.Done && animationController.Operation.TriggerAnimation.Active)

@@ -3,10 +3,12 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Security.Cryptography;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ComponentHint : MonoBehaviour
 {
     // Start is called before the first frame update
+    [SerializeField] private Button hintButton;
     public List<SetupOnHover> parts;
     public SetupOnHover hintedPart;
     public int index;
@@ -28,20 +30,27 @@ public class ComponentHint : MonoBehaviour
     // Update is called once per frame
     public void ShowHint()
     {
-        if(hintedPart == null)
+        if (parts.Count > 0)
         {
-            index = UnityEngine.Random.Range(0, parts.Count);
-            hintedPart = parts[index];
+            if (hintedPart == null)
+            {
+                index = UnityEngine.Random.Range(0, parts.Count);
+                hintedPart = parts[index];
+            }
+            if (hintedPart.clicked)
+            {
+                parts.Remove(hintedPart);
+                index = UnityEngine.Random.Range(0, parts.Count);
+                hintedPart = parts[index];
+            }
+            if (!hintedPart.flashing)
+            {
+                hintedPart.HintFlash();
+            }
         }
-        if (hintedPart.clicked)
+        if(parts.Count == 0)
         {
-            parts.Remove(hintedPart);
-            index = UnityEngine.Random.Range(0, parts.Count);
-            hintedPart = parts[index];
-        }
-        if (!hintedPart.flashing)
-        {
-            hintedPart.HintFlash();
+            hintButton.interactable = false;
         }
     }
 

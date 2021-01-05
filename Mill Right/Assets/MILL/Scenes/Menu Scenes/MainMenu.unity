@@ -1742,7 +1742,6 @@ MonoBehaviour:
   - {fileID: 26414677}
   - {fileID: 42068469}
   toggleHint: {fileID: 0}
-  dialogueOperator: {fileID: 0}
   languageScene: {fileID: 885196804}
   toggleLangManager: {fileID: 0}
   warningLangManager: {fileID: 0}
@@ -1750,8 +1749,9 @@ MonoBehaviour:
   imageToggle: {fileID: 151977064}
   toolHolderManager: {fileID: 0}
   toggleScene: {fileID: 0}
-  videoManager: {fileID: 0}
-  videoOperator: {fileID: 0}
+  videoProcessManager: {fileID: 0}
+  videoStandardController: {fileID: 0}
+  videoController: {fileID: 0}
 --- !u!114 &885196806
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2349,7 +2349,7 @@ MonoBehaviour:
   m_AsteriskChar: 42
   m_KeyboardType: 0
   m_LineType: 0
-  m_HideMobileInput: 0
+  m_HideMobileInput: 1
   m_CharacterValidation: 0
   m_CharacterLimit: 0
   m_OnEndEdit:
@@ -2360,9 +2360,9 @@ MonoBehaviour:
       m_Calls: []
   m_CaretColor: {r: 0, g: 0, b: 0, a: 1}
   m_CustomCaretColor: 1
-  m_SelectionColor: {r: 0.084905684, g: 0.084905684, b: 0.084905684, a: 0.7529412}
+  m_SelectionColor: {r: 0.084905684, g: 0.084905684, b: 0.084905684, a: 0.85882354}
   m_Text: 
-  m_CaretBlinkRate: 0.85
+  m_CaretBlinkRate: 0.99
   m_CaretWidth: 5
   m_ReadOnly: 0
 --- !u!114 &1184184681
@@ -3718,7 +3718,7 @@ RectTransform:
   m_GameObject: {fileID: 1861445350}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_LocalScale: {x: 0.8, y: 0.8, z: 1}
   m_Children:
   - {fileID: 190457726}
   m_Father: {fileID: 2105349672}

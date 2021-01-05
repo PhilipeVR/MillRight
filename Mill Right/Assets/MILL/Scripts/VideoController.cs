@@ -41,6 +41,10 @@ public class VideoController : MonoBehaviour
     void Start()
     {
         playedOnce = new bool[videoClip.Count];
+        for(int i = 0; i<videoClip.Count; i++)
+        {
+            playedOnce[i] = false;
+        }
         StopVideoButton.interactable = false;
         stopButton.interactable = false;
         VideoPanel.SetActive(false);
@@ -136,6 +140,7 @@ public class VideoController : MonoBehaviour
             playedOnce[m_index] = true;
             StopVideoButton.interactable = true;
             stopButton.interactable = true;
+            buttonInteractable.InteractButton();
         }
         playButton.gameObject.SetActive(true);
         pauseButton.gameObject.SetActive(false);
