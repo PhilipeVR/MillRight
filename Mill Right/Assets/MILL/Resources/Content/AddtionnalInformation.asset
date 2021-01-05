@@ -30,7 +30,7 @@ MonoBehaviour:
     sentenceFR: "Une broche est un axe rotatif (permet des mouvements de rotation)
       de la fraiseuse. Il s'agit d'un cylindre creux qui a souvent un arbre \xE0
       son noyau qui maintient le porte-outil."
-    image: {fileID: 21300000, guid: 151e8fcb6db40ef4fa2ea33936859697, type: 3}
+    image: {fileID: 21300000, guid: fdf61091f4df450499ff847736f1a2ee, type: 3}
   - partName: End Mill
     partNameFR: Fraise En Bout
     sentence: 'An end mill is a type of cutter. It is used for milling applications.
