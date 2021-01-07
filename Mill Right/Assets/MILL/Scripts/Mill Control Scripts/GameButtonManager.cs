@@ -13,7 +13,7 @@ public class GameButtonManager : MonoBehaviour
     [SerializeField]
     public GameObject animObject;
     public GameObject currentBit;
-    [SerializeField] private RampDownSpeedMill ramp;
+    [SerializeField] private SimRampDown ramp;
     [SerializeField] private String rotationParamName;
 
     public Boolean state;
@@ -25,7 +25,7 @@ public class GameButtonManager : MonoBehaviour
         state = false;
         stopTag = currentBit.tag;
         anim_object = animObject.GetComponent<Animator>();
-        anim_object.speed = 0;
+        anim_object.SetFloat(rotationParamName, 0f);
     }
 
     // Update is called once per frame
@@ -40,6 +40,7 @@ public class GameButtonManager : MonoBehaviour
 
     public void turnOn()
     {
+        anim_object.speed = 1;
         anim_object.SetFloat(rotationParamName, 1f);
         currentBit.tag = drillTag;
         state = true;

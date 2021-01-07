@@ -8,7 +8,6 @@ public class LoadSceneScript : MonoBehaviour
     
     public void loadlevel(string scene)
     {
-        Debug.Log(scene);
         SceneManager.LoadScene(scene);
     }
 
