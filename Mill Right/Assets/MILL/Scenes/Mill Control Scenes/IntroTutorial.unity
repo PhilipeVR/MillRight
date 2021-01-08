@@ -1593,7 +1593,7 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 38.65
+  m_fontSize: 37.55
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -2335,7 +2335,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &589037161
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3367,7 +3367,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9edfe0da26ee89543a5a9f1b7e3ac6c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enabledColor: {r: 0.6039216, g: 0.98039216, b: 0.5647059, a: 0}
+  enabledColor: {r: 0.6039216, g: 0.98039216, b: 0.5647059, a: 1}
   disabledColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
   buttonName: zLock
 --- !u!114 &834433734
@@ -4208,7 +4208,6 @@ GameObject:
   - component: {fileID: 942751488}
   - component: {fileID: 942751487}
   - component: {fileID: 942751486}
-  - component: {fileID: 942751490}
   m_Layer: 5
   m_Name: DRO_Panel
   m_TagString: Untagged
@@ -4332,27 +4331,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 942751484}
   m_CullTransparentMesh: 0
---- !u!114 &942751490
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 942751484}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5000e1b620af4204ca1a41a0d6bc828d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  buttons:
-  - {fileID: 370516857}
-  - {fileID: 1066035856}
-  - {fileID: 1824151120}
-  - {fileID: 1861775525}
-  - {fileID: 1701358448}
-  - {fileID: 834433730}
-  - {fileID: 1937965044}
-  - {fileID: 1476165687}
 --- !u!1 &952629964
 GameObject:
   m_ObjectHideFlags: 0
@@ -7178,8 +7156,8 @@ MonoBehaviour:
   VideoPanel: {fileID: 1989399960}
   Title: {fileID: 2036849753}
   videoPlayer: {fileID: 1304403310}
-  videoClip: https://www.youtube.com/watch?v=7tiSAp_0qG4&list=PLA-oTz8kRbroIWGOhI92m4hTYLP_2aNcx&index=6
-  videoClipFR: https://www.youtube.com/watch?v=7tiSAp_0qG4&list=PLA-oTz8kRbroIWGOhI92m4hTYLP_2aNcx&index=6
+  videoClip: https://www.youtube.com/watch?v=su9xi5XQMHw&list=PLA-oTz8kRbroIWGOhI92m4hTYLP_2aNcx&index=4
+  videoClipFR: https://www.youtube.com/watch?v=su9xi5XQMHw&list=PLA-oTz8kRbroIWGOhI92m4hTYLP_2aNcx&index=4
   youtubePlayer: {fileID: 1304403314}
   title: DRO & Speed Calculation
   titleFR: DRO & Calcul de la vitesse de coupe
@@ -8969,7 +8947,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9edfe0da26ee89543a5a9f1b7e3ac6c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enabledColor: {r: 0.6039216, g: 0.98039216, b: 0.5647059, a: 0}
+  enabledColor: {r: 0.6039216, g: 0.98039216, b: 0.5647059, a: 1}
   disabledColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
   buttonName: yLock
 --- !u!1 &1720489701
@@ -9928,7 +9906,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9edfe0da26ee89543a5a9f1b7e3ac6c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enabledColor: {r: 0.6039216, g: 0.98039216, b: 0.5647059, a: 0}
+  enabledColor: {r: 0.6039216, g: 0.98039216, b: 0.5647059, a: 1}
   disabledColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
   buttonName: xLock
 --- !u!1 &1864256452
@@ -11892,7 +11870,7 @@ PrefabInstance:
         type: 3}
       propertyPath: reset
       value: 
-      objectReference: {fileID: 942751490}
+      objectReference: {fileID: 942751486}
     - target: {fileID: 5521113173560936128, guid: 117951c1affdbae4a9000444b5825b8d,
         type: 3}
       propertyPath: dialogueManager

@@ -240,9 +240,8 @@ MonoBehaviour:
       to turn milling machine OFF'
     - Similarly as with side milling, this process can be repeated many times until
       the desired dimensions are achieved.
-    - Well done. In the next tutorial, you take control of the mill to practice these
-      techniques. You may review any of the operations learned in this tutorial by
-      simply clicking on the appropriate button on the right-hand side.
+    - 'Well done. In the next tutorial, you take control of the mill to practice
+      these techniques. '
     sentencesFR:
     - "Le fraisage de face est le processus d'enl\xE8vement de mat\xE9tiel de la
       sufarce perpendiculaire \xE0 l'axe de la fraise en bout."
@@ -284,9 +283,7 @@ MonoBehaviour:
     - "De m\xEAme que pour le fraisage lat\xE9ral, ce processus peut \xEAtre r\xE9p\xE9t\xE9
       plusieurs fois jusqu'\xE0 ce que les dimensions souhait\xE9es soient atteintes."
     - "Bon travail! Dans le prochain tutoriel, vous prenez contr\xF4le de la fraiseuse
-      pour pratiquer ces techniques. Vous pouvez revoir tous les op\xE9rations apprisses
-      dans ce tutoriel avant de poursuivre en cliquant sur les bouttons d'op\xE9rations
-      sur le cot\xE9 droit."
+      pour pratiquer ces techniques. "
     images:
     - {fileID: 21300000, guid: 3ef9f1deb9c5e0e488b6496ba46b5e18, type: 3}
     - {fileID: 21300000, guid: 0a8e015102743644d8eaae080f211cc7, type: 3}

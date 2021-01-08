@@ -47,9 +47,9 @@ public class InteractableManager : MonoBehaviour
         NoInteraction();
         if (SequenceDone)
         {
-            Drill.interactable = true;
-            FaceMill.interactable = true;
-            SideMill.interactable = true;
+            Drill.interactable = false;
+            FaceMill.interactable = false;
+            SideMill.interactable = false ;
             MainMenu.interactable = true;
             Next.interactable = true;
         }
@@ -69,9 +69,9 @@ public class InteractableManager : MonoBehaviour
         }
         else if (dialogueName.Equals(facemilling))
         {
-            Drill.interactable = true;
-            FaceMill.interactable = true;
-            SideMill.interactable = true;
+            Drill.interactable = false;
+            FaceMill.interactable = false;
+            SideMill.interactable = false;
             MainMenu.interactable = true;
             Next.interactable = true;
             SequenceDone = true;
