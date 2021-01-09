@@ -118,6 +118,11 @@ public class PowerButtonToggle
         set => i = value;
     }
 
+    public int ResetLateAnimIndex
+    {
+        set => LateAnimIndex = value;
+    }
+
     public int CurrentSentenceIndex()
     {
         int val = sentenceIndex[LateAnimIndex];

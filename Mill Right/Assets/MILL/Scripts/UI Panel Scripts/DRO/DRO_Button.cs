@@ -8,8 +8,9 @@ public class DRO_Button : MonoBehaviour
 {
     [SerializeField] private Color enabledColor;
     [SerializeField] private Color disabledColor;
-    [SerializeField] private string buttonName; 
+    [SerializeField] private string buttonName;
 
+    private bool awaked = false;
     private bool m_activated;
     private Image m_buttonImage;
 
@@ -19,11 +20,16 @@ public class DRO_Button : MonoBehaviour
         m_buttonImage = GetComponent<Image>();
         m_buttonImage.color = disabledColor;
         m_activated = false;
+        awaked = true;
     }
 
     public void Btn_SetEnabled(bool value)
     {
-        if (value == true)
+        if (!awaked)
+        {
+            m_buttonImage = GetComponent<Image>();
+        }
+        if (value)
         {
             m_buttonImage.color = enabledColor;
             m_activated = true;
@@ -38,7 +44,11 @@ public class DRO_Button : MonoBehaviour
 
     public void Btn_LockSetEnabled(bool value)
     {
-        if (value == true)
+        if (!awaked)
+        {
+            m_buttonImage = GetComponent<Image>();
+        }
+        if (value)
         {
             m_buttonImage.color = disabledColor;
             m_activated = true;

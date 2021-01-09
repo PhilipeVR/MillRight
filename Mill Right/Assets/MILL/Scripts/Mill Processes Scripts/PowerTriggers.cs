@@ -60,6 +60,7 @@ public class PowerTriggers : MonoBehaviour
             if (toggle.Anim == i)
             {
                 toggle.Index = 0;
+                toggle.ResetLateAnimIndex = 0;
             }
         }
     }
