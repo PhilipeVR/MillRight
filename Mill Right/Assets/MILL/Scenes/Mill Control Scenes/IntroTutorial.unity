@@ -429,7 +429,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 28140609}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
   m_Name: 
@@ -1725,6 +1725,8 @@ MonoBehaviour:
   - {fileID: 1582640060}
   - {fileID: 1125573157}
   manager: {fileID: 1765016267}
+  dRO_Button: {fileID: 0}
+  LockButton: 0
 --- !u!114 &370516857
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2953,13 +2955,13 @@ MonoBehaviour:
   stopButton: {fileID: 1864256453}
   title: {fileID: 1134303694}
   videoClips:
-  - https://www.youtube.com/watch?v=Wch3gJG2GJ4
-  - https://www.youtube.com/watch?v=Wch3gJG2GJ4
-  - https://www.youtube.com/watch?v=Wch3gJG2GJ4
+  - https://youtu.be/mHVXzNQBQM4?list=PLA-oTz8kRbroIWGOhI92m4hTYLP_2aNcx
+  - https://youtu.be/xJzGX-dLg6c?list=PLA-oTz8kRbroIWGOhI92m4hTYLP_2aNcx
+  - https://youtu.be/QJos54phnP4?list=PLA-oTz8kRbroIWGOhI92m4hTYLP_2aNcx
   videoClipsFR:
-  - https://www.youtube.com/watch?v=Wch3gJG2GJ4
-  - https://www.youtube.com/watch?v=Wch3gJG2GJ4
-  - https://www.youtube.com/watch?v=Wch3gJG2GJ4
+  - https://youtu.be/mHVXzNQBQM4?list=PLA-oTz8kRbroIWGOhI92m4hTYLP_2aNcx
+  - https://youtu.be/xJzGX-dLg6c?list=PLA-oTz8kRbroIWGOhI92m4hTYLP_2aNcx
+  - https://youtu.be/QJos54phnP4?list=PLA-oTz8kRbroIWGOhI92m4hTYLP_2aNcx
   operationSprite:
   - {fileID: 21300000, guid: f2272e2fd9325c74c83193695454c89b, type: 3}
   - {fileID: 21300000, guid: c26f205cc478786458678189d979d312, type: 3}
@@ -3368,7 +3370,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enabledColor: {r: 0.6039216, g: 0.98039216, b: 0.5647059, a: 1}
-  disabledColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+  disabledColor: {r: 1, g: 0.5613208, b: 0.5613208, a: 1}
   buttonName: zLock
 --- !u!114 &834433734
 MonoBehaviour:
@@ -3389,6 +3391,8 @@ MonoBehaviour:
   - {fileID: 1582640060}
   - {fileID: 1125573157}
   manager: {fileID: 1765016267}
+  dRO_Button: {fileID: 834433733}
+  LockButton: 1
 --- !u!1 &843518780
 GameObject:
   m_ObjectHideFlags: 0
@@ -4368,7 +4372,7 @@ MonoBehaviour:
   SideMill: {fileID: 844377132}
   Drill: {fileID: 1897882999}
   DRO_BTN: {fileID: 1033722617}
-  DRO_Panel: {fileID: 942751484}
+  DRO_Panel: {fileID: 1033722618}
   intro: Mill Right's Training Workshop
   drilling: Getting Started - Drilling
   sidemilling: Getting Started - Side Milling
@@ -5245,6 +5249,8 @@ MonoBehaviour:
   - {fileID: 1582640060}
   - {fileID: 1125573157}
   manager: {fileID: 1765016267}
+  dRO_Button: {fileID: 0}
+  LockButton: 0
 --- !u!114 &1066035856
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7156,8 +7162,8 @@ MonoBehaviour:
   VideoPanel: {fileID: 1989399960}
   Title: {fileID: 2036849753}
   videoPlayer: {fileID: 1304403310}
-  videoClip: https://www.youtube.com/watch?v=Wch3gJG2GJ4
-  videoClipFR: https://www.youtube.com/watch?v=Wch3gJG2GJ4
+  videoClip: https://youtu.be/7tiSAp_0qG4?list=PLA-oTz8kRbroIWGOhI92m4hTYLP_2aNcx
+  videoClipFR: https://youtu.be/7tiSAp_0qG4?list=PLA-oTz8kRbroIWGOhI92m4hTYLP_2aNcx
   youtubePlayer: {fileID: 1304403314}
   title: DRO & Speed Calculation
   titleFR: DRO & Calcul de la vitesse de coupe
@@ -9484,6 +9490,8 @@ MonoBehaviour:
   - {fileID: 1582640060}
   - {fileID: 1125573157}
   manager: {fileID: 1765016267}
+  dRO_Button: {fileID: 0}
+  LockButton: 0
 --- !u!1 &1834275831
 GameObject:
   m_ObjectHideFlags: 0
@@ -9894,6 +9902,8 @@ MonoBehaviour:
   - {fileID: 1582640060}
   - {fileID: 1125573157}
   manager: {fileID: 1765016267}
+  dRO_Button: {fileID: 1861775529}
+  LockButton: 1
 --- !u!114 &1861775529
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9907,7 +9917,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enabledColor: {r: 0.6039216, g: 0.98039216, b: 0.5647059, a: 1}
-  disabledColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+  disabledColor: {r: 1, g: 0.6179246, b: 0.6179246, a: 1}
   buttonName: xLock
 --- !u!1 &1864256452
 GameObject:
@@ -10561,6 +10571,8 @@ MonoBehaviour:
   - {fileID: 1582640060}
   - {fileID: 1125573157}
   manager: {fileID: 1765016267}
+  dRO_Button: {fileID: 0}
+  LockButton: 0
 --- !u!1 &1983954864
 GameObject:
   m_ObjectHideFlags: 0
@@ -11676,6 +11688,16 @@ PrefabInstance:
       propertyPath: m_LocalScale.x
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 1182840938083379703, guid: 117951c1affdbae4a9000444b5825b8d,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.3919
+      objectReference: {fileID: 0}
+    - target: {fileID: 1182840938083379703, guid: 117951c1affdbae4a9000444b5825b8d,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.675
+      objectReference: {fileID: 0}
     - target: {fileID: 5503637407673284493, guid: 117951c1affdbae4a9000444b5825b8d,
         type: 3}
       propertyPath: m_IsActive
@@ -11706,11 +11728,31 @@ PrefabInstance:
       propertyPath: dialogueManager
       value: 
       objectReference: {fileID: 420924302}
+    - target: {fileID: 5521113172800280180, guid: 117951c1affdbae4a9000444b5825b8d,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.7026
+      objectReference: {fileID: 0}
+    - target: {fileID: 5521113172847603667, guid: 117951c1affdbae4a9000444b5825b8d,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5521113172971640824, guid: 117951c1affdbae4a9000444b5825b8d,
         type: 3}
       propertyPath: dialogueManager
       value: 
       objectReference: {fileID: 420924302}
+    - target: {fileID: 5521113172971640825, guid: 117951c1affdbae4a9000444b5825b8d,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.6641
+      objectReference: {fileID: 0}
+    - target: {fileID: 5521113172971640825, guid: 117951c1affdbae4a9000444b5825b8d,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.066
+      objectReference: {fileID: 0}
     - target: {fileID: 5521113173101338529, guid: 117951c1affdbae4a9000444b5825b8d,
         type: 3}
       propertyPath: dialogueManager
@@ -11721,6 +11763,11 @@ PrefabInstance:
       propertyPath: triggerFlash
       value: 
       objectReference: {fileID: 952629966}
+    - target: {fileID: 5521113173118334550, guid: 117951c1affdbae4a9000444b5825b8d,
+        type: 3}
+      propertyPath: buttonTriggers.Array.size
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 5521113173118334550, guid: 117951c1affdbae4a9000444b5825b8d,
         type: 3}
       propertyPath: powerTriggers
@@ -11746,6 +11793,16 @@ PrefabInstance:
       propertyPath: buttonTriggers.Array.data[3]
       value: 
       objectReference: {fileID: 1937965049}
+    - target: {fileID: 5521113173118334550, guid: 117951c1affdbae4a9000444b5825b8d,
+        type: 3}
+      propertyPath: buttonTriggers.Array.data[4]
+      value: 
+      objectReference: {fileID: 834433734}
+    - target: {fileID: 5521113173118334550, guid: 117951c1affdbae4a9000444b5825b8d,
+        type: 3}
+      propertyPath: buttonTriggers.Array.data[5]
+      value: 
+      objectReference: {fileID: 1861775528}
     - target: {fileID: 5521113173305204014, guid: 117951c1affdbae4a9000444b5825b8d,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -11763,6 +11820,11 @@ PrefabInstance:
       objectReference: {fileID: 952629966}
     - target: {fileID: 5521113173332164558, guid: 117951c1affdbae4a9000444b5825b8d,
         type: 3}
+      propertyPath: buttonTriggers.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5521113173332164558, guid: 117951c1affdbae4a9000444b5825b8d,
+        type: 3}
       propertyPath: powerTriggers
       value: 
       objectReference: {fileID: 1406716961}
@@ -11786,6 +11848,11 @@ PrefabInstance:
       propertyPath: buttonTriggers.Array.data[3]
       value: 
       objectReference: {fileID: 1937965049}
+    - target: {fileID: 5521113173332164558, guid: 117951c1affdbae4a9000444b5825b8d,
+        type: 3}
+      propertyPath: buttonTriggers.Array.data[4]
+      value: 
+      objectReference: {fileID: 834433734}
     - target: {fileID: 5521113173388906144, guid: 117951c1affdbae4a9000444b5825b8d,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -11876,6 +11943,11 @@ PrefabInstance:
       propertyPath: dialogueManager
       value: 
       objectReference: {fileID: 420924302}
+    - target: {fileID: 5521113173683434470, guid: 117951c1affdbae4a9000444b5825b8d,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5521113173800327165, guid: 117951c1affdbae4a9000444b5825b8d,
         type: 3}
       propertyPath: dialogueManager

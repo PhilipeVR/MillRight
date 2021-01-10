@@ -9,6 +9,8 @@ public class ClipTriggers : MonoBehaviour
     [SerializeField] private Triggers animTriggers;
     [SerializeField] private TriggerAnimationController[] triggerController;
     [SerializeField] private ProcessAnimationController manager;
+    [SerializeField] private DRO_Button dRO_Button;
+    [SerializeField] private bool LockButton;
     private List<Trigger> triggers;
 
     // Start is called before the first frame update
@@ -24,6 +26,7 @@ public class ClipTriggers : MonoBehaviour
         TriggerAnimationController controller = triggerController[manager.Index];
         foreach (Trigger trigger in triggers)
         {
+
             if(trigger.Anim == manager.Index && trigger.Name == controller.name && trigger.SentenceIndex() == dialogueManager.SentenceIndex)
             {
                 tmpTrigger = trigger;
@@ -38,6 +41,10 @@ public class ClipTriggers : MonoBehaviour
                 if(dialogueManager.SentenceIndex == tmpTrigger.CurrentSentenceIndex())
                 {
                     dialogueManager.DisplayNextSentence();
+                    if (LockButton)
+                    {
+                        dRO_Button.Btn_LockSetEnabled(true);
+                    }
                 }
             }
         }

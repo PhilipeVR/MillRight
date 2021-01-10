@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public class InteractableManager : MonoBehaviour
 {
     [SerializeField] public Button ON, MainMenu,Next, FaceMill, SideMill, Drill, DRO_BTN;
-    [SerializeField] public GameObject DRO_Panel;
+    [SerializeField] public DROToggle DRO_Panel;
     [SerializeField] public string intro, drilling, sidemilling, facemilling;
     private Boolean SequenceDone;
 
@@ -47,9 +47,9 @@ public class InteractableManager : MonoBehaviour
         NoInteraction();
         if (SequenceDone)
         {
-            Drill.interactable = false;
-            FaceMill.interactable = false;
-            SideMill.interactable = false ;
+            Drill.interactable = true;
+            FaceMill.interactable = true;
+            SideMill.interactable = true;
             MainMenu.interactable = true;
             Next.interactable = true;
         }
@@ -69,9 +69,9 @@ public class InteractableManager : MonoBehaviour
         }
         else if (dialogueName.Equals(facemilling))
         {
-            Drill.interactable = false;
-            FaceMill.interactable = false;
-            SideMill.interactable = false;
+            Drill.interactable = true;
+            FaceMill.interactable = true;
+            SideMill.interactable = true;
             MainMenu.interactable = true;
             Next.interactable = true;
             SequenceDone = true;
@@ -104,6 +104,6 @@ public class InteractableManager : MonoBehaviour
         FaceMill.interactable = false;
         SideMill.interactable = false;
         Drill.interactable = false;
-        DRO_Panel.SetActive(false);
+        DRO_Panel.activate(false);
     }
 }
