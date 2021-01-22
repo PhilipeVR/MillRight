@@ -16,11 +16,11 @@ public class LoadSceneScript : MonoBehaviour
         Event e = Event.current;
         if (e.type == EventType.KeyDown && e.control && e.keyCode == KeyCode.Z && e.alt)
         {
-            SceneManager.LoadScene("LatheMainMenu");
+            SceneManager.LoadScene("MainMenu");
         }
         else if (e.type == EventType.KeyDown && e.control && e.keyCode == KeyCode.C && e.alt)
         {
-            SceneManager.LoadScene("Lathe Certificate");
+            SceneManager.LoadScene("Certificate");
         }
     }
 

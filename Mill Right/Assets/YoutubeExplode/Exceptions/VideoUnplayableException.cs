@@ -1,5 +1,5 @@
 ﻿using System;
-using YoutubeExplode.Internal;
+using YoutubeExplode.Internal; 
 
 namespace YoutubeExplode.Exceptions
 {

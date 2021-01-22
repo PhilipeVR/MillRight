@@ -638,6 +638,10 @@ MonoBehaviour:
   imageToggle: {fileID: 0}
   toolHolderManager: {fileID: 0}
   toggleScene: {fileID: 0}
+  videoProcessManager: {fileID: 0}
+  videoStandardController: {fileID: 0}
+  videoController: {fileID: 0}
+  youtubeExceptionListener: {fileID: 0}
 --- !u!114 &885196806
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1267,7 +1271,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   toggleOptionText: "pour avoir termin\xE9 l'atelier de la fraiseuse de Mill Right
-    aliment\xE9 par CEED"
+    aliment\xE9 par CGEC"
   toggleOptionText2: for completing Mill Right's Mill Workshop Powered by CEED
   currentText: {fileID: 1219114027}
 --- !u!114 &1219114027

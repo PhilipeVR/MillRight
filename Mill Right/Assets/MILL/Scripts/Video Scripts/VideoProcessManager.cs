@@ -6,6 +6,7 @@ using UnityEngine.Video;
 
 public class VideoProcessManager : MonoBehaviour
 {
+    [SerializeField] private YoutubeExceptionListener LinkDisplayer;
     [SerializeField] private CameraToggle cameraToggle;
     [SerializeField] private ProcessAnimationController operationController;
     [SerializeField] private DialogueTrigger dialogueInterface;
@@ -20,6 +21,7 @@ public class VideoProcessManager : MonoBehaviour
     [SerializeField] private List<int> dialogueIndex;
     [SerializeField] private List<string> titles, titlesFR;
     [SerializeField] private Image exitImage;
+    private bool playing = false;
     private List<bool> playedOnces;
     private int m_index = -1;
     public bool language = true;
@@ -37,6 +39,12 @@ public class VideoProcessManager : MonoBehaviour
         VideoPanel.SetActive(false); //Deactivates youtube link on video panel
         //videoPlayer.Stop();
         videoPlayer.loopPointReached += VideoPlayed; //Adds listener to video player event system, activates if video has ended
+    }
+
+    public int Index
+    {
+        get => m_index;
+        set => m_index = value;
     }
 
     public void PauseVideo()
@@ -62,6 +70,8 @@ public class VideoProcessManager : MonoBehaviour
     {
         if (m_index > -1)
         {
+            playing = false;
+
             if (playedOnces[m_index])
             {
                 cameraToggle.SwtichView(); //Change camera back to origin
@@ -95,6 +105,7 @@ public class VideoProcessManager : MonoBehaviour
             playButton.gameObject.SetActive(true);
             pauseButton.gameObject.SetActive(false);
         }
+        playing = false;
     }
 
     public void PlayVideo()
@@ -127,7 +138,6 @@ public class VideoProcessManager : MonoBehaviour
             }
 
             VideoPanel.SetActive(true);
-
             exitImage.sprite = operationSprite[index]; //Change exit button sprite depending on operation performed
             youtubePlayer.Links(videoClips[index], videoClipsFR[index]);
             youtubePlayer.Lang = language;
@@ -153,7 +163,23 @@ public class VideoProcessManager : MonoBehaviour
             }
             m_index = index;
             youtubePlayer.PlayYoutubeVid();
+            playing = true;
+            LinkDisplayer.DisplayLink(language);
 
+        }
+    }
+
+    public bool Playing
+    {
+        get => playing;
+    }
+
+    public void LinkSent()
+    {
+        if (m_index > -1)
+        {
+            playedOnces[m_index] = true;
+            StopVideoButton.interactable = true;
         }
     }
 

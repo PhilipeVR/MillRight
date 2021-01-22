@@ -6,6 +6,7 @@ using UnityEngine.Video;
 
 public class VideoStandardController : MonoBehaviour
 {
+    [SerializeField] private YoutubeExceptionListener LinkDisplayer;
     [SerializeField] private CameraToggle cameraToggle;
     [SerializeField] private GameObject VideoPanel;
     [SerializeField] private Text Title;
@@ -15,6 +16,7 @@ public class VideoStandardController : MonoBehaviour
     [SerializeField] private string title, titleFR;
     [SerializeField] private Button StopVideoButton, playButton, pauseButton, stopButton;
     [SerializeField] private bool StartOnAwake;
+    private bool playing = false; 
     private bool playedOnce;
     private bool language = true;
 
@@ -36,6 +38,7 @@ public class VideoStandardController : MonoBehaviour
 
     public void PlayVideo()
     {
+        playing = true;
         videoPlayer.Play();
         if (!playedOnce)
         {
@@ -57,6 +60,7 @@ public class VideoStandardController : MonoBehaviour
 
     public void StopVideo()
     {
+
         if (playedOnce)
         {
             videoPlayer.Stop();
@@ -67,11 +71,18 @@ public class VideoStandardController : MonoBehaviour
 
     public void ExitVideo()
     {
+        playing = false;
+
         if (playedOnce)
         {
             cameraToggle.SwtichView(); //Change camera back to origin
             VideoPanel.SetActive(false);
         }
+    }
+
+    public bool Playing
+    {
+        get => playing;
     }
 
     public void StartVideo()
@@ -104,6 +115,9 @@ public class VideoStandardController : MonoBehaviour
             stopButton.interactable = true;
 
         }
+        playing = true;
+        LinkDisplayer.DisplayLink(language);
+
 
     }
 
@@ -117,6 +131,14 @@ public class VideoStandardController : MonoBehaviour
         }
         playButton.gameObject.SetActive(true);
         pauseButton.gameObject.SetActive(false);
+        playing = false;
+
+    }
+
+    public void LinkSent()
+    {
+        playedOnce = true;
+        StopVideoButton.interactable = true;
     }
 
     public bool PlayedOnce

@@ -142,4 +142,9 @@ public class TriggerAnimationController : MonoBehaviour
     {
         get => animator.GetCurrentAnimatorStateInfo(0).normalizedTime > 1f;
     }
+
+    public float CurrentAnimationStatusTime
+    {
+        get => animator.GetCurrentAnimatorStateInfo(0).normalizedTime;
+    }
 }

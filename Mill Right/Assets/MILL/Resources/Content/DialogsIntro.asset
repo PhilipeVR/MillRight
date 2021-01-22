@@ -69,8 +69,8 @@ MonoBehaviour:
       consists on placing the workpiece in the vise.
 
 
-      Hint: Click on workpiece
-      to place it on the table'
+      Hint: Click on square
+      black workpiece to place it on the table'
     - 'The next step is to clamp the workpiece firmly into the vise - it is important
       that the vise is not clamped too tightly, as this could deform the workpiece.
 
@@ -131,7 +131,7 @@ MonoBehaviour:
     - "Examinons d'abord la configuration. L'\xE9tau est fix\xE9 \xE0 la table et
       sert \xE0 fixer la pi\xE8ce en place pendant l'op\xE9ration. Notre premi\xE8re
       \xE9tape consiste \xE0 placer la pi\xE8ce dans l'\xE9tau.\n\nIndice: Cliquez
-      sur la pi\xE8ce pour placer celle-ci dans l'\xE9tau"
+      sur la pi\xE8ce noir pour placer celle-ci dans l'\xE9tau"
     - "L'\xE9tape suivante consiste \xE0 serrer fermement la pi\xE8ce dans l'\xE9tau
       - il est important que l'\xE9tau ne soit pas trop serr\xE9, car cela pourrait
       d\xE9former la pi\xE8ce. \r\n\nIndice: Cliquez sur le boulon situ\xE9 sur l'\xE9tau
@@ -185,8 +185,8 @@ MonoBehaviour:
       start by placing workpiece into the vise.
 
 
-      Hint: Click on workpiece
-      to place it into the vise'
+      Hint: Click on square black
+      workpiece to place it into the vise'
     - 'The next step is to clamp the workpiece firmly into the vise -again making
       sure that the vise is not clamped too tightly.
 
@@ -247,7 +247,7 @@ MonoBehaviour:
       sufarce perpendiculaire \xE0 l'axe de la fraise en bout."
     - "Le processus ici est tr\xE8s similaire \xE0 l'op\xE9ration de fraisage lat\xE9ral.
       Encore une fois, nous commen\xE7ons par placer la pi\xE8ce dans l'\xE9tau.\r\n\r\nIndice:
-      Cliquez sur la pi\xE8ce pour la placer dans l'\xE9tau"
+      Cliquez sur la pi\xE8ce noir pour la placer dans l'\xE9tau"
     - "L'\xE9tape suivante consiste \xE0 serrer fermement la pi\xE8ce dans l'\xE9tau
       - en veillant \xE0 nouveau \xE0 ce que l'\xE9tau ne soit pas trop serr\xE9.\r\n\r\nIndice:
       Cliquez sur le boulon situ\xE9 sur l'\xE9tau pour serrer la pi\xE8ce"
@@ -289,7 +289,7 @@ MonoBehaviour:
     - {fileID: 21300000, guid: 0a8e015102743644d8eaae080f211cc7, type: 3}
     - {fileID: 21300000, guid: ce9d6efa35fdc934aa85cd8d81c55def, type: 3}
     - {fileID: 21300000, guid: f7fcddfcd3df33f4ca6026006eaf85c9, type: 3}
-    - {fileID: 21300000, guid: eb57f130b0c8d4b4cbc2f137cf20de1b, type: 3}
+    - {fileID: 21300000, guid: 649b050ad1e80524dae014118ba5e0f3, type: 3}
     - {fileID: 21300000, guid: 52b2d0a10350f5944901a12df193eaad, type: 3}
     - {fileID: 21300000, guid: 54227f23060d9de4686676b6e6564268, type: 3}
     - {fileID: 21300000, guid: c7d39ecdeeec25e48ae6eeb44eb26183, type: 3}
@@ -313,8 +313,8 @@ MonoBehaviour:
     - 'We start by placing workpiece onto vise
 
 
-      Hint: Click on workpiece to
-      place it into the vise located on the table'
+      Hint: Click on square black
+      workpiece to place it into the vise located on the table'
     - 'The workpiece needs to be fixed in place with the target face extending beyond
       the vise so that it will not be damaged by the mill
 
@@ -347,21 +347,20 @@ MonoBehaviour:
 
       Hint:
       Click on Quill Button on DRO Panel to lower milling cutter '
-    - "Move the table slowly until it is aligned to the surface of the material.
-      \n\nHint: Click on X Button on DRO Panel  slowly bring workpiece closer to
-      end mill"
+    - 'With everything set, turn ON milling machine.
+
+
+      Hint: Click on ON Button
+      to turn milling machine ON'
+    - "Move the table slowly until it touches the surface of the material. \n\nHint:
+      Click on X Button on DRO Panel  slowly bring workpiece closer to end mill"
     - 'Lock the X axis so the machine cuts straight
 
 
       Hint: Click on X Lock
       Button on DRO Panel to lock X axis (Located to the left of X Button on the
       DRO panel)'
-    - 'With everything set, turn ON milling machine.
-
-
-      Hint: Click on ON Button
-      to turn milling machine ON'
-    - 'Once you have touched the surface, set the reference point along the x-axis
+    - 'Now that you have touched the surface, set the reference point along the x-axis
       by hitting the zero button on the DRO
 
 
@@ -398,7 +397,7 @@ MonoBehaviour:
       lat\xE9ral, la p\xE9riph\xE9rie de la fraise en bout est utilis\xE9e pour enlever
       la mati\xE8re de la pi\xE8ce."
     - "Nous commen\xE7ons par placer la pi\xE8ce sur l'\xE9tau\r.\n\r\nIndice: Cliquez
-      sur la pi\xE8ce pour la placer dans l'\xE9tau situ\xE9 sur la table"
+      sur la pi\xE8ce noir pour la placer dans l'\xE9tau situ\xE9 sur la table"
     - "La pi\xE8ce doit \xEAtre fix\xE9e en place avec le c\xF4t\xE9 cible s'\xE9tendant
       au-del\xE0 de l'\xE9tau afin qu'elle ne soit pas endommag\xE9e par la fraise\r
       lors de l'op\xE9ration.\n\r\nIndice: Cliquez sur le boulon situ\xE9 sur l'\xE9tau
@@ -420,15 +419,15 @@ MonoBehaviour:
     - "Maintenant abaisser la broche jusqu'\xE0 ce qu'elle soit aussi basse que la
       pi\xE8ce \r\n\r\nIndice: Cliquez sur le bouton Plume sur le panneau DRO pour
       abaisser la fraise"
-    - "D\xE9placez lentement la table jusqu'\xE0 ce qu'elle soit align\xE9e sur la
-      surface du mat\xE9riau.\r\n\r\nIndice: Cliquez sur le bouton X du panneau DRO
-      pour rapprocher lentement la pi\xE8ce de la fraise en bout"
+    - "Avec tout r\xE9gl\xE9, allumez la fraiseuse.\r\n\r\nIndice: Cliquez sur le
+      bouton ON pour allumer la fraiseuse\n"
+    - "D\xE9placez lentement la table jusqu'\xE0 ce qu'elle touche la surface du
+      mat\xE9riau.\r\n\r\nIndice: Cliquez sur le bouton X du panneau DRO pour rapprocher
+      lentement la pi\xE8ce de la fraise en bout"
     - "Verrouillez l'axe X pour que la machine coupe droit\r\n\r\nIndice: Cliquez
       sur le bouton de verrouillage X sur le panneau DRO pour verrouiller l'axe X
       (situ\xE9 \xE0 gauche du bouton X sur le panneau DRO)"
-    - "Avec tout r\xE9gl\xE9, allumez la fraiseuse.\r\n\r\nIndice: Cliquez sur le
-      bouton ON pour allumer la fraiseuse"
-    - "Une fois que vous avez touch\xE9 la surface, d\xE9finissez le point de r\xE9f\xE9rence
+    - "Maintenant vous avez touch\xE9 la surface, d\xE9finissez le point de r\xE9f\xE9rence
       le long de l'axe des x en appuyant sur le bouton z\xE9ro du DRO\r\n\r\nIndice:
       Cliquez sur le bouton z\xE9ro du panneau DRO pour d\xE9finir le point de r\xE9f\xE9rence,
       avec le bouton X s\xE9lectionn\xE9"
@@ -452,12 +451,12 @@ MonoBehaviour:
     - {fileID: 21300000, guid: ce9d6efa35fdc934aa85cd8d81c55def, type: 3}
     - {fileID: 21300000, guid: 01d330608e7cadb468c8287b112dd7ae, type: 3}
     - {fileID: 21300000, guid: f7fcddfcd3df33f4ca6026006eaf85c9, type: 3}
-    - {fileID: 21300000, guid: eb57f130b0c8d4b4cbc2f137cf20de1b, type: 3}
+    - {fileID: 21300000, guid: 649b050ad1e80524dae014118ba5e0f3, type: 3}
     - {fileID: 21300000, guid: 52b2d0a10350f5944901a12df193eaad, type: 3}
     - {fileID: 21300000, guid: c7d39ecdeeec25e48ae6eeb44eb26183, type: 3}
-    - {fileID: 21300000, guid: 68f4794d0b0cd5143b7b45d6b2bf3519, type: 3}
-    - {fileID: 21300000, guid: eb57f130b0c8d4b4cbc2f137cf20de1b, type: 3}
     - {fileID: 21300000, guid: 54227f23060d9de4686676b6e6564268, type: 3}
+    - {fileID: 21300000, guid: 68f4794d0b0cd5143b7b45d6b2bf3519, type: 3}
+    - {fileID: 21300000, guid: 046ffaddc0e1ed84bbdc2c6c49427c32, type: 3}
     - {fileID: 21300000, guid: 8f27edd6fc012684fb0e4ec274719306, type: 3}
     - {fileID: 21300000, guid: acfe2f871ffa35643a330a44ae78768e, type: 3}
     - {fileID: 21300000, guid: 41b610a3f00945941967c1ce85d74bc4, type: 3}

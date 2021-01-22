@@ -25,6 +25,7 @@ public class ProcessAnimationController : MonoBehaviour
         if (controller != null)
         {
             controller.setAnimSpeed(0);
+            Debug.Log(Operation.TriggerAnimation.CurrentAnimationStatusTime);
         }
     }
 

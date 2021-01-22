@@ -21,10 +21,12 @@ namespace YoutubePlayer
         /// <summary>
         /// Youtube url (e.g. https://www.youtube.com/watch?v=VIDEO_ID)
         /// </summary>
+        ///
         public string youtubeUrlEN;
         public string youtubeUrlFR;
         private string youtubeUrl;
         private bool isFrench = false;
+
 
         /// <summary>
         /// VideoStartingDelegate 

@@ -19,6 +19,7 @@ public class LanguageSceneSwitcher : MonoBehaviour
     public VideoProcessManager videoProcessManager;
     public VideoStandardController videoStandardController;
     public VideoController videoController;
+    public YoutubeExceptionListener youtubeExceptionListener;
     void Start()
     {
         if (languageScene.getLanguage())

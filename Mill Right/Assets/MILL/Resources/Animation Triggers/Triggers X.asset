@@ -28,6 +28,6 @@ MonoBehaviour:
     - Slide X 2
     animationName:
     - Lock Z Axis
-    - Slide Quill
-    index: 0500000007000000
-    sentenceIndex: 080000000a000000
+    - Turn ON
+    index: 0500000008000000
+    sentenceIndex: 080000000b000000
