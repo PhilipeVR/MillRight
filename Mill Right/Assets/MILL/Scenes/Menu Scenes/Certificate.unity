@@ -1366,7 +1366,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   toggleOptionText: Certificate of Completion
-  toggleOptionText2: "Certificat d'ach\xE8vement"
+  toggleOptionText2: "Certificat de r\xE9ussite"
   currentText: {fileID: 1262674037}
 --- !u!114 &1262674037
 MonoBehaviour:
