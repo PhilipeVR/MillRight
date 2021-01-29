@@ -18,7 +18,7 @@ public class VideoStandardController : MonoBehaviour
     [SerializeField] private bool StartOnAwake;
     private bool playing = false; 
     private bool playedOnce;
-    private bool language = true;
+    private bool language = false;
 
 
     // Start is called before the first frame update
@@ -95,7 +95,7 @@ public class VideoStandardController : MonoBehaviour
         }
         youtubePlayer.Links(videoClip, videoClipFR);
         youtubePlayer.Lang = language;
-        if (language)
+        if (!language)
         {
             Title.text = title;
         }
@@ -116,7 +116,7 @@ public class VideoStandardController : MonoBehaviour
 
         }
         playing = true;
-        LinkDisplayer.DisplayLink(language);
+        LinkDisplayer.DisplayLink(!language);
 
 
     }

@@ -24,7 +24,7 @@ public class VideoProcessManager : MonoBehaviour
     private bool playing = false;
     private List<bool> playedOnces;
     private int m_index = -1;
-    public bool language = true;
+    public bool language = false;
 
     // Start is called before the first frame update
     void Start()
@@ -153,7 +153,7 @@ public class VideoProcessManager : MonoBehaviour
                 stopButton.interactable = true;
 
             }
-            if (language)
+            if (!language)
             {
                 title.text = titles[index];
             }
@@ -164,7 +164,7 @@ public class VideoProcessManager : MonoBehaviour
             m_index = index;
             youtubePlayer.PlayYoutubeVid();
             playing = true;
-            LinkDisplayer.DisplayLink(language);
+            LinkDisplayer.DisplayLink(!language);
 
         }
     }

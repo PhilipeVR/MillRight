@@ -480,28 +480,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 850437759}
-        m_MethodName: toggle
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1302721531}
-        m_MethodName: toggle
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 1470352050}
         m_MethodName: toggle
         m_Mode: 1
@@ -515,6 +493,28 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 1310410633}
         m_MethodName: SwitchLang
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 850437759}
+        m_MethodName: toggle
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1302721531}
+        m_MethodName: toggle
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1631,7 +1631,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   toggleOptionText: "Entrez votre num\xE9ro d'\xE9tudiant ... "
   toggleOptionText2: Enter your student number...
-  currentText: {fileID: 1400466488}
+  currentText: {fileID: 850437760}
 --- !u!114 &850437760
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1751,7 +1751,7 @@ MonoBehaviour:
   - {fileID: 1470352050}
   - {fileID: 1302721531}
   - {fileID: 26414677}
-  - {fileID: 42068469}
+  - {fileID: 850437759}
   toggleHint: {fileID: 0}
   languageScene: {fileID: 885196804}
   toggleLangManager: {fileID: 0}
@@ -2543,7 +2543,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   toggleOptionText: Entrez votre nom complet...
   toggleOptionText2: Enter your full name...
-  currentText: {fileID: 1751545077}
+  currentText: {fileID: 1302721532}
 --- !u!114 &1302721532
 MonoBehaviour:
   m_ObjectHideFlags: 0

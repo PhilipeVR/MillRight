@@ -3598,9 +3598,9 @@ MonoBehaviour:
   - https://youtu.be/xJzGX-dLg6c?list=PLA-oTz8kRbroIWGOhI92m4hTYLP_2aNcx
   - https://youtu.be/QJos54phnP4?list=PLA-oTz8kRbroIWGOhI92m4hTYLP_2aNcx
   videoClipsFR:
-  - https://youtu.be/mHVXzNQBQM4?list=PLA-oTz8kRbroIWGOhI92m4hTYLP_2aNcx
-  - https://youtu.be/xJzGX-dLg6c?list=PLA-oTz8kRbroIWGOhI92m4hTYLP_2aNcx
-  - https://youtu.be/QJos54phnP4?list=PLA-oTz8kRbroIWGOhI92m4hTYLP_2aNcx
+  - https://youtu.be/4dchSNxRfzU?list=PLA-oTz8kRbrozmIQE_b6ddmFE6C2DfUVA
+  - https://youtu.be/Rtib3ijsMaQ?list=PLA-oTz8kRbrozmIQE_b6ddmFE6C2DfUVA
+  - https://youtu.be/AdQooDsjSfU?list=PLA-oTz8kRbrozmIQE_b6ddmFE6C2DfUVA
   operationSprite:
   - {fileID: 21300000, guid: f2272e2fd9325c74c83193695454c89b, type: 3}
   - {fileID: 21300000, guid: c26f205cc478786458678189d979d312, type: 3}
@@ -3616,7 +3616,7 @@ MonoBehaviour:
   - "Op\xE9ration de surfa\xE7age"
   - "Op\xE9ration de fraisage lat\xE9rale"
   exitImage: {fileID: 1786608669}
-  language: 1
+  language: 0
 --- !u!114 &711629429
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3637,9 +3637,9 @@ MonoBehaviour:
   - https://youtu.be/xJzGX-dLg6c?list=PLA-oTz8kRbroIWGOhI92m4hTYLP_2aNcx
   - https://youtu.be/QJos54phnP4?list=PLA-oTz8kRbroIWGOhI92m4hTYLP_2aNcx
   LinksFR:
-  - https://youtu.be/mHVXzNQBQM4?list=PLA-oTz8kRbroIWGOhI92m4hTYLP_2aNcx
-  - https://youtu.be/xJzGX-dLg6c?list=PLA-oTz8kRbroIWGOhI92m4hTYLP_2aNcx
-  - https://youtu.be/QJos54phnP4?list=PLA-oTz8kRbroIWGOhI92m4hTYLP_2aNcx
+  - https://youtu.be/4dchSNxRfzU?list=PLA-oTz8kRbrozmIQE_b6ddmFE6C2DfUVA
+  - https://youtu.be/Rtib3ijsMaQ?list=PLA-oTz8kRbrozmIQE_b6ddmFE6C2DfUVA
+  - https://youtu.be/AdQooDsjSfU?list=PLA-oTz8kRbrozmIQE_b6ddmFE6C2DfUVA
   linkMessage: 'Video not working? Use this link to watch the video: '
   linkMessageFR: "Si le vid\xE9o ne fonctionne pas, veuillez utiliser ce lien: "
   linkArea: {fileID: 651347965}
@@ -4753,6 +4753,7 @@ MonoBehaviour:
   - {fileID: 1476165691}
   - {fileID: 2035754905}
   - {fileID: 762320803}
+  - {fileID: 1929819759}
   - {fileID: 21283139}
   toggleHint: {fileID: 0}
   languageScene: {fileID: 852756862}
@@ -4765,7 +4766,6 @@ MonoBehaviour:
   videoProcessManager: {fileID: 711629428}
   videoStandardController: {fileID: 1330229582}
   videoController: {fileID: 0}
-  youtubeExceptionListener: {fileID: 0}
 --- !u!114 &852756864
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8385,11 +8385,11 @@ MonoBehaviour:
   VideoPanel: {fileID: 1989399960}
   Title: {fileID: 2036849753}
   videoPlayer: {fileID: 1304403310}
-  videoClip: https://youtu.be/7tiSAp_0qG4?list=PLA-oTz8kRbroIWGOhI92m4hTYLP_2aNcx
-  videoClipFR: https://youtu.be/7tiSAp_0qG4?list=PLA-oTz8kRbroIWGOhI92m4hTYLP_2aNcx
+  videoClip: https://youtu.be/su9xi5XQMHw?list=PLA-oTz8kRbroIWGOhI92m4hTYLP_2aNcx
+  videoClipFR: https://youtu.be/7O8r2mep1Xg?list=PLA-oTz8kRbrozmIQE_b6ddmFE6C2DfUVA
   youtubePlayer: {fileID: 1304403314}
-  title: DRO & Speed Calculation
-  titleFR: DRO & Calcul de la vitesse de coupe
+  title: Speed Calculation
+  titleFR: Calcul de la vitesse de coupe
   StopVideoButton: {fileID: 1670098375}
   playButton: {fileID: 1265336622}
   pauseButton: {fileID: 201955007}
@@ -8411,9 +8411,9 @@ MonoBehaviour:
   controller2: {fileID: 1330229582}
   controller3: {fileID: 0}
   Links:
-  - https://youtu.be/7tiSAp_0qG4?list=PLA-oTz8kRbroIWGOhI92m4hTYLP_2aNcx
+  - https://youtu.be/su9xi5XQMHw?list=PLA-oTz8kRbroIWGOhI92m4hTYLP_2aNcx
   LinksFR:
-  - https://youtu.be/7tiSAp_0qG4?list=PLA-oTz8kRbroIWGOhI92m4hTYLP_2aNcx
+  - https://youtu.be/7O8r2mep1Xg?list=PLA-oTz8kRbrozmIQE_b6ddmFE6C2DfUVA
   linkMessage: 'Video not working? Use this link to watch the video: '
   linkMessageFR: "Si le vid\xE9o ne fonctionne pas, veuillez utiliser ce lien: "
   linkArea: {fileID: 864786753}
@@ -12730,6 +12730,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1929819759}
+        m_MethodName: toggle
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2035754902
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13491,6 +13502,11 @@ PrefabInstance:
       propertyPath: clipName.Array.data[9]
       value: Slide Back (Left)
       objectReference: {fileID: 0}
+    - target: {fileID: 5521113173118334545, guid: 117951c1affdbae4a9000444b5825b8d,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5521113173118334550, guid: 117951c1affdbae4a9000444b5825b8d,
         type: 3}
       propertyPath: buttonTriggers.Array.size
@@ -13586,6 +13602,11 @@ PrefabInstance:
       propertyPath: buttonTriggers.Array.data[4]
       value: 
       objectReference: {fileID: 834433734}
+    - target: {fileID: 5521113173332164559, guid: 117951c1affdbae4a9000444b5825b8d,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5521113173362708486, guid: 117951c1affdbae4a9000444b5825b8d,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -13701,6 +13722,11 @@ PrefabInstance:
       propertyPath: dialogueManager
       value: 
       objectReference: {fileID: 420924302}
+    - target: {fileID: 5521113173825920876, guid: 117951c1affdbae4a9000444b5825b8d,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5521113173825920878, guid: 117951c1affdbae4a9000444b5825b8d,
         type: 3}
       propertyPath: triggerFlash

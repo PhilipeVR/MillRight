@@ -1640,6 +1640,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1736824337}
+        m_MethodName: toggle
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &192016320
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2146,11 +2157,11 @@ MonoBehaviour:
   VideoPanel: {fileID: 2110359599}
   Title: {fileID: 1931217241}
   videoPlayer: {fileID: 879090626}
-  videoClip: https://www.youtube.com/watch?v=x88Yxklmjw0&list=PLA-oTz8kRbroIWGOhI92m4hTYLP_2aNcx
-  videoClipFR: https://www.youtube.com/watch?v=x88Yxklmjw0&list=PLA-oTz8kRbroIWGOhI92m4hTYLP_2aNcx
+  videoClip: https://youtu.be/x88Yxklmjw0?list=PLA-oTz8kRbroIWGOhI92m4hTYLP_2aNcx
+  videoClipFR: https://youtu.be/Gw_quMaaiqo?list=PLA-oTz8kRbrozmIQE_b6ddmFE6C2DfUVA
   youtubePlayer: {fileID: 879090630}
   title: Introduction
-  titleFR: Introduction
+  titleFR: Introduction 2
   StopVideoButton: {fileID: 1468312210}
   playButton: {fileID: 1139344467}
   pauseButton: {fileID: 505796255}
@@ -2172,9 +2183,9 @@ MonoBehaviour:
   controller2: {fileID: 341533642}
   controller3: {fileID: 0}
   Links:
-  - https://www.youtube.com/watch?v=x88Yxklmjw0&list=PLA-oTz8kRbroIWGOhI92m4hTYLP_2aNcx
+  - https://youtu.be/x88Yxklmjw0?list=PLA-oTz8kRbroIWGOhI92m4hTYLP_2aNcx
   LinksFR:
-  - https://www.youtube.com/watch?v=x88Yxklmjw0&list=PLA-oTz8kRbroIWGOhI92m4hTYLP_2aNcx
+  - https://youtu.be/Gw_quMaaiqo?list=PLA-oTz8kRbrozmIQE_b6ddmFE6C2DfUVA
   linkMessage: 'Video not working? Use this link to watch the video: '
   linkMessageFR: "Si le vid\xE9o ne fonctionne pas, veuillez utiliser ce lien: "
   linkArea: {fileID: 1305004796}
@@ -5501,7 +5512,7 @@ VideoPlayer:
   - {fileID: 0}
   m_DirectAudioVolumes:
   - 1
-  m_Url: https://www.youtube.com/watch?v=dBakEk6PGkA&amp;ab_channel=CentreforEntrepreneurshipandEngineeringDesign
+  m_Url: 
   m_EnabledAudioTracks: 01
   m_DirectAudioMutes: 00
   m_ControlledAudioTrackCount: 1
@@ -5575,8 +5586,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3768fe280903842fdaa2a016022624f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  youtubeUrlEN: https://www.youtube.com/watch?v=x88Yxklmjw0&list=PLA-oTz8kRbroIWGOhI92m4hTYLP_2aNcx
-  youtubeUrlFR: https://www.youtube.com/watch?v=4pnfYV45zig&list=PLA-oTz8kRbroIWGOhI92m4hTYLP_2aNcx&index=2
+  youtubeUrlEN: 
+  youtubeUrlFR: 
 --- !u!1 &898342124
 GameObject:
   m_ObjectHideFlags: 0
@@ -18294,10 +18305,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   toggleList:
+  - {fileID: 1736824337}
   - {fileID: 192016322}
   toggleHint: {fileID: 0}
   languageScene: {fileID: 1615564895}
-  toggleLangManager: {fileID: 0}
+  toggleLangManager: {fileID: 432825065}
   warningLangManager: {fileID: 0}
   toggleComponentLangManager: {fileID: 865799118}
   imageToggle: {fileID: 0}
@@ -18306,7 +18318,6 @@ MonoBehaviour:
   videoProcessManager: {fileID: 0}
   videoStandardController: {fileID: 341533642}
   videoController: {fileID: 0}
-  youtubeExceptionListener: {fileID: 341533643}
 --- !u!114 &1615564897
 MonoBehaviour:
   m_ObjectHideFlags: 0

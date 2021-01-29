@@ -78,7 +78,10 @@ public class AnimatorController : MonoBehaviour
     }
     public void ActivateAnimator(Boolean state)
     {
-        animator.Rebind();
+        if (state)
+        {
+            animator.Rebind();
+        }
         bit.SetActive(state);
         if(animator == null)
         {

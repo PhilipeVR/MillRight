@@ -19,7 +19,7 @@ public class VideoController : MonoBehaviour
     [SerializeField] private Button StopVideoButton, playButton, pauseButton, stopButton;
     private bool playing = false;
     private bool[] playedOnce;
-    private bool language = true;
+    private bool language = false;
     private int m_index;
 
     [SerializeField] private bool playOnAwake = false;
@@ -116,7 +116,7 @@ public class VideoController : MonoBehaviour
             }
             youtubePlayer.Links(videoClip[vidIndex], videoClipFR[vidIndex]);
             youtubePlayer.Lang = language;
-            if (language)
+            if (!language)
             {
                 Title.text = title[vidIndex];
             }
@@ -139,7 +139,7 @@ public class VideoController : MonoBehaviour
             }
             playing = true;
             m_index = vidIndex;
-            LinkDisplayer.DisplayLink(language);
+            LinkDisplayer.DisplayLink(!language);
 
         }
     }
