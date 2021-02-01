@@ -2839,3 +2839,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   toggleOptionSprite: {fileID: 21300000, guid: 4da36ad448c52c24d80d164eeca15110, type: 3}
   currentIMG: {fileID: 2101881459}
+  initialSprite: {fileID: 21300000, guid: 71ced82a4ecfdd241a328b7f0cb5a9ce, type: 3}

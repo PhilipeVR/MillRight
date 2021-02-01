@@ -1106,6 +1106,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   toggleOptionSprite: {fileID: 21300000, guid: ead3dfff4c6154e4ebba64f9cd56a79d, type: 3}
   currentIMG: {fileID: 151977062}
+  initialSprite: {fileID: 21300000, guid: de3a042bbb52ba049bb9ccc20caf5bdf, type: 3}
 --- !u!1 &190457725
 GameObject:
   m_ObjectHideFlags: 0
@@ -1763,7 +1764,6 @@ MonoBehaviour:
   videoProcessManager: {fileID: 0}
   videoStandardController: {fileID: 0}
   videoController: {fileID: 0}
-  youtubeExceptionListener: {fileID: 0}
 --- !u!114 &885196806
 MonoBehaviour:
   m_ObjectHideFlags: 0

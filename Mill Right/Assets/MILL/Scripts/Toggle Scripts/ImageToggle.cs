@@ -6,14 +6,10 @@ using UnityEngine.UI;
 public class ImageToggle : MonoBehaviour
 {
     // Start is called before the first frame update
-    private Sprite initialSprite;
     public Sprite toggleOptionSprite;
     public Image currentIMG;
-    void Awake()
-    {
-        initialSprite = currentIMG.sprite;
+    public Sprite initialSprite;
 
-    }
 
     // Update is called once per frame
     public void toggle()
@@ -26,7 +22,6 @@ public class ImageToggle : MonoBehaviour
         else
         {
             currentIMG.sprite = initialSprite;
-
         }
     }
 }
