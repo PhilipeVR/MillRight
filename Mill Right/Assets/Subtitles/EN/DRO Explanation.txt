@@ -1,0 +1,172 @@
+1
+00:00:03,199 --> 00:00:04,560
+so a little bit about
+
+2
+00:00:04,560 --> 00:00:08,160
+positioning on the mill so
+
+3
+00:00:08,160 --> 00:00:10,800
+a big part of getting accurate results
+
+4
+00:00:10,800 --> 00:00:12,480
+uh when working with a mill is knowing
+
+5
+00:00:12,480 --> 00:00:13,519
+where your piece is
+
+6
+00:00:13,519 --> 00:00:16,480
+in space so to help us with that we have
+
+7
+00:00:16,480 --> 00:00:18,400
+these things here which are called the
+
+8
+00:00:18,400 --> 00:00:21,359
+digital readouts or dros for short and
+
+9
+00:00:21,359 --> 00:00:22,880
+these are actually going to
+
+10
+00:00:22,880 --> 00:00:25,920
+keep track of exactly how much we move
+
+11
+00:00:25,920 --> 00:00:29,599
+in each direction in space so
+
+12
+00:00:29,599 --> 00:00:31,840
+if i move the table so off camera i'm
+
+13
+00:00:31,840 --> 00:00:34,079
+moving the table in the x direction
+
+14
+00:00:34,079 --> 00:00:36,160
+we can see that the dro is actually
+
+15
+00:00:36,160 --> 00:00:38,559
+keeping track of exactly how much
+
+16
+00:00:38,559 --> 00:00:41,360
+i've moved in the x direction i can also
+
+17
+00:00:41,360 --> 00:00:43,360
+use these to set reference points
+
+18
+00:00:43,360 --> 00:00:45,600
+at any position in space so if i hit
+
+19
+00:00:45,600 --> 00:00:46,480
+this button
+
+20
+00:00:46,480 --> 00:00:49,920
+the zero button i have now created a
+
+21
+00:00:49,920 --> 00:00:51,600
+reference point
+
+22
+00:00:51,600 --> 00:00:54,160
+at that location so i can use that to
+
+23
+00:00:54,160 --> 00:00:55,280
+accurately
+
+24
+00:00:55,280 --> 00:00:57,840
+remove a certain amount of material if i
+
+25
+00:00:57,840 --> 00:00:59,920
+measure my piece and it's one inch
+
+26
+00:00:59,920 --> 00:01:02,960
+wide and i set a reference exactly at
+
+27
+00:01:02,960 --> 00:01:04,319
+that one inch line
+
+28
+00:01:04,319 --> 00:01:07,600
+if i move my table into
+
+29
+00:01:07,600 --> 00:01:11,280
+let's say 85 i know that i'm going to
+
+30
+00:01:11,280 --> 00:01:12,400
+remove 85
+
+31
+00:01:12,400 --> 00:01:15,439
+off that one inch so these are super
+
+32
+00:01:15,439 --> 00:01:16,000
+useful
+
+33
+00:01:16,000 --> 00:01:19,360
+in machining anything on the mill
+
+34
+00:01:19,360 --> 00:01:21,520
+and we're going to use these constantly
+
+35
+00:01:21,520 --> 00:01:23,280
+during the next two operations the
+
+36
+00:01:23,280 --> 00:01:25,840
+face milling and the side milling so on
+
+37
+00:01:25,840 --> 00:01:27,520
+this particular mill we have one for the
+
+38
+00:01:27,520 --> 00:01:28,400
+x direction here
+
+39
+00:01:28,400 --> 00:01:30,159
+one for the y on this side of the
+
+40
+00:01:30,159 --> 00:01:31,600
+machine and
+
+41
+00:01:31,600 --> 00:01:35,600
+the z dro is on the face of the machine
+
+42
+00:01:35,600 --> 00:01:38,479
+down here in front of or next to the
+
+43
+00:01:38,479 --> 00:01:41,840
+fine adjustment wheel
+

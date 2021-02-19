@@ -1,0 +1,200 @@
+1
+00:00:00,640 --> 00:00:03,439
+now in this machine's case the
+
+2
+00:00:03,439 --> 00:00:06,480
+removal rate is gonna be fairly easy to
+
+3
+00:00:06,480 --> 00:00:08,240
+figure out so you're gonna use the same
+
+4
+00:00:08,240 --> 00:00:09,840
+equation as we did on the drill press
+
+5
+00:00:09,840 --> 00:00:14,960
+the four times diameter four times
+
+6
+00:00:14,960 --> 00:00:18,560
+cutting speed divided by diameter so
+
+7
+00:00:18,560 --> 00:00:20,000
+and the speed is actually controlled
+
+8
+00:00:20,000 --> 00:00:21,279
+electronically so we don't need to worry
+
+9
+00:00:21,279 --> 00:00:22,720
+about changing belts
+
+10
+00:00:22,720 --> 00:00:26,320
+however seeing as we're not always only
+
+11
+00:00:26,320 --> 00:00:27,279
+going to be drilling
+
+12
+00:00:27,279 --> 00:00:29,599
+we might be removing material off the
+
+13
+00:00:29,599 --> 00:00:31,359
+side of our workpiece
+
+14
+00:00:31,359 --> 00:00:32,880
+then we're going to need to add in a lot
+
+15
+00:00:32,880 --> 00:00:35,840
+more variables such as
+
+16
+00:00:35,840 --> 00:00:37,680
+the speed at which we're moving through
+
+17
+00:00:37,680 --> 00:00:40,239
+our material so how fast we're traveling
+
+18
+00:00:40,239 --> 00:00:43,440
+left to right as well as
+
+19
+00:00:43,440 --> 00:00:47,440
+how much of a step over we're taking so
+
+20
+00:00:47,440 --> 00:00:49,120
+if we're machining the vice let's say
+
+21
+00:00:49,120 --> 00:00:50,879
+and i'm passing my tool here and i'm
+
+22
+00:00:50,879 --> 00:00:53,280
+trying to machine this block square
+
+23
+00:00:53,280 --> 00:00:55,840
+how fast am i traveling across the face
+
+24
+00:00:55,840 --> 00:00:57,039
+and how much of the face
+
+25
+00:00:57,039 --> 00:01:00,079
+am i eating at one time so those are
+
+26
+00:01:00,079 --> 00:01:01,039
+different variables that we'll have to
+
+27
+00:01:01,039 --> 00:01:02,480
+control and
+
+28
+00:01:02,480 --> 00:01:06,080
+we'll talk about that in a little bit
+
+29
+00:01:06,080 --> 00:01:10,320
+i do want to show you the a few very
+
+30
+00:01:10,320 --> 00:01:12,720
+simple and basic processes that can be
+
+31
+00:01:12,720 --> 00:01:14,560
+done on the mill
+
+32
+00:01:14,560 --> 00:01:17,759
+so i'll go through drilling facing and
+
+33
+00:01:17,759 --> 00:01:21,520
+side milling drilling
+
+34
+00:01:21,520 --> 00:01:24,960
+is very simple it's very
+
+35
+00:01:24,960 --> 00:01:26,640
+similar to what we've done in the past
+
+36
+00:01:26,640 --> 00:01:28,000
+on the drill press
+
+37
+00:01:28,000 --> 00:01:30,079
+so we have our drill truck inside the
+
+38
+00:01:30,079 --> 00:01:31,520
+spindle
+
+39
+00:01:31,520 --> 00:01:33,439
+now all we need to do is fixture our
+
+40
+00:01:33,439 --> 00:01:35,680
+work piece inside the vise
+
+41
+00:01:35,680 --> 00:01:37,920
+fixture our drill bit inside the drill
+
+42
+00:01:37,920 --> 00:01:41,439
+chuck position it to the proper location
+
+43
+00:01:41,439 --> 00:01:43,360
+and then proceed with the drilling
+
+44
+00:01:43,360 --> 00:01:45,040
+operation
+
+45
+00:01:45,040 --> 00:01:47,439
+so i'll set up my part inside the vise
+
+46
+00:01:47,439 --> 00:01:50,079
+and my tool inside the drill truck
+
+47
+00:01:50,079 --> 00:01:52,479
+and i'll show you how to position the
+
+48
+00:01:52,479 --> 00:01:53,280
+drill press
+
+49
+00:01:53,280 --> 00:01:56,640
+or position the mill and as well as
+
+50
+00:01:56,640 --> 00:02:00,159
+drilling of the actual workpiece
+

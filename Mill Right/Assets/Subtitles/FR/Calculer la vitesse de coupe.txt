@@ -1,0 +1,296 @@
+1
+00:00:01,760 --> 00:00:05,330
+quand on sort de la vitesse de coupe où
+
+2
+00:00:05,330 --> 00:00:07,399
+les vitesses qu'on nous enlève le
+
+3
+00:00:07,399 --> 00:00:09,410
+matériel sur une autre pièce et
+
+4
+00:00:09,410 --> 00:00:11,830
+plusieurs variables par rencontre
+
+5
+00:00:11,830 --> 00:00:13,730
+évidemment on va utiliser la même
+
+6
+00:00:13,730 --> 00:00:15,650
+équation qu'on utilise avec tous les
+
+7
+00:00:15,650 --> 00:00:18,830
+climats de l'atelier qui va être quatre
+
+8
+00:00:18,830 --> 00:00:22,460
+fois la vitesse de coupe du matériel /
+
+9
+00:00:22,460 --> 00:00:26,539
+le diamant est par contre lui et plans
+
+10
+00:00:26,539 --> 00:00:30,199
+d'eau des variables voire encore si par
+
+11
+00:00:30,199 --> 00:00:32,989
+exemple on est entrain d'usiné cette
+
+12
+00:00:32,989 --> 00:00:35,329
+pièce les trous par exemple puis on
+
+13
+00:00:35,329 --> 00:00:38,120
+utilise à présent à vous des parrains de
+
+14
+00:00:38,120 --> 00:00:41,989
+l'opération sim et on recoupe la surface
+
+15
+00:00:41,989 --> 00:00:44,329
+de la pièce comme ici ou s'ils occupent
+
+16
+00:00:44,329 --> 00:00:49,909
+le côté comme une surface que le couteau
+
+17
+00:00:49,909 --> 00:00:54,799
+et touche la surface des pièces
+
+18
+00:00:54,799 --> 00:00:57,589
+donc c'est un couteau coupe le côté
+
+19
+00:00:57,589 --> 00:01:02,749
+comme ceux ci c'est quoi le montant le
+
+20
+00:01:02,749 --> 00:01:04,339
+site appauvrir d'anglet nord la montagne
+
+21
+00:01:04,339 --> 00:01:06,410
+matériel que nous allons avec la reine
+
+22
+00:01:06,410 --> 00:01:08,740
+passe ont fait depuis la moitié du
+
+23
+00:01:08,740 --> 00:01:11,960
+diamant est en fait tu le deux tiers en
+
+24
+00:01:11,960 --> 00:01:15,190
+fait juste une petite passe de 10000e
+
+25
+00:01:15,190 --> 00:01:19,940
+soit ça va grandement affecter les
+
+26
+00:01:19,940 --> 00:01:21,350
+résultats du groupe
+
+27
+00:01:21,350 --> 00:01:26,180
+les forces de coupe ainsi que le surface
+
+28
+00:01:26,180 --> 00:01:28,940
+résultats donc la finition sur la
+
+29
+00:01:28,940 --> 00:01:34,910
+surface et la vitesse auquel la toux
+
+30
+00:01:34,910 --> 00:01:38,780
+tito ainsi que la vitesse auquel bouge
+
+31
+00:01:38,780 --> 00:01:41,870
+l'octo n'auront travail sur hama ville
+
+32
+00:01:41,870 --> 00:01:44,240
+où au canada puis on traverse très
+
+33
+00:01:44,240 --> 00:01:46,600
+lentement le long de la surface
+
+34
+00:01:46,600 --> 00:01:50,720
+c'est variable avant évidemment affecter
+
+35
+00:01:50,720 --> 00:01:52,210
+les résultats
+
+36
+00:01:52,210 --> 00:01:56,840
+par exemple ayez des équations exprès
+
+37
+00:01:56,840 --> 00:02:00,500
+pour calculer les la bonne vitesse de
+
+38
+00:02:00,500 --> 00:02:04,070
+coupe le bon montant pour chaque d'un de
+
+39
+00:02:04,070 --> 00:02:07,460
+l'outil sont réservées plutôt pour les
+
+40
+00:02:07,460 --> 00:02:09,679
+aberrations qui sont faites sur le cnc
+
+41
+00:02:09,679 --> 00:02:11,890
+donc sont contrôlés
+
+42
+00:02:11,890 --> 00:02:13,990
+après ordinateur pour les machines
+
+43
+00:02:13,990 --> 00:02:17,410
+manuelles comme la fraiseuse ici c'est
+
+44
+00:02:17,410 --> 00:02:17,830
+variable
+
+45
+00:02:17,830 --> 00:02:20,020
+tout est contrôlé par l'utilisateur lors
+
+46
+00:02:20,020 --> 00:02:24,209
+des machinistes et avec l'expérience et
+
+47
+00:02:24,209 --> 00:02:27,250
+plus de pratiquer avec les machines on
+
+48
+00:02:27,250 --> 00:02:32,709
+va capable de changer ici variable à
+
+49
+00:02:32,709 --> 00:02:34,750
+d'un comme un appareil d'usinage pour
+
+50
+00:02:34,750 --> 00:02:39,010
+bien avoir des bons résultats puisque ça
+
+51
+00:02:39,010 --> 00:02:40,450
+va venir comme jeudi avec l'expérience
+
+52
+00:02:40,450 --> 00:02:43,569
+et de la pratique les matches nice va
+
+53
+00:02:43,569 --> 00:02:46,239
+devenir notre mieux pour choisir ces
+
+54
+00:02:46,239 --> 00:02:49,510
+variables à les sélections plus
+
+55
+00:02:49,510 --> 00:02:50,980
+important pour nous autres c'est
+
+56
+00:02:50,980 --> 00:02:53,650
+l'équation le 4 x c est accusé par le
+
+57
+00:02:53,650 --> 00:02:55,690
+diamant qui vont nous donner une valeur
+
+58
+00:02:55,690 --> 00:02:59,260
+de rpm donc les valeurs de vitesse que
+
+59
+00:02:59,260 --> 00:03:03,040
+l'outil tourner sur des utilisateurs va
+
+60
+00:03:03,040 --> 00:03:06,430
+faire un choix sûr comme avit mougel
+
+61
+00:03:06,430 --> 00:03:08,350
+outil commun de matériel à vis d'une
+
+62
+00:03:08,350 --> 00:03:08,920
+passe
+
+63
+00:03:08,920 --> 00:03:11,950
+ces études des choses qui va venir avec
+
+64
+00:03:11,950 --> 00:03:14,800
+le temps il faut changer de corps à
+
+65
+00:03:14,800 --> 00:03:16,810
+corps dépendant du matériel départ à
+
+66
+00:03:16,810 --> 00:03:19,660
+naughty dog la meilleure chose à faire
+
+67
+00:03:19,660 --> 00:03:21,880
+c'est toujours de déborder le
+
+68
+00:03:21,880 --> 00:03:23,049
+superviseur et qui travaille à l'atelier
+
+69
+00:03:23,049 --> 00:03:29,140
+vous pourrez plus vous guider sur comme
+
+70
+00:03:29,140 --> 00:03:32,500
+inchangé si maria mieux pour nous au
+
+71
+00:03:32,500 --> 00:03:34,000
+travail du corps à corps je vois
+
+72
+00:03:34,000 --> 00:03:37,540
+l'expliqué à chaque processus nos rivaux
+
+73
+00:03:37,540 --> 00:03:40,600
+leurs différends pour le perçage le
+
+74
+00:03:40,600 --> 00:03:45,510
+fraisage du trapèze le côté
+

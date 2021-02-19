@@ -1,0 +1,716 @@
+1
+00:00:02,580 --> 00:00:05,290
+voici la fraiseuse la fraiseuse d'une
+
+2
+00:00:05,290 --> 00:00:07,720
+piste qui me disait en manufacture pour
+
+3
+00:00:07,720 --> 00:00:12,070
+usiner des pièces la fraiseuse est très
+
+4
+00:00:12,070 --> 00:00:15,580
+semblable à la partie de la colonne les
+
+5
+00:00:15,580 --> 00:00:16,299
+trous dans notre pièce
+
+6
+00:00:16,299 --> 00:00:19,600
+par contre contrairement à la partie des
+
+7
+00:00:19,600 --> 00:00:22,750
+colonnes le fraser il peut casser de
+
+8
+00:00:22,750 --> 00:00:24,939
+notre pièce et lorsqu'il est dans la
+
+9
+00:00:24,939 --> 00:00:26,820
+pièce pour bouger de gauche à droite
+
+10
+00:00:26,820 --> 00:00:31,869
+pour éliminer ou usines et le matériel
+
+11
+00:00:31,869 --> 00:00:34,719
+tutelle ont une surface d'une pièce on
+
+12
+00:00:34,719 --> 00:00:39,149
+peut aussi visionner le côté d'une pièce
+
+13
+00:00:39,149 --> 00:00:42,190
+les options d'usinage avec 2 fraiseurs
+
+14
+00:00:42,190 --> 00:00:48,370
+la dignité l'a7 sens la fraiseuse d'une
+
+15
+00:00:48,370 --> 00:00:52,110
+pièce d'équipement reprend avancé
+
+16
+00:00:52,140 --> 00:00:54,550
+aujourd'hui on va parler un peu de l'e3
+
+17
+00:00:54,550 --> 00:00:57,039
+les opérations principales nous allons
+
+18
+00:00:57,039 --> 00:01:00,190
+utiliser leurs machines à jeanine fraser
+
+19
+00:01:00,190 --> 00:01:04,149
+a parlé d'un passage d'usinage de face
+
+20
+00:01:04,149 --> 00:01:06,960
+et l'usinage d'une côté d'une pièce
+
+21
+00:01:06,960 --> 00:01:09,790
+avant 40 ans soit par contre je veux
+
+22
+00:01:09,790 --> 00:01:12,970
+discuter un peu sur les composants de la
+
+23
+00:01:12,970 --> 00:01:16,780
+machine ainsi que certains technologie
+
+24
+00:01:16,780 --> 00:01:19,830
+nous allons user le long du match nage
+
+25
+00:01:19,830 --> 00:01:25,270
+donc la fraiseuse va bouger dans trois
+
+26
+00:01:25,270 --> 00:01:25,869
+directions
+
+27
+00:01:25,869 --> 00:01:28,360
+ces trois directions là ont été nommés
+
+28
+00:01:28,360 --> 00:01:33,850
+par leurs noms dax donc si on bouge la
+
+29
+00:01:33,850 --> 00:01:36,579
+fraiseuse de gauche à droite voir dans
+
+30
+00:01:36,579 --> 00:01:39,790
+la crise x valeur à l'arrière voiliers
+
+31
+00:01:39,790 --> 00:01:43,270
+class d y est aux abords vont être les
+
+32
+00:01:43,270 --> 00:01:48,159
+axes d aide aussi d'autres majid al
+
+33
+00:01:48,159 --> 00:01:51,210
+hawthi dire c'est l'épaisseur de cours
+
+34
+00:01:51,210 --> 00:01:54,820
+une vitesse de course et c'est qu'on va
+
+35
+00:01:54,820 --> 00:01:56,020
+discuter un peu plus tard lorsqu'on
+
+36
+00:01:56,020 --> 00:01:58,890
+arrive à l'usinage
+
+37
+00:01:58,890 --> 00:02:01,630
+les composants de la machine
+
+38
+00:02:01,630 --> 00:02:05,079
+la cause principale va être la table ici
+
+39
+00:02:05,079 --> 00:02:07,600
+la table est utilisé pour tenir nos
+
+40
+00:02:07,600 --> 00:02:11,349
+pièces sur la table par défaut celle de
+
+41
+00:02:11,349 --> 00:02:15,489
+retrouver un étau les taux utilisé
+
+42
+00:02:15,489 --> 00:02:18,200
+90% du temps pour l'utiliser fraiseuse
+
+43
+00:02:18,200 --> 00:02:21,140
+pour sa capacité des deux variables ont
+
+44
+00:02:21,140 --> 00:02:23,510
+fait deux dimensions de pièces
+
+45
+00:02:23,510 --> 00:02:25,489
+géométriques pièce ça peut te donner une
+
+46
+00:02:25,489 --> 00:02:27,290
+grosse gamme de pièces
+
+47
+00:02:27,290 --> 00:02:30,079
+donc on va toujours utilisé les
+
+48
+00:02:30,079 --> 00:02:32,930
+trolleurs forte pour tenir nos pièces et
+
+49
+00:02:32,930 --> 00:02:34,760
+on y trouve à être boulonné alata de la
+
+50
+00:02:34,760 --> 00:02:37,730
+fraiseuse c'était important d'avoir les
+
+51
+00:02:37,730 --> 00:02:41,530
+taux parallèle avec la zdx sur la table
+
+52
+00:02:41,530 --> 00:02:45,140
+cause la table va bouger uniquement dans
+
+53
+00:02:45,140 --> 00:02:46,750
+x ou y
+
+54
+00:02:46,750 --> 00:02:50,959
+s'ils n'étaient tout sur la table et
+
+55
+00:02:50,959 --> 00:02:51,920
+autres pièces
+
+56
+00:02:51,920 --> 00:02:53,840
+lorsqu'on bouge la table dans la
+
+57
+00:02:53,840 --> 00:02:58,430
+direction des asics notre pièce vont
+
+58
+00:02:58,430 --> 00:02:58,819
+bouger
+
+59
+00:02:58,819 --> 00:03:02,599
+paris y est à cause les taux auront donc
+
+60
+00:03:02,599 --> 00:03:06,019
+pour est capable d'isoler chacune et axe
+
+61
+00:03:06,019 --> 00:03:07,819
+c'est important de garder les taux
+
+62
+00:03:07,819 --> 00:03:13,400
+parallèle avec la crise x pour bouger la
+
+63
+00:03:13,400 --> 00:03:16,549
+table alors le de manivelle sur chaque
+
+64
+00:03:16,549 --> 00:03:19,430
+côté de gauche à droite de la table qui
+
+65
+00:03:19,430 --> 00:03:22,660
+permet de le bouger d'halak zizic
+
+66
+00:03:22,660 --> 00:03:25,250
+également avoir de manivelle sur le
+
+67
+00:03:25,250 --> 00:03:26,449
+devant de la machine qui vont nous
+
+68
+00:03:26,449 --> 00:03:29,540
+permettre de bouger la table dans la
+
+69
+00:03:29,540 --> 00:03:30,409
+ville et y
+
+70
+00:03:30,409 --> 00:03:36,169
+le graveur d'ailleurs c'est également
+
+71
+00:03:36,169 --> 00:03:39,500
+possible de verrouiller la table et la
+
+72
+00:03:39,500 --> 00:03:42,199
+prévenir de bouger dans chacune des axes
+
+73
+00:03:42,199 --> 00:03:43,129
+x et y
+
+74
+00:03:43,129 --> 00:03:45,709
+au dessus de la table qui va avoir des
+
+75
+00:03:45,709 --> 00:03:49,430
+petites manivelle effectivement le baril
+
+76
+00:03:49,430 --> 00:03:53,989
+en place c'est important de savoir s'ils
+
+77
+00:03:53,989 --> 00:03:56,030
+ont utilisé le fait qu'on peut le
+
+78
+00:03:56,030 --> 00:03:58,699
+verrouiller pour prévenir que la table
+
+79
+00:03:58,699 --> 00:04:01,909
+rouge lors de l'usinage donc si on
+
+80
+00:04:01,909 --> 00:04:07,040
+découpe le côté d'une pièce jeu pendant
+
+81
+00:04:07,040 --> 00:04:09,799
+qu'on est andré machemy n'ai pas frappé
+
+82
+00:04:09,799 --> 00:04:13,449
+une manivelle et que la pièce bouge
+
+83
+00:04:13,449 --> 00:04:16,820
+drastiquement changé le l'épaisseur de
+
+84
+00:04:16,820 --> 00:04:17,899
+groupes qui pourraient endommager
+
+85
+00:04:17,899 --> 00:04:19,839
+l'outil ou endommagé une autre pièce
+
+86
+00:04:19,839 --> 00:04:23,419
+donc on veut le brouillard place ainsi
+
+87
+00:04:23,419 --> 00:04:24,240
+que
+
+88
+00:04:24,240 --> 00:04:29,220
+avec des gros scoops la vibration est
+
+89
+00:04:29,220 --> 00:04:31,349
+assez de force de coupe sur la pièce que
+
+90
+00:04:31,349 --> 00:04:33,440
+des fois la pièce vouloir bouger
+
+91
+00:04:33,440 --> 00:04:37,050
+s'éloigner de l'outil lors de l'usinage
+
+92
+00:04:37,050 --> 00:04:39,479
+donc pour par le verrouiller en place on
+
+93
+00:04:39,479 --> 00:04:42,150
+va les prévenir de couper les arbres
+
+94
+00:04:42,150 --> 00:04:45,229
+proches de nos pièces est vraiment avoir
+
+95
+00:04:45,229 --> 00:04:50,360
+la coupe que nous voulions sur le ps
+
+96
+00:04:50,449 --> 00:04:53,009
+ensuite si on regarde le temps de la
+
+97
+00:04:53,009 --> 00:04:56,340
+machine la taille de la machine va tout
+
+98
+00:04:56,340 --> 00:04:59,849
+d'abord l'acte de contrôle des aides on
+
+99
+00:04:59,849 --> 00:05:03,539
+être au niveau de mouvement les gros
+
+100
+00:05:03,539 --> 00:05:05,849
+niveau d'ajustement aux aides de la
+
+101
+00:05:05,849 --> 00:05:08,419
+manivelle en haut à droite de la machine
+
+102
+00:05:08,419 --> 00:05:12,139
+avant de le tourner il faut desserrer
+
+103
+00:05:12,139 --> 00:05:17,639
+les deux manivelle sur le côté droite
+
+104
+00:05:17,639 --> 00:05:20,220
+qui va verrouiller le positionnement de
+
+105
+00:05:20,220 --> 00:05:20,699
+la tête
+
+106
+00:05:20,699 --> 00:05:23,039
+ensuite on peut tourner la manivelle
+
+107
+00:05:23,039 --> 00:05:27,780
+pour monter ou descendre la taille de la
+
+108
+00:05:27,780 --> 00:05:30,659
+chine lorsqu'on est bien placé le
+
+109
+00:05:30,659 --> 00:05:32,370
+fonctionnement de la tête
+
+110
+00:05:32,370 --> 00:05:34,530
+on veut toujours verrouiller son
+
+111
+00:05:34,530 --> 00:05:36,570
+positionnement en salle et du magny
+
+112
+00:05:36,570 --> 00:05:41,759
+vernois sur le côté pour éviter que la
+
+113
+00:05:41,759 --> 00:05:46,169
+taxe rouge lors de l'uzège ensuite le
+
+114
+00:05:46,169 --> 00:05:48,810
+deuxième niveau d'ajustement va être
+
+115
+00:05:48,810 --> 00:05:51,000
+très semblable à ce qu'on a déjà vu sur
+
+116
+00:05:51,000 --> 00:05:55,729
+la pâte usa colonnes les trois manivelle
+
+117
+00:05:55,729 --> 00:05:58,590
+se rattacher à la grosse roue pour
+
+118
+00:05:58,590 --> 00:06:02,280
+monter ou descendre la colonne lorsqu'on
+
+119
+00:06:02,280 --> 00:06:04,169
+descend la colonne qui tiennent aux
+
+120
+00:06:04,169 --> 00:06:06,870
+outils on peut le berruyer en place par
+
+121
+00:06:06,870 --> 00:06:08,460
+tourner
+
+122
+00:06:08,460 --> 00:06:11,880
+la petite roue au centre lorsque le
+
+123
+00:06:11,880 --> 00:06:13,229
+titre oh certes et bahreïn
+
+124
+00:06:13,229 --> 00:06:15,330
+on a accès au troisième niveau
+
+125
+00:06:15,330 --> 00:06:18,900
+d'ajustement qui est utilisé pour monter
+
+126
+00:06:18,900 --> 00:06:21,750
+ou descendre la colonne précise hébert
+
+127
+00:06:21,750 --> 00:06:26,940
+donc pas très petit peu à la fois ils
+
+128
+00:06:26,940 --> 00:06:28,500
+vont nous permettre de monter ou
+
+129
+00:06:28,500 --> 00:06:31,780
+descendre tout y en a des milliers
+
+130
+00:06:31,780 --> 00:06:35,110
+deux postes à la fois pour bien préciser
+
+131
+00:06:35,110 --> 00:06:38,290
+a bien dit mans series et nos pièces et
+
+132
+00:06:38,290 --> 00:06:43,560
+avoir une bonne précision de manufacture
+
+133
+00:06:44,400 --> 00:06:47,740
+c'est le panneau de contrôle à gauche on
+
+134
+00:06:47,740 --> 00:06:50,610
+va voir tous les boutons qui vont
+
+135
+00:06:50,610 --> 00:06:53,080
+repérer la chine notamment
+
+136
+00:06:53,080 --> 00:06:56,410
+l'instructeur pour allumer ou fermer la
+
+137
+00:06:56,410 --> 00:07:00,690
+machine ainsi que le bouton de sécurité
+
+138
+00:07:00,690 --> 00:07:04,600
+on a aussi une bonne direction donc
+
+139
+00:07:04,600 --> 00:07:06,160
+c'était vraiment c'est nier que la
+
+140
+00:07:06,160 --> 00:07:08,850
+précieuse pour tourner en direction
+
+141
+00:07:08,850 --> 00:07:11,410
+d'avancées et de reculs ans
+
+142
+00:07:11,410 --> 00:07:13,330
+contrairement à la perceuse à colonne je
+
+143
+00:07:13,330 --> 00:07:15,900
+vois toujours tourné dans une direction
+
+144
+00:07:15,900 --> 00:07:18,760
+ici on a un truc pas de vitesse donc si
+
+145
+00:07:18,760 --> 00:07:21,880
+on tourne la petite heure où on peut
+
+146
+00:07:21,880 --> 00:07:27,310
+ajuster la vitesse de la machine ici sur
+
+147
+00:07:27,310 --> 00:07:30,400
+le top qui va nous indiquer la vitesse
+
+148
+00:07:30,400 --> 00:07:35,830
+la chine dépend des deux grandes aussi
+
+149
+00:07:35,830 --> 00:07:38,190
+quelle pièce que dans les usines et
+
+150
+00:07:38,190 --> 00:07:42,940
+ajuster cette vitesse là sur le devant
+
+151
+00:07:42,940 --> 00:07:45,280
+de la chine on a aussi les troupes ce
+
+152
+00:07:45,280 --> 00:07:48,729
+thriller ici qui va nous indiquer le
+
+153
+00:07:48,729 --> 00:07:53,850
+positionnement de notre outil de respect
+
+154
+00:07:53,850 --> 00:07:56,560
+des horaires pour chaque acte sur le lac
+
+155
+00:07:56,560 --> 00:07:57,600
+z
+
+156
+00:07:57,600 --> 00:08:01,960
+l'accès y est la physique ce serait
+
+157
+00:08:01,960 --> 00:08:04,600
+super important pour nous autres lors de
+
+158
+00:08:04,600 --> 00:08:05,460
+l'usinage
+
+159
+00:08:05,460 --> 00:08:08,350
+ça va nous permettre de savoir
+
+160
+00:08:08,350 --> 00:08:10,419
+exactement où est ce qu'on est à
+
+161
+00:08:10,419 --> 00:08:14,560
+l'espace insérer des références sur soi
+
+162
+00:08:14,560 --> 00:08:17,260
+nos pièces neto quoi que ce soit et
+
+163
+00:08:17,260 --> 00:08:22,720
+ensuite bouger une dimension brava
+
+164
+00:08:22,720 --> 00:08:25,560
+précis pour soit relevé le matériel
+
+165
+00:08:25,560 --> 00:08:29,340
+percer un trou à exactement
+
+166
+00:08:31,080 --> 00:08:33,789
+j'aurais coordonnées précises sur la
+
+167
+00:08:33,789 --> 00:08:37,120
+surface d'une pièce et c'est donc je
+
+168
+00:08:37,120 --> 00:08:39,099
+vais en discuter un peu plus de cela
+
+169
+00:08:39,099 --> 00:08:43,599
+plus tard avant de commencer comme à
+
+170
+00:08:43,599 --> 00:08:45,279
+paris
+
+171
+00:08:45,279 --> 00:08:48,490
+les processus on la partage le fraisage
+
+172
+00:08:48,490 --> 00:08:52,720
+de phase finale de côté il ya toujours
+
+173
+00:08:52,720 --> 00:08:55,529
+trois choses à prendre en compte
+
+174
+00:08:55,529 --> 00:08:57,670
+lorsqu'on travaille avec guy maddin
+
+175
+00:08:57,670 --> 00:09:00,160
+arrêté ni savon des mines d'autres
+
+176
+00:09:00,160 --> 00:09:02,769
+choses pour des machines dans l'espace
+
+177
+00:09:02,769 --> 00:09:05,139
+ça va être qu'on va tenir nos pièces
+
+178
+00:09:05,139 --> 00:09:08,439
+comme à tenir nos outils et à quelle
+
+179
+00:09:08,439 --> 00:09:13,110
+vitesse qu'on enlève le matériel
+

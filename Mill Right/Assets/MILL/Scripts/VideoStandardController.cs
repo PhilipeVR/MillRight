@@ -12,10 +12,13 @@ public class VideoStandardController : MonoBehaviour
     [SerializeField] private Text Title;
     [SerializeField] private VideoPlayer videoPlayer;
     [SerializeField] private string videoClip, videoClipFR;
-    [SerializeField] private YoutubePlayer.YoutubePlayer youtubePlayer;
+    [SerializeField] private TextAsset subtitleClip, subtitleClipFR;
+    [SerializeField] private YoutubePlayer youtubePlayer;
     [SerializeField] private string title, titleFR;
     [SerializeField] private Button StopVideoButton, playButton, pauseButton, stopButton;
     [SerializeField] private bool StartOnAwake;
+    [SerializeField] private YoutubeSubtitlesReader subtitlesReader;
+
     private bool playing = false; 
     private bool playedOnce;
     private bool language = false;
@@ -24,10 +27,10 @@ public class VideoStandardController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        StopVideoButton.interactable = false;
-        stopButton.interactable = false;
+        //StopVideoButton.interactable = false;
+        //stopButton.interactable = false;
         VideoPanel.SetActive(false);
-        videoPlayer.Stop();
+        //videoPlayer.Stop();
         videoPlayer.loopPointReached += VideoPlayed;
         if (StartOnAwake)
         {
@@ -42,13 +45,13 @@ public class VideoStandardController : MonoBehaviour
         videoPlayer.Play();
         if (!playedOnce)
         {
-            StopVideoButton.interactable = false;
-            stopButton.interactable = false;
+            //StopVideoButton.interactable = false;
+            //stopButton.interactable = false;
         }
         else
         {
-            StopVideoButton.interactable = true;
-            stopButton.interactable = true;
+            //StopVideoButton.interactable = true;
+            //stopButton.interactable = true;
 
         }
     }
@@ -64,20 +67,18 @@ public class VideoStandardController : MonoBehaviour
         if (playedOnce)
         {
             videoPlayer.Stop();
-            playButton.gameObject.SetActive(true);
-            pauseButton.gameObject.SetActive(false);
+            //playButton.gameObject.SetActive(true);
+           // pauseButton.gameObject.SetActive(false);
         }
     }
 
     public void ExitVideo()
     {
         playing = false;
-
-        if (playedOnce)
-        {
-            cameraToggle.SwtichView(); //Change camera back to origin
-            VideoPanel.SetActive(false);
-        }
+        playedOnce = true;
+        cameraToggle.SwtichView(); //Change camera back to origin
+        VideoPanel.SetActive(false);
+ 
     }
 
     public bool Playing
@@ -93,26 +94,27 @@ public class VideoStandardController : MonoBehaviour
         {
             cameraToggle.SwtichView(); //Change camera view to improve performance(performance drops with camera controller view)
         }
-        youtubePlayer.Links(videoClip, videoClipFR);
-        youtubePlayer.Lang = language;
         if (!language)
         {
+            subtitlesReader.LoadSubtitles(subtitleClip);
+            youtubePlayer.Play(videoClip);
             Title.text = title;
         }
         else
         {
+            subtitlesReader.LoadSubtitles(subtitleClipFR);
+            youtubePlayer.Play(videoClipFR);
             Title.text = titleFR;
         }
-        youtubePlayer.PlayYoutubeVid();
         if (!playedOnce)
         {
-            StopVideoButton.interactable = false;
-            stopButton.interactable = false;
+            //StopVideoButton.interactable = false;
+            //stopButton.interactable = false;
         }
         else
         {
-            StopVideoButton.interactable = true;
-            stopButton.interactable = true;
+            //StopVideoButton.interactable = true;
+            //stopButton.interactable = true;
 
         }
         playing = true;
@@ -126,11 +128,11 @@ public class VideoStandardController : MonoBehaviour
         if (!playedOnce)
         {
             playedOnce = true;
-            StopVideoButton.interactable = true;
-            stopButton.interactable = true;
+            //StopVideoButton.interactable = true;
+            //stopButton.interactable = true;
         }
-        playButton.gameObject.SetActive(true);
-        pauseButton.gameObject.SetActive(false);
+        //playButton.gameObject.SetActive(true);
+        //pauseButton.gameObject.SetActive(false);
         playing = false;
 
     }

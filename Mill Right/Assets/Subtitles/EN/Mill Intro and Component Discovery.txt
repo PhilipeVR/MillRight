@@ -1,0 +1,784 @@
+1
+00:00:04,160 --> 00:00:05,839
+so this is a mill
+
+2
+00:00:05,839 --> 00:00:09,120
+it's used in subtractive manufacturing
+
+3
+00:00:09,120 --> 00:00:10,800
+it's a bit more of an advanced piece of
+
+4
+00:00:10,800 --> 00:00:12,160
+machinery
+
+5
+00:00:12,160 --> 00:00:14,000
+it's slightly similar to a drill press
+
+6
+00:00:14,000 --> 00:00:15,200
+in functionality
+
+7
+00:00:15,200 --> 00:00:16,400
+where we have a tool that can hold our
+
+8
+00:00:16,400 --> 00:00:18,320
+work our work piece
+
+9
+00:00:18,320 --> 00:00:20,800
+a spindle that'll spin our tool we have
+
+10
+00:00:20,800 --> 00:00:22,960
+the quill feet on either side to lower
+
+11
+00:00:22,960 --> 00:00:26,800
+the tool but the mill is so much more
+
+12
+00:00:26,800 --> 00:00:29,519
+than a drill press drill presses are
+
+13
+00:00:29,519 --> 00:00:30,320
+mainly
+
+14
+00:00:30,320 --> 00:00:33,840
+limited to up and down motions and
+
+15
+00:00:33,840 --> 00:00:35,840
+pretty much only used for drilling into
+
+16
+00:00:35,840 --> 00:00:37,280
+work pieces
+
+17
+00:00:37,280 --> 00:00:39,840
+the mill however once you drill into a
+
+18
+00:00:39,840 --> 00:00:40,800
+work piece
+
+19
+00:00:40,800 --> 00:00:44,000
+you can then move your table
+
+20
+00:00:44,000 --> 00:00:46,399
+and move your piece around in space and
+
+21
+00:00:46,399 --> 00:00:47,680
+that way the tool is going to be
+
+22
+00:00:47,680 --> 00:00:49,440
+removing material as it gets
+
+23
+00:00:49,440 --> 00:00:51,600
+moved across your workpiece so you can
+
+24
+00:00:51,600 --> 00:00:52,559
+use the mill
+
+25
+00:00:52,559 --> 00:00:55,760
+to manufacture any type of geometry
+
+26
+00:00:55,760 --> 00:00:58,239
+that you can imagine up you'll obviously
+
+27
+00:00:58,239 --> 00:00:59,680
+just face problems when it comes to
+
+28
+00:00:59,680 --> 00:01:02,239
+fixturing and
+
+29
+00:01:02,239 --> 00:01:05,519
+the different tools that are available
+
+30
+00:01:05,519 --> 00:01:09,520
+however the main components of the mill
+
+31
+00:01:09,520 --> 00:01:11,280
+so we have the table here which is going
+
+32
+00:01:11,280 --> 00:01:12,720
+to hold our work piece
+
+33
+00:01:12,720 --> 00:01:15,040
+we have the head of the machine where
+
+34
+00:01:15,040 --> 00:01:16,479
+we're going to have our control panel on
+
+35
+00:01:16,479 --> 00:01:18,720
+the left hand side
+
+36
+00:01:18,720 --> 00:01:22,080
+the height adjustments and such
+
+37
+00:01:22,080 --> 00:01:24,320
+the table itself can actually move in
+
+38
+00:01:24,320 --> 00:01:26,080
+each direction x and y
+
+39
+00:01:26,080 --> 00:01:29,360
+so same as i explained earlier
+
+40
+00:01:29,360 --> 00:01:32,079
+the table can move in the x direction by
+
+41
+00:01:32,079 --> 00:01:34,320
+moving either hand wheel on either side
+
+42
+00:01:34,320 --> 00:01:37,280
+of the table so if we rotate the handle
+
+43
+00:01:37,280 --> 00:01:39,040
+we're going to move the table
+
+44
+00:01:39,040 --> 00:01:41,840
+left and right similarly there's a hand
+
+45
+00:01:41,840 --> 00:01:43,360
+wheel on the front of the machine
+
+46
+00:01:43,360 --> 00:01:45,200
+which is going to move the table in the
+
+47
+00:01:45,200 --> 00:01:47,920
+y direction
+
+48
+00:01:48,640 --> 00:01:50,079
+just an important note that when we're
+
+49
+00:01:50,079 --> 00:01:51,680
+working with the milling machine we're
+
+50
+00:01:51,680 --> 00:01:52,960
+going to talk about three different
+
+51
+00:01:52,960 --> 00:01:55,680
+axises we're going to talk about the x
+
+52
+00:01:55,680 --> 00:01:57,520
+which is going to be left to right y
+
+53
+00:01:57,520 --> 00:01:59,680
+forward to back and the z axis
+
+54
+00:01:59,680 --> 00:02:02,240
+is going to be the the height so up and
+
+55
+00:02:02,240 --> 00:02:04,479
+down
+
+56
+00:02:05,119 --> 00:02:08,160
+if i want the table to not move
+
+57
+00:02:08,160 --> 00:02:10,479
+in either direction i can actually lock
+
+58
+00:02:10,479 --> 00:02:11,599
+the table
+
+59
+00:02:11,599 --> 00:02:13,920
+so there are two locks on the front so
+
+60
+00:02:13,920 --> 00:02:15,760
+if i just turn those and tighten them
+
+61
+00:02:15,760 --> 00:02:17,360
+it'll prevent the table from moving in
+
+62
+00:02:17,360 --> 00:02:18,879
+the x direction
+
+63
+00:02:18,879 --> 00:02:20,800
+and then similarly underneath the table
+
+64
+00:02:20,800 --> 00:02:22,560
+on the right there's going to be two
+
+65
+00:02:22,560 --> 00:02:23,760
+locks that will prevent the table from
+
+66
+00:02:23,760 --> 00:02:24,480
+moving
+
+67
+00:02:24,480 --> 00:02:26,800
+in the y direction this is extremely
+
+68
+00:02:26,800 --> 00:02:27,760
+useful
+
+69
+00:02:27,760 --> 00:02:28,959
+when you're trying to machine something
+
+70
+00:02:28,959 --> 00:02:31,040
+accurately and you want to prevent
+
+71
+00:02:31,040 --> 00:02:32,640
+your piece from moving while machining
+
+72
+00:02:32,640 --> 00:02:34,160
+so either you accidentally hitting a
+
+73
+00:02:34,160 --> 00:02:35,120
+hand wheel
+
+74
+00:02:35,120 --> 00:02:36,959
+or just the cutting forces are
+
+75
+00:02:36,959 --> 00:02:38,560
+oftentimes strong enough to move your
+
+76
+00:02:38,560 --> 00:02:39,360
+piece
+
+77
+00:02:39,360 --> 00:02:42,239
+while you're machining
+
+78
+00:02:43,760 --> 00:02:46,720
+the head of the machine on this
+
+79
+00:02:46,720 --> 00:02:48,239
+particular mill
+
+80
+00:02:48,239 --> 00:02:50,400
+can move up and down so there's a big
+
+81
+00:02:50,400 --> 00:02:51,680
+hand wheel on the back
+
+82
+00:02:51,680 --> 00:02:54,080
+side of the machine over here that if i
+
+83
+00:02:54,080 --> 00:02:55,360
+rotate
+
+84
+00:02:55,360 --> 00:02:57,120
+will raise or lower the head of the
+
+85
+00:02:57,120 --> 00:02:59,200
+machine
+
+86
+00:02:59,200 --> 00:03:01,360
+there are also two locks on the side of
+
+87
+00:03:01,360 --> 00:03:02,879
+the machine which you're going to want
+
+88
+00:03:02,879 --> 00:03:04,879
+to lock in place when you've positioned
+
+89
+00:03:04,879 --> 00:03:07,599
+the height of the head to prevent it
+
+90
+00:03:07,599 --> 00:03:10,959
+from moving while you're machining
+
+91
+00:03:11,760 --> 00:03:14,879
+the second level of adjustment for the z
+
+92
+00:03:14,879 --> 00:03:15,760
+height
+
+93
+00:03:15,760 --> 00:03:19,760
+is going to be the quill feed so
+
+94
+00:03:19,760 --> 00:03:23,120
+similar to the drill press we can lower
+
+95
+00:03:23,120 --> 00:03:23,360
+it
+
+96
+00:03:23,360 --> 00:03:26,560
+and raise it to lower and raise the
+
+97
+00:03:26,560 --> 00:03:28,400
+spindle
+
+98
+00:03:28,400 --> 00:03:30,959
+on the mills however there is a lock
+
+99
+00:03:30,959 --> 00:03:31,519
+usually
+
+100
+00:03:31,519 --> 00:03:34,799
+found in the center of the quill feed
+
+101
+00:03:34,799 --> 00:03:37,920
+which can lock the position of the
+
+102
+00:03:37,920 --> 00:03:38,720
+spindle while
+
+103
+00:03:38,720 --> 00:03:41,840
+when you've lowered it then
+
+104
+00:03:41,840 --> 00:03:44,239
+once you've locked the spindle in place
+
+105
+00:03:44,239 --> 00:03:45,120
+you unlock
+
+106
+00:03:45,120 --> 00:03:47,200
+the third level of adjustment which is
+
+107
+00:03:47,200 --> 00:03:48,560
+the fine adjustment wheel
+
+108
+00:03:48,560 --> 00:03:49,840
+on the front of the face of the machine
+
+109
+00:03:49,840 --> 00:03:51,599
+usually as i
+
+110
+00:03:51,599 --> 00:03:53,599
+rotate the fine adjustment wheel the
+
+111
+00:03:53,599 --> 00:03:56,159
+quill feed and the spindle will lower
+
+112
+00:03:56,159 --> 00:03:58,879
+very very slowly and this will allow us
+
+113
+00:03:58,879 --> 00:03:59,760
+to control
+
+114
+00:03:59,760 --> 00:04:04,400
+our height very accurately
+
+115
+00:04:04,400 --> 00:04:06,560
+most mills if used properly can get
+
+116
+00:04:06,560 --> 00:04:07,760
+results
+
+117
+00:04:07,760 --> 00:04:10,319
+uh when manufacturing work pieces
+
+118
+00:04:10,319 --> 00:04:11,760
+tolerances to be within
+
+119
+00:04:11,760 --> 00:04:14,400
+a thousandth of an inch depending on the
+
+120
+00:04:14,400 --> 00:04:16,079
+rigidity of the machine the rigidity of
+
+121
+00:04:16,079 --> 00:04:17,199
+your setup
+
+122
+00:04:17,199 --> 00:04:19,680
+and the capabilities of the user
+
+123
+00:04:19,680 --> 00:04:22,160
+obviously
+
+124
+00:04:23,199 --> 00:04:25,199
+moving on to the control panel side of
+
+125
+00:04:25,199 --> 00:04:26,479
+things
+
+126
+00:04:26,479 --> 00:04:28,880
+each mill is going to be a little
+
+127
+00:04:28,880 --> 00:04:30,160
+different
+
+128
+00:04:30,160 --> 00:04:32,000
+not only in the control panel but also
+
+129
+00:04:32,000 --> 00:04:34,400
+in the way the axes move
+
+130
+00:04:34,400 --> 00:04:36,880
+the way they lock so it's important that
+
+131
+00:04:36,880 --> 00:04:39,040
+whenever you go to use a mill
+
+132
+00:04:39,040 --> 00:04:41,680
+you either take the time to
+
+133
+00:04:41,680 --> 00:04:43,040
+re-familiarize yourself with that
+
+134
+00:04:43,040 --> 00:04:44,240
+particular mill
+
+135
+00:04:44,240 --> 00:04:45,440
+or you ask someone who's more
+
+136
+00:04:45,440 --> 00:04:46,560
+knowledgeable than you to give you a
+
+137
+00:04:46,560 --> 00:04:48,639
+little intro and rundown on
+
+138
+00:04:48,639 --> 00:04:50,400
+that particular machine because
+
+139
+00:04:50,400 --> 00:04:51,759
+everything i'm showing you in this video
+
+140
+00:04:51,759 --> 00:04:54,720
+might change depending on the mail
+
+141
+00:04:54,720 --> 00:04:56,080
+you're using
+
+142
+00:04:56,080 --> 00:04:59,280
+just for instance some mills the head
+
+143
+00:04:59,280 --> 00:05:01,520
+of the mill is fixed and it's actually
+
+144
+00:05:01,520 --> 00:05:02,639
+the table that'll be
+
+145
+00:05:02,639 --> 00:05:06,400
+moving up and down so just something to
+
+146
+00:05:06,400 --> 00:05:07,199
+keep in mind
+
+147
+00:05:07,199 --> 00:05:08,800
+whenever you're working with a machinery
+
+148
+00:05:08,800 --> 00:05:10,880
+or different equipment not every machine
+
+149
+00:05:10,880 --> 00:05:12,080
+is going to be the same
+
+150
+00:05:12,080 --> 00:05:13,360
+and therefore shouldn't be treated the
+
+151
+00:05:13,360 --> 00:05:15,120
+same so you always want to take the time
+
+152
+00:05:15,120 --> 00:05:16,479
+to familiarize yourself with
+
+153
+00:05:16,479 --> 00:05:20,320
+each machine however going back to
+
+154
+00:05:20,320 --> 00:05:22,800
+the control panel we have our on and off
+
+155
+00:05:22,800 --> 00:05:23,440
+switch
+
+156
+00:05:23,440 --> 00:05:27,039
+here quick note that these mills
+
+157
+00:05:27,039 --> 00:05:30,080
+the guard on the front face of the mill
+
+158
+00:05:30,080 --> 00:05:31,520
+the guard won't allow the machine to
+
+159
+00:05:31,520 --> 00:05:34,800
+turn on unless it's closed
+
+160
+00:05:34,800 --> 00:05:37,759
+so we have our on and off switch and we
+
+161
+00:05:37,759 --> 00:05:38,000
+have
+
+162
+00:05:38,000 --> 00:05:40,720
+our speed adjustment knob on top of it
+
+163
+00:05:40,720 --> 00:05:42,400
+so we want to adjust our speed
+
+164
+00:05:42,400 --> 00:05:44,720
+we can turn the machine on and then play
+
+165
+00:05:44,720 --> 00:05:45,680
+with the knob
+
+166
+00:05:45,680 --> 00:05:49,039
+to change the various speeds
+
+167
+00:05:49,039 --> 00:05:51,520
+we have our emergency stop so very
+
+168
+00:05:51,520 --> 00:05:53,039
+important to note that if ever anything
+
+169
+00:05:53,039 --> 00:05:53,840
+goes wrong
+
+170
+00:05:53,840 --> 00:05:55,919
+you can hit this emergency stop and
+
+171
+00:05:55,919 --> 00:05:57,360
+it'll turn off the machine
+
+172
+00:05:57,360 --> 00:06:00,080
+so here we have our direction switch
+
+173
+00:06:00,080 --> 00:06:01,680
+important to note that unlike the drill
+
+174
+00:06:01,680 --> 00:06:03,199
+press the mill can actually run in the
+
+175
+00:06:03,199 --> 00:06:04,880
+forward direction as well as the reverse
+
+176
+00:06:04,880 --> 00:06:06,960
+direction
+
+177
+00:06:06,960 --> 00:06:08,560
+most males will also have two different
+
+178
+00:06:08,560 --> 00:06:11,120
+gears so a high gear and a low gear
+
+179
+00:06:11,120 --> 00:06:13,759
+on this particular mill the switch to
+
+180
+00:06:13,759 --> 00:06:15,120
+change from high to low gear is on the
+
+181
+00:06:15,120 --> 00:06:17,039
+right hand side of the machine here
+
+182
+00:06:17,039 --> 00:06:18,400
+all you have to do to switch the mill
+
+183
+00:06:18,400 --> 00:06:20,720
+into low gear would be to flick the big
+
+184
+00:06:20,720 --> 00:06:21,120
+knob
+
+185
+00:06:21,120 --> 00:06:25,440
+to the right same thing back
+
+186
+00:06:26,240 --> 00:06:27,440
+the difference between high gear and low
+
+187
+00:06:27,440 --> 00:06:29,360
+gear usually high gear will have higher
+
+188
+00:06:29,360 --> 00:06:30,000
+speeds
+
+189
+00:06:30,000 --> 00:06:32,080
+lower torque and low gear will have
+
+190
+00:06:32,080 --> 00:06:34,160
+lower speeds higher torque
+
+191
+00:06:34,160 --> 00:06:35,680
+so if you're running a machining
+
+192
+00:06:35,680 --> 00:06:38,720
+operation where you need
+
+193
+00:06:38,720 --> 00:06:40,560
+much higher cutting forces but at
+
+194
+00:06:40,560 --> 00:06:42,479
+reduced speed then it's a good idea to
+
+195
+00:06:42,479 --> 00:06:44,319
+run the machine in low gear
+
+196
+00:06:44,319 --> 00:06:48,160
+that way you'd get better results
+

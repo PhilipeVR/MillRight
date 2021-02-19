@@ -13,10 +13,12 @@ public class VideoController : MonoBehaviour
     [SerializeField] private GameObject VideoPanel;
     [SerializeField] private Text Title;
     [SerializeField] private VideoPlayer videoPlayer;
-    [SerializeField] private YoutubePlayer.YoutubePlayer youtubePlayer;
+    [SerializeField] private YoutubePlayer youtubePlayer;
     [SerializeField] private List<string> videoClip, videoClipFR;
+    [SerializeField] private List<TextAsset> subtitleClips, subtitleClipsFR;
     [SerializeField] private List<string> title, titleFR;
     [SerializeField] private Button StopVideoButton, playButton, pauseButton, stopButton;
+    [SerializeField] private YoutubeSubtitlesReader subtitlesReader;
     private bool playing = false;
     private bool[] playedOnce;
     private bool language = false;
@@ -50,10 +52,10 @@ public class VideoController : MonoBehaviour
         {
             playedOnce[i] = false;
         }
-        StopVideoButton.interactable = false;
-        stopButton.interactable = false;
+        //StopVideoButton.interactable = false;
+        //stopButton.interactable = false;
         VideoPanel.SetActive(false);
-        videoPlayer.Stop();
+        //videoPlayer.Stop();
         videoPlayer.loopPointReached += VideoPlayed;
         if (PlayOnAwake)
         {
@@ -66,13 +68,13 @@ public class VideoController : MonoBehaviour
         videoPlayer.Play();
         if (!playedOnce[m_index])
         {
-            StopVideoButton.interactable = false;
-            stopButton.interactable = false;
+            //StopVideoButton.interactable = false;
+            //stopButton.interactable = false;
         }
         else
         {
-            StopVideoButton.interactable = true;
-            stopButton.interactable = true;
+            //StopVideoButton.interactable = true;
+            //stopButton.interactable = true;
 
         }
         playing = true;
@@ -95,7 +97,7 @@ public class VideoController : MonoBehaviour
 
     public void ExitVideo()
     {
-        if (playedOnce[m_index])
+        if (m_index > -1)
         {
             cameraToggle.SwtichView();
             VideoPanel.SetActive(false);
@@ -114,27 +116,29 @@ public class VideoController : MonoBehaviour
             {
                 cameraToggle.SwtichView(); //Change camera view to improve performance(performance drops with camera controller view)
             }
-            youtubePlayer.Links(videoClip[vidIndex], videoClipFR[vidIndex]);
-            youtubePlayer.Lang = language;
+            
             if (!language)
             {
+                subtitlesReader.LoadSubtitles(subtitleClips[vidIndex]);
+                youtubePlayer.Play(videoClip[vidIndex]);
                 Title.text = title[vidIndex];
             }
             else
             {
+                subtitlesReader.LoadSubtitles(subtitleClipsFR[vidIndex]);
+                youtubePlayer.Play(videoClipFR[vidIndex]);
                 Title.text = titleFR[vidIndex];
             }
-            youtubePlayer.PlayYoutubeVid();
             
             if (!playedOnce[vidIndex])
             {
-                StopVideoButton.interactable = false;
-                stopButton.interactable = false;
+                //StopVideoButton.interactable = false;
+                //stopButton.interactable = false;
             }
             else
             {
-                StopVideoButton.interactable = true;
-                stopButton.interactable = true;
+                //StopVideoButton.interactable = true;
+                //stopButton.interactable = true;
 
             }
             playing = true;
@@ -150,12 +154,12 @@ public class VideoController : MonoBehaviour
         {
             playing = false;
             playedOnce[m_index] = true;
-            StopVideoButton.interactable = true;
-            stopButton.interactable = true;
+            //StopVideoButton.interactable = true;
+            //stopButton.interactable = true;
             buttonInteractable.InteractButton();
         }
-        playButton.gameObject.SetActive(true);
-        pauseButton.gameObject.SetActive(false);
+        //playButton.gameObject.SetActive(true);
+        //pauseButton.gameObject.SetActive(false);
     }
 
     public void LinkSent()
@@ -163,7 +167,7 @@ public class VideoController : MonoBehaviour
         if (m_index > -1)
         {
             playedOnce[m_index] = true;
-            StopVideoButton.interactable = true;
+            //StopVideoButton.interactable = true;
             buttonInteractable.InteractButton();
 
         }

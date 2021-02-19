@@ -1,0 +1,464 @@
+1
+00:00:03,040 --> 00:00:04,480
+so a little bit about
+
+2
+00:00:04,480 --> 00:00:05,839
+uh the different operations we're
+
+3
+00:00:05,839 --> 00:00:07,520
+talking about the face milling and side
+
+4
+00:00:07,520 --> 00:00:08,960
+milling
+
+5
+00:00:08,960 --> 00:00:12,240
+we're going to need to use new tools so
+
+6
+00:00:12,240 --> 00:00:15,519
+previously we've talked about drill bits
+
+7
+00:00:15,519 --> 00:00:17,039
+drill bits are only good in one
+
+8
+00:00:17,039 --> 00:00:18,480
+direction so they can only go up and
+
+9
+00:00:18,480 --> 00:00:21,279
+down and plunge into material
+
+10
+00:00:21,279 --> 00:00:24,800
+side milling is the operation or the
+
+11
+00:00:24,800 --> 00:00:27,279
+process of removing material off
+
+12
+00:00:27,279 --> 00:00:29,760
+either the side of a workpiece or the
+
+13
+00:00:29,760 --> 00:00:31,920
+face of a workpiece
+
+14
+00:00:31,920 --> 00:00:33,760
+so to do so we have these new tools
+
+15
+00:00:33,760 --> 00:00:35,600
+which are called end mills
+
+16
+00:00:35,600 --> 00:00:37,360
+end mills are very similar to drill bits
+
+17
+00:00:37,360 --> 00:00:38,879
+in the sense that they have
+
+18
+00:00:38,879 --> 00:00:43,280
+this fluted portion so the cutting side
+
+19
+00:00:43,280 --> 00:00:45,920
+so not only can they plunge into
+
+20
+00:00:45,920 --> 00:00:47,440
+material so i can use it and i can
+
+21
+00:00:47,440 --> 00:00:49,760
+drill a hole into my workpiece like so
+
+22
+00:00:49,760 --> 00:00:50,879
+or i could
+
+23
+00:00:50,879 --> 00:00:52,719
+run it across the side of my workpiece
+
+24
+00:00:52,719 --> 00:00:54,000
+and machine that way
+
+25
+00:00:54,000 --> 00:00:55,440
+or i can machine the face of my
+
+26
+00:00:55,440 --> 00:00:57,120
+workpiece as well
+
+27
+00:00:57,120 --> 00:00:59,199
+so i've gone ahead and set up one of my
+
+28
+00:00:59,199 --> 00:01:01,600
+end mills inside
+
+29
+00:01:01,600 --> 00:01:05,199
+the spindle i've positioned my workpiece
+
+30
+00:01:05,199 --> 00:01:07,200
+to perform a side milling operation so
+
+31
+00:01:07,200 --> 00:01:08,640
+i'm going to be machining
+
+32
+00:01:08,640 --> 00:01:12,000
+this surface of the workpiece i've used
+
+33
+00:01:12,000 --> 00:01:13,840
+the precision parallels again to raise
+
+34
+00:01:13,840 --> 00:01:15,840
+my work piece off the bottom of the vise
+
+35
+00:01:15,840 --> 00:01:17,840
+just so i clear the side i'm not worried
+
+36
+00:01:17,840 --> 00:01:19,439
+about hitting the bottom of the vise
+
+37
+00:01:19,439 --> 00:01:23,119
+and i've also stuck out my work piece
+
+38
+00:01:23,280 --> 00:01:26,479
+from the vike here to avoid milling the
+
+39
+00:01:26,479 --> 00:01:27,040
+sides
+
+40
+00:01:27,040 --> 00:01:29,759
+of the jaws i can easily eat all of the
+
+41
+00:01:29,759 --> 00:01:31,200
+material on the side of the surface here
+
+42
+00:01:31,200 --> 00:01:33,680
+without damaging my vice
+
+43
+00:01:33,680 --> 00:01:36,479
+so now the only thing left to do is to
+
+44
+00:01:36,479 --> 00:01:38,720
+lower my end mill into position
+
+45
+00:01:38,720 --> 00:01:42,640
+and control how much i'm going to be
+
+46
+00:01:42,640 --> 00:01:46,320
+the step over of my pass so
+
+47
+00:01:46,320 --> 00:01:48,159
+using the dros what i'm going to do is
+
+48
+00:01:48,159 --> 00:01:49,680
+i'm going to lower my tool
+
+49
+00:01:49,680 --> 00:01:52,159
+i'm going to touch the surface of my
+
+50
+00:01:52,159 --> 00:01:52,799
+workpiece
+
+51
+00:01:52,799 --> 00:01:54,560
+i'm going to set a reference point along
+
+52
+00:01:54,560 --> 00:01:55,920
+this line
+
+53
+00:01:55,920 --> 00:01:57,600
+and then i'm going to move over into the
+
+54
+00:01:57,600 --> 00:02:00,240
+work piece a certain depth
+
+55
+00:02:00,240 --> 00:02:03,119
+control depth and then i'm going to walk
+
+56
+00:02:03,119 --> 00:02:05,680
+along the length of the surface
+
+57
+00:02:05,680 --> 00:02:08,878
+so simply that's what the side milling
+
+58
+00:02:08,878 --> 00:02:10,959
+operation is going to consist of
+
+59
+00:02:10,959 --> 00:02:12,480
+so first i'm going to lower the head of
+
+60
+00:02:12,480 --> 00:02:14,239
+the machine and i'm going to lower it
+
+61
+00:02:14,239 --> 00:02:17,520
+as low as i can without damaging
+
+62
+00:02:17,520 --> 00:02:20,640
+the guard so the guard here is going to
+
+63
+00:02:20,640 --> 00:02:22,080
+hit the vice if i continue to go any
+
+64
+00:02:22,080 --> 00:02:23,360
+lower so i'm going to lock it into
+
+65
+00:02:23,360 --> 00:02:24,560
+position here
+
+66
+00:02:24,560 --> 00:02:25,840
+very important to lock it so that it
+
+67
+00:02:25,840 --> 00:02:30,080
+doesn't move around while i machine
+
+68
+00:02:30,080 --> 00:02:32,000
+and then i'm going to lower the spindle
+
+69
+00:02:32,000 --> 00:02:33,840
+using the quill feed
+
+70
+00:02:33,840 --> 00:02:36,160
+and i'm going to lock it into position
+
+71
+00:02:36,160 --> 00:02:37,360
+such that the tool
+
+72
+00:02:37,360 --> 00:02:40,319
+is well below the surface of my
+
+73
+00:02:40,319 --> 00:02:42,800
+workpiece
+
+74
+00:02:46,560 --> 00:02:49,519
+i'm going to touch the surface set my
+
+75
+00:02:49,519 --> 00:02:50,000
+reference
+
+76
+00:02:50,000 --> 00:02:54,080
+point and then step off to the side
+
+77
+00:02:54,080 --> 00:02:56,879
+once i've stepped off to the side i move
+
+78
+00:02:56,879 --> 00:02:58,720
+over
+
+79
+00:02:58,720 --> 00:03:02,000
+my depth and i walk along the surface of
+
+80
+00:03:02,000 --> 00:03:03,200
+material
+
+81
+00:03:03,200 --> 00:03:06,239
+so i'm going to be showing you that
+
+82
+00:03:10,239 --> 00:03:11,760
+so now with my end mill in place i'm
+
+83
+00:03:11,760 --> 00:03:14,720
+going to turn on the machine
+
+84
+00:03:16,000 --> 00:03:19,440
+i'm going to move my end mill
+
+85
+00:03:19,440 --> 00:03:21,760
+or the table i should say until my end
+
+86
+00:03:21,760 --> 00:03:24,560
+mill touches the surface of the material
+
+87
+00:03:24,560 --> 00:03:27,680
+i want to do this nice and slow
+
+88
+00:03:27,680 --> 00:03:30,480
+once i've made contact i set my
+
+89
+00:03:30,480 --> 00:03:32,799
+reference point
+
+90
+00:03:32,799 --> 00:03:36,640
+along the x-axis i'm going to move
+
+91
+00:03:36,640 --> 00:03:39,040
+in y
+
+92
+00:03:40,080 --> 00:03:43,680
+so that my end mill is off
+
+93
+00:03:43,680 --> 00:03:47,280
+the and i'm going to move in
+
+94
+00:03:47,280 --> 00:03:50,959
+to a controlled depth and the depth
+
+95
+00:03:50,959 --> 00:03:52,879
+will vary depending on how much you're
+
+96
+00:03:52,879 --> 00:03:54,799
+trying to remove from the surface
+
+97
+00:03:54,799 --> 00:03:57,120
+in this case i'm just going to do a 10
+
+98
+00:03:57,120 --> 00:03:59,120
+thou or 10 thousandths of an inch depth
+
+99
+00:03:59,120 --> 00:04:01,439
+of cut and i'm going to move
+
+100
+00:04:01,439 --> 00:04:04,640
+across the surface so now i'm going to
+
+101
+00:04:04,640 --> 00:04:07,840
+move in the y direction
+
+102
+00:04:09,439 --> 00:04:15,840
+and bring my end mill across the face
+
+103
+00:04:23,600 --> 00:04:27,680
+so i've machined the side face
+
+104
+00:04:27,680 --> 00:04:32,080
+of my workpiece now it'll be
+
+105
+00:04:32,080 --> 00:04:37,680
+perpendicular to the two faces
+
+106
+00:04:41,120 --> 00:04:42,639
+so i should directly have a
+
+107
+00:04:42,639 --> 00:04:44,240
+perpendicular edge to the two that are
+
+108
+00:04:44,240 --> 00:04:46,720
+held in the vise
+
+109
+00:04:46,720 --> 00:04:49,040
+the surface is also nice and uniform
+
+110
+00:04:49,040 --> 00:04:51,840
+nice and flat nice and smooth
+
+111
+00:04:51,840 --> 00:04:53,600
+and i can continue doing this process
+
+112
+00:04:53,600 --> 00:04:55,600
+and continue removing material
+
+113
+00:04:55,600 --> 00:04:59,120
+until i get the desired dimension
+
+114
+00:04:59,120 --> 00:05:02,960
+for my final work piece so that is
+
+115
+00:05:02,960 --> 00:05:05,160
+the conclusion of the side milling
+
+116
+00:05:05,160 --> 00:05:08,160
+operation
+
