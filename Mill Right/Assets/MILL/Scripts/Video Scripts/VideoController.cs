@@ -119,13 +119,15 @@ public class VideoController : MonoBehaviour
             
             if (!language)
             {
-                subtitlesReader.LoadSubtitles(subtitleClips[vidIndex]);
+                subtitlesReader.Captions = subtitleClips[vidIndex];
+                subtitlesReader.LoadSubtitles();
                 youtubePlayer.Play(videoClip[vidIndex]);
                 Title.text = title[vidIndex];
             }
             else
             {
-                subtitlesReader.LoadSubtitles(subtitleClipsFR[vidIndex]);
+                subtitlesReader.Captions = subtitleClipsFR[vidIndex];
+                subtitlesReader.LoadSubtitles();
                 youtubePlayer.Play(videoClipFR[vidIndex]);
                 Title.text = titleFR[vidIndex];
             }

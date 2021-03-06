@@ -96,13 +96,15 @@ public class VideoStandardController : MonoBehaviour
         }
         if (!language)
         {
-            subtitlesReader.LoadSubtitles(subtitleClip);
+            subtitlesReader.Captions = subtitleClip;
+            subtitlesReader.LoadSubtitles();
             youtubePlayer.Play(videoClip);
             Title.text = title;
         }
         else
         {
-            subtitlesReader.LoadSubtitles(subtitleClipFR);
+            subtitlesReader.Captions = subtitleClipFR;
+            subtitlesReader.LoadSubtitles();
             youtubePlayer.Play(videoClipFR);
             Title.text = titleFR;
         }
