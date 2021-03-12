@@ -8,12 +8,13 @@ public class ButtonInteractable : MonoBehaviour
     [SerializeField] private int finalNum;
     [SerializeField] private Button button;
     [SerializeField] private AnimationController controller;
-    [SerializeField] private VideoController videoController;
+    [SerializeField] private VideoManager2 videoController;
     [SerializeField] private DialogueManager manager;
     [SerializeField] private int VideoIndex;
     private List<int> countChecker;
     private int counter;
     private int dialogCounter;
+    private bool Played;
    
     private void Start()
     {
@@ -42,11 +43,11 @@ public class ButtonInteractable : MonoBehaviour
 
     public void InteractButton()
     {
-        if(counter == finalNum && controller.Counter > 0 && !videoController.PlayedOnce(VideoIndex) && manager.SentenceIndex == manager.count)
+        if(counter == finalNum && controller.Counter > 0 && !Played && manager.SentenceIndex == manager.count)
         {
-            videoController.StartVideo(VideoIndex);
+            videoController.PlayYoutubePlayer(VideoIndex);
         }
-        else if (counter == finalNum && controller.Counter > 0 && videoController.PlayedOnce(VideoIndex) && manager.SentenceIndex == manager.count)
+        else if (counter == finalNum && controller.Counter > 0 && Played && manager.SentenceIndex == manager.count)
         {
             button.interactable = true;
         }

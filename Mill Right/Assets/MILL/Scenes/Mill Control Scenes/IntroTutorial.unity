@@ -1037,18 +1037,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 220245922}
   m_CullTransparentMesh: 0
---- !u!114 &273697773 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5566783085511281292, guid: 6b7dcccd99a8d7143844ca8dd4d5c2d0,
-    type: 3}
-  m_PrefabInstance: {fileID: 589367358}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: babb526a0c99bbc49a57597e4f7d179e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &273908582
 GameObject:
   m_ObjectHideFlags: 0
@@ -1888,12 +1876,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: babb526a0c99bbc49a57597e4f7d179e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &476170994 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5566783085421040614, guid: 6b7dcccd99a8d7143844ca8dd4d5c2d0,
-    type: 3}
-  m_PrefabInstance: {fileID: 589367358}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &491471383
 GameObject:
   m_ObjectHideFlags: 0
@@ -2051,161 +2033,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 5521113172628392315, guid: 117951c1affdbae4a9000444b5825b8d,
     type: 3}
   m_PrefabInstance: {fileID: 5521113172093981813}
-  m_PrefabAsset: {fileID: 0}
---- !u!1001 &589367358
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 1330229581}
-    m_Modifications:
-    - target: {fileID: 5566783085244415694, guid: 6b7dcccd99a8d7143844ca8dd4d5c2d0,
-        type: 3}
-      propertyPath: OnVideoFinished.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5566783085244415694, guid: 6b7dcccd99a8d7143844ca8dd4d5c2d0,
-        type: 3}
-      propertyPath: OnVideoFinished.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5566783085244415694, guid: 6b7dcccd99a8d7143844ca8dd4d5c2d0,
-        type: 3}
-      propertyPath: OnVideoFinished.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1330229582}
-    - target: {fileID: 5566783085244415694, guid: 6b7dcccd99a8d7143844ca8dd4d5c2d0,
-        type: 3}
-      propertyPath: OnVideoFinished.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 5566783085244415694, guid: 6b7dcccd99a8d7143844ca8dd4d5c2d0,
-        type: 3}
-      propertyPath: OnVideoFinished.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: ExitVideo
-      objectReference: {fileID: 0}
-    - target: {fileID: 5566783085244415694, guid: 6b7dcccd99a8d7143844ca8dd4d5c2d0,
-        type: 3}
-      propertyPath: OnVideoFinished.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 5566783085421040614, guid: 6b7dcccd99a8d7143844ca8dd4d5c2d0,
-        type: 3}
-      propertyPath: m_Name
-      value: Video Panel
-      objectReference: {fileID: 0}
-    - target: {fileID: 5566783085421040615, guid: 6b7dcccd99a8d7143844ca8dd4d5c2d0,
-        type: 3}
-      propertyPath: m_Pivot.x
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 5566783085421040615, guid: 6b7dcccd99a8d7143844ca8dd4d5c2d0,
-        type: 3}
-      propertyPath: m_Pivot.y
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 5566783085421040615, guid: 6b7dcccd99a8d7143844ca8dd4d5c2d0,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5566783085421040615, guid: 6b7dcccd99a8d7143844ca8dd4d5c2d0,
-        type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5566783085421040615, guid: 6b7dcccd99a8d7143844ca8dd4d5c2d0,
-        type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5566783085421040615, guid: 6b7dcccd99a8d7143844ca8dd4d5c2d0,
-        type: 3}
-      propertyPath: m_AnchorMin.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5566783085421040615, guid: 6b7dcccd99a8d7143844ca8dd4d5c2d0,
-        type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5566783085421040615, guid: 6b7dcccd99a8d7143844ca8dd4d5c2d0,
-        type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5566783085421040615, guid: 6b7dcccd99a8d7143844ca8dd4d5c2d0,
-        type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5566783085421040615, guid: 6b7dcccd99a8d7143844ca8dd4d5c2d0,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5566783085421040615, guid: 6b7dcccd99a8d7143844ca8dd4d5c2d0,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5566783085421040615, guid: 6b7dcccd99a8d7143844ca8dd4d5c2d0,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5566783085421040615, guid: 6b7dcccd99a8d7143844ca8dd4d5c2d0,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5566783085421040615, guid: 6b7dcccd99a8d7143844ca8dd4d5c2d0,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5566783085421040615, guid: 6b7dcccd99a8d7143844ca8dd4d5c2d0,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5566783085421040615, guid: 6b7dcccd99a8d7143844ca8dd4d5c2d0,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5566783085421040615, guid: 6b7dcccd99a8d7143844ca8dd4d5c2d0,
-        type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5566783085421040615, guid: 6b7dcccd99a8d7143844ca8dd4d5c2d0,
-        type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5566783085421040615, guid: 6b7dcccd99a8d7143844ca8dd4d5c2d0,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5566783085421040615, guid: 6b7dcccd99a8d7143844ca8dd4d5c2d0,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5566783085421040615, guid: 6b7dcccd99a8d7143844ca8dd4d5c2d0,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 6b7dcccd99a8d7143844ca8dd4d5c2d0, type: 3}
---- !u!224 &589367359 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 5566783085421040615, guid: 6b7dcccd99a8d7143844ca8dd4d5c2d0,
-    type: 3}
-  m_PrefabInstance: {fileID: 589367358}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &609320242
 GameObject:
@@ -2634,8 +2461,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 711629427}
-  - component: {fileID: 711629428}
-  - component: {fileID: 711629429}
+  - component: {fileID: 711629430}
   m_Layer: 5
   m_Name: Video Manager
   m_TagString: Untagged
@@ -2663,7 +2489,7 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &711629428
+--- !u!114 &711629430
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2672,80 +2498,57 @@ MonoBehaviour:
   m_GameObject: {fileID: 711629426}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e385d9bacc09f414a9c9aedeeb21960e, type: 3}
+  m_Script: {fileID: 11500000, guid: 403ff0ef857232f419087d2f832ce9b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  LinkDisplayer: {fileID: 711629429}
-  cameraToggle: {fileID: 54655437}
-  operationController: {fileID: 1765016267}
-  dialogueInterface: {fileID: 1290375430}
-  VideoPanel: {fileID: 1342432705}
-  videoPlayer: {fileID: 1342432704}
+  languageSceneManager: {fileID: 852756863}
   youtubePlayer: {fileID: 1342432703}
-  StopVideoButton: {fileID: 0}
-  playButton: {fileID: 0}
-  pauseButton: {fileID: 0}
-  stopButton: {fileID: 0}
-  title: {fileID: 1342432702}
-  videoClips:
+  videoPlayer: {fileID: 1342432704}
+  youtubeSubtitlesReader: {fileID: 1342432700}
+  VideoPanel: {fileID: 1342432705}
+  TitleDisplay: {fileID: 1342432702}
+  LinkMessage: 'Video not working? Use this link to watch the video: '
+  LinkMessageFR: "Si le vid\xE9o ne fonctionne pas, veuillez utiliser ce lien: "
+  YoutubeLinkDisplay: {fileID: 1342432701}
+  numberOfVids: 4
+  youtubeLinks:
   - https://youtu.be/mHVXzNQBQM4?list=PLA-oTz8kRbroIWGOhI92m4hTYLP_2aNcx
   - https://youtu.be/xJzGX-dLg6c?list=PLA-oTz8kRbroIWGOhI92m4hTYLP_2aNcx
   - https://youtu.be/QJos54phnP4?list=PLA-oTz8kRbroIWGOhI92m4hTYLP_2aNcx
-  videoClipsFR:
+  - https://youtu.be/su9xi5XQMHw?list=PLA-oTz8kRbroIWGOhI92m4hTYLP_2aNcx
+  youtubeLinksFR:
   - https://youtu.be/4dchSNxRfzU?list=PLA-oTz8kRbrozmIQE_b6ddmFE6C2DfUVA
   - https://youtu.be/Rtib3ijsMaQ?list=PLA-oTz8kRbrozmIQE_b6ddmFE6C2DfUVA
   - https://youtu.be/AdQooDsjSfU?list=PLA-oTz8kRbrozmIQE_b6ddmFE6C2DfUVA
-  subtitleClips:
-  - {fileID: 4900000, guid: 1448187ba4f9d6a4f86f18f0e2067bd5, type: 3}
-  - {fileID: 4900000, guid: 62f80805fba95084e9e76461643a8d8f, type: 3}
-  - {fileID: 4900000, guid: 44c560f37f8740d4dadba3c267652491, type: 3}
-  subtitleClipsFR:
-  - {fileID: 4900000, guid: 4872016365b6fda45b6b2e52d1ba3ce3, type: 3}
-  - {fileID: 4900000, guid: b60986e3e6b0d844fba5da4ee601d29c, type: 3}
-  - {fileID: 4900000, guid: c9e3b2d48368f374693d6d31e835e4b4, type: 3}
-  operationSprite:
-  - {fileID: 21300000, guid: f2272e2fd9325c74c83193695454c89b, type: 3}
-  - {fileID: 21300000, guid: c26f205cc478786458678189d979d312, type: 3}
-  - {fileID: 21300000, guid: 8dd7970bc60245247a8ca9c32e3920c3, type: 3}
-  animatorIndex: 000000000100000002000000
-  dialogueIndex: 010000000200000003000000
-  titles:
+  - https://youtu.be/7O8r2mep1Xg?list=PLA-oTz8kRbrozmIQE_b6ddmFE6C2DfUVA
+  titlesEN:
   - Drilling Operation | CEED
   - Face Milling Operation | CEED
   - Side Milling Operation | CEED
+  - Speed Calculation | CEED
   titlesFR:
   - "Op\xE9ration de per\xE7age | CGEC"
   - "Op\xE9ration de surfa\xE7age | CGEC"
   - "Op\xE9ration de fraisage lat\xE9rale | CGEC"
-  exitImage: {fileID: 0}
-  subtitlesReader: {fileID: 1342432700}
-  language: 0
---- !u!114 &711629429
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 711629426}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: efab5d522226786469e31876df127237, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  controller: {fileID: 0}
-  controller2: {fileID: 0}
-  controller3: {fileID: 711629428}
-  Links:
-  - https://youtu.be/mHVXzNQBQM4?list=PLA-oTz8kRbroIWGOhI92m4hTYLP_2aNcx
-  - https://youtu.be/xJzGX-dLg6c?list=PLA-oTz8kRbroIWGOhI92m4hTYLP_2aNcx
-  - https://youtu.be/QJos54phnP4?list=PLA-oTz8kRbroIWGOhI92m4hTYLP_2aNcx
-  LinksFR:
-  - https://youtu.be/4dchSNxRfzU?list=PLA-oTz8kRbrozmIQE_b6ddmFE6C2DfUVA
-  - https://youtu.be/Rtib3ijsMaQ?list=PLA-oTz8kRbrozmIQE_b6ddmFE6C2DfUVA
-  - https://youtu.be/AdQooDsjSfU?list=PLA-oTz8kRbrozmIQE_b6ddmFE6C2DfUVA
-  linkMessage: 'Video not working? Use this link to watch the video: '
-  linkMessageFR: "Si le vid\xE9o ne fonctionne pas, veuillez utiliser ce lien: "
-  linkArea: {fileID: 1342432701}
+  - Calcul de la vitesse de coupe | CGEC
+  textAssets:
+  - {fileID: 4900000, guid: 1448187ba4f9d6a4f86f18f0e2067bd5, type: 3}
+  - {fileID: 4900000, guid: 62f80805fba95084e9e76461643a8d8f, type: 3}
+  - {fileID: 4900000, guid: 44c560f37f8740d4dadba3c267652491, type: 3}
+  - {fileID: 4900000, guid: 2533186e0cef9ff4196c5be4b339e832, type: 3}
+  textAssetsFR:
+  - {fileID: 4900000, guid: 4872016365b6fda45b6b2e52d1ba3ce3, type: 3}
+  - {fileID: 4900000, guid: b60986e3e6b0d844fba5da4ee601d29c, type: 3}
+  - {fileID: 4900000, guid: c9e3b2d48368f374693d6d31e835e4b4, type: 3}
+  - {fileID: 4900000, guid: 8ecda5e6e0d37614c960bb4cbbe983bc, type: 3}
+  isUsingAnimation: 1
+  playOnAwake: 1
+  videoIndexOnStart: 3
+  processController: {fileID: 1765016267}
+  dialogueInterface: {fileID: 1290375430}
+  animatorIndex: 000000000100000002000000
+  dialogueIndex: 010000000200000003000000
+  exceptionList: 01010100
 --- !u!1 &762320801
 GameObject:
   m_ObjectHideFlags: 0
@@ -3241,8 +3044,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 711629428}
-        m_MethodName: PlayVideoClip
+      - m_Target: {fileID: 711629430}
+        m_MethodName: PlayYoutubePlayer
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3394,8 +3197,8 @@ MonoBehaviour:
   imageToggle: {fileID: 0}
   toolHolderManager: {fileID: 0}
   toggleScene: {fileID: 0}
-  videoProcessManager: {fileID: 711629428}
-  videoStandardController: {fileID: 1330229582}
+  videoProcessManager: {fileID: 0}
+  videoStandardController: {fileID: 0}
   videoController: {fileID: 0}
 --- !u!114 &852756864
 MonoBehaviour:
@@ -3412,7 +3215,7 @@ MonoBehaviour:
   tutorialToggle: {fileID: 852756860}
   seekingProgess:
   - {fileID: 427715152}
-  - {fileID: 273697773}
+  - {fileID: 0}
 --- !u!1 &869774087
 GameObject:
   m_ObjectHideFlags: 0
@@ -3450,7 +3253,6 @@ RectTransform:
   - {fileID: 164501437}
   - {fileID: 1191123471}
   - {fileID: 711629427}
-  - {fileID: 1330229581}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3611,18 +3413,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 933273866}
   m_CullTransparentMesh: 0
---- !u!114 &934677285 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5566783084806775032, guid: 6b7dcccd99a8d7143844ca8dd4d5c2d0,
-    type: 3}
-  m_PrefabInstance: {fileID: 589367358}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d199490a83bb2b844b9695cbf13b01ef, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &942751484
 GameObject:
   m_ObjectHideFlags: 0
@@ -4678,8 +4468,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 711629428}
-        m_MethodName: PlayVideoClip
+      - m_Target: {fileID: 711629430}
+        m_MethodName: PlayYoutubePlayer
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5928,96 +5718,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1325918610}
   m_CullTransparentMesh: 0
---- !u!1 &1330229580
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1330229581}
-  - component: {fileID: 1330229582}
-  - component: {fileID: 1330229583}
-  m_Layer: 5
-  m_Name: Video Manager 2
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1330229581
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1330229580}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 589367359}
-  m_Father: {fileID: 869774088}
-  m_RootOrder: 6
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1330229582
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1330229580}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e16c8102d41663341b767319bf0bee35, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  LinkDisplayer: {fileID: 1330229583}
-  cameraToggle: {fileID: 54655437}
-  VideoPanel: {fileID: 476170994}
-  Title: {fileID: 1883828331}
-  videoPlayer: {fileID: 2022226672}
-  videoClip: https://youtu.be/su9xi5XQMHw?list=PLA-oTz8kRbroIWGOhI92m4hTYLP_2aNcx
-  videoClipFR: https://youtu.be/7O8r2mep1Xg?list=PLA-oTz8kRbrozmIQE_b6ddmFE6C2DfUVA
-  subtitleClip: {fileID: 4900000, guid: 2533186e0cef9ff4196c5be4b339e832, type: 3}
-  subtitleClipFR: {fileID: 4900000, guid: 8ecda5e6e0d37614c960bb4cbbe983bc, type: 3}
-  youtubePlayer: {fileID: 2022226670}
-  title: Speed Calculation | CEED
-  titleFR: Calcul de la vitesse de coupe | CGEC
-  StopVideoButton: {fileID: 0}
-  playButton: {fileID: 0}
-  pauseButton: {fileID: 0}
-  stopButton: {fileID: 0}
-  StartOnAwake: 1
-  subtitlesReader: {fileID: 1497926077}
---- !u!114 &1330229583
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1330229580}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: efab5d522226786469e31876df127237, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  controller: {fileID: 0}
-  controller2: {fileID: 1330229582}
-  controller3: {fileID: 0}
-  Links:
-  - https://youtu.be/su9xi5XQMHw?list=PLA-oTz8kRbroIWGOhI92m4hTYLP_2aNcx
-  LinksFR:
-  - https://youtu.be/7O8r2mep1Xg?list=PLA-oTz8kRbrozmIQE_b6ddmFE6C2DfUVA
-  linkMessage: 'Video not working? Use this link to watch the video: '
-  linkMessageFR: "Si le vid\xE9o ne fonctionne pas, veuillez utiliser ce lien: "
-  linkArea: {fileID: 934677285}
 --- !u!1001 &1342432699
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6025,6 +5725,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 711629427}
     m_Modifications:
+    - target: {fileID: 5566783085244415694, guid: 6b7dcccd99a8d7143844ca8dd4d5c2d0,
+        type: 3}
+      propertyPath: OnVideoFinished.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5566783085244415694, guid: 6b7dcccd99a8d7143844ca8dd4d5c2d0,
         type: 3}
       propertyPath: mainCamera
@@ -6037,11 +5742,6 @@ PrefabInstance:
       objectReference: {fileID: 869774087}
     - target: {fileID: 5566783085244415694, guid: 6b7dcccd99a8d7143844ca8dd4d5c2d0,
         type: 3}
-      propertyPath: OnVideoFinished.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5566783085244415694, guid: 6b7dcccd99a8d7143844ca8dd4d5c2d0,
-        type: 3}
       propertyPath: OnVideoFinished.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
       value: 1
       objectReference: {fileID: 0}
@@ -6049,7 +5749,7 @@ PrefabInstance:
         type: 3}
       propertyPath: OnVideoFinished.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 711629428}
+      objectReference: {fileID: 711629430}
     - target: {fileID: 5566783085244415694, guid: 6b7dcccd99a8d7143844ca8dd4d5c2d0,
         type: 3}
       propertyPath: OnVideoFinished.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
@@ -6837,18 +6537,6 @@ MonoBehaviour:
   toggleOptionText: "R\xE9glage Fin"
   toggleOptionText2: Fine Adj.
   currentText: {fileID: 1313271929}
---- !u!114 &1497926077 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5566783085466456764, guid: 6b7dcccd99a8d7143844ca8dd4d5c2d0,
-    type: 3}
-  m_PrefabInstance: {fileID: 589367358}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6d2e6754a304b0c45913a61f70cf437d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1547533765
 GameObject:
   m_ObjectHideFlags: 0
@@ -8511,18 +8199,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 5521113172093981813}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1883828331 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5566783085145617115, guid: 6b7dcccd99a8d7143844ca8dd4d5c2d0,
-    type: 3}
-  m_PrefabInstance: {fileID: 589367358}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1884967329
 GameObject:
   m_ObjectHideFlags: 0
@@ -8659,8 +8335,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 711629428}
-        m_MethodName: PlayVideoClip
+      - m_Target: {fileID: 711629430}
+        m_MethodName: PlayYoutubePlayer
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -8986,24 +8662,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2011081841}
   m_CullTransparentMesh: 0
---- !u!114 &2022226670 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5566783085244415694, guid: 6b7dcccd99a8d7143844ca8dd4d5c2d0,
-    type: 3}
-  m_PrefabInstance: {fileID: 589367358}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5e7418089f4181645b5df8f90e317bf4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!328 &2022226672 stripped
-VideoPlayer:
-  m_CorrespondingSourceObject: {fileID: 5566783085244415692, guid: 6b7dcccd99a8d7143844ca8dd4d5c2d0,
-    type: 3}
-  m_PrefabInstance: {fileID: 589367358}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2035754900
 GameObject:
   m_ObjectHideFlags: 0
@@ -9133,7 +8791,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 711629428}
+      - m_Target: {fileID: 0}
         m_MethodName: SwitchLang
         m_Mode: 1
         m_Arguments:
@@ -9144,7 +8802,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1330229582}
+      - m_Target: {fileID: 0}
         m_MethodName: SwitchLang
         m_Mode: 1
         m_Arguments:
@@ -9730,14 +9388,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5521113173118334550, guid: 117951c1affdbae4a9000444b5825b8d,
         type: 3}
-      propertyPath: powerTriggers
-      value: 
-      objectReference: {fileID: 1406716961}
-    - target: {fileID: 5521113173118334550, guid: 117951c1affdbae4a9000444b5825b8d,
-        type: 3}
       propertyPath: buttonTriggers.Array.size
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 5521113173118334550, guid: 117951c1affdbae4a9000444b5825b8d,
+        type: 3}
+      propertyPath: powerTriggers
+      value: 
+      objectReference: {fileID: 1406716961}
     - target: {fileID: 5521113173118334550, guid: 117951c1affdbae4a9000444b5825b8d,
         type: 3}
       propertyPath: buttonTriggers.Array.data[0]
@@ -9790,14 +9448,14 @@ PrefabInstance:
       objectReference: {fileID: 952629966}
     - target: {fileID: 5521113173332164558, guid: 117951c1affdbae4a9000444b5825b8d,
         type: 3}
-      propertyPath: powerTriggers
-      value: 
-      objectReference: {fileID: 1406716961}
-    - target: {fileID: 5521113173332164558, guid: 117951c1affdbae4a9000444b5825b8d,
-        type: 3}
       propertyPath: buttonTriggers.Array.size
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 5521113173332164558, guid: 117951c1affdbae4a9000444b5825b8d,
+        type: 3}
+      propertyPath: powerTriggers
+      value: 
+      objectReference: {fileID: 1406716961}
     - target: {fileID: 5521113173332164558, guid: 117951c1affdbae4a9000444b5825b8d,
         type: 3}
       propertyPath: buttonTriggers.Array.data[0]
