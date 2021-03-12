@@ -2073,7 +2073,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 421408083}
   m_CullTransparentMesh: 0
+<<<<<<< Updated upstream
 --- !u!1 &480207303
+=======
+--- !u!114 &427715152 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5566783085511281292, guid: 6b7dcccd99a8d7143844ca8dd4d5c2d0,
+    type: 3}
+  m_PrefabInstance: {fileID: 1342432699}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: babb526a0c99bbc49a57597e4f7d179e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &491471383
+>>>>>>> Stashed changes
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2305,6 +2321,7 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 5521113172093981813}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< Updated upstream
 --- !u!1 &589037160
 GameObject:
   m_ObjectHideFlags: 0
@@ -2387,6 +2404,8 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 589037160}
   m_CullTransparentMesh: 0
+=======
+>>>>>>> Stashed changes
 --- !u!1 &609320242
 GameObject:
   m_ObjectHideFlags: 0
@@ -2925,9 +2944,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 711629426}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e385d9bacc09f414a9c9aedeeb21960e, type: 3}
+  m_Script: {fileID: 11500000, guid: 403ff0ef857232f419087d2f832ce9b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< Updated upstream
   cameraToggle: {fileID: 54655437}
   operationController: {fileID: 1765016267}
   dialogueInterface: {fileID: 1290375430}
@@ -2963,6 +2983,56 @@ MonoBehaviour:
   - "Op\xE9ration de fraisage lat\xE9rale"
   exitImage: {fileID: 1786608669}
   language: 1
+=======
+  languageSceneManager: {fileID: 852756863}
+  youtubePlayer: {fileID: 1342432703}
+  videoPlayer: {fileID: 1342432704}
+  youtubeSubtitlesReader: {fileID: 1342432700}
+  VideoPanel: {fileID: 1342432705}
+  TitleDisplay: {fileID: 1342432702}
+  LinkMessage: 'Video not working? Use this link to watch the video: '
+  LinkMessageFR: "Si le vid\xE9o ne fonctionne pas, veuillez utiliser ce lien: "
+  YoutubeLinkDisplay: {fileID: 1342432701}
+  numberOfVids: 4
+  youtubeLinks:
+  - https://youtu.be/mHVXzNQBQM4?list=PLA-oTz8kRbroIWGOhI92m4hTYLP_2aNcx
+  - https://youtu.be/xJzGX-dLg6c?list=PLA-oTz8kRbroIWGOhI92m4hTYLP_2aNcx
+  - https://youtu.be/QJos54phnP4?list=PLA-oTz8kRbroIWGOhI92m4hTYLP_2aNcx
+  - https://youtu.be/su9xi5XQMHw?list=PLA-oTz8kRbroIWGOhI92m4hTYLP_2aNcx
+  youtubeLinksFR:
+  - https://youtu.be/4dchSNxRfzU?list=PLA-oTz8kRbrozmIQE_b6ddmFE6C2DfUVA
+  - https://youtu.be/Rtib3ijsMaQ?list=PLA-oTz8kRbrozmIQE_b6ddmFE6C2DfUVA
+  - https://youtu.be/AdQooDsjSfU?list=PLA-oTz8kRbrozmIQE_b6ddmFE6C2DfUVA
+  - https://youtu.be/7O8r2mep1Xg?list=PLA-oTz8kRbrozmIQE_b6ddmFE6C2DfUVA
+  titlesEN:
+  - Drilling Operation | CEED
+  - Face Milling Operation | CEED
+  - Side Milling Operation | CEED
+  - Speed Calculation | CEED
+  titlesFR:
+  - "Op\xE9ration de per\xE7age | CGEC"
+  - "Op\xE9ration de surfa\xE7age | CGEC"
+  - "Op\xE9ration de fraisage lat\xE9rale | CGEC"
+  - Calcul de la vitesse de coupe | CGEC
+  textAssets:
+  - {fileID: 4900000, guid: 1448187ba4f9d6a4f86f18f0e2067bd5, type: 3}
+  - {fileID: 4900000, guid: 62f80805fba95084e9e76461643a8d8f, type: 3}
+  - {fileID: 4900000, guid: 44c560f37f8740d4dadba3c267652491, type: 3}
+  - {fileID: 4900000, guid: 2533186e0cef9ff4196c5be4b339e832, type: 3}
+  textAssetsFR:
+  - {fileID: 4900000, guid: 4872016365b6fda45b6b2e52d1ba3ce3, type: 3}
+  - {fileID: 4900000, guid: b60986e3e6b0d844fba5da4ee601d29c, type: 3}
+  - {fileID: 4900000, guid: c9e3b2d48368f374693d6d31e835e4b4, type: 3}
+  - {fileID: 4900000, guid: 8ecda5e6e0d37614c960bb4cbbe983bc, type: 3}
+  isUsingAnimation: 1
+  playOnAwake: 1
+  videoIndexOnStart: 3
+  processController: {fileID: 1765016267}
+  dialogueInterface: {fileID: 1290375430}
+  animatorIndex: 000000000100000002000000
+  dialogueIndex: 010000000200000003000000
+  exceptionList: 01010100
+>>>>>>> Stashed changes
 --- !u!1 &762320801
 GameObject:
   m_ObjectHideFlags: 0
@@ -3533,7 +3603,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 711629428}
-        m_MethodName: PlayVideoClip
+        m_MethodName: PlayYoutubePlayer
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3662,6 +3732,7 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< Updated upstream
   m_GameObject: {fileID: 850768453}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
@@ -3676,6 +3747,33 @@ RectTransform:
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &850768457
+=======
+  m_GameObject: {fileID: 852756859}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3b8188085ef1834cb6e1f7b30930014, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  toggleList:
+  - {fileID: 1937965048}
+  - {fileID: 1476165691}
+  - {fileID: 2035754905}
+  - {fileID: 762320803}
+  - {fileID: 0}
+  - {fileID: 0}
+  toggleHint: {fileID: 0}
+  languageScene: {fileID: 852756862}
+  toggleLangManager: {fileID: 420924302}
+  warningLangManager: {fileID: 0}
+  toggleComponentLangManager: {fileID: 0}
+  imageToggle: {fileID: 0}
+  toolHolderManager: {fileID: 0}
+  toggleScene: {fileID: 0}
+  videoProcessManager: {fileID: 0}
+  videoStandardController: {fileID: 0}
+  videoController: {fileID: 0}
+--- !u!114 &852756864
+>>>>>>> Stashed changes
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3687,6 +3785,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< Updated upstream
   m_Navigation:
     m_Mode: 3
     m_SelectOnUp: {fileID: 0}
@@ -3836,6 +3935,12 @@ MonoBehaviour:
   videoProcessManager: {fileID: 711629428}
   videoStandardController: {fileID: 1330229582}
   videoController: {fileID: 0}
+=======
+  tutorialToggle: {fileID: 852756860}
+  seekingProgess:
+  - {fileID: 427715152}
+  - {fileID: 0}
+>>>>>>> Stashed changes
 --- !u!1 &869774087
 GameObject:
   m_ObjectHideFlags: 0
@@ -3873,7 +3978,6 @@ RectTransform:
   - {fileID: 164501437}
   - {fileID: 1191123471}
   - {fileID: 711629427}
-  - {fileID: 1330229581}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -4108,7 +4212,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 933273866}
   m_CullTransparentMesh: 0
+<<<<<<< Updated upstream
 --- !u!1 &935666548
+=======
+--- !u!1 &942751484
+>>>>>>> Stashed changes
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -5423,7 +5531,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 711629428}
-        m_MethodName: PlayVideoClip
+        m_MethodName: PlayYoutubePlayer
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -7080,6 +7188,241 @@ MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
+<<<<<<< Updated upstream
+=======
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1325918610}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 330525c97f14f404e96bd68a600b0829, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1325918613
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1325918610}
+  m_CullTransparentMesh: 0
+--- !u!1001 &1342432699
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 711629427}
+    m_Modifications:
+    - target: {fileID: 5566783085244415694, guid: 6b7dcccd99a8d7143844ca8dd4d5c2d0,
+        type: 3}
+      propertyPath: mainCamera
+      value: 
+      objectReference: {fileID: 609320246}
+    - target: {fileID: 5566783085244415694, guid: 6b7dcccd99a8d7143844ca8dd4d5c2d0,
+        type: 3}
+      propertyPath: videoControllerCanvas
+      value: 
+      objectReference: {fileID: 869774087}
+    - target: {fileID: 5566783085244415694, guid: 6b7dcccd99a8d7143844ca8dd4d5c2d0,
+        type: 3}
+      propertyPath: OnVideoFinished.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5566783085244415694, guid: 6b7dcccd99a8d7143844ca8dd4d5c2d0,
+        type: 3}
+      propertyPath: OnVideoFinished.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5566783085244415694, guid: 6b7dcccd99a8d7143844ca8dd4d5c2d0,
+        type: 3}
+      propertyPath: OnVideoFinished.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 711629428}
+    - target: {fileID: 5566783085244415694, guid: 6b7dcccd99a8d7143844ca8dd4d5c2d0,
+        type: 3}
+      propertyPath: OnVideoFinished.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5566783085244415694, guid: 6b7dcccd99a8d7143844ca8dd4d5c2d0,
+        type: 3}
+      propertyPath: OnVideoFinished.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ExitVideo
+      objectReference: {fileID: 0}
+    - target: {fileID: 5566783085244415694, guid: 6b7dcccd99a8d7143844ca8dd4d5c2d0,
+        type: 3}
+      propertyPath: OnVideoFinished.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 5566783085421040614, guid: 6b7dcccd99a8d7143844ca8dd4d5c2d0,
+        type: 3}
+      propertyPath: m_Name
+      value: Video Panel
+      objectReference: {fileID: 0}
+    - target: {fileID: 5566783085421040615, guid: 6b7dcccd99a8d7143844ca8dd4d5c2d0,
+        type: 3}
+      propertyPath: m_Pivot.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5566783085421040615, guid: 6b7dcccd99a8d7143844ca8dd4d5c2d0,
+        type: 3}
+      propertyPath: m_Pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5566783085421040615, guid: 6b7dcccd99a8d7143844ca8dd4d5c2d0,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5566783085421040615, guid: 6b7dcccd99a8d7143844ca8dd4d5c2d0,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5566783085421040615, guid: 6b7dcccd99a8d7143844ca8dd4d5c2d0,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5566783085421040615, guid: 6b7dcccd99a8d7143844ca8dd4d5c2d0,
+        type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5566783085421040615, guid: 6b7dcccd99a8d7143844ca8dd4d5c2d0,
+        type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5566783085421040615, guid: 6b7dcccd99a8d7143844ca8dd4d5c2d0,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5566783085421040615, guid: 6b7dcccd99a8d7143844ca8dd4d5c2d0,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5566783085421040615, guid: 6b7dcccd99a8d7143844ca8dd4d5c2d0,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5566783085421040615, guid: 6b7dcccd99a8d7143844ca8dd4d5c2d0,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5566783085421040615, guid: 6b7dcccd99a8d7143844ca8dd4d5c2d0,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5566783085421040615, guid: 6b7dcccd99a8d7143844ca8dd4d5c2d0,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5566783085421040615, guid: 6b7dcccd99a8d7143844ca8dd4d5c2d0,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5566783085421040615, guid: 6b7dcccd99a8d7143844ca8dd4d5c2d0,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5566783085421040615, guid: 6b7dcccd99a8d7143844ca8dd4d5c2d0,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5566783085421040615, guid: 6b7dcccd99a8d7143844ca8dd4d5c2d0,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5566783085421040615, guid: 6b7dcccd99a8d7143844ca8dd4d5c2d0,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5566783085421040615, guid: 6b7dcccd99a8d7143844ca8dd4d5c2d0,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5566783085421040615, guid: 6b7dcccd99a8d7143844ca8dd4d5c2d0,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5566783085421040615, guid: 6b7dcccd99a8d7143844ca8dd4d5c2d0,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 6b7dcccd99a8d7143844ca8dd4d5c2d0, type: 3}
+--- !u!114 &1342432700 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5566783085466456764, guid: 6b7dcccd99a8d7143844ca8dd4d5c2d0,
+    type: 3}
+  m_PrefabInstance: {fileID: 1342432699}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d2e6754a304b0c45913a61f70cf437d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1342432701 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5566783084806775032, guid: 6b7dcccd99a8d7143844ca8dd4d5c2d0,
+    type: 3}
+  m_PrefabInstance: {fileID: 1342432699}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d199490a83bb2b844b9695cbf13b01ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1342432702 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5566783085145617115, guid: 6b7dcccd99a8d7143844ca8dd4d5c2d0,
+    type: 3}
+  m_PrefabInstance: {fileID: 1342432699}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1342432703 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5566783085244415694, guid: 6b7dcccd99a8d7143844ca8dd4d5c2d0,
+    type: 3}
+  m_PrefabInstance: {fileID: 1342432699}
+>>>>>>> Stashed changes
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1325918610}
   m_Enabled: 1
@@ -7899,6 +8242,7 @@ MonoBehaviour:
   toggleOptionText: "R\xE9glage Fin"
   toggleOptionText2: Fine Adj.
   currentText: {fileID: 1313271929}
+<<<<<<< Updated upstream
 --- !u!1 &1538433797
 GameObject:
   m_ObjectHideFlags: 0
@@ -7973,6 +8317,8 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1538433797}
   m_CullTransparentMesh: 0
+=======
+>>>>>>> Stashed changes
 --- !u!1 &1547533765
 GameObject:
   m_ObjectHideFlags: 0
@@ -9924,6 +10270,7 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< Updated upstream
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1864256456}
@@ -10054,6 +10401,8 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 5521113172093981813}
   m_PrefabAsset: {fileID: 0}
+=======
+>>>>>>> Stashed changes
 --- !u!1 &1884967329
 GameObject:
   m_ObjectHideFlags: 0
@@ -10341,8 +10690,13 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 711629428}
+<<<<<<< Updated upstream
         m_MethodName: StopVideo
         m_Mode: 1
+=======
+        m_MethodName: PlayYoutubePlayer
+        m_Mode: 3
+>>>>>>> Stashed changes
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -10570,7 +10924,13 @@ MonoBehaviour:
   - {fileID: 1582640060}
   - {fileID: 1125573157}
   manager: {fileID: 1765016267}
+<<<<<<< Updated upstream
 --- !u!1 &1983954864
+=======
+  dRO_Button: {fileID: 0}
+  LockButton: 0
+--- !u!1 &1959045709
+>>>>>>> Stashed changes
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -10578,23 +10938,35 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+<<<<<<< Updated upstream
   - component: {fileID: 1983954868}
   - component: {fileID: 1983954867}
   - component: {fileID: 1983954866}
   - component: {fileID: 1983954865}
   m_Layer: 5
   m_Name: Pause
+=======
+  - component: {fileID: 1959045711}
+  m_Layer: 0
+  m_Name: GameObject
+>>>>>>> Stashed changes
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+<<<<<<< Updated upstream
 --- !u!114 &1983954865
 MonoBehaviour:
+=======
+--- !u!4 &1959045711
+Transform:
+>>>>>>> Stashed changes
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< Updated upstream
   m_GameObject: {fileID: 1983954864}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -10803,6 +11175,16 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1989399960}
   m_CullTransparentMesh: 0
+=======
+  m_GameObject: {fileID: 1959045709}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 483, y: 271.5, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+>>>>>>> Stashed changes
 --- !u!1 &2011081841
 GameObject:
   m_ObjectHideFlags: 0
@@ -10987,6 +11369,8 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 2035754905}
         m_MethodName: toggle
+<<<<<<< Updated upstream
+=======
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -10998,6 +11382,34 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 762320803}
         m_MethodName: toggle
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_MethodName: SwitchLang
+>>>>>>> Stashed changes
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+<<<<<<< Updated upstream
+      - m_Target: {fileID: 762320803}
+        m_MethodName: toggle
+=======
+      - m_Target: {fileID: 0}
+        m_MethodName: SwitchLang
+>>>>>>> Stashed changes
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
