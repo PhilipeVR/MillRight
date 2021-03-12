@@ -841,234 +841,6 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_IsOn: 0
-<<<<<<< Updated upstream
-=======
---- !u!1001 &91531545
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 341533640}
-    m_Modifications:
-    - target: {fileID: 5566783085244415694, guid: 6b7dcccd99a8d7143844ca8dd4d5c2d0,
-        type: 3}
-      propertyPath: mainCamera
-      value: 
-      objectReference: {fileID: 524262181}
-    - target: {fileID: 5566783085244415694, guid: 6b7dcccd99a8d7143844ca8dd4d5c2d0,
-        type: 3}
-      propertyPath: videoControllerCanvas
-      value: 
-      objectReference: {fileID: 687966539}
-    - target: {fileID: 5566783085244415694, guid: 6b7dcccd99a8d7143844ca8dd4d5c2d0,
-        type: 3}
-      propertyPath: OnVideoFinished.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5566783085244415694, guid: 6b7dcccd99a8d7143844ca8dd4d5c2d0,
-        type: 3}
-      propertyPath: OnVideoFinished.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5566783085244415694, guid: 6b7dcccd99a8d7143844ca8dd4d5c2d0,
-        type: 3}
-      propertyPath: OnVideoFinished.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 341533641}
-    - target: {fileID: 5566783085244415694, guid: 6b7dcccd99a8d7143844ca8dd4d5c2d0,
-        type: 3}
-      propertyPath: OnVideoFinished.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 5566783085244415694, guid: 6b7dcccd99a8d7143844ca8dd4d5c2d0,
-        type: 3}
-      propertyPath: OnVideoFinished.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: ExitVideo
-      objectReference: {fileID: 0}
-    - target: {fileID: 5566783085244415694, guid: 6b7dcccd99a8d7143844ca8dd4d5c2d0,
-        type: 3}
-      propertyPath: OnVideoFinished.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 5566783085421040614, guid: 6b7dcccd99a8d7143844ca8dd4d5c2d0,
-        type: 3}
-      propertyPath: m_Name
-      value: Video Panel
-      objectReference: {fileID: 0}
-    - target: {fileID: 5566783085421040615, guid: 6b7dcccd99a8d7143844ca8dd4d5c2d0,
-        type: 3}
-      propertyPath: m_Pivot.x
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 5566783085421040615, guid: 6b7dcccd99a8d7143844ca8dd4d5c2d0,
-        type: 3}
-      propertyPath: m_Pivot.y
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 5566783085421040615, guid: 6b7dcccd99a8d7143844ca8dd4d5c2d0,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5566783085421040615, guid: 6b7dcccd99a8d7143844ca8dd4d5c2d0,
-        type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5566783085421040615, guid: 6b7dcccd99a8d7143844ca8dd4d5c2d0,
-        type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5566783085421040615, guid: 6b7dcccd99a8d7143844ca8dd4d5c2d0,
-        type: 3}
-      propertyPath: m_AnchorMin.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5566783085421040615, guid: 6b7dcccd99a8d7143844ca8dd4d5c2d0,
-        type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5566783085421040615, guid: 6b7dcccd99a8d7143844ca8dd4d5c2d0,
-        type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5566783085421040615, guid: 6b7dcccd99a8d7143844ca8dd4d5c2d0,
-        type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5566783085421040615, guid: 6b7dcccd99a8d7143844ca8dd4d5c2d0,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5566783085421040615, guid: 6b7dcccd99a8d7143844ca8dd4d5c2d0,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5566783085421040615, guid: 6b7dcccd99a8d7143844ca8dd4d5c2d0,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5566783085421040615, guid: 6b7dcccd99a8d7143844ca8dd4d5c2d0,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5566783085421040615, guid: 6b7dcccd99a8d7143844ca8dd4d5c2d0,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5566783085421040615, guid: 6b7dcccd99a8d7143844ca8dd4d5c2d0,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5566783085421040615, guid: 6b7dcccd99a8d7143844ca8dd4d5c2d0,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5566783085421040615, guid: 6b7dcccd99a8d7143844ca8dd4d5c2d0,
-        type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5566783085421040615, guid: 6b7dcccd99a8d7143844ca8dd4d5c2d0,
-        type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5566783085421040615, guid: 6b7dcccd99a8d7143844ca8dd4d5c2d0,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5566783085421040615, guid: 6b7dcccd99a8d7143844ca8dd4d5c2d0,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5566783085421040615, guid: 6b7dcccd99a8d7143844ca8dd4d5c2d0,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 6b7dcccd99a8d7143844ca8dd4d5c2d0, type: 3}
---- !u!114 &91531546 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5566783085466456764, guid: 6b7dcccd99a8d7143844ca8dd4d5c2d0,
-    type: 3}
-  m_PrefabInstance: {fileID: 91531545}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6d2e6754a304b0c45913a61f70cf437d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &91531547 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5566783084806775032, guid: 6b7dcccd99a8d7143844ca8dd4d5c2d0,
-    type: 3}
-  m_PrefabInstance: {fileID: 91531545}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d199490a83bb2b844b9695cbf13b01ef, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &91531548 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5566783085244415694, guid: 6b7dcccd99a8d7143844ca8dd4d5c2d0,
-    type: 3}
-  m_PrefabInstance: {fileID: 91531545}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5e7418089f4181645b5df8f90e317bf4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!328 &91531549 stripped
-VideoPlayer:
-  m_CorrespondingSourceObject: {fileID: 5566783085244415692, guid: 6b7dcccd99a8d7143844ca8dd4d5c2d0,
-    type: 3}
-  m_PrefabInstance: {fileID: 91531545}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &91531550 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5566783085421040614, guid: 6b7dcccd99a8d7143844ca8dd4d5c2d0,
-    type: 3}
-  m_PrefabInstance: {fileID: 91531545}
-  m_PrefabAsset: {fileID: 0}
---- !u!224 &91531551 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 5566783085421040615, guid: 6b7dcccd99a8d7143844ca8dd4d5c2d0,
-    type: 3}
-  m_PrefabInstance: {fileID: 91531545}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &91531552 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5566783085511281292, guid: 6b7dcccd99a8d7143844ca8dd4d5c2d0,
-    type: 3}
-  m_PrefabInstance: {fileID: 91531545}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: babb526a0c99bbc49a57597e4f7d179e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
->>>>>>> Stashed changes
 --- !u!1 &100660179
 GameObject:
   m_ObjectHideFlags: 0
@@ -1857,7 +1629,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 341533642}
         m_MethodName: SwitchLang
         m_Mode: 1
         m_Arguments:
@@ -2145,36 +1917,6 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 2154673989656536498, guid: cf2eb7bda6c7bc84fad20858daff09e3, type: 3}
---- !u!1 &320263542
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 320263544}
-  m_Layer: 0
-  m_Name: GameObject
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &320263544
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 320263542}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 483, y: 271.5, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 9
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &339678199
 GameObject:
   m_ObjectHideFlags: 0
@@ -2262,11 +2004,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 341533640}
-<<<<<<< Updated upstream
   - component: {fileID: 341533642}
-=======
-  - component: {fileID: 341533641}
->>>>>>> Stashed changes
   m_Layer: 5
   m_Name: Video Manager
   m_TagString: Untagged
@@ -2294,7 +2032,7 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &341533641
+--- !u!114 &341533642
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2303,10 +2041,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 341533639}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 403ff0ef857232f419087d2f832ce9b2, type: 3}
+  m_Script: {fileID: 11500000, guid: e16c8102d41663341b767319bf0bee35, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-<<<<<<< Updated upstream
   cameraToggle: {fileID: 1673944768}
   VideoPanel: {fileID: 2110359599}
   Title: {fileID: 1931217241}
@@ -2321,38 +2058,6 @@ MonoBehaviour:
   pauseButton: {fileID: 505796255}
   stopButton: {fileID: 1970940640}
   StartOnAwake: 1
-=======
-  languageSceneManager: {fileID: 1615564896}
-  youtubePlayer: {fileID: 91531548}
-  videoPlayer: {fileID: 91531549}
-  youtubeSubtitlesReader: {fileID: 91531546}
-  VideoPanel: {fileID: 91531550}
-  TitleDisplay: {fileID: 913273224}
-  LinkMessage: 'Video not working? Use this link to watch the video: '
-  LinkMessageFR: "Si le vid\xE9o ne fonctionne pas, veuillez utiliser ce lien: "
-  YoutubeLinkDisplay: {fileID: 91531547}
-  numberOfVids: 1
-  youtubeLinks:
-  - https://youtu.be/x88Yxklmjw0?list=PLA-oTz8kRbroIWGOhI92m4hTYLP_2aNcx
-  youtubeLinksFR:
-  - https://youtu.be/Gw_quMaaiqo?list=PLA-oTz8kRbrozmIQE_b6ddmFE6C2DfUVA
-  titlesEN:
-  - Introduction | CEED
-  titlesFR:
-  - Introduction | CGEC
-  textAssets:
-  - {fileID: 4900000, guid: 2da1b815c862c6d439248fdad132c49f, type: 3}
-  textAssetsFR:
-  - {fileID: 4900000, guid: 456f21fc7a6216849996f06b28efa61f, type: 3}
-  isUsingAnimation: 0
-  playOnAwake: 1
-  videoIndexOnStart: 0
-  processController: {fileID: 0}
-  dialogueInterface: {fileID: 0}
-  animatorIndex: 
-  dialogueIndex: 
-  exceptionList: 00
->>>>>>> Stashed changes
 --- !u!1 &346224012
 GameObject:
   m_ObjectHideFlags: 0
@@ -18076,7 +17781,7 @@ MonoBehaviour:
   toolHolderManager: {fileID: 0}
   toggleScene: {fileID: 0}
   videoProcessManager: {fileID: 0}
-  videoStandardController: {fileID: 0}
+  videoStandardController: {fileID: 341533642}
   videoController: {fileID: 0}
 --- !u!1 &1629818477
 GameObject:
