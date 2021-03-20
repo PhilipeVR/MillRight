@@ -9,7 +9,7 @@ public class ComponentManager : MonoBehaviour
     private List<ComponentDetail> details;
     [SerializeField] private AnchorSwitcher anchorSwitcher;
     [SerializeField] private PartDataScriptable partData;
-    [SerializeField] private GameObject continueBTN, menuBTN;
+    [SerializeField] private Button continueBTN, menuBTN;
     [SerializeField] private Text namePart, info, partsExamined, totalNumOfParts;
     [SerializeField] private Image infoImage;
     [SerializeField] private string initialTextFR, namePartFR;
@@ -39,7 +39,7 @@ public class ComponentManager : MonoBehaviour
         totalNumOfParts.text = totalParts + numOfParts.ToString();
         checklist.SetupToggleList(details);
         updateCounter();
-        continueBTN.SetActive(false);
+        continueBTN.interactable = false;
         //Debug.Log(details.Count);
     }
 
@@ -123,12 +123,12 @@ public class ComponentManager : MonoBehaviour
             {
                 if (toggle.getTutorial())
                 {
-                    continueBTN.SetActive(true);
+                    continueBTN.interactable = true;
                 }
             }
             else
             {
-                menuBTN.SetActive(true);
+                menuBTN.interactable = true;
             }
             
         }

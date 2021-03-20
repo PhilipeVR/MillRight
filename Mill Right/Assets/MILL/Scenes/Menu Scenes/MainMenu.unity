@@ -2428,7 +2428,7 @@ MonoBehaviour:
       m_Calls: []
   m_CaretColor: {r: 0, g: 0, b: 0, a: 1}
   m_CustomCaretColor: 1
-  m_SelectionColor: {r: 0.084905684, g: 0.084905684, b: 0.084905684, a: 0.85882354}
+  m_SelectionColor: {r: 0.65882355, g: 0.80784315, b: 1, a: 0.7529412}
   m_Text: 
   m_CaretBlinkRate: 0.99
   m_CaretWidth: 5
@@ -2869,10 +2869,10 @@ MonoBehaviour:
     m_Font: {fileID: 12800000, guid: d3609e098716089439d04a824cd5b992, type: 3}
     m_FontSize: 100
     m_FontStyle: 0
-    m_BestFit: 0
+    m_BestFit: 1
     m_MinSize: 0
     m_MaxSize: 100
-    m_Alignment: 0
+    m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
@@ -3063,7 +3063,7 @@ MonoBehaviour:
       m_Calls: []
   m_CaretColor: {r: 0, g: 0, b: 0, a: 1}
   m_CustomCaretColor: 1
-  m_SelectionColor: {r: 0.084905684, g: 0.084905684, b: 0.084905684, a: 0.7529412}
+  m_SelectionColor: {r: 0.65882355, g: 0.80784315, b: 1, a: 0.7529412}
   m_Text: 
   m_CaretBlinkRate: 0.85
   m_CaretWidth: 5
@@ -3576,10 +3576,10 @@ MonoBehaviour:
     m_Font: {fileID: 12800000, guid: d3609e098716089439d04a824cd5b992, type: 3}
     m_FontSize: 100
     m_FontStyle: 0
-    m_BestFit: 0
+    m_BestFit: 1
     m_MinSize: 0
     m_MaxSize: 100
-    m_Alignment: 0
+    m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0

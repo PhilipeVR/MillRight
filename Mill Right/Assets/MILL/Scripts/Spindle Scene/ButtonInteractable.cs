@@ -10,11 +10,13 @@ public class ButtonInteractable : MonoBehaviour
     [SerializeField] private AnimationController controller;
     [SerializeField] private VideoManager2 videoController;
     [SerializeField] private DialogueManager manager;
+    [SerializeField] private LoadSceneScript loadNextScene;
+    [SerializeField] private string nextScene;
     [SerializeField] private int VideoIndex;
     private List<int> countChecker;
     private int counter;
     private int dialogCounter;
-    private bool Played;
+    private bool Played = false;
    
     private void Start()
     {
@@ -46,10 +48,12 @@ public class ButtonInteractable : MonoBehaviour
         if(counter == finalNum && controller.Counter > 0 && !Played && manager.SentenceIndex == manager.count)
         {
             videoController.PlayYoutubePlayer(VideoIndex);
+            Played = true;
         }
         else if (counter == finalNum && controller.Counter > 0 && Played && manager.SentenceIndex == manager.count)
         {
             button.interactable = true;
+            loadNextScene.loadlevel(nextScene);
         }
     }
 

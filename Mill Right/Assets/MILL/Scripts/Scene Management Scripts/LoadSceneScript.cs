@@ -22,6 +22,20 @@ public class LoadSceneScript : MonoBehaviour
         {
             SceneManager.LoadScene("Certificate");
         }
+        else if (e.type == EventType.KeyDown && e.keyCode == KeyCode.F11)
+        {
+            if (!Screen.fullScreen)
+            {
+                Screen.fullScreenMode = FullScreenMode.ExclusiveFullScreen;
+            }
+        }
+        else if (e.type == EventType.KeyDown && e.keyCode == KeyCode.Escape)
+        {
+            if (Screen.fullScreen)
+            {
+                Screen.fullScreenMode = FullScreenMode.Windowed;
+            }
+        }
     }
 
     public void ExitGame()
