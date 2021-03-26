@@ -50,6 +50,19 @@ public class ClipTriggers : MonoBehaviour
         }
     }
 
+    public bool RightSequence()
+    {
+        TriggerAnimationController controller = triggerController[manager.Index];
+        foreach (Trigger trigger in triggers)
+        {
+            if (trigger.Anim == manager.Index && trigger.Name == controller.name && trigger.SentenceIndex() == dialogueManager.SentenceIndex)
+            {
+                return true;
+            }
+        }
+        return false;
+    }
+
     private void OnMouseDown()
     {
         PlaySequence();

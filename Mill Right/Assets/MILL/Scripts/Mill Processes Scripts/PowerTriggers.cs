@@ -64,4 +64,17 @@ public class PowerTriggers : MonoBehaviour
             }
         }
     }
+
+    public bool CheckPowerIndex()
+    {
+        foreach (PowerButtonToggle toggle in powers)
+        {
+            if (toggle.Anim == manager.Index)
+            {
+                return toggle.CheckPowerIndex();
+                
+            }
+        }
+        return false;
+    }
 }

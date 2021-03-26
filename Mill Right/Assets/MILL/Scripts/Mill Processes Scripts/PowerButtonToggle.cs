@@ -59,6 +59,11 @@ public class PowerButtonToggle
 
     }
 
+    public bool CheckPowerIndex()
+    {
+        return (i < 2) && (index[i] == trigger.Index && CheckManager());
+    }
+
     public void OnOffToggle(DialogueManager manager)
     {
         if (i < 2)

@@ -41,6 +41,11 @@ public class ZeroProcessHandler : MonoBehaviour
         }
     }
 
+    public bool CheckIndex()
+    {
+        return animIndex == controller.Index && sentenceIndex == manager.sentenceIndex;
+    }
+
     public void SetReferencePoint()
     {
         if (Clicked)
