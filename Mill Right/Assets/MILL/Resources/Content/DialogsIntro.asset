@@ -85,8 +85,7 @@ MonoBehaviour:
       the workpiece
 
 
-      Hint: Click on Z Button on DRO Panel to lower mill head
-      (Click on DRO button to open DRO Panel)'
+      Hint: Click on handle of Handwheel Z to lower mill head'
     - "With the workpiece and tool in position, we are almost ready to begin drilling.
       In practice, a simple formula can be used to estimate the rotation speed for
       drilling operations  knowing the material of the workpiece and the diameter
@@ -106,7 +105,7 @@ MonoBehaviour:
 
 
       Hint:
-      Click on ON Button to turn milling machine ON
+      Click on ON Button on the Mill to turn the machine ON
 
 '
     - 'Lower the spindle with the quill feed until you touch the surface. Remove
@@ -114,13 +113,13 @@ MonoBehaviour:
       in a pecking motion
 
 
-      Hint: Click on Quill Button on DRO Panel to perform
+      Hint: Click on the Quill Feed Wheel to perform
       drilling operation'
     - 'Continue until the drill bit has piereced through the matieral. Turn OFF machine
       when finished.
 
 
-      Hint: Click on OFF Button to turn milling machine OFF'
+      Hint: Click on OFF Button on the Mill to turn it OFF'
     - Well done! Next we will learn side milling. Click on the side milling operation
       button on the right-hand side.
     sentencesFR:
@@ -141,8 +140,8 @@ MonoBehaviour:
     - "Localisez d'abord l'endroit sur la pi\xE8ce que vous devez percer. Souvent,
       un coup de poing central est utilis\xE9 pour marquer cet emplacement."
     - "Ensuite, abaissez la t\xEAte du broyeur de sorte qu'elle ne soit qu'\xE0 quelques
-      pouces au-dessus de la pi\xE8ce.\n\nIndice: Cliquez sur le bouton Z du panneau
-      DRO pour abaisser la t\xEAte de fraisage"
+      pouces au-dessus de la pi\xE8ce.\n\nIndice: Cliquez sur la poign\xE9e de la
+      roue de contr\xF4le de l\u2019axe Z pour abaisser la t\xEAte de fraisage"
     - "Avec la pi\xE8ce et l'outil en place, nous sommes presque pr\xEAts \xE0 commencer
       le per\xE7age. En pratique, une formule simple peut \xEAtre utilis\xE9e pour
       estimer la vitesse de rotation des op\xE9rations de per\xE7age connaissant
@@ -152,14 +151,15 @@ MonoBehaviour:
       de coupe (acier) = 80 pi/min (pieds en surface par minute)\r\nDiam\xE8tre de
       coupe = 0,5 pouce\r\nTr/min = 4 x 80 / 0,5\r\nTr/min = 640 Tr/min"
     - "Nous sommes maintenant pr\xEAts \xE0 commencer le forage. Allumez la machine
-      pour continuer.\r\n\r\nIndice: Cliquez sur le bouton ON pour allumer la fraiseuse"
+      pour continuer.\r\n\r\nIndice: Cliquez sur le bouton ON sur la fraiseuse pour
+      allumer la machine"
     - "Abaissez la broche avec l'avance de la plume jusqu'\xE0 ce que vous touchiez
       la surface. Retirez le mat\xE9riau de la pi\xE8ce par incr\xE9ments en soulevant
       et en abaissant le foret dans un mouvement de picage.\n\nIndice: Cliquez sur
-      le bouton Plume sur le panneau DRO pour effectuer l'op\xE9ration de per\xE7age"
+      la Roue de contr\xF4le de la broche pour effectuer l'op\xE9ration de per\xE7age"
     - "Continuez jusqu'\xE0 ce que le foret ait perc\xE9 le mat\xE9riau. \xC9teignez
       la machine lorsque vous avez termin\xE9.\r\n\nIndice: Cliquez sur le bouton
-      OFF pour \xE9teindre la fraiseuse"
+      OFF sur la fraiseuse pour \xE9teindre celle-ci"
     - "Bien jou\xE9! Ensuite, nous apprendrons le fraisage lat\xE9ral. Cliquez sur
       le bouton d'op\xE9ration de fraisage lat\xE9ral sur le c\xF4t\xE9 droit."
     images:
@@ -197,47 +197,49 @@ MonoBehaviour:
       workpiece.
 
 
-      Hint: Click Z Button on DRO Panel to lower mill head (Click
-      on DRO button to open DRO Panel)'
+      Hint: Click on handle of Handwheel Z to lower mill head'
     - 'Now lock the head of the machine into position.
 
 
-      Hint: Click on Z Lock
-      Button on DRO Panel to lock Z axis (Located to the left of Z Button on the
-      DRO panel)'
+      Hint: Click on Head
+      Lock to lock Z axis'
     - 'Next, adjust the table so that the tool is now aligned above the workpiece.
 
 
       Hint:
-      Click Y Button on DRO Panel to move table backwards to make sure the mill cutter
-      is right above workpiece'
+      Click on handle of Handwheel Y to move table backwards to make sure the mill
+      cutter is right above workpiece'
     - 'Now you may turn on the machine.
 
 
-      Hint: Click on ON Button to turn
-      milling machine ON'
+      Hint: Click on ON Button on the Mill
+      to turn the machine ON'
     - 'Proceed by using the quill feed to lower the tool until it contacts the surface
       of the workpiece.
 
 
-      Hint: Click Quill Button on DRO Panel to set depth
+      Hint: Click on the Quill Feed Wheel to set depth
       of cut'
     - 'Now you will set the reference point on the Z axis.
 
 
       Hint: Click on
-      Zero Button on DRO Panel to set reference point, with Z Button selected'
+      Zero Button on DRO Panel after clicking handle of Handwheel Z to set the reference
+      point
+
+      (If correct handweel is selected, the indicator on the DRO Panel
+      will be green)'
     - 'Now that we have set the reference point ,we can now move the tool off the
       workpiece by moving the table in the x direction.
 
 
-      Hint: Click X Button
-      on DRO Panel to perform face milling operation'
+      Hint: Click on handle
+      of Handwheel X to perform face milling operation'
     - 'When finished turn milling machine OFF.
 
 
       Hint: Click on OFF Button
-      to turn milling machine OFF'
+      on the Mill to turn it OFF'
     - Similarly as with side milling, this process can be repeated many times until
       the desired dimensions are achieved.
     - 'Well done. In the next tutorial, you take control of the mill to practice
@@ -252,34 +254,33 @@ MonoBehaviour:
       - en veillant \xE0 nouveau \xE0 ce que l'\xE9tau ne soit pas trop serr\xE9.\r\n\r\nIndice:
       Cliquez sur le boulon situ\xE9 sur l'\xE9tau pour serrer la pi\xE8ce"
     - "Continuez en abaissant la t\xEAte de la machine jusqu'\xE0 ce que la fraise
-      en bout touche la surface.\n\nIndice: Cliquez sur le bouton Z du panneau DRO
-      pour abaisser la t\xEAte de fraisage (Cliquert sur le bouton DRO pour ouvrir
-      le panneau DRO)"
+      en bout touche la surface.\n\nIndice: Cliquez sur la poign\xE9e de la roue
+      de contr\xF4le de l\u2019axe Z pour abaisser la t\xEAte de fraisage"
     - "Verrouillez maintenant la t\xEAte de la machine en position.\r\n\r\nIndice:
-      Cliquez sur le bouton de verrouillage Z sur le panneau DRO pour verrouiller
-      l'axe Z (situ\xE9 \xE0 gauche du bouton Z sur le panneau DRO)"
-    - "Abaisser l'avance de la plume de sorte que l'outil ne se trouve maintenant
-      que l\xE9g\xE8rement au-dessus de la pi\xE8ce et verrouiller la plume en position.\n\nIndice:
-      Cliquez sur le bouton Y sur le panneau DRO pour d\xE9placer la table vers l'arri\xE8re
-      afin de vous assurer que la fraise est juste au-dessus de la pi\xE8ce"
+      Cliquez sur la Serrure de l\u2019axe Z pour verrouiller l'axe Z"
+    - "Ensuite, ajustez la table de sorte que l'outil soit maintenant align\xE9 au-dessus
+      de la pi\xE8ce.\r\n\nIndice:  Cliquez sur la poign\xE9e de la roue de contr\xF4le
+      de l\u2019axe Y pour d\xE9placer la table vers l'arri\xE8re afin de vous assurer
+      que la fraise est juste au-dessus de la pi\xE8ce"
     - 'Vous pouvez maintenant allumer la machine.
 
 
-
       Indice: Cliquez sur le
-      bouton ON pour allumer la fraiseuse'
+      bouton ON sur la fraiseuse pour allumer la machine'
     - "Proc\xE9dez en utilisant l'avance de la plume pour abaisser l'outil jusqu'\xE0
       ce qu'il entre en contact avec la surface de la pi\xE8ce.\r\n\r\nIndice: Cliquez
-      sur le bouton Plume sur le panneau DRO pour d\xE9finir la profondeur de coupe"
+      sur la Roue de contr\xF4le de la broche pour d\xE9finir la profondeur de coupe"
     - "Vous allez maintenant d\xE9finir le point de r\xE9f\xE9rence sur l'axe Z.\r\n\r\nIndice:
-      Cliquez sur le bouton z\xE9ro du panneau DRO pour d\xE9finir le point de r\xE9f\xE9rence,
-      avec le bouton Z s\xE9lectionn\xE9"
+      Cliquez sur le bouton z\xE9ro du panneau DRO apr\xE8s avoir s\xE9lectionn\xE9
+      la poign\xE9e de la roue de contr\xF4le de l\u2019axe Z pour d\xE9finir le
+      point de r\xE9f\xE9rence\n(Si la roue de contr\xF4le appropri\xE9 est s\xE9lectionn\xE9,
+      l'indicateur sur le panneau DRO sera vert)"
     - "Maintenant que nous avons d\xE9fini le point de r\xE9f\xE9rence, nous pouvons
       maintenant d\xE9placer l'outil hors de la pi\xE8ce en d\xE9pla\xE7ant la table
-      dans la direction x.\r\n\r\nIndice: Cliquez sur le bouton X du panneau DRO
-      pour effectuer l'op\xE9ration de surfa\xE7age"
-    - "Lorsque vous avez termin\xE9, \xE9teignez la fraiseuse.\r\n\r\nIndice Cliquez
-      sur le bouton OFF pour \xE9teindre la fraiseuse"
+      dans la direction x.\r\n\r\nIndice: Cliquez sur la poign\xE9e de la roue de
+      contr\xF4le de l\u2019axe Y pour effectuer l'op\xE9ration de surfa\xE7age"
+    - "Lorsque vous avez termin\xE9, \xE9teignez la fraiseuse.\r\n\r\nIndice: Cliquez
+      sur le bouton OFF sur la fraiseuse pour \xE9teindre celle-ci"
     - "De m\xEAme que pour le fraisage lat\xE9ral, ce processus peut \xEAtre r\xE9p\xE9t\xE9
       plusieurs fois jusqu'\xE0 ce que les dimensions souhait\xE9es soient atteintes."
     - "Bon travail! Dans le prochain tutoriel, vous prenez contr\xF4le de la fraiseuse
@@ -289,7 +290,7 @@ MonoBehaviour:
     - {fileID: 21300000, guid: 0a8e015102743644d8eaae080f211cc7, type: 3}
     - {fileID: 21300000, guid: ce9d6efa35fdc934aa85cd8d81c55def, type: 3}
     - {fileID: 21300000, guid: f7fcddfcd3df33f4ca6026006eaf85c9, type: 3}
-    - {fileID: 21300000, guid: 649b050ad1e80524dae014118ba5e0f3, type: 3}
+    - {fileID: 21300000, guid: b23e0df90700fc14aaf0f4987a2d3595, type: 3}
     - {fileID: 21300000, guid: 52b2d0a10350f5944901a12df193eaad, type: 3}
     - {fileID: 21300000, guid: 54227f23060d9de4686676b6e6564268, type: 3}
     - {fileID: 21300000, guid: c7d39ecdeeec25e48ae6eeb44eb26183, type: 3}
@@ -325,59 +326,60 @@ MonoBehaviour:
 
 
       Hint:
-      Click on Y Button on DRO Panel to adjust table'
+      Click on handle of Handwheel Y to adjust table'
     - 'Again, we lower the head into position.
 
 
-      Hint: Click on Z Button on
-      DRO Panel to lower mill head'
+      Hint: Click on handle of Handwheel
+      Z to lower mill head'
     - 'Next step is to lock the head of the mill into position.
 
 
       Hint: Click
-      on Z Lock Button on DRO Panel to lock Z axis (Located to the left of Z Button
-      on the DRO panel)'
+      on Head Lock to lock Z axis'
     - 'We now need to adjust the table along the X axis.
 
 
-      Hint: Click on X
-      Button on DRO Panel to adjust table'
+      Hint: Click on handle
+      of Handwheel X to adjust table'
     - 'Use the quill feed to lower the spindle until it is as low as the workpiece
 
 
       Hint:
-      Click on Quill Button on DRO Panel to lower milling cutter '
+      Click on the Quill Feed Wheel to lower milling cutter '
     - 'With everything set, turn ON milling machine.
 
 
       Hint: Click on ON Button
-      to turn milling machine ON'
+      on the Mill to turn the machine ON'
     - "Move the table slowly until it touches the surface of the material. \n\nHint:
-      Click on X Button on DRO Panel  slowly bring workpiece closer to end mill"
+      Click on handle of Handwheel X slowly bring workpiece closer to end mill"
     - 'Lock the X axis so the machine cuts straight
 
 
-      Hint: Click on X Lock
-      Button on DRO Panel to lock X axis (Located to the left of X Button on the
-      DRO panel)'
+      Hint: Click on X Axis
+      Lock to restrict the movement in the X axis'
     - 'Now that you have touched the surface, set the reference point along the x-axis
       by hitting the zero button on the DRO
 
 
       Hint: Click on Zero Button on
-      DRO Panel to set reference point, with X Button selected'
+      DRO Panel after clicking handle of Handwheel X to set the reference point
+
+      (If
+      correct handweel is selected, the indicator on the DRO Panel will be green)'
     - 'To make the cut, move the table in the y-direction such that the tool is walking
       along the face of the workpiece
 
 
-      Hint: Click on Y Button on DRO Panel
-      to perform side-milling operation'
+      Hint: Click on handle of Handwheel
+      Y to perform side-milling operation'
     - 'Note that because we only moved the y direction, we have created a uniform
       face that is perpendicular to the jaws of the vise. Turn OFF milling machine
       when finished.
 
 
-      Hint: Click on OFF Button to turn milling machine OFF'
+      Hint: Click on OFF Button on the Mill to turn it OFF'
     - This process may be repeated until the desired amount of material is removed
       from the workpiece.
     - 'Excellent work! Next we learn about the face milling operation. Click on the
@@ -403,42 +405,41 @@ MonoBehaviour:
       lors de l'op\xE9ration.\n\r\nIndice: Cliquez sur le boulon situ\xE9 sur l'\xE9tau
       pour serrer la pi\xE8ce"
     - "On commence par ajuster la table pour se pr\xE9parer \xE0 effectuer l'op\xE9ration\r\n\r\nIndice:
-      Cliquez sur le bouton Y sur le panneau DRO pour ajuster la table"
+      Cliquez sur la poign\xE9e de la roue de contr\xF4le de l\u2019axe Y pour ajuster
+      la table"
     - "Encore une fois, nous abaissons la t\xEAte en position.\r\n\r\nIndice: Cliquez
-      sur le bouton Z du panneau DRO pour abaisser la t\xEAte de fraisage"
+      sur la poign\xE9e de la roue de contr\xF4le de l\u2019axe Z pour abaisser la
+      t\xEAte de fraisage"
     - "L'\xE9tape suivante consiste \xE0 verrouiller la t\xEAte de la fraiseuse en
-      position.\r\n\r\nIndice: Cliquez sur le bouton de verrouillage Z sur le panneau
-      DRO pour verrouiller l'axe Z (situ\xE9 \xE0 gauche du bouton Z sur le panneau
-      DRO)"
-    - 'Nous devons maintenant ajuster la table le long de l''axe X.
-
-
-
-      Indice:
-      Cliquez sur le bouton X du panneau DRO pour ajuster la table'
+      position.\r\n\r\nIndice: Cliquez sur la Serrure de l\u2019axe Z pour verrouiller
+      l'axe Z"
+    - "Nous devons maintenant ajuster la table le long de l'axe X.\n\nIndice: Cliquez
+      sur la poign\xE9e de la roue de contr\xF4le de l\u2019axe X pour ajuster la
+      table"
     - "Maintenant abaisser la broche jusqu'\xE0 ce qu'elle soit aussi basse que la
-      pi\xE8ce \r\n\r\nIndice: Cliquez sur le bouton Plume sur le panneau DRO pour
+      pi\xE8ce \r\n\r\nIndice: Cliquez sur la Roue de contr\xF4le de la broche pour
       abaisser la fraise"
     - "Avec tout r\xE9gl\xE9, allumez la fraiseuse.\r\n\r\nIndice: Cliquez sur le
-      bouton ON pour allumer la fraiseuse\n"
+      bouton ON sur la fraiseuse pour allumer la machine"
     - "D\xE9placez lentement la table jusqu'\xE0 ce qu'elle touche la surface du
-      mat\xE9riau.\r\n\r\nIndice: Cliquez sur le bouton X du panneau DRO pour rapprocher
-      lentement la pi\xE8ce de la fraise en bout"
+      mat\xE9riau.\r\n\r\nIndice: Cliquez sur la poign\xE9e de la roue de contr\xF4le
+      de l\u2019axe X pour rapprocher lentement la pi\xE8ce de la fraise en bout"
     - "Verrouillez l'axe X pour que la machine coupe droit\r\n\r\nIndice: Cliquez
-      sur le bouton de verrouillage X sur le panneau DRO pour verrouiller l'axe X
-      (situ\xE9 \xE0 gauche du bouton X sur le panneau DRO)"
+      sur la Serrure de l\u2019axe X pour restreindre le movement dans l'axe X"
     - "Maintenant vous avez touch\xE9 la surface, d\xE9finissez le point de r\xE9f\xE9rence
       le long de l'axe des x en appuyant sur le bouton z\xE9ro du DRO\r\n\r\nIndice:
-      Cliquez sur le bouton z\xE9ro du panneau DRO pour d\xE9finir le point de r\xE9f\xE9rence,
-      avec le bouton X s\xE9lectionn\xE9"
+      Cliquez sur le bouton z\xE9ro du panneau DRO apr\xE8s avoir s\xE9lectionn\xE9
+      la poign\xE9e de la roue de contr\xF4le de l\u2019axe X pour d\xE9finir le
+      point de r\xE9f\xE9rence\n(Si la roue de contr\xF4le appropri\xE9 est s\xE9lectionn\xE9,
+      l'indicateur sur le panneau DRO sera vert)"
     - "Pour effectuer la coupe, d\xE9placez la table dans la direction y de sorte
       que l'outil marche le long de la face de la pi\xE8ce\r\n\r\nIndice: Cliquez
-      sur le bouton Y sur le panneau DRO pour effectuer l'op\xE9ration de fraisage
-      lat\xE9ral"
+      sur la poign\xE9e de la roue de contr\xF4le de l\u2019axe Z pour effectuer
+      l'op\xE9ration de fraisage lat\xE9ral"
     - "Notez que parce que nous n'avons d\xE9plac\xE9 que la direction y, nous avons
       cr\xE9\xE9 une face uniforme qui est perpendiculaire aux m\xE2choires de l'\xE9tau.
       \xC9teignez la fraiseuse lorsque vous avez termin\xE9.\r\n\r\nIndice: Cliquez
-      sur le bouton OFF pour \xE9teindre la fraiseuse"
+      sur le bouton OFF sur la fraiseuse pour \xE9teindre celle-ci"
     - "Ce processus peut \xEAtre r\xE9p\xE9t\xE9 jusqu'\xE0 ce que la quantit\xE9
       souhait\xE9e de mat\xE9riau soit retir\xE9e de la pi\xE8ce \xE0 usiner."
     - "Excellent travail! Ensuite, nous apprenons l'op\xE9ration de surfa\xE7age.
@@ -451,12 +452,12 @@ MonoBehaviour:
     - {fileID: 21300000, guid: ce9d6efa35fdc934aa85cd8d81c55def, type: 3}
     - {fileID: 21300000, guid: 01d330608e7cadb468c8287b112dd7ae, type: 3}
     - {fileID: 21300000, guid: f7fcddfcd3df33f4ca6026006eaf85c9, type: 3}
-    - {fileID: 21300000, guid: 649b050ad1e80524dae014118ba5e0f3, type: 3}
+    - {fileID: 21300000, guid: b23e0df90700fc14aaf0f4987a2d3595, type: 3}
     - {fileID: 21300000, guid: 52b2d0a10350f5944901a12df193eaad, type: 3}
     - {fileID: 21300000, guid: c7d39ecdeeec25e48ae6eeb44eb26183, type: 3}
     - {fileID: 21300000, guid: 54227f23060d9de4686676b6e6564268, type: 3}
     - {fileID: 21300000, guid: 68f4794d0b0cd5143b7b45d6b2bf3519, type: 3}
-    - {fileID: 21300000, guid: 046ffaddc0e1ed84bbdc2c6c49427c32, type: 3}
+    - {fileID: 21300000, guid: b23e0df90700fc14aaf0f4987a2d3595, type: 3}
     - {fileID: 21300000, guid: 8f27edd6fc012684fb0e4ec274719306, type: 3}
     - {fileID: 21300000, guid: acfe2f871ffa35643a330a44ae78768e, type: 3}
     - {fileID: 21300000, guid: 41b610a3f00945941967c1ce85d74bc4, type: 3}

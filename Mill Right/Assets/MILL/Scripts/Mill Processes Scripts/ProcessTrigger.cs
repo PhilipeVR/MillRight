@@ -7,7 +7,7 @@ public class ProcessTrigger : MonoBehaviour
 {
     [SerializeField] private DROToggle toggle;
     [DrawIf("PowerOrClip", false)] [SerializeField] private ClipTriggers clipTriggers;
-    [DrawIf("PowerOrClip", true)] [SerializeField] private PowerTriggers power;
+    [DrawIf("PowerOrClip", true)] [SerializeField] private AnimPowerTrigger power;
     [DrawIf("ZeroProcessHandlerHere", true)] [SerializeField] private ZeroProcessHandler zeroProcessHandler;
     [SerializeField] private Color hoverColor, clickedColor;
     private Color normalColor;
@@ -61,7 +61,7 @@ public class ProcessTrigger : MonoBehaviour
     {
         if (PowerOrClip)
         {
-            return power.CheckPowerIndex();
+            return power.RightSequence();
         }
         else
         {

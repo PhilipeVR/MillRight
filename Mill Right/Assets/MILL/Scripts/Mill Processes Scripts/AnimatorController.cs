@@ -10,7 +10,7 @@ public class AnimatorController : MonoBehaviour
     [SerializeField] private string OffAnimationName;
     [SerializeField] private GameObject bit, holder, dummyBit, vise;
     [SerializeField] private AnimClipTrigger placePieceTrigger;
-    [SerializeField] private PowerTriggers powerTriggers;
+    [SerializeField] private AnimPowerTrigger OnTrigger, OffTrigger;
     [SerializeField] private List<ClipTriggers> buttonTriggers;
     [SerializeField] private string drillTag;
     [SerializeField] private string stopTag;
@@ -67,7 +67,8 @@ public class AnimatorController : MonoBehaviour
                 clipTriggers.ResetTriggers(animIndex);
             }
             placePieceTrigger.Reset();
-            powerTriggers.ResetTriggers(animIndex) ;
+            OnTrigger.ResetTriggers(animIndex) ;
+            OffTrigger.ResetTriggers(animIndex) ;
             setRestart();
         }
 
