@@ -85,7 +85,7 @@ MonoBehaviour:
       the workpiece
 
 
-      Hint: Click on handle of Handwheel Z to lower mill head'
+      Hint: Click on Handwheel Z to lower mill head'
     - "With the workpiece and tool in position, we are almost ready to begin drilling.
       In practice, a simple formula can be used to estimate the rotation speed for
       drilling operations  knowing the material of the workpiece and the diameter
@@ -140,8 +140,8 @@ MonoBehaviour:
     - "Localisez d'abord l'endroit sur la pi\xE8ce que vous devez percer. Souvent,
       un coup de poing central est utilis\xE9 pour marquer cet emplacement."
     - "Ensuite, abaissez la t\xEAte du broyeur de sorte qu'elle ne soit qu'\xE0 quelques
-      pouces au-dessus de la pi\xE8ce.\n\nIndice: Cliquez sur la poign\xE9e de la
-      roue de contr\xF4le de l\u2019axe Z pour abaisser la t\xEAte de fraisage"
+      pouces au-dessus de la pi\xE8ce.\n\nIndice: Cliquez sur la roue de contr\xF4le
+      de l\u2019axe Z pour abaisser la t\xEAte de fraisage"
     - "Avec la pi\xE8ce et l'outil en place, nous sommes presque pr\xEAts \xE0 commencer
       le per\xE7age. En pratique, une formule simple peut \xEAtre utilis\xE9e pour
       estimer la vitesse de rotation des op\xE9rations de per\xE7age connaissant
@@ -197,7 +197,7 @@ MonoBehaviour:
       workpiece.
 
 
-      Hint: Click on handle of Handwheel Z to lower mill head'
+      Hint: Click on Handwheel Z to lower mill head'
     - 'Now lock the head of the machine into position.
 
 
@@ -207,8 +207,8 @@ MonoBehaviour:
 
 
       Hint:
-      Click on handle of Handwheel Y to move table backwards to make sure the mill
-      cutter is right above workpiece'
+      Click on Handwheel Y to move table backwards to make sure the mill cutter is
+      right above workpiece'
     - 'Now you may turn on the machine.
 
 
@@ -224,17 +224,16 @@ MonoBehaviour:
 
 
       Hint: Click on
-      Zero Button on DRO Panel after clicking handle of Handwheel Z to set the reference
-      point
+      Zero Button on DRO Panel after clicking Handwheel Z to set the reference point
 
-      (If correct handweel is selected, the indicator on the DRO Panel
-      will be green)'
+      (If
+      correct handweel is selected, the indicator on the DRO Panel will be green)'
     - 'Now that we have set the reference point ,we can now move the tool off the
       workpiece by moving the table in the x direction.
 
 
-      Hint: Click on handle
-      of Handwheel X to perform face milling operation'
+      Hint: Click on Handwheel
+      X to perform face milling operation'
     - 'When finished turn milling machine OFF.
 
 
@@ -254,14 +253,14 @@ MonoBehaviour:
       - en veillant \xE0 nouveau \xE0 ce que l'\xE9tau ne soit pas trop serr\xE9.\r\n\r\nIndice:
       Cliquez sur le boulon situ\xE9 sur l'\xE9tau pour serrer la pi\xE8ce"
     - "Continuez en abaissant la t\xEAte de la machine jusqu'\xE0 ce que la fraise
-      en bout touche la surface.\n\nIndice: Cliquez sur la poign\xE9e de la roue
-      de contr\xF4le de l\u2019axe Z pour abaisser la t\xEAte de fraisage"
+      en bout touche la surface.\n\nIndice: Cliquez sur la roue de contr\xF4le de
+      l\u2019axe Z pour abaisser la t\xEAte de fraisage"
     - "Verrouillez maintenant la t\xEAte de la machine en position.\r\n\r\nIndice:
       Cliquez sur la Serrure de l\u2019axe Z pour verrouiller l'axe Z"
     - "Ensuite, ajustez la table de sorte que l'outil soit maintenant align\xE9 au-dessus
-      de la pi\xE8ce.\r\n\nIndice:  Cliquez sur la poign\xE9e de la roue de contr\xF4le
-      de l\u2019axe Y pour d\xE9placer la table vers l'arri\xE8re afin de vous assurer
-      que la fraise est juste au-dessus de la pi\xE8ce"
+      de la pi\xE8ce.\r\n\nIndice:  Cliquez sur la roue de contr\xF4le de l\u2019axe
+      Y pour d\xE9placer la table vers l'arri\xE8re afin de vous assurer que la fraise
+      est juste au-dessus de la pi\xE8ce"
     - 'Vous pouvez maintenant allumer la machine.
 
 
@@ -272,13 +271,13 @@ MonoBehaviour:
       sur la Roue de contr\xF4le de la broche pour d\xE9finir la profondeur de coupe"
     - "Vous allez maintenant d\xE9finir le point de r\xE9f\xE9rence sur l'axe Z.\r\n\r\nIndice:
       Cliquez sur le bouton z\xE9ro du panneau DRO apr\xE8s avoir s\xE9lectionn\xE9
-      la poign\xE9e de la roue de contr\xF4le de l\u2019axe Z pour d\xE9finir le
-      point de r\xE9f\xE9rence\n(Si la roue de contr\xF4le appropri\xE9 est s\xE9lectionn\xE9,
-      l'indicateur sur le panneau DRO sera vert)"
+      la roue de contr\xF4le de l\u2019axe Z pour d\xE9finir le point de r\xE9f\xE9rence\n(Si
+      la roue de contr\xF4le appropri\xE9 est s\xE9lectionn\xE9, l'indicateur sur
+      le panneau DRO sera vert)"
     - "Maintenant que nous avons d\xE9fini le point de r\xE9f\xE9rence, nous pouvons
       maintenant d\xE9placer l'outil hors de la pi\xE8ce en d\xE9pla\xE7ant la table
-      dans la direction x.\r\n\r\nIndice: Cliquez sur la poign\xE9e de la roue de
-      contr\xF4le de l\u2019axe Y pour effectuer l'op\xE9ration de surfa\xE7age"
+      dans la direction x.\r\n\r\nIndice: Cliquez sur la roue de contr\xF4le de l\u2019axe
+      X pour effectuer l'op\xE9ration de surfa\xE7age"
     - "Lorsque vous avez termin\xE9, \xE9teignez la fraiseuse.\r\n\r\nIndice: Cliquez
       sur le bouton OFF sur la fraiseuse pour \xE9teindre celle-ci"
     - "De m\xEAme que pour le fraisage lat\xE9ral, ce processus peut \xEAtre r\xE9p\xE9t\xE9
@@ -326,12 +325,12 @@ MonoBehaviour:
 
 
       Hint:
-      Click on handle of Handwheel Y to adjust table'
+      Click on Handwheel Y to adjust table'
     - 'Again, we lower the head into position.
 
 
-      Hint: Click on handle of Handwheel
-      Z to lower mill head'
+      Hint: Click on Handwheel Z
+      to lower mill head'
     - 'Next step is to lock the head of the mill into position.
 
 
@@ -340,8 +339,8 @@ MonoBehaviour:
     - 'We now need to adjust the table along the X axis.
 
 
-      Hint: Click on handle
-      of Handwheel X to adjust table'
+      Hint: Click on Handwheel
+      X to adjust table'
     - 'Use the quill feed to lower the spindle until it is as low as the workpiece
 
 
@@ -353,7 +352,7 @@ MonoBehaviour:
       Hint: Click on ON Button
       on the Mill to turn the machine ON'
     - "Move the table slowly until it touches the surface of the material. \n\nHint:
-      Click on handle of Handwheel X slowly bring workpiece closer to end mill"
+      Click on Handwheel X slowly bring workpiece closer to end mill"
     - 'Lock the X axis so the machine cuts straight
 
 
@@ -372,8 +371,8 @@ MonoBehaviour:
       along the face of the workpiece
 
 
-      Hint: Click on handle of Handwheel
-      Y to perform side-milling operation'
+      Hint: Click on Handwheel Y to perform
+      side-milling operation'
     - 'Note that because we only moved the y direction, we have created a uniform
       face that is perpendicular to the jaws of the vise. Turn OFF milling machine
       when finished.
@@ -405,11 +404,9 @@ MonoBehaviour:
       lors de l'op\xE9ration.\n\r\nIndice: Cliquez sur le boulon situ\xE9 sur l'\xE9tau
       pour serrer la pi\xE8ce"
     - "On commence par ajuster la table pour se pr\xE9parer \xE0 effectuer l'op\xE9ration\r\n\r\nIndice:
-      Cliquez sur la poign\xE9e de la roue de contr\xF4le de l\u2019axe Y pour ajuster
-      la table"
+      Cliquez sur la roue de contr\xF4le de l\u2019axe Y pour ajuster la table"
     - "Encore une fois, nous abaissons la t\xEAte en position.\r\n\r\nIndice: Cliquez
-      sur la poign\xE9e de la roue de contr\xF4le de l\u2019axe Z pour abaisser la
-      t\xEAte de fraisage"
+      sur la roue de contr\xF4le de l\u2019axe Z pour abaisser la t\xEAte de fraisage"
     - "L'\xE9tape suivante consiste \xE0 verrouiller la t\xEAte de la fraiseuse en
       position.\r\n\r\nIndice: Cliquez sur la Serrure de l\u2019axe Z pour verrouiller
       l'axe Z"
@@ -422,20 +419,20 @@ MonoBehaviour:
     - "Avec tout r\xE9gl\xE9, allumez la fraiseuse.\r\n\r\nIndice: Cliquez sur le
       bouton ON sur la fraiseuse pour allumer la machine"
     - "D\xE9placez lentement la table jusqu'\xE0 ce qu'elle touche la surface du
-      mat\xE9riau.\r\n\r\nIndice: Cliquez sur la poign\xE9e de la roue de contr\xF4le
-      de l\u2019axe X pour rapprocher lentement la pi\xE8ce de la fraise en bout"
+      mat\xE9riau.\r\n\r\nIndice: Cliquez sur la roue de contr\xF4le de l\u2019axe
+      X pour rapprocher lentement la pi\xE8ce de la fraise en bout"
     - "Verrouillez l'axe X pour que la machine coupe droit\r\n\r\nIndice: Cliquez
       sur la Serrure de l\u2019axe X pour restreindre le movement dans l'axe X"
     - "Maintenant vous avez touch\xE9 la surface, d\xE9finissez le point de r\xE9f\xE9rence
       le long de l'axe des x en appuyant sur le bouton z\xE9ro du DRO\r\n\r\nIndice:
       Cliquez sur le bouton z\xE9ro du panneau DRO apr\xE8s avoir s\xE9lectionn\xE9
-      la poign\xE9e de la roue de contr\xF4le de l\u2019axe X pour d\xE9finir le
-      point de r\xE9f\xE9rence\n(Si la roue de contr\xF4le appropri\xE9 est s\xE9lectionn\xE9,
-      l'indicateur sur le panneau DRO sera vert)"
+      la roue de contr\xF4le de l\u2019axe X pour d\xE9finir le point de r\xE9f\xE9rence\n(Si
+      la roue de contr\xF4le appropri\xE9 est s\xE9lectionn\xE9, l'indicateur sur
+      le panneau DRO sera vert)"
     - "Pour effectuer la coupe, d\xE9placez la table dans la direction y de sorte
       que l'outil marche le long de la face de la pi\xE8ce\r\n\r\nIndice: Cliquez
-      sur la poign\xE9e de la roue de contr\xF4le de l\u2019axe Z pour effectuer
-      l'op\xE9ration de fraisage lat\xE9ral"
+      sur la roue de contr\xF4le de l\u2019axe Z pour effectuer l'op\xE9ration de
+      fraisage lat\xE9ral"
     - "Notez que parce que nous n'avons d\xE9plac\xE9 que la direction y, nous avons
       cr\xE9\xE9 une face uniforme qui est perpendiculaire aux m\xE2choires de l'\xE9tau.
       \xC9teignez la fraiseuse lorsque vous avez termin\xE9.\r\n\r\nIndice: Cliquez

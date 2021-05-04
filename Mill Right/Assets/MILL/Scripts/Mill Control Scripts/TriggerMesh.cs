@@ -5,7 +5,7 @@ using UnityEngine.Events;
 
 public class TriggerMesh : MonoBehaviour
 {
-    [SerializeField] private Color hoverColor, clickedColor;
+    [SerializeField] private Color hoverColor;
     private Color normalColor;
     public UnityEvent OnClick;
     private bool clickedState = false;
@@ -25,9 +25,6 @@ public class TriggerMesh : MonoBehaviour
         {
             GetComponent<Renderer>().material.color = NormalColor;
         }
-        else {
-            GetComponent<Renderer>().material.color = ClickedColor;
-        }
         OnClick.Invoke();
         clickedState = !clickedState;
     }
@@ -39,14 +36,7 @@ public class TriggerMesh : MonoBehaviour
 
     private void OnMouseExit()
     {
-        if (clickedState)
-        {
-            GetComponent<Renderer>().material.color = ClickedColor;
-        }
-        else
-        {
-            GetComponent<Renderer>().material.color = NormalColor;
-        }
+        GetComponent<Renderer>().material.color = NormalColor;
     }
 
 
@@ -54,11 +44,6 @@ public class TriggerMesh : MonoBehaviour
     {
         get => hoverColor;
         set => hoverColor = value;
-    }
-    private Color ClickedColor
-    {
-        get => clickedColor;
-        set => clickedColor = value;
     }
     private Color NormalColor
     {

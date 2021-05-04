@@ -24,19 +24,16 @@ public class InteractableManager : MonoBehaviour
 
         if (dialogueName.Equals(drilling))
         {
-            ON.interactable = true;
             DRO_BTN.interactable = true;
         }
         else if (dialogueName.Equals(sidemilling))
         {
-            ON.interactable = true;
             DRO_BTN.interactable = true;
             //DRO_Panel.GetComponent<DRO_Manager>().resetDRO();
             //setupSideMilling;
         }
         else if (dialogueName.Equals(facemilling))
         {
-            ON.interactable = true;
             DRO_BTN.interactable = true;
         }
     }

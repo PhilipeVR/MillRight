@@ -21,12 +21,13 @@ public class ProcessTrigger : MonoBehaviour
     }
     private void OnMouseDown()
     {
-        if (!toggle.isActive)
-        {
-            toggle.toggle();
-        }
+
         if (CheckSequence())
         {
+            if (!toggle.isActive)
+            {
+                toggle.toggle();
+            }
             GetComponent<Renderer>().material.color = ClickedColor;
             if (PowerOrClip)
             {
