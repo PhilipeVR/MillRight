@@ -7,6 +7,7 @@ using UnityEngine.UI;
 
 public class SetupOnHover : MonoBehaviour
 {
+    [SerializeField] private ComponentHint componentHint;
     [SerializeField] private Color onHoverColor;
     [SerializeField] private int detailIndex;
     [SerializeField] GameObject ObjectManager;
@@ -14,9 +15,18 @@ public class SetupOnHover : MonoBehaviour
     [SerializeField] private float FlashDelay = 0.25f;
     [SerializeField] private int NumOfFlash = 5;
     [SerializeField] private float timer = 0.1f;
+    public bool savedPartClicked = false;
     public Boolean clicked = false;
     public Boolean flashing = false;
     public UnityEvent clickEvent;
+
+    void Start()
+    {
+        if (savedPartClicked)
+        {
+            hasBeenClicked();
+        }
+    }
 
     public void hasBeenClicked()
     {
@@ -33,6 +43,7 @@ public class SetupOnHover : MonoBehaviour
                     tmpHover.SetClickedColor();
                 }
             }
+            componentHint.RemoveClickedHint(this);
         }
     }
 
@@ -66,5 +77,17 @@ public class SetupOnHover : MonoBehaviour
             }
         }
         flashing = false;
+    }
+
+    public int DetailIndex
+    {
+        get => detailIndex;
+    }
+
+
+    public bool SavedClicked
+    {
+        get => savedPartClicked;
+        set => savedPartClicked = value;
     }
 }

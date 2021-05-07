@@ -10,12 +10,36 @@ public class InteractableManager : MonoBehaviour
     [SerializeField] public DROToggle DRO_Panel;
     [SerializeField] public string intro, drilling, sidemilling, facemilling;
     private Boolean SequenceDone;
-
+    private anim currentAnim;
     void Awake()
     {
-        NoInteraction();
+        //NoInteraction();
     }
 
+    public anim CurrentAnim
+    {
+        get => currentAnim;
+    }
+
+    public void SetupAnims(anim savedAnim)
+    {
+        if (savedAnim == anim.Drilling)
+        {
+            Transition(intro);
+        }
+        else if (savedAnim == anim.SideMilling)
+        {
+            Transition(drilling);
+        }
+        else if (savedAnim == anim.Facing)
+        {
+            Transition(sidemilling);
+        }
+        else
+        {
+            Transition(facemilling);
+        }
+    }
 
     // Update is called once per frame
     public void SetInteractionLevel(string dialogueName)
@@ -54,18 +78,22 @@ public class InteractableManager : MonoBehaviour
         else if (dialogueName.Equals(intro))
         {
             Drill.interactable = true;
+            currentAnim = anim.Drilling;
         }
 
         else if (dialogueName.Equals(drilling))
         {
             SideMill.interactable = true;
+            currentAnim = anim.SideMilling;
         }
         else if (dialogueName.Equals(sidemilling))
         {
             FaceMill.interactable = true;
+            currentAnim = anim.Facing;
         }
         else if (dialogueName.Equals(facemilling))
         {
+            currentAnim = anim.Complete;
             Drill.interactable = true;
             FaceMill.interactable = true;
             SideMill.interactable = true;
@@ -104,3 +132,6 @@ public class InteractableManager : MonoBehaviour
         DRO_Panel.activate(false);
     }
 }
+
+public enum anim { Drilling, SideMilling, Facing, Complete, NA }
+

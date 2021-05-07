@@ -11,8 +11,8 @@ public class DialogueTrigger : MonoBehaviour
     public DialogueManager dialogueManager;
     private List<Dialogue> gameDialogues;
     private int currentIndex;
-    private Boolean managerPresent;
-    public Boolean sentenceTrigger;
+    private bool managerPresent;
+    public bool SentenceTrigger;
     private void Awake()
     {
         gameDialogues = dialogues.dialogues;
@@ -20,7 +20,7 @@ public class DialogueTrigger : MonoBehaviour
 
     void Start(){
         managerPresent = manager != null;
-        if (!sentenceTrigger)
+        if (!SentenceTrigger)
         {
             TriggerDialogue(0);
         }
