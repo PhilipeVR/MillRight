@@ -51,7 +51,7 @@ MonoBehaviour:
       drill chuck.
 
 
-      Hint: Click on handle of Handwheel X'
+      Hint: Click on X-Axis Handwheel'
     - 'The next step is to insert the drill chuck (tool holder) in the spindle and
       as the drill chuck is to being pushed up, take notice of drawbar being raised
       up.
@@ -103,8 +103,8 @@ MonoBehaviour:
       le boulon dans la broche (qui est g\xE9n\xE9ralement d\xE9j\xE0 dans la broche).\n\nIndice:
       Cliquer sur le boulon"
     - "Ensuite, nous d\xE9pla\xE7ons la table vers la gauche pour laisser de la place
-      pour ins\xE9rer le mandrin de per\xE7age.\n\nIndice: Cliquer sur la poign\xE9e
-      de mouvement dans l'axe X"
+      pour ins\xE9rer le mandrin de per\xE7age.\n\nIndice: Cliquez sur la roue de
+      contr\xF4le de l\u2019axe X"
     - "L'\xE9tape suivante consiste \xE0 ins\xE9rer le porte-outil (mandrin) dans
       la broche.  Lorsque mandrin est ins\xE9rer, notez que le boulon est relev\xE9.
       \n\nIndice: Cliquer sur le porte-outil (mandrin)"

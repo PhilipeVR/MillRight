@@ -10,11 +10,12 @@ public class InformationGatherer : MonoBehaviour
     [DrawIf("Discover", true)] [SerializeField] private ComponentHint componentHint;
     [DrawIf("MainMenu", true)] [SerializeField] private LoadSceneScript loadSceneScript;
     [SerializeField] private LanguageSceneSwitcher languageSceneSwitcher;
-    [SerializeField] private VideoManager2 videoManager;
+    [DrawIf("AnimScene", true)] [DrawIf("Discover", true)] [SerializeField] private VideoManager2 videoManager;
     [DrawIf("Discover", true)][SerializeField] private DialogueTrigger trigger;
-    [DrawIf("AnimScene", true)] [SerializeField] private DialogueTrigger triggerDialogue;
+    [DrawIf("SimScene", true)] [DrawIf("AnimScene", true)] [SerializeField] private DialogueTrigger triggerDialogue;
     [DrawIf("AnimScene", true)] [SerializeField] private InteractableManager interactionManager;
-    [SerializeField] private bool AnimScene, Discover, MainMenu;
+    [DrawIf("SimScene", true)] [SerializeField] private ProcessChecker processChecker;
+    [SerializeField] private bool AnimScene, Discover, MainMenu, SimScene;
 
     private string levelToLoad;
     
@@ -33,6 +34,10 @@ public class InformationGatherer : MonoBehaviour
         else if (AnimScene)
         {
             SaveSystem.SaveData(languageScene.Name, languageScene.Number, languageScene.getLanguage(), scene, sceneDisplayToggle.getTutorial(), interactionManager.CurrentAnim);
+        }
+        else if (SimScene)
+        {
+            SaveSystem.SaveData(languageScene.Name, languageScene.Number, languageScene.getLanguage(), scene, sceneDisplayToggle.getTutorial(), processChecker.CompletedOperations);
         }
     }
 
@@ -79,11 +84,6 @@ public class InformationGatherer : MonoBehaviour
                 {
                     foreach (SetupOnHover part in componentHint.parts)
                     {
-                        if (part.gameObject.name.Equals("Hand wheel y"))
-                        {
-                            Debug.Log("Saved Data: " + data.DetailIndexes.Count);
-                            Debug.Log("Part Data: " + part.DetailIndex);
-                        }
                         if (data.DetailIndexes.Contains(part.DetailIndex))
                         {
                             Debug.Log("Contains");
@@ -94,6 +94,16 @@ public class InformationGatherer : MonoBehaviour
                     trigger.SentenceTrigger = true;
                 }
             }
+            else if (scene.Equals("Mill Simulation Scene"))
+            {
+                if (sceneDisplayToggle.getTutorial())
+                {
+                    Debug.Log(data.Completed[0]);
+                    processChecker.ReloadFinishedOperations(data.Completed);
+                    triggerDialogue.SentenceTrigger = true;
+                }
+            }
+
 
         }
     }

@@ -12,13 +12,30 @@ public class ProcessChecker : MonoBehaviour
     [SerializeField] private Toggle_On_Off powerButton;
     private OperationStatus current;
     private string currentName = "Current";
-
+    private bool[] completedOperations = {false, false, false};
     private void Awake()
     {
-        drilling.Done = false;
-        sideMilling.Done = false;
-        faceMilling.Done = false;
         current.OperationName = currentName;
+    }
+
+    public void ReloadFinishedOperations(bool[] completed)
+    {
+        if (completed != null)
+        {
+            completedOperations = completed;
+        }
+        drilling.Done = completedOperations[0];
+        drilling.Checkmark.SetActive(drilling.Done);
+        sideMilling.Done = completedOperations[1];
+        sideMilling.Checkmark.SetActive(sideMilling.Done);
+        faceMilling.Done = completedOperations[2];
+        faceMilling.Checkmark.SetActive(faceMilling.Done);
+
+    }
+
+    public bool[] CompletedOperations
+    {
+        get => completedOperations;
     }
 
     public void ChangeListener(string x_name)
@@ -67,6 +84,7 @@ public class ProcessChecker : MonoBehaviour
         if (current.Done && current.OperationName == drilling.OperationName)
         {
             drilling.Done = true;
+            completedOperations[0] = true;
             if (drilling.Done && faceMilling.Done && sideMilling.Done)
             {
                 WarningEvents.current.AllCompleted();
@@ -79,6 +97,7 @@ public class ProcessChecker : MonoBehaviour
         else if (current.Done && current.OperationName == sideMilling.OperationName)
         {
             sideMilling.Done = true;
+            completedOperations[1] = true;
             if (drilling.Done && faceMilling.Done && sideMilling.Done)
             {
                 WarningEvents.current.AllCompleted();
@@ -91,6 +110,7 @@ public class ProcessChecker : MonoBehaviour
         else if (current.Done && current.OperationName == faceMilling.OperationName)
         {
             faceMilling.Done = true;
+            completedOperations[2] = true;
             if (drilling.Done && faceMilling.Done && sideMilling.Done)
             {
                 WarningEvents.current.AllCompleted();

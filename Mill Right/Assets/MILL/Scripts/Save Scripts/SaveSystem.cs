@@ -28,6 +28,18 @@ public static class SaveSystem
         stream.Close();
     }
 
+    public static void SaveData(string student, string studentNumber, bool lang, string scene, bool isTutorial, bool[] completed)
+    {
+        BinaryFormatter formatter = new BinaryFormatter();
+        string path = Application.persistentDataPath + "/MillRight.CEED";
+        FileStream stream = new FileStream(path, FileMode.Create);
+
+        DataHandler data = new DataHandler(lang, student, studentNumber, scene, isTutorial, completed);
+
+        formatter.Serialize(stream, data);
+        stream.Close();
+    }
+
 
 
     public static DataHandler LoadData()

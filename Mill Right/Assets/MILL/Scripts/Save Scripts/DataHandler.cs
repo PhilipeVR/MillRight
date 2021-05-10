@@ -11,6 +11,7 @@ public class DataHandler
     private bool isTutorial;
     private List<int> componentsCompleted;
     private anim currentAnim;
+    private bool[] completed;
 
     public DataHandler(bool lang, string student, string studentNumber, string scene, bool isTutorial, ComponentHint componentHint)
     {
@@ -39,6 +40,24 @@ public class DataHandler
         this.currentAnim = curr;
         this.componentsCompleted = null;
         this.currentAnim = curr;
+    }
+
+    public DataHandler(bool lang, string student, string studentNumber, string scene, bool isTutorial, bool[] completedOperations)
+    {
+        this.student = student;
+        this.studentNumber = studentNumber;
+        this.language = lang;
+        this.scene = scene;
+        this.componentsCompleted = new List<int>();
+        this.isTutorial = isTutorial;
+        this.completed = completedOperations;
+        this.currentAnim = anim.NA;
+
+    }
+
+    public bool[] Completed
+    {
+        get => completed;
     }
 
     public List<int> DetailIndexes
