@@ -31,6 +31,11 @@ public class ProcessChecker : MonoBehaviour
         faceMilling.Done = completedOperations[2];
         faceMilling.Checkmark.SetActive(faceMilling.Done);
 
+        if (drilling.Done && faceMilling.Done && sideMilling.Done)
+        {
+            WarningEvents.current.AllCompleted();
+        }
+
     }
 
     public bool[] CompletedOperations

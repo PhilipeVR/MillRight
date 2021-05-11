@@ -15,6 +15,7 @@ public class PlacePieceTrigger : MonoBehaviour
     [SerializeField] private FineAdjustmentControl fineAdjustmentControl;
     [SerializeField] private SwitchBit checkBitState;
     [SerializeField] private Button operate;
+    [SerializeField] private Button saveBTN;
     private Color basicColor;
     private Boolean Clicked;
 
@@ -35,14 +36,11 @@ public class PlacePieceTrigger : MonoBehaviour
 
     private void OnMouseDown()
     {
-
-
         if (!Clicked)
         {
 
             if ((WheelControl.animTime > 0 || (QuillControl.Height < QuillControl.MaxHeight)) && checkBitState.CheckState())
             {
-
                 WarningEvents.current.CutterNear();
             }
             else
@@ -51,11 +49,10 @@ public class PlacePieceTrigger : MonoBehaviour
                 activateOnClick.SetActive(true);
                 gameObject.SetActive(false);
                 operate.interactable = false;
+                saveBTN.interactable = false;
                 PlaySequence();
             }
-
         }
-
     }
 
     private void OnMouseExit()
