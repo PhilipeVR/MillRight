@@ -227,7 +227,7 @@ MonoBehaviour:
       Zero Button on DRO Panel after clicking Handwheel Z to set the reference point
 
       (If
-      correct handweel is selected, the indicator on the DRO Panel will be green)'
+      correct handweel is selected, the indicator on the DRO Panel will be red)'
     - 'Now that we have set the reference point ,we can now move the tool off the
       workpiece by moving the table in the x direction.
 
@@ -241,8 +241,7 @@ MonoBehaviour:
       on the Mill to turn it OFF'
     - Similarly as with side milling, this process can be repeated many times until
       the desired dimensions are achieved.
-    - 'Well done. In the next tutorial, you take control of the mill to practice
-      these techniques. '
+    - Well done. The last tutorial is a quiz on the concept taught in this lab.
     sentencesFR:
     - "Le fraisage de face est le processus d'enl\xE8vement de mat\xE9tiel de la
       sufarce perpendiculaire \xE0 l'axe de la fraise en bout."
@@ -273,7 +272,7 @@ MonoBehaviour:
       Cliquez sur le bouton z\xE9ro du panneau DRO apr\xE8s avoir s\xE9lectionn\xE9
       la roue de contr\xF4le de l\u2019axe Z pour d\xE9finir le point de r\xE9f\xE9rence\n(Si
       la roue de contr\xF4le appropri\xE9 est s\xE9lectionn\xE9, l'indicateur sur
-      le panneau DRO sera vert)"
+      le panneau DRO sera rouge)"
     - "Maintenant que nous avons d\xE9fini le point de r\xE9f\xE9rence, nous pouvons
       maintenant d\xE9placer l'outil hors de la pi\xE8ce en d\xE9pla\xE7ant la table
       dans la direction x.\r\n\r\nIndice: Cliquez sur la roue de contr\xF4le de l\u2019axe
@@ -282,8 +281,8 @@ MonoBehaviour:
       sur le bouton OFF sur la fraiseuse pour \xE9teindre celle-ci"
     - "De m\xEAme que pour le fraisage lat\xE9ral, ce processus peut \xEAtre r\xE9p\xE9t\xE9
       plusieurs fois jusqu'\xE0 ce que les dimensions souhait\xE9es soient atteintes."
-    - "Bon travail! Dans le prochain tutoriel, vous prenez contr\xF4le de la fraiseuse
-      pour pratiquer ces techniques. "
+    - "Bon travail! La derni\xE8re \xE9tape sagit d'un quiz sur les concepts que
+      nous avons \xE9tudiez tout au long de ce laboratoire."
     images:
     - {fileID: 21300000, guid: 3ef9f1deb9c5e0e488b6496ba46b5e18, type: 3}
     - {fileID: 21300000, guid: 0a8e015102743644d8eaae080f211cc7, type: 3}
@@ -297,7 +296,7 @@ MonoBehaviour:
     - {fileID: 21300000, guid: 44dd9f1e3343032468d16a05b736df04, type: 3}
     - {fileID: 21300000, guid: 41b610a3f00945941967c1ce85d74bc4, type: 3}
     - {fileID: 21300000, guid: f575135d2274a4e4a968e6e68e6585c5, type: 3}
-    - {fileID: 21300000, guid: 1be1f05657646e944a6b2dded6bf4e61, type: 3}
+    - {fileID: 21300000, guid: 74c27f6963e03b74787ea587d71814e9, type: 3}
   - name: Getting Started - Side Milling
     frenchName: "Mise en route - Fraisage lat\xE9rale"
     sentences:
@@ -366,7 +365,7 @@ MonoBehaviour:
       DRO Panel after clicking handle of Handwheel X to set the reference point
 
       (If
-      correct handweel is selected, the indicator on the DRO Panel will be green)'
+      correct handweel is selected, the indicator on the DRO Panel will be red)'
     - 'To make the cut, move the table in the y-direction such that the tool is walking
       along the face of the workpiece
 
@@ -423,12 +422,12 @@ MonoBehaviour:
       X pour rapprocher lentement la pi\xE8ce de la fraise en bout"
     - "Verrouillez l'axe X pour que la machine coupe droit\r\n\r\nIndice: Cliquez
       sur la Serrure de l\u2019axe X pour restreindre le movement dans l'axe X"
-    - "Maintenant vous avez touch\xE9 la surface, d\xE9finissez le point de r\xE9f\xE9rence
+    - "Maintenant que vous avez touch\xE9 la surface, d\xE9finissez le point de r\xE9f\xE9rence
       le long de l'axe des x en appuyant sur le bouton z\xE9ro du DRO\r\n\r\nIndice:
       Cliquez sur le bouton z\xE9ro du panneau DRO apr\xE8s avoir s\xE9lectionn\xE9
       la roue de contr\xF4le de l\u2019axe X pour d\xE9finir le point de r\xE9f\xE9rence\n(Si
       la roue de contr\xF4le appropri\xE9 est s\xE9lectionn\xE9, l'indicateur sur
-      le panneau DRO sera vert)"
+      le panneau DRO sera rouge)"
     - "Pour effectuer la coupe, d\xE9placez la table dans la direction y de sorte
       que l'outil marche le long de la face de la pi\xE8ce\r\n\r\nIndice: Cliquez
       sur la roue de contr\xF4le de l\u2019axe Z pour effectuer l'op\xE9ration de

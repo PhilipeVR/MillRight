@@ -64,7 +64,7 @@ public class ComponentManager : MonoBehaviour
     public void ChangeLanguage()
     {
 
-        if (counter == 0)
+        if (currentIndex < 0)
         {
             toggleInitialText();
         }
@@ -93,7 +93,7 @@ public class ComponentManager : MonoBehaviour
 
     private void toggleInitialText()
     {
-        if (counter == 0)
+        if (currentIndex < 0)
         {
             if (language)
             {

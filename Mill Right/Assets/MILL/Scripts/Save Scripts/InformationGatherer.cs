@@ -48,6 +48,7 @@ public class InformationGatherer : MonoBehaviour
         {
             if (scene.Equals("MainMenu"))
             {
+                bool tmpLang = languageScene.getLanguage();
                 languageScene.setName(data.StudentName);
                 languageScene.setNumber(data.StudentNumber);
                 languageScene.setLanguage(data.Language);
@@ -60,7 +61,8 @@ public class InformationGatherer : MonoBehaviour
                     Debug.Log("ADMIN MODE");
                     sceneDisplayToggle.AdminMode = true;
                 }
-                if (languageScene.getLanguage())
+                Debug.Log(languageScene.getLanguage());
+                if (languageScene.getLanguage() && (languageScene.getLanguage() != tmpLang))
                 {
                     languageSceneSwitcher.toggleOnStart();
                 }
@@ -98,7 +100,6 @@ public class InformationGatherer : MonoBehaviour
             {
                 if (sceneDisplayToggle.getTutorial())
                 {
-                    Debug.Log(data.Completed[0]);
                     processChecker.ReloadFinishedOperations(data.Completed);
                     triggerDialogue.SentenceTrigger = true;
                 }

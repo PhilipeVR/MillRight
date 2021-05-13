@@ -28,16 +28,9 @@ public class InformationBeginTrainingHandler : MonoBehaviour
     }
     public void OnClick(string millScene)
     {
-        if (!firstClick && !sceneDisplay.SubmitDone)
+        if (!sceneDisplay.SubmitDone)
         {
             namePanel.SetActive(true);
-            begin.interactable = false;
-            firstClick = true;
-        }
-        else
-        {
-            sceneDisplay.setTutorial(true);
-            loadSceneScript.loadlevel(millScene);
         }
     }
 }

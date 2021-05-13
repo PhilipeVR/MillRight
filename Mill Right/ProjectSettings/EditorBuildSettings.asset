@@ -23,7 +23,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/MILL/Scenes/Menu Scenes/AdditionalContentScene.unity
     guid: 46ab3e5d36619dd46bbd87be22666e8f
-  - enabled: 1
+  - enabled: 0
     path: Assets/MILL/Scenes/Mill Control Scenes/Mill Simulation Scene.unity
     guid: fc738de891c101748bc62fc549e41e0e
   - enabled: 1

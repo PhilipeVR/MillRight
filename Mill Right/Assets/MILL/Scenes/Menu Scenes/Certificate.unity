@@ -386,8 +386,8 @@ MonoBehaviour:
   toggleOptionText: "F\xE9licitations, vous avez termin\xE9 l'atelier de fraisage
     de Mill Right. Il n'y a qu'une derni\xE8re chose \xE0 faire. Prenez une capture
     d'\xE9cran de votre certificat et soumettez-le sur Brightspace. Apr\xE8s avoir
-    fait cela, appuyez sur Ctrl + Z pour acc\xE9der au menu principal. Merci d'avoir
-    jou\xE9 \xE0 notre tutoriel."
+    fait cela, appuyez sur Ctrl + alt + Z pour acc\xE9der au menu principal. Merci
+    d'avoir jou\xE9 \xE0 notre tutoriel."
   toggleOptionText2: 'Congratulations, you have finished Mill Right''s Mill Workshop.
     There''s only one last thing to do. Take a screenshot of your certificate and
     submit it on Brightspace. After you''ve done that press Ctrl + alt + Z to go
@@ -641,7 +641,6 @@ MonoBehaviour:
   videoProcessManager: {fileID: 0}
   videoStandardController: {fileID: 0}
   videoController: {fileID: 0}
-  youtubeExceptionListener: {fileID: 0}
 --- !u!114 &885196806
 MonoBehaviour:
   m_ObjectHideFlags: 0

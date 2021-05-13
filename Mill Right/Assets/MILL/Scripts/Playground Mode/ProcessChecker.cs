@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public class ProcessChecker : MonoBehaviour
 {
     [SerializeField] private GameObject checkHolder, doneBTN;
-    [SerializeField] private Button operationBTN;
+    [SerializeField] private Button operationBTN, saveBTN;
     [SerializeField] private OperationStatus drilling, sideMilling, faceMilling;
     [SerializeField] private Toggle_On_Off powerButton;
     private OperationStatus current;
@@ -57,6 +57,7 @@ public class ProcessChecker : MonoBehaviour
         {
             current = faceMilling;
         }
+        saveBTN.interactable = false;
     }
 
     public void SubmitCheckmark()
@@ -73,6 +74,7 @@ public class ProcessChecker : MonoBehaviour
                     checkHolder.SetActive(false);
                     doneBTN.SetActive(false);
                     operationBTN.interactable = true;
+                    saveBTN.interactable = true;
                 }
             }
             else
