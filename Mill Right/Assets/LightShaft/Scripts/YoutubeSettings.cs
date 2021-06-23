@@ -69,6 +69,7 @@ public class YoutubeSettings : MonoBehaviour
     public bool showThumbnailBeforeVideoLoad = false;
     [DrawIf("showThumbnailBeforeVideoLoad", true)]
     public Image thumbnailObject;
+    public GameObject ErrorDialog;
     protected string thumbnailVideoID;
 
     [Space]
@@ -130,7 +131,8 @@ public class YoutubeSettings : MonoBehaviour
     public enum Layout3D
     {
         sideBySide,
-        OverUnder
+        OverUnder,
+        EAC
     }
 
     [Space]
@@ -249,6 +251,9 @@ public class YoutubeSettings : MonoBehaviour
             else if (layout3d == Layout3D.sideBySide)
             {
                 RenderSettings.skybox = (Material)Resources.Load("Materials/PanoramicSkybox3Dside") as Material;
+            }else if (layout3d == Layout3D.EAC)
+            {
+                RenderSettings.skybox = (Material)Resources.Load("Materials/PanoramicSkyboxEAC") as Material;
             }
         }
     }
@@ -457,8 +462,16 @@ public class YoutubeSettings : MonoBehaviour
         //request.SetRequestHeader("User-Agent", USER_AGENT);
         yield return request.SendWebRequest();
         EnableThumbnailObject();
-        Texture2D thumb = DownloadHandlerTexture.GetContent(request);
-        thumbnailObject.material.mainTexture = thumb;
+        try
+        {
+            Texture2D thumb = DownloadHandlerTexture.GetContent(request);
+            thumbnailObject.material.mainTexture = thumb;
+        }
+        catch (Exception e)
+        {
+
+            ErrorDialog.SetActive(true);
+        }
     }
 
     double lastTimePlayed = Mathf.Infinity;
@@ -527,10 +540,7 @@ public class YoutubeSettings : MonoBehaviour
             if (videoPlayer.frameCount > 0)
             {
                 if (progress != null && !videoSkipDrag)
-                {
-                    //Debug.Log("videoPlayerFrame - FixedUpdate: " + videoPlayer.frame);
                     progress.fillAmount = (float)videoPlayer.frame / (float)videoPlayer.frameCount;
-                }
             }
         }
 
@@ -1519,7 +1529,6 @@ public class YoutubeSettings : MonoBehaviour
     private bool showingVolume = false;
     private bool videoSkipDrag = false;
 
-
     private void Update()
     {
         if (!loadYoutubeUrlsOnly)
@@ -2095,7 +2104,6 @@ public class YoutubeSettings : MonoBehaviour
             }
 
             functionIdentifier = GetFunctionFromLine(line);
-
             string reReverse = string.Format(@"{0}:\bfunction\b\(\w+\)", functionIdentifier); //Regex for reverse (one parameter)
             string reSlice = string.Format(@"{0}:\bfunction\b\([a],b\).(\breturn\b)?.?\w+\.", functionIdentifier); //Regex for slice (return or not)
             string reSwap = string.Format(@"{0}:\bfunction\b\(\w+\,\w\).\bvar\b.\bc=a\b", functionIdentifier); //Regex for the char swap.
@@ -2111,7 +2119,8 @@ public class YoutubeSettings : MonoBehaviour
                 {
                     if (Regex.Matches(js, reReverse).Count > 1)
                     {
-                        idReverse = functionIdentifier; //If def matched the regex for reverse then the current function is a defined as the reverse
+                        if (idReverse == "")
+                            idReverse = functionIdentifier; //If def matched the regex for reverse then the current function is a defined as the reverse
                     }
                 }
             }
@@ -2119,18 +2128,21 @@ public class YoutubeSettings : MonoBehaviour
             {
                 if (Regex.Match(js, reReverse).Success)
                 {
-                    idReverse = functionIdentifier; //If def matched the regex for reverse then the current function is a defined as the reverse
+                    if (idReverse == "")
+                        idReverse = functionIdentifier; //If def matched the regex for reverse then the current function is a defined as the reverse
                 }
             }
 
             if (Regex.Match(js, reSlice).Success)
             {
-                idSlice = functionIdentifier; //If def matched the regex for slice then the current function is defined as the slice.
+                if (idSlice == "")
+                    idSlice = functionIdentifier; //If def matched the regex for slice then the current function is defined as the slice.
             }
 
             if (Regex.Match(js, reSwap).Success)
             {
-                idCharSwap = functionIdentifier; //If def matched the regex for charSwap then the current function is defined as swap.
+                if (idCharSwap == "")
+                    idCharSwap = functionIdentifier; //If def matched the regex for charSwap then the current function is defined as swap.
             }
 
         }
@@ -2328,7 +2340,8 @@ public class YoutubeSettings : MonoBehaviour
                 {
                     if (Regex.Matches(js, reReverse).Count > 1)
                     {
-                        idReverse = functionIdentifier; //If def matched the regex for reverse then the current function is a defined as the reverse
+                        if (idReverse == "")
+                            idReverse = functionIdentifier; //If def matched the regex for reverse then the current function is a defined as the reverse
                     }
                 }
             }
@@ -2336,18 +2349,21 @@ public class YoutubeSettings : MonoBehaviour
             {
                 if (Regex.Match(js, reReverse).Success)
                 {
-                    idReverse = functionIdentifier; //If def matched the regex for reverse then the current function is a defined as the reverse
+                    if (idReverse == "")
+                        idReverse = functionIdentifier; //If def matched the regex for reverse then the current function is a defined as the reverse
                 }
             }
 
             if (Regex.Match(js, reSlice).Success)
             {
-                idSlice = functionIdentifier; //If def matched the regex for slice then the current function is defined as the slice.
+                if (idSlice == "")
+                    idSlice = functionIdentifier; //If def matched the regex for slice then the current function is defined as the slice.
             }
 
             if (Regex.Match(js, reSwap).Success)
             {
-                idCharSwap = functionIdentifier; //If def matched the regex for charSwap then the current function is defined as swap.
+                if (idCharSwap == "")
+                    idCharSwap = functionIdentifier; //If def matched the regex for charSwap then the current function is defined as swap.
             }
         }
 
@@ -2471,10 +2487,10 @@ public class YoutubeSettings : MonoBehaviour
         var videoId = youtubeUrl.Replace("https://youtube.com/watch?v=", "");
         //jsonforHtml
         var player_response = string.Empty;
-        if (Regex.IsMatch(jsonForHtmlVersion, @"[""\']status[""\']\s*:\s*[""\']LOGIN_REQUIRED"))
+        bool tempfix = true;
+        if (Regex.IsMatch(jsonForHtmlVersion, @"[""\']status[""\']\s*:\s*[""\']LOGIN_REQUIRED") || tempfix)
         {
-            Debug.Log("MM");
-            var url = "https://www.youtube.com/get_video_info?video_id=" + videoId + "&eurl=https://youtube.googleapis.com/v/" + videoId;
+            var url = "https://www.youtube.com/get_video_info?video_id=" + videoId + "&eurl=https://youtube.googleapis.com/v/" + videoId + "&html5=1&c=TVHTML5&cver=6.20180913";
             UnityWebRequest request = UnityWebRequest.Get(url);
             request.SetRequestHeader("User-Agent", "Mozilla/5.0 (X11; Linux x86_64; rv:10.0) Gecko/20100101 Firefox/10.0 (Chrome)");
             yield return request.SendWebRequest();
@@ -2982,6 +2998,12 @@ public class YoutubeSettings : MonoBehaviour
 
     private bool waitAudioSeek = false;
 
+    public bool VideoSkipDrag
+    {
+        get => videoSkipDrag;
+        set => videoSkipDrag = value;
+    }
+
     public void TrySkip(Vector2 cursorPosition)
     {
         Vector2 localPoint;
@@ -2992,12 +3014,6 @@ public class YoutubeSettings : MonoBehaviour
             float pct = (localPoint.x - progress.rectTransform.rect.x) / progress.rectTransform.rect.width;
             SkipToPercent(pct);
         }
-    }
-
-    public bool VideoSkipDrag
-    {
-        get => videoSkipDrag;
-        set => videoSkipDrag = value;
     }
 
     private float oldVolume;
@@ -3025,17 +3041,15 @@ public class YoutubeSettings : MonoBehaviour
         }
         else
         {
-            videoPlayer.frame = (long) frame;
+            videoPlayer.frame = (long)frame;
             audioPlayer.frame = (long)frame;
         }
         videoPlayer.Pause();
         if (videoQuality != YoutubeVideoQuality.STANDARD)
             audioPlayer.Pause();
-
         progress.fillAmount = pct;
-        Debug.Log("videoPlayerFrame - SKP: " + (float) videoPlayer.frame/(float) videoPlayer.frameCount);
+        Debug.Log("videoPlayerFrame - SKP: " + (float)videoPlayer.frame / (float)videoPlayer.frameCount);
         Debug.Log("Progress - SKP: " + pct);
-
     }
 
     IEnumerator VideoSeekCall()
