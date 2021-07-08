@@ -2341,9 +2341,9 @@ MonoBehaviour:
   YoutubeLinkDisplay: {fileID: 91531547}
   numberOfVids: 1
   youtubeLinks:
-  - https://youtu.be/x88Yxklmjw0?list=PLA-oTz8kRbroIWGOhI92m4hTYLP_2aNcx
+  - https://youtu.be/x88Yxklmjw0
   youtubeLinksFR:
-  - https://youtu.be/Gw_quMaaiqo?list=PLA-oTz8kRbrozmIQE_b6ddmFE6C2DfUVA
+  - https://youtu.be/Gw_quMaaiqo
   titlesEN:
   - Introduction | CEED
   titlesFR:
